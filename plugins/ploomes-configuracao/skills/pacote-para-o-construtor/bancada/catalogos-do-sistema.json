@@ -1,0 +1,458 @@
+{
+ "AutomationsTriggers": [
+  {
+   "Id": 1,
+   "Name": "Negócio entrou neste estágio",
+   "DealStageIdRequired": true,
+   "RestrictedEntityId": 2
+  },
+  {
+   "Id": 2,
+   "Name": "Negócio ganho neste estágio",
+   "DealStageIdRequired": true,
+   "RestrictedEntityId": 2
+  },
+  {
+   "Id": 3,
+   "Name": "Negócio perdido neste estágio",
+   "DealStageIdRequired": true,
+   "RestrictedEntityId": 2
+  },
+  {
+   "Id": 4,
+   "Name": "Negócio reaberto neste estágio",
+   "DealStageIdRequired": true,
+   "RestrictedEntityId": 2
+  },
+  {
+   "Id": 5,
+   "Name": "Quando o item for criado",
+   "DealStageIdRequired": false,
+   "RestrictedEntityId": null
+  },
+  {
+   "Id": 6,
+   "Name": "Quando o item for editado",
+   "DealStageIdRequired": false,
+   "RestrictedEntityId": null
+  },
+  {
+   "Id": 7,
+   "Name": "Quando o item for excluído",
+   "DealStageIdRequired": false,
+   "RestrictedEntityId": null
+  },
+  {
+   "Id": 8,
+   "Name": "Quando o negócio for ganho",
+   "DealStageIdRequired": false,
+   "RestrictedEntityId": 2
+  },
+  {
+   "Id": 9,
+   "Name": "Quando o negócio for perdido",
+   "DealStageIdRequired": false,
+   "RestrictedEntityId": 2
+  },
+  {
+   "Id": 10,
+   "Name": "Quando o negócio for reaberto",
+   "DealStageIdRequired": false,
+   "RestrictedEntityId": 2
+  },
+  {
+   "Id": 11,
+   "Name": "Quando a tarefa for finalizada",
+   "DealStageIdRequired": false,
+   "RestrictedEntityId": 12
+  },
+  {
+   "Id": 12,
+   "Name": "Quando a tarefa for reaberta",
+   "DealStageIdRequired": false,
+   "RestrictedEntityId": 12
+  },
+  {
+   "Id": 13,
+   "Name": "Quando a proposta for revisada",
+   "DealStageIdRequired": false,
+   "RestrictedEntityId": 7
+  },
+  {
+   "Id": 14,
+   "Name": "Quando a proposta for aprovada ou reprovada",
+   "DealStageIdRequired": false,
+   "RestrictedEntityId": 7
+  },
+  {
+   "Id": 17,
+   "Name": "Periodicamente",
+   "DealStageIdRequired": false,
+   "RestrictedEntityId": null
+  },
+  {
+   "Id": 18,
+   "Name": "Quando o lead for convertido",
+   "DealStageIdRequired": false,
+   "RestrictedEntityId": 3
+  },
+  {
+   "Id": 19,
+   "Name": "Quando o lead for descartado",
+   "DealStageIdRequired": false,
+   "RestrictedEntityId": 3
+  },
+  {
+   "Id": 20,
+   "Name": "Quando o documento for aprovado ou reprovado",
+   "DealStageIdRequired": false,
+   "RestrictedEntityId": 66
+  },
+  {
+   "Id": 21,
+   "Name": "Quando a venda for aprovada ou reprovada",
+   "DealStageIdRequired": false,
+   "RestrictedEntityId": 4
+  },
+  {
+   "Id": 22,
+   "Name": "Quando a venda for aprovada ou reprovada (online)",
+   "DealStageIdRequired": false,
+   "RestrictedEntityId": 4
+  },
+  {
+   "Id": 23,
+   "Name": "Quando a proposta for aprovada ou reprovada (online)",
+   "DealStageIdRequired": false,
+   "RestrictedEntityId": 7
+  },
+  {
+   "Id": 24,
+   "Name": "Quando o documento for aprovado ou reprovado (online)",
+   "DealStageIdRequired": false,
+   "RestrictedEntityId": 66
+  },
+  {
+   "Id": 25,
+   "Name": "Negócio editado nesse estágio",
+   "DealStageIdRequired": true,
+   "RestrictedEntityId": 2
+  }
+ ],
+ "AutomationsActionsActions": [
+  {
+   "Id": 1,
+   "Name": "Editar dados",
+   "DealStageIdRequired": false
+  },
+  {
+   "Id": 2,
+   "Name": "Alterar estágio do negócio",
+   "DealStageIdRequired": true
+  },
+  {
+   "Id": 3,
+   "Name": "Duplicar negócio em novo estágio",
+   "DealStageIdRequired": true
+  },
+  {
+   "Id": 4,
+   "Name": "Enviar e-mail",
+   "DealStageIdRequired": false
+  },
+  {
+   "Id": 5,
+   "Name": "Criar tarefa",
+   "DealStageIdRequired": false
+  },
+  {
+   "Id": 7,
+   "Name": "Criar negócio",
+   "DealStageIdRequired": false
+  },
+  {
+   "Id": 8,
+   "Name": "Criar registro de interação",
+   "DealStageIdRequired": false
+  },
+  {
+   "Id": 10,
+   "Name": "Perder negócio",
+   "DealStageIdRequired": false
+  },
+  {
+   "Id": 11,
+   "Name": "Ganhar negócio",
+   "DealStageIdRequired": false
+  },
+  {
+   "Id": 12,
+   "Name": "Enviar mensagem de WhatsApp via Neppo",
+   "DealStageIdRequired": false
+  },
+  {
+   "Id": 13,
+   "Name": "Finalizar tarefas com observações",
+   "DealStageIdRequired": false
+  },
+  {
+   "Id": 14,
+   "Name": "Finalizar tarefas",
+   "DealStageIdRequired": false
+  },
+  {
+   "Id": 15,
+   "Name": "Enviar Lead para Meetime",
+   "DealStageIdRequired": false
+  },
+  {
+   "Id": 16,
+   "Name": "Criar produto de cliente",
+   "DealStageIdRequired": false
+  }
+ ],
+ "WebhooksActions": [
+  {
+   "Id": 1,
+   "Name": "Create"
+  },
+  {
+   "Id": 2,
+   "Name": "Update"
+  },
+  {
+   "Id": 3,
+   "Name": "Delete"
+  },
+  {
+   "Id": 4,
+   "Name": "Win"
+  },
+  {
+   "Id": 5,
+   "Name": "Lose"
+  },
+  {
+   "Id": 6,
+   "Name": "Reopen"
+  },
+  {
+   "Id": 7,
+   "Name": "Finish"
+  },
+  {
+   "Id": 8,
+   "Name": "Approve"
+  },
+  {
+   "Id": 9,
+   "Name": "UploadAvatar"
+  },
+  {
+   "Id": 10,
+   "Name": "Review"
+  },
+  {
+   "Id": 11,
+   "Name": "NewHistory"
+  },
+  {
+   "Id": 12,
+   "Name": "Receive"
+  },
+  {
+   "Id": 13,
+   "Name": "Approve"
+  },
+  {
+   "Id": 14,
+   "Name": "Approve"
+  },
+  {
+   "Id": 15,
+   "Name": "Convert"
+  },
+  {
+   "Id": 16,
+   "Name": "Discard"
+  },
+  {
+   "Id": 17,
+   "Name": "Read"
+  },
+  {
+   "Id": 18,
+   "Name": "ChangeFolder"
+  },
+  {
+   "Id": 19,
+   "Name": "MoveFolder"
+  },
+  {
+   "Id": 20,
+   "Name": "MoveItem"
+  },
+  {
+   "Id": 21,
+   "Name": "ArchiveFolder"
+  },
+  {
+   "Id": 22,
+   "Name": "ArchiveItem"
+  },
+  {
+   "Id": 23,
+   "Name": "Login"
+  },
+  {
+   "Id": 24,
+   "Name": "Logout"
+  },
+  {
+   "Id": 25,
+   "Name": "External Approve"
+  },
+  {
+   "Id": 26,
+   "Name": "External Approve"
+  },
+  {
+   "Id": 27,
+   "Name": "External Approve"
+  },
+  {
+   "Id": 28,
+   "Name": "Reopen"
+  },
+  {
+   "Id": 29,
+   "Name": "Share"
+  },
+  {
+   "Id": 30,
+   "Name": "Share"
+  },
+  {
+   "Id": 31,
+   "Name": "Share"
+  }
+ ],
+ "Integrations": [
+  {
+   "Id": 1,
+   "Name": "Reev"
+  },
+  {
+   "Id": 2,
+   "Name": "Jivo"
+  },
+  {
+   "Id": 5,
+   "Name": "Clicksign"
+  },
+  {
+   "Id": 6,
+   "Name": "RD Station"
+  },
+  {
+   "Id": 9,
+   "Name": "Asana"
+  },
+  {
+   "Id": 10,
+   "Name": "LetsSign"
+  },
+  {
+   "Id": 11,
+   "Name": "WhatsApp"
+  },
+  {
+   "Id": 13,
+   "Name": "Omie"
+  },
+  {
+   "Id": 14,
+   "Name": "ActiveCampaign"
+  },
+  {
+   "Id": 15,
+   "Name": "Leadlovers"
+  },
+  {
+   "Id": 16,
+   "Name": "Facebook Leads Ads"
+  },
+  {
+   "Id": 17,
+   "Name": "BIMachine"
+  },
+  {
+   "Id": 18,
+   "Name": "Exact Spotter"
+  },
+  {
+   "Id": 19,
+   "Name": "Econodata"
+  },
+  {
+   "Id": 20,
+   "Name": "MailChimp"
+  },
+  {
+   "Id": 21,
+   "Name": "Focco"
+  },
+  {
+   "Id": 22,
+   "Name": "Meetime"
+  },
+  {
+   "Id": 23,
+   "Name": "Movidesk"
+  },
+  {
+   "Id": 24,
+   "Name": "DocuSign"
+  },
+  {
+   "Id": 25,
+   "Name": "Power BI"
+  },
+  {
+   "Id": 27,
+   "Name": "Google Calendar"
+  },
+  {
+   "Id": 28,
+   "Name": "Outlook 365"
+  },
+  {
+   "Id": 29,
+   "Name": "Neppo"
+  },
+  {
+   "Id": 30,
+   "Name": "D4Sign"
+  },
+  {
+   "Id": 31,
+   "Name": "Microsoft"
+  },
+  {
+   "Id": 32,
+   "Name": "Meetime"
+  },
+  {
+   "Id": 35,
+   "Name": "Flowbiz"
+  },
+  {
+   "Id": 36,
+   "Name": "Radar Ploomes"
+  },
+  {
+   "Id": 37,
+   "Name": "WhatsApp Coex"
+  }
+ ]
+}

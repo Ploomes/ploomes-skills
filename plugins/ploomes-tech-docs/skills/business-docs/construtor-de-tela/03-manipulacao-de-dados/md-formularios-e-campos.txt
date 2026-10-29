@@ -1,0 +1,54 @@
+Formulários e campos
+
+Para cada cadastro / tabela do Ploomes, existe um formulário que é a maneira pela qual um item (empresa, pessoa, produto, entre outros) é inserido e salvo na base de dados do sistema. 
+
+Os formulários são um aglomerado de campos (propriedades) referentes àquela tabela específica.
+
+Existem vários "Tipos" de campo, e cada Tipo define um tipo de dado que deverá ser inserido pelo usuário. Exemplo: campo do tipo data (onde o usuário deverá digitar uma data), campo do tipo texto simples (pelo qual um usuário deverá digitar um texto de até 250 caracteres, campo do tipo número inteiro (pelo qual o usuário deverá inserir apenas números inteiros), entre outros.
+
+Antes dos Tipos, entretanto, o Ploomes possui duas categorias de campo:
+
+Campos nativos:
+
+- São campos pré-existentes do sistema e que não podem ser apagados;
+
+- A propriedade “Título” dos campos nativos não pode ser alterada (exemplo: o campo “Nome” da entidade “Cliente” sempre se chamará “Nome”). Isso significa que o frontend não consegue puxar dinamicamente do backend um outro título para um campo nativo, mas é possível tratar isso direto via lógica no front-end (fazer um nome diferente hard coded no frontend)
+
+- A propriedade “Tipo” dos campos nativos não pode ser alterado (exemplo: o campo “Segmento” da entidade “Cliente” sempre será do tipo “Opções pré-cadastradas”);
+
+Campos personalizados:
+
+- Criados e configurados do zero;
+
+- Permitem personalização do “Título” (o que pode ser alterado a qualquer momento);
+
+- Permitem seleção de diferentes “Tipos” durante a criação (o "Tipo" não pode ser alterado uma vez que o campo personalizado foi criado);
+
+- Podem ser deletados a qualquer momento (por administradores).
+
+Tipos de campos existentes:
+
+- Texto simples: tipo de campo que permite digitação de números, letras e caracteres especiais de forma livre. Limitado a 200 caracteres;
+- Texto multilinha: tipo de campo que permite digitação de números, letras e caracteres especiais de forma livre, sem limite de caracteres. Muito comum para armazenar textos longos, códigos em HTML / CSS, JSONs, entre outros. Em front-ends, trate o conteúdo como não confiável: mostre como texto e, se o campo guardar HTML de formatação, renderize só depois de passar por um sanitizador com lista de permissões de tags — nunca com innerHTML direto;
+- Número inteiro: tipo de campo que apenas permite digitação de números inteiros. Aceita no máximo 9 dígitos;
+- Moeda: tipo de campo que força o usuário e preencher um número com duas casas decimais;
+- Número com casas decimais ilimitadas: tipo de campo que permite digitação de números com casas decimais ilimitadas;
+- Opções pré-cadastradas: tipo de campo que força o usuário a selecionar uma de suas opções pré-existentes. Se for configurado como campo múltiplo, permite selecionar mais de uma opção ao mesmo tempo. Também permite liberar para determinados usuários que crie novas opções em tempo real. Aceita no máximo o cadastro de 1000 opções.
+- Data: tipo de campo que permite a digitação de uma data. Geralmente, traz consigo no front-end uma interface de seleção de data;
+- Horário: tipo de campo que permite digitação de um horário. Geralmente, traz consigo no front-end uma interface de seleção de horário;
+- Checkbox: tipo de campo que permite ao usuário selecionar um "verdadeiro" ou "falso". Geralmente, traz consigo no front-end um switch para selecionar entre as duas opções;
+- CPF: tipo de campo que permite digitação de um CPF. Geralmente, traz consigo no front-end uma máscara que força o usuário a digitar um CPF válido e exibe caracteres especiais que subdividem o CPF visualmente (pontos e traço);
+- CNPJ: tipo de campo que permite digitação de um CNPJ. Geralmente, traz consigo no front-end uma máscara que força o usuário a digitar um CNPJ válido e exibe caracteres especiais que subdividem o CNPJ visualmente (pontos, traço e barra);
+- Porcentagem: tipo de campo que permite digitação de números com casas decimais ilimitadas, mas que geralmente exibe no front-end o símbolo de % para maior intuitividade ao usuário;
+- Endereço: similar ao texto simples, mas que geralmente traz consigo no frontend uma integração com Google Maps para auto complete do endereço e preenchimento automático dos campos de cliente latitude e longitude;
+- Imagem: tipo de campo que permite ao usuário fazer upload de uma imagem e armazenar no servidor do Ploomes para posterior visualização;
+- Anexo: tipo de campo que permite ao usuário fazer upload de um arquivo e armazenar no servidor do Ploomes para posterior download;
+- Cor: tipo de campo que permite ao usuário preencher um RGB. Geralmente, traz consigo no front-end uma interface de seleção de cores;
+- Assinatura DocuSign: tipo de campo especial para armazenar locais de assinatura para a integração com a Docusign;
+- Desenvolvedor: tipo de campo que permite digitação de números, letras e caracteres especiais de forma livre, sem limite de caracteres. Muito comum para armazenar códigos em HTML, CSS e Javascript para rodarem dinamicamente no frontend;
+- Usuário: tipo de campo que permite ao usuário selecionar um usuário (da tabela de usuários) do sistema e armazená-lo ali. Importante notar que, apesar de um vínculo ser criado aqui entre a entidade Usuário e a entidade na qual o campo está sendo criado, o sistema de field-path não funciona aqui. Portanto, para extrair o e-mail de um usuário que foi vinculado a um cliente por meio de um campo dinâmico do tipo usuário, por exemplo, eu preciso fazer uma segunda requisição à API do Ploomes usando o Id do usuário selecionado. Se for configurado como campo múltiplo, permite selecionar mais de uma opção ao mesmo tempo.
+- Produto: tipo de campo que permite ao usuário selecionar um produto (da base de produtos) do sistema e armazená-lo ali. Importante notar que, apesar de um vínculo ser criado aqui entre a entidade Produto e a entidade na qual o campo está sendo criado, o sistema de field-path não funciona aqui. Portanto, para extrair a descrição de um produto que foi vinculado a um cliente por meio de um campo dinâmico do tipo produto, por exemplo, eu preciso fazer uma segunda requisição à API do Ploomes usando o Id do produto selecionado. Se for configurado como campo múltiplo, permite selecionar mais de uma opção ao mesmo tempo.
+- Cliente: tipo de campo que permite ao usuário selecionar um cliente (da base de clientes) do sistema e armazená-lo ali. Importante notar que, apesar de um vínculo ser criado aqui entre a entidade Cliente e a entidade na qual o campo está sendo criado, o sistema de field-path não funciona aqui. Portanto, para extrair o CNPJ de um cliente que foi vinculado a um outro cliente por meio de um campo dinâmico do tipo cliente, por exemplo, eu preciso fazer uma segunda requisição à API do Ploomes usando o Id do cliente selecionado. Se for configurado como campo múltiplo, permite selecionar mais de uma opção ao mesmo tempo.
+- Símbolo de moeda: campo de opções pré-cadastradas que força o usuário a selecionar uma das moedas armazenadas no cadastro de moedas do Ploomes. Se for configurado como campo múltiplo, permite selecionar mais de uma opção ao mesmo tempo.
+- Assinatura: campo do tipo imagem, mas que geralmente traz consigo no front-end um sistema de assinatura eletrônica que permite ao usuário desenhar sua rubrica digitalmente (com dedo se o dispositivo permitir, mouse, etc.);
+- Acumulador: tipo de campo especial. Por ele podemos, por exemplo, armazenar o volume total de vendas de um cliente nos últimos 3 meses, ou então o volume total de visitas realizadas a ele nas últimas 12 semanas. Dessa forma, ele não é um campo preenchido, mas calculado a partir do acúmulo de algum campo do tipo numérico (número inteiro, casas decimais ilimitadas ou moeda). O usuário define o período de acúmulo, a entidade origem e o campo que armazena o número a ser somado (entre outras configurações).

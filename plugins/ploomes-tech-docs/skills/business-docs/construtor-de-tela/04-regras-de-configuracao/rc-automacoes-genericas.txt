@@ -1,0 +1,196 @@
+Regras para configuração de Automações gerais
+
+Para a criação de uma nova automação geral, a IA deve configurar:
+
+Entidade da automação:
+Descrição da automação:
+Gatilho:
+Filtro:
+Ações:
+  - Tipo da ação
+  - Parâmetros da ação
+
+As automações gerais seguem a mesma lógica das automações de funil: primeiro se define quando a automação roda, depois em quais condições ela roda, e por fim o que ela faz. A diferença é que aqui a automação não está necessariamente vinculada a uma etapa específica de funil.
+
+1. Entidade da automação
+
+Definir.
+
+Exemplos de entidades:
+
+Cliente
+Negócio
+Proposta
+Venda
+Documento
+Registro de interação
+Tarefa
+Usuário
+Produto
+Produto do cliente
+
+A entidade escolhida define quais gatilhos e quais ações estarão disponíveis.
+
+2. Descrição da automação
+
+Nome ou descrição curta para identificar a automação.
+
+Exemplos:
+
+Enviar e-mail quando cliente for criado
+Criar tarefa quando negócio for ganho
+Atualizar campo quando proposta for aprovada
+Registrar interação quando tarefa for finalizada
+
+Campo obrigatório.
+
+3. Gatilho
+
+Define quando a automação será disparada.
+
+Gatilhos gerais:
+- Quando o item for criado
+- Quando o item for editado
+- Quando o item for excluído
+- Periodicamente
+
+Gatilhos específicos por entidade
+
+Além dos gatilhos gerais, algumas entidades possuem gatilhos específicos.
+
+- Negócio: quando o negócio for ganho, quando o negócio for perdido, quando o negócio for reaberto;
+- Proposta: quando a proposta for revisada, quando a proposta for aprovada ou reprovada, quando a proposta for aprovada ou reprovada online;
+- Venda	quando a venda for aprovada ou reprovada, quando a venda for aprovada ou reprovada online;
+- Tarefa: quando a tarefa for finalizada, quando a tarefa for reaberta;
+- Documento: quando o documento for aprovado ou reprovado, quando o documento for aprovado ou reprovado online
+
+4. Filtro
+
+Define condições adicionais para a automação executar.
+
+Exemplos:
+
+Segmento do cliente = Indústria
+Valor do negócio maior que R$ 50.000
+Produto de interesse = Implantação Premium
+Origem = Site
+Responsável = Time Enterprise
+Status da proposta = Aprovada
+Tipo da tarefa = Ligação
+
+Não é obrigatório ter filtro. Se não houver filtro, a automação executa sempre que o gatilho ocorrer.
+
+5. Ações
+
+Define o que a automação deve fazer quando for disparada.
+
+É possível configurar múltiplas ações em uma mesma automação. A ordem das ações importa, porque elas serão executadas em sequência.
+
+Ações disponíveis por entidade
+
+Com base nos arquivos enviados, as ações se organizam assim:
+
+- Editar dados: todas as entidades;
+- Enviar e-mail: todas as entidades;
+- Criar tarefa:	todas as entidades, menos a entidade Produto. Quando essa ação roda a partir de automações de Clientes e Negócios, a tarefa é vinculada ao cliente ou negócio que engatilhou a automação;
+- Criar negócio: todas as entidades. Quando essa ação roda a partir de automações de Clientes ou Negócios, o negócio é vinculado ao cliente ou negócio que engatilhou a automação;
+- Criar registro de interação: todas as entidades, menos a entidade Produto. Quando essa ação roda a partir de automações de Clientes ou Negócios, o registro de interação é vinculado ao cliente ou negócio que engatilhou a automação;
+- Perder negócio: Negócio, Proposta, Venda, Tarefa e Documento;
+- Ganhar negócio: Negócio, Proposta, Venda, Tarefa e Documento.
+
+6. Detalhes de cada ação
+
+Para cada ação escolhida, é necessário o preenchimento dos parâmetros.
+
+1. Editar dados
+
+Use quando a automação precisar alterar campos de um registro existente.
+
+O que configurar:
+
+- Entidade/campo que será alterado
+- Novo valor do campo
+- Se o valor será fixo ou calculado
+- Para campo calculado, definir conteúdo da fórmula simples
+- Para campo fixo, definir o valor
+- Se o valor virá de outro campo
+
+2. Enviar e-mail
+
+Use quando a automação precisar enviar uma comunicação por e-mail.
+
+O que configurar:
+
+- Destinatários
+- Cópia, se houver
+- Cópia oculta, se houver
+- Assunto
+- Corpo do e-mail
+- Campos dinâmicos usados no texto
+- Remetente ou caixa de envio, se aplicável
+- Anexos, se aplicável
+
+3. Criar tarefa
+
+Use quando a automação precisar gerar uma atividade para alguém executar.
+
+O que configurar:
+
+- Título da tarefa
+- Responsável pela tarefa
+- Data de vencimento
+- Horário, se aplicável
+- Tipo de tarefa
+- Descrição da tarefa
+
+Exemplo:
+
+Criar tarefa:
+- Título: Fazer follow-up
+- Responsável: Responsável pelo registro
+- Vencimento: Hoje + 2 dias
+- Tipo: Ligação
+- Descrição: Entrar em contato com o cliente.
+
+4. Criar negócio
+
+Use quando a automação precisar criar um novo negócio em um funil.
+
+O que configurar:
+
+- Estágio inicial do novo negócio
+- Campos do formulário do funil ao qual o estágio destino do negócio pertence.
+
+5. Criar registro de interação
+
+Use quando a automação precisar registrar uma interação no histórico.
+
+O que configurar:
+
+- Tipo de interação
+- Descrição/conteúdo da interação
+- Data e hora da interação
+- Outros campos do formulário do registro de interação
+
+Exemplo:
+
+Criar registro de interação:
+- Tipo: Nota
+- Descrição: Automação executada após aprovação da proposta.
+- Data/hora: Agora
+
+6. Perder negócio
+
+Use quando a automação precisar marcar um negócio como perdido.
+
+O que configurar:
+
+- Motivo de perda
+
+7. Ganhar negócio
+
+Use quando a automação precisar marcar um negócio como ganho.
+
+O que configurar:
+
+- Nada

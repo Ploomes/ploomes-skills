@@ -1,0 +1,13 @@
+Field-path
+
+O Field-path é uma tabela de dados que define como acessar os dados de entidades vinculadas a uma entidade raiz.
+
+Exemplo de caso de uso: eu quero saber o segmento do cliente do negócio de id X. Se o Field-path do negócio para o cliente existe, eu posso fazer um request para a API do Ploomes solicitando o segmento do cliente do negócio. Da mesma forma, posso filtrar todos os os negócios que estejam vinculados a clientes que tenham um segmento Y.
+
+Em resumo, se o Field-path existe, eu consigo, a partir de um único request, visualizar dados de entidades vinculadas, filtrar entidades a partir de dados de entidades vinculadas a elas (sistema de Filtros, filtros de abas, filtros para gatilho condicional em automações, filtros para exibição condicional em checklists, etc.), fazer com que automações editem dados de entidades vinculadas, ou que puxem dados de entidades vinculadas para a própria entidade ou para outras entidades vinculadas, ou que preencham campos de entidades vinculadas com fórmulas simples, inclusive usando dados de entidades vinculadas como variáveis das fórmulas.
+
+Se o Field-path entre uma entidade e uma entidade vinculada a ela não existe, eu consigo, a partir de um segundo request, puxar dados da entidade vinculada (afinal, a entidade raiz guarda o ID da entidade vinculada). Entretanto, eu não consigo fazer filtros, por exemplo, buscando itens de uma entidade a partir de campos de entidades vinculadas. Ex.: sem field-path, seria impossível buscar negócios vinculados a empresas que sejam do segmento X. Também seria impossível rodar uma automação que, quando um negócio fosse criado, alterasse o segmento do cliente deste negócio.
+
+Campos dinâmicos de produto, cliente e usuário não geram field-paths, ou seja, nativamente não é possível acessar um dado de um usuário que foi vinculado a um cliente, por exemplo, a partir de um campo dinâmico do tipo usuário.
+
+O arquivo (RC) Lista_de_field_paths.txt mostra a lista de field-paths disponíveis no Ploomes.

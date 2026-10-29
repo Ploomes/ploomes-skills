@@ -1,0 +1,274 @@
+/* Folha de estilo do documento gerado (Proposta / Venda / Documento).
+   Carregada no <head> do contexto isolado de renderização.
+   Os seletores .cke_editable servem à superfície de edição de modelos e
+   não incidem na leitura (o corpo é .pag-corpo, sem essa classe). */
+
+html {
+    overflow-x: hidden;
+}
+
+body
+{
+	/* Font */
+	font-family: sans-serif, Arial, Verdana, "Trebuchet MS";
+
+	/* Text color */
+	color: #333;
+
+	margin: 0;
+
+    width: 100%;
+}
+.campos_editor {
+    width: auto !important;
+    padding: 3px !important;
+}
+table, body {
+    font-size: 13px;
+	line-height: 1.6;
+}
+p {
+    margin: 0;
+}
+.wrapper {
+  background-color: #f3f3f4
+}
+.pag-proposta {
+    margin-bottom: 25px;
+    background-color: #fff;
+    border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    overflow: hidden;
+		position: relative;
+}
+.pag-proposta .pag-corpo {
+    min-height: 350px;
+    word-break: break-word;
+}
+
+.cke_editable
+{
+}
+
+blockquote
+{
+	font-style: italic;
+	font-family: Georgia, Times, "Times New Roman", serif;
+	padding: 2px 0;
+	border-style: solid;
+	border-color: #ccc;
+	border-width: 0;
+}
+
+.cke_contents_ltr blockquote
+{
+	padding-left: 20px;
+	padding-right: 8px;
+	border-left-width: 5px;
+}
+
+.cke_contents_rtl blockquote
+{
+	padding-left: 8px;
+	padding-right: 20px;
+	border-right-width: 5px;
+}
+
+a
+{
+	color: #0782C1;
+}
+
+ol,ul,dl
+{
+	/* IE7: reset rtl list margin. (#7334) */
+	*margin-right: 0px;
+	/* preserved spaces for list items with text direction other than the list. (#6249,#8049)*/
+	padding: 0 40px;
+}
+
+h1,h2,h3,h4,h5,h6
+{
+	font-weight: normal;
+	line-height: 1.6;
+}
+
+hr
+{
+	border: 0px;
+	border-top: 1px solid #ccc;
+}
+
+img.right
+{
+	border: 1px solid #ccc;
+	float: right;
+	margin-left: 15px;
+	padding: 5px;
+}
+
+img.left
+{
+	border: 1px solid #ccc;
+	float: left;
+	margin-right: 15px;
+	padding: 5px;
+}
+
+pre
+{
+	white-space: pre-wrap; /* CSS 2.1 */
+	word-wrap: break-word; /* IE7 */
+	-moz-tab-size: 4;
+	tab-size: 4;
+}
+
+.marker
+{
+	background-color: Yellow;
+}
+
+span[lang]
+{
+	font-style: italic;
+}
+
+figure
+{
+	text-align: center;
+	border: solid 1px #ccc;
+	border-radius: 2px;
+	background: rgba(0,0,0,0.05);
+	padding: 10px;
+	margin: 10px 20px;
+	display: inline-block;
+}
+
+figure > figcaption
+{
+	text-align: center;
+	display: block; /* For IE8 */
+}
+
+a > img {
+	padding: 1px;
+	margin: 1px;
+	border: none;
+	outline: 1px solid #0782C1;
+}
+
+table {
+    border-collapse: collapse;
+    font-size: 13px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+table, th, td {
+    border-color: #333;
+}
+table[border]:not([border="0"]) {
+    border-style: solid;
+}
+
+.cke_editable campo {
+  display: inline-block;
+  word-break: break-all;
+  -ms-word-break: break-all;
+}
+.cke_editable s campo {
+    text-decoration: line-through;
+}
+.cke_editable u campo {
+    text-decoration: underline;
+}
+.cke_editable s u campo, .cke_editable u s campo {
+    text-decoration: line-through underline;
+}
+.cke_editable campo:hover {
+  background-color: #F99;
+}
+.cke_editable [bloco]:hover {
+  background-color: #DDD;
+  outline: 1px dashed black;
+}
+.cke_editable [bloco].ck-active {
+  background-color: #EED;
+}
+.cke_editable [lista].ck-active td {
+  background-color: #EDD;
+}
+.cke_editable [lista]:hover td {
+  background-color: #FDD;
+}
+.cke_editable [partes].ck-active {
+  background-color: #00CCCC;
+}
+.cke_editable [partes]:hover {
+  background-color: #00CCCC;
+}
+.cke_editable hr {
+  border-color: #333;
+}
+
+/* new styles */
+.cke_editable field, .cke_editable index {
+  display: inline-block;
+  word-break: break-all;
+  -ms-word-break: break-all;
+
+}
+.cke_editable field[aria-hidden="true"] {
+	color: red;
+}
+.cke_editable s field {
+    text-decoration: line-through;
+}
+.cke_editable u field {
+    text-decoration: underline;
+}
+.cke_editable s u field, .cke_editable u s field {
+    text-decoration: line-through underline;
+}
+.cke_editable field:hover {
+  background-color: #F99;
+}
+.cke_editable [section-code]:hover {
+  background-color: #DDD;
+  outline: 1px dashed black;
+}
+.cke_editable [section-code].ck-active {
+  background-color: #EED;
+}
+.cke_editable [multiple-field-key].ck-active {
+  background-color: #EDD;
+}
+.cke_editable [multiple-field-key]:hover {
+  background-color: #FDD;
+}
+.cke_editable [multiple-field-key*="parts"].ck-active {
+  background-color: #00CCCC !important;
+}
+.cke_editable [multiple-field-key*="parts"]:hover {
+  background-color: #00CCCC !important;
+}
+.cke_editable [condition-field-key]:hover {
+  background-color: #e3f8ef !important;
+}
+.cke_editable hr {
+  border-color: #333;
+}
+
+/* when there is a table that we can adjust the layout by mouser, I was creating an element that subscribes to the elements inside the rows */
+.cke_widget_hcard {
+  z-index: 11!important;
+}
+
+table td span,
+table th span {
+	position: relative;
+	z-index: 11;
+	cursor: text;
+}
+/* end */

@@ -1,0 +1,199 @@
+<!doctype html>
+<!--
+  Ploomes Design System — snapshot estático das stories do Storybook.
+  Componente : Components/ButtonCheck
+  Stories    : 10 (Default, Checked, Rounded, Rounded (Checked), Disabled, Disabled (Checked), Icon Only, Sizes, All Variants, Interactive)
+  Story      : ButtonCheck.stories.tsx
+  Tema       : light — use <html class="dark"> para o tema escuro.
+-->
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ButtonCheck — Ploomes DS</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;600;700&display=swap">
+<link rel="stylesheet" href="../assets/design-system.css">
+<link rel="stylesheet" href="../assets/page.css">
+</head>
+<body class="ds-page">
+  <header class="ds-head">
+    <a class="ds-back" href="../index.html">← inventário</a>
+    <h1 class="ds-title">ButtonCheck</h1>
+    <p class="ds-meta">components · 10 stories · <code>ButtonCheck.stories.tsx</code></p>
+    <pre class="ds-code ds-import">import { ButtonCheck } from &#x27;@ploomescrm/ui&#x27;;</pre>
+    <pre class="ds-code">// props padrão de todas as stories (meta.args)
+args: {
+  children: &#x27;Lorem Ipsum&#x27;,
+  shape: &#x27;square&#x27;,
+  size: &#x27;sm&#x27;,
+  checked: false,
+  disabled: false,
+}</pre>
+  </header>
+  <section class="ds-story">
+    <h2 class="ds-story-name">Default</h2>
+    <div class="ds-story-id">components-buttoncheck--default · export <b>Default</b></div>
+    <div class="ds-canvas ds-canvas--padded">
+<button class="group inline-flex cursor-pointer items-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-confirmation focus-visible:ring-offset-1 disabled:pointer-events-none disabled:opacity-30 gap-[5px] text-sm"><span class="flex shrink-0 items-center justify-center rounded-[5px] transition-colors group-hover:bg-neutral-level_1 size-[30px]"><span aria-hidden="true" class="inline-flex shrink-0 items-center justify-center text-font"><svg aria-hidden="true" class="lucide lucide-square" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="15" xmlns="http://www.w3.org/2000/svg"><rect height="18" rx="2" width="18" x="3" y="3"></rect></svg></span></span><span class="text-font">Lorem Ipsum</span></button>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const Default: Story = {}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">Checked</h2>
+    <div class="ds-story-id">components-buttoncheck--checked · export <b>Checked</b></div>
+    <div class="ds-canvas ds-canvas--padded">
+<button class="group inline-flex cursor-pointer items-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-confirmation focus-visible:ring-offset-1 disabled:pointer-events-none disabled:opacity-30 gap-[5px] text-sm"><span class="flex shrink-0 items-center justify-center rounded-[5px] transition-colors group-hover:bg-neutral-level_1 size-[30px]"><span aria-hidden="true" class="inline-flex shrink-0 items-center justify-center text-confirmation"><svg aria-hidden="true" class="lucide lucide-square-check" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="15" xmlns="http://www.w3.org/2000/svg"><rect height="18" rx="2" width="18" x="3" y="3"></rect><path d="m9 12 2 2 4-4"></path></svg></span></span><span class="text-font">Lorem Ipsum</span></button>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const Checked: Story = {
+  args: { checked: true },
+}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">Rounded</h2>
+    <div class="ds-story-id">components-buttoncheck--rounded · export <b>Rounded</b></div>
+    <div class="ds-canvas ds-canvas--padded">
+<button class="group inline-flex cursor-pointer items-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-confirmation focus-visible:ring-offset-1 disabled:pointer-events-none disabled:opacity-30 gap-[5px] text-sm"><span class="flex shrink-0 items-center justify-center rounded-[5px] transition-colors group-hover:bg-neutral-level_1 size-[30px]"><span aria-hidden="true" class="inline-flex shrink-0 items-center justify-center text-font"><svg aria-hidden="true" class="lucide lucide-circle" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="15" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="10"></circle></svg></span></span><span class="text-font">Lorem Ipsum</span></button>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const Rounded: Story = {
+  args: { shape: &#x27;rounded&#x27; },
+}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">Rounded (Checked)</h2>
+    <div class="ds-story-id">components-buttoncheck--rounded-checked · export <b>RoundedChecked</b></div>
+    <div class="ds-canvas ds-canvas--padded">
+<button class="group inline-flex cursor-pointer items-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-confirmation focus-visible:ring-offset-1 disabled:pointer-events-none disabled:opacity-30 gap-[5px] text-sm"><span class="flex shrink-0 items-center justify-center rounded-[5px] transition-colors group-hover:bg-neutral-level_1 size-[30px]"><span aria-hidden="true" class="inline-flex shrink-0 items-center justify-center text-confirmation"><svg aria-hidden="true" class="lucide lucide-circle-check" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="15" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="10"></circle><path d="m9 12 2 2 4-4"></path></svg></span></span><span class="text-font">Lorem Ipsum</span></button>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const RoundedChecked: Story = {
+  name: &#x27;Rounded (Checked)&#x27;,
+  args: { shape: &#x27;rounded&#x27;, checked: true },
+}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">Disabled</h2>
+    <div class="ds-story-id">components-buttoncheck--disabled · export <b>Disabled</b></div>
+    <div class="ds-canvas ds-canvas--padded">
+<button class="group inline-flex cursor-pointer items-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-confirmation focus-visible:ring-offset-1 disabled:pointer-events-none disabled:opacity-30 gap-[5px] text-sm" disabled=""><span class="flex shrink-0 items-center justify-center rounded-[5px] transition-colors group-hover:bg-neutral-level_1 size-[30px]"><span aria-hidden="true" class="inline-flex shrink-0 items-center justify-center text-font"><svg aria-hidden="true" class="lucide lucide-square" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="15" xmlns="http://www.w3.org/2000/svg"><rect height="18" rx="2" width="18" x="3" y="3"></rect></svg></span></span><span class="text-font">Lorem Ipsum</span></button>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const Disabled: Story = {
+  args: { disabled: true },
+}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">Disabled (Checked)</h2>
+    <div class="ds-story-id">components-buttoncheck--disabled-checked · export <b>DisabledChecked</b></div>
+    <div class="ds-canvas ds-canvas--padded">
+<button class="group inline-flex cursor-pointer items-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-confirmation focus-visible:ring-offset-1 disabled:pointer-events-none disabled:opacity-30 gap-[5px] text-sm" disabled=""><span class="flex shrink-0 items-center justify-center rounded-[5px] transition-colors group-hover:bg-neutral-level_1 size-[30px]"><span aria-hidden="true" class="inline-flex shrink-0 items-center justify-center text-confirmation"><svg aria-hidden="true" class="lucide lucide-square-check" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="15" xmlns="http://www.w3.org/2000/svg"><rect height="18" rx="2" width="18" x="3" y="3"></rect><path d="m9 12 2 2 4-4"></path></svg></span></span><span class="text-font">Lorem Ipsum</span></button>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const DisabledChecked: Story = {
+  name: &#x27;Disabled (Checked)&#x27;,
+  args: { disabled: true, checked: true },
+}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">Icon Only</h2>
+    <div class="ds-story-id">components-buttoncheck--icon-only · export <b>IconOnly</b></div>
+    <div class="ds-canvas ds-canvas--padded">
+<button class="group inline-flex cursor-pointer items-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-confirmation focus-visible:ring-offset-1 disabled:pointer-events-none disabled:opacity-30 gap-[5px] text-sm"><span class="flex shrink-0 items-center justify-center rounded-[5px] transition-colors group-hover:bg-neutral-level_1 size-[30px]"><span aria-hidden="true" class="inline-flex shrink-0 items-center justify-center text-font"><svg aria-hidden="true" class="lucide lucide-square" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="15" xmlns="http://www.w3.org/2000/svg"><rect height="18" rx="2" width="18" x="3" y="3"></rect></svg></span></span></button>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const IconOnly: Story = {
+  args: { children: undefined },
+}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">Sizes</h2>
+    <div class="ds-story-id">components-buttoncheck--sizes · export <b>Sizes</b></div>
+    <div class="ds-canvas ds-canvas--padded">
+<div style="display: flex; flex-direction: column; gap: 12px;"><button class="group inline-flex cursor-pointer items-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-confirmation focus-visible:ring-offset-1 disabled:pointer-events-none disabled:opacity-30 gap-[5px] text-sm"><span class="flex shrink-0 items-center justify-center rounded-[5px] transition-colors group-hover:bg-neutral-level_1 size-[30px]"><span aria-hidden="true" class="inline-flex shrink-0 items-center justify-center text-font"><svg aria-hidden="true" class="lucide lucide-square" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="15" xmlns="http://www.w3.org/2000/svg"><rect height="18" rx="2" width="18" x="3" y="3"></rect></svg></span></span><span class="text-font">Small (30px)</span></button><button class="group inline-flex cursor-pointer items-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-confirmation focus-visible:ring-offset-1 disabled:pointer-events-none disabled:opacity-30 gap-[5px] text-sm"><span class="flex shrink-0 items-center justify-center rounded-[5px] transition-colors group-hover:bg-neutral-level_1 size-[35px]"><span aria-hidden="true" class="inline-flex shrink-0 items-center justify-center text-font"><svg aria-hidden="true" class="lucide lucide-square" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="15" xmlns="http://www.w3.org/2000/svg"><rect height="18" rx="2" width="18" x="3" y="3"></rect></svg></span></span><span class="text-font">Medium (35px)</span></button><button class="group inline-flex cursor-pointer items-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-confirmation focus-visible:ring-offset-1 disabled:pointer-events-none disabled:opacity-30 gap-[5px] text-base"><span class="flex shrink-0 items-center justify-center rounded-[5px] transition-colors group-hover:bg-neutral-level_1 size-[40px]"><span aria-hidden="true" class="inline-flex shrink-0 items-center justify-center text-font"><svg aria-hidden="true" class="lucide lucide-square" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg"><rect height="18" rx="2" width="18" x="3" y="3"></rect></svg></span></span><span class="text-font">Large (40px)</span></button></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const Sizes: Story = {
+  render: (args) =&gt; (
+    &lt;div style={{ display: &#x27;flex&#x27;, flexDirection: &#x27;column&#x27;, gap: 12 }}&gt;
+      &lt;ButtonCheck {...args} size=&quot;sm&quot;&gt;
+        Small (30px)
+      &lt;/ButtonCheck&gt;
+      &lt;ButtonCheck {...args} size=&quot;md&quot;&gt;
+        Medium (35px)
+      &lt;/ButtonCheck&gt;
+      &lt;ButtonCheck {...args} size=&quot;lg&quot;&gt;
+        Large (40px)
+      &lt;/ButtonCheck&gt;
+    &lt;/div&gt;
+  ),
+}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">All Variants</h2>
+    <div class="ds-story-id">components-buttoncheck--all-variants · export <b>AllVariants</b></div>
+    <div class="ds-canvas ds-canvas--padded">
+<div style="display: flex; flex-direction: column; gap: 20px;"><div style="display: flex; flex-direction: column; gap: 8px;"><p style="font-size: 12px; text-transform: capitalize; color: rgb(136, 136, 136); margin: 0px;">square</p><div style="display: flex; gap: 12px; align-items: center; flex-wrap: wrap;"><button class="group inline-flex cursor-pointer items-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-confirmation focus-visible:ring-offset-1 disabled:pointer-events-none disabled:opacity-30 gap-[5px] text-sm"><span class="flex shrink-0 items-center justify-center rounded-[5px] transition-colors group-hover:bg-neutral-level_1 size-[30px]"><span aria-hidden="true" class="inline-flex shrink-0 items-center justify-center text-font"><svg aria-hidden="true" class="lucide lucide-square" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="15" xmlns="http://www.w3.org/2000/svg"><rect height="18" rx="2" width="18" x="3" y="3"></rect></svg></span></span><span class="text-font">Unchecked sm</span></button><button class="group inline-flex cursor-pointer items-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-confirmation focus-visible:ring-offset-1 disabled:pointer-events-none disabled:opacity-30 gap-[5px] text-sm"><span class="flex shrink-0 items-center justify-center rounded-[5px] transition-colors group-hover:bg-neutral-level_1 size-[30px]"><span aria-hidden="true" class="inline-flex shrink-0 items-center justify-center text-confirmation"><svg aria-hidden="true" class="lucide lucide-square-check" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="15" xmlns="http://www.w3.org/2000/svg"><rect height="18" rx="2" width="18" x="3" y="3"></rect><path d="m9 12 2 2 4-4"></path></svg></span></span><span class="text-font">Checked sm</span></button><button class="group inline-flex cursor-pointer items-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-confirmation focus-visible:ring-offset-1 disabled:pointer-events-none disabled:opacity-30 gap-[5px] text-sm"><span class="flex shrink-0 items-center justify-center rounded-[5px] transition-colors group-hover:bg-neutral-level_1 size-[35px]"><span aria-hidden="true" class="inline-flex shrink-0 items-center justify-center text-font"><svg aria-hidden="true" class="lucide lucide-square" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="15" xmlns="http://www.w3.org/2000/svg"><rect height="18" rx="2" width="18" x="3" y="3"></rect></svg></span></span><span class="text-font">Unchecked md</span></button><button class="group inline-flex cursor-pointer items-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-confirmation focus-visible:ring-offset-1 disabled:pointer-events-none disabled:opacity-30 gap-[5px] text-sm"><span class="flex shrink-0 items-center justify-center rounded-[5px] transition-colors group-hover:bg-neutral-level_1 size-[35px]"><span aria-hidden="true" class="inline-flex shrink-0 items-center justify-center text-confirmation"><svg aria-hidden="true" class="lucide lucide-square-check" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="15" xmlns="http://www.w3.org/2000/svg"><rect height="18" rx="2" width="18" x="3" y="3"></rect><path d="m9 12 2 2 4-4"></path></svg></span></span><span class="text-font">Checked md</span></button><button class="group inline-flex cursor-pointer items-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-confirmation focus-visible:ring-offset-1 disabled:pointer-events-none disabled:opacity-30 gap-[5px] text-base"><span class="flex shrink-0 items-center justify-center rounded-[5px] transition-colors group-hover:bg-neutral-level_1 size-[40px]"><span aria-hidden="true" class="inline-flex shrink-0 items-center justify-center text-font"><svg aria-hidden="true" class="lucide lucide-square" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg"><rect height="18" rx="2" width="18" x="3" y="3"></rect></svg></span></span><span class="text-font">Unchecked lg</span></button><button class="group inline-flex cursor-pointer items-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-confirmation focus-visible:ring-offset-1 disabled:pointer-events-none disabled:opacity-30 gap-[5px] text-base"><span class="flex shrink-0 items-center justify-center rounded-[5px] transition-colors group-hover:bg-neutral-level_1 size-[40px]"><span aria-hidden="true" class="inline-flex shrink-0 items-center justify-center text-confirmation"><svg aria-hidden="true" class="lucide lucide-square-check" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg"><rect height="18" rx="2" width="18" x="3" y="3"></rect><path d="m9 12 2 2 4-4"></path></svg></span></span><span class="text-font">Checked lg</span></button><button class="group inline-flex cursor-pointer items-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-confirmation focus-visible:ring-offset-1 disabled:pointer-events-none disabled:opacity-30 gap-[5px] text-sm" disabled=""><span class="flex shrink-0 items-center justify-center rounded-[5px] transition-colors group-hover:bg-neutral-level_1 size-[30px]"><span aria-hidden="true" class="inline-flex shrink-0 items-center justify-center text-font"><svg aria-hidden="true" class="lucide lucide-square" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="15" xmlns="http://www.w3.org/2000/svg"><rect height="18" rx="2" width="18" x="3" y="3"></rect></svg></span></span><span class="text-font">Disabled</span></button><button class="group inline-flex cursor-pointer items-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-confirmation focus-visible:ring-offset-1 disabled:pointer-events-none disabled:opacity-30 gap-[5px] text-sm" disabled=""><span class="flex shrink-0 items-center justify-center rounded-[5px] transition-colors group-hover:bg-neutral-level_1 size-[30px]"><span aria-hidden="true" class="inline-flex shrink-0 items-center justify-center text-confirmation"><svg aria-hidden="true" class="lucide lucide-square-check" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="15" xmlns="http://www.w3.org/2000/svg"><rect height="18" rx="2" width="18" x="3" y="3"></rect><path d="m9 12 2 2 4-4"></path></svg></span></span><span class="text-font">Disabled checked</span></button></div></div><div style="display: flex; flex-direction: column; gap: 8px;"><p style="font-size: 12px; text-transform: capitalize; color: rgb(136, 136, 136); margin: 0px;">rounded</p><div style="display: flex; gap: 12px; align-items: center; flex-wrap: wrap;"><button class="group inline-flex cursor-pointer items-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-confirmation focus-visible:ring-offset-1 disabled:pointer-events-none disabled:opacity-30 gap-[5px] text-sm"><span class="flex shrink-0 items-center justify-center rounded-[5px] transition-colors group-hover:bg-neutral-level_1 size-[30px]"><span aria-hidden="true" class="inline-flex shrink-0 items-center justify-center text-font"><svg aria-hidden="true" class="lucide lucide-circle" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="15" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="10"></circle></svg></span></span><span class="text-font">Unchecked sm</span></button><button class="group inline-flex cursor-pointer items-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-confirmation focus-visible:ring-offset-1 disabled:pointer-events-none disabled:opacity-30 gap-[5px] text-sm"><span class="flex shrink-0 items-center justify-center rounded-[5px] transition-colors group-hover:bg-neutral-level_1 size-[30px]"><span aria-hidden="true" class="inline-flex shrink-0 items-center justify-center text-confirmation"><svg aria-hidden="true" class="lucide lucide-circle-check" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="15" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="10"></circle><path d="m9 12 2 2 4-4"></path></svg></span></span><span class="text-font">Checked sm</span></button><button class="group inline-flex cursor-pointer items-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-confirmation focus-visible:ring-offset-1 disabled:pointer-events-none disabled:opacity-30 gap-[5px] text-sm"><span class="flex shrink-0 items-center justify-center rounded-[5px] transition-colors group-hover:bg-neutral-level_1 size-[35px]"><span aria-hidden="true" class="inline-flex shrink-0 items-center justify-center text-font"><svg aria-hidden="true" class="lucide lucide-circle" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="15" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="10"></circle></svg></span></span><span class="text-font">Unchecked md</span></button><button class="group inline-flex cursor-pointer items-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-confirmation focus-visible:ring-offset-1 disabled:pointer-events-none disabled:opacity-30 gap-[5px] text-sm"><span class="flex shrink-0 items-center justify-center rounded-[5px] transition-colors group-hover:bg-neutral-level_1 size-[35px]"><span aria-hidden="true" class="inline-flex shrink-0 items-center justify-center text-confirmation"><svg aria-hidden="true" class="lucide lucide-circle-check" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="15" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="10"></circle><path d="m9 12 2 2 4-4"></path></svg></span></span><span class="text-font">Checked md</span></button><button class="group inline-flex cursor-pointer items-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-confirmation focus-visible:ring-offset-1 disabled:pointer-events-none disabled:opacity-30 gap-[5px] text-base"><span class="flex shrink-0 items-center justify-center rounded-[5px] transition-colors group-hover:bg-neutral-level_1 size-[40px]"><span aria-hidden="true" class="inline-flex shrink-0 items-center justify-center text-font"><svg aria-hidden="true" class="lucide lucide-circle" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="10"></circle></svg></span></span><span class="text-font">Unchecked lg</span></button><button class="group inline-flex cursor-pointer items-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-confirmation focus-visible:ring-offset-1 disabled:pointer-events-none disabled:opacity-30 gap-[5px] text-base"><span class="flex shrink-0 items-center justify-center rounded-[5px] transition-colors group-hover:bg-neutral-level_1 size-[40px]"><span aria-hidden="true" class="inline-flex shrink-0 items-center justify-center text-confirmation"><svg aria-hidden="true" class="lucide lucide-circle-check" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="10"></circle><path d="m9 12 2 2 4-4"></path></svg></span></span><span class="text-font">Checked lg</span></button><button class="group inline-flex cursor-pointer items-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-confirmation focus-visible:ring-offset-1 disabled:pointer-events-none disabled:opacity-30 gap-[5px] text-sm" disabled=""><span class="flex shrink-0 items-center justify-center rounded-[5px] transition-colors group-hover:bg-neutral-level_1 size-[30px]"><span aria-hidden="true" class="inline-flex shrink-0 items-center justify-center text-font"><svg aria-hidden="true" class="lucide lucide-circle" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="15" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="10"></circle></svg></span></span><span class="text-font">Disabled</span></button><button class="group inline-flex cursor-pointer items-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-confirmation focus-visible:ring-offset-1 disabled:pointer-events-none disabled:opacity-30 gap-[5px] text-sm" disabled=""><span class="flex shrink-0 items-center justify-center rounded-[5px] transition-colors group-hover:bg-neutral-level_1 size-[30px]"><span aria-hidden="true" class="inline-flex shrink-0 items-center justify-center text-confirmation"><svg aria-hidden="true" class="lucide lucide-circle-check" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="15" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="10"></circle><path d="m9 12 2 2 4-4"></path></svg></span></span><span class="text-font">Disabled checked</span></button></div></div></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const AllVariants: Story = {
+  render: () =&gt; (
+    &lt;div style={{ display: &#x27;flex&#x27;, flexDirection: &#x27;column&#x27;, gap: 20 }}&gt;
+      {([&#x27;square&#x27;, &#x27;rounded&#x27;] as const).map((shape) =&gt; (
+        &lt;div
+          key={shape}
+          style={{ display: &#x27;flex&#x27;, flexDirection: &#x27;column&#x27;, gap: 8 }}
+        &gt;
+          &lt;p
+            style={{
+              fontSize: 12,
+              textTransform: &#x27;capitalize&#x27;,
+              color: &#x27;#888&#x27;,
+              margin: 0,
+            }}
+          &gt;
+            {shape}
+          &lt;/p&gt;
+          &lt;div
+            style={{
+              display: &#x27;flex&#x27;,
+              gap: 12,
+              alignItems: &#x27;center&#x27;,
+              flexWrap: &#x27;wrap&#x27;,
+            }}
+          &gt;
+            &lt;ButtonCheck shape={shape} size=&quot;sm&quot;&gt;
+              Unchecked sm
+            &lt;/ButtonCheck&gt;
+            &lt;ButtonCheck shape={shape} size=&quot;sm&quot; checked&gt;
+              Checked sm
+            &lt;/ButtonCheck&gt;
+            &lt;ButtonCheck shape={shape} size=&quot;md&quot;&gt;
+              Unchecked md
+            &lt;/ButtonCheck&gt;
+            &lt;ButtonCheck shape={shape} size=&quot;md&quot; checked&gt;
+              Checked md
+            &lt;/ButtonCheck&gt;
+            &lt;ButtonCheck shape={shape} size=&quot;lg&quot;&gt;
+              Unchecked lg
+            &lt;/ButtonCheck&gt;
+            &lt;ButtonCheck shape={shape} size=&quot;lg&quot; checked&gt;
+              Checked lg
+            &lt;/ButtonCheck&gt;
+            &lt;ButtonCheck shape={shape} size=&quot;sm&quot; disabled&gt;
+              Disabled
+            &lt;/ButtonCheck&gt;
+            &lt;ButtonCheck shape={shape} size=&quot;sm&quot; disabled checked&gt;
+              Disabled checked
+            &lt;/ButtonCheck&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      ))}
+    &lt;/div&gt;
+  ),
+}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">Interactive</h2>
+    <div class="ds-story-id">components-buttoncheck--interactive · export <b>Interactive</b></div>
+    <div class="ds-canvas ds-canvas--padded">
+<button class="group inline-flex cursor-pointer items-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-confirmation focus-visible:ring-offset-1 disabled:pointer-events-none disabled:opacity-30 gap-[5px] text-sm"><span class="flex shrink-0 items-center justify-center rounded-[5px] transition-colors group-hover:bg-neutral-level_1 size-[30px]"><span aria-hidden="true" class="inline-flex shrink-0 items-center justify-center text-font"><svg aria-hidden="true" class="lucide lucide-square" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="15" xmlns="http://www.w3.org/2000/svg"><rect height="18" rx="2" width="18" x="3" y="3"></rect></svg></span></span><span class="text-font">Unchecked</span></button>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const Interactive: Story = {
+  render: () =&gt; &lt;ToggleDemo /&gt;,
+}</code></pre></details>
+  </section>
+</body>
+</html>

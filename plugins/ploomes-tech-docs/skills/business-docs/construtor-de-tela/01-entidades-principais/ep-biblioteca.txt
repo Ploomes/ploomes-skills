@@ -1,0 +1,114 @@
+Biblioteca
+Essa funcionalidade centraliza e organiza os anexos da conta através de uma estrutura de pastas hierarquizadas. Por ela é possível unificar o compartilhamento de apresentações, planilhas, imagens, vídeos e outros tipos de arquivos para os usuários do Ploomes. 
+
+Antes de entrarmos nas regras e limitações específicas da Biblioteca, vamos destacar as extensões de arquivos aceitas pelo Ploomes: 
+
+'.doc', '.docx', '.xlsx', '.xls', '.csv', '.png', '.jpg', '.jpeg', '.pdf', '.txt', '.odt', '.ppt', 'pptx', '.odp', '.gif', '.mp4', '.mp3', '.zip', '.rar', '.wmv', '.mov', '.bmp', '.tiff', '.mkv', '.avi', '.aac', '.flac', '.rm', '.rmvb', ‘.kmz’, ‘.kml’, ‘.dwg’, ‘.gpx’, ‘.bak’ e ‘.fld’.
+
+Qualquer arquivo inserido fora desse padrão retornará uma mensagem de erro. 
+
+Além disso, o Ploomes possui um limite de 25MB para cada arquivo armazenado.
+
+Dentro da Biblioteca, podemos criar pastas e, nelas, podemos criar sub-pastas e / ou subir arquivos. 
+
+É possível criar até 100 pastas-mãe (pastas que estão no primeiro nível da hierarquia). Cada pasta-mãe pode ter até 7 sub-pastas vinculadas a ela. Em cada pasta, podemos criar “Coleções”, que são agrupamentos de arquivos dentro daquela pasta. 
+
+É possível subir mais de um arquivo de uma só vez.
+
+Uma vez que os arquivos estão armazenados, temos as seguintes ações disponíveis: 
+
+Baixar
+
+Essa ação faz download dos itens selecionados no computador do usuário. Se uma coleção for baixada, todos os itens dentro dela são baixados.
+
+Excluir
+
+Apaga os itens e as coleções selecionadas. A coleção é uma entidade que vincula vários itens como um só grupo. Ao excluir uma coleção, o que se perde é o vínculo entre os itens e não os arquivos em si. Esses arquivos continuarão na pasta onde foram subidos.
+
+Renomear
+
+Esta ação permite a mudança da nomenclatura dos itens e das coleções.
+
+Mover
+
+Itens e coleções podem ser movidos para outras pastas que o usuário tenha permissão de acesso. Um usuário não poderá mover arquivos para pastas que não pode ver ou que não pode editar.
+
+A Biblioteca possui uma rede de permissões complexa, a fim de preservar a integridade e o acesso aos arquivos com grande flexibilidade. 
+
+É possível determinar, para cada perfil de usuário, se ele poderá ou não (a) visualizar a Biblioteca e (b) se poderá criar pastas-mãe. 
+
+Permissões das pastas
+
+As permissões existentes para as pastas e seus arquivos são: visualização, edição e exclusão. Os usuários que puderem ver uma pasta, também têm permissão para visualizar e baixar os arquivos contidos naquela pasta. A permissão de edição permite a criação e a movimentação da pasta e de seus arquivos. Por fim, a permissão de exclusão permite que o usuário exclua a pasta e seus arquivos.
+
+Hierarquia das permissões 
+
+Cada pasta tem sua própria permissão, que é limitada sempre pelas regras de permissão da pasta anterior. Isso quer dizer que a pasta anterior à pasta que está sendo configurada sempre vai limitar as possibilidades de regras que poderá receber, mas as pastas-mãe, por serem as primeiras da hierarquia, têm mais flexibilidade de permissões e ditam o comportamento das demais pastas abaixo delas.
+
+Hierarquia dos tipos de permissões
+
+Além disso, a pasta-mãe também tem o papel de ditar o tipo de permissão das suas sub-pastas; se é por usuário, por perfil ou por equipe. O tipo de permissão deve se manter o mesmo em toda árvore da pasta-mãe e o próprio sistema não vai permitir a mudança para outro tipo senão o definido como padrão.
+
+Caso uma pasta-mãe possa ser vista apenas pelo usuário A e B, uma sub-pasta dessa pasta-mãe não poderá ser vista pelo usuário C. 
+
+Mudanças nas permissões
+
+É possível editar as permissões de pastas uma vez que as permissões de uma árvore de pastas já tenham sido criadas. O usuário deve proceder com cautela porque o tipo de modificação pode acarretar em propagações equivalentes nas sub-pastas da pasta editada. 
+
+Edição do tipo de permissão
+
+A alteração do tipo de permissão para outro propaga nas sub-pastas a mesma permissão nova. Exemplo: se uma estrutura está configurada com um tipo de permissão de perfil de usuário e o tipo for trocado para equipe, todas as sub-pastas terão a mesma alteração de permissão da pasta-mãe.
+
+Edição de uma pasta pública para se tornar restrita
+
+Se uma estrutura de pastas estiver totalmente irrestrita e o usuário trocar a permissão da pasta-mãe para uma configuração restritiva, todas as suas sub-pastas herdarão a mesma restrição.
+
+Edição de uma pasta restrita para se tornar pública
+
+Em uma árvore de pastas restritas, a liberação da permissão para todos da pasta-mãe não afeta as suas sub-pastas. Elas vão continuar com as mesmas restrições anteriores e se o usuário quiser, conseguirá liberar uma a uma.
+
+Inserção e remoção de permissões
+
+Se uma nova alternativa for incluída ou se uma já existente for excluída na pasta-mãe, ela vai ser propagada e incluída/excluída em todas as sub-pastas.
+
+Movimentar pastas e arquivos
+
+Os usuários do sistema têm a possibilidade de movimentar pastas, itens e coleções para outras localidades dentro do módulo, porém seguindo as suas permissões de visualização e edição. Os comportamentos esperados das movimentações são os seguintes:
+
+Manutenção das permissões - As permissões das pastas movidas se manterão as mesmas quando:
+
+As pastas possuem o mesmo tipo de permissão;
+
+A pasta de origem possui uma restrição, mas a pasta de destino está com visualização para todos da empresa;
+
+A pasta origem possui restrições que estão contidas nas restrições da pasta destino.
+
+Perda de parte das permissões - Há perda de parte das permissões quando:
+
+Pasta de origem for mais restrita do que a pasta de destino, sendo que a pasta de origem contém as permissões da pasta destino.
+
+Perda completa das permissões - A situação em que todas as permissões são perdidas e somente o administrador da conta terá acesso é:
+
+Uma pasta e suas sub-pastas são movidas para dentro de uma pasta restrita.
+
+Utiliza as permissões da pasta superior - As situações em que a pasta movida replica as permissões da nova pasta superior são:
+
+As pastas possuem o mesmo tipo de configuração de permissões, porém contém permissões não compatíveis;
+
+As pastas possuem configurações de tipos de permissões diferentes.
+
+Busca e filtros
+
+Vínculo da Biblioteca com outros cadastros / tabelas 
+
+Comportamento do vínculo de anexos com itens:
+
+É possível subir anexos diretamente das tabelas de negócios, clientes e produtos tanto para o módulo quanto para a tabela escolhida. Vale salientar que os itens não vão herdar as regras de permissões de seus anexos de origem. Se um anexo inserido na página de um cliente restrito para somente o responsável for vinculado à Biblioteca e a pasta estiver aberta para todos da empresa, então todos os usuários verão este item na Biblioteca. As restrições configuradas devem ser rígidas quando o sistema de regras de perfil da conta for mais restritivo para assegurar a segurança dos dados.
+
+Comportamento do vínculo de itens com coleções:
+
+A coleção é uma entidade que reúne vários itens num único agrupamento. Os itens da coleção podem ser da pasta de origem da coleção ou de outras pastas. As regras de permissões da coleção respeitam as configurações da pasta de origem e também as regras do item. Só poderá acessar a coleção quem tiver acesso à sua pasta. No entanto, mesmo quem puder ver a coleção precisará de acesso para ver os seus itens.
+
+Comportamento do vínculo item com entidades fora da Biblioteca:
+
+Os arquivos, isto é, itens e coleções, podem ser vinculados a cadastros / tabelas de clientes, produtos e negócios. Uma vez disponibilizado nessas tabelas o arquivo será visualizado por quem tiver acesso aos itens daquele cadastro. É possível enviar tanto arquivos dessas tabelas para o módulo de biblioteca quanto do módulo até as tabelas.

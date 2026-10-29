@@ -1,0 +1,144 @@
+:root {
+  --color-white: #ffffff;
+  --color-basic-light: #ffffff;
+  --color-basic-dark: #121212;
+
+  --color-background: #ffffff;
+  --color-background-level_1: #fafafb;
+  --color-background_opacity: #4c5566cc;
+  --color-background_opacity-level_1: #4c556680;
+
+  --color-font: #1b102c;
+  --color-font-level_1: #1b102cb3;
+  --color-font-level_2: #1b102c80;
+
+  --color-neutral-level_1: #1b102c0d;
+  --color-neutral-level_2: #1b102c1a;
+  --color-neutral-level_3: #1b102c26;
+
+  --color-brand: #7e33e6;
+  --color-brand-default_30: #7e33e64d;
+  --color-brand-level_1: #8d49e9;
+  --color-brand-level_2: #701ce3;
+
+  --color-confirmation: #1a94ff;
+  --color-confirmation-default_30: #1a94ff4d;
+  --color-confirmation-level_1: #33a0ff;
+  --color-confirmation-level_2: #0088ff;
+
+  --color-confirmation_alt: #3bddad;
+  --color-confirmation_alt-default_30: #3bddad4d;
+  --color-confirmation_alt-level_1: #51e1b7;
+  --color-confirmation_alt-level_2: #26d9a4;
+
+  --color-success: #3bddad;
+  --color-success-default_30: #3bddad4d;
+  --color-success-level_1: #51e1b7;
+  --color-success-level_2: #26d9a4;
+
+  --color-alert: #ffc01a;
+  --color-alert-default_30: #ffc01a4d;
+  --color-alert-level_1: #ffc733;
+  --color-alert-level_2: #ffb900;
+
+  --color-danger: #f22727;
+  --color-danger-default_30: #f227274d;
+  --color-danger-level_1: #f33f3f;
+  --color-danger-level_2: #f00f0f;
+
+  --color-ai-brand: #7e33e6;
+  --color-ai-brand-level_1: #8f4ded;
+  --color-ai-brand-level_2: #6d1adf;
+
+  --gradient-ai: linear-gradient(to right, #cd3dff 0%, #0f2fff 100%);
+  --gradient-brand_gradient: linear-gradient(to right, #5a16b6 0%, #2d0b5b 100%);
+  --gradient-brand_gradient-level_1: linear-gradient(to right, #8d49e9 0%, #8d49e9 100%);
+  --gradient-brand_gradient-level_2: linear-gradient(to right, #701ce3 0%, #701ce3 100%);
+}
+
+.dark {
+  --color-background: #121119;
+  --color-background-level_1: #1b1a22;
+
+  --color-font: #fbf8fe;
+  --color-font-level_1: #fbf8feb3;
+  --color-font-level_2: #fbf8fe80;
+
+  --color-neutral-level_1: #f6f1fd0d;
+  --color-neutral-level_2: #f6f1fd1a;
+  --color-neutral-level_3: #f6f1fd26;
+
+  --color-confirmation-level_1: #1a94ff;
+  --color-confirmation-level_2: #1a94ff;
+
+  --color-alert-level_1: #ffb900;
+  --color-alert-level_2: #ffc733;
+
+  --color-confirmation_alt-level_1: #26d9a4;
+  --color-confirmation_alt-level_2: #51e1b7;
+
+  --color-success-level_1: #26d9a4;
+  --color-success-level_2: #51e1b7;
+
+  --color-danger-level_1: #f00f0f;
+  --color-danger-level_2: #f33f3f;
+
+  --gradient-brand_gradient: linear-gradient(to right, #5a16b6 0%, #431188 100%);
+}
+
+/* A superfície da app responde aos tokens semânticos. */
+html,
+body {
+  margin: 0;
+  touch-action: pan-x pan-y;
+  overscroll-behavior: none;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-font);
+  -webkit-tap-highlight-color: transparent;
+}
+
+@media (pointer: coarse) {
+  body {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    user-select: none;
+  }
+
+  input,
+  textarea,
+  [contenteditable] {
+    -webkit-user-select: text;
+    user-select: text;
+  }
+}
+
+@media (max-width: 768px) {
+  input,
+  select,
+  textarea {
+    font-size: 16px;
+  }
+}
+
+@supports selector(:has(*)) {
+  @media (max-width: 768px) {
+    table:has(:is(input, select, textarea)) {
+      display: block;
+      overflow-x: auto;
+    }
+
+    table :is(input:not([type='checkbox'], [type='radio']), textarea) {
+      min-width: 6rem;
+    }
+  }
+}
+
+/* Container da tela: ocupa a área de conteúdo inteira que o CRM reserva. */
+.app {
+  min-height: 100dvh;
+  box-sizing: border-box;
+}

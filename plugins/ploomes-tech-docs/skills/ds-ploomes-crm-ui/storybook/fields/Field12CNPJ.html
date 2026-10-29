@@ -1,0 +1,246 @@
+<!doctype html>
+<!--
+  Ploomes Design System — snapshot estático das stories do Storybook.
+  Componente : Fields/Field12CNPJ
+  Stories    : 14 (Default, Filled, With Receita Federal, Receita Federal Active, Receita Federal Loading, Receita Federal Flow, Danger, Alert, Disabled, View Only, Loading, Button States, All Sizes, Cell Statuses)
+  Story      : Field12CNPJ.stories.tsx
+  Tema       : light — use <html class="dark"> para o tema escuro.
+-->
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Field12CNPJ — Ploomes DS</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;600;700&display=swap">
+<link rel="stylesheet" href="../assets/design-system.css">
+<link rel="stylesheet" href="../assets/page.css">
+</head>
+<body class="ds-page">
+  <header class="ds-head">
+    <a class="ds-back" href="../index.html">← inventário</a>
+    <h1 class="ds-title">Field12CNPJ</h1>
+    <p class="ds-meta">fields · 14 stories · <code>Field12CNPJ.stories.tsx</code></p>
+    <pre class="ds-code ds-import">import { Field12CNPJ, ReceitaFederalButton } from &#x27;@ploomescrm/ui&#x27;;</pre>
+    <pre class="ds-code">// props padrão de todas as stories (meta.args)
+args: {
+  label: &#x27;CNPJ&#x27;,
+}</pre>
+  </header>
+  <section class="ds-story">
+    <h2 class="ds-story-name">Default</h2>
+    <div class="ds-story-id">fields-field12cnpj--default · export <b>Default</b></div>
+    <div class="ds-canvas ds-canvas--padded">
+<div style="width: 300px;"><div class="flex w-full flex-col items-start"><div class="flex w-full items-center gap-[5px] pb-[5px]"><label class="shrink-0 text-sm leading-[18px] text-font" for="field-cnpj-_r_0_" id="field-cnpj-_r_0_-label">CNPJ</label><div class="flex h-4 min-w-0 flex-1 items-center gap-[5px]"></div></div><div class="relative flex w-full bg-background px-[10px] transition-colors rounded-[5px] border border-neutral-level_2 items-center gap-[10px] h-[30px] hover:border-font-level_2 focus-within:border-confirmation"><input class="min-w-0 flex-1 bg-transparent text-font outline-none placeholder:text-font-level_2 disabled:cursor-not-allowed text-sm" id="field-cnpj-_r_0_" inputmode="numeric" placeholder="__.___.___/____-__" type="text" value=""/></div></div></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const Default: Story = {}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">Filled</h2>
+    <div class="ds-story-id">fields-field12cnpj--filled · export <b>Filled</b></div>
+    <div class="ds-canvas ds-canvas--padded">
+<div style="width: 300px;"><div class="flex w-full flex-col items-start"><div class="flex w-full items-center gap-[5px] pb-[5px]"><label class="shrink-0 text-sm leading-[18px] text-font" for="field-cnpj-_r_0_" id="field-cnpj-_r_0_-label">CNPJ</label><div class="flex h-4 min-w-0 flex-1 items-center gap-[5px]"></div></div><div class="relative flex w-full bg-background px-[10px] transition-colors rounded-[5px] border border-neutral-level_2 items-center gap-[10px] h-[30px] hover:border-font-level_2 focus-within:border-confirmation"><input class="min-w-0 flex-1 bg-transparent text-font outline-none placeholder:text-font-level_2 disabled:cursor-not-allowed text-sm" id="field-cnpj-_r_0_" inputmode="numeric" placeholder="__.___.___/____-__" type="text" value="11.222.333/0001-81"/></div></div></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const Filled: Story = {
+  args: { defaultValue: &#x27;11222333000181&#x27; },
+}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">With Receita Federal</h2>
+    <div class="ds-story-id">fields-field12cnpj--with-receita-federal · export <b>WithReceitaFederal</b></div>
+    <div class="ds-canvas ds-canvas--padded">
+<div style="width: 300px;"><div class="flex w-full flex-col items-start"><div class="flex w-full items-center gap-[5px] pb-[5px]"><label class="shrink-0 text-sm leading-[18px] text-font" for="field-cnpj-_r_0_" id="field-cnpj-_r_0_-label">CNPJ</label><div class="flex h-4 min-w-0 flex-1 items-center gap-[5px]"></div></div><div class="relative flex w-full bg-background px-[10px] transition-colors rounded-[5px] border border-neutral-level_2 items-center gap-[10px] h-[30px] hover:border-font-level_2 focus-within:border-confirmation"><input class="min-w-0 flex-1 bg-transparent text-font outline-none placeholder:text-font-level_2 disabled:cursor-not-allowed text-sm" id="field-cnpj-_r_0_" inputmode="numeric" placeholder="__.___.___/____-__" type="text" value=""/><span class="inline-block"><button aria-label="Consultar CNPJ na Receita Federal para preencher campos" class="flex cursor-pointer items-center justify-center rounded-[3px] border transition-colors border-neutral-level_2 bg-background hover:bg-neutral-level_1 disabled:cursor-default size-[20px] shrink-0" type="button"><svg aria-hidden="true" class="-scale-y-100 h-[10px] w-[15px]" fill="none" viewbox="0 0 14.9747 9.98354"><path clip-rule="evenodd" d="M7.49392 5.01201C9.22474 6.26993 10.8028 7.30636 12.3859 8.03067C13.1054 7.67122 13.9682 7.18778 14.9747 6.5812C13.9662 5.87257 12.9515 5.06474 11.931 4.15829C10.5174 4.49037 8.8365 4.8139 7.49392 5.01201ZM10.8774 8.76667L10.6457 7.11681C9.11157 8.05604 7.45316 8.81655 5.6736 9.40803C6.51592 9.70191 7.11909 9.89375 7.48281 9.98354C8.49131 9.72443 9.62267 9.31852 10.8774 8.76667ZM4.3048 8.85703C5.31245 8.85874 6.37824 8.81541 7.48936 8.72533C5.65137 7.91181 3.67969 6.80667 1.57033 5.40366C0.99767 5.87456 0.467194 6.2514 0 6.57379C1.55351 7.50989 2.98246 8.2684 4.3048 8.85703ZM4.33502 7.11738C6.42642 5.88568 9.05029 3.87865 10.382 2.77609L7.48851 0C5.5955 1.84569 4.04712 3.2906 2.84336 4.3353C3.54572 5.74088 4.06679 6.68581 4.33502 7.11738ZM5.65479 7.09685C5.65479 7.68063 6.46946 8.15381 7.47426 8.15381C8.47877 8.15381 9.29343 7.68063 9.29343 7.09685C9.29343 6.51307 8.47877 6.03989 7.47426 6.03989C6.46946 6.03989 5.65479 6.51307 5.65479 7.09685Z" fill="#001F55" fill-rule="evenodd"></path></svg></button></span></div></div></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const WithReceitaFederal: Story = {
+  args: { onReceitaFederalClick: () =&gt; {} },
+}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">Receita Federal Active</h2>
+    <div class="ds-story-id">fields-field12cnpj--receita-federal-active · export <b>ReceitaFederalActive</b></div>
+    <div class="ds-canvas ds-canvas--padded">
+<div style="width: 300px;"><div class="flex w-full flex-col items-start"><div class="flex w-full items-center gap-[5px] pb-[5px]"><label class="shrink-0 text-sm leading-[18px] text-font" for="field-cnpj-_r_0_" id="field-cnpj-_r_0_-label">CNPJ</label><div class="flex h-4 min-w-0 flex-1 items-center gap-[5px]"></div></div><div class="relative flex w-full bg-background px-[10px] transition-colors rounded-[5px] border border-neutral-level_2 items-center gap-[10px] h-[30px] hover:border-font-level_2 focus-within:border-confirmation"><input class="min-w-0 flex-1 bg-transparent text-font outline-none placeholder:text-font-level_2 disabled:cursor-not-allowed text-sm" id="field-cnpj-_r_0_" inputmode="numeric" placeholder="__.___.___/____-__" type="text" value="11.222.333/0001-81"/><span class="inline-block"><button aria-label="Limpar campos preenchidos pela consulta a Receita Federal" class="flex cursor-pointer items-center justify-center rounded-[3px] border transition-colors border-confirmation bg-background hover:border-danger hover:bg-neutral-level_1 disabled:cursor-default size-[20px] shrink-0" type="button"><svg aria-hidden="true" class="-scale-y-100 h-[10px] w-[15px]" fill="none" viewbox="0 0 14.9747 9.98354"><path clip-rule="evenodd" d="M7.49392 5.01201C9.22474 6.26993 10.8028 7.30636 12.3859 8.03067C13.1054 7.67122 13.9682 7.18778 14.9747 6.5812C13.9662 5.87257 12.9515 5.06474 11.931 4.15829C10.5174 4.49037 8.8365 4.8139 7.49392 5.01201ZM10.8774 8.76667L10.6457 7.11681C9.11157 8.05604 7.45316 8.81655 5.6736 9.40803C6.51592 9.70191 7.11909 9.89375 7.48281 9.98354C8.49131 9.72443 9.62267 9.31852 10.8774 8.76667ZM4.3048 8.85703C5.31245 8.85874 6.37824 8.81541 7.48936 8.72533C5.65137 7.91181 3.67969 6.80667 1.57033 5.40366C0.99767 5.87456 0.467194 6.2514 0 6.57379C1.55351 7.50989 2.98246 8.2684 4.3048 8.85703ZM4.33502 7.11738C6.42642 5.88568 9.05029 3.87865 10.382 2.77609L7.48851 0C5.5955 1.84569 4.04712 3.2906 2.84336 4.3353C3.54572 5.74088 4.06679 6.68581 4.33502 7.11738ZM5.65479 7.09685C5.65479 7.68063 6.46946 8.15381 7.47426 8.15381C8.47877 8.15381 9.29343 7.68063 9.29343 7.09685C9.29343 6.51307 8.47877 6.03989 7.47426 6.03989C6.46946 6.03989 5.65479 6.51307 5.65479 7.09685Z" fill="#001F55" fill-rule="evenodd"></path></svg></button></span></div></div></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const ReceitaFederalActive: Story = {
+  args: {
+    defaultValue: &#x27;11222333000181&#x27;,
+    onReceitaFederalClick: () =&gt; {},
+    receitaFederalActive: true,
+  },
+}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">Receita Federal Loading</h2>
+    <div class="ds-story-id">fields-field12cnpj--receita-federal-loading · export <b>ReceitaFederalLoading</b></div>
+    <div class="ds-canvas ds-canvas--padded">
+<div style="width: 300px;"><div class="flex w-full flex-col items-start"><div class="flex w-full items-center gap-[5px] pb-[5px]"><label class="shrink-0 text-sm leading-[18px] text-font" for="field-cnpj-_r_0_" id="field-cnpj-_r_0_-label">CNPJ</label><div class="flex h-4 min-w-0 flex-1 items-center gap-[5px]"></div></div><div class="relative flex w-full bg-background px-[10px] transition-colors rounded-[5px] border border-neutral-level_2 items-center gap-[10px] h-[30px] hover:border-font-level_2 focus-within:border-confirmation"><input class="min-w-0 flex-1 bg-transparent text-font outline-none placeholder:text-font-level_2 disabled:cursor-not-allowed text-sm" id="field-cnpj-_r_0_" inputmode="numeric" placeholder="__.___.___/____-__" type="text" value="11.222.333/0001-81"/><span class="inline-block"><button aria-label="Consultar CNPJ na Receita Federal para preencher campos" class="flex cursor-pointer items-center justify-center rounded-[3px] border transition-colors border-neutral-level_2 bg-neutral-level_3 disabled:cursor-default size-[20px] shrink-0" disabled="" type="button"><span aria-hidden="true" class="inline-flex shrink-0 items-center justify-center animate-spin text-[#001F55]"><svg aria-hidden="true" class="lucide lucide-loader-circle" fill="none" height="10" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="10" xmlns="http://www.w3.org/2000/svg"><path d="M21 12a9 9 0 1 1-6.219-8.56"></path></svg></span></button></span></div></div></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const ReceitaFederalLoading: Story = {
+  args: {
+    defaultValue: &#x27;11222333000181&#x27;,
+    onReceitaFederalClick: () =&gt; {},
+    receitaFederalLoading: true,
+  },
+}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">Receita Federal Flow</h2>
+    <div class="ds-story-id">fields-field12cnpj--receita-federal-flow · export <b>ReceitaFederalFlow</b></div>
+    <div class="ds-canvas ds-canvas--padded">
+<div style="width: 300px;"><div class="flex w-full flex-col items-start"><div class="flex w-full items-center gap-[5px] pb-[5px]"><label class="shrink-0 text-sm leading-[18px] text-font" for="field-cnpj-_r_0_" id="field-cnpj-_r_0_-label">CNPJ</label><div class="flex h-4 min-w-0 flex-1 items-center gap-[5px]"></div></div><div class="relative flex w-full bg-background px-[10px] transition-colors rounded-[5px] border border-neutral-level_2 items-center gap-[10px] h-[30px] hover:border-font-level_2 focus-within:border-confirmation"><input class="min-w-0 flex-1 bg-transparent text-font outline-none placeholder:text-font-level_2 disabled:cursor-not-allowed text-sm" id="field-cnpj-_r_0_" inputmode="numeric" placeholder="__.___.___/____-__" type="text" value="11.222.333/0001-81"/><span class="inline-block"><button aria-label="Consultar CNPJ na Receita Federal para preencher campos" class="flex cursor-pointer items-center justify-center rounded-[3px] border transition-colors border-neutral-level_2 bg-background hover:bg-neutral-level_1 disabled:cursor-default size-[20px] shrink-0" type="button"><svg aria-hidden="true" class="-scale-y-100 h-[10px] w-[15px]" fill="none" viewbox="0 0 14.9747 9.98354"><path clip-rule="evenodd" d="M7.49392 5.01201C9.22474 6.26993 10.8028 7.30636 12.3859 8.03067C13.1054 7.67122 13.9682 7.18778 14.9747 6.5812C13.9662 5.87257 12.9515 5.06474 11.931 4.15829C10.5174 4.49037 8.8365 4.8139 7.49392 5.01201ZM10.8774 8.76667L10.6457 7.11681C9.11157 8.05604 7.45316 8.81655 5.6736 9.40803C6.51592 9.70191 7.11909 9.89375 7.48281 9.98354C8.49131 9.72443 9.62267 9.31852 10.8774 8.76667ZM4.3048 8.85703C5.31245 8.85874 6.37824 8.81541 7.48936 8.72533C5.65137 7.91181 3.67969 6.80667 1.57033 5.40366C0.99767 5.87456 0.467194 6.2514 0 6.57379C1.55351 7.50989 2.98246 8.2684 4.3048 8.85703ZM4.33502 7.11738C6.42642 5.88568 9.05029 3.87865 10.382 2.77609L7.48851 0C5.5955 1.84569 4.04712 3.2906 2.84336 4.3353C3.54572 5.74088 4.06679 6.68581 4.33502 7.11738ZM5.65479 7.09685C5.65479 7.68063 6.46946 8.15381 7.47426 8.15381C8.47877 8.15381 9.29343 7.68063 9.29343 7.09685C9.29343 6.51307 8.47877 6.03989 7.47426 6.03989C6.46946 6.03989 5.65479 6.51307 5.65479 7.09685Z" fill="#001F55" fill-rule="evenodd"></path></svg></button></span></div></div></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const ReceitaFederalFlow: Story = {
+  render: function Render(args) {
+    const [active, setActive] = useState(false);
+    const [busy, setBusy] = useState(false);
+    return (
+      &lt;Field12CNPJ
+        {...args}
+        defaultValue=&quot;11222333000181&quot;
+        receitaFederalActive={active}
+        receitaFederalLoading={busy}
+        onReceitaFederalClick={() =&gt; {
+          if (active) {
+            setActive(false);
+            return;
+          }
+          setBusy(true);
+          setTimeout(() =&gt; {
+            setBusy(false);
+            setActive(true);
+          }, 1500);
+        }}
+      /&gt;
+    );
+  },
+}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">Danger</h2>
+    <div class="ds-story-id">fields-field12cnpj--danger · export <b>Danger</b></div>
+    <div class="ds-canvas ds-canvas--padded">
+<div style="width: 300px;"><div class="flex w-full flex-col items-start"><div class="flex w-full items-center gap-[5px] pb-[5px]"><label class="shrink-0 text-sm leading-[18px] text-font" for="field-cnpj-_r_0_" id="field-cnpj-_r_0_-label">CNPJ</label><div class="flex h-4 min-w-0 flex-1 items-center gap-[5px]"></div></div><div class="relative flex w-full bg-background px-[10px] transition-colors rounded-[5px] border border-danger items-center gap-[10px] h-[30px]"><input aria-describedby="field-cnpj-_r_0_-help" aria-invalid="true" class="min-w-0 flex-1 bg-transparent text-font outline-none placeholder:text-font-level_2 disabled:cursor-not-allowed text-sm" id="field-cnpj-_r_0_" inputmode="numeric" placeholder="__.___.___/____-__" type="text" value=""/></div><p class="w-full whitespace-normal px-[10px] pt-[3px] text-[13px] leading-[18px] md:truncate text-danger" id="field-cnpj-_r_0_-help">CNPJ inválido</p></div></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const Danger: Story = {
+  args: { status: &#x27;danger&#x27;, helpText: &#x27;CNPJ inválido&#x27; },
+}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">Alert</h2>
+    <div class="ds-story-id">fields-field12cnpj--alert · export <b>Alert</b></div>
+    <div class="ds-canvas ds-canvas--padded">
+<div style="width: 300px;"><div class="flex w-full flex-col items-start"><div class="flex w-full items-center gap-[5px] pb-[5px]"><label class="shrink-0 text-sm leading-[18px] text-font" for="field-cnpj-_r_0_" id="field-cnpj-_r_0_-label">CNPJ</label><div class="flex h-4 min-w-0 flex-1 items-center gap-[5px]"></div></div><div class="relative flex w-full bg-background px-[10px] transition-colors rounded-[5px] border border-alert items-center gap-[10px] h-[30px]"><input aria-describedby="field-cnpj-_r_0_-help" class="min-w-0 flex-1 bg-transparent text-font outline-none placeholder:text-font-level_2 disabled:cursor-not-allowed text-sm" id="field-cnpj-_r_0_" inputmode="numeric" placeholder="__.___.___/____-__" type="text" value=""/></div><p class="w-full whitespace-normal px-[10px] pt-[3px] text-[13px] leading-[18px] md:truncate text-font-level_2" id="field-cnpj-_r_0_-help">Texto de ajuda</p></div></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const Alert: Story = {
+  args: { status: &#x27;alert&#x27;, helpText: &#x27;Texto de ajuda&#x27; },
+}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">Disabled</h2>
+    <div class="ds-story-id">fields-field12cnpj--disabled · export <b>Disabled</b></div>
+    <div class="ds-canvas ds-canvas--padded">
+<div style="width: 300px;"><div class="flex w-full flex-col items-start"><div class="flex w-full items-center gap-[5px] pb-[5px]"><label class="shrink-0 text-sm leading-[18px] text-font" for="field-cnpj-_r_0_" id="field-cnpj-_r_0_-label">CNPJ</label><div class="flex h-4 min-w-0 flex-1 items-center gap-[5px]"></div></div><div class="relative flex w-full px-[10px] transition-colors rounded-[5px] border border-neutral-level_2 items-center gap-[10px] h-[30px] bg-neutral-level_1"><input class="min-w-0 flex-1 bg-transparent text-font outline-none placeholder:text-font-level_2 disabled:cursor-not-allowed text-sm" disabled="" id="field-cnpj-_r_0_" inputmode="numeric" placeholder="__.___.___/____-__" type="text" value="11.222.333/0001-81"/><span class="inline-block"><button aria-label="Consultar CNPJ na Receita Federal para preencher campos" class="flex cursor-pointer items-center justify-center rounded-[3px] border transition-colors border-neutral-level_2 bg-background hover:bg-neutral-level_1 disabled:cursor-default size-[20px] shrink-0" disabled="" type="button"><svg aria-hidden="true" class="-scale-y-100 h-[10px] w-[15px]" fill="none" viewbox="0 0 14.9747 9.98354"><path clip-rule="evenodd" d="M7.49392 5.01201C9.22474 6.26993 10.8028 7.30636 12.3859 8.03067C13.1054 7.67122 13.9682 7.18778 14.9747 6.5812C13.9662 5.87257 12.9515 5.06474 11.931 4.15829C10.5174 4.49037 8.8365 4.8139 7.49392 5.01201ZM10.8774 8.76667L10.6457 7.11681C9.11157 8.05604 7.45316 8.81655 5.6736 9.40803C6.51592 9.70191 7.11909 9.89375 7.48281 9.98354C8.49131 9.72443 9.62267 9.31852 10.8774 8.76667ZM4.3048 8.85703C5.31245 8.85874 6.37824 8.81541 7.48936 8.72533C5.65137 7.91181 3.67969 6.80667 1.57033 5.40366C0.99767 5.87456 0.467194 6.2514 0 6.57379C1.55351 7.50989 2.98246 8.2684 4.3048 8.85703ZM4.33502 7.11738C6.42642 5.88568 9.05029 3.87865 10.382 2.77609L7.48851 0C5.5955 1.84569 4.04712 3.2906 2.84336 4.3353C3.54572 5.74088 4.06679 6.68581 4.33502 7.11738ZM5.65479 7.09685C5.65479 7.68063 6.46946 8.15381 7.47426 8.15381C8.47877 8.15381 9.29343 7.68063 9.29343 7.09685C9.29343 6.51307 8.47877 6.03989 7.47426 6.03989C6.46946 6.03989 5.65479 6.51307 5.65479 7.09685Z" fill="#001F55" fill-rule="evenodd"></path></svg></button></span></div></div></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const Disabled: Story = {
+  args: {
+    disabled: true,
+    defaultValue: &#x27;11222333000181&#x27;,
+    onReceitaFederalClick: () =&gt; {},
+  },
+}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">View Only</h2>
+    <div class="ds-story-id">fields-field12cnpj--view-only · export <b>ViewOnly</b></div>
+    <div class="ds-canvas ds-canvas--padded">
+<div style="width: 300px;"><div class="flex w-full flex-col items-start"><div class="flex w-full items-center gap-[5px] pb-[5px]"><label class="shrink-0 text-sm leading-[18px] text-font" for="field-cnpj-_r_0_" id="field-cnpj-_r_0_-label">CNPJ</label><div class="flex h-4 min-w-0 flex-1 items-center gap-[5px]"></div></div><div class="relative flex w-full bg-background px-[10px] transition-colors rounded-[5px] border border-neutral-level_2 items-center gap-[10px] h-[30px]"><input class="min-w-0 flex-1 bg-transparent text-font outline-none placeholder:text-font-level_2 disabled:cursor-not-allowed cursor-default text-sm" id="field-cnpj-_r_0_" inputmode="numeric" placeholder="__.___.___/____-__" readonly="" type="text" value="11.222.333/0001-81"/></div></div></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const ViewOnly: Story = {
+  args: { viewOnly: true, defaultValue: &#x27;11222333000181&#x27; },
+}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">Loading</h2>
+    <div class="ds-story-id">fields-field12cnpj--loading · export <b>Loading</b></div>
+    <div class="ds-canvas ds-canvas--padded">
+<div style="width: 300px;"><div class="flex w-full flex-col items-start"><div class="flex w-full items-center gap-[5px] pb-[5px]"><label class="shrink-0 text-sm leading-[18px] text-font" for="field-cnpj-_r_0_" id="field-cnpj-_r_0_-label">CNPJ</label><div class="flex h-4 min-w-0 flex-1 items-center gap-[5px]"></div></div><div aria-busy="true" class="relative flex w-full bg-background px-[10px] transition-colors rounded-[5px] border border-neutral-level_2 items-center gap-[10px] h-[30px]"><span class="my-[5px] h-[calc(100%-10px)] w-full animate-pulse rounded-[2px] bg-neutral-level_2" data-testid="field-skeleton"></span></div></div></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const Loading: Story = {
+  args: { loading: true },
+}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">Button States</h2>
+    <div class="ds-story-id">fields-field12cnpj--button-states · export <b>ButtonStates</b></div>
+    <div class="ds-canvas ds-canvas--padded">
+<div style="width: 300px;"><div style="display: flex; align-items: center; gap: 16px;"><span class="inline-block"><button aria-label="Consultar CNPJ na Receita Federal para preencher campos" class="flex cursor-pointer items-center justify-center rounded-[3px] border transition-colors border-neutral-level_2 bg-background hover:bg-neutral-level_1 disabled:cursor-default size-[20px]" type="button"><svg aria-hidden="true" class="-scale-y-100 h-[10px] w-[15px]" fill="none" viewbox="0 0 14.9747 9.98354"><path clip-rule="evenodd" d="M7.49392 5.01201C9.22474 6.26993 10.8028 7.30636 12.3859 8.03067C13.1054 7.67122 13.9682 7.18778 14.9747 6.5812C13.9662 5.87257 12.9515 5.06474 11.931 4.15829C10.5174 4.49037 8.8365 4.8139 7.49392 5.01201ZM10.8774 8.76667L10.6457 7.11681C9.11157 8.05604 7.45316 8.81655 5.6736 9.40803C6.51592 9.70191 7.11909 9.89375 7.48281 9.98354C8.49131 9.72443 9.62267 9.31852 10.8774 8.76667ZM4.3048 8.85703C5.31245 8.85874 6.37824 8.81541 7.48936 8.72533C5.65137 7.91181 3.67969 6.80667 1.57033 5.40366C0.99767 5.87456 0.467194 6.2514 0 6.57379C1.55351 7.50989 2.98246 8.2684 4.3048 8.85703ZM4.33502 7.11738C6.42642 5.88568 9.05029 3.87865 10.382 2.77609L7.48851 0C5.5955 1.84569 4.04712 3.2906 2.84336 4.3353C3.54572 5.74088 4.06679 6.68581 4.33502 7.11738ZM5.65479 7.09685C5.65479 7.68063 6.46946 8.15381 7.47426 8.15381C8.47877 8.15381 9.29343 7.68063 9.29343 7.09685C9.29343 6.51307 8.47877 6.03989 7.47426 6.03989C6.46946 6.03989 5.65479 6.51307 5.65479 7.09685Z" fill="#001F55" fill-rule="evenodd"></path></svg></button></span><span class="inline-block"><button aria-label="Consultar CNPJ na Receita Federal para preencher campos" class="flex cursor-pointer items-center justify-center rounded-[3px] border transition-colors border-neutral-level_2 bg-background hover:bg-neutral-level_1 disabled:cursor-default size-[25px]" type="button"><svg aria-hidden="true" class="-scale-y-100 h-[10px] w-[15px]" fill="none" viewbox="0 0 14.9747 9.98354"><path clip-rule="evenodd" d="M7.49392 5.01201C9.22474 6.26993 10.8028 7.30636 12.3859 8.03067C13.1054 7.67122 13.9682 7.18778 14.9747 6.5812C13.9662 5.87257 12.9515 5.06474 11.931 4.15829C10.5174 4.49037 8.8365 4.8139 7.49392 5.01201ZM10.8774 8.76667L10.6457 7.11681C9.11157 8.05604 7.45316 8.81655 5.6736 9.40803C6.51592 9.70191 7.11909 9.89375 7.48281 9.98354C8.49131 9.72443 9.62267 9.31852 10.8774 8.76667ZM4.3048 8.85703C5.31245 8.85874 6.37824 8.81541 7.48936 8.72533C5.65137 7.91181 3.67969 6.80667 1.57033 5.40366C0.99767 5.87456 0.467194 6.2514 0 6.57379C1.55351 7.50989 2.98246 8.2684 4.3048 8.85703ZM4.33502 7.11738C6.42642 5.88568 9.05029 3.87865 10.382 2.77609L7.48851 0C5.5955 1.84569 4.04712 3.2906 2.84336 4.3353C3.54572 5.74088 4.06679 6.68581 4.33502 7.11738ZM5.65479 7.09685C5.65479 7.68063 6.46946 8.15381 7.47426 8.15381C8.47877 8.15381 9.29343 7.68063 9.29343 7.09685C9.29343 6.51307 8.47877 6.03989 7.47426 6.03989C6.46946 6.03989 5.65479 6.51307 5.65479 7.09685Z" fill="#001F55" fill-rule="evenodd"></path></svg></button></span><span class="inline-block"><button aria-label="Consultar CNPJ na Receita Federal para preencher campos" class="flex cursor-pointer items-center justify-center rounded-[3px] border transition-colors border-neutral-level_2 bg-background hover:bg-neutral-level_1 disabled:cursor-default size-[30px]" type="button"><svg aria-hidden="true" class="-scale-y-100 h-[13.34px] w-[20px]" fill="none" viewbox="0 0 14.9747 9.98354"><path clip-rule="evenodd" d="M7.49392 5.01201C9.22474 6.26993 10.8028 7.30636 12.3859 8.03067C13.1054 7.67122 13.9682 7.18778 14.9747 6.5812C13.9662 5.87257 12.9515 5.06474 11.931 4.15829C10.5174 4.49037 8.8365 4.8139 7.49392 5.01201ZM10.8774 8.76667L10.6457 7.11681C9.11157 8.05604 7.45316 8.81655 5.6736 9.40803C6.51592 9.70191 7.11909 9.89375 7.48281 9.98354C8.49131 9.72443 9.62267 9.31852 10.8774 8.76667ZM4.3048 8.85703C5.31245 8.85874 6.37824 8.81541 7.48936 8.72533C5.65137 7.91181 3.67969 6.80667 1.57033 5.40366C0.99767 5.87456 0.467194 6.2514 0 6.57379C1.55351 7.50989 2.98246 8.2684 4.3048 8.85703ZM4.33502 7.11738C6.42642 5.88568 9.05029 3.87865 10.382 2.77609L7.48851 0C5.5955 1.84569 4.04712 3.2906 2.84336 4.3353C3.54572 5.74088 4.06679 6.68581 4.33502 7.11738ZM5.65479 7.09685C5.65479 7.68063 6.46946 8.15381 7.47426 8.15381C8.47877 8.15381 9.29343 7.68063 9.29343 7.09685C9.29343 6.51307 8.47877 6.03989 7.47426 6.03989C6.46946 6.03989 5.65479 6.51307 5.65479 7.09685Z" fill="#001F55" fill-rule="evenodd"></path></svg></button></span><span class="inline-block"><button aria-label="Limpar campos preenchidos pela consulta a Receita Federal" class="flex cursor-pointer items-center justify-center rounded-[3px] border transition-colors border-confirmation bg-background hover:border-danger hover:bg-neutral-level_1 disabled:cursor-default size-[25px]" type="button"><svg aria-hidden="true" class="-scale-y-100 h-[10px] w-[15px]" fill="none" viewbox="0 0 14.9747 9.98354"><path clip-rule="evenodd" d="M7.49392 5.01201C9.22474 6.26993 10.8028 7.30636 12.3859 8.03067C13.1054 7.67122 13.9682 7.18778 14.9747 6.5812C13.9662 5.87257 12.9515 5.06474 11.931 4.15829C10.5174 4.49037 8.8365 4.8139 7.49392 5.01201ZM10.8774 8.76667L10.6457 7.11681C9.11157 8.05604 7.45316 8.81655 5.6736 9.40803C6.51592 9.70191 7.11909 9.89375 7.48281 9.98354C8.49131 9.72443 9.62267 9.31852 10.8774 8.76667ZM4.3048 8.85703C5.31245 8.85874 6.37824 8.81541 7.48936 8.72533C5.65137 7.91181 3.67969 6.80667 1.57033 5.40366C0.99767 5.87456 0.467194 6.2514 0 6.57379C1.55351 7.50989 2.98246 8.2684 4.3048 8.85703ZM4.33502 7.11738C6.42642 5.88568 9.05029 3.87865 10.382 2.77609L7.48851 0C5.5955 1.84569 4.04712 3.2906 2.84336 4.3353C3.54572 5.74088 4.06679 6.68581 4.33502 7.11738ZM5.65479 7.09685C5.65479 7.68063 6.46946 8.15381 7.47426 8.15381C8.47877 8.15381 9.29343 7.68063 9.29343 7.09685C9.29343 6.51307 8.47877 6.03989 7.47426 6.03989C6.46946 6.03989 5.65479 6.51307 5.65479 7.09685Z" fill="#001F55" fill-rule="evenodd"></path></svg></button></span><span class="inline-block"><button aria-label="Consultar CNPJ na Receita Federal para preencher campos" class="flex cursor-pointer items-center justify-center rounded-[3px] border transition-colors border-neutral-level_2 bg-neutral-level_3 disabled:cursor-default size-[25px]" disabled="" type="button"><span aria-hidden="true" class="inline-flex shrink-0 items-center justify-center animate-spin text-[#001F55]"><svg aria-hidden="true" class="lucide lucide-loader-circle" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="15" xmlns="http://www.w3.org/2000/svg"><path d="M21 12a9 9 0 1 1-6.219-8.56"></path></svg></span></button></span></div></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const ButtonStates: Story = {
+  render: () =&gt; (
+    &lt;div style={{ display: &#x27;flex&#x27;, alignItems: &#x27;center&#x27;, gap: 16 }}&gt;
+      &lt;ReceitaFederalButton size=&quot;sm&quot; /&gt;
+      &lt;ReceitaFederalButton size=&quot;md&quot; /&gt;
+      &lt;ReceitaFederalButton size=&quot;lg&quot; /&gt;
+      &lt;ReceitaFederalButton size=&quot;md&quot; active /&gt;
+      &lt;ReceitaFederalButton size=&quot;md&quot; loading /&gt;
+    &lt;/div&gt;
+  ),
+}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">All Sizes</h2>
+    <div class="ds-story-id">fields-field12cnpj--all-sizes · export <b>AllSizes</b></div>
+    <div class="ds-canvas ds-canvas--padded">
+<div style="width: 300px;"><div style="display: flex; flex-direction: column; gap: 16px;"><div class="flex w-full flex-col items-start"><div class="flex w-full items-center gap-[5px] pb-[5px]"><label class="shrink-0 text-sm leading-[18px] text-font" for="field-cnpj-_r_0_" id="field-cnpj-_r_0_-label">Small (30px)</label><div class="flex h-4 min-w-0 flex-1 items-center gap-[5px]"></div></div><div class="relative flex w-full bg-background px-[10px] transition-colors rounded-[5px] border border-neutral-level_2 items-center gap-[10px] h-[30px] hover:border-font-level_2 focus-within:border-confirmation"><input class="min-w-0 flex-1 bg-transparent text-font outline-none placeholder:text-font-level_2 disabled:cursor-not-allowed text-sm" id="field-cnpj-_r_0_" inputmode="numeric" placeholder="__.___.___/____-__" type="text" value=""/><span class="inline-block"><button aria-label="Consultar CNPJ na Receita Federal para preencher campos" class="flex cursor-pointer items-center justify-center rounded-[3px] border transition-colors border-neutral-level_2 bg-background hover:bg-neutral-level_1 disabled:cursor-default size-[20px] shrink-0" type="button"><svg aria-hidden="true" class="-scale-y-100 h-[10px] w-[15px]" fill="none" viewbox="0 0 14.9747 9.98354"><path clip-rule="evenodd" d="M7.49392 5.01201C9.22474 6.26993 10.8028 7.30636 12.3859 8.03067C13.1054 7.67122 13.9682 7.18778 14.9747 6.5812C13.9662 5.87257 12.9515 5.06474 11.931 4.15829C10.5174 4.49037 8.8365 4.8139 7.49392 5.01201ZM10.8774 8.76667L10.6457 7.11681C9.11157 8.05604 7.45316 8.81655 5.6736 9.40803C6.51592 9.70191 7.11909 9.89375 7.48281 9.98354C8.49131 9.72443 9.62267 9.31852 10.8774 8.76667ZM4.3048 8.85703C5.31245 8.85874 6.37824 8.81541 7.48936 8.72533C5.65137 7.91181 3.67969 6.80667 1.57033 5.40366C0.99767 5.87456 0.467194 6.2514 0 6.57379C1.55351 7.50989 2.98246 8.2684 4.3048 8.85703ZM4.33502 7.11738C6.42642 5.88568 9.05029 3.87865 10.382 2.77609L7.48851 0C5.5955 1.84569 4.04712 3.2906 2.84336 4.3353C3.54572 5.74088 4.06679 6.68581 4.33502 7.11738ZM5.65479 7.09685C5.65479 7.68063 6.46946 8.15381 7.47426 8.15381C8.47877 8.15381 9.29343 7.68063 9.29343 7.09685C9.29343 6.51307 8.47877 6.03989 7.47426 6.03989C6.46946 6.03989 5.65479 6.51307 5.65479 7.09685Z" fill="#001F55" fill-rule="evenodd"></path></svg></button></span></div></div><div class="flex w-full flex-col items-start"><div class="flex w-full items-center gap-[5px] pb-[5px]"><label class="shrink-0 text-sm leading-[18px] text-font" for="field-cnpj-_r_1_" id="field-cnpj-_r_1_-label">Normal (35px)</label><div class="flex h-4 min-w-0 flex-1 items-center gap-[5px]"></div></div><div class="relative flex w-full bg-background px-[10px] transition-colors rounded-[5px] border border-neutral-level_2 items-center gap-[10px] h-[35px] hover:border-font-level_2 focus-within:border-confirmation"><input class="min-w-0 flex-1 bg-transparent text-font outline-none placeholder:text-font-level_2 disabled:cursor-not-allowed text-sm" id="field-cnpj-_r_1_" inputmode="numeric" placeholder="__.___.___/____-__" type="text" value=""/><span class="inline-block"><button aria-label="Consultar CNPJ na Receita Federal para preencher campos" class="flex cursor-pointer items-center justify-center rounded-[3px] border transition-colors border-neutral-level_2 bg-background hover:bg-neutral-level_1 disabled:cursor-default size-[25px] shrink-0" type="button"><svg aria-hidden="true" class="-scale-y-100 h-[10px] w-[15px]" fill="none" viewbox="0 0 14.9747 9.98354"><path clip-rule="evenodd" d="M7.49392 5.01201C9.22474 6.26993 10.8028 7.30636 12.3859 8.03067C13.1054 7.67122 13.9682 7.18778 14.9747 6.5812C13.9662 5.87257 12.9515 5.06474 11.931 4.15829C10.5174 4.49037 8.8365 4.8139 7.49392 5.01201ZM10.8774 8.76667L10.6457 7.11681C9.11157 8.05604 7.45316 8.81655 5.6736 9.40803C6.51592 9.70191 7.11909 9.89375 7.48281 9.98354C8.49131 9.72443 9.62267 9.31852 10.8774 8.76667ZM4.3048 8.85703C5.31245 8.85874 6.37824 8.81541 7.48936 8.72533C5.65137 7.91181 3.67969 6.80667 1.57033 5.40366C0.99767 5.87456 0.467194 6.2514 0 6.57379C1.55351 7.50989 2.98246 8.2684 4.3048 8.85703ZM4.33502 7.11738C6.42642 5.88568 9.05029 3.87865 10.382 2.77609L7.48851 0C5.5955 1.84569 4.04712 3.2906 2.84336 4.3353C3.54572 5.74088 4.06679 6.68581 4.33502 7.11738ZM5.65479 7.09685C5.65479 7.68063 6.46946 8.15381 7.47426 8.15381C8.47877 8.15381 9.29343 7.68063 9.29343 7.09685C9.29343 6.51307 8.47877 6.03989 7.47426 6.03989C6.46946 6.03989 5.65479 6.51307 5.65479 7.09685Z" fill="#001F55" fill-rule="evenodd"></path></svg></button></span></div></div><div class="flex w-full flex-col items-start"><div class="flex w-full items-center gap-[5px] pb-[5px]"><label class="shrink-0 text-sm leading-[18px] text-font" for="field-cnpj-_r_2_" id="field-cnpj-_r_2_-label">Big (40px)</label><div class="flex h-4 min-w-0 flex-1 items-center gap-[5px]"></div></div><div class="relative flex w-full bg-background px-[10px] transition-colors rounded-[5px] border border-neutral-level_2 items-center gap-[10px] h-[40px] hover:border-font-level_2 focus-within:border-confirmation"><input class="min-w-0 flex-1 bg-transparent text-font outline-none placeholder:text-font-level_2 disabled:cursor-not-allowed text-base" id="field-cnpj-_r_2_" inputmode="numeric" placeholder="__.___.___/____-__" type="text" value=""/><span class="inline-block"><button aria-label="Consultar CNPJ na Receita Federal para preencher campos" class="flex cursor-pointer items-center justify-center rounded-[3px] border transition-colors border-neutral-level_2 bg-background hover:bg-neutral-level_1 disabled:cursor-default size-[30px] shrink-0" type="button"><svg aria-hidden="true" class="-scale-y-100 h-[13.34px] w-[20px]" fill="none" viewbox="0 0 14.9747 9.98354"><path clip-rule="evenodd" d="M7.49392 5.01201C9.22474 6.26993 10.8028 7.30636 12.3859 8.03067C13.1054 7.67122 13.9682 7.18778 14.9747 6.5812C13.9662 5.87257 12.9515 5.06474 11.931 4.15829C10.5174 4.49037 8.8365 4.8139 7.49392 5.01201ZM10.8774 8.76667L10.6457 7.11681C9.11157 8.05604 7.45316 8.81655 5.6736 9.40803C6.51592 9.70191 7.11909 9.89375 7.48281 9.98354C8.49131 9.72443 9.62267 9.31852 10.8774 8.76667ZM4.3048 8.85703C5.31245 8.85874 6.37824 8.81541 7.48936 8.72533C5.65137 7.91181 3.67969 6.80667 1.57033 5.40366C0.99767 5.87456 0.467194 6.2514 0 6.57379C1.55351 7.50989 2.98246 8.2684 4.3048 8.85703ZM4.33502 7.11738C6.42642 5.88568 9.05029 3.87865 10.382 2.77609L7.48851 0C5.5955 1.84569 4.04712 3.2906 2.84336 4.3353C3.54572 5.74088 4.06679 6.68581 4.33502 7.11738ZM5.65479 7.09685C5.65479 7.68063 6.46946 8.15381 7.47426 8.15381C8.47877 8.15381 9.29343 7.68063 9.29343 7.09685C9.29343 6.51307 8.47877 6.03989 7.47426 6.03989C6.46946 6.03989 5.65479 6.51307 5.65479 7.09685Z" fill="#001F55" fill-rule="evenodd"></path></svg></button></span></div></div></div></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const AllSizes: Story = {
+  render: (args) =&gt; (
+    &lt;div style={{ display: &#x27;flex&#x27;, flexDirection: &#x27;column&#x27;, gap: 16 }}&gt;
+      &lt;Field12CNPJ
+        {...args}
+        size=&quot;sm&quot;
+        label=&quot;Small (30px)&quot;
+        onReceitaFederalClick={() =&gt; {}}
+      /&gt;
+      &lt;Field12CNPJ
+        {...args}
+        size=&quot;md&quot;
+        label=&quot;Normal (35px)&quot;
+        onReceitaFederalClick={() =&gt; {}}
+      /&gt;
+      &lt;Field12CNPJ
+        {...args}
+        size=&quot;lg&quot;
+        label=&quot;Big (40px)&quot;
+        onReceitaFederalClick={() =&gt; {}}
+      /&gt;
+    &lt;/div&gt;
+  ),
+}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">Cell Statuses</h2>
+    <div class="ds-story-id">fields-field12cnpj--cell-statuses · export <b>CellStatuses</b></div>
+    <div class="ds-canvas ds-canvas--padded">
+<div style="width: 300px;"><div style="display: flex; flex-direction: column; gap: 16px; width: 220px;"><div class="flex w-full flex-col items-start"><div class="relative flex w-full bg-background px-[10px] transition-colors rounded-none border-[0.5px] border-neutral-level_2 items-center gap-[10px] h-[40px] hover:border hover:border-font-level_2 focus-within:border focus-within:border-confirmation focus-within:ring-2 focus-within:ring-confirmation-default_30"><input class="min-w-0 flex-1 bg-transparent text-font outline-none placeholder:text-font-level_2 disabled:cursor-not-allowed text-sm" id="field-cnpj-_r_0_" inputmode="numeric" placeholder="__.___.___/____-__" type="text" value=""/></div></div><div class="flex w-full flex-col items-start"><div class="relative flex w-full bg-background px-[10px] transition-colors rounded-none border-[0.5px] border-danger items-center gap-[10px] h-[40px] hover:border focus-within:border focus-within:ring-2 focus-within:ring-danger-default_30"><input aria-invalid="true" class="min-w-0 flex-1 bg-transparent text-font outline-none placeholder:text-font-level_2 disabled:cursor-not-allowed text-sm" id="field-cnpj-_r_1_" inputmode="numeric" placeholder="__.___.___/____-__" type="text" value=""/></div></div><div class="flex w-full flex-col items-start"><div class="relative flex w-full bg-background px-[10px] transition-colors rounded-none border-[0.5px] border-alert items-center gap-[10px] h-[40px] hover:border focus-within:border focus-within:ring-2 focus-within:ring-alert-default_30"><input class="min-w-0 flex-1 bg-transparent text-font outline-none placeholder:text-font-level_2 disabled:cursor-not-allowed text-sm" id="field-cnpj-_r_2_" inputmode="numeric" placeholder="__.___.___/____-__" type="text" value=""/></div></div><div class="flex w-full flex-col items-start"><div class="relative flex w-full px-[10px] transition-colors rounded-none border-[0.5px] border-neutral-level_2 items-center gap-[10px] h-[40px] bg-neutral-level_1"><input class="min-w-0 flex-1 bg-transparent text-font outline-none placeholder:text-font-level_2 disabled:cursor-not-allowed text-sm" disabled="" id="field-cnpj-_r_3_" inputmode="numeric" placeholder="__.___.___/____-__" type="text" value=""/></div></div><div class="flex w-full flex-col items-start"><div class="relative flex w-full bg-background px-[10px] transition-colors rounded-none border-[0.5px] border-neutral-level_2 items-center gap-[10px] h-[40px]"><input class="min-w-0 flex-1 bg-transparent text-font outline-none placeholder:text-font-level_2 disabled:cursor-not-allowed cursor-default text-sm" id="field-cnpj-_r_4_" inputmode="numeric" placeholder="__.___.___/____-__" readonly="" type="text" value="11.222.333/0001-81"/></div></div></div></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const CellStatuses: Story = {
+  render: (args) =&gt; (
+    &lt;div
+      style={{ display: &#x27;flex&#x27;, flexDirection: &#x27;column&#x27;, gap: 16, width: 220 }}
+    &gt;
+      &lt;Field12CNPJ {...args} theme=&quot;cell&quot; /&gt;
+      &lt;Field12CNPJ {...args} theme=&quot;cell&quot; status=&quot;danger&quot; /&gt;
+      &lt;Field12CNPJ {...args} theme=&quot;cell&quot; status=&quot;alert&quot; /&gt;
+      &lt;Field12CNPJ {...args} theme=&quot;cell&quot; disabled /&gt;
+      &lt;Field12CNPJ
+        {...args}
+        theme=&quot;cell&quot;
+        viewOnly
+        defaultValue=&quot;11222333000181&quot;
+      /&gt;
+    &lt;/div&gt;
+  ),
+}</code></pre></details>
+  </section>
+</body>
+</html>

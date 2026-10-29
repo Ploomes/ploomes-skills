@@ -1,0 +1,161 @@
+<!doctype html>
+<!--
+  Ploomes Design System — snapshot estático das stories do Storybook.
+  Componente : Fields/Field11CPF
+  Stories    : 10 (Default, Filled, With Validation, Danger, Alert, Disabled, View Only, Loading, All Sizes, Cell Statuses)
+  Story      : Field11CPF.stories.tsx
+  Tema       : light — use <html class="dark"> para o tema escuro.
+-->
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Field11CPF — Ploomes DS</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;600;700&display=swap">
+<link rel="stylesheet" href="../assets/design-system.css">
+<link rel="stylesheet" href="../assets/page.css">
+</head>
+<body class="ds-page">
+  <header class="ds-head">
+    <a class="ds-back" href="../index.html">← inventário</a>
+    <h1 class="ds-title">Field11CPF</h1>
+    <p class="ds-meta">fields · 10 stories · <code>Field11CPF.stories.tsx</code></p>
+    <pre class="ds-code ds-import">import { Field11CPF } from &#x27;@ploomescrm/ui&#x27;;</pre>
+    <pre class="ds-code">// props padrão de todas as stories (meta.args)
+args: {
+  label: &#x27;CPF&#x27;,
+}</pre>
+  </header>
+  <section class="ds-story">
+    <h2 class="ds-story-name">Default</h2>
+    <div class="ds-story-id">fields-field11cpf--default · export <b>Default</b></div>
+    <div class="ds-canvas ds-canvas--padded">
+<div style="width: 300px;"><div class="flex w-full flex-col items-start"><div class="flex w-full items-center gap-[5px] pb-[5px]"><label class="shrink-0 text-sm leading-[18px] text-font" for="field-cpf-_r_0_" id="field-cpf-_r_0_-label">CPF</label><div class="flex h-4 min-w-0 flex-1 items-center gap-[5px]"></div></div><div class="relative flex w-full bg-background px-[10px] transition-colors rounded-[5px] border border-neutral-level_2 items-center gap-[10px] h-[30px] hover:border-font-level_2 focus-within:border-confirmation"><input class="min-w-0 flex-1 bg-transparent text-font outline-none placeholder:text-font-level_2 disabled:cursor-not-allowed text-sm" id="field-cpf-_r_0_" inputmode="numeric" placeholder="___.___.___-__" type="text" value=""/></div></div></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const Default: Story = {}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">Filled</h2>
+    <div class="ds-story-id">fields-field11cpf--filled · export <b>Filled</b></div>
+    <div class="ds-canvas ds-canvas--padded">
+<div style="width: 300px;"><div class="flex w-full flex-col items-start"><div class="flex w-full items-center gap-[5px] pb-[5px]"><label class="shrink-0 text-sm leading-[18px] text-font" for="field-cpf-_r_0_" id="field-cpf-_r_0_-label">CPF</label><div class="flex h-4 min-w-0 flex-1 items-center gap-[5px]"></div></div><div class="relative flex w-full bg-background px-[10px] transition-colors rounded-[5px] border border-neutral-level_2 items-center gap-[10px] h-[30px] hover:border-font-level_2 focus-within:border-confirmation"><input class="min-w-0 flex-1 bg-transparent text-font outline-none placeholder:text-font-level_2 disabled:cursor-not-allowed text-sm" id="field-cpf-_r_0_" inputmode="numeric" placeholder="___.___.___-__" type="text" value="000.000.000-00"/></div></div></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const Filled: Story = {
+  args: { defaultValue: &#x27;00000000000&#x27; },
+}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">With Validation</h2>
+    <div class="ds-story-id">fields-field11cpf--with-validation · export <b>WithValidation</b></div>
+    <div class="ds-canvas ds-canvas--padded">
+<div style="width: 300px;"><div class="flex w-full flex-col items-start"><div class="flex w-full items-center gap-[5px] pb-[5px]"><label class="shrink-0 text-sm leading-[18px] text-font" for="field-cpf-_r_0_" id="field-cpf-_r_0_-label">CPF</label><div class="flex h-4 min-w-0 flex-1 items-center gap-[5px]"></div></div><div class="relative flex w-full bg-background px-[10px] transition-colors rounded-[5px] border border-neutral-level_2 items-center gap-[10px] h-[30px] hover:border-font-level_2 focus-within:border-confirmation"><input aria-describedby="field-cpf-_r_0_-help" class="min-w-0 flex-1 bg-transparent text-font outline-none placeholder:text-font-level_2 disabled:cursor-not-allowed text-sm" id="field-cpf-_r_0_" inputmode="numeric" placeholder="___.___.___-__" type="text" value=""/></div><p class="w-full whitespace-normal px-[10px] pt-[3px] text-[13px] leading-[18px] md:truncate text-font-level_2" id="field-cpf-_r_0_-help">Digite os 11 dígitos</p></div></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const WithValidation: Story = {
+  render: function Render(args) {
+    const [cpf, setCpf] = useState&lt;string | null&gt;(null);
+    const [display, setDisplay] = useState(&#x27;&#x27;);
+    const complete = display.replace(/\D/g, &#x27;&#x27;).length === 11;
+    return (
+      &lt;Field11CPF
+        {...args}
+        status={complete &amp;&amp; cpf == null ? &#x27;danger&#x27; : &#x27;neutral&#x27;}
+        helpText={
+          complete &amp;&amp; cpf == null ? &#x27;CPF inválido&#x27; : &#x27;Digite os 11 dígitos&#x27;
+        }
+        onValueChange={(d, v) =&gt; {
+          setDisplay(d);
+          setCpf(v);
+        }}
+      /&gt;
+    );
+  },
+}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">Danger</h2>
+    <div class="ds-story-id">fields-field11cpf--danger · export <b>Danger</b></div>
+    <div class="ds-canvas ds-canvas--padded">
+<div style="width: 300px;"><div class="flex w-full flex-col items-start"><div class="flex w-full items-center gap-[5px] pb-[5px]"><label class="shrink-0 text-sm leading-[18px] text-font" for="field-cpf-_r_0_" id="field-cpf-_r_0_-label">CPF</label><div class="flex h-4 min-w-0 flex-1 items-center gap-[5px]"></div></div><div class="relative flex w-full bg-background px-[10px] transition-colors rounded-[5px] border border-danger items-center gap-[10px] h-[30px]"><input aria-describedby="field-cpf-_r_0_-help" aria-invalid="true" class="min-w-0 flex-1 bg-transparent text-font outline-none placeholder:text-font-level_2 disabled:cursor-not-allowed text-sm" id="field-cpf-_r_0_" inputmode="numeric" placeholder="___.___.___-__" type="text" value=""/></div><p class="w-full whitespace-normal px-[10px] pt-[3px] text-[13px] leading-[18px] md:truncate text-danger" id="field-cpf-_r_0_-help">CPF inválido</p></div></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const Danger: Story = {
+  args: { status: &#x27;danger&#x27;, helpText: &#x27;CPF inválido&#x27; },
+}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">Alert</h2>
+    <div class="ds-story-id">fields-field11cpf--alert · export <b>Alert</b></div>
+    <div class="ds-canvas ds-canvas--padded">
+<div style="width: 300px;"><div class="flex w-full flex-col items-start"><div class="flex w-full items-center gap-[5px] pb-[5px]"><label class="shrink-0 text-sm leading-[18px] text-font" for="field-cpf-_r_0_" id="field-cpf-_r_0_-label">CPF</label><div class="flex h-4 min-w-0 flex-1 items-center gap-[5px]"></div></div><div class="relative flex w-full bg-background px-[10px] transition-colors rounded-[5px] border border-alert items-center gap-[10px] h-[30px]"><input aria-describedby="field-cpf-_r_0_-help" class="min-w-0 flex-1 bg-transparent text-font outline-none placeholder:text-font-level_2 disabled:cursor-not-allowed text-sm" id="field-cpf-_r_0_" inputmode="numeric" placeholder="___.___.___-__" type="text" value=""/></div><p class="w-full whitespace-normal px-[10px] pt-[3px] text-[13px] leading-[18px] md:truncate text-font-level_2" id="field-cpf-_r_0_-help">Texto de ajuda</p></div></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const Alert: Story = {
+  args: { status: &#x27;alert&#x27;, helpText: &#x27;Texto de ajuda&#x27; },
+}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">Disabled</h2>
+    <div class="ds-story-id">fields-field11cpf--disabled · export <b>Disabled</b></div>
+    <div class="ds-canvas ds-canvas--padded">
+<div style="width: 300px;"><div class="flex w-full flex-col items-start"><div class="flex w-full items-center gap-[5px] pb-[5px]"><label class="shrink-0 text-sm leading-[18px] text-font" for="field-cpf-_r_0_" id="field-cpf-_r_0_-label">CPF</label><div class="flex h-4 min-w-0 flex-1 items-center gap-[5px]"></div></div><div class="relative flex w-full px-[10px] transition-colors rounded-[5px] border border-neutral-level_2 items-center gap-[10px] h-[30px] bg-neutral-level_1"><input class="min-w-0 flex-1 bg-transparent text-font outline-none placeholder:text-font-level_2 disabled:cursor-not-allowed text-sm" disabled="" id="field-cpf-_r_0_" inputmode="numeric" placeholder="___.___.___-__" type="text" value="000.000.000-00"/></div></div></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const Disabled: Story = {
+  args: { disabled: true, defaultValue: &#x27;00000000000&#x27; },
+}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">View Only</h2>
+    <div class="ds-story-id">fields-field11cpf--view-only · export <b>ViewOnly</b></div>
+    <div class="ds-canvas ds-canvas--padded">
+<div style="width: 300px;"><div class="flex w-full flex-col items-start"><div class="flex w-full items-center gap-[5px] pb-[5px]"><label class="shrink-0 text-sm leading-[18px] text-font" for="field-cpf-_r_0_" id="field-cpf-_r_0_-label">CPF</label><div class="flex h-4 min-w-0 flex-1 items-center gap-[5px]"></div></div><div class="relative flex w-full bg-background px-[10px] transition-colors rounded-[5px] border border-neutral-level_2 items-center gap-[10px] h-[30px]"><input class="min-w-0 flex-1 bg-transparent text-font outline-none placeholder:text-font-level_2 disabled:cursor-not-allowed cursor-default text-sm" id="field-cpf-_r_0_" inputmode="numeric" placeholder="___.___.___-__" readonly="" type="text" value="000.000.000-00"/></div></div></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const ViewOnly: Story = {
+  args: { viewOnly: true, defaultValue: &#x27;00000000000&#x27; },
+}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">Loading</h2>
+    <div class="ds-story-id">fields-field11cpf--loading · export <b>Loading</b></div>
+    <div class="ds-canvas ds-canvas--padded">
+<div style="width: 300px;"><div class="flex w-full flex-col items-start"><div class="flex w-full items-center gap-[5px] pb-[5px]"><label class="shrink-0 text-sm leading-[18px] text-font" for="field-cpf-_r_0_" id="field-cpf-_r_0_-label">CPF</label><div class="flex h-4 min-w-0 flex-1 items-center gap-[5px]"></div></div><div aria-busy="true" class="relative flex w-full bg-background px-[10px] transition-colors rounded-[5px] border border-neutral-level_2 items-center gap-[10px] h-[30px]"><span class="my-[5px] h-[calc(100%-10px)] w-full animate-pulse rounded-[2px] bg-neutral-level_2" data-testid="field-skeleton"></span></div></div></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const Loading: Story = {
+  args: { loading: true },
+}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">All Sizes</h2>
+    <div class="ds-story-id">fields-field11cpf--all-sizes · export <b>AllSizes</b></div>
+    <div class="ds-canvas ds-canvas--padded">
+<div style="width: 300px;"><div style="display: flex; flex-direction: column; gap: 16px;"><div class="flex w-full flex-col items-start"><div class="flex w-full items-center gap-[5px] pb-[5px]"><label class="shrink-0 text-sm leading-[18px] text-font" for="field-cpf-_r_0_" id="field-cpf-_r_0_-label">Small (30px)</label><div class="flex h-4 min-w-0 flex-1 items-center gap-[5px]"></div></div><div class="relative flex w-full bg-background px-[10px] transition-colors rounded-[5px] border border-neutral-level_2 items-center gap-[10px] h-[30px] hover:border-font-level_2 focus-within:border-confirmation"><input class="min-w-0 flex-1 bg-transparent text-font outline-none placeholder:text-font-level_2 disabled:cursor-not-allowed text-sm" id="field-cpf-_r_0_" inputmode="numeric" placeholder="___.___.___-__" type="text" value=""/></div></div><div class="flex w-full flex-col items-start"><div class="flex w-full items-center gap-[5px] pb-[5px]"><label class="shrink-0 text-sm leading-[18px] text-font" for="field-cpf-_r_1_" id="field-cpf-_r_1_-label">Normal (35px)</label><div class="flex h-4 min-w-0 flex-1 items-center gap-[5px]"></div></div><div class="relative flex w-full bg-background px-[10px] transition-colors rounded-[5px] border border-neutral-level_2 items-center gap-[10px] h-[35px] hover:border-font-level_2 focus-within:border-confirmation"><input class="min-w-0 flex-1 bg-transparent text-font outline-none placeholder:text-font-level_2 disabled:cursor-not-allowed text-sm" id="field-cpf-_r_1_" inputmode="numeric" placeholder="___.___.___-__" type="text" value=""/></div></div><div class="flex w-full flex-col items-start"><div class="flex w-full items-center gap-[5px] pb-[5px]"><label class="shrink-0 text-sm leading-[18px] text-font" for="field-cpf-_r_2_" id="field-cpf-_r_2_-label">Big (40px)</label><div class="flex h-4 min-w-0 flex-1 items-center gap-[5px]"></div></div><div class="relative flex w-full bg-background px-[10px] transition-colors rounded-[5px] border border-neutral-level_2 items-center gap-[10px] h-[40px] hover:border-font-level_2 focus-within:border-confirmation"><input class="min-w-0 flex-1 bg-transparent text-font outline-none placeholder:text-font-level_2 disabled:cursor-not-allowed text-base" id="field-cpf-_r_2_" inputmode="numeric" placeholder="___.___.___-__" type="text" value=""/></div></div></div></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const AllSizes: Story = {
+  render: (args) =&gt; (
+    &lt;div style={{ display: &#x27;flex&#x27;, flexDirection: &#x27;column&#x27;, gap: 16 }}&gt;
+      &lt;Field11CPF {...args} size=&quot;sm&quot; label=&quot;Small (30px)&quot; /&gt;
+      &lt;Field11CPF {...args} size=&quot;md&quot; label=&quot;Normal (35px)&quot; /&gt;
+      &lt;Field11CPF {...args} size=&quot;lg&quot; label=&quot;Big (40px)&quot; /&gt;
+    &lt;/div&gt;
+  ),
+}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">Cell Statuses</h2>
+    <div class="ds-story-id">fields-field11cpf--cell-statuses · export <b>CellStatuses</b></div>
+    <div class="ds-canvas ds-canvas--padded">
+<div style="width: 300px;"><div style="display: flex; flex-direction: column; gap: 16px; width: 200px;"><div class="flex w-full flex-col items-start"><div class="relative flex w-full bg-background px-[10px] transition-colors rounded-none border-[0.5px] border-neutral-level_2 items-center gap-[10px] h-[40px] hover:border hover:border-font-level_2 focus-within:border focus-within:border-confirmation focus-within:ring-2 focus-within:ring-confirmation-default_30"><input class="min-w-0 flex-1 bg-transparent text-font outline-none placeholder:text-font-level_2 disabled:cursor-not-allowed text-sm" id="field-cpf-_r_0_" inputmode="numeric" placeholder="___.___.___-__" type="text" value=""/></div></div><div class="flex w-full flex-col items-start"><div class="relative flex w-full bg-background px-[10px] transition-colors rounded-none border-[0.5px] border-danger items-center gap-[10px] h-[40px] hover:border focus-within:border focus-within:ring-2 focus-within:ring-danger-default_30"><input aria-invalid="true" class="min-w-0 flex-1 bg-transparent text-font outline-none placeholder:text-font-level_2 disabled:cursor-not-allowed text-sm" id="field-cpf-_r_1_" inputmode="numeric" placeholder="___.___.___-__" type="text" value=""/></div></div><div class="flex w-full flex-col items-start"><div class="relative flex w-full bg-background px-[10px] transition-colors rounded-none border-[0.5px] border-alert items-center gap-[10px] h-[40px] hover:border focus-within:border focus-within:ring-2 focus-within:ring-alert-default_30"><input class="min-w-0 flex-1 bg-transparent text-font outline-none placeholder:text-font-level_2 disabled:cursor-not-allowed text-sm" id="field-cpf-_r_2_" inputmode="numeric" placeholder="___.___.___-__" type="text" value=""/></div></div><div class="flex w-full flex-col items-start"><div class="relative flex w-full px-[10px] transition-colors rounded-none border-[0.5px] border-neutral-level_2 items-center gap-[10px] h-[40px] bg-neutral-level_1"><input class="min-w-0 flex-1 bg-transparent text-font outline-none placeholder:text-font-level_2 disabled:cursor-not-allowed text-sm" disabled="" id="field-cpf-_r_3_" inputmode="numeric" placeholder="___.___.___-__" type="text" value=""/></div></div><div class="flex w-full flex-col items-start"><div class="relative flex w-full bg-background px-[10px] transition-colors rounded-none border-[0.5px] border-neutral-level_2 items-center gap-[10px] h-[40px]"><input class="min-w-0 flex-1 bg-transparent text-font outline-none placeholder:text-font-level_2 disabled:cursor-not-allowed cursor-default text-sm" id="field-cpf-_r_4_" inputmode="numeric" placeholder="___.___.___-__" readonly="" type="text" value="000.000.000-00"/></div></div></div></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const CellStatuses: Story = {
+  render: (args) =&gt; (
+    &lt;div
+      style={{ display: &#x27;flex&#x27;, flexDirection: &#x27;column&#x27;, gap: 16, width: 200 }}
+    &gt;
+      &lt;Field11CPF {...args} theme=&quot;cell&quot; /&gt;
+      &lt;Field11CPF {...args} theme=&quot;cell&quot; status=&quot;danger&quot; /&gt;
+      &lt;Field11CPF {...args} theme=&quot;cell&quot; status=&quot;alert&quot; /&gt;
+      &lt;Field11CPF {...args} theme=&quot;cell&quot; disabled /&gt;
+      &lt;Field11CPF {...args} theme=&quot;cell&quot; viewOnly defaultValue=&quot;00000000000&quot; /&gt;
+    &lt;/div&gt;
+  ),
+}</code></pre></details>
+  </section>
+</body>
+</html>

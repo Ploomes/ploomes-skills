@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ploomes Design System — inventário de componentes</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;600;700&display=swap">
+<link rel="stylesheet" href="assets/design-system.css">
+<style>
+  body { font-family: var(--font-family-body, system-ui); padding: 32px; max-width: 1180px; }
+  h1 { font-size: 24px; font-weight: 700; margin-bottom: 4px; }
+  p.sub { color: var(--color-font-level_2); margin-bottom: 28px; font-size: 13px; }
+  section { margin-bottom: 28px; }
+  h2 { font-size: 13px; text-transform: uppercase; letter-spacing: .08em;
+       color: var(--color-font-level_2); margin-bottom: 10px; }
+  h2 em { font-style: normal; opacity: .6; text-transform: none; letter-spacing: 0; }
+  ul { display: grid; grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); gap: 8px; }
+  a { display: flex; flex-direction: column; gap: 2px; padding: 10px 12px;
+      border: 1px solid var(--color-neutral-level_1); border-radius: 8px;
+      text-decoration: none; color: inherit; }
+  a:hover { border-color: var(--color-brand); }
+  a span { font-size: 12px; color: var(--color-font-level_2); }
+  p.warn { font-size: 13px; line-height: 1.5; margin-bottom: 28px; padding: 12px 14px;
+    border: 1px solid var(--color-alert); border-radius: 8px;
+    background: var(--color-alert-default_30); color: var(--color-font); }
+  p.warn code { font-family: ui-monospace, monospace; font-size: 12px; }
+</style>
+</head>
+<body>
+<h1>Ploomes Design System</h1>
+<p class="sub">77 componentes · 618 stories renderizadas. Cada página reúne
+todas as variações do componente, com o código de cada story.</p>
+<p class="warn"><strong>Nunca use HTML nativo</strong> para o que o DS já cobre —
+<code>&lt;select&gt;</code>, <code>&lt;input type="date"&gt;</code>, botão ou tabela crus saem do
+padrão visual e quebram dark mode e whitelabel. A tabela de equivalências
+(<code>&lt;select&gt;</code> → <code>Field07Options</code>, etc.) está em
+<a href="INVENTORY.md">INVENTORY.md</a>.</p>
+  <section>
+    <h2>foundations <em>(4 componentes · 4 stories)</em></h2>
+    <ul>
+      <li><a href="foundations/Colors.html"><strong>Colors</strong><span>1 stories</span></a></li>
+      <li><a href="foundations/Tokens.html"><strong>Tokens</strong><span>1 stories</span></a></li>
+      <li><a href="foundations/Typography.html"><strong>Typography</strong><span>1 stories</span></a></li>
+      <li><a href="foundations/Whitelabel.html"><strong>Whitelabel</strong><span>1 stories</span></a></li>
+    </ul>
+  </section>
+  <section>
+    <h2>atoms <em>(10 componentes · 47 stories)</em></h2>
+    <ul>
+      <li><a href="atoms/DraggableList.html"><strong>DraggableList</strong><span>6 stories</span></a></li>
+      <li><a href="atoms/Icon.html"><strong>Icon</strong><span>8 stories</span></a></li>
+      <li><a href="atoms/NestedButton.html"><strong>NestedButton</strong><span>6 stories</span></a></li>
+      <li><a href="atoms/NotifyBadge.html"><strong>NotifyBadge</strong><span>4 stories</span></a></li>
+      <li><a href="atoms/ProfileGroup.html"><strong>ProfileGroup</strong><span>4 stories</span></a></li>
+      <li><a href="atoms/ProfileImage.html"><strong>ProfileImage</strong><span>2 stories</span></a></li>
+      <li><a href="atoms/ProgressBar.html"><strong>ProgressBar</strong><span>4 stories</span></a></li>
+      <li><a href="atoms/RenameableText.html"><strong>RenameableText</strong><span>6 stories</span></a></li>
+      <li><a href="atoms/Spinner.html"><strong>Spinner</strong><span>4 stories</span></a></li>
+      <li><a href="atoms/Tooltip.html"><strong>Tooltip</strong><span>3 stories</span></a></li>
+    </ul>
+  </section>
+  <section>
+    <h2>components <em>(20 componentes · 168 stories)</em></h2>
+    <ul>
+      <li><a href="components/AlertMessage.html"><strong>AlertMessage</strong><span>8 stories</span></a></li>
+      <li><a href="components/Badge.html"><strong>Badge</strong><span>7 stories</span></a></li>
+      <li><a href="components/Breadcrumbs.html"><strong>Breadcrumbs</strong><span>10 stories</span></a></li>
+      <li><a href="components/ButtonAction.html"><strong>ButtonAction</strong><span>9 stories</span></a></li>
+      <li><a href="components/ButtonCheck.html"><strong>ButtonCheck</strong><span>10 stories</span></a></li>
+      <li><a href="components/ButtonFavorite.html"><strong>ButtonFavorite</strong><span>8 stories</span></a></li>
+      <li><a href="components/ButtonSoft.html"><strong>ButtonSoft</strong><span>12 stories</span></a></li>
+      <li><a href="components/ButtonSoftToAction.html"><strong>ButtonSoftToAction</strong><span>8 stories</span></a></li>
+      <li><a href="components/CardButton.html"><strong>CardButton</strong><span>8 stories</span></a></li>
+      <li><a href="components/CodeInput.html"><strong>CodeInput</strong><span>10 stories</span></a></li>
+      <li><a href="components/DataView.html"><strong>DataView</strong><span>6 stories</span></a></li>
+      <li><a href="components/Dropdown.html"><strong>Dropdown</strong><span>12 stories</span></a></li>
+      <li><a href="components/FooterModal.html"><strong>FooterModal</strong><span>9 stories</span></a></li>
+      <li><a href="components/HeaderModal.html"><strong>HeaderModal</strong><span>8 stories</span></a></li>
+      <li><a href="components/Pagination.html"><strong>Pagination</strong><span>10 stories</span></a></li>
+      <li><a href="components/SearchInput.html"><strong>SearchInput</strong><span>9 stories</span></a></li>
+      <li><a href="components/Skeleton.html"><strong>Skeleton</strong><span>6 stories</span></a></li>
+      <li><a href="components/SpeechToTextButton.html"><strong>SpeechToTextButton</strong><span>4 stories</span></a></li>
+      <li><a href="components/Text.html"><strong>Text</strong><span>5 stories</span></a></li>
+      <li><a href="components/Toaster.html"><strong>Toaster</strong><span>9 stories</span></a></li>
+    </ul>
+  </section>
+  <section>
+    <h2>fields <em>(19 componentes · 222 stories)</em></h2>
+    <ul>
+      <li><a href="fields/Field01TextSimple.html"><strong>Field01TextSimple</strong><span>15 stories</span></a></li>
+      <li><a href="fields/Field02TextEditor.html"><strong>Field02TextEditor</strong><span>9 stories</span></a></li>
+      <li><a href="fields/Field02TextMultiline.html"><strong>Field02TextMultiline</strong><span>14 stories</span></a></li>
+      <li><a href="fields/Field04NumberInteger.html"><strong>Field04NumberInteger</strong><span>12 stories</span></a></li>
+      <li><a href="fields/Field05NumberCurrency.html"><strong>Field05NumberCurrency</strong><span>12 stories</span></a></li>
+      <li><a href="fields/Field06NumberDouble.html"><strong>Field06NumberDouble</strong><span>12 stories</span></a></li>
+      <li><a href="fields/Field07Options.html"><strong>Field07Options</strong><span>14 stories</span></a></li>
+      <li><a href="fields/Field07Phone.html"><strong>Field07Phone</strong><span>11 stories</span></a></li>
+      <li><a href="fields/Field08Date.html"><strong>Field08Date</strong><span>14 stories</span></a></li>
+      <li><a href="fields/Field09Time.html"><strong>Field09Time</strong><span>9 stories</span></a></li>
+      <li><a href="fields/Field10Checkbox.html"><strong>Field10Checkbox</strong><span>16 stories</span></a></li>
+      <li><a href="fields/Field11CPF.html"><strong>Field11CPF</strong><span>10 stories</span></a></li>
+      <li><a href="fields/Field12CNPJ.html"><strong>Field12CNPJ</strong><span>14 stories</span></a></li>
+      <li><a href="fields/Field13NumberPercentage.html"><strong>Field13NumberPercentage</strong><span>11 stories</span></a></li>
+      <li><a href="fields/Field17Address.html"><strong>Field17Address</strong><span>10 stories</span></a></li>
+      <li><a href="fields/Field18Image.html"><strong>Field18Image</strong><span>9 stories</span></a></li>
+      <li><a href="fields/Field19Attachment.html"><strong>Field19Attachment</strong><span>11 stories</span></a></li>
+      <li><a href="fields/Field20Color.html"><strong>Field20Color</strong><span>13 stories</span></a></li>
+      <li><a href="fields/Field22Developer.html"><strong>Field22Developer</strong><span>6 stories</span></a></li>
+    </ul>
+  </section>
+  <section>
+    <h2>organisms <em>(23 componentes · 173 stories)</em></h2>
+    <ul>
+      <li><a href="organisms/ActionDock.html"><strong>ActionDock</strong><span>5 stories</span></a></li>
+      <li><a href="organisms/AlertModal.html"><strong>AlertModal</strong><span>7 stories</span></a></li>
+      <li><a href="organisms/Card.html"><strong>Card</strong><span>13 stories</span></a></li>
+      <li><a href="organisms/Collapse.html"><strong>Collapse</strong><span>13 stories</span></a></li>
+      <li><a href="organisms/DeepSelector.html"><strong>DeepSelector</strong><span>8 stories</span></a></li>
+      <li><a href="organisms/EmptyLabel.html"><strong>EmptyLabel</strong><span>8 stories</span></a></li>
+      <li><a href="organisms/FieldSelector.html"><strong>FieldSelector</strong><span>7 stories</span></a></li>
+      <li><a href="organisms/FilterGroup.html"><strong>FilterGroup</strong><span>7 stories</span></a></li>
+      <li><a href="organisms/GridView.html"><strong>GridView</strong><span>5 stories</span></a></li>
+      <li><a href="organisms/HorizontalMenu.html"><strong>HorizontalMenu</strong><span>7 stories</span></a></li>
+      <li><a href="organisms/HorizontalTabs.html"><strong>HorizontalTabs</strong><span>7 stories</span></a></li>
+      <li><a href="organisms/ImageGallery.html"><strong>ImageGallery</strong><span>7 stories</span></a></li>
+      <li><a href="organisms/InfiniteScroll.html"><strong>InfiniteScroll</strong><span>5 stories</span></a></li>
+      <li><a href="organisms/Loader.html"><strong>Loader</strong><span>5 stories</span></a></li>
+      <li><a href="organisms/ModalCenter.html"><strong>ModalCenter</strong><span>7 stories</span></a></li>
+      <li><a href="organisms/ModalFloating.html"><strong>ModalFloating</strong><span>8 stories</span></a></li>
+      <li><a href="organisms/ModalSide.html"><strong>ModalSide</strong><span>11 stories</span></a></li>
+      <li><a href="organisms/ResizableDrawer.html"><strong>ResizableDrawer</strong><span>7 stories</span></a></li>
+      <li><a href="organisms/SearchableList.html"><strong>SearchableList</strong><span>7 stories</span></a></li>
+      <li><a href="organisms/Stepper.html"><strong>Stepper</strong><span>8 stories</span></a></li>
+      <li><a href="organisms/SubMenuHorizontal.html"><strong>SubMenuHorizontal</strong><span>7 stories</span></a></li>
+      <li><a href="organisms/Table.html"><strong>Table</strong><span>9 stories</span></a></li>
+      <li><a href="organisms/VerticalMenu.html"><strong>VerticalMenu</strong><span>5 stories</span></a></li>
+    </ul>
+  </section>
+  <section>
+    <h2>providers <em>(1 componentes · 4 stories)</em></h2>
+    <ul>
+      <li><a href="providers/IconProvider.html"><strong>IconProvider</strong><span>4 stories</span></a></li>
+    </ul>
+  </section>
+</body>
+</html>

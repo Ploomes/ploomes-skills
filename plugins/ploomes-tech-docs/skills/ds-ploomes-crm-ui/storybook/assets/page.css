@@ -1,0 +1,26 @@
+/* Chrome das páginas de snapshot — não faz parte do design system. */
+.ds-page { padding: 28px 32px 64px; max-width: 1180px; }
+.ds-head { border-bottom: 1px solid var(--color-neutral-level_2); padding-bottom: 18px; margin-bottom: 8px; }
+.ds-back { font-size: 12px; color: var(--color-font-level_2); text-decoration: none; }
+.ds-back:hover { color: var(--color-brand); }
+.ds-title { font-size: 26px; font-weight: 700; margin: 6px 0 4px; }
+.ds-meta { font-size: 12px; color: var(--color-font-level_2); margin-bottom: 14px; }
+.ds-story { padding: 22px 0; border-bottom: 1px solid var(--color-neutral-level_1); }
+.ds-story-name { font-size: 15px; font-weight: 600; margin-bottom: 2px; }
+.ds-story-id { font-size: 11px; font-family: ui-monospace, monospace; color: var(--color-font-level_2); }
+.ds-canvas { position: relative; transform: translate(0); overflow: auto;
+  margin: 12px 0 10px; border: 1px solid var(--color-neutral-level_2); border-radius: 8px; }
+.ds-canvas--padded { padding: 16px; }
+.ds-canvas--centered { padding: 24px 16px; display: flex; align-items: center; justify-content: center; }
+.ds-canvas--fullscreen { min-height: 360px; }
+.ds-canvas--overlay { min-height: 420px; }
+.ds-state { font-size: 11px; text-transform: uppercase; letter-spacing: .06em;
+  color: var(--color-font-level_2); margin-top: 14px; }
+.ds-src { font-size: 12px; }
+.ds-src > summary { cursor: pointer; color: var(--color-font-level_2); user-select: none; }
+.ds-src > summary:hover { color: var(--color-brand); }
+.ds-code { margin-top: 8px; padding: 12px 14px; overflow-x: auto;
+  background: var(--color-background-level_1); border: 1px solid var(--color-neutral-level_1);
+  border-radius: 8px; font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 12px; line-height: 1.55; white-space: pre; color: var(--color-font-level_1); }
+.ds-import { margin: 0 0 4px; }

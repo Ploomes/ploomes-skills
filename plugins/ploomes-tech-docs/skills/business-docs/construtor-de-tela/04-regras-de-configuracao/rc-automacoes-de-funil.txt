@@ -1,0 +1,222 @@
+Regras para configuração de Automações de funil:
+
+Para a criação de uma nova automação de funil, as seguintes propriedades devem ou podem opcionalmente ser enviadas:
+
+1. Etapa onde a automação será configurada
+
+Identifique em qual etapa do processo a automação será criada.
+
+Exemplos:
+
+Demonstração a acontecer
+Proposta enviada
+Contrato em assinatura
+Cliente ganho
+
+2. Descrição da automação
+
+Nome ou descrição curta para identificar a automação.
+
+Exemplos:
+
+Criar tarefa após entrada na etapa
+Enviar e-mail ao ganhar negócio
+Mover negócio após demonstração
+Criar registro de interação
+
+3. Gatilho
+
+Define quando a automação será disparada. Escolher entre as seguintes opções:
+
+Negócio entrou neste estágio
+Negócio ganho neste estágio
+Negócio perdido neste estágio
+Negócio reaberto neste estágio
+Negócio editado nesse estágio
+
+No caso de "Negócio editado nesse estágio", é possível selecionar até 4 campos específicos (caso qualquer um deles seja editado, e somente eles, a automação roda).
+
+4. Filtro
+
+Define condições adicionais para a automação executar.
+
+Exemplos:
+
+Segmento do cliente = Indústria
+Valor do negócio maior que R$ 50.000
+Produto de interesse = Implantação Premium
+Origem = Site
+Responsável = Time Enterprise
+
+Não é necessário ter filtros. Se não houver filtros, a automação é executada sempre que for engatilhada.
+
+5. Ações
+
+Define o que a automação deve fazer quando for disparada. É possível criar múltiplas ações dentro de uma mesma automação. O backend do Ploomes vai rodá-las em sequência (portanto, a ordem importa).
+
+As opções são:
+
+Editar dados
+Alterar estágio do negócio
+Duplicar negócio em novo estágio
+Enviar e-mail
+Criar tarefa
+Criar negócio
+Criar registro de interação
+Perder negócio
+Ganhar negócio
+Finalizar tarefas com observações
+Finalizar tarefas
+Criar produto do cliente
+
+6. Detalhes de cada ação
+
+Para cada ação escolhida, definir os parâmetros necessários.
+
+1. Editar dados
+
+Use quando a automação precisar alterar campos de um registro existente.
+
+O que configurar:
+- Entidade/campo que será alterado
+- Novo valor do campo
+- Se o valor será fixo ou calculado. Para campo calculado, definir conteúdo da fórmula simples. Para campo fixo, definir valor
+- Se o valor virá de outro campo
+
+2. Alterar estágio do negócio
+
+Use quando a automação precisar mover o negócio para outro estágio.
+
+O que configurar:
+- Funil de destino
+- Estágio de destino
+- Se a mudança deve respeitar validações/checklists da etapa
+
+Exemplo:
+
+Alterar estágio do negócio:
+- Processo: Vendas
+- Estágio de destino: Proposta enviada
+
+3. Duplicar negócio em novo estágio
+
+Use quando a automação precisar criar uma cópia do negócio em outro estágio, sem mover o negócio original. O negócio duplicado herda os valores preenchidos em campos do negócio origem.
+
+O que configurar:
+- Estágio de destino
+
+Exemplo:
+
+Duplicar negócio em novo estágio:
+- Estágio de destino: Novo cliente
+
+4. Enviar e-mail
+
+Use quando a automação precisar enviar uma comunicação por e-mail.
+
+O que configurar:
+- Destinatários
+- Cópia, se houver
+- Cópia oculta, se houver
+- Assunto
+- Corpo do e-mail
+- Campos dinâmicos usados no texto
+- Remetente ou caixa de envio, se aplicável
+- Anexos, se aplicável
+
+5. Criar tarefa
+
+Use quando a automação precisar gerar uma atividade para alguém executar.
+
+O que configurar:
+- Título da tarefa
+- Responsável pela tarefa
+- Data de vencimento
+- Horário, se aplicável
+- Tipo de tarefa
+- Descrição da tarefa
+
+Exemplo:
+
+Criar tarefa:
+- Título: Fazer follow-up da proposta
+- Responsável: Responsável pelo negócio
+- Vencimento: Hoje + 2 dias
+- Tipo: Ligação
+- Descrição: Entrar em contato com o cliente para verificar dúvidas sobre a proposta.
+
+6. Criar negócio
+
+Use quando a automação precisar criar um novo negócio em um funil.
+
+O que configurar:
+- Estágio inicial do novo negócio
+- Campos do formulário do funil ao qual o estágio destino do negócio pertence.
+
+Exemplo:
+
+Criar negócio:
+- Processo: Implantação
+- Estágio: Aguardando kickoff
+- Título: Implantação - [Nome do cliente]
+- Responsável: Coordenador de implantação
+- Campo Tipo de projeto: Implantação padrão
+
+7. Criar registro de interação
+
+Use quando a automação precisar registrar uma interação no histórico do negócio.
+
+O que configurar:
+- Tipo de interação
+- Descrição/conteúdo da interação
+- Data e hora da interação
+- Outros campos do formulário do registro de interação
+
+Exemplo:
+
+Criar registro de interação:
+- Tipo: Nota
+- Descrição: negócio movido automaticamente para Proposta enviada.
+- Data/hora: Agora
+
+8. Perder negócio
+
+Use quando a automação precisar marcar o negócio como perdido.
+
+O que configurar:
+- Motivo de perda
+
+Exemplo:
+
+Perder negócio:
+- Motivo de perda: Sem retorno
+
+9. Ganhar negócio
+
+Use quando a automação precisar marcar o negócio como ganho.
+
+O que configurar:
+- Nada.
+
+10. Finalizar tarefas com observações
+
+Use quando a automação precisar concluir tarefas abertas e registrar uma observação de fechamento. A observação de fechamento nada mais é do que a geração de um registro de interação. Então, o usuário deve preencher as mesmas informações da ação que gera registro de interação.
+
+O que configurar:
+- Quais tarefas devem ser finalizadas (todas ou algumas específicas a partir de um filtro usando mecanismo de field-path);
+- Informações do registro de interação.
+
+11. Finalizar tarefas
+
+Use quando a automação precisar apenas concluir tarefas abertas, sem observação específica.
+
+O que configurar:
+- Quais tarefas devem ser finalizadas (todas ou algumas específicas a partir de um filtro usando mecanismo de field-path);
+
+12. Criar produto do cliente
+
+Use quando a automação precisar criar um produto do cliente a partir dos dados disponíveis.
+
+O que configurar:
+- Campos do formulário de produto do cliente.
+- O que fazer se a conta já existir? Esta opção define o que fazer se o produto do cliente a ser criado já tiver um outro produto do cliente vinculado ao mesmo cliente e ao mesmo produto. Pode criar um novo produto do cliente ou atualizar informações do produto do cliente encontrado.

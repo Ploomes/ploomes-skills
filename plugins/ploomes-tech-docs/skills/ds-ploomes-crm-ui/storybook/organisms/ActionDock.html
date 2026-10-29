@@ -1,0 +1,128 @@
+<!doctype html>
+<!--
+  Ploomes Design System — snapshot estático das stories do Storybook.
+  Componente : Organisms/ActionDock
+  Stories    : 5 (Default, Some Selected, All Selected, Interactive, Both States)
+  Story      : ActionDock.stories.tsx
+  Tema       : light — use <html class="dark"> para o tema escuro.
+-->
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ActionDock — Ploomes DS</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;600;700&display=swap">
+<link rel="stylesheet" href="../assets/design-system.css">
+<link rel="stylesheet" href="../assets/page.css">
+</head>
+<body class="ds-page">
+  <header class="ds-head">
+    <a class="ds-back" href="../index.html">← inventário</a>
+    <h1 class="ds-title">ActionDock</h1>
+    <p class="ds-meta">organisms · 5 stories · <code>ActionDock.stories.tsx</code></p>
+    <pre class="ds-code ds-import">import { ActionDock } from &#x27;@ploomescrm/ui&#x27;;</pre>
+    <pre class="ds-code">// props padrão de todas as stories (meta.args)
+args: {
+  selectedCount: 0,
+  totalCount: 10,
+  entityName: &#x27;cadastros&#x27;,
+  allSelected: false,
+}</pre>
+  </header>
+  <section class="ds-story">
+    <h2 class="ds-story-name">Default</h2>
+    <div class="ds-story-id">organisms-actiondock--default · export <b>Default</b></div>
+    <div class="ds-canvas ds-canvas--padded">
+<div class="flex h-[35px] items-center overflow-hidden rounded-[5px] bg-background pr-[2.5px] max-md:h-auto max-md:flex-col max-md:items-start max-md:overflow-visible shadow-[0px_1px_1px_0px_rgba(0,0,0,0.14),0px_2px_1px_0px_rgba(0,0,0,0.12),0px_1px_3px_0px_rgba(0,0,0,0.20)]"><div class="flex shrink-0 items-center gap-[10px] px-[10px] whitespace-nowrap"><span class="text-[13px] leading-normal text-font">0 cadastros selecionados.</span><button class="cursor-pointer text-[13px] leading-normal text-confirmation underline decoration-solid focus-visible:outline-none" type="button">Selecionar todos os 10 cadastros</button></div><div class="flex shrink-0 items-center justify-end"><button class="inline-flex shrink-0 cursor-pointer items-center gap-[5px] rounded-[5px] px-[5px] text-sm text-font transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-1 disabled:pointer-events-none disabled:opacity-40 focus-visible:ring-confirmation border border-transparent bg-transparent h-[30px] hover:bg-neutral-level_1 active:bg-neutral-level_2"><span class="flex shrink-0 items-center justify-center pl-[5px] text-confirmation"><svg aria-hidden="true" class="size-[15px]" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24"><rect height="13" rx="2" width="13" x="9" y="9"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg></span><span class="overflow-hidden text-ellipsis whitespace-nowrap px-[5px] text-font">Duplicar</span></button><button class="inline-flex shrink-0 cursor-pointer items-center gap-[5px] rounded-[5px] px-[5px] text-sm text-font transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-1 disabled:pointer-events-none disabled:opacity-40 focus-visible:ring-danger border border-transparent bg-transparent h-[30px] hover:bg-neutral-level_1 active:bg-neutral-level_2"><span class="flex shrink-0 items-center justify-center pl-[5px] text-danger"><svg aria-hidden="true" class="size-[15px]" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6"></path><path d="M10 11v6M14 11v6"></path><path d="M9 6V4a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2"></path></svg></span><span class="overflow-hidden text-ellipsis whitespace-nowrap px-[5px] text-font">Excluir</span></button></div></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const Default: Story = {
+  render: (args) =&gt; &lt;ActionDock {...args} actions={defaultActions} /&gt;,
+}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">Some Selected</h2>
+    <div class="ds-story-id">organisms-actiondock--some-selected · export <b>SomeSelected</b></div>
+    <div class="ds-canvas ds-canvas--padded">
+<div class="flex h-[35px] items-center overflow-hidden rounded-[5px] bg-background pr-[2.5px] max-md:h-auto max-md:flex-col max-md:items-start max-md:overflow-visible shadow-[0px_1px_1px_0px_rgba(0,0,0,0.14),0px_2px_1px_0px_rgba(0,0,0,0.12),0px_1px_3px_0px_rgba(0,0,0,0.20)]"><div class="flex shrink-0 items-center gap-[10px] px-[10px] whitespace-nowrap"><span class="text-[13px] leading-normal text-font">3 cadastros selecionados.</span><button class="cursor-pointer text-[13px] leading-normal text-confirmation underline decoration-solid focus-visible:outline-none" type="button">Selecionar todos os 10 cadastros</button></div><div class="flex shrink-0 items-center justify-end"><button class="inline-flex shrink-0 cursor-pointer items-center gap-[5px] rounded-[5px] px-[5px] text-sm text-font transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-1 disabled:pointer-events-none disabled:opacity-40 focus-visible:ring-confirmation border border-transparent bg-transparent h-[30px] hover:bg-neutral-level_1 active:bg-neutral-level_2"><span class="flex shrink-0 items-center justify-center pl-[5px] text-confirmation"><svg aria-hidden="true" class="size-[15px]" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24"><rect height="13" rx="2" width="13" x="9" y="9"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg></span><span class="overflow-hidden text-ellipsis whitespace-nowrap px-[5px] text-font">Duplicar</span></button><button class="inline-flex shrink-0 cursor-pointer items-center gap-[5px] rounded-[5px] px-[5px] text-sm text-font transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-1 disabled:pointer-events-none disabled:opacity-40 focus-visible:ring-danger border border-transparent bg-transparent h-[30px] hover:bg-neutral-level_1 active:bg-neutral-level_2"><span class="flex shrink-0 items-center justify-center pl-[5px] text-danger"><svg aria-hidden="true" class="size-[15px]" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6"></path><path d="M10 11v6M14 11v6"></path><path d="M9 6V4a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2"></path></svg></span><span class="overflow-hidden text-ellipsis whitespace-nowrap px-[5px] text-font">Excluir</span></button></div></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const SomeSelected: Story = {
+  render: (args) =&gt; (
+    &lt;ActionDock
+      {...args}
+      selectedCount={3}
+      totalCount={10}
+      entityName=&quot;cadastros&quot;
+      allSelected={false}
+      actions={defaultActions}
+    /&gt;
+  ),
+}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">All Selected</h2>
+    <div class="ds-story-id">organisms-actiondock--all-selected · export <b>AllSelected</b></div>
+    <div class="ds-canvas ds-canvas--padded">
+<div class="flex h-[35px] items-center overflow-hidden rounded-[5px] bg-background pr-[2.5px] max-md:h-auto max-md:flex-col max-md:items-start max-md:overflow-visible shadow-[0px_1px_1px_0px_rgba(0,0,0,0.14),0px_2px_1px_0px_rgba(0,0,0,0.12),0px_1px_3px_0px_rgba(0,0,0,0.20)]"><div class="flex shrink-0 items-center gap-[10px] px-[10px] whitespace-nowrap"><span class="text-[13px] leading-normal text-font">Todos 10 cadastros selecionados.</span><button class="cursor-pointer text-[13px] leading-normal text-confirmation underline decoration-solid focus-visible:outline-none" type="button">Limpar seleção</button></div><div class="flex shrink-0 items-center justify-end"><button class="inline-flex shrink-0 cursor-pointer items-center gap-[5px] rounded-[5px] px-[5px] text-sm text-font transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-1 disabled:pointer-events-none disabled:opacity-40 focus-visible:ring-confirmation border border-transparent bg-transparent h-[30px] hover:bg-neutral-level_1 active:bg-neutral-level_2"><span class="flex shrink-0 items-center justify-center pl-[5px] text-confirmation"><svg aria-hidden="true" class="size-[15px]" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24"><rect height="13" rx="2" width="13" x="9" y="9"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg></span><span class="overflow-hidden text-ellipsis whitespace-nowrap px-[5px] text-font">Duplicar</span></button><button class="inline-flex shrink-0 cursor-pointer items-center gap-[5px] rounded-[5px] px-[5px] text-sm text-font transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-1 disabled:pointer-events-none disabled:opacity-40 focus-visible:ring-danger border border-transparent bg-transparent h-[30px] hover:bg-neutral-level_1 active:bg-neutral-level_2"><span class="flex shrink-0 items-center justify-center pl-[5px] text-danger"><svg aria-hidden="true" class="size-[15px]" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6"></path><path d="M10 11v6M14 11v6"></path><path d="M9 6V4a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2"></path></svg></span><span class="overflow-hidden text-ellipsis whitespace-nowrap px-[5px] text-font">Excluir</span></button></div></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const AllSelected: Story = {
+  render: (args) =&gt; (
+    &lt;ActionDock
+      {...args}
+      selectedCount={10}
+      totalCount={10}
+      entityName=&quot;cadastros&quot;
+      allSelected={true}
+      actions={defaultActions}
+    /&gt;
+  ),
+}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">Interactive</h2>
+    <div class="ds-story-id">organisms-actiondock--interactive · export <b>Interactive</b></div>
+    <div class="ds-canvas ds-canvas--padded">
+<div style="display: flex; flex-direction: column; gap: 16px;"><div class="flex h-[35px] items-center overflow-hidden rounded-[5px] bg-background pr-[2.5px] max-md:h-auto max-md:flex-col max-md:items-start max-md:overflow-visible shadow-[0px_1px_1px_0px_rgba(0,0,0,0.14),0px_2px_1px_0px_rgba(0,0,0,0.12),0px_1px_3px_0px_rgba(0,0,0,0.20)]"><div class="flex shrink-0 items-center gap-[10px] px-[10px] whitespace-nowrap"><span class="text-[13px] leading-normal text-font">0 cadastros selecionados.</span><button class="cursor-pointer text-[13px] leading-normal text-confirmation underline decoration-solid focus-visible:outline-none" type="button">Selecionar todos os 10 cadastros</button></div><div class="flex shrink-0 items-center justify-end"><button class="inline-flex shrink-0 cursor-pointer items-center gap-[5px] rounded-[5px] px-[5px] text-sm text-font transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-1 disabled:pointer-events-none disabled:opacity-40 focus-visible:ring-confirmation border border-transparent bg-transparent h-[30px] hover:bg-neutral-level_1 active:bg-neutral-level_2"><span class="flex shrink-0 items-center justify-center pl-[5px] text-confirmation"><svg aria-hidden="true" class="size-[15px]" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24"><rect height="13" rx="2" width="13" x="9" y="9"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg></span><span class="overflow-hidden text-ellipsis whitespace-nowrap px-[5px] text-font">Duplicar</span></button><button class="inline-flex shrink-0 cursor-pointer items-center gap-[5px] rounded-[5px] px-[5px] text-sm text-font transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-1 disabled:pointer-events-none disabled:opacity-40 focus-visible:ring-danger border border-transparent bg-transparent h-[30px] hover:bg-neutral-level_1 active:bg-neutral-level_2"><span class="flex shrink-0 items-center justify-center pl-[5px] text-danger"><svg aria-hidden="true" class="size-[15px]" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6"></path><path d="M10 11v6M14 11v6"></path><path d="M9 6V4a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2"></path></svg></span><span class="overflow-hidden text-ellipsis whitespace-nowrap px-[5px] text-font">Excluir</span></button></div></div><div style="display: flex; flex-direction: column; gap: 4px;"><label style="display: flex; align-items: center; gap: 8px; padding: 6px 10px; border: 1px solid rgba(27, 16, 44, 0.1); border-radius: 5px; cursor: pointer; background: rgb(255, 255, 255); font-size: 14px;"><input type="checkbox"/>Cadastro 1</label><label style="display: flex; align-items: center; gap: 8px; padding: 6px 10px; border: 1px solid rgba(27, 16, 44, 0.1); border-radius: 5px; cursor: pointer; background: rgb(255, 255, 255); font-size: 14px;"><input type="checkbox"/>Cadastro 2</label><label style="display: flex; align-items: center; gap: 8px; padding: 6px 10px; border: 1px solid rgba(27, 16, 44, 0.1); border-radius: 5px; cursor: pointer; background: rgb(255, 255, 255); font-size: 14px;"><input type="checkbox"/>Cadastro 3</label><label style="display: flex; align-items: center; gap: 8px; padding: 6px 10px; border: 1px solid rgba(27, 16, 44, 0.1); border-radius: 5px; cursor: pointer; background: rgb(255, 255, 255); font-size: 14px;"><input type="checkbox"/>Cadastro 4</label><label style="display: flex; align-items: center; gap: 8px; padding: 6px 10px; border: 1px solid rgba(27, 16, 44, 0.1); border-radius: 5px; cursor: pointer; background: rgb(255, 255, 255); font-size: 14px;"><input type="checkbox"/>Cadastro 5</label><label style="display: flex; align-items: center; gap: 8px; padding: 6px 10px; border: 1px solid rgba(27, 16, 44, 0.1); border-radius: 5px; cursor: pointer; background: rgb(255, 255, 255); font-size: 14px;"><input type="checkbox"/>Cadastro 6</label><label style="display: flex; align-items: center; gap: 8px; padding: 6px 10px; border: 1px solid rgba(27, 16, 44, 0.1); border-radius: 5px; cursor: pointer; background: rgb(255, 255, 255); font-size: 14px;"><input type="checkbox"/>Cadastro 7</label><label style="display: flex; align-items: center; gap: 8px; padding: 6px 10px; border: 1px solid rgba(27, 16, 44, 0.1); border-radius: 5px; cursor: pointer; background: rgb(255, 255, 255); font-size: 14px;"><input type="checkbox"/>Cadastro 8</label><label style="display: flex; align-items: center; gap: 8px; padding: 6px 10px; border: 1px solid rgba(27, 16, 44, 0.1); border-radius: 5px; cursor: pointer; background: rgb(255, 255, 255); font-size: 14px;"><input type="checkbox"/>Cadastro 9</label><label style="display: flex; align-items: center; gap: 8px; padding: 6px 10px; border: 1px solid rgba(27, 16, 44, 0.1); border-radius: 5px; cursor: pointer; background: rgb(255, 255, 255); font-size: 14px;"><input type="checkbox"/>Cadastro 10</label></div></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const Interactive: Story = {
+  render: () =&gt; &lt;InteractiveDemo /&gt;,
+}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">Both States</h2>
+    <div class="ds-story-id">organisms-actiondock--both-states · export <b>BothStates</b></div>
+    <div class="ds-canvas ds-canvas--padded">
+<div style="display: flex; flex-direction: column; gap: 12px;"><div><p style="font-size: 11px; color: rgb(139, 133, 149); margin-bottom: 4px;">allSelected=false</p><div class="flex h-[35px] items-center overflow-hidden rounded-[5px] bg-background pr-[2.5px] max-md:h-auto max-md:flex-col max-md:items-start max-md:overflow-visible shadow-[0px_1px_1px_0px_rgba(0,0,0,0.14),0px_2px_1px_0px_rgba(0,0,0,0.12),0px_1px_3px_0px_rgba(0,0,0,0.20)]"><div class="flex shrink-0 items-center gap-[10px] px-[10px] whitespace-nowrap"><span class="text-[13px] leading-normal text-font">0 cadastros selecionados.</span><button class="cursor-pointer text-[13px] leading-normal text-confirmation underline decoration-solid focus-visible:outline-none" type="button">Selecionar todos os 10 cadastros</button></div><div class="flex shrink-0 items-center justify-end"><button class="inline-flex shrink-0 cursor-pointer items-center gap-[5px] rounded-[5px] px-[5px] text-sm text-font transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-1 disabled:pointer-events-none disabled:opacity-40 focus-visible:ring-confirmation border border-transparent bg-transparent h-[30px] hover:bg-neutral-level_1 active:bg-neutral-level_2"><span class="flex shrink-0 items-center justify-center pl-[5px] text-confirmation"><svg aria-hidden="true" class="size-[15px]" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24"><rect height="13" rx="2" width="13" x="9" y="9"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg></span><span class="overflow-hidden text-ellipsis whitespace-nowrap px-[5px] text-font">Duplicar</span></button><button class="inline-flex shrink-0 cursor-pointer items-center gap-[5px] rounded-[5px] px-[5px] text-sm text-font transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-1 disabled:pointer-events-none disabled:opacity-40 focus-visible:ring-danger border border-transparent bg-transparent h-[30px] hover:bg-neutral-level_1 active:bg-neutral-level_2"><span class="flex shrink-0 items-center justify-center pl-[5px] text-danger"><svg aria-hidden="true" class="size-[15px]" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6"></path><path d="M10 11v6M14 11v6"></path><path d="M9 6V4a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2"></path></svg></span><span class="overflow-hidden text-ellipsis whitespace-nowrap px-[5px] text-font">Excluir</span></button></div></div></div><div><p style="font-size: 11px; color: rgb(139, 133, 149); margin-bottom: 4px;">allSelected=true</p><div class="flex h-[35px] items-center overflow-hidden rounded-[5px] bg-background pr-[2.5px] max-md:h-auto max-md:flex-col max-md:items-start max-md:overflow-visible shadow-[0px_1px_1px_0px_rgba(0,0,0,0.14),0px_2px_1px_0px_rgba(0,0,0,0.12),0px_1px_3px_0px_rgba(0,0,0,0.20)]"><div class="flex shrink-0 items-center gap-[10px] px-[10px] whitespace-nowrap"><span class="text-[13px] leading-normal text-font">Todos 10 cadastros selecionados.</span><button class="cursor-pointer text-[13px] leading-normal text-confirmation underline decoration-solid focus-visible:outline-none" type="button">Limpar seleção</button></div><div class="flex shrink-0 items-center justify-end"><button class="inline-flex shrink-0 cursor-pointer items-center gap-[5px] rounded-[5px] px-[5px] text-sm text-font transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-1 disabled:pointer-events-none disabled:opacity-40 focus-visible:ring-confirmation border border-transparent bg-transparent h-[30px] hover:bg-neutral-level_1 active:bg-neutral-level_2"><span class="flex shrink-0 items-center justify-center pl-[5px] text-confirmation"><svg aria-hidden="true" class="size-[15px]" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24"><rect height="13" rx="2" width="13" x="9" y="9"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg></span><span class="overflow-hidden text-ellipsis whitespace-nowrap px-[5px] text-font">Duplicar</span></button><button class="inline-flex shrink-0 cursor-pointer items-center gap-[5px] rounded-[5px] px-[5px] text-sm text-font transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-1 disabled:pointer-events-none disabled:opacity-40 focus-visible:ring-danger border border-transparent bg-transparent h-[30px] hover:bg-neutral-level_1 active:bg-neutral-level_2"><span class="flex shrink-0 items-center justify-center pl-[5px] text-danger"><svg aria-hidden="true" class="size-[15px]" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6"></path><path d="M10 11v6M14 11v6"></path><path d="M9 6V4a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2"></path></svg></span><span class="overflow-hidden text-ellipsis whitespace-nowrap px-[5px] text-font">Excluir</span></button></div></div></div></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const BothStates: Story = {
+  render: () =&gt; (
+    &lt;div style={{ display: &#x27;flex&#x27;, flexDirection: &#x27;column&#x27;, gap: 12 }}&gt;
+      &lt;div&gt;
+        &lt;p style={{ fontSize: 11, color: &#x27;#8b8595&#x27;, marginBottom: 4 }}&gt;
+          allSelected=false
+        &lt;/p&gt;
+        &lt;ActionDock
+          selectedCount={0}
+          totalCount={10}
+          entityName=&quot;cadastros&quot;
+          allSelected={false}
+          actions={defaultActions}
+        /&gt;
+      &lt;/div&gt;
+      &lt;div&gt;
+        &lt;p style={{ fontSize: 11, color: &#x27;#8b8595&#x27;, marginBottom: 4 }}&gt;
+          allSelected=true
+        &lt;/p&gt;
+        &lt;ActionDock
+          selectedCount={10}
+          totalCount={10}
+          entityName=&quot;cadastros&quot;
+          allSelected={true}
+          actions={defaultActions}
+        /&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  ),
+}</code></pre></details>
+  </section>
+</body>
+</html>

@@ -1,0 +1,22 @@
+Produtos do cliente
+
+Objetivo básico:
+- A tabela de Produtos do cliente permite o relacionamento entre as tabelas “Clientes” e “Produtos”. Ela foi criada para armazenar os ativos (produtos) em posse dos clientes, mix de produtos dos clientes, tabela de preço por produto do cliente, contratos com os clientes, certificações de produtos que os clientes possuem, entre outros.
+
+- Para armazenar mais de um tipo de produto do cliente (exemplo: equipamentos e contratos), basta criar um campo para armazenar o tipo, e exibir no frontend filtrando o tipo correto dependendo da tela onde o usuário está. Como é comum ter, por exemplo, contratos com equipamentos dentro e o Ploomes não possui isso, dá para criar um campo multilinhas e armazenar um json com o ID de cada equipamento (produto do cliente) que aquele contrato cobre. Aí, no frontend, isso é trabalhado de forma a mostrar melhor ao usuário, criar um botão que leva do contrato a cada equipamento, etc.
+
+- Justamente por isso, ao criar um novo produto do cliente, o Ploomes demanda que ele seja vinculado a um produto da base. Ex.: se possuo um Equipamento X em minha base de produtos, eu posso criar números de série dele para cada cliente meu.
+
+- Produtos de clientes tem seus próprios dados, ou seja, o vínculo do produto com o cliente pode ter dados. Exemplo: no mix de produtos, eu posso ter o produto A vinculado ao cliente X, e nesse vínculo, armazenar a data da última compra desse produto, bem como o preço.
+
+- Apesar do nome, um produto do cliente pode ser criado sem ter vínculo a um cliente. Isso é usado, por exemplo, para gestão de ativos que não necessariamente estão em posso de um cliente, mas que poderiam estar. É possível, por exemplo, nas entidades de Propostas, Vendas e Documentos, incluir um Produto do Cliente na tabela de produtos de Propostas, Vendas e Documentos para realizar a venda de um número de série específico ou um produto usado.
+
+Dados:
+- A base de produtos do cliente se utiliza dos mecanismos de formularios_e_campos do Ploomes;
+- A base de produtos do cliente se utiliza dos mecanismos de abas_e_tabelas_dinamicas do Ploomes;
+- A base de produtos do cliente se utiliza dos mecanismos de filtros do Ploomes;
+- A base de produtos do cliente se utiliza dos mecanismos de automações_gerais do Ploomes;
+- Os níveis de acesso de produtos do cliente andam junto com os níveis de acesso de clientes.
+
+Vínculos:
+- Além do vínculo com clientes, os Produtos do Cliente podem ser vinculados a negócios, possibilitando a utilização de funis do Ploomes como ferramenta de gestão de Assistência Técnica, renovação de contratos e muito mais.

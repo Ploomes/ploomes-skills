@@ -1,0 +1,7 @@
+{
+  "Aprovação de desconto acima de 20%": {
+    "niveis": [{"aprovadores": ["Gerente comercial"]}],
+    "notificar_email": true,
+    "destinatarios": "todos os aprovadores"
+  }
+}

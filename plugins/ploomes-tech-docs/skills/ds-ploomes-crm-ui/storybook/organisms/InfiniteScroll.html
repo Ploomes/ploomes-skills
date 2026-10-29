@@ -1,0 +1,80 @@
+<!doctype html>
+<!--
+  Ploomes Design System — snapshot estático das stories do Storybook.
+  Componente : Organisms/InfiniteScroll
+  Stories    : 5 (Default, Focus on loader, Error while loading, End of list, Custom loader and end message)
+  Story      : InfiniteScroll.stories.tsx
+  Tema       : light — use <html class="dark"> para o tema escuro.
+-->
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>InfiniteScroll — Ploomes DS</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;600;700&display=swap">
+<link rel="stylesheet" href="../assets/design-system.css">
+<link rel="stylesheet" href="../assets/page.css">
+</head>
+<body class="ds-page">
+  <header class="ds-head">
+    <a class="ds-back" href="../index.html">← inventário</a>
+    <h1 class="ds-title">InfiniteScroll</h1>
+    <p class="ds-meta">organisms · 5 stories · <code>InfiniteScroll.stories.tsx</code></p>
+    <pre class="ds-code ds-import">import { InfiniteScroll } from &#x27;@ploomescrm/ui&#x27;;</pre>
+  </header>
+  <section class="ds-story">
+    <h2 class="ds-story-name">Default</h2>
+    <div class="ds-story-id">organisms-infinitescroll--default · export <b>Default</b></div>
+    <div class="ds-canvas ds-canvas--centered">
+<div class="infinite-scroll-component scrollbar-custom overflow-auto h-[320px] w-[360px] rounded-[5px] border border-neutral-level_2 bg-background"><div class="infinite-scroll__items-component"><div class="flex h-[40px] items-center border-b border-neutral-level_2 px-[15px] text-[14px] text-font">Registro 1</div><div class="flex h-[40px] items-center border-b border-neutral-level_2 px-[15px] text-[14px] text-font">Registro 2</div><div class="flex h-[40px] items-center border-b border-neutral-level_2 px-[15px] text-[14px] text-font">Registro 3</div><div class="flex h-[40px] items-center border-b border-neutral-level_2 px-[15px] text-[14px] text-font">Registro 4</div><div class="flex h-[40px] items-center border-b border-neutral-level_2 px-[15px] text-[14px] text-font">Registro 5</div><div class="flex h-[40px] items-center border-b border-neutral-level_2 px-[15px] text-[14px] text-font">Registro 6</div><div class="flex h-[40px] items-center border-b border-neutral-level_2 px-[15px] text-[14px] text-font">Registro 7</div><div class="flex h-[40px] items-center border-b border-neutral-level_2 px-[15px] text-[14px] text-font">Registro 8</div><div class="flex h-[40px] items-center border-b border-neutral-level_2 px-[15px] text-[14px] text-font">Registro 9</div><div class="flex h-[40px] items-center border-b border-neutral-level_2 px-[15px] text-[14px] text-font">Registro 10</div><div class="flex h-[40px] items-center border-b border-neutral-level_2 px-[15px] text-[14px] text-font">Registro 11</div><div class="flex h-[40px] items-center border-b border-neutral-level_2 px-[15px] text-[14px] text-font">Registro 12</div></div></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const Default: Story = {
+  render: () =&gt; &lt;InfiniteScrollDemo /&gt;,
+}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">Focus on loader</h2>
+    <div class="ds-story-id">organisms-infinitescroll--focus-on-show-loader · export <b>FocusOnShowLoader</b></div>
+    <div class="ds-canvas ds-canvas--centered">
+<div class="infinite-scroll-component scrollbar-custom overflow-auto h-[320px] w-[360px] rounded-[5px] border border-neutral-level_2 bg-background"><div class="infinite-scroll__items-component"><div class="flex h-[40px] items-center border-b border-neutral-level_2 px-[15px] text-[14px] text-font">Registro 1</div><div class="flex h-[40px] items-center border-b border-neutral-level_2 px-[15px] text-[14px] text-font">Registro 2</div><div class="flex h-[40px] items-center border-b border-neutral-level_2 px-[15px] text-[14px] text-font">Registro 3</div><div class="flex h-[40px] items-center border-b border-neutral-level_2 px-[15px] text-[14px] text-font">Registro 4</div><div class="flex h-[40px] items-center border-b border-neutral-level_2 px-[15px] text-[14px] text-font">Registro 5</div><div class="flex h-[40px] items-center border-b border-neutral-level_2 px-[15px] text-[14px] text-font">Registro 6</div><div class="flex h-[40px] items-center border-b border-neutral-level_2 px-[15px] text-[14px] text-font">Registro 7</div><div class="flex h-[40px] items-center border-b border-neutral-level_2 px-[15px] text-[14px] text-font">Registro 8</div><div class="flex h-[40px] items-center border-b border-neutral-level_2 px-[15px] text-[14px] text-font">Registro 9</div><div class="flex h-[40px] items-center border-b border-neutral-level_2 px-[15px] text-[14px] text-font">Registro 10</div><div class="flex h-[40px] items-center border-b border-neutral-level_2 px-[15px] text-[14px] text-font">Registro 11</div><div class="flex h-[40px] items-center border-b border-neutral-level_2 px-[15px] text-[14px] text-font">Registro 12</div></div></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const FocusOnShowLoader: Story = {
+  name: &#x27;Focus on loader&#x27;,
+  render: () =&gt; &lt;InfiniteScrollDemo focusOnShowLoader /&gt;,
+}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">Error while loading</h2>
+    <div class="ds-story-id">organisms-infinitescroll--with-error · export <b>WithError</b></div>
+    <div class="ds-canvas ds-canvas--centered">
+<div class="infinite-scroll-component scrollbar-custom overflow-auto h-[320px] w-[360px] rounded-[5px] border border-neutral-level_2 bg-background"><div class="infinite-scroll__items-component"><div class="flex h-[40px] items-center border-b border-neutral-level_2 px-[15px] text-[14px] text-font">Registro 1</div><div class="flex h-[40px] items-center border-b border-neutral-level_2 px-[15px] text-[14px] text-font">Registro 2</div><div class="flex h-[40px] items-center border-b border-neutral-level_2 px-[15px] text-[14px] text-font">Registro 3</div><div class="flex h-[40px] items-center border-b border-neutral-level_2 px-[15px] text-[14px] text-font">Registro 4</div><div class="flex h-[40px] items-center border-b border-neutral-level_2 px-[15px] text-[14px] text-font">Registro 5</div><div class="flex h-[40px] items-center border-b border-neutral-level_2 px-[15px] text-[14px] text-font">Registro 6</div><div class="flex h-[40px] items-center border-b border-neutral-level_2 px-[15px] text-[14px] text-font">Registro 7</div><div class="flex h-[40px] items-center border-b border-neutral-level_2 px-[15px] text-[14px] text-font">Registro 8</div><div class="flex h-[40px] items-center border-b border-neutral-level_2 px-[15px] text-[14px] text-font">Registro 9</div><div class="flex h-[40px] items-center border-b border-neutral-level_2 px-[15px] text-[14px] text-font">Registro 10</div><div class="flex h-[40px] items-center border-b border-neutral-level_2 px-[15px] text-[14px] text-font">Registro 11</div><div class="flex h-[40px] items-center border-b border-neutral-level_2 px-[15px] text-[14px] text-font">Registro 12</div></div></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const WithError: Story = {
+  name: &#x27;Error while loading&#x27;,
+  render: () =&gt; &lt;InfiniteScrollDemo totalPages={10} failOnPage={2} /&gt;,
+}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">End of list</h2>
+    <div class="ds-story-id">organisms-infinitescroll--end-reached · export <b>EndReached</b></div>
+    <div class="ds-canvas ds-canvas--centered">
+<div class="infinite-scroll-component scrollbar-custom overflow-auto h-[320px] w-[360px] rounded-[5px] border border-neutral-level_2 bg-background"><div class="infinite-scroll__items-component"><div class="flex h-[40px] items-center border-b border-neutral-level_2 px-[15px] text-[14px] text-font">Registro 1</div><div class="flex h-[40px] items-center border-b border-neutral-level_2 px-[15px] text-[14px] text-font">Registro 2</div><div class="flex h-[40px] items-center border-b border-neutral-level_2 px-[15px] text-[14px] text-font">Registro 3</div><div class="flex h-[40px] items-center border-b border-neutral-level_2 px-[15px] text-[14px] text-font">Registro 4</div><div class="flex h-[40px] items-center border-b border-neutral-level_2 px-[15px] text-[14px] text-font">Registro 5</div><div class="flex h-[40px] items-center border-b border-neutral-level_2 px-[15px] text-[14px] text-font">Registro 6</div><div class="flex h-[40px] items-center border-b border-neutral-level_2 px-[15px] text-[14px] text-font">Registro 7</div><div class="flex h-[40px] items-center border-b border-neutral-level_2 px-[15px] text-[14px] text-font">Registro 8</div><div class="flex h-[40px] items-center border-b border-neutral-level_2 px-[15px] text-[14px] text-font">Registro 9</div><div class="flex h-[40px] items-center border-b border-neutral-level_2 px-[15px] text-[14px] text-font">Registro 10</div><div class="flex h-[40px] items-center border-b border-neutral-level_2 px-[15px] text-[14px] text-font">Registro 11</div><div class="flex h-[40px] items-center border-b border-neutral-level_2 px-[15px] text-[14px] text-font">Registro 12</div></div><div class="infinite-scroll__end-message-component"><p class="py-[15px] text-center text-[14px] leading-normal text-font-level_2">Não há mais itens para carregar.</p></div></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const EndReached: Story = {
+  name: &#x27;End of list&#x27;,
+  render: () =&gt; &lt;InfiniteScrollDemo totalPages={1} /&gt;,
+}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">Custom loader and end message</h2>
+    <div class="ds-story-id">organisms-infinitescroll--custom-contents · export <b>CustomContents</b></div>
+    <div class="ds-canvas ds-canvas--centered">
+<div class="infinite-scroll-component scrollbar-custom overflow-auto h-[320px] w-[360px] rounded-[5px] border border-neutral-level_2 bg-background"><div class="infinite-scroll__items-component"><div class="flex h-[40px] items-center border-b border-neutral-level_2 px-[15px] text-[14px] text-font">Registro 1</div><div class="flex h-[40px] items-center border-b border-neutral-level_2 px-[15px] text-[14px] text-font">Registro 2</div><div class="flex h-[40px] items-center border-b border-neutral-level_2 px-[15px] text-[14px] text-font">Registro 3</div><div class="flex h-[40px] items-center border-b border-neutral-level_2 px-[15px] text-[14px] text-font">Registro 4</div><div class="flex h-[40px] items-center border-b border-neutral-level_2 px-[15px] text-[14px] text-font">Registro 5</div><div class="flex h-[40px] items-center border-b border-neutral-level_2 px-[15px] text-[14px] text-font">Registro 6</div><div class="flex h-[40px] items-center border-b border-neutral-level_2 px-[15px] text-[14px] text-font">Registro 7</div><div class="flex h-[40px] items-center border-b border-neutral-level_2 px-[15px] text-[14px] text-font">Registro 8</div><div class="flex h-[40px] items-center border-b border-neutral-level_2 px-[15px] text-[14px] text-font">Registro 9</div><div class="flex h-[40px] items-center border-b border-neutral-level_2 px-[15px] text-[14px] text-font">Registro 10</div><div class="flex h-[40px] items-center border-b border-neutral-level_2 px-[15px] text-[14px] text-font">Registro 11</div><div class="flex h-[40px] items-center border-b border-neutral-level_2 px-[15px] text-[14px] text-font">Registro 12</div></div></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const CustomContents: Story = {
+  name: &#x27;Custom loader and end message&#x27;,
+  render: () =&gt; &lt;CustomContentDemo /&gt;,
+}</code></pre></details>
+  </section>
+</body>
+</html>

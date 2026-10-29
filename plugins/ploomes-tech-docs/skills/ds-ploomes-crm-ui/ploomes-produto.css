@@ -1,0 +1,385 @@
+/* Camada de produto — o que o storybook/ (snapshot do design system) não
+   cobre: componentes órfãos sem story própria, o sistema legado do app
+   (Funil, Negócio, tabela) e composições de tela (Kanban).
+   Os tokens (var(--color-*), var(--radius-*), var(--font-*), var(--spacer-*))
+   são os mesmos declarados em storybook/assets/design-system.css — confira lá
+   antes de assumir que um token não existe. Zero hex literal: tudo por
+   var(--color-*), senão dark mode e whitelabel deixam de funcionar. */
+
+/* --- Órfãos: existem no produto, não há export --- */
+
+/* Botão inline da IA "Ploo". O pacote tem os tokens de IA, não o botão. */
+.ploo-ai-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  height: 30px;
+  padding: 0 10px;
+  border: 0;
+  border-radius: var(--radius-normal-5);
+  background: var(--color-ia-neutral-level_2);
+  color: var(--color-ia);
+  font-size: var(--font-size-small-13);
+  font-weight: var(--font-weight-semibold);
+  cursor: pointer;
+}
+.ploo-ai-btn:hover { background: var(--color-ia-neutral-level_3); }
+
+/* Cartão compacto de Negócio dentro da coluna do Kanban.
+   Medido no app em 04/08: 293 × 90, raio 5, fundo branco.
+   A SOMBRA vai como valor literal, e não como var(--shadow-*dp): o cartão usa
+   uma sombra de UMA camada (rgba(0,0,0,.05) 2px 2px 2px) e todos os tokens de
+   elevação do pacote são de três camadas, bem mais densas — o 1dp que estava
+   aqui antes pintava o cartão com o triplo do peso medido. Não é hex (o guard
+   de ploomes-produto.css proíbe hex, não rgba) e não é token novo: é o valor
+   aferido, escrito onde o pacote não tem equivalente. */
+.ploo-deal-mini {
+  display: flex;
+  flex-direction: column;
+  width: 293px;
+  height: 90px;
+  overflow: hidden;
+  border: 1px solid var(--color-neutral-level_2);
+  border-radius: var(--radius-normal-5);
+  background: var(--color-background);
+  box-shadow: rgba(0, 0, 0, .05) 2px 2px 2px;
+  font-size: var(--font-size-small-13);
+}
+/* Hover e active medidos em 04/08: são os MESMOS neutral-level_1/level_2 do
+   ds-button, ainda que o cartão seja do sistema legado. Por isso vão por token. */
+.ploo-deal-mini:hover { background: var(--color-neutral-level_1); }
+.ploo-deal-mini:active { background: var(--color-neutral-level_2); }
+
+/* Cartão de negócio ganho. As duas cores foram medidas no app e NÃO têm token —
+   a família confirmation_alt do pacote é bem mais saturada (ver a tabela de
+   divergências em geometria-do-produto.md, que é a fonte única desses números).
+   Vão como valor aferido, em rgb() porque este arquivo não escreve hex. */
+.ploo-deal-mini--ganho {
+  border-color: rgb(118, 230, 174);
+  background: rgb(183, 251, 217);
+}
+
+/* Linha de cima do cartão: detalhes (234 × 46) e ações (45 × 46), ambos com
+   padding 5px 8px. Só duas linhas de texto cabem nos 36px úteis dos detalhes —
+   por isso o valor desceu para a faixa de elementos. */
+.ploo-deal-mini__topo { display: flex; }
+.ploo-deal-mini__detalhes {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2px;
+  width: 234px;
+  height: 46px;
+  padding: 5px 8px;
+  overflow: hidden;
+}
+.ploo-deal-mini__acoes {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 45px;
+  height: 46px;
+  padding: 5px 8px;
+  color: var(--color-font-level_1);
+}
+.ploo-deal-mini__titulo {
+  overflow: hidden;
+  color: var(--color-font);
+  font-weight: var(--font-weight-semibold);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.ploo-deal-mini__cliente {
+  overflow: hidden;
+  color: var(--color-font-level_1);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.ploo-deal-mini__valor { color: var(--color-font); }
+
+/* Faixa de elementos no pé do cartão: 291 × 28, padding 0 13px 10px, fonte
+   12px — tamanho que a escala do pacote NÃO tem (ela começa em 13px), por isso
+   vai literal. `margin-top: auto` gruda a faixa no pé: 46 + 28 = 74 dos 90px
+   medidos, e a folga de 16px é real, está no cartão do app. */
+/* Sem `margin-top: auto` aqui: quem cola no pé é a barra de evolução, que vem
+   depois. Dois `auto` na mesma coluna flex dividem a folga entre si e a faixa
+   sai de posição. Se o cartão não tiver barra de evolução, ponha o `auto` aqui. */
+.ploo-deal-mini__elementos {
+  display: flex;
+  flex: none;
+  align-items: center;
+  gap: 5px;
+  height: 28px;
+  padding: 0 13px 10px;
+  color: var(--color-font-level_1);
+  font-size: 12px;
+}
+.ploo-deal-mini__tarefa {
+  display: flex;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  border-radius: 100%;
+  background: var(--color-neutral-level_1);
+}
+
+/* Etiqueta de dias inativos no pé do cartão: 35 × 20, padding 1px 5px, raio 3,
+   11px peso 600 — medida em 04/08. 11px não existe na escala do pacote. */
+.ploo-deal-mini__inativo {
+  padding: 1px 5px;
+  border: 1px solid var(--color-neutral-level_2);
+  border-radius: var(--radius-small-3);
+  background: var(--color-neutral-level_1);
+  color: var(--color-font);
+  font-size: 11px;
+  font-weight: var(--font-weight-semibold);
+}
+
+/* Barra de evolução do cartão — 3px no pé, com raio só embaixo para acompanhar
+   o canto do cartão. Medida em 04/08: a trilha é TRANSPARENTE e o preenchimento
+   é confirmation, com largura proporcional ao avanço no funil. É componente que
+   o mockup vinha ignorando: sem ele o cartão fica 3px mais alto e perde o dado.
+
+   Uso: <div class="ploo-deal-mini__evolucao">
+          <i class="ploo-deal-mini__evolucao-fill" style="width:62%"></i>
+        </div>
+   A largura vai inline porque é dado, não estilo — cada cartão tem a sua. */
+.ploo-deal-mini__evolucao {
+  /* flex:none impede que o flex do cartão comprima os 3px; margin-top:auto cola
+     no pé mesmo quando __elementos não usa o `auto`. Sem os dois, a barra
+     escorrega para fora do cartão ou desaparece. */
+  flex: none;
+  margin-top: auto;
+  height: 3px;
+  overflow: hidden;
+  border-radius: 0 0 var(--radius-normal-5) var(--radius-normal-5);
+}
+.ploo-deal-mini__evolucao-fill {
+  display: block;
+  height: 100%;
+  background: var(--color-confirmation);
+}
+
+/* Cabeçalho de Etapa (coluna do funil), com total agregado.
+   Medido: 310 × 52, padding 5px 15px 7px — largura CHEIA da coluna, por isso
+   ele não fica dentro do respiro dos cartões, é irmão da pilha deles.
+   A superfície medida no app não tem token exato; background-level_1 é o mais
+   próximo e é ele que fica. A diferença é imperceptível e o literal mataria
+   dark mode e whitelabel — que é o motivo de a regra existir. Os dois valores
+   e a divergência estão em geometria-do-produto.md; não é para "corrigir"
+   aqui — este arquivo não escreve cor literal nem em comentário, e a fonte
+   única desses números é aquele doc. */
+.ploo-stage {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 52px;
+  padding: 5px 15px 7px;
+  background: var(--color-background-level_1);
+  color: var(--color-font);
+  font-size: var(--font-size-small-13);
+  font-weight: var(--font-weight-semibold);
+}
+.ploo-stage__total { color: var(--color-font-level_1); font-weight: var(--font-weight-regular); }
+
+/* Faixa de processamento em lote (importação, recálculo). */
+.ploo-processing {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 15px;
+  border-radius: var(--radius-normal-5);
+  background: var(--color-confirmation-default_30);
+  color: var(--color-font);
+  font-size: var(--font-size-small-13);
+}
+
+/* --- Composições de produto: layout de tela, não componente --- */
+
+/* Coluna de 310px — medida em 04/08, contra os 280px que estavam aqui e os
+   250px que o retrato de maio/julho registrava. A largura do funil mudou duas
+   vezes em três meses; é medida datada, não constante. */
+.ploo-kanban {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 310px;
+  gap: var(--spacer-sp-small);
+  overflow-x: auto;
+  padding-bottom: var(--spacer-sp-tiny);
+}
+.ploo-kanban__coluna {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border-radius: var(--radius-normal-5);
+  background: var(--color-background-level_1);
+}
+/* Pilha de cartões, irmã do cabeçalho de etapa e não sua irmã de padding: o
+   cabeçalho ocupa os 310px cheios da coluna, os cartões ficam recuados 8px de
+   cada lado (310 − 293 = 17 ≈ 8 + 8 + folga). O gap de 10px é o que fecha o
+   passo vertical de ~100px medido entre cartões: 90 de cartão + 10 de respiro. */
+.ploo-kanban__cartoes {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 8px;
+}
+
+/* Barra superior e menu lateral não entram aqui: já têm story própria —
+   storybook/organisms/HorizontalMenu.html e VerticalMenu.html.
+   Antes de recriar qualquer um dos dois, confira a story: recriar em CSS o que
+   ja tem componente e o erro que esta camada existe para nao repetir. */
+
+/* --- Sistema LEGADO: Funil, Negócio, tabela e formulários --- */
+
+/* Metade do app não roda o design system. Funil, Negócio, tabela e formulário
+   usam um sistema anterior com 105 classes .button-* — geometria, peso de fonte
+   e mecânica de borda diferentes do ds-button. As folhas do legado foram
+   resgatadas do CDN em 04/08 (2,85 MB) e estes valores saíram delas.
+
+   Por que isso vive aqui: nenhuma story do storybook cobre isso, e sem essas
+   classes uma tela de Funil gerada com ds-button sai com altura, peso e borda
+   errados — o erro mais visível possível. Ao gerar tela, escolha o sistema pela
+   tela: Painel e chrome → ds-*; Funil, Negócio, tabela → .ploo-lg-*.
+
+   Diferença estrutural: aqui a borda é `border` de verdade, não box-shadow
+   inset, e o peso da fonte é 500 (que o pacote não tem — vem do Tailwind core). */
+/* Armadilha ao usar: se o contêiner for `display: flex` sem `align-items`, os
+   botões ESTICAM até a altura do item mais alto da linha e o modificador
+   --curto deixa de valer (25,5 vira 31,5). O app não sofre disso porque as
+   barras de ação dele são blocos inline. Em mockup, ponha `items-center` no
+   contêiner flex — é o que o exemplo faz. */
+.ploo-lg-btn {
+  display: inline-block;
+  padding: 5px 10px;
+  border: 1px solid transparent;
+  border-radius: var(--radius-normal-5);
+  font-size: var(--font-size-small-13);
+  font-weight: 500;
+  line-height: 1.5;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color .3s;
+}
+/* 13 × 1.5 = 19,5 + 10 de padding + 2 de borda = 31,5px de altura. */
+
+/* Curto: padding 2px 10px → 25,5px (19,5 de linha + 4 de padding + 2 de borda).
+   É a altura dos botões de ação da tela de Negócio ("Salvar", "Opções"). */
+.ploo-lg-btn--curto { padding: 2px 10px; }
+/* .button-rounded do legado: raio 7px, que não existe na escala do pacote. */
+.ploo-lg-btn--arredondado { border-radius: 7px; }
+
+/* Primário. É AZUL (confirmation), não roxo de marca — nenhum "Salvar" ou
+   "Nova Oportunidade" do produto é roxo. Hover/active batem com os tokens
+   level_1/level_2, que é onde a migração para o DS já passou. */
+.ploo-lg-btn--acao {
+  border-color: var(--color-confirmation);
+  background: var(--color-confirmation);
+  color: var(--color-background);
+}
+.ploo-lg-btn--acao:hover {
+  border-color: var(--color-confirmation-level_1);
+  background: var(--color-confirmation-level_1);
+}
+.ploo-lg-btn--acao:active {
+  border-color: var(--color-confirmation-level_2);
+  background: var(--color-confirmation-level_2);
+}
+
+/* Secundário: branco com borda leve. O hover do legado migrado usa os neutros
+   do DS. É o botão mais frequente da tela de Negócio. */
+.ploo-lg-btn--branco {
+  border-color: var(--color-neutral-level_2);
+  background: var(--color-background);
+  color: var(--color-font);
+}
+.ploo-lg-btn--branco:hover { background: var(--color-neutral-level_1); }
+.ploo-lg-btn--branco:active { background: var(--color-neutral-level_2); }
+
+/* Sem borda: mesma cara do branco, borda da cor do fundo. Usado no cabeçalho
+   do Funil ("Exibir", "Filtros", "Menu"). */
+.ploo-lg-btn--plano {
+  border-color: var(--color-background);
+  background: var(--color-background);
+  color: var(--color-font);
+}
+.ploo-lg-btn--plano:hover { background: var(--color-neutral-level_1); }
+.ploo-lg-btn--plano:active { background: var(--color-neutral-level_2); }
+
+/* Destrutivo e neutro chapado. O cinza do neutro não tem token no pacote —
+   valor aferido, em rgb(); ver geometria-do-produto.md. */
+.ploo-lg-btn--excluir {
+  border-color: var(--color-danger);
+  background: var(--color-danger);
+  color: var(--color-background);
+}
+.ploo-lg-btn--excluir:hover {
+  border-color: var(--color-danger-level_1);
+  background: var(--color-danger-level_1);
+}
+.ploo-lg-btn--neutro {
+  border-color: rgb(161, 161, 169);
+  background: rgb(161, 161, 169);
+  color: var(--color-background);
+}
+
+/* Cabeçalho de tela do legado: 40px, padding 0 10px, divisória inferior.
+   Vale para Funil, Negócio e tabela — é o que fica sob a barra de 50px. */
+.ploo-lg-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 40px;
+  padding: 0 10px;
+  border-bottom: 1px solid var(--color-neutral-level_2);
+  background: var(--color-background);
+  font-size: var(--font-size-small-13);
+}
+
+/* Cabeçalho de seção de formulário (tela de Negócio): 42px, caixa alta,
+   align-items BASELINE (não center — o nome .rectangular-wrapper avisa que o
+   raio é zero de propósito). 19 a 22 destes por tela. */
+.ploo-lg-secao {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  padding: 10px 15px;
+  border-bottom: 1px solid var(--color-neutral-level_2);
+  background: var(--color-background-level_1);
+  color: var(--color-font);
+  font-size: var(--font-size-small-13);
+  text-transform: uppercase;
+}
+/* Altura NÃO é fixa: com align-items:baseline ela sai do filho mais alto + 20 de
+   padding + 1 de borda. No app dá 42,42px porque o lado direito é um flex de
+   ícones de 21,42; com só texto de 13px (18,57) dá 39,56. Não force `height`:
+   quem manda é o conteúdo, e foi assim que o app foi medido. */
+
+/* Tabela do legado. Duas regras que denunciam tabela feita de print:
+   (1) NÃO há régua entre linhas do corpo — a divisória existe só sob o
+       cabeçalho; (2) a classe .table-hover do app está aplicada e NÃO tem
+       efeito (nenhuma regra :hover casa), então linha de tabela não acende.
+   A td tem padding ZERO: o recuo mora num invólucro dentro dela. */
+.ploo-lg-tabela { width: 100%; border-collapse: collapse; font-size: var(--font-size-small-13); }
+.ploo-lg-tabela th {
+  height: 43px;
+  padding: 12px 15px;
+  border-bottom: 1px solid var(--color-neutral-level_2);
+  background: var(--color-background);
+  color: var(--color-font-level_2);
+  font-weight: 500;
+  text-align: left;
+  vertical-align: bottom;
+  white-space: nowrap;
+}
+.ploo-lg-tabela td {
+  height: 41px;
+  padding: 0;
+  background: var(--color-background);
+  vertical-align: middle;
+  white-space: nowrap;
+}
+/* O recuo real da célula, que no app vive num div dentro da td. */
+.ploo-lg-tabela td > * { padding: 0 15px; }

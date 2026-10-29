@@ -1,0 +1,116 @@
+<!doctype html>
+<!--
+  Ploomes Design System — snapshot estático das stories do Storybook.
+  Componente : Atoms/RenameableText
+  Stories    : 6 (Default, With Max Length, Full Width Centered, Truncated Text, Controlled, Imperative Open)
+  Story      : RenameableText.stories.tsx
+  Tema       : light — use <html class="dark"> para o tema escuro.
+-->
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RenameableText — Ploomes DS</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;600;700&display=swap">
+<link rel="stylesheet" href="../assets/design-system.css">
+<link rel="stylesheet" href="../assets/page.css">
+</head>
+<body class="ds-page">
+  <header class="ds-head">
+    <a class="ds-back" href="../index.html">← inventário</a>
+    <h1 class="ds-title">RenameableText</h1>
+    <p class="ds-meta">atoms · 6 stories · <code>RenameableText.stories.tsx</code></p>
+    <pre class="ds-code ds-import">import { RenameableText } from &#x27;@ploomescrm/ui&#x27;;</pre>
+    <pre class="ds-code">// props padrão de todas as stories (meta.args)
+args: {
+  defaultValue: &#x27;Clique duas vezes para renomear&#x27;,
+  placeholder: &#x27;Digite um nome&#x27;,
+}</pre>
+  </header>
+  <section class="ds-story">
+    <h2 class="ds-story-name">Default</h2>
+    <div class="ds-story-id">atoms-renameabletext--default · export <b>Default</b></div>
+    <div class="ds-canvas ds-canvas--padded">
+<div class="relative flex max-w-full overflow-hidden rounded-[5px] text-sm text-font flex-none justify-start cursor-pointer" role="button" tabindex="0"><span class="overflow-hidden text-ellipsis whitespace-nowrap empty:before:text-[0px] empty:before:content-['0']">Clique duas vezes para renomear</span></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const Default: Story = {}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">With Max Length</h2>
+    <div class="ds-story-id">atoms-renameabletext--with-max-length · export <b>WithMaxLength</b></div>
+    <div class="ds-canvas ds-canvas--padded">
+<div class="relative flex max-w-full overflow-hidden rounded-[5px] text-sm text-font flex-none justify-start cursor-pointer" role="button" tabindex="0"><span class="overflow-hidden text-ellipsis whitespace-nowrap empty:before:text-[0px] empty:before:content-['0']">Máximo de 20 caracteres</span></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const WithMaxLength: Story = {
+  args: {
+    defaultValue: &#x27;Máximo de 20 caracteres&#x27;,
+    maxLength: 20,
+  },
+}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">Full Width Centered</h2>
+    <div class="ds-story-id">atoms-renameabletext--full-width-centered · export <b>FullWidthCentered</b></div>
+    <div class="ds-canvas ds-canvas--padded">
+<div style="display: flex; width: 400px; border: 1px dashed rgb(204, 204, 204); padding: 8px;"><div class="relative flex max-w-full overflow-hidden rounded-[5px] text-sm text-font flex-1 justify-center cursor-pointer" role="button" tabindex="0"><span class="overflow-hidden text-ellipsis whitespace-nowrap empty:before:text-[0px] empty:before:content-['0']">Ocupa toda a largura, centralizado</span></div></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const FullWidthCentered: Story = {
+  args: {
+    defaultValue: &#x27;Ocupa toda a largura, centralizado&#x27;,
+    hugContents: false,
+    align: &#x27;center&#x27;,
+  },
+  render: (args) =&gt; (
+    &lt;div
+      style={{
+        display: &#x27;flex&#x27;,
+        width: 400,
+        border: &#x27;1px dashed #ccc&#x27;,
+        padding: 8,
+      }}
+    &gt;
+      &lt;RenameableText {...args} /&gt;
+    &lt;/div&gt;
+  ),
+}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">Truncated Text</h2>
+    <div class="ds-story-id">atoms-renameabletext--truncated-text · export <b>TruncatedText</b></div>
+    <div class="ds-canvas ds-canvas--padded">
+<div style="width: 220px;"><div class="relative flex max-w-full overflow-hidden rounded-[5px] text-sm text-font flex-none justify-start cursor-pointer" role="button" tabindex="0"><span class="overflow-hidden text-ellipsis whitespace-nowrap empty:before:text-[0px] empty:before:content-['0']">Um nome bem longo que não cabe no espaço disponível e ganha reticências no final</span></div></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const TruncatedText: Story = {
+  args: {
+    defaultValue:
+      &#x27;Um nome bem longo que não cabe no espaço disponível e ganha reticências no final&#x27;,
+  },
+  render: (args) =&gt; (
+    &lt;div style={{ width: 220 }}&gt;
+      &lt;RenameableText {...args} /&gt;
+    &lt;/div&gt;
+  ),
+}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">Controlled</h2>
+    <div class="ds-story-id">atoms-renameabletext--controlled · export <b>Controlled</b></div>
+    <div class="ds-canvas ds-canvas--padded">
+<div style="display: flex; flex-direction: column; gap: 12px; width: 280px;"><div class="relative flex max-w-full overflow-hidden rounded-[5px] text-sm text-font flex-none justify-start cursor-pointer" role="button" tabindex="0"><span class="overflow-hidden text-ellipsis whitespace-nowrap empty:before:text-[0px] empty:before:content-['0']">Funil de vendas</span></div><p style="font-size: 13px; color: rgb(139, 133, 149);">Valor atual: <strong>Funil de vendas</strong></p></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const Controlled: Story = {
+  render: () =&gt; &lt;ControlledDemo /&gt;,
+}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">Imperative Open</h2>
+    <div class="ds-story-id">atoms-renameabletext--imperative-open · export <b>ImperativeOpen</b></div>
+    <div class="ds-canvas ds-canvas--padded">
+<div style="display: flex; align-items: center; gap: 12px;"><div class="relative flex max-w-full overflow-hidden rounded-[5px] text-sm text-font flex-none justify-start cursor-pointer" role="button" tabindex="0"><span class="overflow-hidden text-ellipsis whitespace-nowrap empty:before:text-[0px] empty:before:content-['0']">Renomeável por botão</span></div><button style="font-size: 13px; padding: 4px 10px; cursor: pointer;" type="button">Renomear</button></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const ImperativeOpen: Story = {
+  render: () =&gt; &lt;ImperativeDemo /&gt;,
+}</code></pre></details>
+  </section>
+</body>
+</html>

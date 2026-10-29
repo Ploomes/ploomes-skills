@@ -1,0 +1,221 @@
+<!doctype html>
+<!--
+  Ploomes Design System — snapshot estático das stories do Storybook.
+  Componente : Components/ButtonSoft
+  Stories    : 12 (Default, With Left Icon, With Right Icon, With Both Icons, Active, Selected, Ghost, AI, Disabled, Sizes, Variants, All Sizes And Variants)
+  Story      : ButtonSoft.stories.tsx
+  Tema       : light — use <html class="dark"> para o tema escuro.
+-->
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ButtonSoft — Ploomes DS</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;600;700&display=swap">
+<link rel="stylesheet" href="../assets/design-system.css">
+<link rel="stylesheet" href="../assets/page.css">
+</head>
+<body class="ds-page">
+  <header class="ds-head">
+    <a class="ds-back" href="../index.html">← inventário</a>
+    <h1 class="ds-title">ButtonSoft</h1>
+    <p class="ds-meta">components · 12 stories · <code>ButtonSoft.stories.tsx</code></p>
+    <pre class="ds-code ds-import">import { ButtonSoft } from &#x27;@ploomescrm/ui&#x27;;</pre>
+    <pre class="ds-code">// props padrão de todas as stories (meta.args)
+args: {
+  children: &#x27;Lorem Ipsum&#x27;,
+  variant: &#x27;outline&#x27;,
+  color: &#x27;neutral&#x27;,
+  size: &#x27;sm&#x27;,
+  active: false,
+  selected: false,
+  disabled: false,
+}</pre>
+  </header>
+  <section class="ds-story">
+    <h2 class="ds-story-name">Default</h2>
+    <div class="ds-story-id">components-buttonsoft--default · export <b>Default</b></div>
+    <div class="ds-canvas ds-canvas--padded">
+<button class="relative isolate inline-flex shrink-0 cursor-pointer items-center gap-[5px] rounded-[5px] px-[5px] text-sm text-font transition-colors before:pointer-events-none before:absolute before:inset-0 before:-z-10 before:rounded-[5px] before:bg-transparent before:transition-colors before:content-[''] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-confirmation focus-visible:ring-offset-1 disabled:pointer-events-none disabled:opacity-40 border border-neutral-level_2 bg-background hover:before:bg-neutral-level_1 active:before:bg-neutral-level_2 h-[30px]"><span class="overflow-hidden text-ellipsis whitespace-nowrap px-[5px]">Lorem Ipsum</span></button>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const Default: Story = {}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">With Left Icon</h2>
+    <div class="ds-story-id">components-buttonsoft--with-left-icon · export <b>WithLeftIcon</b></div>
+    <div class="ds-canvas ds-canvas--padded">
+<button class="relative isolate inline-flex shrink-0 cursor-pointer items-center gap-[5px] rounded-[5px] px-[5px] text-sm text-font transition-colors before:pointer-events-none before:absolute before:inset-0 before:-z-10 before:rounded-[5px] before:bg-transparent before:transition-colors before:content-[''] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-confirmation focus-visible:ring-offset-1 disabled:pointer-events-none disabled:opacity-40 border border-neutral-level_2 bg-background hover:before:bg-neutral-level_1 active:before:bg-neutral-level_2 h-[30px]"><span class="flex shrink-0 items-center justify-center pl-[5px]"><svg fill="none" height="14" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="14"><circle cx="12" cy="8" r="4"></circle><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"></path></svg></span><span class="overflow-hidden text-ellipsis whitespace-nowrap px-[5px]">Lorem Ipsum</span></button>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const WithLeftIcon: Story = {
+  args: { leftIcon: &lt;Icon /&gt; },
+}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">With Right Icon</h2>
+    <div class="ds-story-id">components-buttonsoft--with-right-icon · export <b>WithRightIcon</b></div>
+    <div class="ds-canvas ds-canvas--padded">
+<button class="relative isolate inline-flex shrink-0 cursor-pointer items-center gap-[5px] rounded-[5px] px-[5px] text-sm text-font transition-colors before:pointer-events-none before:absolute before:inset-0 before:-z-10 before:rounded-[5px] before:bg-transparent before:transition-colors before:content-[''] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-confirmation focus-visible:ring-offset-1 disabled:pointer-events-none disabled:opacity-40 border border-neutral-level_2 bg-background hover:before:bg-neutral-level_1 active:before:bg-neutral-level_2 h-[30px]"><span class="overflow-hidden text-ellipsis whitespace-nowrap px-[5px]">Lorem Ipsum</span><span class="flex shrink-0 items-center justify-center pr-[5px]"><svg fill="none" height="10" stroke="currentColor" stroke-width="2.5" viewbox="0 0 24 24" width="10"><path d="M6 9l6 6 6-6"></path></svg></span></button>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const WithRightIcon: Story = {
+  args: { rightIcon: &lt;Chevron /&gt; },
+}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">With Both Icons</h2>
+    <div class="ds-story-id">components-buttonsoft--with-both-icons · export <b>WithBothIcons</b></div>
+    <div class="ds-canvas ds-canvas--padded">
+<button class="relative isolate inline-flex shrink-0 cursor-pointer items-center gap-[5px] rounded-[5px] px-[5px] text-sm text-font transition-colors before:pointer-events-none before:absolute before:inset-0 before:-z-10 before:rounded-[5px] before:bg-transparent before:transition-colors before:content-[''] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-confirmation focus-visible:ring-offset-1 disabled:pointer-events-none disabled:opacity-40 border border-neutral-level_2 bg-background hover:before:bg-neutral-level_1 active:before:bg-neutral-level_2 h-[30px]"><span class="flex shrink-0 items-center justify-center pl-[5px]"><svg fill="none" height="14" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="14"><circle cx="12" cy="8" r="4"></circle><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"></path></svg></span><span class="overflow-hidden text-ellipsis whitespace-nowrap px-[5px]">Lorem Ipsum</span><span class="flex shrink-0 items-center justify-center pr-[5px]"><svg fill="none" height="10" stroke="currentColor" stroke-width="2.5" viewbox="0 0 24 24" width="10"><path d="M6 9l6 6 6-6"></path></svg></span></button>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const WithBothIcons: Story = {
+  args: { leftIcon: &lt;Icon /&gt;, rightIcon: &lt;Chevron /&gt; },
+}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">Active</h2>
+    <div class="ds-story-id">components-buttonsoft--active · export <b>Active</b></div>
+    <div class="ds-canvas ds-canvas--padded">
+<button class="relative isolate inline-flex shrink-0 cursor-pointer items-center gap-[5px] rounded-[5px] px-[5px] text-sm text-font transition-colors before:pointer-events-none before:absolute before:inset-0 before:-z-10 before:rounded-[5px] before:bg-transparent before:transition-colors before:content-[''] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-confirmation focus-visible:ring-offset-1 disabled:pointer-events-none disabled:opacity-40 border bg-background hover:before:bg-neutral-level_1 active:before:bg-neutral-level_2 h-[30px] border-confirmation"><span class="flex shrink-0 items-center justify-center pl-[5px]"><svg fill="none" height="14" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="14"><circle cx="12" cy="8" r="4"></circle><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"></path></svg></span><span class="overflow-hidden text-ellipsis whitespace-nowrap px-[5px]">Lorem Ipsum</span></button>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const Active: Story = {
+  args: { leftIcon: &lt;Icon /&gt;, active: true },
+}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">Selected</h2>
+    <div class="ds-story-id">components-buttonsoft--selected · export <b>Selected</b></div>
+    <div class="ds-canvas ds-canvas--padded">
+<button class="relative isolate inline-flex shrink-0 cursor-pointer items-center gap-[5px] rounded-[5px] px-[5px] text-sm text-font transition-colors before:pointer-events-none before:absolute before:inset-0 before:-z-10 before:rounded-[5px] before:bg-transparent before:transition-colors before:content-[''] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-confirmation focus-visible:ring-offset-1 disabled:pointer-events-none disabled:opacity-40 border hover:before:bg-neutral-level_1 active:before:bg-neutral-level_2 h-[30px] border-confirmation bg-confirmation-default_30"><span class="flex shrink-0 items-center justify-center pl-[5px]"><svg fill="none" height="14" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="14"><circle cx="12" cy="8" r="4"></circle><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"></path></svg></span><span class="overflow-hidden text-ellipsis whitespace-nowrap px-[5px]">Lorem Ipsum</span></button>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const Selected: Story = {
+  args: { leftIcon: &lt;Icon /&gt;, selected: true },
+}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">Ghost</h2>
+    <div class="ds-story-id">components-buttonsoft--ghost · export <b>Ghost</b></div>
+    <div class="ds-canvas ds-canvas--padded">
+<button class="relative isolate inline-flex shrink-0 cursor-pointer items-center gap-[5px] rounded-[5px] px-[5px] text-sm text-font transition-colors before:pointer-events-none before:absolute before:inset-0 before:-z-10 before:rounded-[5px] before:bg-transparent before:transition-colors before:content-[''] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-confirmation focus-visible:ring-offset-1 disabled:pointer-events-none disabled:opacity-40 border border-transparent bg-transparent hover:before:bg-neutral-level_1 active:before:bg-neutral-level_2 h-[30px]"><span class="flex shrink-0 items-center justify-center pl-[5px]"><svg fill="none" height="14" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="14"><circle cx="12" cy="8" r="4"></circle><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"></path></svg></span><span class="overflow-hidden text-ellipsis whitespace-nowrap px-[5px]">Lorem Ipsum</span></button>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const Ghost: Story = {
+  args: { variant: &#x27;ghost&#x27;, leftIcon: &lt;Icon /&gt; },
+}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">AI</h2>
+    <div class="ds-story-id">components-buttonsoft--ai · export <b>AI</b></div>
+    <div class="ds-canvas ds-canvas--padded">
+<button class="relative isolate inline-flex shrink-0 cursor-pointer items-center gap-[5px] rounded-[5px] px-[5px] text-sm text-font transition-colors before:pointer-events-none before:absolute before:inset-0 before:-z-10 before:rounded-[5px] before:bg-transparent before:transition-colors before:content-[''] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-confirmation focus-visible:ring-offset-1 disabled:pointer-events-none disabled:opacity-40 border border-neutral-level_2 bg-background hover:before:bg-[image:var(--color-ia-neutral-level_1)] active:before:bg-[image:var(--color-ia-neutral-level_2)] h-[30px]"><span class="flex shrink-0 items-center justify-center pl-[5px]"><svg fill="none" height="14" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="14"><circle cx="12" cy="8" r="4"></circle><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"></path></svg></span><span class="overflow-hidden text-ellipsis whitespace-nowrap px-[5px]">Lorem Ipsum</span></button>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const AI: Story = {
+  args: { color: &#x27;ai&#x27;, leftIcon: &lt;Icon /&gt; },
+}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">Disabled</h2>
+    <div class="ds-story-id">components-buttonsoft--disabled · export <b>Disabled</b></div>
+    <div class="ds-canvas ds-canvas--padded">
+<button class="relative isolate inline-flex shrink-0 cursor-pointer items-center gap-[5px] rounded-[5px] px-[5px] text-sm text-font transition-colors before:pointer-events-none before:absolute before:inset-0 before:-z-10 before:rounded-[5px] before:bg-transparent before:transition-colors before:content-[''] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-confirmation focus-visible:ring-offset-1 disabled:pointer-events-none disabled:opacity-40 border border-neutral-level_2 bg-background hover:before:bg-neutral-level_1 active:before:bg-neutral-level_2 h-[30px]" disabled=""><span class="flex shrink-0 items-center justify-center pl-[5px]"><svg fill="none" height="14" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="14"><circle cx="12" cy="8" r="4"></circle><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"></path></svg></span><span class="overflow-hidden text-ellipsis whitespace-nowrap px-[5px]">Lorem Ipsum</span></button>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const Disabled: Story = {
+  args: { leftIcon: &lt;Icon /&gt;, disabled: true },
+}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">Sizes</h2>
+    <div class="ds-story-id">components-buttonsoft--sizes · export <b>Sizes</b></div>
+    <div class="ds-canvas ds-canvas--padded">
+<div style="display: flex; gap: 12px; align-items: center;"><button class="relative isolate inline-flex shrink-0 cursor-pointer items-center gap-[5px] rounded-[5px] px-[5px] text-sm text-font transition-colors before:pointer-events-none before:absolute before:inset-0 before:-z-10 before:rounded-[5px] before:bg-transparent before:transition-colors before:content-[''] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-confirmation focus-visible:ring-offset-1 disabled:pointer-events-none disabled:opacity-40 border border-neutral-level_2 bg-background hover:before:bg-neutral-level_1 active:before:bg-neutral-level_2 h-[30px]"><span class="flex shrink-0 items-center justify-center pl-[5px]"><svg fill="none" height="14" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="14"><circle cx="12" cy="8" r="4"></circle><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"></path></svg></span><span class="overflow-hidden text-ellipsis whitespace-nowrap px-[5px]">Small</span></button><button class="relative isolate inline-flex shrink-0 cursor-pointer items-center gap-[5px] rounded-[5px] px-[5px] text-sm text-font transition-colors before:pointer-events-none before:absolute before:inset-0 before:-z-10 before:rounded-[5px] before:bg-transparent before:transition-colors before:content-[''] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-confirmation focus-visible:ring-offset-1 disabled:pointer-events-none disabled:opacity-40 border border-neutral-level_2 bg-background hover:before:bg-neutral-level_1 active:before:bg-neutral-level_2 h-[35px]"><span class="flex shrink-0 items-center justify-center pl-[5px]"><svg fill="none" height="14" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="14"><circle cx="12" cy="8" r="4"></circle><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"></path></svg></span><span class="overflow-hidden text-ellipsis whitespace-nowrap px-[5px]">Medium</span></button><button class="relative isolate inline-flex shrink-0 cursor-pointer items-center gap-[5px] rounded-[5px] px-[5px] text-sm text-font transition-colors before:pointer-events-none before:absolute before:inset-0 before:-z-10 before:rounded-[5px] before:bg-transparent before:transition-colors before:content-[''] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-confirmation focus-visible:ring-offset-1 disabled:pointer-events-none disabled:opacity-40 border border-neutral-level_2 bg-background hover:before:bg-neutral-level_1 active:before:bg-neutral-level_2 h-[40px]"><span class="flex shrink-0 items-center justify-center pl-[5px]"><svg fill="none" height="14" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="14"><circle cx="12" cy="8" r="4"></circle><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"></path></svg></span><span class="overflow-hidden text-ellipsis whitespace-nowrap px-[5px]">Large</span></button></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const Sizes: Story = {
+  render: (args) =&gt; (
+    &lt;div style={{ display: &#x27;flex&#x27;, gap: 12, alignItems: &#x27;center&#x27; }}&gt;
+      &lt;ButtonSoft {...args} size=&quot;sm&quot; leftIcon={&lt;Icon /&gt;}&gt;
+        Small
+      &lt;/ButtonSoft&gt;
+      &lt;ButtonSoft {...args} size=&quot;md&quot; leftIcon={&lt;Icon /&gt;}&gt;
+        Medium
+      &lt;/ButtonSoft&gt;
+      &lt;ButtonSoft {...args} size=&quot;lg&quot; leftIcon={&lt;Icon /&gt;}&gt;
+        Large
+      &lt;/ButtonSoft&gt;
+    &lt;/div&gt;
+  ),
+}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">Variants</h2>
+    <div class="ds-story-id">components-buttonsoft--variants · export <b>Variants</b></div>
+    <div class="ds-canvas ds-canvas--padded">
+<div style="display: flex; gap: 12px; align-items: center; flex-wrap: wrap;"><button class="relative isolate inline-flex shrink-0 cursor-pointer items-center gap-[5px] rounded-[5px] px-[5px] text-sm text-font transition-colors before:pointer-events-none before:absolute before:inset-0 before:-z-10 before:rounded-[5px] before:bg-transparent before:transition-colors before:content-[''] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-confirmation focus-visible:ring-offset-1 disabled:pointer-events-none disabled:opacity-40 border border-neutral-level_2 bg-background hover:before:bg-neutral-level_1 active:before:bg-neutral-level_2 h-[30px]"><span class="flex shrink-0 items-center justify-center pl-[5px]"><svg fill="none" height="14" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="14"><circle cx="12" cy="8" r="4"></circle><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"></path></svg></span><span class="overflow-hidden text-ellipsis whitespace-nowrap px-[5px]">Outline</span></button><button class="relative isolate inline-flex shrink-0 cursor-pointer items-center gap-[5px] rounded-[5px] px-[5px] text-sm text-font transition-colors before:pointer-events-none before:absolute before:inset-0 before:-z-10 before:rounded-[5px] before:bg-transparent before:transition-colors before:content-[''] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-confirmation focus-visible:ring-offset-1 disabled:pointer-events-none disabled:opacity-40 border bg-background hover:before:bg-neutral-level_1 active:before:bg-neutral-level_2 h-[30px] border-confirmation"><span class="flex shrink-0 items-center justify-center pl-[5px]"><svg fill="none" height="14" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="14"><circle cx="12" cy="8" r="4"></circle><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"></path></svg></span><span class="overflow-hidden text-ellipsis whitespace-nowrap px-[5px]">Outline Active</span></button><button class="relative isolate inline-flex shrink-0 cursor-pointer items-center gap-[5px] rounded-[5px] px-[5px] text-sm text-font transition-colors before:pointer-events-none before:absolute before:inset-0 before:-z-10 before:rounded-[5px] before:bg-transparent before:transition-colors before:content-[''] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-confirmation focus-visible:ring-offset-1 disabled:pointer-events-none disabled:opacity-40 border hover:before:bg-neutral-level_1 active:before:bg-neutral-level_2 h-[30px] border-confirmation bg-confirmation-default_30"><span class="flex shrink-0 items-center justify-center pl-[5px]"><svg fill="none" height="14" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="14"><circle cx="12" cy="8" r="4"></circle><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"></path></svg></span><span class="overflow-hidden text-ellipsis whitespace-nowrap px-[5px]">Outline Selected</span></button><button class="relative isolate inline-flex shrink-0 cursor-pointer items-center gap-[5px] rounded-[5px] px-[5px] text-sm text-font transition-colors before:pointer-events-none before:absolute before:inset-0 before:-z-10 before:rounded-[5px] before:bg-transparent before:transition-colors before:content-[''] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-confirmation focus-visible:ring-offset-1 disabled:pointer-events-none disabled:opacity-40 border border-transparent bg-transparent hover:before:bg-neutral-level_1 active:before:bg-neutral-level_2 h-[30px]"><span class="flex shrink-0 items-center justify-center pl-[5px]"><svg fill="none" height="14" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="14"><circle cx="12" cy="8" r="4"></circle><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"></path></svg></span><span class="overflow-hidden text-ellipsis whitespace-nowrap px-[5px]">Ghost</span></button><button class="relative isolate inline-flex shrink-0 cursor-pointer items-center gap-[5px] rounded-[5px] px-[5px] text-sm text-font transition-colors before:pointer-events-none before:absolute before:inset-0 before:-z-10 before:rounded-[5px] before:bg-transparent before:transition-colors before:content-[''] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-confirmation focus-visible:ring-offset-1 disabled:pointer-events-none disabled:opacity-40 border bg-transparent hover:before:bg-neutral-level_1 active:before:bg-neutral-level_2 h-[30px] border-confirmation"><span class="flex shrink-0 items-center justify-center pl-[5px]"><svg fill="none" height="14" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="14"><circle cx="12" cy="8" r="4"></circle><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"></path></svg></span><span class="overflow-hidden text-ellipsis whitespace-nowrap px-[5px]">Ghost Active</span></button><button class="relative isolate inline-flex shrink-0 cursor-pointer items-center gap-[5px] rounded-[5px] px-[5px] text-sm text-font transition-colors before:pointer-events-none before:absolute before:inset-0 before:-z-10 before:rounded-[5px] before:bg-transparent before:transition-colors before:content-[''] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-confirmation focus-visible:ring-offset-1 disabled:pointer-events-none disabled:opacity-40 border border-neutral-level_2 bg-background hover:before:bg-neutral-level_1 active:before:bg-neutral-level_2 h-[30px]" disabled=""><span class="flex shrink-0 items-center justify-center pl-[5px]"><svg fill="none" height="14" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="14"><circle cx="12" cy="8" r="4"></circle><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"></path></svg></span><span class="overflow-hidden text-ellipsis whitespace-nowrap px-[5px]">Disabled</span></button></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const Variants: Story = {
+  render: (args) =&gt; (
+    &lt;div
+      style={{
+        display: &#x27;flex&#x27;,
+        gap: 12,
+        alignItems: &#x27;center&#x27;,
+        flexWrap: &#x27;wrap&#x27;,
+      }}
+    &gt;
+      &lt;ButtonSoft {...args} variant=&quot;outline&quot; leftIcon={&lt;Icon /&gt;}&gt;
+        Outline
+      &lt;/ButtonSoft&gt;
+      &lt;ButtonSoft {...args} variant=&quot;outline&quot; active leftIcon={&lt;Icon /&gt;}&gt;
+        Outline Active
+      &lt;/ButtonSoft&gt;
+      &lt;ButtonSoft {...args} variant=&quot;outline&quot; selected leftIcon={&lt;Icon /&gt;}&gt;
+        Outline Selected
+      &lt;/ButtonSoft&gt;
+      &lt;ButtonSoft {...args} variant=&quot;ghost&quot; leftIcon={&lt;Icon /&gt;}&gt;
+        Ghost
+      &lt;/ButtonSoft&gt;
+      &lt;ButtonSoft {...args} variant=&quot;ghost&quot; active leftIcon={&lt;Icon /&gt;}&gt;
+        Ghost Active
+      &lt;/ButtonSoft&gt;
+      &lt;ButtonSoft {...args} variant=&quot;outline&quot; disabled leftIcon={&lt;Icon /&gt;}&gt;
+        Disabled
+      &lt;/ButtonSoft&gt;
+    &lt;/div&gt;
+  ),
+}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">All Sizes And Variants</h2>
+    <div class="ds-story-id">components-buttonsoft--all-sizes-and-variants · export <b>AllSizesAndVariants</b></div>
+    <div class="ds-canvas ds-canvas--padded">
+<div style="display: flex; flex-direction: column; gap: 16px;"><div style="display: flex; gap: 12px; align-items: center;"><button class="relative isolate inline-flex shrink-0 cursor-pointer items-center gap-[5px] rounded-[5px] px-[5px] text-sm text-font transition-colors before:pointer-events-none before:absolute before:inset-0 before:-z-10 before:rounded-[5px] before:bg-transparent before:transition-colors before:content-[''] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-confirmation focus-visible:ring-offset-1 disabled:pointer-events-none disabled:opacity-40 border border-neutral-level_2 bg-background hover:before:bg-neutral-level_1 active:before:bg-neutral-level_2 h-[30px]"><span class="flex shrink-0 items-center justify-center pl-[5px]"><svg fill="none" height="14" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="14"><circle cx="12" cy="8" r="4"></circle><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"></path></svg></span><span class="overflow-hidden text-ellipsis whitespace-nowrap px-[5px]">Outline sm</span></button><button class="relative isolate inline-flex shrink-0 cursor-pointer items-center gap-[5px] rounded-[5px] px-[5px] text-sm text-font transition-colors before:pointer-events-none before:absolute before:inset-0 before:-z-10 before:rounded-[5px] before:bg-transparent before:transition-colors before:content-[''] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-confirmation focus-visible:ring-offset-1 disabled:pointer-events-none disabled:opacity-40 border bg-background hover:before:bg-neutral-level_1 active:before:bg-neutral-level_2 h-[30px] border-confirmation"><span class="flex shrink-0 items-center justify-center pl-[5px]"><svg fill="none" height="14" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="14"><circle cx="12" cy="8" r="4"></circle><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"></path></svg></span><span class="overflow-hidden text-ellipsis whitespace-nowrap px-[5px]">Active sm</span></button><button class="relative isolate inline-flex shrink-0 cursor-pointer items-center gap-[5px] rounded-[5px] px-[5px] text-sm text-font transition-colors before:pointer-events-none before:absolute before:inset-0 before:-z-10 before:rounded-[5px] before:bg-transparent before:transition-colors before:content-[''] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-confirmation focus-visible:ring-offset-1 disabled:pointer-events-none disabled:opacity-40 border border-transparent bg-transparent hover:before:bg-neutral-level_1 active:before:bg-neutral-level_2 h-[30px]"><span class="flex shrink-0 items-center justify-center pl-[5px]"><svg fill="none" height="14" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="14"><circle cx="12" cy="8" r="4"></circle><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"></path></svg></span><span class="overflow-hidden text-ellipsis whitespace-nowrap px-[5px]">Ghost sm</span></button><button class="relative isolate inline-flex shrink-0 cursor-pointer items-center gap-[5px] rounded-[5px] px-[5px] text-sm text-font transition-colors before:pointer-events-none before:absolute before:inset-0 before:-z-10 before:rounded-[5px] before:bg-transparent before:transition-colors before:content-[''] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-confirmation focus-visible:ring-offset-1 disabled:pointer-events-none disabled:opacity-40 border border-neutral-level_2 bg-background hover:before:bg-neutral-level_1 active:before:bg-neutral-level_2 h-[30px]"><span class="flex shrink-0 items-center justify-center pl-[5px]"><svg fill="none" height="14" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="14"><circle cx="12" cy="8" r="4"></circle><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"></path></svg></span><span class="overflow-hidden text-ellipsis whitespace-nowrap px-[5px]">With Icons sm</span><span class="flex shrink-0 items-center justify-center pr-[5px]"><svg fill="none" height="10" stroke="currentColor" stroke-width="2.5" viewbox="0 0 24 24" width="10"><path d="M6 9l6 6 6-6"></path></svg></span></button></div><div style="display: flex; gap: 12px; align-items: center;"><button class="relative isolate inline-flex shrink-0 cursor-pointer items-center gap-[5px] rounded-[5px] px-[5px] text-sm text-font transition-colors before:pointer-events-none before:absolute before:inset-0 before:-z-10 before:rounded-[5px] before:bg-transparent before:transition-colors before:content-[''] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-confirmation focus-visible:ring-offset-1 disabled:pointer-events-none disabled:opacity-40 border border-neutral-level_2 bg-background hover:before:bg-neutral-level_1 active:before:bg-neutral-level_2 h-[35px]"><span class="flex shrink-0 items-center justify-center pl-[5px]"><svg fill="none" height="14" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="14"><circle cx="12" cy="8" r="4"></circle><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"></path></svg></span><span class="overflow-hidden text-ellipsis whitespace-nowrap px-[5px]">Outline md</span></button><button class="relative isolate inline-flex shrink-0 cursor-pointer items-center gap-[5px] rounded-[5px] px-[5px] text-sm text-font transition-colors before:pointer-events-none before:absolute before:inset-0 before:-z-10 before:rounded-[5px] before:bg-transparent before:transition-colors before:content-[''] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-confirmation focus-visible:ring-offset-1 disabled:pointer-events-none disabled:opacity-40 border bg-background hover:before:bg-neutral-level_1 active:before:bg-neutral-level_2 h-[35px] border-confirmation"><span class="flex shrink-0 items-center justify-center pl-[5px]"><svg fill="none" height="14" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="14"><circle cx="12" cy="8" r="4"></circle><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"></path></svg></span><span class="overflow-hidden text-ellipsis whitespace-nowrap px-[5px]">Active md</span></button><button class="relative isolate inline-flex shrink-0 cursor-pointer items-center gap-[5px] rounded-[5px] px-[5px] text-sm text-font transition-colors before:pointer-events-none before:absolute before:inset-0 before:-z-10 before:rounded-[5px] before:bg-transparent before:transition-colors before:content-[''] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-confirmation focus-visible:ring-offset-1 disabled:pointer-events-none disabled:opacity-40 border border-transparent bg-transparent hover:before:bg-neutral-level_1 active:before:bg-neutral-level_2 h-[35px]"><span class="flex shrink-0 items-center justify-center pl-[5px]"><svg fill="none" height="14" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="14"><circle cx="12" cy="8" r="4"></circle><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"></path></svg></span><span class="overflow-hidden text-ellipsis whitespace-nowrap px-[5px]">Ghost md</span></button><button class="relative isolate inline-flex shrink-0 cursor-pointer items-center gap-[5px] rounded-[5px] px-[5px] text-sm text-font transition-colors before:pointer-events-none before:absolute before:inset-0 before:-z-10 before:rounded-[5px] before:bg-transparent before:transition-colors before:content-[''] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-confirmation focus-visible:ring-offset-1 disabled:pointer-events-none disabled:opacity-40 border border-neutral-level_2 bg-background hover:before:bg-neutral-level_1 active:before:bg-neutral-level_2 h-[35px]"><span class="flex shrink-0 items-center justify-center pl-[5px]"><svg fill="none" height="14" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="14"><circle cx="12" cy="8" r="4"></circle><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"></path></svg></span><span class="overflow-hidden text-ellipsis whitespace-nowrap px-[5px]">With Icons md</span><span class="flex shrink-0 items-center justify-center pr-[5px]"><svg fill="none" height="10" stroke="currentColor" stroke-width="2.5" viewbox="0 0 24 24" width="10"><path d="M6 9l6 6 6-6"></path></svg></span></button></div><div style="display: flex; gap: 12px; align-items: center;"><button class="relative isolate inline-flex shrink-0 cursor-pointer items-center gap-[5px] rounded-[5px] px-[5px] text-sm text-font transition-colors before:pointer-events-none before:absolute before:inset-0 before:-z-10 before:rounded-[5px] before:bg-transparent before:transition-colors before:content-[''] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-confirmation focus-visible:ring-offset-1 disabled:pointer-events-none disabled:opacity-40 border border-neutral-level_2 bg-background hover:before:bg-neutral-level_1 active:before:bg-neutral-level_2 h-[40px]"><span class="flex shrink-0 items-center justify-center pl-[5px]"><svg fill="none" height="14" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="14"><circle cx="12" cy="8" r="4"></circle><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"></path></svg></span><span class="overflow-hidden text-ellipsis whitespace-nowrap px-[5px]">Outline lg</span></button><button class="relative isolate inline-flex shrink-0 cursor-pointer items-center gap-[5px] rounded-[5px] px-[5px] text-sm text-font transition-colors before:pointer-events-none before:absolute before:inset-0 before:-z-10 before:rounded-[5px] before:bg-transparent before:transition-colors before:content-[''] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-confirmation focus-visible:ring-offset-1 disabled:pointer-events-none disabled:opacity-40 border bg-background hover:before:bg-neutral-level_1 active:before:bg-neutral-level_2 h-[40px] border-confirmation"><span class="flex shrink-0 items-center justify-center pl-[5px]"><svg fill="none" height="14" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="14"><circle cx="12" cy="8" r="4"></circle><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"></path></svg></span><span class="overflow-hidden text-ellipsis whitespace-nowrap px-[5px]">Active lg</span></button><button class="relative isolate inline-flex shrink-0 cursor-pointer items-center gap-[5px] rounded-[5px] px-[5px] text-sm text-font transition-colors before:pointer-events-none before:absolute before:inset-0 before:-z-10 before:rounded-[5px] before:bg-transparent before:transition-colors before:content-[''] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-confirmation focus-visible:ring-offset-1 disabled:pointer-events-none disabled:opacity-40 border border-transparent bg-transparent hover:before:bg-neutral-level_1 active:before:bg-neutral-level_2 h-[40px]"><span class="flex shrink-0 items-center justify-center pl-[5px]"><svg fill="none" height="14" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="14"><circle cx="12" cy="8" r="4"></circle><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"></path></svg></span><span class="overflow-hidden text-ellipsis whitespace-nowrap px-[5px]">Ghost lg</span></button><button class="relative isolate inline-flex shrink-0 cursor-pointer items-center gap-[5px] rounded-[5px] px-[5px] text-sm text-font transition-colors before:pointer-events-none before:absolute before:inset-0 before:-z-10 before:rounded-[5px] before:bg-transparent before:transition-colors before:content-[''] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-confirmation focus-visible:ring-offset-1 disabled:pointer-events-none disabled:opacity-40 border border-neutral-level_2 bg-background hover:before:bg-neutral-level_1 active:before:bg-neutral-level_2 h-[40px]"><span class="flex shrink-0 items-center justify-center pl-[5px]"><svg fill="none" height="14" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="14"><circle cx="12" cy="8" r="4"></circle><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"></path></svg></span><span class="overflow-hidden text-ellipsis whitespace-nowrap px-[5px]">With Icons lg</span><span class="flex shrink-0 items-center justify-center pr-[5px]"><svg fill="none" height="10" stroke="currentColor" stroke-width="2.5" viewbox="0 0 24 24" width="10"><path d="M6 9l6 6 6-6"></path></svg></span></button></div></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const AllSizesAndVariants: Story = {
+  render: () =&gt; (
+    &lt;div style={{ display: &#x27;flex&#x27;, flexDirection: &#x27;column&#x27;, gap: 16 }}&gt;
+      {([&#x27;sm&#x27;, &#x27;md&#x27;, &#x27;lg&#x27;] as const).map((size) =&gt; (
+        &lt;div
+          key={size}
+          style={{ display: &#x27;flex&#x27;, gap: 12, alignItems: &#x27;center&#x27; }}
+        &gt;
+          &lt;ButtonSoft size={size} variant=&quot;outline&quot; leftIcon={&lt;Icon /&gt;}&gt;
+            Outline {size}
+          &lt;/ButtonSoft&gt;
+          &lt;ButtonSoft size={size} variant=&quot;outline&quot; active leftIcon={&lt;Icon /&gt;}&gt;
+            Active {size}
+          &lt;/ButtonSoft&gt;
+          &lt;ButtonSoft size={size} variant=&quot;ghost&quot; leftIcon={&lt;Icon /&gt;}&gt;
+            Ghost {size}
+          &lt;/ButtonSoft&gt;
+          &lt;ButtonSoft
+            size={size}
+            variant=&quot;outline&quot;
+            leftIcon={&lt;Icon /&gt;}
+            rightIcon={&lt;Chevron /&gt;}
+          &gt;
+            With Icons {size}
+          &lt;/ButtonSoft&gt;
+        &lt;/div&gt;
+      ))}
+    &lt;/div&gt;
+  ),
+}</code></pre></details>
+  </section>
+</body>
+</html>

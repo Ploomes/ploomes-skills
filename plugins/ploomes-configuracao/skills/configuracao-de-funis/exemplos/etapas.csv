@@ -1,0 +1,8 @@
+N°,Funil,Ordem,Etapa,O que acontece aqui,Responsável
+"1","Vendas Diretas","1","Qualificação","Confirma porte, dor e orçamento do lead","SDR"
+"2","Vendas Diretas","2","Proposta enviada","Proposta gerada e enviada ao cliente","Vendedor"
+"3","Vendas Diretas","3","Negociação","Ajuste de preço e condição comercial","Vendedor"
+"4","Implantação","1","Kickoff","Reunião de abertura com o cliente","Coordenador"
+"5","Implantação","3","Go-live","Sistema em produção","Coordenador"
+"6","Triagem","1","Enviar para o time","","Operador"
+"7","Vendas Diretas","4","Qualificação","Etapa duplicada de propósito","Vendedor"

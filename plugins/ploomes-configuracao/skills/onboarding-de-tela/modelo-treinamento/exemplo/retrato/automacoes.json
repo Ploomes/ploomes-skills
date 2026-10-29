@@ -1,0 +1,65 @@
+[
+ {
+  "Id": 501,
+  "Name": "P1 · Ligar para o lead",
+  "EntityId": 2,
+  "TriggerId": 1,
+  "TriggerDealStageId": 10001,
+  "Enabled": true,
+  "Actions": [
+   {
+    "ActionId": 5,
+    "RequestBody": "{\"Title\": \"Ligar para o lead\"}"
+   }
+  ]
+ },
+ {
+  "Id": 502,
+  "Name": "P6 · Venda ganha: abre a Implementação",
+  "EntityId": 2,
+  "TriggerId": 8,
+  "TriggerDealStageId": null,
+  "Enabled": true,
+  "TriggerFilter": {
+   "Url": "$filter=PipelineId+eq+1000"
+  },
+  "Actions": [
+   {
+    "ActionId": 7,
+    "DealStageId": 20001
+   }
+  ]
+ },
+ {
+  "Id": 503,
+  "Name": "P7 · Projeto entregue: abre o Pós-venda",
+  "EntityId": 2,
+  "TriggerId": 8,
+  "TriggerDealStageId": null,
+  "Enabled": true,
+  "TriggerFilter": {
+   "Url": "$filter=PipelineId+eq+2000"
+  },
+  "Actions": [
+   {
+    "ActionId": 7,
+    "DealStageId": 30001
+   }
+  ]
+ },
+ {
+  "Id": 504,
+  "Name": "P8 · Chamado novo nasce amarelo",
+  "EntityId": 2,
+  "TriggerId": 1,
+  "TriggerDealStageId": 30001,
+  "Enabled": true,
+  "Actions": [
+   {
+    "ActionId": 1,
+    "FieldKey": "deal_0B1C2D3E-0000-4000-8000-000000000103",
+    "ObjectValueName": "Amarelo"
+   }
+  ]
+ }
+]

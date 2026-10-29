@@ -1,0 +1,16 @@
+Regras para configuração de Abas e tabelas dinâmicas;
+
+Para a criação de uma nova aba, as seguintes propriedades devem ou podem opcionalmente ser enviadas:
+
+- Entidade: entidade que a aba deve listar;
+
+- Nome da aba;
+
+- Itens por página: quantidade de itens que uma aba retorna ao ser solicitada por página. Limitado a 50 itens;
+
+- Quem pode ver essa aba: primeiro, deve ser informado se essa configuração é por usuário, por perfil de usuário ou por equipe. Em seguida, eu defino uma lista de usuários, perfis ou equipes;
+
+- Filtros da aba: uma aba pode ou não ter filtros. Se não tem, ela busca dentre todos os itens daquela entidade. O sistema de filtros se utiliza do mecanismo de field-paths;
+
+- Campos da tabela dinâmica: lista de campos que devem ser retornados quando a aba for solicitada. Este sistema de listagem de campos utiliza o mecanismo de field-paths.
+

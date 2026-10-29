@@ -1,0 +1,4 @@
+Cadastro de cidades
+As cidades cadastradas no Ploomes possuem duas propriedades adicionais: Estado e País. Por padrão, o Ploomes já possui o cadastro de todos os municípios brasileiros, bem como seus respectivos estados. 
+
+Para possibilitar o cadastro de cidades estrangeiras, ao digitar o nome de uma cidade não existente, o usuário pode criá-la preenchendo junto o estado e o país ao qual ela pertence. A fim de facilitar esse cadastro, o Ploomes já traz a lista de todos os países do mundo, mas os estados precisam ser cadastrados manualmente, exceto para os países: Estados Unidos, México e Portugal - estes já possuem seus estados nativamente cadastrados.

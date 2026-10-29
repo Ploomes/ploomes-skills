@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:plm="http://ploomes.com/schema/bpmn">
+  <bpmn:collaboration id="c1">
+    <bpmn:participant id="p1" name="Vendas Diretas" processRef="Proc_1"/>
+  </bpmn:collaboration>
+  <bpmn:process id="Proc_1">
+    <bpmn:laneSet>
+      <bpmn:lane id="l1" name="Qualificação"/>
+      <bpmn:lane id="l2" name="Proposta Enviada"/>
+      <bpmn:lane id="l3" name="Negociação"/>
+    </bpmn:laneSet>
+  </bpmn:process>
+</bpmn:definitions>

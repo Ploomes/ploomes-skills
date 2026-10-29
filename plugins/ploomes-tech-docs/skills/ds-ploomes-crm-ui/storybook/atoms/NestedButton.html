@@ -1,0 +1,245 @@
+<!doctype html>
+<!--
+  Ploomes Design System — snapshot estático das stories do Storybook.
+  Componente : Atoms/NestedButton
+  Stories    : 6 (Default, Sizes, Outline, Dark Mode, Disabled, All Variants)
+  Story      : NestedButton.stories.tsx
+  Tema       : light — use <html class="dark"> para o tema escuro.
+-->
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NestedButton — Ploomes DS</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;600;700&display=swap">
+<link rel="stylesheet" href="../assets/design-system.css">
+<link rel="stylesheet" href="../assets/page.css">
+</head>
+<body class="ds-page">
+  <header class="ds-head">
+    <a class="ds-back" href="../index.html">← inventário</a>
+    <h1 class="ds-title">NestedButton</h1>
+    <p class="ds-meta">atoms · 6 stories · <code>NestedButton.stories.tsx</code></p>
+    <pre class="ds-code ds-import">import { NestedButton, Icon } from &#x27;@ploomescrm/ui&#x27;;</pre>
+    <pre class="ds-code">// props padrão de todas as stories (meta.args)
+args: {
+  size: &#x27;small_20&#x27;,
+  mode: &#x27;light&#x27;,
+  outline: true,
+  disabled: false,
+  // icon-only buttons need an accessible name
+  &#x27;aria-label&#x27;: &#x27;Mais opções&#x27;,
+}</pre>
+  </header>
+  <section class="ds-story">
+    <h2 class="ds-story-name">Default</h2>
+    <div class="ds-story-id">atoms-nestedbutton--default · export <b>Default</b></div>
+    <div class="ds-canvas ds-canvas--padded">
+<button aria-label="Mais opções" class="inline-flex shrink-0 cursor-pointer items-center justify-center max-md:min-h-[44px] max-md:min-w-[44px] rounded-[3px] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-confirmation focus-visible:ring-offset-1 disabled:pointer-events-none disabled:opacity-30 size-[20px] text-font [&amp;_svg]:text-font hover:bg-neutral-level_1 active:bg-neutral-level_2 border border-neutral-level_2" type="button"><span aria-hidden="true" class="inline-flex shrink-0 items-center justify-center text-font"><svg aria-hidden="true" class="lucide lucide-ellipsis" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="15" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="1"></circle><circle cx="19" cy="12" r="1"></circle><circle cx="5" cy="12" r="1"></circle></svg></span></button>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const Default: Story = {
+  render: (args) =&gt; (
+    &lt;NestedButton {...args}&gt;
+      &lt;Icon icon={Ellipsis} size=&quot;small_15&quot; /&gt;
+    &lt;/NestedButton&gt;
+  ),
+}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">Sizes</h2>
+    <div class="ds-story-id">atoms-nestedbutton--sizes · export <b>Sizes</b></div>
+    <div class="ds-canvas ds-canvas--padded">
+<div style="display: flex; gap: 12px; align-items: center;"><button aria-label="Mais opções" class="inline-flex shrink-0 cursor-pointer items-center justify-center max-md:min-h-[44px] max-md:min-w-[44px] rounded-[3px] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-confirmation focus-visible:ring-offset-1 disabled:pointer-events-none disabled:opacity-30 size-[20px] text-font [&amp;_svg]:text-font hover:bg-neutral-level_1 active:bg-neutral-level_2 border border-neutral-level_2" type="button"><span aria-hidden="true" class="inline-flex shrink-0 items-center justify-center text-font"><svg aria-hidden="true" class="lucide lucide-ellipsis" fill="none" height="10" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="10" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="1"></circle><circle cx="19" cy="12" r="1"></circle><circle cx="5" cy="12" r="1"></circle></svg></span></button><button aria-label="Mais opções" class="inline-flex shrink-0 cursor-pointer items-center justify-center max-md:min-h-[44px] max-md:min-w-[44px] rounded-[3px] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-confirmation focus-visible:ring-offset-1 disabled:pointer-events-none disabled:opacity-30 size-[25px] text-font [&amp;_svg]:text-font hover:bg-neutral-level_1 active:bg-neutral-level_2 border border-neutral-level_2" type="button"><span aria-hidden="true" class="inline-flex shrink-0 items-center justify-center text-font"><svg aria-hidden="true" class="lucide lucide-ellipsis" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="15" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="1"></circle><circle cx="19" cy="12" r="1"></circle><circle cx="5" cy="12" r="1"></circle></svg></span></button><button aria-label="Mais opções" class="inline-flex shrink-0 cursor-pointer items-center justify-center max-md:min-h-[44px] max-md:min-w-[44px] rounded-[3px] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-confirmation focus-visible:ring-offset-1 disabled:pointer-events-none disabled:opacity-30 size-[30px] text-font [&amp;_svg]:text-font hover:bg-neutral-level_1 active:bg-neutral-level_2 border border-neutral-level_2" type="button"><span aria-hidden="true" class="inline-flex shrink-0 items-center justify-center text-font"><svg aria-hidden="true" class="lucide lucide-ellipsis" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="15" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="1"></circle><circle cx="19" cy="12" r="1"></circle><circle cx="5" cy="12" r="1"></circle></svg></span></button></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const Sizes: Story = {
+  render: (args) =&gt; (
+    &lt;div style={{ display: &#x27;flex&#x27;, gap: 12, alignItems: &#x27;center&#x27; }}&gt;
+      &lt;NestedButton {...args} size=&quot;small_20&quot;&gt;
+        &lt;Icon icon={Ellipsis} size=&quot;tiny_10&quot; /&gt;
+      &lt;/NestedButton&gt;
+      &lt;NestedButton {...args} size=&quot;normal_25&quot;&gt;
+        &lt;Icon icon={Ellipsis} size=&quot;small_15&quot; /&gt;
+      &lt;/NestedButton&gt;
+      &lt;NestedButton {...args} size=&quot;big_30&quot;&gt;
+        &lt;Icon icon={Ellipsis} size=&quot;small_15&quot; /&gt;
+      &lt;/NestedButton&gt;
+    &lt;/div&gt;
+  ),
+}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">Outline</h2>
+    <div class="ds-story-id">atoms-nestedbutton--outline · export <b>Outline</b></div>
+    <div class="ds-canvas ds-canvas--padded">
+<div style="display: flex; gap: 12px; align-items: center;"><button aria-label="Mais opções" class="inline-flex shrink-0 cursor-pointer items-center justify-center max-md:min-h-[44px] max-md:min-w-[44px] rounded-[3px] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-confirmation focus-visible:ring-offset-1 disabled:pointer-events-none disabled:opacity-30 size-[20px] text-font [&amp;_svg]:text-font hover:bg-neutral-level_1 active:bg-neutral-level_2 border border-neutral-level_2" type="button"><span aria-hidden="true" class="inline-flex shrink-0 items-center justify-center text-font"><svg aria-hidden="true" class="lucide lucide-ellipsis" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="15" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="1"></circle><circle cx="19" cy="12" r="1"></circle><circle cx="5" cy="12" r="1"></circle></svg></span></button><button aria-label="Mais opções" class="inline-flex shrink-0 cursor-pointer items-center justify-center max-md:min-h-[44px] max-md:min-w-[44px] rounded-[3px] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-confirmation focus-visible:ring-offset-1 disabled:pointer-events-none disabled:opacity-30 size-[20px] text-font [&amp;_svg]:text-font hover:bg-neutral-level_1 active:bg-neutral-level_2" type="button"><span aria-hidden="true" class="inline-flex shrink-0 items-center justify-center text-font"><svg aria-hidden="true" class="lucide lucide-ellipsis" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="15" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="1"></circle><circle cx="19" cy="12" r="1"></circle><circle cx="5" cy="12" r="1"></circle></svg></span></button></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const Outline: Story = {
+  render: (args) =&gt; (
+    &lt;div style={{ display: &#x27;flex&#x27;, gap: 12, alignItems: &#x27;center&#x27; }}&gt;
+      &lt;NestedButton {...args} outline={true}&gt;
+        &lt;Icon icon={Ellipsis} size=&quot;small_15&quot; /&gt;
+      &lt;/NestedButton&gt;
+      &lt;NestedButton {...args} outline={false}&gt;
+        &lt;Icon icon={Ellipsis} size=&quot;small_15&quot; /&gt;
+      &lt;/NestedButton&gt;
+    &lt;/div&gt;
+  ),
+}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">Dark Mode</h2>
+    <div class="ds-story-id">atoms-nestedbutton--dark-mode · export <b>DarkMode</b></div>
+    <div class="ds-canvas ds-canvas--padded">
+<div style="display: flex; gap: 12px; align-items: center; background: rgb(27, 16, 44); padding: 16px; border-radius: 8px;"><button aria-label="Mais opções" class="inline-flex shrink-0 cursor-pointer items-center justify-center max-md:min-h-[44px] max-md:min-w-[44px] rounded-[3px] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-confirmation focus-visible:ring-offset-1 disabled:pointer-events-none disabled:opacity-30 size-[20px] text-basic-light [&amp;_svg]:text-basic-light hover:bg-[rgba(246,241,253,0.05)] active:bg-[rgba(246,241,253,0.10)] border border-[rgba(246,241,253,0.10)]" type="button"><span aria-hidden="true" class="inline-flex shrink-0 items-center justify-center text-font"><svg aria-hidden="true" class="lucide lucide-ellipsis" fill="none" height="10" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="10" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="1"></circle><circle cx="19" cy="12" r="1"></circle><circle cx="5" cy="12" r="1"></circle></svg></span></button><button aria-label="Mais opções" class="inline-flex shrink-0 cursor-pointer items-center justify-center max-md:min-h-[44px] max-md:min-w-[44px] rounded-[3px] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-confirmation focus-visible:ring-offset-1 disabled:pointer-events-none disabled:opacity-30 size-[20px] text-basic-light [&amp;_svg]:text-basic-light hover:bg-[rgba(246,241,253,0.05)] active:bg-[rgba(246,241,253,0.10)]" type="button"><span aria-hidden="true" class="inline-flex shrink-0 items-center justify-center text-font"><svg aria-hidden="true" class="lucide lucide-ellipsis" fill="none" height="10" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="10" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="1"></circle><circle cx="19" cy="12" r="1"></circle><circle cx="5" cy="12" r="1"></circle></svg></span></button><button aria-label="Mais opções" class="inline-flex shrink-0 cursor-pointer items-center justify-center max-md:min-h-[44px] max-md:min-w-[44px] rounded-[3px] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-confirmation focus-visible:ring-offset-1 disabled:pointer-events-none disabled:opacity-30 size-[25px] text-basic-light [&amp;_svg]:text-basic-light hover:bg-[rgba(246,241,253,0.05)] active:bg-[rgba(246,241,253,0.10)] border border-[rgba(246,241,253,0.10)]" type="button"><span aria-hidden="true" class="inline-flex shrink-0 items-center justify-center text-font"><svg aria-hidden="true" class="lucide lucide-ellipsis" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="15" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="1"></circle><circle cx="19" cy="12" r="1"></circle><circle cx="5" cy="12" r="1"></circle></svg></span></button><button aria-label="Mais opções" class="inline-flex shrink-0 cursor-pointer items-center justify-center max-md:min-h-[44px] max-md:min-w-[44px] rounded-[3px] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-confirmation focus-visible:ring-offset-1 disabled:pointer-events-none disabled:opacity-30 size-[30px] text-basic-light [&amp;_svg]:text-basic-light hover:bg-[rgba(246,241,253,0.05)] active:bg-[rgba(246,241,253,0.10)] border border-[rgba(246,241,253,0.10)]" type="button"><span aria-hidden="true" class="inline-flex shrink-0 items-center justify-center text-font"><svg aria-hidden="true" class="lucide lucide-ellipsis" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="15" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="1"></circle><circle cx="19" cy="12" r="1"></circle><circle cx="5" cy="12" r="1"></circle></svg></span></button></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const DarkMode: Story = {
+  render: (args) =&gt; (
+    &lt;div
+      style={{
+        display: &#x27;flex&#x27;,
+        gap: 12,
+        alignItems: &#x27;center&#x27;,
+        background: &#x27;#1B102C&#x27;,
+        padding: 16,
+        borderRadius: 8,
+      }}
+    &gt;
+      &lt;NestedButton {...args} mode=&quot;dark&quot; outline={true}&gt;
+        &lt;Icon icon={Ellipsis} size=&quot;tiny_10&quot; /&gt;
+      &lt;/NestedButton&gt;
+      &lt;NestedButton
+        {...args}
+        mode=&quot;dark&quot;
+        outline={false}
+        aria-label=&quot;Mais opções&quot;
+      &gt;
+        &lt;Icon icon={Ellipsis} size=&quot;tiny_10&quot; /&gt;
+      &lt;/NestedButton&gt;
+      &lt;NestedButton {...args} mode=&quot;dark&quot; size=&quot;normal_25&quot;&gt;
+        &lt;Icon icon={Ellipsis} size=&quot;small_15&quot; /&gt;
+      &lt;/NestedButton&gt;
+      &lt;NestedButton {...args} mode=&quot;dark&quot; size=&quot;big_30&quot;&gt;
+        &lt;Icon icon={Ellipsis} size=&quot;small_15&quot; /&gt;
+      &lt;/NestedButton&gt;
+    &lt;/div&gt;
+  ),
+}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">Disabled</h2>
+    <div class="ds-story-id">atoms-nestedbutton--disabled · export <b>Disabled</b></div>
+    <div class="ds-canvas ds-canvas--padded">
+<div style="display: flex; gap: 12px; align-items: center;"><button aria-label="Mais opções" class="inline-flex shrink-0 cursor-pointer items-center justify-center max-md:min-h-[44px] max-md:min-w-[44px] rounded-[3px] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-confirmation focus-visible:ring-offset-1 disabled:pointer-events-none disabled:opacity-30 size-[20px] text-font [&amp;_svg]:text-font hover:bg-neutral-level_1 active:bg-neutral-level_2 border border-neutral-level_2" disabled="" type="button"><span aria-hidden="true" class="inline-flex shrink-0 items-center justify-center text-font"><svg aria-hidden="true" class="lucide lucide-ellipsis" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="15" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="1"></circle><circle cx="19" cy="12" r="1"></circle><circle cx="5" cy="12" r="1"></circle></svg></span></button></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const Disabled: Story = {
+  render: (args) =&gt; (
+    &lt;div style={{ display: &#x27;flex&#x27;, gap: 12, alignItems: &#x27;center&#x27; }}&gt;
+      &lt;NestedButton {...args} disabled&gt;
+        &lt;Icon icon={Ellipsis} size=&quot;small_15&quot; /&gt;
+      &lt;/NestedButton&gt;
+    &lt;/div&gt;
+  ),
+}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">All Variants</h2>
+    <div class="ds-story-id">atoms-nestedbutton--all-variants · export <b>AllVariants</b></div>
+    <div class="ds-canvas ds-canvas--padded">
+<div style="display: flex; flex-direction: column; gap: 24px;"><div style="display: flex; gap: 8px; align-items: center; flex-wrap: wrap;"><button aria-label="Mais opções" class="inline-flex shrink-0 cursor-pointer items-center justify-center max-md:min-h-[44px] max-md:min-w-[44px] rounded-[3px] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-confirmation focus-visible:ring-offset-1 disabled:pointer-events-none disabled:opacity-30 size-[20px] text-font [&amp;_svg]:text-font hover:bg-neutral-level_1 active:bg-neutral-level_2 border border-neutral-level_2" type="button"><span aria-hidden="true" class="inline-flex shrink-0 items-center justify-center text-font"><svg aria-hidden="true" class="lucide lucide-ellipsis" fill="none" height="10" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="10" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="1"></circle><circle cx="19" cy="12" r="1"></circle><circle cx="5" cy="12" r="1"></circle></svg></span></button><button aria-label="Mais opções" class="inline-flex shrink-0 cursor-pointer items-center justify-center max-md:min-h-[44px] max-md:min-w-[44px] rounded-[3px] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-confirmation focus-visible:ring-offset-1 disabled:pointer-events-none disabled:opacity-30 size-[20px] text-font [&amp;_svg]:text-font hover:bg-neutral-level_1 active:bg-neutral-level_2" type="button"><span aria-hidden="true" class="inline-flex shrink-0 items-center justify-center text-font"><svg aria-hidden="true" class="lucide lucide-ellipsis" fill="none" height="10" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="10" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="1"></circle><circle cx="19" cy="12" r="1"></circle><circle cx="5" cy="12" r="1"></circle></svg></span></button><button aria-label="Mais opções" class="inline-flex shrink-0 cursor-pointer items-center justify-center max-md:min-h-[44px] max-md:min-w-[44px] rounded-[3px] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-confirmation focus-visible:ring-offset-1 disabled:pointer-events-none disabled:opacity-30 size-[20px] text-font [&amp;_svg]:text-font hover:bg-neutral-level_1 active:bg-neutral-level_2 border border-neutral-level_2" disabled="" type="button"><span aria-hidden="true" class="inline-flex shrink-0 items-center justify-center text-font"><svg aria-hidden="true" class="lucide lucide-ellipsis" fill="none" height="10" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="10" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="1"></circle><circle cx="19" cy="12" r="1"></circle><circle cx="5" cy="12" r="1"></circle></svg></span></button><button aria-label="Mais opções" class="inline-flex shrink-0 cursor-pointer items-center justify-center max-md:min-h-[44px] max-md:min-w-[44px] rounded-[3px] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-confirmation focus-visible:ring-offset-1 disabled:pointer-events-none disabled:opacity-30 size-[25px] text-font [&amp;_svg]:text-font hover:bg-neutral-level_1 active:bg-neutral-level_2 border border-neutral-level_2" type="button"><span aria-hidden="true" class="inline-flex shrink-0 items-center justify-center text-font"><svg aria-hidden="true" class="lucide lucide-ellipsis" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="15" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="1"></circle><circle cx="19" cy="12" r="1"></circle><circle cx="5" cy="12" r="1"></circle></svg></span></button><button aria-label="Mais opções" class="inline-flex shrink-0 cursor-pointer items-center justify-center max-md:min-h-[44px] max-md:min-w-[44px] rounded-[3px] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-confirmation focus-visible:ring-offset-1 disabled:pointer-events-none disabled:opacity-30 size-[25px] text-font [&amp;_svg]:text-font hover:bg-neutral-level_1 active:bg-neutral-level_2" type="button"><span aria-hidden="true" class="inline-flex shrink-0 items-center justify-center text-font"><svg aria-hidden="true" class="lucide lucide-ellipsis" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="15" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="1"></circle><circle cx="19" cy="12" r="1"></circle><circle cx="5" cy="12" r="1"></circle></svg></span></button><button aria-label="Mais opções" class="inline-flex shrink-0 cursor-pointer items-center justify-center max-md:min-h-[44px] max-md:min-w-[44px] rounded-[3px] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-confirmation focus-visible:ring-offset-1 disabled:pointer-events-none disabled:opacity-30 size-[25px] text-font [&amp;_svg]:text-font hover:bg-neutral-level_1 active:bg-neutral-level_2 border border-neutral-level_2" disabled="" type="button"><span aria-hidden="true" class="inline-flex shrink-0 items-center justify-center text-font"><svg aria-hidden="true" class="lucide lucide-ellipsis" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="15" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="1"></circle><circle cx="19" cy="12" r="1"></circle><circle cx="5" cy="12" r="1"></circle></svg></span></button><button aria-label="Mais opções" class="inline-flex shrink-0 cursor-pointer items-center justify-center max-md:min-h-[44px] max-md:min-w-[44px] rounded-[3px] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-confirmation focus-visible:ring-offset-1 disabled:pointer-events-none disabled:opacity-30 size-[30px] text-font [&amp;_svg]:text-font hover:bg-neutral-level_1 active:bg-neutral-level_2 border border-neutral-level_2" type="button"><span aria-hidden="true" class="inline-flex shrink-0 items-center justify-center text-font"><svg aria-hidden="true" class="lucide lucide-ellipsis" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="15" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="1"></circle><circle cx="19" cy="12" r="1"></circle><circle cx="5" cy="12" r="1"></circle></svg></span></button><button aria-label="Mais opções" class="inline-flex shrink-0 cursor-pointer items-center justify-center max-md:min-h-[44px] max-md:min-w-[44px] rounded-[3px] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-confirmation focus-visible:ring-offset-1 disabled:pointer-events-none disabled:opacity-30 size-[30px] text-font [&amp;_svg]:text-font hover:bg-neutral-level_1 active:bg-neutral-level_2" type="button"><span aria-hidden="true" class="inline-flex shrink-0 items-center justify-center text-font"><svg aria-hidden="true" class="lucide lucide-ellipsis" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="15" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="1"></circle><circle cx="19" cy="12" r="1"></circle><circle cx="5" cy="12" r="1"></circle></svg></span></button><button aria-label="Mais opções" class="inline-flex shrink-0 cursor-pointer items-center justify-center max-md:min-h-[44px] max-md:min-w-[44px] rounded-[3px] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-confirmation focus-visible:ring-offset-1 disabled:pointer-events-none disabled:opacity-30 size-[30px] text-font [&amp;_svg]:text-font hover:bg-neutral-level_1 active:bg-neutral-level_2 border border-neutral-level_2" disabled="" type="button"><span aria-hidden="true" class="inline-flex shrink-0 items-center justify-center text-font"><svg aria-hidden="true" class="lucide lucide-ellipsis" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="15" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="1"></circle><circle cx="19" cy="12" r="1"></circle><circle cx="5" cy="12" r="1"></circle></svg></span></button></div><div style="display: flex; gap: 8px; align-items: center; flex-wrap: wrap; background: rgb(27, 16, 44); padding: 12px; border-radius: 8px;"><button aria-label="Mais opções" class="inline-flex shrink-0 cursor-pointer items-center justify-center max-md:min-h-[44px] max-md:min-w-[44px] rounded-[3px] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-confirmation focus-visible:ring-offset-1 disabled:pointer-events-none disabled:opacity-30 size-[20px] text-basic-light [&amp;_svg]:text-basic-light hover:bg-[rgba(246,241,253,0.05)] active:bg-[rgba(246,241,253,0.10)] border border-[rgba(246,241,253,0.10)]" type="button"><span aria-hidden="true" class="inline-flex shrink-0 items-center justify-center text-font"><svg aria-hidden="true" class="lucide lucide-ellipsis" fill="none" height="10" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="10" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="1"></circle><circle cx="19" cy="12" r="1"></circle><circle cx="5" cy="12" r="1"></circle></svg></span></button><button aria-label="Mais opções" class="inline-flex shrink-0 cursor-pointer items-center justify-center max-md:min-h-[44px] max-md:min-w-[44px] rounded-[3px] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-confirmation focus-visible:ring-offset-1 disabled:pointer-events-none disabled:opacity-30 size-[20px] text-basic-light [&amp;_svg]:text-basic-light hover:bg-[rgba(246,241,253,0.05)] active:bg-[rgba(246,241,253,0.10)]" type="button"><span aria-hidden="true" class="inline-flex shrink-0 items-center justify-center text-font"><svg aria-hidden="true" class="lucide lucide-ellipsis" fill="none" height="10" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="10" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="1"></circle><circle cx="19" cy="12" r="1"></circle><circle cx="5" cy="12" r="1"></circle></svg></span></button><button aria-label="Mais opções" class="inline-flex shrink-0 cursor-pointer items-center justify-center max-md:min-h-[44px] max-md:min-w-[44px] rounded-[3px] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-confirmation focus-visible:ring-offset-1 disabled:pointer-events-none disabled:opacity-30 size-[20px] text-basic-light [&amp;_svg]:text-basic-light hover:bg-[rgba(246,241,253,0.05)] active:bg-[rgba(246,241,253,0.10)] border border-[rgba(246,241,253,0.10)]" disabled="" type="button"><span aria-hidden="true" class="inline-flex shrink-0 items-center justify-center text-font"><svg aria-hidden="true" class="lucide lucide-ellipsis" fill="none" height="10" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="10" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="1"></circle><circle cx="19" cy="12" r="1"></circle><circle cx="5" cy="12" r="1"></circle></svg></span></button><button aria-label="Mais opções" class="inline-flex shrink-0 cursor-pointer items-center justify-center max-md:min-h-[44px] max-md:min-w-[44px] rounded-[3px] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-confirmation focus-visible:ring-offset-1 disabled:pointer-events-none disabled:opacity-30 size-[25px] text-basic-light [&amp;_svg]:text-basic-light hover:bg-[rgba(246,241,253,0.05)] active:bg-[rgba(246,241,253,0.10)] border border-[rgba(246,241,253,0.10)]" type="button"><span aria-hidden="true" class="inline-flex shrink-0 items-center justify-center text-font"><svg aria-hidden="true" class="lucide lucide-ellipsis" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="15" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="1"></circle><circle cx="19" cy="12" r="1"></circle><circle cx="5" cy="12" r="1"></circle></svg></span></button><button aria-label="Mais opções" class="inline-flex shrink-0 cursor-pointer items-center justify-center max-md:min-h-[44px] max-md:min-w-[44px] rounded-[3px] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-confirmation focus-visible:ring-offset-1 disabled:pointer-events-none disabled:opacity-30 size-[25px] text-basic-light [&amp;_svg]:text-basic-light hover:bg-[rgba(246,241,253,0.05)] active:bg-[rgba(246,241,253,0.10)]" type="button"><span aria-hidden="true" class="inline-flex shrink-0 items-center justify-center text-font"><svg aria-hidden="true" class="lucide lucide-ellipsis" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="15" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="1"></circle><circle cx="19" cy="12" r="1"></circle><circle cx="5" cy="12" r="1"></circle></svg></span></button><button aria-label="Mais opções" class="inline-flex shrink-0 cursor-pointer items-center justify-center max-md:min-h-[44px] max-md:min-w-[44px] rounded-[3px] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-confirmation focus-visible:ring-offset-1 disabled:pointer-events-none disabled:opacity-30 size-[25px] text-basic-light [&amp;_svg]:text-basic-light hover:bg-[rgba(246,241,253,0.05)] active:bg-[rgba(246,241,253,0.10)] border border-[rgba(246,241,253,0.10)]" disabled="" type="button"><span aria-hidden="true" class="inline-flex shrink-0 items-center justify-center text-font"><svg aria-hidden="true" class="lucide lucide-ellipsis" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="15" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="1"></circle><circle cx="19" cy="12" r="1"></circle><circle cx="5" cy="12" r="1"></circle></svg></span></button><button aria-label="Mais opções" class="inline-flex shrink-0 cursor-pointer items-center justify-center max-md:min-h-[44px] max-md:min-w-[44px] rounded-[3px] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-confirmation focus-visible:ring-offset-1 disabled:pointer-events-none disabled:opacity-30 size-[30px] text-basic-light [&amp;_svg]:text-basic-light hover:bg-[rgba(246,241,253,0.05)] active:bg-[rgba(246,241,253,0.10)] border border-[rgba(246,241,253,0.10)]" type="button"><span aria-hidden="true" class="inline-flex shrink-0 items-center justify-center text-font"><svg aria-hidden="true" class="lucide lucide-ellipsis" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="15" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="1"></circle><circle cx="19" cy="12" r="1"></circle><circle cx="5" cy="12" r="1"></circle></svg></span></button><button aria-label="Mais opções" class="inline-flex shrink-0 cursor-pointer items-center justify-center max-md:min-h-[44px] max-md:min-w-[44px] rounded-[3px] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-confirmation focus-visible:ring-offset-1 disabled:pointer-events-none disabled:opacity-30 size-[30px] text-basic-light [&amp;_svg]:text-basic-light hover:bg-[rgba(246,241,253,0.05)] active:bg-[rgba(246,241,253,0.10)]" type="button"><span aria-hidden="true" class="inline-flex shrink-0 items-center justify-center text-font"><svg aria-hidden="true" class="lucide lucide-ellipsis" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="15" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="1"></circle><circle cx="19" cy="12" r="1"></circle><circle cx="5" cy="12" r="1"></circle></svg></span></button><button aria-label="Mais opções" class="inline-flex shrink-0 cursor-pointer items-center justify-center max-md:min-h-[44px] max-md:min-w-[44px] rounded-[3px] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-confirmation focus-visible:ring-offset-1 disabled:pointer-events-none disabled:opacity-30 size-[30px] text-basic-light [&amp;_svg]:text-basic-light hover:bg-[rgba(246,241,253,0.05)] active:bg-[rgba(246,241,253,0.10)] border border-[rgba(246,241,253,0.10)]" disabled="" type="button"><span aria-hidden="true" class="inline-flex shrink-0 items-center justify-center text-font"><svg aria-hidden="true" class="lucide lucide-ellipsis" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="15" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="1"></circle><circle cx="19" cy="12" r="1"></circle><circle cx="5" cy="12" r="1"></circle></svg></span></button></div></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const AllVariants: Story = {
+  render: () =&gt; {
+    const sizes = [&#x27;small_20&#x27;, &#x27;normal_25&#x27;, &#x27;big_30&#x27;] as const;
+    const iconSize = {
+      small_20: &#x27;tiny_10&#x27;,
+      normal_25: &#x27;small_15&#x27;,
+      big_30: &#x27;small_15&#x27;,
+    } as const;
+    return (
+      &lt;div style={{ display: &#x27;flex&#x27;, flexDirection: &#x27;column&#x27;, gap: 24 }}&gt;
+        &lt;div
+          style={{
+            display: &#x27;flex&#x27;,
+            gap: 8,
+            alignItems: &#x27;center&#x27;,
+            flexWrap: &#x27;wrap&#x27;,
+          }}
+        &gt;
+          {sizes.map((size) =&gt; (
+            &lt;React.Fragment key={size}&gt;
+              &lt;NestedButton
+                size={size}
+                mode=&quot;light&quot;
+                outline
+                aria-label=&quot;Mais opções&quot;
+              &gt;
+                &lt;Icon icon={Ellipsis} size={iconSize[size]} /&gt;
+              &lt;/NestedButton&gt;
+              &lt;NestedButton
+                size={size}
+                mode=&quot;light&quot;
+                outline={false}
+                aria-label=&quot;Mais opções&quot;
+              &gt;
+                &lt;Icon icon={Ellipsis} size={iconSize[size]} /&gt;
+              &lt;/NestedButton&gt;
+              &lt;NestedButton
+                size={size}
+                mode=&quot;light&quot;
+                outline
+                disabled
+                aria-label=&quot;Mais opções&quot;
+              &gt;
+                &lt;Icon icon={Ellipsis} size={iconSize[size]} /&gt;
+              &lt;/NestedButton&gt;
+            &lt;/React.Fragment&gt;
+          ))}
+        &lt;/div&gt;
+        &lt;div
+          style={{
+            display: &#x27;flex&#x27;,
+            gap: 8,
+            alignItems: &#x27;center&#x27;,
+            flexWrap: &#x27;wrap&#x27;,
+            background: &#x27;#1B102C&#x27;,
+            padding: 12,
+            borderRadius: 8,
+          }}
+        &gt;
+          {sizes.map((size) =&gt; (
+            &lt;React.Fragment key={size}&gt;
+              &lt;NestedButton
+                size={size}
+                mode=&quot;dark&quot;
+                outline
+                aria-label=&quot;Mais opções&quot;
+              &gt;
+                &lt;Icon icon={Ellipsis} size={iconSize[size]} /&gt;
+              &lt;/NestedButton&gt;
+              &lt;NestedButton
+                size={size}
+                mode=&quot;dark&quot;
+                outline={false}
+                aria-label=&quot;Mais opções&quot;
+              &gt;
+                &lt;Icon icon={Ellipsis} size={iconSize[size]} /&gt;
+              &lt;/NestedButton&gt;
+              &lt;NestedButton
+                size={size}
+                mode=&quot;dark&quot;
+                outline
+                disabled
+                aria-label=&quot;Mais opções&quot;
+              &gt;
+                &lt;Icon icon={Ellipsis} size={iconSize[size]} /&gt;
+              &lt;/NestedButton&gt;
+            &lt;/React.Fragment&gt;
+          ))}
+        &lt;/div&gt;
+      &lt;/div&gt;
+    );
+  },
+}</code></pre></details>
+  </section>
+</body>
+</html>

@@ -1,0 +1,38 @@
+Formulários externos
+Formulários externos são páginas web geradas pelo Ploomes que permitem o preenchimento de dados por fora da ferramenta. 
+
+É possível criar formulários externos para duas entidades do Ploomes:
+
+Clientes: após preenchimento de um formulário externo, um cliente (pessoa ou empresa) é criado ou atualizado no Ploomes;
+
+Negócios: após preenchimento de um formulário externo, um negócio é criado ou atualizado no Ploomes. Como negócios podem estar vinculados a clientes e contatos, uma empresa e uma pessoa também podem ser criadas juntas.
+
+Existem dois tipos de formulário externo:
+
+Atualização de dados: este tipo de formulário existe para atualizar dados de clientes e negócios. Dentro de um cliente ou negócio, por exemplo, ao ligar seu formulário externo, o Ploomes vai gerar uma URL específica daquele formulário para aquele cliente ou para aquele negócio. Quando preenchido, os dados do cliente ou do negócio presentes no formulário serão atualizados no Ploomes. Importante notar que formulários de negócios permitem ter campos de clientes e contatos também (empresas e pessoas);
+
+Criação de entidades: diferente do caso acima, onde o formulário possui um link especial por cliente ou por negócio, os formulários de criação de entidades possuem uma única URL global. Portanto, este tipo de formulário, em vez de atualizar um cliente ou negócio já existente, cria um novo cliente negócio. Ainda sim, é possível criar regras para evitar a criação de cadastros duplicados. Exemplo: imagine que um lead preencha duas vezes um formulário. Não queremos que duas empresas sejam criadas no Ploomes. Portanto, podemos definir que o CNPJ, por exemplo, se transforme em um campo chave. Neste caso, em vez de criar um novo cliente, o formulário vai somente atualizar aquele cliente já existente.
+
+Além dos comportamentos destacados acima, destacamos que:
+
+É possível selecionar de um Logotipo que vai aparecer com destaque no canto superior esquerdo do formulário;
+
+É possível definir um “Nome” para o formulário. Ele aparece em letras grandes logo abaixo do logotipo;
+
+É possível definir uma “Descrição” para o formulário. Ela aparece em letras menores abaixo do nome. A descrição permite a inclusão de códigos em HTML para maior capacidade de customização;
+
+É possível definir uma cor de fundo para o formulário;
+
+Para formulários de card / negócio, É possível definir a qual funil ele está relacionado;
+
+É possível definir um quais campos deverão ser preenchidos pelo formulário:
+
+Todo campo do formulário está relacionado a um campo do Ploomes;
+
+Não é possível listar dados do Ploomes no formulário (ex.: não consigo ter um campo no formulário externo que liste os clientes ou usuários de sua conta Ploomes);
+
+É possível alterar o nome do campo que aparece no formulário externo para ficar mais intuitivo a quem vai preencher. Também é possível escrever um texto de apoio que aparece em uma cor mais clara logo abaixo do nome do campo.
+
+Além dos campos preenchidos pelo formulário, existe a possibilidade de configurar o preenchimento de outros campos de forma automática, sem que eles apareçam no formulário. Exemplo: depois que o formulário externo de atualização for preenchido, eu posso fazer com que o estágio do meu negócio seja alterado para o estágio X;
+
+Por fim, para o caso de formulários de criação de entidades, o Ploomes gera um código especial que pode ser copiado e colado dentro de uma página web qualquer. Assim, o formulário roda dentro de um site, por exemplo, sem a necessidade de se utilizar a URL gerada pelo Ploomes.

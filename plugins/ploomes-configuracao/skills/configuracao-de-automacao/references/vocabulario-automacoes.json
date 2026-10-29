@@ -1,0 +1,233 @@
+{
+ "_doc": "Vocabulario fechado de automacao no Ploomes. Gerado de /AutomationsTriggers e /AutomationsActionsActions. Gatilho e acao FORA desta lista nao existem.",
+ "gatilhos": [
+  {
+   "id": 1,
+   "nome": "Negócio entrou neste estágio",
+   "exige_etapa": true,
+   "entidade_restrita": "Negócio"
+  },
+  {
+   "id": 2,
+   "nome": "Negócio ganho neste estágio",
+   "exige_etapa": true,
+   "entidade_restrita": "Negócio"
+  },
+  {
+   "id": 3,
+   "nome": "Negócio perdido neste estágio",
+   "exige_etapa": true,
+   "entidade_restrita": "Negócio"
+  },
+  {
+   "id": 4,
+   "nome": "Negócio reaberto neste estágio",
+   "exige_etapa": true,
+   "entidade_restrita": "Negócio"
+  },
+  {
+   "id": 5,
+   "nome": "Quando o item for criado",
+   "exige_etapa": false,
+   "entidade_restrita": null
+  },
+  {
+   "id": 6,
+   "nome": "Quando o item for editado",
+   "exige_etapa": false,
+   "entidade_restrita": null
+  },
+  {
+   "id": 7,
+   "nome": "Quando o item for excluído",
+   "exige_etapa": false,
+   "entidade_restrita": null
+  },
+  {
+   "id": 8,
+   "nome": "Quando o negócio for ganho",
+   "exige_etapa": false,
+   "entidade_restrita": "Negócio"
+  },
+  {
+   "id": 9,
+   "nome": "Quando o negócio for perdido",
+   "exige_etapa": false,
+   "entidade_restrita": "Negócio"
+  },
+  {
+   "id": 10,
+   "nome": "Quando o negócio for reaberto",
+   "exige_etapa": false,
+   "entidade_restrita": "Negócio"
+  },
+  {
+   "id": 11,
+   "nome": "Quando a tarefa for finalizada",
+   "exige_etapa": false,
+   "entidade_restrita": "Tarefa"
+  },
+  {
+   "id": 12,
+   "nome": "Quando a tarefa for reaberta",
+   "exige_etapa": false,
+   "entidade_restrita": "Tarefa"
+  },
+  {
+   "id": 13,
+   "nome": "Quando a proposta for revisada",
+   "exige_etapa": false,
+   "entidade_restrita": "Proposta"
+  },
+  {
+   "id": 14,
+   "nome": "Quando a proposta for aprovada ou reprovada",
+   "exige_etapa": false,
+   "entidade_restrita": "Proposta"
+  },
+  {
+   "id": 17,
+   "nome": "Periodicamente",
+   "exige_etapa": false,
+   "entidade_restrita": null
+  },
+  {
+   "id": 18,
+   "nome": "Quando o lead for convertido",
+   "exige_etapa": false,
+   "entidade_restrita": "Lead"
+  },
+  {
+   "id": 19,
+   "nome": "Quando o lead for descartado",
+   "exige_etapa": false,
+   "entidade_restrita": "Lead"
+  },
+  {
+   "id": 20,
+   "nome": "Quando o documento for aprovado ou reprovado",
+   "exige_etapa": false,
+   "entidade_restrita": "Documento"
+  },
+  {
+   "id": 21,
+   "nome": "Quando a venda for aprovada ou reprovada",
+   "exige_etapa": false,
+   "entidade_restrita": "Venda"
+  },
+  {
+   "id": 22,
+   "nome": "Quando a venda for aprovada ou reprovada (online)",
+   "exige_etapa": false,
+   "entidade_restrita": "Venda"
+  },
+  {
+   "id": 23,
+   "nome": "Quando a proposta for aprovada ou reprovada (online)",
+   "exige_etapa": false,
+   "entidade_restrita": "Proposta"
+  },
+  {
+   "id": 24,
+   "nome": "Quando o documento for aprovado ou reprovado (online)",
+   "exige_etapa": false,
+   "entidade_restrita": "Documento"
+  },
+  {
+   "id": 25,
+   "nome": "Negócio editado nesse estágio",
+   "exige_etapa": true,
+   "entidade_restrita": "Negócio"
+  }
+ ],
+ "acoes": [
+  {
+   "id": 1,
+   "nome": "Editar dados",
+   "exige_detalhamento": false
+  },
+  {
+   "id": 2,
+   "nome": "Alterar estágio do negócio",
+   "exige_detalhamento": false
+  },
+  {
+   "id": 3,
+   "nome": "Duplicar negócio em novo estágio",
+   "exige_detalhamento": false
+  },
+  {
+   "id": 4,
+   "nome": "Enviar e-mail",
+   "exige_detalhamento": false
+  },
+  {
+   "id": 5,
+   "nome": "Criar tarefa",
+   "exige_detalhamento": true
+  },
+  {
+   "id": 7,
+   "nome": "Criar negócio",
+   "exige_detalhamento": true
+  },
+  {
+   "id": 8,
+   "nome": "Criar registro de interação",
+   "exige_detalhamento": true
+  },
+  {
+   "id": 10,
+   "nome": "Perder negócio",
+   "exige_detalhamento": false
+  },
+  {
+   "id": 11,
+   "nome": "Ganhar negócio",
+   "exige_detalhamento": false
+  },
+  {
+   "id": 12,
+   "nome": "Enviar mensagem de WhatsApp via Neppo",
+   "exige_detalhamento": false
+  },
+  {
+   "id": 13,
+   "nome": "Finalizar tarefas com observações",
+   "exige_detalhamento": true
+  },
+  {
+   "id": 14,
+   "nome": "Finalizar tarefas",
+   "exige_detalhamento": false
+  },
+  {
+   "id": 15,
+   "nome": "Enviar Lead para Meetime",
+   "exige_detalhamento": false
+  },
+  {
+   "id": 16,
+   "nome": "Criar preço praticado",
+   "exige_detalhamento": true
+  }
+ ],
+ "entidades_permitidas": [
+  "Documento",
+  "Lead",
+  "Negócio",
+  "Proposta",
+  "Tarefa",
+  "Venda"
+ ],
+ "acoes_so_para_negocio": [
+  "Alterar estágio do negócio",
+  "Duplicar negócio em novo estágio",
+  "Perder negócio",
+  "Ganhar negócio"
+ ],
+ "acoes_que_dependem_de_integracao": {
+  "Enviar mensagem de WhatsApp via Neppo": "Neppo",
+  "Enviar Lead para Meetime": "Meetime"
+ }
+}

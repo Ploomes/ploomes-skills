@@ -1,0 +1,133 @@
+Configuração de formulários externos
+
+Você primeiro precisa definir se o formulário é de negócio ou de cliente. Em seguida, configurar os pontos a seguir:
+
+1. Logo
+
+Imagem exibida no formulário.
+
+2. Nome do formulário
+
+Nome que identifica o formulário.
+
+Exemplos:
+
+Formulário de captação de leads
+Abertura de chamado técnico
+Atualização cadastral de cliente
+Solicitação de orçamento
+
+Campo obrigatório.
+
+3. Descrição do formulário
+
+Texto explicativo exibido no formulário.
+
+Exemplo:
+
+Preencha os dados abaixo para que nossa equipe possa analisar sua solicitação.
+
+Campo opcional, mas recomendado.
+
+4. Cor de fundo
+
+Cor principal/de fundo do formulário.
+
+Deve ser preenchida em formato hexadecimal.
+
+Exemplo:
+
+#1E88E5
+
+5. Finalidade do formulário
+
+Define o comportamento principal do formulário. São duas opções:
+
+Criar ou atualizar negócios / clientes 
+Atualizar negócios / clientes existentes
+
+Use Criar ou atualizar negócios / clientes quando o formulário puder gerar um novo negócio / cliente.
+
+Use Atualizar negócio / cliente quando o formulário servir apenas para alterar dados de um negócio / cliente já criado.
+
+6. Funil
+
+Define em qual funil o formulário será executado (somente no caso de formulário de negócio)
+
+Exemplos:
+
+Vendas
+Assistência Técnica
+Implantação
+Renovações
+Suporte
+
+7. Estágio (somente no caso de formulário de negócio)
+
+Define o estágio padrão do negócio dentro do funil escolhido.
+
+Exemplos:
+
+Novo lead
+Solicitação recebida
+Chamado aberto
+Aguardando análise
+
+8. Ignorar mudança de estágio em caso de atualização (somente no caso de formulário de negócio)
+
+Define se, ao atualizar um negócio existente, o formulário deve manter o estágio atual do negócio.
+
+Preencher como:
+
+Sim
+
+quando o formulário só atualiza informações, sem alterar o andamento do negócio.
+
+E como:
+
+Não
+
+quando o preenchimento do formulário deve mover o negócio para o estágio configurado.
+
+9. Campos do formulário
+
+Lista de campos que o usuário final deverá preencher.
+
+A IA deve indicar quais campos serão exibidos no formulário.
+
+Exemplo:
+
+Nome
+E-mail
+Telefone
+Empresa
+CNPJ
+Descrição da solicitação
+Produto de interesse
+Urgência
+Anexo
+
+Os campos podem ser campos de negócio (no caso de funil de negócio), cliente ou contato (no caso de funil de negócio).
+
+10. Valores padrão
+
+Campos que devem ser preenchidos automaticamente (e com qual valor), sem aparecer para o usuário final, após o formulário ser preenchido.
+
+Exemplo:
+
+Origem = Formulário externo
+Status = Novo
+Tipo de solicitação = Assistência técnica
+Prioridade = Normal
+Responsável = Equipe de suporte
+
+12. Idioma
+
+Idioma em que o formulário será exibido.
+
+Opções:
+
+Português Brasil
+Inglês
+Português Portugal
+Espanhol México

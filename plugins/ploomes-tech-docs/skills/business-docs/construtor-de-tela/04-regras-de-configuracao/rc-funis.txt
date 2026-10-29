@@ -1,0 +1,39 @@
+Regras para configuração de funis
+
+Para a criação de um novo funil, as seguintes propriedades devem ou podem opcionalmente ser enviadas:
+
+- Nome: nome de até 100 caracteres para identificar do que se trata o funil;
+
+- Ícone: representação visual do funil. O software a ser desenvolvido pode se utilizar dos ícones padrões do Ploomes, ou simplesmente deixar algo "hardcoded";
+
+- Cor do ícone: cor usada para identificação visual rápida do funil. Você pode, ao criar o software, usar dessa cor em lugares diferentes, como no ícone, em algum local para facilitar reconhecimento quando eu entrar em um negócio desse funil, entre outros;
+
+- Quem pode ver esse funil: primeiro, deve ser informado se essa configuração é por usuário, por perfil de usuário ou por equipe. Em seguida, eu defino uma lista de usuários, perfis ou equipes;
+
+- Etapas: necessário informar quais são as etapas do funil e qual a ordem delas. Toda etapa possui um nome. Dentro de cada etapa, eu posso configurar múltiplas automações e múltiplos checklists (explicado em outra parte desta documentação);
+
+- Formulário: cada funil pode ter um formulário. O formulário guarda um conjunto de campos de negócios que podem ser ordenados para melhor visualização. Você pode configurar um formulário e usá-lo no software a ser desenvolvido para listar os campos de criação de um novo negócio, por exemplo, ou caso o software demande a visualização de uma tela de negócios, o formulário pode definir quais campos devem aparecer ali nos negócios. Entretanto, você pode ignorar o uso do formulário, e simplesmente definir direto na lógica de frontend do software quais campos devem aparecer em quais situações, a depender do que o usuário deseja;
+
+- Formulário-mini: mesmo mecanismo do formulário, fica como uma segunda opção, caso você julgue necessário ter dois formulários diferentes dentro de um funil;
+
+- Regras do funil:
+-- Visualizações disponíveis: propriedade que pode ser ignorada;
+-- Passagem por todos os estágios obrigatória: regra que impede o usuário de pular etapas no funil. Este comportamento deve estar previsto no frontend do software a ser desenvolvido;
+-- Proibido voltar de etapa: regra que impede o usuário de voltar etapas. Este comportamento deve estar previsto no frontend do software a ser desenvolvido;
+-- Ganhar negócio apenas na última etapa: regra que permite que o usuário ganhe o negócio apenas no último estágio do funil. Este comportamento deve estar previsto no frontend do software a ser desenvolvido;
+-- Nova venda ao ganhar negócio: esta é uma propriedade que conversa apenas com o frontend nativo do Ploomes e você pode ignorar;
+-- Criar venda automaticamente ao ganhar negócio: regra que faz com que o backend do Ploomes gere uma Venda (entidade Venda) automaticamente quando o negócio é ganho.
+-- Pode ganhar negócios neste funil: regra que permite ou não o usuário ganhar negócios no funil. Este comportamento deve estar previsto no frontend do software a ser desenvolvido;
+-- Pode perder negócios neste funil: regra que permite ou não o usuário perder negócios no funil. Este comportamento deve estar previsto no frontend do software a ser desenvolvido;
+-- Executar automações com o usuário de automação: automações de funil são executadas em nome do usuário que disparou o gatilho da automação. Entretanto, é possível mudar isso para que um usuário padrão do Ploomes, com nome de Automação, seja o usuário em nome do qual a automação de funil roda.
+-- Pode gerar propostas / vendas / documentos neste processo: caso o software a ser desenvolvido preveja a geração de propostas, vendas ou documentos de negócio dentro de um negócio, você pode usar essa propriedade para definir se negócios do funil a ser configurado permitem a criação de cada um desses documentos;
+-- Limitar modelos de propostas / vendas / documento que podem ser usados neste processo: caso a situação acima de realize, essas 3 configurações permite que você liste quais modelos de documentos configurados no Ploomes poderão ser usados no funil;
+-- Abrir janela do produto ao adicioná-lo em propostas, vendas e documentos neste processo: esta é uma propriedade que conversa apenas com o frontend nativo do Ploomes e você pode ignorar;
+
+- Nome da unidade no singular, Nome da unidade no plural e Gênero da unidade: imagine que o nome de um funil seja "Funil de vendas". Dentro de um funil de vendas, cada negócio pode ter seu nome alterado para "Oportunidade", por exemplo. Então, o frontend do software pode exibir, no botão de criação de um novo negócio, o texto "Nova Oportunidade". Ou, na Timeline do cliente, pode aparecer o registro "Nova oportunidade criada no cliente". Então você pode incluir uma nomenclatura hardcoded no frontend do software, mas se usar esse mecanismo nativo do Ploomes, já terá as nomenclaturas corretas em timelines, por exemplo.
+
+- Cor do botão de ganhar / perder e verbo do botão de ganhar / perder: essas quatro opções existem para configurar o nome e a cor das conclusões de um funil. Exemplo: em um funil de vendas, é esperado que eu "ganhe" um negócio. Já em um funil de assistência técnica, o esperado é "concluir" o negócio.
+
+- Motivos de perda: todo funil precisa ter pelo menos um motivo de perda cadastrado, mas você pode incluir vários;
+
+- Abas: a partir do sistema de abas, é possível definir quais delas devem ser vinculadas a este funil.

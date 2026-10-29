@@ -1,0 +1,95 @@
+<!doctype html>
+<!--
+  Ploomes Design System — snapshot estático das stories do Storybook.
+  Componente : Atoms/ProgressBar
+  Stories    : 4 (Default, Sizes, Values, All Variants)
+  Story      : ProgressBar.stories.tsx
+  Tema       : light — use <html class="dark"> para o tema escuro.
+-->
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ProgressBar — Ploomes DS</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;600;700&display=swap">
+<link rel="stylesheet" href="../assets/design-system.css">
+<link rel="stylesheet" href="../assets/page.css">
+</head>
+<body class="ds-page">
+  <header class="ds-head">
+    <a class="ds-back" href="../index.html">← inventário</a>
+    <h1 class="ds-title">ProgressBar</h1>
+    <p class="ds-meta">atoms · 4 stories · <code>ProgressBar.stories.tsx</code></p>
+    <pre class="ds-code ds-import">import { ProgressBar } from &#x27;@ploomescrm/ui&#x27;;</pre>
+    <pre class="ds-code">// props padrão de todas as stories (meta.args)
+args: {
+  size: &#x27;normal&#x27;,
+  value: 60,
+}</pre>
+  </header>
+  <section class="ds-story">
+    <h2 class="ds-story-name">Default</h2>
+    <div class="ds-story-id">atoms-progressbar--default · export <b>Default</b></div>
+    <div class="ds-canvas ds-canvas--padded">
+<div aria-label="Progresso" aria-valuemax="100" aria-valuemin="0" aria-valuenow="60" class="relative w-full overflow-hidden rounded-[5px] bg-neutral-level_2 h-[20px]" role="progressbar"><div class="h-full rounded-[5px] bg-confirmation transition-[width] duration-[250ms] ease-in-out" style="width: 60%;"></div></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const Default: Story = {}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">Sizes</h2>
+    <div class="ds-story-id">atoms-progressbar--sizes · export <b>Sizes</b></div>
+    <div class="ds-canvas ds-canvas--padded">
+<div style="display: flex; flex-direction: column; gap: 16px; width: 400px;"><div aria-label="Progresso" aria-valuemax="100" aria-valuemin="0" aria-valuenow="60" class="relative w-full overflow-hidden rounded-[5px] bg-neutral-level_2 h-[10px]" role="progressbar"><div class="h-full rounded-[5px] bg-confirmation transition-[width] duration-[250ms] ease-in-out" style="width: 60%;"></div></div><div aria-label="Progresso" aria-valuemax="100" aria-valuemin="0" aria-valuenow="60" class="relative w-full overflow-hidden rounded-[5px] bg-neutral-level_2 h-[20px]" role="progressbar"><div class="h-full rounded-[5px] bg-confirmation transition-[width] duration-[250ms] ease-in-out" style="width: 60%;"></div></div><div aria-label="Progresso" aria-valuemax="100" aria-valuemin="0" aria-valuenow="60" class="relative w-full overflow-hidden rounded-[5px] bg-neutral-level_2 h-[40px]" role="progressbar"><div class="h-full rounded-[5px] bg-confirmation transition-[width] duration-[250ms] ease-in-out" style="width: 60%;"></div></div></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const Sizes: Story = {
+  render: (args) =&gt; (
+    &lt;div
+      style={{ display: &#x27;flex&#x27;, flexDirection: &#x27;column&#x27;, gap: 16, width: 400 }}
+    &gt;
+      &lt;ProgressBar {...args} size=&quot;small&quot; /&gt;
+      &lt;ProgressBar {...args} size=&quot;normal&quot; /&gt;
+      &lt;ProgressBar {...args} size=&quot;big&quot; /&gt;
+    &lt;/div&gt;
+  ),
+}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">Values</h2>
+    <div class="ds-story-id">atoms-progressbar--values · export <b>Values</b></div>
+    <div class="ds-canvas ds-canvas--padded">
+<div style="display: flex; flex-direction: column; gap: 12px; width: 400px;"><div aria-label="Progresso" aria-valuemax="100" aria-valuemin="0" aria-valuenow="0" class="relative w-full overflow-hidden rounded-[5px] bg-neutral-level_2 h-[20px]" role="progressbar"><div class="h-full rounded-[5px] bg-confirmation transition-[width] duration-[250ms] ease-in-out" style="width: 0%;"></div></div><div aria-label="Progresso" aria-valuemax="100" aria-valuemin="0" aria-valuenow="25" class="relative w-full overflow-hidden rounded-[5px] bg-neutral-level_2 h-[20px]" role="progressbar"><div class="h-full rounded-[5px] bg-confirmation transition-[width] duration-[250ms] ease-in-out" style="width: 25%;"></div></div><div aria-label="Progresso" aria-valuemax="100" aria-valuemin="0" aria-valuenow="50" class="relative w-full overflow-hidden rounded-[5px] bg-neutral-level_2 h-[20px]" role="progressbar"><div class="h-full rounded-[5px] bg-confirmation transition-[width] duration-[250ms] ease-in-out" style="width: 50%;"></div></div><div aria-label="Progresso" aria-valuemax="100" aria-valuemin="0" aria-valuenow="75" class="relative w-full overflow-hidden rounded-[5px] bg-neutral-level_2 h-[20px]" role="progressbar"><div class="h-full rounded-[5px] bg-confirmation transition-[width] duration-[250ms] ease-in-out" style="width: 75%;"></div></div><div aria-label="Progresso" aria-valuemax="100" aria-valuemin="0" aria-valuenow="100" class="relative w-full overflow-hidden rounded-[5px] bg-neutral-level_2 h-[20px]" role="progressbar"><div class="h-full rounded-[5px] bg-confirmation transition-[width] duration-[250ms] ease-in-out" style="width: 100%;"></div></div></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const Values: Story = {
+  render: () =&gt; (
+    &lt;div
+      style={{ display: &#x27;flex&#x27;, flexDirection: &#x27;column&#x27;, gap: 12, width: 400 }}
+    &gt;
+      &lt;ProgressBar size=&quot;normal&quot; value={0} /&gt;
+      &lt;ProgressBar size=&quot;normal&quot; value={25} /&gt;
+      &lt;ProgressBar size=&quot;normal&quot; value={50} /&gt;
+      &lt;ProgressBar size=&quot;normal&quot; value={75} /&gt;
+      &lt;ProgressBar size=&quot;normal&quot; value={100} /&gt;
+    &lt;/div&gt;
+  ),
+}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">All Variants</h2>
+    <div class="ds-story-id">atoms-progressbar--all-variants · export <b>AllVariants</b></div>
+    <div class="ds-canvas ds-canvas--padded">
+<div style="display: flex; flex-direction: column; gap: 16px; width: 400px;"><div aria-label="Progresso" aria-valuemax="100" aria-valuemin="0" aria-valuenow="60" class="relative w-full overflow-hidden rounded-[5px] bg-neutral-level_2 h-[10px]" role="progressbar"><div class="h-full rounded-[5px] bg-confirmation transition-[width] duration-[250ms] ease-in-out" style="width: 60%;"></div></div><div aria-label="Progresso" aria-valuemax="100" aria-valuemin="0" aria-valuenow="60" class="relative w-full overflow-hidden rounded-[5px] bg-neutral-level_2 h-[20px]" role="progressbar"><div class="h-full rounded-[5px] bg-confirmation transition-[width] duration-[250ms] ease-in-out" style="width: 60%;"></div></div><div aria-label="Progresso" aria-valuemax="100" aria-valuemin="0" aria-valuenow="60" class="relative w-full overflow-hidden rounded-[5px] bg-neutral-level_2 h-[40px]" role="progressbar"><div class="h-full rounded-[5px] bg-confirmation transition-[width] duration-[250ms] ease-in-out" style="width: 60%;"></div></div></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const AllVariants: Story = {
+  render: () =&gt; (
+    &lt;div
+      style={{ display: &#x27;flex&#x27;, flexDirection: &#x27;column&#x27;, gap: 16, width: 400 }}
+    &gt;
+      {([&#x27;small&#x27;, &#x27;normal&#x27;, &#x27;big&#x27;] as const).map((size) =&gt; (
+        &lt;ProgressBar key={size} size={size} value={60} /&gt;
+      ))}
+    &lt;/div&gt;
+  ),
+}</code></pre></details>
+  </section>
+</body>
+</html>

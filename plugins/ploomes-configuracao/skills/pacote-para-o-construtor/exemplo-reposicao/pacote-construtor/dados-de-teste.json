@@ -1,0 +1,49 @@
+{
+  "usuarios": [ { "nome": "Carla Menezes" }, { "nome": "Diego Prado" } ],
+  "campos": [
+    { "fieldKey": "deal_B0000007-0000-4000-8000-000000000007", "nome": "Data prevista da próxima reposição", "typeId": 8 },
+    { "fieldKey": "deal_B0000002-0000-4000-8000-000000000002", "nome": "Consumo confirmado na janela", "typeId": 7, "opcoes": ["Sim, mesmo volume", "Sim, volume menor", "Sim, volume maior", "Não consome mais"] },
+    { "fieldKey": "deal_B0000003-0000-4000-8000-000000000003", "nome": "Consumo mensal apurado (kg)", "typeId": 6 },
+    { "fieldKey": "deal_B0000006-0000-4000-8000-000000000006", "nome": "Resposta do técnico de segurança", "typeId": 2 },
+    { "fieldKey": "deal_B0000001-0000-4000-8000-000000000001", "nome": "Itens e volumes confirmados para reposição", "typeId": 2 },
+    { "fieldKey": "deal_B0000004-0000-4000-8000-000000000004", "nome": "Cotação aberta no funil Vendas de EPI", "typeId": 7, "opcoes": ["Não", "Sim"] },
+    { "fieldKey": "contact_B0000005-0000-4000-8000-000000000005", "nome": "Itens de consumo recorrente", "typeId": 2 },
+    { "fieldKey": "contact_B0000008-0000-4000-8000-000000000008", "nome": "Periodicidade de reposição", "typeId": 7, "opcoes": ["Bimestral", "Mensal", "Semestral", "Trimestral", "Varia por item"] }
+  ],
+  "clientes": [
+    { "nome": "Metalúrgica Paulista",
+      "campos": { "contact_B0000005-0000-4000-8000-000000000005": "Luva nitrílica G (800 pares), protetor auricular (300 un.)", "contact_B0000008-0000-4000-8000-000000000008": "Mensal" } },
+    { "nome": "Construtora Andrade" },
+    { "nome": "Cliente Gama Ltda",
+      "campos": { "contact_B0000008-0000-4000-8000-000000000008": "Trimestral" } },
+    { "nome": "Cliente Alfa Ltda" }
+  ],
+  "funis": [ { "nome": "Reposição Programada", "unidade": "Reposição", "unidades": "Reposições", "verboGanhar": "Confirmar",
+    "regras": { "forbiddenStageReturn": false, "winDealOnLastStage": true },
+    "etapas": ["Ciclo de consumo mapeado", "Reposição prevista", "Reposição confirmada"] } ],
+  "checklists": [
+    { "funil": "Reposição Programada", "etapa": "Ciclo de consumo mapeado", "nome": "Ciclo de consumo do cliente", "itens": [
+      { "nome": "Itens de consumo recorrente", "fieldKey": "contact_B0000005-0000-4000-8000-000000000005" },
+      { "nome": "Periodicidade de reposição", "fieldKey": "contact_B0000008-0000-4000-8000-000000000008" },
+      { "nome": "Data prevista da próxima reposição", "fieldKey": "deal_B0000007-0000-4000-8000-000000000007" } ] },
+    { "funil": "Reposição Programada", "etapa": "Reposição prevista", "nome": "Toque da janela de reposição", "itens": [
+      { "nome": "Consumo confirmado na janela", "fieldKey": "deal_B0000002-0000-4000-8000-000000000002" },
+      { "nome": "Resposta do técnico de segurança", "fieldKey": "deal_B0000006-0000-4000-8000-000000000006", "obrigatorio": false } ] },
+    { "funil": "Reposição Programada", "etapa": "Reposição confirmada", "nome": "Reposição confirmada pelo cliente", "itens": [
+      { "nome": "Itens e volumes confirmados para reposição", "fieldKey": "deal_B0000001-0000-4000-8000-000000000001" },
+      { "nome": "Cotação aberta no funil Vendas de EPI", "fieldKey": "deal_B0000004-0000-4000-8000-000000000004" } ] }
+  ],
+  "negocios": [
+    { "titulo": "Reposição outubro · luvas e protetores", "funil": "Reposição Programada", "etapa": "Ciclo de consumo mapeado", "cliente": "Metalúrgica Paulista", "responsavel": "Carla Menezes",
+      "campos": { "deal_B0000007-0000-4000-8000-000000000007": "2026-10-03T00:00:00-03:00", "deal_B0000003-0000-4000-8000-000000000003": 120 } },
+    { "titulo": "Reposição trimestral · aventais térmicos", "funil": "Reposição Programada", "etapa": "Ciclo de consumo mapeado", "cliente": "Cliente Gama Ltda", "responsavel": "Diego Prado",
+      "campos": { "deal_B0000007-0000-4000-8000-000000000007": "2026-09-27T00:00:00-03:00" } },
+    { "titulo": "Reposição · botinas de segurança", "funil": "Reposição Programada", "etapa": "Reposição prevista", "cliente": "Construtora Andrade", "responsavel": "Carla Menezes",
+      "campos": { "deal_B0000007-0000-4000-8000-000000000007": "2026-10-06T00:00:00-03:00", "deal_B0000003-0000-4000-8000-000000000003": 45 } },
+    { "titulo": "Reposição · luvas de raspa", "funil": "Reposição Programada", "etapa": "Reposição prevista", "cliente": "Cliente Alfa Ltda", "responsavel": "Diego Prado",
+      "campos": { "deal_B0000007-0000-4000-8000-000000000007": "2026-10-20T00:00:00-03:00", "deal_B0000002-0000-4000-8000-000000000002": "Sim, mesmo volume", "deal_B0000003-0000-4000-8000-000000000003": 60 } },
+    { "titulo": "Reposição setembro · protetores faciais", "funil": "Reposição Programada", "etapa": "Reposição confirmada", "cliente": "Metalúrgica Paulista", "responsavel": "Carla Menezes", "status": "ganho",
+      "campos": { "deal_B0000007-0000-4000-8000-000000000007": "2026-09-05T00:00:00-03:00", "deal_B0000002-0000-4000-8000-000000000002": "Sim, volume maior",
+                  "deal_B0000001-0000-4000-8000-000000000001": "Protetor facial (40 un.)", "deal_B0000004-0000-4000-8000-000000000004": "Sim" } }
+  ]
+}

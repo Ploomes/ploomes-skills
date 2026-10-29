@@ -1,0 +1,10 @@
+{
+  "name": "ploomes-configuracao",
+  "description": "Configura a conta do Ploomes de um cliente a partir do processo comercial dele: funis e etapas, checklists, automações, fluxos de aprovação e modelos de proposta, em arquivos para importação. Indica onde vale uma tela própria, constrói a tela do construtor de telas e o onboarding de quem vai usá-la, e gera flows do Ploomes Flows para importação. Trabalha numa pasta local; a chave da conta fica num arquivo, nunca no chat. Depende do ploomes-tech-docs.",
+  "version": "1.0.1",
+  "author": {
+    "name": "Ploomes"
+  },
+  "repository": "https://github.com/Ploomes/ploomes-skills",
+  "license": "UNLICENSED"
+}

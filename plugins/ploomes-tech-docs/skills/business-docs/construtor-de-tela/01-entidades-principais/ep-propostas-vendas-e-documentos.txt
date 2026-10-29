@@ -1,0 +1,77 @@
+Propostas, Vendas e Documentos
+
+Objetivo básico:
+- Essas 3 tabelas armazenam propostas, vendas e documentos gerados no Ploomes;
+- Para simplificar, vamos chamar essas 3 tabelas de PVD;
+- Para o caso de documentos, eles são separados em dois tipos: documento de cliente, e documento de negócio;
+- Além de permitir a geração e armazenamento de propostas e pedidos de venda, esta funcionalidade é utilizada para armazenar qualquer tipo de documento e seus dados, como contratos, notas fiscais, entre outros;
+- Além dos dados, estas 3 entidades possuem um mecanismo que transforma os dados preenchidos em um HTML visual. Este HTML é justamente usado para apresentar estes documentos a clientes;
+- Ou seja, esta não é uma funcionalidade para armazenar dados apenas, mas para de fato gerar documentos compartilháveis e visualizáveis;
+- O HTML é gerado a partir de modelos. O Ploomes permite a criação de vários modelos de propostas, vendas e documentos. O modelo é um HTML base com referência a campos de todas as entidades vinculadas a eles que foram definidos como parte do documento. Este mecanismo utiliza os field-paths para, por exemplo, exibir o nome do cliente no HTML gerado, ou o nome do criador;
+- Em resumo, ao criar uma proposta, por exemplo, eu seleciono um modelo, preencho campos e o HTML é gerado e armazenado no banco de dados;
+- Para cada uma dessas três entidades, temos também a base de blocos, produtos e opcionais vinculadas a elas, resultando em:
+	- Base de propostas, blocos de propostas, produtos de propostas e opcionais de propostas;
+	- Base de vendas, blocos de vendas, produtos de vendas e opcionais de vendas;
+	- Base de documentos, blocos de documentos, produtos de documentos e opcionais de documentos;
+- Dentro de uma proposta, por exemplo, eu posso ter blocos de produtos (agrupamentos de produtos). Dentro destes blocos, eu posso ter uma lista de produtos que eu incluí nessa proposta (e que estão vinculados aos produtos da base de produtos. Ex.: um produto pode ter valor unitário de 10 reais, mas naquela proposta específica, o valor dele foi de 8 reais). Por fim, dentro destes produtos, eu tenho os opcionais que eu incluí junto deles na proposta. O mesmo comportamento se repete para vendas e documentos.
+- Os modelos podem ter sua visualização limitada para determinados usuários, equipes, ou liberados para que todos da empresa possam vê-lo e gerar pr. É possível restringir quais modelos de documentos podem ser gerados em cada funil ou processo. 
+- No caso específico de propostas, elas podem ser revisadas, gerando e guardando suas versões anteriores (armazenando em cada uma qual o seu número de revisão). Ao excluir propostas revisadas, o documento automaticamente é transformado na sua última versão. As propostas são, obrigatoriamente, vinculadas a negócios. Vendas e documentos não possuem a funcionalidade de revisão, ou seja, podem apenas ser editados, sem guardar a versão de como eram anteriormente;
+- Já no caso das vendas, elas podem ser geradas dentro de negócios ou diretamente no cliente. Além disso, possuem um campo nativo chamado “Estágio”, que pode ter suas opções personalizadas;
+- Por fim, os documentos gerados podem ser vinculados diretamente a clientes (documento de cliente) ou também negócios (documento de negócio);
+- Fluxos de aprovação são uma forma de controle de políticas comerciais para os PVDs gerados no Ploomes. Alguns exemplos comuns de regras que podem ser gerenciadas pelos fluxos são: 
+	- Alçadas de desconto, dando liberdade aos usuários de gerarem PVDs alterando seus valores até certo limite que, caso excedidos, precisarão passar por uma (ou mais) aprovações; 
+	- Bloqueio na emissão de PVDs que quebrem regras regulatórias (venda de produtos especiais para clientes que não possuem autorização, por exemplo);
+- Um fluxo de aprovação sempre se baseia em um critério lógico que será verificado através de um ou mais campos do Ploomes. Caso esse critério seja satisfeito, o fluxo será disparado e uma das ações abaixo acontecerá:
+	- Bloqueio - impede que a PVD seja criada; 
+	- Aprovação - a PVD será enviada aos usuários aprovadores (é possível determinar mais de um nível de aprovação) e ficará congelada (não poderá ser compartilhada) até que o usuário aprove. Os itens também poderão ser reprovados e usuários aprovadores poderão escrever comentários a respeito de sua decisão no campo “Comentários”;
+	- Alerta - o criador da PVD será alertado no momento de salvar o item, mas ele será gerado normalmente e poderá ser compartilhado.
+- O Ploomes possui um conversor de HTML em PDF que pode ser usados nos front-ends desenvolvidos;
+- O Ploomes possui um sistema de compartilhamento de propostas que gera uma URL de acesso e a envia por e-mail a uma lista de contatos automaticamente. A URL pode ser genérica, ou específica para cada destinatário. Quando o destinatário clica no link, ele consegue visualizar a PVD, aceitar ou recusar, fazer download do PVD em PDF e até comentar. O aceite não tem validade jurídica. O criador da PVD recebe avisos no sistema de notificações do Ploomes sempre que o link for aberto e, também, sempre que um comentário é feito. O cliente também recebe notificações por e-mail quando um comentário do criador é feito;
+- Todas as PVDs possuem um sistema de comentários internos (similar ao que existe em tarefas e registros de interação), um sistema de comentários externos (como explicado acima, para troca de mensagens com os contatos que recebem a URL de acesso à PVD), um sistema de acompanhamento do andamento dos fluxos de aprovação e uma pequena Timeline que mostra quando a PVD foi gerada, quando a PVD foi acessada pela URL (mostrando quem visualizou, caso o acesso tenha sido pela URL específica daquele contato), quando ela foi aceita pela URL externa, e quando foi aprovada ou recusada pelo fluxo de aprovação.
+
+Observações importantes:
+- A configuração de modelos sempre será feita pela interface administrativa do Ploomes, ou seja, não deverá ser disponibilizada no frontend a ser desenvolvido para o usuário.
+
+Dados:
+- As bases de (propostas + blocos das propostas + produtos das propostas + opcionais das propostas), (vendas + blocos das vendas + produtos das vendas + opcionais das vendas), (documentos + blocos dos documentos + produtos dos documentos + opcionais dos documentos) se utilizam dos mecanismos de formularios_e_campos do Ploomes;
+- As bases de (propostas + produtos das propostas + opcionais das propostas), (vendas + produtos das vendas + opcionais das vendas), (documentos + produtos dos documentos + opcionais dos documentos) se utilizam dos mecanismos de abas_e_tabelas_dinamicas do Ploomes. Blocos de propostas, vendas e documentos não possuem abas_e_tabelas_dinamicas;
+- As bases de (propostas + produtos das propostas + opcionais das propostas), (vendas + produtos das vendas + opcionais das vendas), (documentos + produtos dos documentos + opcionais dos documentos) se utilizam dos mecanismos de filtros do Ploomes. Blocos de propostas, vendas e documentos não possuem filtros;
+- As bases de propostas, vendas e documentos se utilizam dos mecanismos de automações_gerais do Ploomes. As outras tabelas listadas acima não;
+- Os níveis de acesso de propostas andam junto com os níveis de acesso de negócios. Os níveis de acesso de vendas andam junto com os níveis de acesso de clientes e/ou negócios. Os níveis de acesso de documentos de cliente andam juntos com níveis de acesso de clientes. Os níveis de acesso de documentos de negócio andam juntos com níveis de acesso de negócios.
+
+Vínculos:
+A lista canônica e completa de todas as relações entre entidades está no arquivo (RC) Lista_de_field_paths.txt. Os vínculos descritos abaixo permanecem aqui por trazerem regras e particularidades específicas das PVDs (obrigatoriedades, indireções, vínculos entre blocos / produtos / opcionais, etc.), e devem ser lidos em conjunto com o arquivo de field-paths.
+
+Uma proposta possui, nativamente, além de blocos, produtos e opcionais vinculadas a ela:
+- Um negócio vinculada a ela (toda proposta precisa ser gerada já vinculada a um negócio);
+- Um cliente vinculada a ela de forma indireta (a partir do negócio ao qual a proposta pertence);
+- Uma pessoa vinculada a ela de forma direta (opcional, a partir do campo contato);
+- Um responsável vinculado a ela (o responsável pela proposta, apesar de ser um campo diferente do responsável pelo negócio, sempre puxa o responsável do negócio, ou seja, não consigo ter um responsável pela proposta diferente do responsável pelo negócio);
+- Um criador vinculado a ela (obrigatório);
+- Uma tabela de parcelas (uma proposta pode conter uma tabela de parcelas dentro de si).
+- Um bloco de proposta só está vinculado à proposta;
+- Um produto de proposta está vinculado a um bloco de proposta e a um produto da base de produtos;
+- Um opcional de produto de proposta está vinculado a um produto da proposta, a um produto da base de produtos e a um vínculo da base de vínculos entre produtos pai e filhos.
+
+Uma venda possui, nativamente, além de blocos, produtos e opcionais vinculadas a ela:
+- Um negócio vinculada a ela (uma venda pode ou não estar vinculada a um negócio);
+- Um cliente vinculada a ela (obrigatório. Não há como uma venda estar vinculada a um negócio que está vinculado a um cliente que seja diferente àquele ao qual a venda está vinculada diretamente);
+- Uma pessoa vinculada a ela de forma direta (opcional, a partir do campo contato);
+- Um responsável vinculado a ela (opcional);
+- Um criador vinculado a ela (obrigatório);
+- Uma tabela de parcelas (uma venda pode conter uma tabela de parcelas dentro de si).
+- Um bloco de venda só está vinculado à venda;
+- Um produto de venda está vinculado a um bloco de venda e a um produto da base de produtos;
+- Um opcional de produto de venda está vinculado a um produto da venda, a um produto da base de produtos e a um vínculo da base de vínculos entre produtos pai e filhos.
+
+Um documento possui, nativamente, além de blocos, produtos e opcionais vinculadas a ele:
+- Um negócio vinculado a ele (um documento de cliente não pode ser vinculado a um negócio. Um documento de negócio deve obrigatoriamente estar vinculado a um negócio);
+- Um cliente vinculado a ele (de forma direta para documento de cliente, de forma indireta para documento de negócio);
+- Uma pessoa vinculada a ele de forma direta (opcional, a partir do campo contato);
+- Um criador vinculado a ele (obrigatório);
+- Uma tabela de parcelas (um documento pode conter uma tabela de parcelas dentro de si).
+- Um bloco de documento só está vinculado ao documento;
+- Um produto de documento está vinculado a um bloco de documento e a um produto da base de produtos;
+- Um opcional de produto de documento está vinculado a um produto do documento, a um produto da base de produtos e a um vínculo da base de vínculos entre produtos pai e filhos.
+
+Entretanto, para todas as entidades que possuem campos dinâmicos, sempre é possível criar um campo do tipo número inteiro e armazenar o ID de um cliente "virtualmente" vinculado, ou seja, um vínculo sem comportamento no Back-end, mas que o front-end pode se utilizar para aparentar vínculo real ao usuário.

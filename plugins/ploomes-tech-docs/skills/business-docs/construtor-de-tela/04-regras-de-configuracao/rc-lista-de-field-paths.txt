@@ -1,0 +1,268 @@
+Relações entre entidades por field-path
+
+Este documento lista, para cada entidade origem, quais entidades destino podem ser acessadas por meio de relações de field-path.
+As relações foram consolidadas por par de entidade origem e entidade destino.
+
+Outras relações podem existir nas documentações de backend e frontend, mas estas são as principais a serem usadas na arquitetura da solução do software.
+
+Clientes
+--------
+A entidade Clientes possui relação com as seguintes entidades destino:
+- Cidades
+- Cidades > Estados > Países
+- Clientes
+- Negócios
+- Produtos
+- Produtos do cliente
+- Registros de interação
+- Usuários
+- Vendas
+
+Negócios
+--------
+A entidade Negócios possui relação com as seguintes entidades destino:
+- Cidades
+- Cidades > Estados > Países
+- Cidades > Países
+- Clientes
+- Negócios
+- Produtos
+- Produtos do cliente
+- Propostas
+- Registros de interação
+- Usuários
+- Vendas
+
+Propostas
+---------
+A entidade Propostas possui relação com as seguintes entidades destino:
+- Cidades
+- Cidades > Estados > Países
+- Cidades > Países
+- Clientes
+- Equipes
+- Grupos de produtos
+- Modelos de documento
+- Negócios
+- Negócios > Funis
+- Opcionais do produto
+- Opcionais dos produtos da proposta
+- Produtos
+- Produtos da proposta
+- Produtos do cliente
+- Propostas > Parcelas
+- Blocos da proposta
+- Usuários
+- Vendas
+
+Blocos da proposta
+------------------
+A entidade Blocos da proposta possui relação com as seguintes entidades destino:
+- Negócios
+- Produtos
+- Produtos da proposta
+- Propostas
+
+Produtos da proposta
+--------------------
+A entidade Produtos da proposta possui relação com as seguintes entidades destino:
+- Cidades > Estados > Países
+- Cidades > Países
+- Clientes
+- Famílias de produtos
+- Grupos de produtos
+- Negócios
+- Opcionais da proposta
+- Produtos
+- Produtos do cliente
+- Propostas
+- Blocos da proposta
+- Usuários
+- Vendas
+
+Opcionais dos produtos da proposta
+-------------------------------
+A entidade Opcionais dos produtos da proposta possui relação com as seguintes entidades destino:
+- Cidades > Estados > Países
+- Cidades > Países
+- Clientes
+- Famílias de produtos
+- Grupos de produtos
+- Negócios
+- Opcionais do produto
+- Produtos
+- Produtos da proposta
+- Propostas
+- Usuários
+
+Vendas
+------
+A entidade Vendas possui relação com as seguintes entidades destino:
+- Cidades
+- Cidades > Estados > Países
+- Cidades > Países
+- Clientes
+- Equipes
+- Negócios
+- Opcionais do produto
+- Opcionais dos produtos da venda
+- Produtos
+- Produtos da venda
+- Produtos do cliente
+- Propostas
+- Blocos da venda
+- Usuários
+- Vendas > Parcelas
+
+Blocos da venda
+---------------
+A entidade Blocos da venda possui relação com as seguintes entidades destino:
+- Produtos da venda
+- Vendas
+
+Produtos da venda
+-----------------
+A entidade Produtos da venda possui relação com as seguintes entidades destino:
+- Clientes
+- Famílias de produtos
+- Grupos de produtos
+- Negócios
+- Opcionais dos produtos da venda
+- Produtos
+- Produtos do cliente
+- Blocos da venda
+- Usuários
+- Vendas
+
+Opcionais dos produtos da venda
+----------------------------
+A entidade Opcionais dos produtos da venda possui relação com as seguintes entidades destino:
+- Opcionais do produto
+- Produtos
+- Produtos da venda
+- Vendas
+
+Vendas > Parcelas
+-----------------
+A entidade Vendas > Parcelas possui relação com as seguintes entidades destino:
+- Usuários
+- Vendas
+
+Documentos
+----------
+A entidade Documentos possui relação com as seguintes entidades destino:
+- Cidades
+- Cidades > Estados > Países
+- Cidades > Países
+- Clientes
+- Documentos > Parcelas
+- Equipes
+- Grupos de produtos
+- Modelos de documento
+- Negócios
+- Opcionais do produto
+- Opcionais dos produtos do documento
+- Produtos
+- Produtos da proposta
+- Produtos do cliente
+- Produtos do documento
+- Propostas
+- Registros de interação
+- Blocos da proposta
+- Blocos do documento
+- Usuários
+
+Blocos do documento
+-------------------
+A entidade Blocos do documento possui relação com as seguintes entidades destino:
+- Documentos
+- Grupos de produtos
+- Produtos
+- Produtos do documento
+
+Produtos do documento
+---------------------
+A entidade Produtos do documento possui relação com as seguintes entidades destino:
+- Clientes
+- Documentos
+- Famílias de produtos
+- Grupos de produtos
+- Negócios
+- Opcionais dos produtos do documento
+- Produtos
+- Produtos do cliente
+- Blocos do documento
+- Usuários
+
+Opcionais dos produtos do documento
+--------------------------------
+A entidade Opcionais dos produtos do documento possui relação com as seguintes entidades destino:
+- Clientes
+- Famílias de produtos
+- Grupos de produtos
+- Opcionais do produto
+- Produtos
+- Produtos do documento
+- Usuários
+
+Registros de interação
+----------------------
+A entidade Registros de interação possui relação com as seguintes entidades destino:
+- Clientes
+- Negócios
+- Tarefas
+- Usuários
+
+Tarefas
+-------
+A entidade Tarefas possui relação com as seguintes entidades destino:
+- Cidades
+- Clientes
+- Negócios
+- Usuários
+
+Produtos do cliente
+-------------------
+A entidade Produtos do cliente possui relação com as seguintes entidades destino:
+- Clientes
+- Negócios
+- Negócios > Funis
+- Produtos
+- Usuários
+
+Produtos
+--------
+A entidade Produtos possui relação com as seguintes entidades destino:
+- Grupos de produtos
+- Usuários
+
+Grupos de produtos
+------------------
+A entidade Grupos de produtos possui relação com as seguintes entidades destino:
+- Famílias de produtos
+
+Opcionais do produto
+-----------------
+A entidade Opcionais do produto possui relação com as seguintes entidades destino:
+- Produtos
+
+Pessoas relacionadas
+--------------------
+A entidade Pessoas relacionadas possui relação com as seguintes entidades destino:
+- Clientes
+- Documentos
+- Negócios
+- Propostas
+- Usuários
+- Vendas
+
+Leads
+-----
+A entidade Leads possui relação com as seguintes entidades destino:
+- Clientes
+- Usuários
+
+Contexto atual
+--------------
+A entidade Contexto atual possui relação com as seguintes entidades destino:
+- Conta

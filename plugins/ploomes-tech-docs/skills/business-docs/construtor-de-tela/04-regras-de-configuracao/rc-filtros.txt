@@ -1,0 +1,11 @@
+Regras para configuração de Filtros;
+
+Para a criação de um novo filtro, as seguintes propriedades devem ou podem opcionalmente ser enviadas:
+
+- Entidade: entidade ao qual o filtro pertence;
+
+- Nome do filtro;
+
+- Quem pode ver esse filtro: primeiro, deve ser informado se essa configuração é por usuário, por perfil de usuário ou por equipe. Em seguida, eu defino uma lista de usuários, perfis ou equipes;
+
+- Filtros do filtro: um filtro pode ou não ter filtros. Se não tem, ela busca dentre todos os itens daquela entidade. O sistema de filtros se utiliza do mecanismo de field-paths.

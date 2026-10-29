@@ -1,0 +1,15 @@
+{
+  "conferidoEm": "2026-10-20",
+  "conta": "Conta de teste — tela genérica, serve para qualquer conta",
+  "comoFoiConferido": "Tela genérica: não usa funil, etapa, campo nem modelo por nome. As rotas e o formato das respostas foram conferidos numa conta de teste, só com GET (sondar-api.ps1, 2026-10-20): DealsPipelines com Stages, $apply em Deals e em DealsStagesHistory, Automations com Actions, AutomationsTriggers, AutomationsActionsActions, Checklists com Fields, DocumentTemplates, Webhooks, WebhooksActions, AccountIntegrations, Integrations e Users.",
+  "campos": {},
+  "funis": {},
+  "modelos": {},
+  "camposPorNome": {
+    "Mapeamento as-is (tela)": {
+      "entidade": 15,
+      "typeId": 2,
+      "nota": "criado numa conta de teste em 2026-10-20; gravou e leu de volta 1,5 MB idêntico, com < > & aspas e acentos. Em outra conta, quem configura cria o campo com este nome exato em Sua Empresa, tipo Texto multilinha."
+    }
+  }
+}

@@ -1,0 +1,85 @@
+<!doctype html>
+<!--
+  Ploomes Design System — snapshot estático das stories do Storybook.
+  Componente : Atoms/ProfileGroup
+  Stories    : 4 (Default, With Overflow, Sizes, Amounts)
+  Story      : ProfileGroup.stories.tsx
+  Tema       : light — use <html class="dark"> para o tema escuro.
+-->
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ProfileGroup — Ploomes DS</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;600;700&display=swap">
+<link rel="stylesheet" href="../assets/design-system.css">
+<link rel="stylesheet" href="../assets/page.css">
+</head>
+<body class="ds-page">
+  <header class="ds-head">
+    <a class="ds-back" href="../index.html">← inventário</a>
+    <h1 class="ds-title">ProfileGroup</h1>
+    <p class="ds-meta">atoms · 4 stories · <code>ProfileGroup.stories.tsx</code></p>
+    <pre class="ds-code ds-import">import { ProfileGroup } from &#x27;@ploomescrm/ui&#x27;;</pre>
+    <pre class="ds-code">// props padrão de todas as stories (meta.args)
+args: {
+  images: AVATARS.slice(0, 3),
+  size: &#x27;small&#x27;,
+  max: 3,
+}</pre>
+  </header>
+  <section class="ds-story">
+    <h2 class="ds-story-name">Default</h2>
+    <div class="ds-story-id">atoms-profilegroup--default · export <b>Default</b></div>
+    <div class="ds-canvas ds-canvas--padded">
+<div class="isolate flex items-center px-[5px]"><div class="shrink-0 -mr-[4px] size-[20px]" style="z-index: 3;"><img alt="" class="shrink-0 rounded-full overflow-hidden object-cover size-[20px] border border-white" src="https://i.pravatar.cc/150?img=1"/></div><div class="shrink-0 -mr-[4px] size-[20px]" style="z-index: 2;"><img alt="" class="shrink-0 rounded-full overflow-hidden object-cover size-[20px] border border-white" src="https://i.pravatar.cc/150?img=2"/></div><div class="shrink-0 -mr-[4px] size-[20px]" style="z-index: 1;"><img alt="" class="shrink-0 rounded-full overflow-hidden object-cover size-[20px] border border-white" src="https://i.pravatar.cc/150?img=3"/></div></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const Default: Story = {}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">With Overflow</h2>
+    <div class="ds-story-id">atoms-profilegroup--with-overflow · export <b>WithOverflow</b></div>
+    <div class="ds-canvas ds-canvas--padded">
+<div class="isolate flex items-center px-[5px]"><div class="shrink-0 -mr-[4px] size-[20px]" style="z-index: 4;"><img alt="" class="shrink-0 rounded-full overflow-hidden object-cover size-[20px] border border-white" src="https://i.pravatar.cc/150?img=1"/></div><div class="shrink-0 -mr-[4px] size-[20px]" style="z-index: 3;"><img alt="" class="shrink-0 rounded-full overflow-hidden object-cover size-[20px] border border-white" src="https://i.pravatar.cc/150?img=2"/></div><div class="shrink-0 -mr-[4px] size-[20px]" style="z-index: 2;"><img alt="" class="shrink-0 rounded-full overflow-hidden object-cover size-[20px] border border-white" src="https://i.pravatar.cc/150?img=3"/></div><div class="flex shrink-0 items-center justify-center rounded-full bg-[rgba(24,21,38,0.05)] size-[20px]" style="z-index: 1;"><span class="whitespace-nowrap text-[#5c5967] text-[10px]">+3</span></div></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const WithOverflow: Story = {
+  args: {
+    images: AVATARS,
+    max: 3,
+  },
+}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">Sizes</h2>
+    <div class="ds-story-id">atoms-profilegroup--sizes · export <b>Sizes</b></div>
+    <div class="ds-canvas ds-canvas--padded">
+<div style="display: flex; flex-direction: column; gap: 16px;"><div class="isolate flex items-center px-[5px]"><div class="shrink-0 -mr-[3px] size-[15px]" style="z-index: 4;"><img alt="" class="shrink-0 rounded-full overflow-hidden object-cover size-[15px] border border-white" src="https://i.pravatar.cc/150?img=1"/></div><div class="shrink-0 -mr-[3px] size-[15px]" style="z-index: 3;"><img alt="" class="shrink-0 rounded-full overflow-hidden object-cover size-[15px] border border-white" src="https://i.pravatar.cc/150?img=2"/></div><div class="shrink-0 -mr-[3px] size-[15px]" style="z-index: 2;"><img alt="" class="shrink-0 rounded-full overflow-hidden object-cover size-[15px] border border-white" src="https://i.pravatar.cc/150?img=3"/></div><div class="flex shrink-0 items-center justify-center rounded-full bg-[rgba(24,21,38,0.05)] size-[15px]" style="z-index: 1;"><span class="whitespace-nowrap text-[#5c5967] text-[8px]">+3</span></div></div><div class="isolate flex items-center px-[5px]"><div class="shrink-0 -mr-[4px] size-[20px]" style="z-index: 4;"><img alt="" class="shrink-0 rounded-full overflow-hidden object-cover size-[20px] border border-white" src="https://i.pravatar.cc/150?img=1"/></div><div class="shrink-0 -mr-[4px] size-[20px]" style="z-index: 3;"><img alt="" class="shrink-0 rounded-full overflow-hidden object-cover size-[20px] border border-white" src="https://i.pravatar.cc/150?img=2"/></div><div class="shrink-0 -mr-[4px] size-[20px]" style="z-index: 2;"><img alt="" class="shrink-0 rounded-full overflow-hidden object-cover size-[20px] border border-white" src="https://i.pravatar.cc/150?img=3"/></div><div class="flex shrink-0 items-center justify-center rounded-full bg-[rgba(24,21,38,0.05)] size-[20px]" style="z-index: 1;"><span class="whitespace-nowrap text-[#5c5967] text-[10px]">+3</span></div></div><div class="isolate flex items-center px-[5px]"><div class="shrink-0 -mr-[5px] size-[25px]" style="z-index: 4;"><img alt="" class="shrink-0 rounded-full overflow-hidden object-cover size-[25px] border border-white" src="https://i.pravatar.cc/150?img=1"/></div><div class="shrink-0 -mr-[5px] size-[25px]" style="z-index: 3;"><img alt="" class="shrink-0 rounded-full overflow-hidden object-cover size-[25px] border border-white" src="https://i.pravatar.cc/150?img=2"/></div><div class="shrink-0 -mr-[5px] size-[25px]" style="z-index: 2;"><img alt="" class="shrink-0 rounded-full overflow-hidden object-cover size-[25px] border border-white" src="https://i.pravatar.cc/150?img=3"/></div><div class="flex shrink-0 items-center justify-center rounded-full bg-[rgba(24,21,38,0.05)] size-[25px]" style="z-index: 1;"><span class="whitespace-nowrap text-[#5c5967] text-[13px]">+3</span></div></div></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const Sizes: Story = {
+  render: (args) =&gt; (
+    &lt;div style={{ display: &#x27;flex&#x27;, flexDirection: &#x27;column&#x27;, gap: 16 }}&gt;
+      &lt;ProfileGroup {...args} size=&quot;tiny&quot; images={AVATARS} max={3} /&gt;
+      &lt;ProfileGroup {...args} size=&quot;small&quot; images={AVATARS} max={3} /&gt;
+      &lt;ProfileGroup {...args} size=&quot;normal&quot; images={AVATARS} max={3} /&gt;
+    &lt;/div&gt;
+  ),
+}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">Amounts</h2>
+    <div class="ds-story-id">atoms-profilegroup--amounts · export <b>Amounts</b></div>
+    <div class="ds-canvas ds-canvas--padded">
+<div style="display: flex; flex-direction: column; gap: 16px;"><div class="isolate flex items-center px-[5px]"><div class="shrink-0 -mr-[4px] size-[20px]" style="z-index: 2;"><img alt="" class="shrink-0 rounded-full overflow-hidden object-cover size-[20px] border border-white" src="https://i.pravatar.cc/150?img=1"/></div><div class="shrink-0 -mr-[4px] size-[20px]" style="z-index: 1;"><img alt="" class="shrink-0 rounded-full overflow-hidden object-cover size-[20px] border border-white" src="https://i.pravatar.cc/150?img=2"/></div></div><div class="isolate flex items-center px-[5px]"><div class="shrink-0 -mr-[4px] size-[20px]" style="z-index: 3;"><img alt="" class="shrink-0 rounded-full overflow-hidden object-cover size-[20px] border border-white" src="https://i.pravatar.cc/150?img=1"/></div><div class="shrink-0 -mr-[4px] size-[20px]" style="z-index: 2;"><img alt="" class="shrink-0 rounded-full overflow-hidden object-cover size-[20px] border border-white" src="https://i.pravatar.cc/150?img=2"/></div><div class="shrink-0 -mr-[4px] size-[20px]" style="z-index: 1;"><img alt="" class="shrink-0 rounded-full overflow-hidden object-cover size-[20px] border border-white" src="https://i.pravatar.cc/150?img=3"/></div></div><div class="isolate flex items-center px-[5px]"><div class="shrink-0 -mr-[4px] size-[20px]" style="z-index: 4;"><img alt="" class="shrink-0 rounded-full overflow-hidden object-cover size-[20px] border border-white" src="https://i.pravatar.cc/150?img=1"/></div><div class="shrink-0 -mr-[4px] size-[20px]" style="z-index: 3;"><img alt="" class="shrink-0 rounded-full overflow-hidden object-cover size-[20px] border border-white" src="https://i.pravatar.cc/150?img=2"/></div><div class="shrink-0 -mr-[4px] size-[20px]" style="z-index: 2;"><img alt="" class="shrink-0 rounded-full overflow-hidden object-cover size-[20px] border border-white" src="https://i.pravatar.cc/150?img=3"/></div><div class="flex shrink-0 items-center justify-center rounded-full bg-[rgba(24,21,38,0.05)] size-[20px]" style="z-index: 1;"><span class="whitespace-nowrap text-[#5c5967] text-[10px]">+3</span></div></div></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const Amounts: Story = {
+  render: (args) =&gt; (
+    &lt;div style={{ display: &#x27;flex&#x27;, flexDirection: &#x27;column&#x27;, gap: 16 }}&gt;
+      &lt;ProfileGroup {...args} images={AVATARS.slice(0, 2)} max={3} /&gt;
+      &lt;ProfileGroup {...args} images={AVATARS.slice(0, 3)} max={3} /&gt;
+      &lt;ProfileGroup {...args} images={AVATARS} max={3} /&gt;
+    &lt;/div&gt;
+  ),
+}</code></pre></details>
+  </section>
+</body>
+</html>

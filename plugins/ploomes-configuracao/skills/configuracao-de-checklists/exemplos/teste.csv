@@ -1,0 +1,6 @@
+Descrição do item,N° do Checklist,Nome do Checklist,Funil,Etapa do funil,Entidade do Item,EntityId,Campo do item,Dynamic(true/false),FieldId,Required (true/false),Operador lógico,OperationId,Valor,Type,TypeId,OptionsTable,OptionsTable@Options
+"Preencha o CNPJ do cliente","1","Qualificação","Vendas Diretas","Qualificação","Cliente","1","CNPJ","false","1234","true","Diferente de","2","","Texto","1","",""
+"Orçamento aprovado?","1","Qualificação","Vendas Diretas","Qualificação","Negócio","2","Orçamento aprovado?","true","","true","Igual a","1","Sim","Seleção","7","",""
+"Informe o concorrente citado","1","Qualificação","Vendas Diretas","Qualificação","Negócio","2","Concorrente","true","","false","","","","Texto","1","",""
+"Valor da proposta","2","Fechamento","Vendas Diretas","Negociação","Proposta","5","Valor","false","99","true","Maior que","3","10000","Decimal","4","",""
+"Data de entrega","3","Entrega","Vendas Diretas","Etapa Inexistente","Negócio","2","Data de entrega","true","55","true","Contém","3","","Data","6","",""

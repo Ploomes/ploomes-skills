@@ -1,0 +1,53 @@
+{
+  "versao": 1,
+  "tela": { "nome": "Agenda de reposição", "slug": "agenda-de-reposicao" },
+  "funis": {
+    "reposicao": {
+      "nome": "Reposição Programada",
+      "etapas": {
+        "mapeado": "Ciclo de consumo mapeado",
+        "prevista": "Reposição prevista",
+        "confirmada": "Reposição confirmada"
+      }
+    }
+  },
+  "modelos": {},
+  "campos": {
+    "dataPrevista":      { "fieldKey": "deal_B0000007-0000-4000-8000-000000000007", "typeId": 8 },
+    "consumoConfirmado": { "fieldKey": "deal_B0000002-0000-4000-8000-000000000002", "typeId": 7, "opcoes": true },
+    "consumoMensal":     { "fieldKey": "deal_B0000003-0000-4000-8000-000000000003", "typeId": 6 }
+  },
+  "leituras": {
+    "reposicoesDaEtapa": {
+      "rota": "Deals",
+      "select": ["Id", "Title", "StageId", "StatusId", "ContactId", "OwnerId"],
+      "expand": ["Contact($select=Id,Name)"],
+      "outrosCampos": ["dataPrevista", "consumoConfirmado", "consumoMensal"],
+      "filtro": "PipelineId eq {funil:reposicao} and StageId eq {param:etapaId} and StatusId ne 3",
+      "parametros": { "etapaId": "number" },
+      "pagina": 50
+    },
+    "janelaDeReposicao": {
+      "rota": "Deals",
+      "select": ["Id", "Title", "StageId", "StatusId", "ContactId"],
+      "expand": ["Contact($select=Id,Name)"],
+      "outrosCampos": ["dataPrevista", "consumoMensal"],
+      "filtro": "PipelineId eq {funil:reposicao} and StatusId eq 1 and OtherProperties/any(op: op/FieldKey eq {campo:dataPrevista} and op/DateTimeValue le {param:ate})",
+      "parametros": { "ate": "date" },
+      "pagina": 50
+    },
+    "reposicaoPorId": {
+      "rota": "Deals",
+      "select": ["Id", "Title", "StageId", "StatusId", "ContactId", "OwnerId"],
+      "expand": ["Contact($select=Id,Name)"],
+      "outrosCampos": ["dataPrevista", "consumoConfirmado", "consumoMensal"],
+      "umRegistro": true
+    }
+  },
+  "escritas": {
+    "moverDeEtapa":       { "rota": "Deals", "metodo": "PATCH", "nativos": ["StageId"], "campos": [] },
+    "registrarConsumo":   { "rota": "Deals", "metodo": "PATCH", "nativos": [], "campos": ["consumoConfirmado", "consumoMensal", "dataPrevista"] },
+    "confirmarReposicao": { "rota": "Deals", "acao": "Win" },
+    "reabrirReposicao":   { "rota": "Deals", "acao": "Reopen" }
+  }
+}

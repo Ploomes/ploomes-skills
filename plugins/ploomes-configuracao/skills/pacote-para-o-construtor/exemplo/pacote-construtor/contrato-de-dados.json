@@ -1,0 +1,168 @@
+{
+  "versao": 1,
+  "tela": {
+    "nome": "Quadro de embarques",
+    "slug": "quadro-de-embarques"
+  },
+  "funis": {
+    "embarques": {
+      "nome": "Embarques",
+      "etapas": {
+        "documentacao": "Documentação",
+        "carregamento": "Aguardando carregamento",
+        "emEmbarque": "Em embarque",
+        "finalizado": "Finalizado"
+      }
+    }
+  },
+  "modelos": {
+    "pedido": {
+      "nome": "Pedido de venda"
+    }
+  },
+  "campos": {
+    "dataEmbarque": {
+      "fieldKey": "deal_0A1B2C3D-0000-4000-8000-000000000001",
+      "typeId": 8
+    },
+    "notaFiscal": {
+      "fieldKey": "deal_0A1B2C3D-0000-4000-8000-000000000002",
+      "typeId": 1
+    },
+    "toneladas": {
+      "fieldKey": "deal_0A1B2C3D-0000-4000-8000-000000000003",
+      "typeId": 6
+    },
+    "modal": {
+      "fieldKey": "deal_0A1B2C3D-0000-4000-8000-000000000004",
+      "typeId": 7,
+      "opcoes": true
+    }
+  },
+  "leituras": {
+    "embarquesDaEtapa": {
+      "rota": "Deals",
+      "select": [
+        "Id",
+        "Title",
+        "StageId",
+        "StatusId",
+        "ContactId",
+        "OwnerId"
+      ],
+      "expand": [
+        "Contact($select=Id,Name)"
+      ],
+      "outrosCampos": [
+        "dataEmbarque",
+        "notaFiscal",
+        "toneladas",
+        "modal"
+      ],
+      "filtro": "PipelineId eq {funil:embarques} and StageId eq {param:etapaId} and StatusId ne 3",
+      "parametros": {
+        "etapaId": "number"
+      },
+      "pagina": 50
+    },
+    "meusEmbarquesDaEtapa": {
+      "rota": "Deals",
+      "select": [
+        "Id",
+        "Title",
+        "StageId",
+        "StatusId",
+        "ContactId",
+        "OwnerId"
+      ],
+      "expand": [
+        "Contact($select=Id,Name)"
+      ],
+      "outrosCampos": [
+        "dataEmbarque",
+        "notaFiscal",
+        "toneladas",
+        "modal"
+      ],
+      "filtro": "PipelineId eq {funil:embarques} and StageId eq {param:etapaId} and StatusId ne 3 and OwnerId eq {usuario}",
+      "parametros": {
+        "etapaId": "number"
+      },
+      "pagina": 50
+    },
+    "embarquePorId": {
+      "rota": "Deals",
+      "select": [
+        "Id",
+        "Title",
+        "StageId",
+        "StatusId",
+        "ContactId",
+        "OwnerId"
+      ],
+      "expand": [
+        "Contact($select=Id,Name)"
+      ],
+      "outrosCampos": [
+        "dataEmbarque",
+        "notaFiscal",
+        "toneladas",
+        "modal"
+      ],
+      "umRegistro": true
+    },
+    "buscarPorNotaFiscal": {
+      "rota": "Deals",
+      "select": [
+        "Id",
+        "Title",
+        "StageId",
+        "StatusId",
+        "ContactId",
+        "OwnerId"
+      ],
+      "expand": [
+        "Contact($select=Id,Name)"
+      ],
+      "outrosCampos": [
+        "dataEmbarque",
+        "notaFiscal",
+        "toneladas",
+        "modal"
+      ],
+      "filtro": "PipelineId eq {funil:embarques} and OtherProperties/any(op: op/FieldKey eq {campo:notaFiscal} and op/StringValue eq {param:nf})",
+      "parametros": {
+        "nf": "string"
+      },
+      "pagina": 20
+    }
+  },
+  "escritas": {
+    "moverDeEtapa": {
+      "rota": "Deals",
+      "metodo": "PATCH",
+      "nativos": [
+        "StageId"
+      ],
+      "campos": []
+    },
+    "registrarCarregamento": {
+      "rota": "Deals",
+      "metodo": "PATCH",
+      "nativos": [],
+      "campos": [
+        "dataEmbarque",
+        "notaFiscal",
+        "toneladas"
+      ]
+    },
+    "finalizarEmbarque": {
+      "rota": "Deals",
+      "acao": "Win"
+    },
+    "reabrirEmbarque": {
+      "rota": "Deals",
+      "acao": "Reopen"
+    }
+  }
+}

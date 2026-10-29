@@ -1,0 +1,214 @@
+<!doctype html>
+<!--
+  Ploomes Design System — snapshot estático das stories do Storybook.
+  Componente : Organisms/EmptyLabel
+  Stories    : 8 (Default, With Action, No Icon, No Content, No Action, Custom Icon, Custom Icon File, All Variants)
+  Story      : EmptyLabel.stories.tsx
+  Tema       : light — use <html class="dark"> para o tema escuro.
+-->
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>EmptyLabel — Ploomes DS</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;600;700&display=swap">
+<link rel="stylesheet" href="../assets/design-system.css">
+<link rel="stylesheet" href="../assets/page.css">
+</head>
+<body class="ds-page">
+  <header class="ds-head">
+    <a class="ds-back" href="../index.html">← inventário</a>
+    <h1 class="ds-title">EmptyLabel</h1>
+    <p class="ds-meta">organisms · 8 stories · <code>EmptyLabel.stories.tsx</code></p>
+    <pre class="ds-code ds-import">import { EmptyLabel, ButtonSoft, Icon } from &#x27;@ploomescrm/ui&#x27;;</pre>
+    <pre class="ds-code">// props padrão de todas as stories (meta.args)
+args: {
+  showIcon: true,
+  title: &#x27;Não há dados para exibir&#x27;,
+  content:
+    &#x27;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut varius odio ex, sed euismod justo mattis in.&#x27;,
+}</pre>
+  </header>
+  <section class="ds-story">
+    <h2 class="ds-story-name">Default</h2>
+    <div class="ds-story-id">organisms-emptylabel--default · export <b>Default</b></div>
+    <div class="ds-canvas ds-canvas--centered">
+<div class="flex w-full max-w-[300px] flex-col items-center gap-[25px]"><div class="flex w-full flex-col items-center gap-[20px]"><div class="flex shrink-0 items-center justify-center"><svg aria-hidden="true" class="text-font-level_2" fill="none" height="90" viewbox="0 0 90 90" width="90"><circle cx="45" cy="45" opacity="0.4" r="36" stroke="currentColor" stroke-width="6"></circle><line stroke="currentColor" stroke-linecap="round" stroke-width="6" x1="18" x2="72" y1="72" y2="18"></line></svg></div><div class="flex w-full flex-col items-center gap-[5px] text-center text-font-level_2"><p class="w-full text-[18px] font-semibold leading-normal">Não há dados para exibir</p><p class="w-full text-[14px] leading-normal">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut varius odio ex, sed euismod justo mattis in.</p></div></div></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const Default: Story = {}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">With Action</h2>
+    <div class="ds-story-id">organisms-emptylabel--with-action · export <b>WithAction</b></div>
+    <div class="ds-canvas ds-canvas--centered">
+<div class="flex w-full max-w-[300px] flex-col items-center gap-[25px]"><div class="flex w-full flex-col items-center gap-[20px]"><div class="flex shrink-0 items-center justify-center"><svg aria-hidden="true" class="text-font-level_2" fill="none" height="90" viewbox="0 0 90 90" width="90"><circle cx="45" cy="45" opacity="0.4" r="36" stroke="currentColor" stroke-width="6"></circle><line stroke="currentColor" stroke-linecap="round" stroke-width="6" x1="18" x2="72" y1="72" y2="18"></line></svg></div><div class="flex w-full flex-col items-center gap-[5px] text-center text-font-level_2"><p class="w-full text-[18px] font-semibold leading-normal">Não há dados para exibir</p><p class="w-full text-[14px] leading-normal">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut varius odio ex, sed euismod justo mattis in.</p></div></div><div class="flex shrink-0 items-center"><button class="relative isolate inline-flex shrink-0 cursor-pointer items-center gap-[5px] rounded-[5px] px-[5px] text-sm text-font transition-colors before:pointer-events-none before:absolute before:inset-0 before:-z-10 before:rounded-[5px] before:bg-transparent before:transition-colors before:content-[''] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-confirmation focus-visible:ring-offset-1 disabled:pointer-events-none disabled:opacity-40 border border-neutral-level_2 bg-background hover:before:bg-neutral-level_1 active:before:bg-neutral-level_2 h-[35px]"><span class="flex shrink-0 items-center justify-center pl-[5px]"><span aria-hidden="true" class="inline-flex shrink-0 items-center justify-center text-font"><svg aria-hidden="true" class="lucide lucide-plus" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="15" xmlns="http://www.w3.org/2000/svg"><path d="M5 12h14"></path><path d="M12 5v14"></path></svg></span></span><span class="overflow-hidden text-ellipsis whitespace-nowrap px-[5px]">Adicionar item</span></button></div></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const WithAction: Story = {
+  render: (args) =&gt; &lt;EmptyLabel {...args} action={&lt;AddButton /&gt;} /&gt;,
+}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">No Icon</h2>
+    <div class="ds-story-id">organisms-emptylabel--no-icon · export <b>NoIcon</b></div>
+    <div class="ds-canvas ds-canvas--centered">
+<div class="flex w-full max-w-[300px] flex-col items-center gap-[25px]"><div class="flex w-full flex-col items-center gap-[20px]"><div class="flex w-full flex-col items-center gap-[5px] text-center text-font-level_2"><p class="w-full text-[18px] font-semibold leading-normal">Não há dados para exibir</p><p class="w-full text-[14px] leading-normal">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut varius odio ex, sed euismod justo mattis in.</p></div></div><div class="flex shrink-0 items-center"><button class="relative isolate inline-flex shrink-0 cursor-pointer items-center gap-[5px] rounded-[5px] px-[5px] text-sm text-font transition-colors before:pointer-events-none before:absolute before:inset-0 before:-z-10 before:rounded-[5px] before:bg-transparent before:transition-colors before:content-[''] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-confirmation focus-visible:ring-offset-1 disabled:pointer-events-none disabled:opacity-40 border border-neutral-level_2 bg-background hover:before:bg-neutral-level_1 active:before:bg-neutral-level_2 h-[35px]"><span class="flex shrink-0 items-center justify-center pl-[5px]"><span aria-hidden="true" class="inline-flex shrink-0 items-center justify-center text-font"><svg aria-hidden="true" class="lucide lucide-plus" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="15" xmlns="http://www.w3.org/2000/svg"><path d="M5 12h14"></path><path d="M12 5v14"></path></svg></span></span><span class="overflow-hidden text-ellipsis whitespace-nowrap px-[5px]">Adicionar item</span></button></div></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const NoIcon: Story = {
+  render: (args) =&gt; (
+    &lt;EmptyLabel {...args} showIcon={false} action={&lt;AddButton /&gt;} /&gt;
+  ),
+}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">No Content</h2>
+    <div class="ds-story-id">organisms-emptylabel--no-content · export <b>NoContent</b></div>
+    <div class="ds-canvas ds-canvas--centered">
+<div class="flex w-full max-w-[300px] flex-col items-center gap-[25px]"><div class="flex w-full flex-col items-center gap-[20px]"><div class="flex shrink-0 items-center justify-center"><svg aria-hidden="true" class="text-font-level_2" fill="none" height="90" viewbox="0 0 90 90" width="90"><circle cx="45" cy="45" opacity="0.4" r="36" stroke="currentColor" stroke-width="6"></circle><line stroke="currentColor" stroke-linecap="round" stroke-width="6" x1="18" x2="72" y1="72" y2="18"></line></svg></div><div class="flex w-full flex-col items-center gap-[5px] text-center text-font-level_2"><p class="w-full text-[18px] font-semibold leading-normal">Não há dados para exibir</p></div></div><div class="flex shrink-0 items-center"><button class="relative isolate inline-flex shrink-0 cursor-pointer items-center gap-[5px] rounded-[5px] px-[5px] text-sm text-font transition-colors before:pointer-events-none before:absolute before:inset-0 before:-z-10 before:rounded-[5px] before:bg-transparent before:transition-colors before:content-[''] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-confirmation focus-visible:ring-offset-1 disabled:pointer-events-none disabled:opacity-40 border border-neutral-level_2 bg-background hover:before:bg-neutral-level_1 active:before:bg-neutral-level_2 h-[35px]"><span class="flex shrink-0 items-center justify-center pl-[5px]"><span aria-hidden="true" class="inline-flex shrink-0 items-center justify-center text-font"><svg aria-hidden="true" class="lucide lucide-plus" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="15" xmlns="http://www.w3.org/2000/svg"><path d="M5 12h14"></path><path d="M12 5v14"></path></svg></span></span><span class="overflow-hidden text-ellipsis whitespace-nowrap px-[5px]">Adicionar item</span></button></div></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const NoContent: Story = {
+  render: (args) =&gt; (
+    &lt;EmptyLabel {...args} content={undefined} action={&lt;AddButton /&gt;} /&gt;
+  ),
+}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">No Action</h2>
+    <div class="ds-story-id">organisms-emptylabel--no-action · export <b>NoAction</b></div>
+    <div class="ds-canvas ds-canvas--centered">
+<div class="flex w-full max-w-[300px] flex-col items-center gap-[25px]"><div class="flex w-full flex-col items-center gap-[20px]"><div class="flex shrink-0 items-center justify-center"><svg aria-hidden="true" class="text-font-level_2" fill="none" height="90" viewbox="0 0 90 90" width="90"><circle cx="45" cy="45" opacity="0.4" r="36" stroke="currentColor" stroke-width="6"></circle><line stroke="currentColor" stroke-linecap="round" stroke-width="6" x1="18" x2="72" y1="72" y2="18"></line></svg></div><div class="flex w-full flex-col items-center gap-[5px] text-center text-font-level_2"><p class="w-full text-[18px] font-semibold leading-normal">Não há dados para exibir</p><p class="w-full text-[14px] leading-normal">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut varius odio ex, sed euismod justo mattis in.</p></div></div></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const NoAction: Story = {
+  render: (args) =&gt; &lt;EmptyLabel {...args} /&gt;,
+}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">Custom Icon</h2>
+    <div class="ds-story-id">organisms-emptylabel--custom-icon · export <b>CustomIcon</b></div>
+    <div class="ds-canvas ds-canvas--centered">
+<div class="flex w-full max-w-[300px] flex-col items-center gap-[25px]"><div class="flex w-full flex-col items-center gap-[20px]"><div class="flex shrink-0 items-center justify-center"><svg aria-hidden="true" class="text-font-level_2" fill="none" height="90" viewbox="0 0 90 90" width="90"><circle cx="38" cy="38" opacity="0.4" r="24" stroke="currentColor" stroke-width="6"></circle><line stroke="currentColor" stroke-linecap="round" stroke-width="6" x1="56" x2="74" y1="56" y2="74"></line></svg></div><div class="flex w-full flex-col items-center gap-[5px] text-center text-font-level_2"><p class="w-full text-[18px] font-semibold leading-normal">Nenhum resultado encontrado</p><p class="w-full text-[14px] leading-normal">Tente ajustar os filtros ou buscar por outro termo.</p></div></div><div class="flex shrink-0 items-center"><button class="relative isolate inline-flex shrink-0 cursor-pointer items-center gap-[5px] rounded-[5px] px-[5px] text-sm text-font transition-colors before:pointer-events-none before:absolute before:inset-0 before:-z-10 before:rounded-[5px] before:bg-transparent before:transition-colors before:content-[''] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-confirmation focus-visible:ring-offset-1 disabled:pointer-events-none disabled:opacity-40 border border-neutral-level_2 bg-background hover:before:bg-neutral-level_1 active:before:bg-neutral-level_2 h-[35px]"><span class="flex shrink-0 items-center justify-center pl-[5px]"><svg aria-hidden="true" fill="none" height="15" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="15"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="17 8 12 3 7 8"></polyline><line x1="12" x2="12" y1="3" y2="15"></line></svg></span><span class="overflow-hidden text-ellipsis whitespace-nowrap px-[5px]">Importar dados</span></button></div></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const CustomIcon: Story = {
+  render: (args) =&gt; (
+    &lt;EmptyLabel
+      {...args}
+      icon={&lt;SearchIcon /&gt;}
+      title=&quot;Nenhum resultado encontrado&quot;
+      content=&quot;Tente ajustar os filtros ou buscar por outro termo.&quot;
+      action={&lt;ImportButton /&gt;}
+    /&gt;
+  ),
+}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">Custom Icon File</h2>
+    <div class="ds-story-id">organisms-emptylabel--custom-icon-file · export <b>CustomIconFile</b></div>
+    <div class="ds-canvas ds-canvas--centered">
+<div class="flex w-full max-w-[300px] flex-col items-center gap-[25px]"><div class="flex w-full flex-col items-center gap-[20px]"><div class="flex shrink-0 items-center justify-center"><svg aria-hidden="true" class="text-font-level_2" fill="none" height="90" viewbox="0 0 90 90" width="90"><path d="M20 15 L55 15 L70 30 L70 75 L20 75 Z" opacity="0.4" stroke="currentColor" stroke-linejoin="round" stroke-width="6"></path><path d="M55 15 L55 30 L70 30" stroke="currentColor" stroke-linejoin="round" stroke-width="6"></path><line stroke="currentColor" stroke-linecap="round" stroke-width="4" x1="32" x2="58" y1="45" y2="45"></line><line stroke="currentColor" stroke-linecap="round" stroke-width="4" x1="32" x2="50" y1="57" y2="57"></line></svg></div><div class="flex w-full flex-col items-center gap-[5px] text-center text-font-level_2"><p class="w-full text-[18px] font-semibold leading-normal">Nenhum arquivo encontrado</p><p class="w-full text-[14px] leading-normal">Faça upload de um arquivo para começar.</p></div></div><div class="flex shrink-0 items-center"><button class="relative isolate inline-flex shrink-0 cursor-pointer items-center gap-[5px] rounded-[5px] px-[5px] text-sm text-font transition-colors before:pointer-events-none before:absolute before:inset-0 before:-z-10 before:rounded-[5px] before:bg-transparent before:transition-colors before:content-[''] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-confirmation focus-visible:ring-offset-1 disabled:pointer-events-none disabled:opacity-40 border border-neutral-level_2 bg-background hover:before:bg-neutral-level_1 active:before:bg-neutral-level_2 h-[35px]"><span class="flex shrink-0 items-center justify-center pl-[5px]"><svg aria-hidden="true" fill="none" height="15" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="15"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="17 8 12 3 7 8"></polyline><line x1="12" x2="12" y1="3" y2="15"></line></svg></span><span class="overflow-hidden text-ellipsis whitespace-nowrap px-[5px]">Importar dados</span></button></div></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const CustomIconFile: Story = {
+  render: (args) =&gt; (
+    &lt;EmptyLabel
+      {...args}
+      icon={&lt;FileIcon /&gt;}
+      title=&quot;Nenhum arquivo encontrado&quot;
+      content=&quot;Faça upload de um arquivo para começar.&quot;
+      action={&lt;ImportButton /&gt;}
+    /&gt;
+  ),
+}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">All Variants</h2>
+    <div class="ds-story-id">organisms-emptylabel--all-variants · export <b>AllVariants</b></div>
+    <div class="ds-canvas ds-canvas--centered">
+<div style="display: flex; gap: 40px; flex-wrap: wrap; align-items: flex-start; padding: 40px;"><div style="display: flex; flex-direction: column; gap: 8px; align-items: center;"><p style="font-size: 12px; color: rgb(139, 133, 149); margin-bottom: 4px;">icon + content + action</p><div class="flex w-full max-w-[300px] flex-col items-center gap-[25px]"><div class="flex w-full flex-col items-center gap-[20px]"><div class="flex shrink-0 items-center justify-center"><svg aria-hidden="true" class="text-font-level_2" fill="none" height="90" viewbox="0 0 90 90" width="90"><circle cx="45" cy="45" opacity="0.4" r="36" stroke="currentColor" stroke-width="6"></circle><line stroke="currentColor" stroke-linecap="round" stroke-width="6" x1="18" x2="72" y1="72" y2="18"></line></svg></div><div class="flex w-full flex-col items-center gap-[5px] text-center text-font-level_2"><p class="w-full text-[18px] font-semibold leading-normal">Não há dados para exibir</p><p class="w-full text-[14px] leading-normal">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut varius odio ex, sed euismod justo mattis in.</p></div></div><div class="flex shrink-0 items-center"><button class="relative isolate inline-flex shrink-0 cursor-pointer items-center gap-[5px] rounded-[5px] px-[5px] text-sm text-font transition-colors before:pointer-events-none before:absolute before:inset-0 before:-z-10 before:rounded-[5px] before:bg-transparent before:transition-colors before:content-[''] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-confirmation focus-visible:ring-offset-1 disabled:pointer-events-none disabled:opacity-40 border border-neutral-level_2 bg-background hover:before:bg-neutral-level_1 active:before:bg-neutral-level_2 h-[35px]"><span class="flex shrink-0 items-center justify-center pl-[5px]"><span aria-hidden="true" class="inline-flex shrink-0 items-center justify-center text-font"><svg aria-hidden="true" class="lucide lucide-plus" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="15" xmlns="http://www.w3.org/2000/svg"><path d="M5 12h14"></path><path d="M12 5v14"></path></svg></span></span><span class="overflow-hidden text-ellipsis whitespace-nowrap px-[5px]">Adicionar item</span></button></div></div></div><div style="display: flex; flex-direction: column; gap: 8px; align-items: center;"><p style="font-size: 12px; color: rgb(139, 133, 149); margin-bottom: 4px;">icon + content (sem ação)</p><div class="flex w-full max-w-[300px] flex-col items-center gap-[25px]"><div class="flex w-full flex-col items-center gap-[20px]"><div class="flex shrink-0 items-center justify-center"><svg aria-hidden="true" class="text-font-level_2" fill="none" height="90" viewbox="0 0 90 90" width="90"><circle cx="45" cy="45" opacity="0.4" r="36" stroke="currentColor" stroke-width="6"></circle><line stroke="currentColor" stroke-linecap="round" stroke-width="6" x1="18" x2="72" y1="72" y2="18"></line></svg></div><div class="flex w-full flex-col items-center gap-[5px] text-center text-font-level_2"><p class="w-full text-[18px] font-semibold leading-normal">Não há dados para exibir</p><p class="w-full text-[14px] leading-normal">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut varius odio ex, sed euismod justo mattis in.</p></div></div></div></div><div style="display: flex; flex-direction: column; gap: 8px; align-items: center;"><p style="font-size: 12px; color: rgb(139, 133, 149); margin-bottom: 4px;">sem icon</p><div class="flex w-full max-w-[300px] flex-col items-center gap-[25px]"><div class="flex w-full flex-col items-center gap-[20px]"><div class="flex w-full flex-col items-center gap-[5px] text-center text-font-level_2"><p class="w-full text-[18px] font-semibold leading-normal">Nenhum resultado</p><p class="w-full text-[14px] leading-normal">Tente buscar por outro termo.</p></div></div><div class="flex shrink-0 items-center"><button class="relative isolate inline-flex shrink-0 cursor-pointer items-center gap-[5px] rounded-[5px] px-[5px] text-sm text-font transition-colors before:pointer-events-none before:absolute before:inset-0 before:-z-10 before:rounded-[5px] before:bg-transparent before:transition-colors before:content-[''] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-confirmation focus-visible:ring-offset-1 disabled:pointer-events-none disabled:opacity-40 border border-neutral-level_2 bg-background hover:before:bg-neutral-level_1 active:before:bg-neutral-level_2 h-[35px]"><span class="flex shrink-0 items-center justify-center pl-[5px]"><span aria-hidden="true" class="inline-flex shrink-0 items-center justify-center text-font"><svg aria-hidden="true" class="lucide lucide-plus" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="15" xmlns="http://www.w3.org/2000/svg"><path d="M5 12h14"></path><path d="M12 5v14"></path></svg></span></span><span class="overflow-hidden text-ellipsis whitespace-nowrap px-[5px]">Adicionar item</span></button></div></div></div><div style="display: flex; flex-direction: column; gap: 8px; align-items: center;"><p style="font-size: 12px; color: rgb(139, 133, 149); margin-bottom: 4px;">ícone customizado</p><div class="flex w-full max-w-[300px] flex-col items-center gap-[25px]"><div class="flex w-full flex-col items-center gap-[20px]"><div class="flex shrink-0 items-center justify-center"><svg aria-hidden="true" class="text-font-level_2" fill="none" height="90" viewbox="0 0 90 90" width="90"><circle cx="38" cy="38" opacity="0.4" r="24" stroke="currentColor" stroke-width="6"></circle><line stroke="currentColor" stroke-linecap="round" stroke-width="6" x1="56" x2="74" y1="56" y2="74"></line></svg></div><div class="flex w-full flex-col items-center gap-[5px] text-center text-font-level_2"><p class="w-full text-[18px] font-semibold leading-normal">Nenhum resultado encontrado</p><p class="w-full text-[14px] leading-normal">Tente ajustar os filtros.</p></div></div><div class="flex shrink-0 items-center"><button class="relative isolate inline-flex shrink-0 cursor-pointer items-center gap-[5px] rounded-[5px] px-[5px] text-sm text-font transition-colors before:pointer-events-none before:absolute before:inset-0 before:-z-10 before:rounded-[5px] before:bg-transparent before:transition-colors before:content-[''] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-confirmation focus-visible:ring-offset-1 disabled:pointer-events-none disabled:opacity-40 border border-neutral-level_2 bg-background hover:before:bg-neutral-level_1 active:before:bg-neutral-level_2 h-[35px]"><span class="flex shrink-0 items-center justify-center pl-[5px]"><svg aria-hidden="true" fill="none" height="15" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="15"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="17 8 12 3 7 8"></polyline><line x1="12" x2="12" y1="3" y2="15"></line></svg></span><span class="overflow-hidden text-ellipsis whitespace-nowrap px-[5px]">Importar dados</span></button></div></div></div></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const AllVariants: Story = {
+  render: () =&gt; (
+    &lt;div
+      style={{
+        display: &#x27;flex&#x27;,
+        gap: 40,
+        flexWrap: &#x27;wrap&#x27;,
+        alignItems: &#x27;flex-start&#x27;,
+        padding: 40,
+      }}
+    &gt;
+      &lt;div
+        style={{
+          display: &#x27;flex&#x27;,
+          flexDirection: &#x27;column&#x27;,
+          gap: 8,
+          alignItems: &#x27;center&#x27;,
+        }}
+      &gt;
+        &lt;p style={{ fontSize: 12, color: &#x27;#8b8595&#x27;, marginBottom: 4 }}&gt;
+          icon + content + action
+        &lt;/p&gt;
+        &lt;EmptyLabel
+          title=&quot;Não há dados para exibir&quot;
+          content=&quot;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut varius odio ex, sed euismod justo mattis in.&quot;
+          action={&lt;AddButton /&gt;}
+        /&gt;
+      &lt;/div&gt;
+
+      &lt;div
+        style={{
+          display: &#x27;flex&#x27;,
+          flexDirection: &#x27;column&#x27;,
+          gap: 8,
+          alignItems: &#x27;center&#x27;,
+        }}
+      &gt;
+        &lt;p style={{ fontSize: 12, color: &#x27;#8b8595&#x27;, marginBottom: 4 }}&gt;
+          icon + content (sem ação)
+        &lt;/p&gt;
+        &lt;EmptyLabel
+          title=&quot;Não há dados para exibir&quot;
+          content=&quot;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut varius odio ex, sed euismod justo mattis in.&quot;
+        /&gt;
+      &lt;/div&gt;
+
+      &lt;div
+        style={{
+          display: &#x27;flex&#x27;,
+          flexDirection: &#x27;column&#x27;,
+          gap: 8,
+          alignItems: &#x27;center&#x27;,
+        }}
+      &gt;
+        &lt;p style={{ fontSize: 12, color: &#x27;#8b8595&#x27;, marginBottom: 4 }}&gt;
+          sem icon
+        &lt;/p&gt;
+        &lt;EmptyLabel
+          showIcon={false}
+          title=&quot;Nenhum resultado&quot;
+          content=&quot;Tente buscar por outro termo.&quot;
+          action={&lt;AddButton /&gt;}
+        /&gt;
+      &lt;/div&gt;
+
+      &lt;div
+        style={{
+          display: &#x27;flex&#x27;,
+          flexDirection: &#x27;column&#x27;,
+          gap: 8,
+          alignItems: &#x27;center&#x27;,
+        }}
+      &gt;
+        &lt;p style={{ fontSize: 12, color: &#x27;#8b8595&#x27;, marginBottom: 4 }}&gt;
+          ícone customizado
+        &lt;/p&gt;
+        &lt;EmptyLabel
+          icon={&lt;SearchIcon /&gt;}
+          title=&quot;Nenhum resultado encontrado&quot;
+          content=&quot;Tente ajustar os filtros.&quot;
+          action={&lt;ImportButton /&gt;}
+        /&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  ),
+}</code></pre></details>
+  </section>
+</body>
+</html>

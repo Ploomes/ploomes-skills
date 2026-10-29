@@ -1,0 +1,28 @@
+Tarefas
+
+Objetivo básico:
+- Pela entidade de Tarefas, os usuários podem acompanhar seus próximos passos, agendar compromissos e tarefas, bem como consultar a disponibilidade e agenda de outros usuários (sempre com base nas permissões do seu perfil).
+
+- Uma tarefa pode ter vários usuários vinculadas a ela, e um único usuário como "responsável" pela tarefa.
+
+- Caso uma tarefa não possua vínculo com nenhum cliente, ela será visível apenas para os usuários da tarefa, mesmo administradores não poderão visualizá-la. Esse comportamento específico faz com que seja possível a gestão até mesmo de tarefas pessoais dentro do Ploomes;
+
+- As tarefas podem ser integradas com o Google Calendar ou com o Outlook 365 Web. Caso uma dessas integrações esteja habilitada (isso é feito por cada um dos usuários, não pela conta como um todo) e o usuário tenha selecionado “Contatos relacionados” na tarefa, ele poderá disparar um convite para os e-mails desses contatos se ativar essa opção.
+
+- Tarefas são categorizadas por "Tipo": simples, visita, ligação, e-mail, reunião, conferência e WhatsApp. São os mesmos tipos existentes em Registros de Interação;
+
+- Tarefas possuem comentários, ou seja, dentro de uma tarefa, eu posso ter um histórico de comentários e conversa entre diferentes usuários.
+
+- Tarefas finalizadas que geraram registros de interação, quando reabertas, não deletam o registro de interação gerado.
+
+Dados:
+- A base de tarefas se utiliza dos mecanismos de formularios_e_campos do Ploomes;
+- A base de tarefas se utiliza dos mecanismos de abas_e_tabelas_dinamicas do Ploomes;
+- A base de tarefas se utiliza dos mecanismos de filtros do Ploomes;
+- A base de tarefas se utiliza dos mecanismos de automações_gerais do Ploomes;
+- Os níveis de acesso de tarefas andam junto com os níveis de acesso de clientes / negócios.
+
+Vínculos:
+Os vínculos entre Tarefas e outras entidades estão definidos no arquivo (RC) Lista_de_field_paths.txt, que é a fonte canônica de todas as relações entre entidades.
+
+Comportamento adicional: quando finalizadas, caso estejam vinculadas a um cliente e/ou um negócio, a tarefa gera um registro de interação vinculado a ela no histórico dessas entidades.

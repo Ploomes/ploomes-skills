@@ -1,0 +1,517 @@
+Campos nativos do Ploomes que possuem algum tipo de comportamento especial:
+
+O Ploomes possui outros campos nativos que podem ser conferidos diretamente usando a API do software. Entretanto, os campos abaixo possuem algum tipo de comportamento especial. Com eles, evitamos a necessidade de criar campos dinâmicos com automações complexas por trás.
+
+Campos nativos de clientes com comportamentos especiais:
+- Nome: campo nativo usado para identificar o cliente. Pode ser preenchido durante a criação e durante a edição, mas não é obrigatório para criação. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Não.
+- Imagem: armazena a URL de uma imagem do cliente. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Não.
+- Empresa: campo que permite vincular, formalmente, uma pessoa a uma empresa, ou uma empresa a uma outra empresa. Permite a seleção de apenas uma opção. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Não.
+- Telefone: um tipo de campo que permite a inclusão de vários telefones. Para cada telefone, eu posso selecionar uma máscara (telefone no formato brasileiro, por exemplo) e um tipo de telefone (comercial, celular, residencial, fax, outros). Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Não.
+- CEP: precisa possuir uma máscara que formata e valida o CEP de acordo com o padrão brasileiro. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Não.
+- Cidades, estados e país: o campo de Cidade puxa da lista central de cidades do Ploomes. Os campos de estado e país não são preenchíveis manualmente, já que uma cidade obrigatoriamente tem um estado e um país vinculados a ela, e estes se tornam portanto o estado e o país do cliente. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Não.
+- CNPJ e integração com receita federal: o Ploomes possui uma integração com receita federal que, ao preencher o CNPJ, busca dados como endereço, sócios, etc. Entretanto, isso fica no frontend padrão do Ploomes. No software que você vai desenvolver para atender à demanda, é importante trazer essa possibilidade de consulta à API do Ploomes com a receita federal. Propriedades do campo CNPJ: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Não.
+- Marcadores: o Ploomes puxa os marcadores dos clientes de uma base de marcadores de clientes. Esses marcadores tem cor e nome. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Não.
+- Criador: preenchido automaticamente com o usuário que criou o cliente. Não pode ser editado. Propriedades: preenchível durante a criação: Não; preenchível durante a edição: Não; obrigatório para criação: Não.
+- Data de criação: preenchido automaticamente com a data em que foi criado. Não pode ser editado. Propriedades: preenchível durante a criação: Não; preenchível durante a edição: Não; obrigatório para criação: Não.
+- Empresas: campo que permite vincular uma pessoa ou uma empresa a múltiplas empresas. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Não.
+- ID da importação de atualização (novo): armazena o ID da última importação que atualizou dados do cliente (se houver). Não pode ser alterado manualmente. Propriedades: preenchível durante a criação: Não; preenchível durante a edição: Não; obrigatório para criação: Não.
+- ID da importação de criação (novo): armazena o ID da importação que criou o cliente (se houver). Não pode ser alterado. Propriedades: preenchível durante a criação: Não; preenchível durante a edição: Não; obrigatório para criação: Não.
+- ID do formulário externo de atualização: armazena o ID do último formulário externo que atualizou dados do cliente (se houver). Não pode ser alterado manualmente. Propriedades: preenchível durante a criação: Não; preenchível durante a edição: Não; obrigatório para criação: Não.
+- ID do formulário externo de criação: armazena o ID do formulário externo que criou o cliente (se houver). Não pode ser alterado. Propriedades: preenchível durante a criação: Não; preenchível durante a edição: Não; obrigatório para criação: Não.
+- Lead origem: funcionalidade descontinuada, não usar. Propriedades: preenchível durante a criação: Não; preenchível durante a edição: Não; obrigatório para criação: Não.
+- Tipo: campo que define se um cliente é uma empresa ou pessoa. Não pode ser alterado. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Não; obrigatório para criação: Não.
+- Possui tarefas agendadas: campo calculado em tempo real, ou seja, não pode ser editado. Diz se existe pelo menos uma tarefa em aberto vinculada ao cliente ou não. Propriedades: preenchível durante a criação: Não; preenchível durante a edição: Não; obrigatório para criação: Não.
+- Importação de criação: funcionalidade descontinuada, não usar. Propriedades: preenchível durante a criação: Não; preenchível durante a edição: Não; obrigatório para criação: Não.
+- Importação de atualização: funcionalidade descontinuada, não usar. Propriedades: preenchível durante a criação: Não; preenchível durante a edição: Não; obrigatório para criação: Não.
+- Última atualização: campo que armazena a data em que o cliente foi atualizado pela última vez. Não pode ser editado manualmente. Propriedades: preenchível durante a criação: Não; preenchível durante a edição: Não; obrigatório para criação: Não.
+- Último atualizador: campo que armazena o ID do último usuário que atualizou o cliente. Não pode ser editado manualmente. Propriedades: preenchível durante a criação: Não; preenchível durante a edição: Não; obrigatório para criação: Não.
+- Última venda: campo que armazena o ID da última venda gerada no cliente. Não pode ser editado manualmente. Propriedades: preenchível durante a criação: Não; preenchível durante a edição: Não; obrigatório para criação: Não.
+- Último documento: campo que armazena o ID do último documento gerado no cliente. Não pode ser editado manualmente. Propriedades: preenchível durante a criação: Não; preenchível durante a edição: Não; obrigatório para criação: Não.
+- Último contato: campo que armazena o ID do último registro de interação gerado no cliente. Não pode ser editado manualmente. Propriedades: preenchível durante a criação: Não; preenchível durante a edição: Não; obrigatório para criação: Não.
+- Último negócio: campo que armazena o ID do último negócio gerado no cliente. Não pode ser editado manualmente. Propriedades: preenchível durante a criação: Não; preenchível durante a edição: Não; obrigatório para criação: Não.
+- Próximo aniversário: campo calculado em tempo real, ou seja, não pode ser editado. Devolve a data do próximo aniversário, com base na data preenchida no campo "Data de nascimento" (caso esteja preenchido). Propriedades: preenchível durante a criação: Não; preenchível durante a edição: Não; obrigatório para criação: Não.
+- Último aniversário: campo calculado em tempo real, ou seja, não pode ser editado. Devolve a data do último aniversário, com base na data preenchida no campo "Data de nascimento" (caso esteja preenchido). Propriedades: preenchível durante a criação: Não; preenchível durante a edição: Não; obrigatório para criação: Não.
+- Produtos: campo nativo que lista todo os "produtos do cliente" vinculados ao cliente. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Não; obrigatório para criação: Não.
+- Responsável e usuários colaboradores: campos que permitem vínculo de usuários. Responsáveis por reger os níveis de acesso relacionados a clientes. Para o caso de pessoas vinculadas a empresas, o responsável delas é preenchido automaticamente com o responsável da empresa. Ou seja, nessa situação, o campo de responsável só pode ser alterado automaticamente a partir do responsável da empresa, sem alteração manual.
+
+
+
+Outros campos nativos sem comportamento especial específico:
+- Razão social: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Não.
+- CPF: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Não.
+- Status: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Não.
+- Telefones: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Não.
+- Relação: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Não.
+- Segmento: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Não.
+- Origem: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Não.
+- Classe: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Não.
+- Responsável: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Não.
+- Data de nascimento: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Não.
+- Observações: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Não.
+- E-mail: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Não.
+- Site: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Não.
+- Cargo: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Não.
+- Departamento: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Não.
+- Skype: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Não.
+- Facebook: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Não.
+- Endereço: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Não.
+- Complemento: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Não.
+- Bairro: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Não.
+- Moeda: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Não.
+- Número de funcionários: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Não.
+- Recebe e-mail marketing: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Não.
+- Tarefas: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Não; preenchível durante a edição: Não; obrigatório para criação: Não.
+- Usuários colaboradores: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Não.
+- Id: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Não; obrigatório para criação: Não.
+- Código CNAE: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Não.
+- Descrição CNAE: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Não.
+- Número (endereço): campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Não.
+- Contatos: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Não; preenchível durante a edição: Não; obrigatório para criação: Não.
+- Latitude: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Não.
+- Longitude: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Não.
+- Chave externa: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Não.
+- Atividades Secundárias: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Não.
+- Código Postal Internacional: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Não.
+- Documento de identidade Internacional: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Não.
+- País do código postal: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Não.
+Campos nativos de negócios com comportamentos especiais:
+- Título: se chega vazio na API, é preenchido automaticamente com o nome do cliente. Se não tem cliente, o título fica como "Sem título". Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Não.
+- Cliente: campo que vincula, formalmente, um negócio a um cliente. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Não.
+- Contato: nunca pode ser preenchido com uma empresa caso o cliente do negócio já seja uma empresa. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Não.
+- Início: preenchido com a data de hoje automaticamente caso chegue vazio na API. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Não.
+- Término: preenchido automaticamente com a data na qual o negócio foi finalizado como ganho ou perdido. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Não.
+- Marcadores: o Ploomes puxa os marcadores dos negócios de uma base de marcadores de negócios. Esses marcadores tem cor e nome. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Não.
+- Funil: este campo não pode ser alterado manualmente. Ele apenas é um atalho para o funil ao qual o estágio atual do negócio pertence. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Não; obrigatório para criação: Não.
+- Dias no estágio: campo calculado em tempo real, ou seja, não pode ser editado. Devolve a quantidade de dias em que o negócio está no mesmo estágio. Propriedades: preenchível durante a criação: Não; preenchível durante a edição: Não; obrigatório para criação: Não.
+- Horas no estágio: campo calculado em tempo real, ou seja, não pode ser editado. Devolve a quantidade de horas em que o negócio está no mesmo estágio. Propriedades: preenchível durante a criação: Não; preenchível durante a edição: Não; obrigatório para criação: Não.
+- Duração: campo calculado em tempo real, ou seja, não pode ser editado. Devolve a diferença de dias entre o início do negócio e o término do negócio. Propriedades: preenchível durante a criação: Não; preenchível durante a edição: Não; obrigatório para criação: Não.
+- Criador: preenchido automaticamente com o usuário que criou o negócio. Não pode ser editado. Propriedades: preenchível durante a criação: Não; preenchível durante a edição: Não; obrigatório para criação: Não.
+- Data de criação: preenchido automaticamente com a data em que foi criado. Não pode ser editado. Propriedades: preenchível durante a criação: Não; preenchível durante a edição: Não; obrigatório para criação: Não.
+- Última atualização: campo que armazena a data em que o negócio foi atualizado pela última vez. Não pode ser editado manualmente. Propriedades: preenchível durante a criação: Não; preenchível durante a edição: Não; obrigatório para criação: Não.
+- Último atualizador: campo que armazena o ID do último usuário que atualizou o negócio. Não pode ser editado manualmente. Propriedades: preenchível durante a criação: Não; preenchível durante a edição: Não; obrigatório para criação: Não.
+- Proposta: campo que armazena o ID da última proposta gerada no negócio. Não pode ser editado manualmente. Propriedades: preenchível durante a criação: Não; preenchível durante a edição: Não; obrigatório para criação: Não.
+- Última venda: campo que armazena o ID da última venda gerada no negócio. Não pode ser editado manualmente. Propriedades: preenchível durante a criação: Não; preenchível durante a edição: Não; obrigatório para criação: Não.
+- Último documento: campo que armazena o ID do último documento gerado no negócio. Não pode ser editado manualmente. Propriedades: preenchível durante a criação: Não; preenchível durante a edição: Não; obrigatório para criação: Não.
+- Último contato: campo que armazena o ID do último registro de interação gerado no negócio. Não pode ser editado manualmente. Propriedades: preenchível durante a criação: Não; preenchível durante a edição: Não; obrigatório para criação: Não.
+- ID da importação de atualização (novo): armazena o ID da última importação que atualizou dados do negócio (se houver). Não pode ser alterado manualmente. Propriedades: preenchível durante a criação: Não; preenchível durante a edição: Não; obrigatório para criação: Não.
+- ID da importação de criação (novo): armazena o ID da importação que criou o negócio (se houver). Não pode ser alterado. Propriedades: preenchível durante a criação: Não; preenchível durante a edição: Não; obrigatório para criação: Não.
+- ID do formulário externo de atualização: armazena o ID do último formulário externo que atualizou dados do negócio (se houver). Não pode ser alterado manualmente. Propriedades: preenchível durante a criação: Não; preenchível durante a edição: Não; obrigatório para criação: Não.
+- ID do formulário externo de criação: armazena o ID do formulário externo que criou o negócio (se houver). Não pode ser alterado. Propriedades: preenchível durante a criação: Não; preenchível durante a edição: Não; obrigatório para criação: Não.
+- Negócio origem: campo que armazena o ID do negócio pai (se houver). Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Não.
+- Negócios derivados: campo que armazena os IDs dos negócio filhos (se houver). Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Não.
+- Lead origem: funcionalidade descontinuada, não usar. Propriedades: preenchível durante a criação: Não; preenchível durante a edição: Não; obrigatório para criação: Não.
+- Número: campo que armazena o número do negócio. A numeração pode seguir uma sequência global de negócios, inclusive entre diferentes funis, mas este campo é preenchível durante a criação e durante a edição. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Não.
+- Possui tarefas agendadas: campo calculado em tempo real, ou seja, não pode ser editado. Diz se existe pelo menos uma tarefa em aberto vinculada ao negócio ou não. Propriedades: preenchível durante a criação: Não; preenchível durante a edição: Não; obrigatório para criação: Não.
+- Proposta ganha: campo descontinuado, não utilizar. Propriedades: preenchível durante a criação: Não; preenchível durante a edição: Não; obrigatório para criação: Não.
+- Proposta aprovada: campo descontinuado, não utilizar. Propriedades: preenchível durante a criação: Não; preenchível durante a edição: Não; obrigatório para criação: Não.
+- Situação: campo que armazena situação atual do negócio (em aberto, ganho ou perdido). Não pode ser alterado manualmente, somente a partir da execução das ações de Ganhar, Perder e Reabrir dos negócios. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Não; obrigatório para criação: Não.
+- Produtos relacionados: campo nativo que permite ao usuário vincular diversos produtos a um negócio. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Não.
+- Responsável e usuários colaboradores: campos que permitem vínculo de usuários. Responsáveis por reger os níveis de acesso relacionados a negócios. 
+
+
+Outros campos nativos sem comportamento especial específico:
+- Estágio: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Não.
+- Responsável: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Não.
+- Moeda: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Não.
+- Valor: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Não.
+- Usuários colaboradores: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Não.
+- Contatos relacionados: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Não.
+- Estágios: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Não; preenchível durante a edição: Sim; obrigatório para criação: Não.
+- Motivo de perda: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Não; obrigatório para criação: Não.
+- Tarefas: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Não; preenchível durante a edição: Não; obrigatório para criação: Não.
+- Origem: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Não.
+- Id: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Não; obrigatório para criação: Não.
+- Produto do cliente (ocorrência 1): campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Não.
+- Produto do cliente (ocorrência 2): campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Não.
+- Prioridade: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Não.
+Campos nativos de Produtos do cliente com comportamentos especiais:
+- Cliente: campo que vincula, formalmente, um produto do cliente a um cliente. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Não.
+- Produto: campo que vincula, formalmente, um produto do cliente a um produto. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Sim.
+
+
+Outros campos nativos sem comportamento especial específico:
+- Id: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Não; obrigatório para criação: Não.
+- Nome: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Sim.
+- Código: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Não.
+Campos nativos de Produtos com comportamentos especiais:
+- Grupo: campo que vincula, formalmente, um produto a um grupo de produtos. Um produto só pode pertencer a um grupo, e isso é obrigatório. Não existem produtos sem grupo. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Sim.
+- Marcadores: o Ploomes puxa os marcadores dos produtos de uma base de marcadores de produtos. Esses marcadores tem cor e nome. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Não.
+- Criador: preenchido automaticamente com o usuário que criou o produto. Não pode ser editado. Propriedades: preenchível durante a criação: Não; preenchível durante a edição: Não; obrigatório para criação: Não.
+- ID da importação de atualização (novo): armazena o ID da última importação que atualizou dados do produto (se houver). Não pode ser alterado manualmente. Propriedades: preenchível durante a criação: Não; preenchível durante a edição: Não; obrigatório para criação: Não.
+- ID da importação de criação (novo): armazena o ID da importação que criou o produto (se houver). Não pode ser alterado. Propriedades: preenchível durante a criação: Não; preenchível durante a edição: Não; obrigatório para criação: Não.
+- Imagem: armazena a URL de uma imagem do produto. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Não.
+- Última atualização: campo que armazena a data em que o produto foi atualizado pela última vez. Não pode ser editado manualmente. Propriedades: preenchível durante a criação: Não; preenchível durante a edição: Não; obrigatório para criação: Não.
+- Último atualizador: campo que armazena o ID do último usuário que atualizou o produto. Não pode ser editado manualmente. Propriedades: preenchível durante a criação: Não; preenchível durante a edição: Não; obrigatório para criação: Não.
+
+
+Outros campos nativos sem comportamento especial específico:
+- Nome: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Sim.
+- Código: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Não.
+- Unidade de medida: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Não.
+- Moeda: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Não.
+- Valor unitário: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Não.
+- Partes: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Não; preenchível durante a edição: Não; obrigatório para criação: Não.
+- Família: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Não; preenchível durante a edição: Não; obrigatório para criação: Não.
+- Id: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Não; obrigatório para criação: Não.
+- Id da importação de criação: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Não; preenchível durante a edição: Não; obrigatório para criação: Não.
+- Id da importação de atualização: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Não; preenchível durante a edição: Não; obrigatório para criação: Não.
+Campos nativos de Registros de Interação com comportamentos especiais:
+- Cliente: campo que vincula, formalmente, um registro de interação a um cliente. Quando esse registro é criado, ele aparece como um evento na timeline do cliente vinculado. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Não; obrigatório para criação: Não.
+- Negócio: campo que vincula, formalmente, um registro de interação a um negócio. Quando esse registro é criado, ele aparece como um evento na timeline do negócio vinculado. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Não; obrigatório para criação: Não.
+- Contatos relacionados: campo que vincula, formalmente, um registro de interação a vários clientes do tipo pessoa. Quando esse registro é criado, ele aparece como um evento na timeline dos contatos relacionados. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Não.
+- Tipo: campo que define o tipo de interação. Possui uma lista pré-definida, não alterável de tipos: simples, visita, telefone, e-mail, reunião, conferência, WhatsApp. Pode ser preenchido durante a criação e durante a edição, mas não é obrigatório para criação. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Não.
+- Criador: preenchido automaticamente com o usuário que criou o registro de interação. Não pode ser editado. Propriedades: preenchível durante a criação: Não; preenchível durante a edição: Não; obrigatório para criação: Não.
+- Marcadores: o Ploomes puxa os marcadores dos registros de interação de uma base de marcadores de registro de interação. Esses marcadores tem cor e nome. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Não.
+- Check-in verificado: propriedade especial que, atualmente, é preenchida pelo aplicativo mobile nativo do Ploomes. Quando o registro de interação do tipo visita é feito com um determinado raio de distância da latitude e longitude armazenadas no cadastro do cliente, o registro de interação é dado como verificado. Propriedades: preenchível durante a criação: Não; preenchível durante a edição: Não; obrigatório para criação: Não.
+- Campos de checkin e checkout (endereço, data, latitude e longitude): propriedades especiais que, atualmente, são preenchidas pelo aplicativo mobile nativo do Ploomes. O aplicativo permite ao usuário realizar um check-in em uma visita para um cliente, por exemplo, e quando a visita terminar, fazer um checkout. O aplicativo do Ploomes armazena informações sobre esses dois eventos. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Não; obrigatório para criação: Não.
+
+
+Outros campos nativos sem comportamento especial específico:
+- Data: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Não.
+- Descrição: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Sim.
+- Data da criação: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Não; preenchível durante a edição: Não; obrigatório para criação: Não.
+- Id: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Não; obrigatório para criação: Não.
+- Tarefa origem: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Não; preenchível durante a edição: Não; obrigatório para criação: Não.
+- Latitude: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Não; obrigatório para criação: Não.
+- Longitude: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Não; obrigatório para criação: Não.
+- Status da chamada: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Não; obrigatório para criação: Não.
+- Duração: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Não; obrigatório para criação: Não.
+- Endereço: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Não.
+Campos nativos de Tarefas com comportamentos especiais:
+- Criador: preenchido automaticamente com o usuário que criou a tarefa. Não pode ser editado. Propriedades: preenchível durante a criação: Não; preenchível durante a edição: Não; obrigatório para criação: Não.
+- Cliente: campo que vincula, formalmente, uma tarefa a um cliente. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Não.
+- Negócio: campo que vincula, formalmente, uma tarefa a um negócio. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Não.
+- Contatos relacionados: campo que vincula, formalmente, uma tarefa a vários clientes do tipo pessoa. Nas integrações nativas do Ploomes com Google Calendar e Outlook 365, caso o campo "Adicionar contatos relacionados à tarefa da integração" esteja ativado quando uma tarefa for criada via Ploomes, a tarefa é enviada ao Google Calendar com os contatos relacionados enviados como convidados. Do lado contrário, quando o Ploomes recebe tarefas dessas duas ferramentas, os convidados delas chegam como contatos relacionados. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Não.
+- Os campos que são enviados na integração com essas ferramenta são: título, descrição, contatos relacionados, data, horário, duração, endereço, contatos relacionados e usuários;
+- O campo "repetir a cada" demanda um valor e uma unidade de medida (dias, semanas, meses ou anos). Tarefas que possuem essa propriedade, quando finalizadas, geram automaticamente uma nova tarefa na data da próxima recorrência;
+- Usuários: lista de usuários do Ploomes vinculados à tarefa. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Não.
+- Transcrição automática: propriedade que define se o robô do Ploomes que entra em calls automaticamente para transcrevê-las deve entrar na call relacionada à tarefa. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Não.
+- Modelo de resumo: campo que puxa opções da lista de tipos de resumo do Ploomes para transformar a transcrição automática em um resumo padronizado. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Não.
+- Tarefa sem horário: propriedade que identifica se a tarefa foi criada sem horário. Normalmente é derivada do campo de horário, mas é preenchível durante a criação e durante a edição. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Não.
+- Marcadores: o Ploomes puxa os marcadores dos registros de interação de uma base de marcadores de registro de interação. Esses marcadores tem cor e nome. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Não.
+- Latitude / Longitude: campos preenchidos automaticamente pelo frontend nativo do Ploomes via integração com Google Maps a partir do campo de endereço da tarefa. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Não.
+
+
+Outros campos nativos sem comportamento especial específico:
+- Título: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Não.
+- Descrição: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Não.
+- Data: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Não.
+- Horário: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Não.
+- Duração: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Não.
+- Repetir a cada: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Não.
+- Intervalo de repetição: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Não.
+- Lembrete por e-mail: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Não.
+- Endereço: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Não.
+- Enviar convite às pessoas relacionadas: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Não.
+- Finalizada: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Não; preenchível durante a edição: Não; obrigatório para criação: Não.
+- Id: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Não; obrigatório para criação: Não.
+- Data de criação: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Não; preenchível durante a edição: Não; obrigatório para criação: Não.
+- Tipo: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Não.
+- Responsáveis: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Não.
+Campos nativos de Propostas com comportamentos especiais:
+- Cliente: campo que vincula, formalmente, uma proposta a um cliente. Uma proposta é, obrigatoriamente, vinculada a um negócio. Então o campo de cliente da proposta é preenchido automaticamente a partir do negócio ao qual ela está vinculada, ou seja, não deve ser preenchido manualmente. Propriedades: preenchível durante a criação: Não; preenchível durante a edição: Não; obrigatório para criação: Não.
+- Negócio: campo que vincula, formalmente, uma proposta a um negócio. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Não; obrigatório para criação: Sim.
+- Criador: preenchido automaticamente com o usuário que criou a tarefa. Não pode ser editado. Propriedades: preenchível durante a criação: Não; preenchível durante a edição: Não; obrigatório para criação: Não.
+- Código: campo que armazena o código do negócio. Este número é sequencial e automático, ou seja, não pode ser preenchido manualmente. Propriedades: preenchível durante a criação: Não; preenchível durante a edição: Não; obrigatório para criação: Não.
+- Número da revisão: propostas podem ser revisadas. Cada revisão nova gera uma nova proposta com um número de revisão incrementado em 1. Todas as revisões de proposta tem o mesmo código de proposta, mas o número de revisão vai sendo gerado sequencialmente. A primeira proposta começa com revisão 0. Quando ela é revisada pela primeira vez, a versão revisada recebe o número de revisão 1, e assim por diante. Propriedades: preenchível durante a criação: Não; preenchível durante a edição: Não; obrigatório para criação: Não.
+- Última revisão: diz se a proposta em questão é a versão mais recentemente revisada. Quando o Ploomes recebe uma requisição para devolver uma lista de propostas, ele devolve todas as revisões de todas as propostas. Entretanto, é mais comum que o usuário queira visualizar somente as versões mais recentes de propostas. Por isso, é extremamente comum solicitar propostas com a última revisão igual a Sim. Este campo não pode ser editado manualmente, ele é preenchido automaticamente quando uma proposta é criada ou revisada. Propriedades: preenchível durante a criação: Não; preenchível durante a edição: Não; obrigatório para criação: Não.
+- Aceita externamente: preenchido automaticamente quando alguém, pelo link web da proposta, clica no botão de "Aceitar". Não pode ser editado. Propriedades: preenchível durante a criação: Não; preenchível durante a edição: Não; obrigatório para criação: Não.
+- Última visualização do cliente: preenchido automaticamente com a data e horário mais recente que o link web foi acessado. Não pode ser editado manualmente. Propriedades: preenchível durante a criação: Não; preenchível durante a edição: Não; obrigatório para criação: Não.
+- Data de criação: preenchido automaticamente com a data em que foi criada. Não pode ser editado. Propriedades: preenchível durante a criação: Não; preenchível durante a edição: Não; obrigatório para criação: Não.
+- Data de compartilhamento da proposta: preenchido automaticamente quando o link web da proposta é ligado. Propriedades: preenchível durante a criação: Não; preenchível durante a edição: Não; obrigatório para criação: Não.
+- Modelo: campo obrigatório da proposta que define o modelo no qual ela foi gerada. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Não; obrigatório para criação: Sim.
+- Número de parcelas: campo que diz quantas parcelas foram inseridas na proposta, caso o usuário tenha usado o sistema de parcelas na proposta. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Não.
+- Produtos da proposta: lista de produtos da proposta. Propriedades: preenchível durante a criação: Não; preenchível durante a edição: Não; obrigatório para criação: Não.
+- Situação da aprovação: caso a proposta entre em algum fluxo de aprovação, este campo exibe automaticamente se ela foi aprovada ou recusada, ou se está com aprovação pendente. Não pode ser preenchido manualmente. Propriedades: preenchível durante a criação: Não; preenchível durante a edição: Não; obrigatório para criação: Não.
+- Responsável: o responsável da proposta é preenchido automaticamente a partir do responsável do negócio ao qual ela pertence. Não pode ser editado manualmente. Propriedades: preenchível durante a criação: Não; preenchível durante a edição: Não; obrigatório para criação: Não.
+- Último atualizador: campo que armazena o ID do último usuário que atualizou a proposta. Não pode ser editado manualmente. Propriedades: preenchível durante a criação: Não; preenchível durante a edição: Não; obrigatório para criação: Não.
+
+
+Outros campos nativos sem comportamento especial específico:
+- Data: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Não.
+- Sou aprovador: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Não; preenchível durante a edição: Não; obrigatório para criação: Não.
+- Contato: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Não.
+- Moeda: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Não.
+- Valor: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Não.
+- Desconto: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Não.
+- Data de validade: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Não.
+- Prazo de entrega: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Não.
+- Método de pagamento: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Não.
+- Blocos: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Não; obrigatório para criação: Não.
+- Parcelas: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Não; obrigatório para criação: Não.
+- Produtos: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Não; preenchível durante a edição: Não; obrigatório para criação: Não.
+- Id: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Não; obrigatório para criação: Não.
+- Contatos relacionados: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Não.
+- Título: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Não.
+- Observações: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Não.
+- Valor do frete: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Não.
+- Modalidade de frete: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Não.
+- Descrição: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Não.
+Campos nativos de Vendas com comportamentos especiais:
+- Cliente: campo que vincula, formalmente, uma venda a um cliente. Uma venda pode ser vinculada a um negócio. Então o campo de cliente da venda é preenchido automaticamente a partir do negócio ao qual ela está vinculada quando for o caso. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Não; obrigatório para criação: Sim.
+- Negócio: campo que vincula, formalmente, uma venda a um negócio. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Não; obrigatório para criação: Não.
+- Criador: preenchido automaticamente com o usuário que criou a venda. Não pode ser editado. Propriedades: preenchível durante a criação: Não; preenchível durante a edição: Não; obrigatório para criação: Não.
+- Número: campo que armazena o número da venda. Pode seguir uma sequência automática, mas também é preenchível durante a criação; depois de criada, a venda não permite edição manual deste campo. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Não; obrigatório para criação: Não.
+- Aceita externamente: preenchido automaticamente quando alguém, pelo link web da venda, clica no botão de "Aceitar". Não pode ser editado. Propriedades: preenchível durante a criação: Não; preenchível durante a edição: Não; obrigatório para criação: Não.
+- Última visualização do cliente: preenchido automaticamente com a data e horário mais recente que o link web foi acessado. Não pode ser editado manualmente. Propriedades: preenchível durante a criação: Não; preenchível durante a edição: Não; obrigatório para criação: Não.
+- Data de criação: preenchido automaticamente com a data em que foi criada. Não pode ser editado. Propriedades: preenchível durante a criação: Não; preenchível durante a edição: Não; obrigatório para criação: Não.
+- Data de compartilhamento da venda: preenchido automaticamente quando o link web da venda é ligado. Propriedades: preenchível durante a criação: Não; preenchível durante a edição: Não; obrigatório para criação: Não.
+- Modelo: campo obrigatório da venda que define o modelo no qual ela foi gerada. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Não; obrigatório para criação: Sim.
+- Número de parcelas: campo que diz quantas parcelas foram inseridas na venda, caso o usuário tenha usado o sistema de parcelas na venda. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Não.
+- Produtos da venda: lista de produtos da venda. Propriedades: preenchível durante a criação: Não; preenchível durante a edição: Não; obrigatório para criação: Não.
+- Situação da aprovação: caso a venda entre em algum fluxo de aprovação, este campo exibe automaticamente se ela foi aprovada ou recusada, ou se está com aprovação pendente. Não pode ser preenchido manualmente. Propriedades: preenchível durante a criação: Não; preenchível durante a edição: Não; obrigatório para criação: Não.
+- Responsável: o responsável da venda pode ser preenchido automaticamente a partir do responsável do negócio ao qual ela pertence, quando aplicável, e também é preenchível durante a criação e a edição. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Não.
+- Último atualizador: campo que armazena o ID do último usuário que atualizou a venda. Não pode ser editado manualmente. Propriedades: preenchível durante a criação: Não; preenchível durante a edição: Não; obrigatório para criação: Não.
+- Proposta origem: uma venda pode ser gerada a partir de uma proposta. Essa informação só pode ser preenchida durante a criação da venda, não podendo ser alterada depois. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Não.
+
+
+Outros campos nativos sem comportamento especial específico:
+- Data: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Não.
+- Valor: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Não.
+- Contato: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Não.
+- Notas internas: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Não.
+- Informações da venda: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Não.
+- Desconto: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Não.
+- Moeda: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Não.
+- Blocos: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Não; obrigatório para criação: Não.
+- Estágio: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Não.
+- Comissionado: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Não.
+- Comissão: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Não.
+- Valor da comissão: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Não; preenchível durante a edição: Não; obrigatório para criação: Não.
+- Produtos: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Não; preenchível durante a edição: Não; obrigatório para criação: Não.
+- Id: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Não; obrigatório para criação: Não.
+- Parcelas: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Não; obrigatório para criação: Não.
+- Contatos relacionados: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Não.
+Campos nativos de Documentos com comportamentos especiais:
+- Cliente: campo que vincula, formalmente, um documento a um cliente. Um documento pode ser vinculado a um negócio, se for do tipo Documento de negócio. Então o campo de cliente do documento é preenchido automaticamente a partir do negócio ao qual ele está vinculado quando for o caso. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Não; obrigatório para criação: Não.
+- Negócio: campo que vincula, formalmente, um documento a um negócio, desde de que o tipo de documento seja de negócio. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Não; obrigatório para criação: Não.
+- Criador: preenchido automaticamente com o usuário que criou o documento. Não pode ser editado. Propriedades: preenchível durante a criação: Não; preenchível durante a edição: Não; obrigatório para criação: Não.
+- Número: campo que armazena o número do documento. Pode seguir uma sequência automática, mas também é preenchível durante a criação; depois de criado, o documento não permite edição manual deste campo. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Não; obrigatório para criação: Não.
+- Aceita externamente: preenchido automaticamente quando alguém, pelo link web do documento, clica no botão de "Aceitar". Não pode ser editado. Propriedades: preenchível durante a criação: Não; preenchível durante a edição: Não; obrigatório para criação: Não.
+- Última visualização do cliente: preenchido automaticamente com a data e horário mais recente que o link web foi acessado. Não pode ser editado manualmente. Propriedades: preenchível durante a criação: Não; preenchível durante a edição: Não; obrigatório para criação: Não.
+- Data de criação: preenchido automaticamente com a data em que foi criado. Não pode ser editado. Propriedades: preenchível durante a criação: Não; preenchível durante a edição: Não; obrigatório para criação: Não.
+- Data de compartilhamento do documento: preenchido automaticamente quando o link web do documento é ligado. Propriedades: preenchível durante a criação: Não; preenchível durante a edição: Não; obrigatório para criação: Não.
+- Modelo: campo que define o modelo no qual o documento foi gerado. É preenchível durante a criação, não é preenchível durante a edição e não é obrigatório para criação. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Não; obrigatório para criação: Não.
+- Número de parcelas: campo que diz quantas parcelas foram inseridas no documento, caso o usuário tenha usado o sistema de parcelas no documento. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Não.
+- Produtos do documento: lista de produtos do documento. Propriedades: preenchível durante a criação: Não; preenchível durante a edição: Não; obrigatório para criação: Não.
+- Situação da aprovação: caso o documento entre em algum fluxo de aprovação, este campo exibe automaticamente se ele foi aprovado ou recusado, ou se está com aprovação pendente. Não pode ser preenchido manualmente. Propriedades: preenchível durante a criação: Não; preenchível durante a edição: Não; obrigatório para criação: Não.
+- Responsável: o responsável do documento é preenchido automaticamente a partir do responsável do negócio ao qual ele pertence. Não pode ser editado manualmente;
+- Último atualizador: campo que armazena o ID do último usuário que atualizou o documento. Não pode ser editado manualmente. Propriedades: preenchível durante a criação: Não; preenchível durante a edição: Não; obrigatório para criação: Não.
+- Proposta origem: um documento pode ser gerado a partir de uma proposta. Essa informação só pode ser preenchida durante a criação do documento, não podendo ser alterada depois. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Não.
+
+
+Outros campos nativos sem comportamento especial específico:
+- Título: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Não.
+- Blocos: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Não; obrigatório para criação: Não.
+- Data: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Não.
+- Parcelas: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Não; obrigatório para criação: Não.
+- Contatos relacionados: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Não.
+- Contato: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Não.
+- Id: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Não; obrigatório para criação: Não.
+- Moeda: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Não.
+Campos nativos de Usuários com comportamentos especiais:
+- Avatar: armazena a URL de uma imagem do usuário. Geralmente usado para mostrar a foto do usuário em locais onde ele é referenciado no frontend (quando ele foi o criador de um evento de Timeline, quando ele é responsável por um negócio, quando ele aparece em um campo de seleção de usuários, entre outros. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Não.
+- Criador do usuário: preenchido automaticamente com o usuário que criou o usuário. Não pode ser editado. Propriedades: preenchível durante a criação: Não; preenchível durante a edição: Não; obrigatório para criação: Não.
+- Inativo: diz se o usuário está ativo ou inativo. Não pode ser editado manualmente. É inativado a partir de método específico da API para inativação, e isso não deve ser usado em nenhum frontend desenvolvido por você (estará presente somente nas telas nativas do sistema de usuário). Propriedades: preenchível durante a criação: Não; preenchível durante a edição: Não; obrigatório para criação: Não.
+- Sem acesso? Define se o usuário pode ou não acessar o sistema. Não pode ser editado manualmente;
+- Usuário de integração: define se o usuário é do tipo integração ou não. Usuários de integração não tem acesso ao sistema, são usados apenas como porta de integração. Não pode ser editado manualmente. Propriedades: preenchível durante a criação: Não; preenchível durante a edição: Não; obrigatório para criação: Não.
+- Último acesso: data da última vez que o usuário acessou o sistema. Não pode ser editado manualmente. Propriedades: preenchível durante a criação: Não; preenchível durante a edição: Não; obrigatório para criação: Não.
+
+Outros campos nativos sem comportamento especial específico:
+- Nome: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Sim.
+- Cargo: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Não.
+- Perfil: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Sim.
+- Equipes: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Não.
+- E-mail: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Sim.
+- Telefone: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Não.
+- Facebook: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Não.
+- LinkedIn: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Não.
+- Id: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Não; preenchível durante a edição: Não; obrigatório para criação: Não.
+- Próximo aniversário: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Não; preenchível durante a edição: Não; obrigatório para criação: Não.
+- Último aniversário: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Não; preenchível durante a edição: Não; obrigatório para criação: Não.
+- Sem acesso?: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Não; preenchível durante a edição: Não; obrigatório para criação: Não.
+
+Campos nativos de outras entidades:
+
+Campos nativos de Grupo do Produto:
+- Nome: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Sim.
+- Família: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Não.
+- Preço fixado: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Não.
+- Id: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Não; obrigatório para criação: Não.
+- Id da importação de criação (novo): campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Não; preenchível durante a edição: Não; obrigatório para criação: Não.
+- Id da importação de atualização (novo): campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Não; preenchível durante a edição: Não; obrigatório para criação: Não.
+
+Campos nativos de Produto da proposta:
+- Produto: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Não; obrigatório para criação: Sim.
+- Quantidade: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Não.
+- Moeda: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Não.
+- Valor unitário: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Não.
+- Total: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Não.
+- Desconto: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Não.
+- Bloco: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Não; preenchível durante a edição: Não; obrigatório para criação: Não.
+- Proposta: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Não; preenchível durante a edição: Não; obrigatório para criação: Não.
+- Vinculos (ocorrência 1): campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Não.
+- Negócio: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Não; preenchível durante a edição: Não; obrigatório para criação: Não.
+- Id: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Não; obrigatório para criação: Não.
+- Responsável: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Não; preenchível durante a edição: Não; obrigatório para criação: Não.
+- Data da proposta: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Não; preenchível durante a edição: Não; obrigatório para criação: Não.
+- Produto do cliente: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Não.
+- Vinculos (ocorrência 2): campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Não; preenchível durante a edição: Não; obrigatório para criação: Não.
+
+Campos nativos de Vínculo de produtos:
+- Produto: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Não; obrigatório para criação: Não.
+- Grupo de produto: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Não; obrigatório para criação: Não.
+- Moeda: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Não.
+- Valor unitário mínimo: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Não.
+- Valor unitário máximo: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Não.
+- Valor unitário padrão: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Não.
+- Quantidade mínima: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Não.
+- Quantidade máxima: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Não.
+- Quantidade padrão: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Não.
+- Padrão: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Não.
+- Obrigatório: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Não.
+- Marcador de produto: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Não; obrigatório para criação: Não.
+- Produto pai: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Não.
+- Categoria: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Sim.
+- Produto do cliente: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Não.
+- Vínculos bloqueados: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Não.
+- Vínculos obrigatórios: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Não.
+- Vínculos sugeridos: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Não.
+- Identificação do vínculo: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Não.
+- Id: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Não; obrigatório para criação: Não.
+
+Campos nativos de Vínculo do produto da proposta:
+- Produto: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Sim.
+- Quantidade: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Não.
+- Moeda: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Não.
+- Valor unitário: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Não.
+- Total: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Não.
+- Desconto: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Não.
+- Produto da proposta: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Não; obrigatório para criação: Não.
+- Id: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Não; obrigatório para criação: Não.
+- Vínculo: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Sim.
+- Responsável: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Não; preenchível durante a edição: Não; obrigatório para criação: Não.
+- Data da proposta: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Não; preenchível durante a edição: Não; obrigatório para criação: Não.
+
+Campos nativos de Perfil de usuário:
+- Nome: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Sim.
+
+Campos nativos de Equipe:
+- Nome: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Sim.
+- Usuários: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Não.
+
+Campos nativos de Família do produto:
+- Nome: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Sim.
+- Id: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Não; obrigatório para criação: Não.
+
+Campos nativos de Funil:
+- Nome: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Sim.
+
+Campos nativos de Parcela da proposta:
+- Data: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Não.
+- Valor: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Sim.
+- Fixar parcela: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Não.
+- Id da parcela: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Não; preenchível durante a edição: Não; obrigatório para criação: Não.
+- Proposta da parcela: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Não; preenchível durante a edição: Não; obrigatório para criação: Não.
+
+Campos nativos de Bloco:
+- Produtos (ocorrência 1): campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Não.
+- Venda: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Não; preenchível durante a edição: Não; obrigatório para criação: Não.
+- Moeda (ocorrência 1): campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Não.
+- Total (ocorrência 1): campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Não.
+- Desconto (ocorrência 1): campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Não.
+- Produtos (ocorrência 2): campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Não.
+- Documento: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Não; preenchível durante a edição: Não; obrigatório para criação: Não.
+- Moeda (ocorrência 2): campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Não.
+- Desconto (ocorrência 2): campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Não.
+- Total (ocorrência 2): campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Não.
+
+Campos nativos de Produto da venda:
+- Produto: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Não; obrigatório para criação: Sim.
+- Quantidade: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Não.
+- Moeda: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Não.
+- Valor unitário: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Não.
+- Total: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Não.
+- Desconto: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Não.
+- Seção: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Não; preenchível durante a edição: Não; obrigatório para criação: Não.
+- Venda: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Não; preenchível durante a edição: Não; obrigatório para criação: Não.
+- Id: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Não; obrigatório para criação: Não.
+- Vinculos (ocorrência 1): campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Não.
+- Responsável: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Não; preenchível durante a edição: Não; obrigatório para criação: Não.
+- Data da venda: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Não; preenchível durante a edição: Não; obrigatório para criação: Não.
+- Produto do cliente: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Não.
+- Vinculos (ocorrência 2): campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Não; preenchível durante a edição: Não; obrigatório para criação: Não.
+
+Campos nativos de Sua Empresa:
+- Nome: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Sim.
+- Telefone: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Não.
+- Endereço: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Não.
+- Complemento: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Não.
+- Site: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Não.
+- Logo: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Não; obrigatório para criação: Não.
+- E-mail: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Não.
+- Cidade: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Não.
+
+Campos nativos de Modelo do documento:
+- Nome: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Sim.
+
+Campos nativos de Produto do documento:
+- Documento: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Não; preenchível durante a edição: Não; obrigatório para criação: Não.
+- Seção: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Não; preenchível durante a edição: Não; obrigatório para criação: Não.
+- Produto: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Não; obrigatório para criação: Sim.
+- Vinculos (ocorrência 1): campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Não.
+- Criador do documento: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Não; preenchível durante a edição: Não; obrigatório para criação: Não.
+- Produto do cliente: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Não.
+- Quantidade: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Não.
+- Preço unitário: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Não.
+- Total: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Não.
+- Desconto: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Não.
+- Moeda: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Não.
+- Id do produto do documento: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Não; preenchível durante a edição: Não; obrigatório para criação: Não.
+- Data do documento: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Não; preenchível durante a edição: Não; obrigatório para criação: Não.
+- Vinculos (ocorrência 2): campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Não; preenchível durante a edição: Não; obrigatório para criação: Não.
+
+Campos nativos de Vínculo do produto da venda:
+- Produto: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Sim.
+- Quantidade: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Não.
+- Moeda: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Não.
+- Valor unitário: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Não.
+- Total: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Não.
+- Desconto: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Não.
+- Produto da venda: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Não; obrigatório para criação: Não.
+- Vínculo: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Sim.
+- Responsável: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Não; preenchível durante a edição: Não; obrigatório para criação: Não.
+- Data da venda: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Não; preenchível durante a edição: Não; obrigatório para criação: Não.
+- Id: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Não; obrigatório para criação: Não.
+
+Campos nativos de Vínculo do produto do documento:
+- Produto: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Sim.
+- Produto do documento: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Não; obrigatório para criação: Não.
+- Quantidade: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Não.
+- Preço unitário: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Não.
+- Total: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Não.
+- Desconto: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Não.
+- Moeda: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Não.
+- Vínculo: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Sim.
+- Responsável: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Não; preenchível durante a edição: Não; obrigatório para criação: Não.
+- Data do documento: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Não; preenchível durante a edição: Não; obrigatório para criação: Não.
+- Id: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Não; obrigatório para criação: Não.
+
+Campos nativos de Parcela da venda:
+- Data: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Não.
+- Valor: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Sim.
+- Fixar parcela: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Não.
+- Venda da parcela: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Não; preenchível durante a edição: Não; obrigatório para criação: Não.
+- Id da parcela: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Não; preenchível durante a edição: Não; obrigatório para criação: Não.
+
+Campos nativos de Parcela do documento:
+- Data: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Não.
+- Valor: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Sim.
+- Fixar parcela: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Não.
+
+Campos nativos de Categoria de vínculos:
+- Nome: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Sim.
+- Padrão: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Não.
+
+Campos nativos de Pasta de anexo:
+- Nome: campo nativo sem comportamento especial específico. Propriedades: preenchível durante a criação: Sim; preenchível durante a edição: Sim; obrigatório para criação: Sim.

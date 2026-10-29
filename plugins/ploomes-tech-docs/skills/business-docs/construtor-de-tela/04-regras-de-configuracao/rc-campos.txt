@@ -1,0 +1,71 @@
+Configurações de campos:
+
+Para o frontend nativo do Ploomes, a exibição de campos sempre demanda que eles sejam inseridos em formulários. Você pode se utilizar do mecanismo de formulários do Ploomes, inclusive configurando campos e formulários, mas você também pode simplesmente puxar campos do Ploomes do jeito que você quiser no frontend do software a ser gerado, sem a necessidade de um formulário por trás.
+
+Além disso, você deve sempre ler o "(RC) Lista de campos nativos com comportamentos" e verificar na API do Ploomes se um campo que você pretende criar já não existe.
+
+É muito comum ter campos que não são preenchidos por usuários, mas por lógicas a partir de automações.
+
+Como o Ploomes não possui entidade dinâmica, se o caso de uso do software demandado trouxer essa necessidade, é possível a utilização de campos do tipo multilinhas para armazenar opções em JSON no banco de dados. O frontend do software pode ser desenvolvido de forma a manipular esse JSON a partir de uma interface intuitiva. Dessa forma, transformamos um campo em uma base de dados customizável em qualquer entidade do Ploomes.
+
+Para casos em que o preenchimento do usuário precise respeitar algum tipo de máscara, ou mesmo que os dados preenchidos sejam formatados de determinada forma para ele, embora o Ploomes não tenha essa parametrização no backend, é possível que o frontend do software a ser desenvolvido tenha esse tipo de funcionalidade.
+
+Vamos às configurações:
+
+1. Título do campo:
+
+É o "Nome" da propriedade e tem limite de 60 caracteres. Pode ser armazenada em quatro línguas diferentes:
+
+Português - Brasil;
+
+Inglês;
+
+Português - Portugal; 
+
+Espanhol - México.
+
+2. Valor padrão:
+
+O "Valor padrão" é utilizado para pré-preencher automaticamente um campo com um valor específico durante o processo de cadastro de um novo item no sistema. Quando um valor padrão é definido, ele será sugerido pelo sistema, agilizando o preenchimento de informações e mantendo a consistência dos registros;
+
+Por exemplo, se o campo "Contribuinte ICMS?" (do tipo Checkbox) tiver o valor padrão definido como "Sim" (true), ao cadastrar uma nova empresa, esse campo já aparecerá automaticamente marcado como "Sim". O usuário ainda terá a opção de alterar esse valor, se necessário.
+
+Essa propriedade não precisa ser necessariamente usada, já que é fácil colocar esse comportamento direto no frontend do software a ser desenvolvido caso seja necessário.
+
+Além de um valor fixo, também é possível, usando field-paths, puxar como padrão o valor de um outro campo.
+
+3. Campo chave:
+
+Um "Campo chave" é utilizado para garantir a unicidade de determinados dados no sistema. Quando um campo é definido como "Chave", o sistema Ploomes realiza uma verificação automática na base de dados. Isso impede que um novo registro seja criado com um valor duplicado no mesmo campo em que outro registro já existe;
+
+Por exemplo, se o campo "ID da Empresa no ERP" for definido como chave, e já houver uma empresa cadastrada com o valor "1" nesse campo, ao tentar cadastrar uma nova empresa com o mesmo valor "1", o sistema exibirá uma mensagem de erro. Essa mensagem informará que já existe um registro com esse valor no banco de dados, evitando a duplicidade de informações;
+
+Apenas campos do tipo “Texto simples”, “Número inteiro”, “Moeda”, “Número com casas decimais ilimitadas”, “CPF” e “CNPJ” podem ser marcados como chave.
+
+Como no caso acima, essa propriedade não precisa ser necessariamente usada, já que é fácil colocar esse comportamento direto no frontend do software a ser desenvolvido caso seja necessário.
+
+4. Campo de duas colunas: esta propriedade pode ser ignorada;
+
+5. Campo múltiplo:
+
+Ao habilitar esta opção, é possível incluir mais de um valor no preenchimento de um campo; 
+
+Por exemplo, se o campo "Ramo de atuação" (do tipo "Opções pré-cadastradas") estiver configurado como múltiplo, será possível escolher vários segmentos ao cadastrar uma empresa, em vez de limitar-se a uma única opção;
+
+Apenas os campos do tipo “Opções pré-cadastradas”, “Anexo”, “Usuário”, “Produto”, “Cliente” e “Símbolo de moeda” podem ser marcados como múltiplos.
+
+6 Fórmulas:
+
+É possível criar fórmulas utilizando Javascript para realizar cálculos e/ou preenchimentos automáticos de campos com base em outros campos do Ploomes; 
+
+Esta opção não deverá ser usada. As lógicas de campos deverão ser desenvolvidas direto no frontend do software.
+
+7. Marcar como dado de pessoa física:
+
+Caso essa opção seja marcada no campo, os dados contidos nesse campo serão assinalados como "dados de pessoa física".
+
+8. Limitar itens listados (por filtro simples):
+
+Em campos dinâmicos do tipo cliente, produto e usuário, é possível definir um filtro (usando field-paths) para limitar as opções dessas entidades que aparecem para o usuário selecionar; 
+
+9. Exibir como interruptor: não usar essa propriedade

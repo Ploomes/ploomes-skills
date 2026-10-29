@@ -1,0 +1,28 @@
+{
+  "conferidoEm": "2026-10-01",
+  "conta": "Conta de teste",
+  "comoFoiConferido": "buscar_pipeline (1001), buscar_campos por nome e por chave, buscar_opcoes_tabela (2003, 2002, 2001) e checklists das 3 etapas pela public-api2 — só leitura",
+  "campos": {
+    "deal_B0000007-0000-4000-8000-000000000007": { "nome": "Data prevista da próxima reposição", "typeId": 8 },
+    "deal_B0000002-0000-4000-8000-000000000002": { "nome": "Consumo confirmado na janela", "typeId": 7 },
+    "deal_B0000003-0000-4000-8000-000000000003": { "nome": "Consumo mensal apurado (kg)", "typeId": 6 }
+  },
+  "funis": { "Reposição Programada": ["Ciclo de consumo mapeado", "Reposição prevista", "Reposição confirmada"] },
+  "modelos": [],
+  "checklists": {
+    "Ciclo de consumo mapeado": [
+      "OBRIG contact_B0000005… Itens de consumo recorrente (cliente, TypeId 2) — condição INVERTIDA (igual a vazio)",
+      "OBRIG contact_B0000008… Periodicidade de reposição (cliente, TypeId 7) — condição INVERTIDA",
+      "OBRIG deal_B0000007… Data prevista da próxima reposição (TypeId 8) — condição INVERTIDA"
+    ],
+    "Reposição prevista": [
+      "OBRIG deal_B0000002… Consumo confirmado na janela (TypeId 7) — condição INVERTIDA",
+      "opc   deal_B0000006… Resposta do técnico de segurança (TypeId 2)"
+    ],
+    "Reposição confirmada": [
+      "OBRIG deal_B0000001… Itens e volumes confirmados para reposição (TypeId 2) — condição INVERTIDA",
+      "OBRIG deal_B0000004… Cotação aberta no funil Vendas de EPI (TypeId 7) — igual a \"Sim\" (ok)"
+    ],
+    "aviso": "5 itens com condição invertida: avisar quem pede antes de testar a tela (passo 2 da skill)."
+  }
+}

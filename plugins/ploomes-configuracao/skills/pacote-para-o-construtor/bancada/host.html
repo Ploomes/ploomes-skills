@@ -1,0 +1,454 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ploomes (bancada)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  /* Ploomes simulado (2026-10-06): chrome do app medido em ds-ploomes-crm-ui/geometria-do-produto.md.
+     Rail 55px escuro · barra superior 50px · sub-cabeçalho 40px · superfície #F4F3F4 · chat da Neppo no canto inferior direito. */
+  :root { --font:#1B102C; --font2:#8B8495; --muted:#979797; --linha:rgba(27,16,44,.1); --linha2:rgba(27,16,44,.05); --superficie:#F4F3F4; --nivel1:#FAFAFB;
+    --brand:#7D33E6; --brand2:#431188; --azul:#1A94FF; --verde:#0AA95A; --wa:#25D366; --perigo:#F22727; --alerta:#FFC01A; --rail:#1B102C; }
+  * { box-sizing:border-box; }
+  html, body { height:100%; }
+  body { margin:0; font:14px/1.45 'Source Sans 3','Source Sans Pro',system-ui,sans-serif; color:var(--font); background:var(--superficie); overflow:hidden; }
+  button { font:inherit; cursor:pointer; }
+  /* ---------- rail */
+  #rail { position:fixed; left:0; top:0; bottom:0; width:55px; background:var(--rail); padding:0 10px 10px 5px; z-index:20; font-family:Inter,sans-serif; }
+  .rail-item { position:absolute; left:10px; width:40px; height:40px; border-radius:5px; display:grid; place-items:center; color:#87838D; background:transparent; border:0; }
+  .rail-item:hover { color:#fff; background:rgba(255,255,255,.06); }
+  .rail-item.ativo { color:#fff; }
+  .rail-item.ativo::before { content:''; position:absolute; left:-15px; top:0; width:60px; height:40px; border-radius:5px; background:linear-gradient(102.35deg,#7D33E6 0%,#431188 100%); box-shadow:0 4px 5px rgba(0,0,0,.14); z-index:-1; }
+  .rail-item svg { width:20px; height:16px; }
+  .rail-tip { position:absolute; left:52px; background:#1B102C; color:#FBF8FE; font-size:12px; padding:3px 8px; border-radius:4px; white-space:nowrap; opacity:0; pointer-events:none; transition:opacity .15s; }
+  .rail-item:hover .rail-tip { opacity:1; }
+  /* ---------- barra superior e sub-cabeçalho */
+  #topo { position:fixed; left:55px; right:0; top:0; height:50px; background:#fff; border-bottom:1px solid var(--linha); border-radius:5px 0 0; display:flex; align-items:center; justify-content:space-between; padding:0 7.5px; gap:10px; z-index:15; }
+  .grupo { display:flex; align-items:center; gap:10px; }
+  .bt-mais { width:35px; height:35px; border-radius:5px; border:0; background:#fff; box-shadow:inset 0 0 0 1px var(--linha); color:var(--azul); font-size:20px; line-height:1; }
+  .busca { width:300px; height:35px; border-radius:5px; box-shadow:inset 0 0 0 1px var(--linha); display:flex; align-items:center; gap:10px; padding-left:10px; color:var(--font2); }
+  .bt-ico { width:35px; height:35px; border-radius:5px; border:0; background:transparent; color:var(--font); display:grid; place-items:center; position:relative; }
+  .bt-ico:hover { background:var(--linha2); }
+  .bt-ico svg { width:17px; height:17px; }
+  .badge { position:absolute; top:4px; right:3px; min-width:17px; height:16px; border-radius:2px; background:var(--alerta); color:#121212; font:700 10px/16px Inter,sans-serif; padding:0 3px; text-align:center; }
+  .bt-ia { height:35px; border-radius:5px; border:0; padding:0 12px; background:linear-gradient(141deg,#CA33FF,#334EFF); color:#fff; font-weight:600; }
+  .usuario { height:35px; border-radius:5px; display:flex; align-items:center; gap:8px; padding:0 10px; position:relative; }
+  .usuario:hover { background:var(--linha2); }
+  .avatar { width:20px; height:20px; border-radius:50%; background:#C9B6F2; color:#3b1580; display:grid; place-items:center; font-size:10px; font-weight:700; }
+  .usuario select { position:absolute; inset:0; opacity:0; cursor:pointer; }
+  #sub { position:fixed; left:55px; right:0; top:50px; height:40px; background:#fff; border-bottom:1px solid var(--linha2); display:flex; align-items:center; justify-content:space-between; padding:0 15px; z-index:14; }
+  .migalha { display:flex; align-items:center; gap:8px; font-size:14px; color:var(--font2); }
+  .migalha b { color:var(--font); font-weight:600; }
+  .bt-soft { height:30px; border-radius:5px; border:0; background:transparent; padding:0 10px; color:var(--font); display:inline-flex; align-items:center; gap:6px; }
+  .bt-soft:hover { background:var(--linha2); }
+  .bt-soft .ic { color:var(--azul); }
+  /* ---------- área da tela */
+  #area { position:fixed; left:55px; right:0; top:90px; bottom:0; }
+  #tela { width:100%; height:100%; border:0; background:var(--superficie); display:block; }
+  /* ---------- ficha nativa simulada (sistema legado: botões 31,5px com borda, peso 500) */
+  #ficha { position:absolute; inset:0; overflow:auto; padding:15px; display:none; }
+  #ficha.on { display:block; }
+  .lg-card { background:#fff; border-radius:5px; box-shadow:0 0 0 1px var(--linha); padding:15px 20px; margin-bottom:15px; }
+  .lg-titulo { font-size:22px; font-weight:600; margin:0; }
+  .lg-sub { color:var(--muted); font-size:13px; }
+  .lg-acoes { display:flex; gap:8px; margin-top:12px; flex-wrap:wrap; }
+  .lg-bt { height:31.5px; padding:5px 10px; border-radius:3px; border:1px solid rgba(23,22,38,.1); background:#fff; color:#333; font:500 13px/1.5 'Source Sans 3',sans-serif; display:inline-flex; align-items:center; gap:6px; }
+  .lg-bt:hover { background:#F5F5F5; }
+  .lg-bt.acao { background:var(--azul); color:#fff; border-color:var(--azul); }
+  .lg-bt.wa { color:#128C4A; }
+  .lg-bt[disabled] { opacity:.45; cursor:not-allowed; }
+  .lg-grid { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:10px 20px; margin-top:12px; }
+  .lg-campo label { display:block; font-size:12px; color:var(--muted); }
+  .lg-campo div { font-weight:500; }
+  .tl { list-style:none; margin:0; padding:0; }
+  .tl li { padding:10px 0; border-top:1px solid #EAECEC; }
+  .tl li:first-child { border-top:0; }
+  .tl time { color:var(--muted); font-size:11px; }
+  /* ---------- gaveta da bancada */
+  #gaveta { position:fixed; right:0; top:90px; bottom:0; width:340px; background:#fff; box-shadow:-6px 0 20px rgba(0,0,0,.12); transform:translateX(100%); transition:transform .2s; z-index:30; overflow:auto; padding:12px; font-size:13px; }
+  #gaveta.on { transform:none; }
+  #gaveta h2 { font-size:12px; margin:0 0 6px; color:var(--font2); text-transform:uppercase; letter-spacing:.04em; }
+  .caixa { border:1px solid var(--linha); border-radius:5px; padding:10px; margin-bottom:10px; }
+  .caixa input, .caixa select { font:inherit; padding:4px 8px; border-radius:4px; border:1px solid var(--linha); width:100%; }
+  .caixa .linha { display:flex; gap:6px; margin-top:6px; } .caixa .linha > * { flex:1; }
+  .caixa button { height:28px; border-radius:4px; border:1px solid var(--linha); background:#fff; }
+  #ponte, #avisos, #log { font:11px/1.35 ui-monospace,monospace; white-space:pre-wrap; word-break:break-all; max-height:200px; overflow:auto; margin:0; }
+  #avisos { color:#9a6700; } .s4, .s5 { color:var(--perigo); } .s2 { color:#1b7f4b; }
+  /* ---------- chat embarcado da Neppo (simulado) */
+  #nBolha { position:fixed; right:20px; bottom:20px; width:52px; height:52px; border-radius:50%; border:0; background:#0E5FD8; color:#fff; box-shadow:0 6px 18px rgba(14,95,216,.35); z-index:40; display:grid; place-items:center; }
+  #nBolha svg { width:24px; height:24px; }
+  #nBolha .badge { top:-2px; right:-2px; background:var(--perigo); color:#fff; border-radius:9px; min-width:18px; height:18px; line-height:18px; }
+  #neppo { position:fixed; right:20px; bottom:84px; width:400px; height:610px; max-height:calc(100vh - 110px); background:var(--nivel1); border-radius:10px; box-shadow:0 10px 30px rgba(27,16,44,.22); display:none; flex-direction:column; overflow:hidden; z-index:41; }
+  #neppo.on { display:flex; }
+  .n-cab { background:#0E5FD8; color:#fff; padding:10px 12px; display:flex; align-items:center; gap:10px; }
+  .n-cab b { font-size:15px; } .n-cab .st { font-size:12px; opacity:.85; display:flex; align-items:center; gap:5px; } .n-cab .st i { width:8px; height:8px; border-radius:50%; background:#3BDDAD; display:inline-block; }
+  .n-cab button { margin-left:auto; border:0; background:transparent; color:#fff; font-size:18px; }
+  .n-abas { display:flex; background:#fff; border-bottom:1px solid var(--linha); }
+  .n-abas button { flex:1; height:40px; border:0; background:transparent; color:var(--font2); font-weight:600; border-bottom:2px solid transparent; }
+  .n-abas button.on { color:#0E5FD8; border-bottom-color:#0E5FD8; }
+  .n-abas small { background:var(--linha2); border-radius:8px; padding:0 6px; margin-left:4px; font-weight:600; }
+  .n-ferr { display:flex; gap:8px; padding:8px 10px; background:#fff; border-bottom:1px solid var(--linha2); }
+  .n-ferr input { flex:1; height:30px; border-radius:5px; border:0; box-shadow:inset 0 0 0 1px var(--linha); padding:0 8px; font:inherit; }
+  .n-ferr button { height:30px; border-radius:5px; border:0; background:#0E5FD8; color:#fff; padding:0 10px; font-weight:600; white-space:nowrap; }
+  .n-limite { font-size:11px; color:var(--font2); padding:4px 10px; background:#fff; border-bottom:1px solid var(--linha2); }
+  .n-limite.cheio { color:var(--perigo); font-weight:600; }
+  #nLista { flex:1; overflow-y:auto; overflow-x:hidden; background:#fff; }
+  .n-item > div { min-width:0; }
+  .n-item { padding:9px 12px; border-bottom:1px solid var(--linha2); cursor:pointer; display:grid; grid-template-columns:34px 1fr auto; gap:8px; align-items:center; }
+  .n-item:hover { background:#F5F8FF; }
+  .n-ava { width:34px; height:34px; border-radius:50%; background:#E3ECFB; color:#0E5FD8; display:grid; place-items:center; font-weight:700; font-size:12px; }
+  .n-item .nome { font-weight:600; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+  .n-item .trecho { color:var(--font2); font-size:12px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+  .n-item .dir { text-align:right; font-size:11px; color:var(--muted); }
+  .tag { display:inline-block; border-radius:3px; padding:0 6px; font-size:11px; font-weight:600; }
+  .tag.esp { background:#FFF4D6; color:#8a5a00; } .tag.ok { background:#E0F6EC; color:#0A7A45; } .tag.blq { background:#FDE3E3; color:#B91C1C; } .tag.ativo { background:#E3ECFB; color:#0E5FD8; }
+  .n-vazio { padding:30px 16px; text-align:center; color:var(--font2); }
+  #nConv { display:none; flex-direction:column; flex:1; min-height:0; }
+  #nConv.on { display:flex; }
+  .n-ctopo { background:#fff; padding:8px 10px; border-bottom:1px solid var(--linha); display:flex; align-items:center; gap:8px; }
+  .n-ctopo .info { flex:1; min-width:0; } .n-ctopo .info b { display:block; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; } .n-ctopo .info span { font-size:11px; color:var(--font2); }
+  .n-ctopo button { border:0; background:transparent; width:30px; height:30px; border-radius:5px; color:var(--font); }
+  .n-ctopo button:hover { background:var(--linha2); }
+  .n-menu { position:absolute; right:10px; top:96px; background:#fff; border-radius:5px; box-shadow:0 6px 18px rgba(0,0,0,.15); display:none; z-index:3; min-width:190px; }
+  .n-menu.on { display:block; } .n-menu button { display:block; width:100%; text-align:left; border:0; background:transparent; padding:8px 12px; } .n-menu button:hover { background:var(--linha2); } .n-menu button[disabled] { opacity:.4; }
+  #nMsgs { flex:1; overflow:auto; padding:12px; background:#ECE5DD; display:flex; flex-direction:column; gap:6px; }
+  .msg { max-width:82%; padding:6px 9px; border-radius:7px; white-space:pre-wrap; box-shadow:0 1px 1px rgba(0,0,0,.08); font-size:13.5px; }
+  .msg.cliente { background:#fff; align-self:flex-start; } .msg.vendedor { background:#DCF8C6; align-self:flex-end; }
+  .msg small { display:block; color:#7a8a7a; font-size:10px; margin-top:2px; text-align:right; }
+  .n-aviso24 { background:#FFF4D6; color:#6b4b00; font-size:12px; padding:6px 10px; }
+  .n-comp { background:#F0F0F0; padding:8px; display:flex; flex-direction:column; gap:6px; }
+  .n-comp textarea { font:inherit; width:100%; height:58px; resize:none; border:0; border-radius:18px; padding:8px 12px; }
+  .n-comp .acoes { display:flex; gap:6px; align-items:center; }
+  .n-comp .enviar { margin-left:auto; height:32px; border-radius:16px; border:0; background:#0E5FD8; color:#fff; padding:0 14px; font-weight:600; }
+  .n-comp .sim { height:28px; border-radius:14px; border:1px dashed #888; background:transparent; color:#555; padding:0 10px; font-size:12px; }
+  /* modal de envio ativo */
+  #nModal { position:fixed; inset:0; background:rgba(27,16,44,.35); display:none; align-items:center; justify-content:center; z-index:50; }
+  #nModal.on { display:flex; }
+  .mod { width:480px; background:#fff; border-radius:10px; box-shadow:0 10px 40px rgba(0,0,0,.25); overflow:hidden; }
+  .mod header { padding:14px 18px; border-bottom:1px solid var(--linha); font-size:16px; font-weight:600; display:flex; }
+  .mod header button { margin-left:auto; border:0; background:transparent; font-size:18px; }
+  .mod .corpo { padding:14px 18px; display:grid; gap:10px; }
+  .mod label { font-size:12px; color:var(--font2); display:block; margin-bottom:3px; }
+  .mod select, .mod input { width:100%; height:35px; border-radius:5px; border:0; box-shadow:inset 0 0 0 1px var(--linha); padding:0 10px; font:inherit; background:#fff; }
+  .mod .previa { background:#ECE5DD; border-radius:7px; padding:10px; } .mod .previa div { background:#DCF8C6; border-radius:7px; padding:6px 9px; white-space:pre-wrap; font-size:13px; }
+  .mod footer { padding:12px 18px; border-top:1px solid var(--linha); display:flex; gap:8px; justify-content:flex-end; }
+  .mod footer .p { height:35px; border-radius:5px; border:0; background:#0E5FD8; color:#fff; padding:0 16px; font-weight:600; }
+  .mod footer .s { height:35px; border-radius:5px; border:0; background:transparent; padding:0 12px; }
+  .mod .erro { color:var(--perigo); font-size:13px; }
+  #toast { position:fixed; left:50%; bottom:24px; transform:translateX(-50%); background:#1B102C; color:#fff; padding:10px 16px; border-radius:5px; font-size:13px; display:none; z-index:60; }
+/* modo embutido (?embutido=1): a bancada roda dentro de um portal que já tem a barra lateral */
+body.embutido #rail { display:none; }
+body.embutido #topo { left:0; border-radius:0; }
+body.embutido #area { left:0; }
+</style>
+</head>
+<body>
+<nav id="rail" aria-label="Menu de módulos">
+  <button class="rail-item" style="top:20px" title="Operação"><svg viewBox="0 0 20 16" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M2 13a8 8 0 1 1 16 0"/><path d="M10 13l4-5"/></svg><span class="rail-tip">Operação</span></button>
+  <button class="rail-item" style="top:70px" title="Clientes"><svg viewBox="0 0 20 16" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="1.5" y="2" width="17" height="12" rx="1.5"/><circle cx="7" cy="7" r="2"/><path d="M4 12c.6-1.8 5.4-1.8 6 0M12 6h4M12 9h4"/></svg><span class="rail-tip">Clientes</span></button>
+  <button class="rail-item" style="top:120px" title="Processos"><svg viewBox="0 0 20 16" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M2 3h16M2 8h16M2 13h16"/><circle cx="6" cy="3" r="1.6" fill="#1B102C"/><circle cx="13" cy="8" r="1.6" fill="#1B102C"/><circle cx="8" cy="13" r="1.6" fill="#1B102C"/></svg><span class="rail-tip">Processos</span></button>
+  <button class="rail-item" style="top:170px" title="Documentos"><svg viewBox="0 0 20 16" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M5 1.5h7l4 4V14.5H5z"/><path d="M12 1.5v4h4M7.5 9h6M7.5 11.5h6"/></svg><span class="rail-tip">Documentos</span></button>
+  <button class="rail-item" style="top:220px" title="Produtos"><svg viewBox="0 0 20 16" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M2 5l8-3.5L18 5v7l-8 3.5L2 12z"/><path d="M2 5l8 3.5L18 5M10 8.5V15"/></svg><span class="rail-tip">Produtos</span></button>
+  <button class="rail-item" style="top:270px" title="Relatórios"><svg viewBox="0 0 20 16" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M2 14.5h16M5 12V8M9 12V4M13 12V6M17 12V9"/></svg><span class="rail-tip">Relatórios</span></button>
+  <button class="rail-item ativo" style="top:320px" title="Telas"><svg viewBox="0 0 20 16" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="1.5" y="1.5" width="7" height="6" rx="1"/><rect x="11.5" y="1.5" width="7" height="6" rx="1"/><rect x="1.5" y="9.5" width="17" height="5" rx="1"/></svg><span class="rail-tip">Telas de IA</span></button>
+  <button class="rail-item" style="top:370px" title="Administração"><svg viewBox="0 0 20 16" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="10" cy="8" r="2.5"/><path d="M10 1.5v2M10 12.5v2M3.5 8h-2M18.5 8h-2M5.4 3.4l1.4 1.4M13.2 11.2l1.4 1.4M5.4 12.6l1.4-1.4M13.2 4.8l1.4-1.4"/></svg><span class="rail-tip">Administração</span></button>
+</nav>
+<header id="topo">
+  <div class="grupo">
+    <button class="bt-mais" title="Criar">+</button>
+    <div class="busca"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><circle cx="7" cy="7" r="5"/><path d="M11 11l4 4"/></svg>Buscar no Ploomes</div>
+  </div>
+  <div class="grupo">
+    <button class="bt-ia">✦ Assistente IA</button>
+    <button class="bt-ico" title="E-mails"><svg viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="2" y="4" width="14" height="10" rx="1"/><path d="M2 5l7 5 7-5"/></svg></button>
+    <button class="bt-ico" title="Notificações"><svg viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M4.5 13V8a4.5 4.5 0 0 1 9 0v5l1.5 1.5H3z"/><path d="M7.5 16h3"/></svg><span class="badge">3</span></button>
+    <button class="bt-ico" title="Agenda"><svg viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="2.5" y="3.5" width="13" height="12" rx="1"/><path d="M2.5 7h13M6 2v3M12 2v3"/></svg></button>
+    <div class="usuario"><span class="avatar" id="avatar">—</span><span id="nomeUsuario">—</span><svg width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="#8B8495" stroke-width="1.5"><path d="M2 3.5l3 3 3-3"/></svg>
+      <select id="usuario" title="Trocar o usuário logado (bancada)"></select></div>
+  </div>
+</header>
+<div id="sub">
+  <div class="migalha" id="migalha"><span>Telas de IA</span><span>›</span><b id="nomeTela">—</b></div>
+  <div class="grupo">
+    <button class="bt-soft" id="recarregar"><span class="ic">⟳</span>Recarregar</button>
+    <button class="bt-soft" id="abrirGaveta"><span class="ic">⚙</span>Bancada</button>
+  </div>
+</div>
+<main id="area">
+  <iframe id="tela" title="Tela em teste" allow="clipboard-write; clipboard-read"></iframe>
+  <section id="ficha" aria-label="Registro nativo do Ploomes (simulado)"></section>
+</main>
+<aside id="gaveta" aria-label="Controles da bancada">
+  <div class="caixa"><h2>Provocar a tela</h2>
+    <div class="linha"><button data-falha="429">429 ×1</button><button data-falha="401">401 ×1</button><button data-falha="500">500 ×1</button></div>
+    <div class="linha"><input id="de" placeholder="nome atual"><input id="para" placeholder="nome novo"></div>
+    <div class="linha"><button id="renFunil">Renomear funil</button><button id="renEtapa">Renomear etapa</button></div>
+    <div class="linha"><button id="reiniciar">Reiniciar dados</button></div>
+  </div>
+  <div class="caixa"><h2>Conta (config do host)</h2>
+    <div class="linha"><label style="display:flex;gap:6px;align-items:center"><input type="checkbox" id="wl"> Whitelabel</label>
+      <input type="color" id="wlCor" value="#0a7d5a" title="Cor da marca"><input type="color" id="wlAcao" value="#e8590c" title="Cor de ação"></div>
+    <div class="linha"><button id="renovarChave">Renovar userKey</button><button id="voltarRaiz">Rota /</button></div>
+  </div>
+  <div class="caixa"><h2>Ponte (@ploomescrm/bridge)</h2><pre id="ponte"></pre></div>
+  <div class="caixa"><h2>Avisos da API</h2><pre id="avisos">—</pre></div>
+  <div class="caixa"><h2>Requisições</h2><pre id="log"></pre></div>
+</aside>
+
+<button id="nBolha" title="Neppo — atendimentos" hidden><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 18.5l1.3-3.6A7.5 7.5 0 1 1 8.7 18z"/><path d="M9 10h6M9 13h4"/></svg><span class="badge" id="nContador" hidden>0</span></button>
+<section id="neppo" aria-label="Chat embarcado da Neppo (simulado)">
+  <div class="n-cab"><b>Neppo</b><span class="st"><i></i>Disponível</span><button id="nFechar" title="Fechar">×</button></div>
+  <div id="nListaWrap" style="display:flex;flex-direction:column;flex:1;min-height:0">
+    <div class="n-abas"><button data-aba="EM_ANDAMENTO" class="on">Em andamento<small id="cA">0</small></button><button data-aba="ENCERRADA">Encerrados<small id="cE">0</small></button><button data-aba="ATIVOS">Ativos<small id="cV">0</small></button></div>
+    <div class="n-ferr"><input id="nBusca" placeholder="Buscar contato"><button id="nNovo">+ Envio ativo</button></div>
+    <div class="n-limite" id="nLimite"></div>
+    <div id="nLista"></div>
+  </div>
+  <div id="nConv">
+    <div class="n-ctopo"><button id="nVoltar" title="Voltar">←</button><span class="n-ava" id="nAva"></span><div class="info"><b id="nNome"></b><span id="nMeta"></span></div><button id="nMais" title="Mais ações">⋮</button></div>
+    <div class="n-menu" id="nMenu"><button id="nFinalizar">Finalizar sessão</button><button disabled>Transferir para outro agente</button><button disabled>Classificar atendimento</button></div>
+    <div id="nMsgs"></div>
+    <div class="n-aviso24" id="nAviso24" hidden>Fora da janela de 24 h do WhatsApp: só modelo aprovado pela Meta é entregue. Use <b>+ Envio ativo</b>.</div>
+    <div class="n-comp">
+      <textarea id="nTexto" placeholder="Digite uma mensagem (Ctrl+V cola o texto copiado na tela)"></textarea>
+      <div class="acoes"><button class="sim" id="nCliente" title="Só existe na bancada">Simular resposta do contato</button><button class="enviar" id="nMandar">Enviar</button></div>
+    </div>
+  </div>
+</section>
+<div id="nModal" role="dialog" aria-modal="true" aria-label="Novo envio ativo">
+  <div class="mod">
+    <header>Novo envio ativo · WhatsApp<button id="mFechar">×</button></header>
+    <div class="corpo">
+      <div><label>Cliente</label><select id="mCliente"></select></div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px"><div><label>Grupo de atendimento</label><select id="mGrupo"></select></div><div><label>Canal</label><select id="mCanal"><option>WhatsApp · número da empresa (COEX)</option></select></div></div>
+      <div><label>Mensagem (modelo aprovado pela Meta)</label><select id="mModelo"></select></div>
+      <div id="mParams" style="display:grid;grid-template-columns:1fr 1fr;gap:10px"></div>
+      <div class="previa"><div id="mPrevia"></div></div>
+      <div class="erro" id="mErro"></div>
+    </div>
+    <footer><button class="s" id="mCancelar">Cancelar</button><button class="p" id="mEnviar">Enviar</button></footer>
+  </div>
+</div>
+<div id="toast"></div>
+<script>
+if (new URLSearchParams(location.search).get('embutido') === '1') document.body.classList.add('embutido');
+  const TELA = '__TELA__', API = '__API__', CHAVE = '__CHAVE__';
+  const origemTela = new URL(TELA).origin;
+  const $ = (id) => document.getElementById(id);
+  const esc = (s) => String(s ?? '').replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+  const iniciais = (n) => String(n ?? '?').split(/\s+/).filter(Boolean).slice(0, 2).map((p) => p[0]).join('').toUpperCase();
+  const hora = (iso) => new Date(iso).toLocaleString('pt-BR', { day: '2-digit', month: '2-digit', hour: '2-digit', minute: '2-digit' });
+  const ponte = (t) => { $('ponte').textContent = new Date().toTimeString().slice(0, 8) + ' ' + t + '\n' + $('ponte').textContent; };
+  const toast = (t) => { $('toast').textContent = t; $('toast').style.display = 'block'; clearTimeout(toast.h); toast.h = setTimeout(() => ($('toast').style.display = 'none'), 3200); };
+  const api = async (rota) => (await fetch(API + rota, { headers: { 'User-Key': CHAVE } })).json();
+  const ficha = location.pathname.match(/^\/(contact|deal)\/(\d+)$/);
+  let usuarios = [];
+
+  // ---- ponte com a tela: o HOST REAL do @ploomescrm/bridge (o mesmo pacote que a tela usa do outro lado).
+  // O servidor da bancada entrega o pacote instalado na tela em /_bancada/bridge.mjs.
+  // A rota interna da tela é espelhada no endereço do CRM falso, como o CRM faz em /ai-screen/<tela>/<rota>:
+  // aqui ela fica no hash (#/ai-screen/bancada/<rota>), e o voltar/avançar do navegador volta para a tela.
+  const PREFIXO_ROTA = '#/ai-screen/bancada';
+  const rotaDoHash = () => { const h = decodeURIComponent(location.hash); return h.startsWith(PREFIXO_ROTA) ? (h.slice(PREFIXO_ROTA.length) || '/') : '/'; };
+  const whitelabel = () => $('wl')?.checked ? { enabled: true, name: 'Conta whitelabel (bancada)', brandColor: $('wlCor').value, actionColor: $('wlAcao').value } : { enabled: false };
+  let host = null, overlayHost = null, B = null, rotaInicial = null;
+  async function garantirHost() {
+    if (host) return host;
+    try { B = await import('/_bancada/bridge.mjs'); }
+    catch (e) { ponte('✖ não achei o @ploomescrm/bridge da tela — rode npm install na pasta da tela'); toast('Instale as dependências da tela (npm install).'); throw e; }
+    overlayHost = B.createViewportOverlayHost({ frame: () => $('tela') });
+    host = B.createHost({
+      transport: B.createIframeHostTransport({ iframe: () => $('tela'), appOrigin: origemTela }),
+      // Fábrica: resolvida a cada READY (recarga da tela) e a cada sendConfig() (userKey renovada, whitelabel).
+      config: () => ({ userKey: CHAVE + ':' + $('usuario').value, userId: Number($('usuario').value), apiUrls: { apiUrl: API }, whitelabel: whitelabel(),
+        language: 'pt-BR', projectId: 'bancada', initialRoute: rotaDoHash() }),
+      onReady: (r) => { overlayHost.reset(); rotaInicial = rotaDoHash(); ponte('← app:ready ' + JSON.stringify(r ?? {}) + ' → host:init'); },
+      onNavigate: ({ to, params, replace }) => aoNavegar(to, params, replace),
+      onEvent: (ev) => {
+        overlayHost.handleEvent(ev);
+        // O <main> do CRM falso é position: fixed, e isso cria um contexto de empilhamento: o iframe
+        // em tela cheia ficaria atrás do cabeçalho. Com a camada ativa, o <main> sobe acima de tudo,
+        // como o modal fica no CRM real (2026-10-20).
+        if (ev.name === 'viewport-overlay') $('area').style.zIndex = ev.data?.active ? '10000' : '';
+        ponte('← evento ' + ev.name + ' ' + JSON.stringify(ev.data ?? null).slice(0, 80));
+      },
+      onRequest: (req) => {
+        const r = overlayHost.handleRequest(req); if (r !== undefined) return r;
+        ponte('← pedido ' + req.name + ' (sem handler na bancada)');
+        throw new Error(B.NO_HANDLER_ERROR_PREFIX + ' "' + req.name + '"');
+      },
+      onVersionMismatch: (i) => ponte('⚠ versão do protocolo: ' + JSON.stringify(i)),
+      onError: (e) => ponte('✖ host: ' + (e?.message ?? e)),
+    });
+    return host;
+  }
+  // A tela pediu para navegar. Com params (ids) é pedido de TELA DO CRM pelo catálogo; sem, é a rota interna dela.
+  function aoNavegar(to, params, replace) {
+    if (params && Object.keys(params).length) {
+      ponte('← navegar para tela do CRM: ' + to + ' ' + JSON.stringify(params));
+      const id = params.id ?? params.Id, tipo = /contact/i.test(to) ? 'contact' : /deal/i.test(to) ? 'deal' : null;
+      if (tipo && id) { location.href = '/' + tipo + '/' + id; return; }
+      return toast('Abriria a tela do CRM ' + to + ' ' + JSON.stringify(params) + ' (não simulada na bancada)');
+    }
+    // A base reporta '/' (replace) ao conectar, antes de aplicar a initialRoute. Obedecer apagaria o deep link
+    // do endereço; a bancada ignora e avisa. Como o CRM real trata isso não está confirmado (2026-10-19).
+    const inicial = rotaInicial; rotaInicial = null;
+    if (inicial && inicial !== '/' && to === '/' && replace) { ponte('⚠ a tela reportou "/" ao conectar; mantive a rota inicial ' + inicial); return; }
+    const url = PREFIXO_ROTA + (to === '/' ? '' : to);
+    if (url !== decodeURIComponent(location.hash)) history[replace ? 'replaceState' : 'pushState'](null, '', url);
+    $('nomeTela').textContent = ($('nomeTela').dataset.base ?? 'Tela em teste') + '  ·  ' + to;
+    ponte('← rota ' + to + (replace ? ' (replace)' : ''));
+  }
+  // Voltar/avançar do navegador: o host manda a tela para a rota do endereço (como o CRM faz).
+  window.addEventListener('popstate', () => { if (host) { const to = rotaDoHash(); ponte('→ host:navigate ' + to); host.navigate({ to, replace: true }); } });
+  async function post(cmd, corpo) { const r = await fetch('/_bancada/' + cmd, { method: 'POST', body: JSON.stringify(corpo ?? {}) }); return { status: r.status, ...(await r.json()) }; }
+  document.querySelectorAll('[data-falha]').forEach((b) => (b.onclick = () => post('falhar', { status: b.dataset.falha, vezes: 1 })));
+  $('renFunil').onclick = async () => { const r = await post('renomear-funil', { de: $('de').value, para: $('para').value }); toast(r.ok ? 'Funil renomeado. Recarregue a tela.' : 'Funil não encontrado.'); };
+  $('renEtapa').onclick = async () => { const r = await post('renomear-etapa', { de: $('de').value, para: $('para').value }); toast(r.ok ? 'Etapa renomeada. Recarregue a tela.' : 'Etapa não encontrada.'); };
+  $('reiniciar').onclick = async () => { await post('reiniciar'); carregarTela(); };
+  $('recarregar').onclick = () => carregarTela();
+  $('abrirGaveta').onclick = () => $('gaveta').classList.toggle('on');
+  // config nova pelo mesmo canal que o CRM usa (host.sendConfig): testa o useConexao reconfigurando sem reiniciar
+  ['wl', 'wlCor', 'wlAcao'].forEach((id) => ($(id).onchange = () => reenviarConfig('whitelabel')));
+  $('renovarChave').onclick = () => reenviarConfig('userKey renovada');
+  $('voltarRaiz').onclick = () => { history.pushState(null, '', PREFIXO_ROTA); host?.navigate({ to: '/', replace: false }); };
+  $('usuario').onchange = () => { mostrarUsuario(); carregarTela(); };
+  function mostrarUsuario() { const u = usuarios.find((x) => String(x.id) === $('usuario').value); $('nomeUsuario').textContent = u?.nome ?? '—'; $('avatar').textContent = iniciais(u?.nome); }
+  async function carregarTela() {
+    if (ficha) return desenharFicha();
+    $('ponte').textContent = '';
+    await garantirHost();   // o host escuta antes de a tela carregar: o READY dela não se perde
+    $('tela').src = TELA + '?t=' + Date.now();
+  }
+  async function reenviarConfig(motivo) { if (!host) return; await host.sendConfig(); ponte('→ host:init (' + motivo + ')'); }
+
+  async function atualizar() {
+    const e = await (await fetch('/_bancada/estado')).json();
+    if (!usuarios.length) { usuarios = e.usuarios; $('usuario').innerHTML = usuarios.map((u) => '<option value="' + u.id + '">' + esc(u.nome) + '</option>').join(''); mostrarUsuario(); carregarTela(); }
+    if (!ficha) { const base = e.tela ?? 'Tela em teste', r = rotaDoHash(); $('nomeTela').dataset.base = base; $('nomeTela').textContent = base + (r !== '/' ? '  ·  ' + r : ''); }
+    $('avisos').textContent = e.avisos.length ? e.avisos.join('\n') : '—';
+    $('log').innerHTML = e.registro.slice().reverse().map((l) => '<span class="s' + String(l.status ?? 0)[0] + '">' + l.quando + ' ' + l.status + ' ' + l.metodo + ' ' + esc(l.rota) + (l.corpo ? '\n    ' + esc(l.corpo) : '') + '</span>').join('\n');
+  }
+  atualizar(); setInterval(atualizar, 1500);
+
+  // ---- ficha nativa simulada: /contact/<id> e /deal/<id>, com o "Contatar via Neppo"
+  async function desenharFicha() {
+    $('tela').style.display = 'none'; $('ficha').classList.add('on');
+    const [tipo, id] = [ficha[1], Number(ficha[2])];
+    let cliente, negocio = null;
+    if (tipo === 'deal') {
+      negocio = (await api(`Deals?$filter=Id eq ${id}&$expand=Contact($select=Id,Name),Owner($select=Id,Name)`)).value?.[0];
+      cliente = negocio?.ContactId ? (await api(`Contacts?$filter=Id eq ${negocio.ContactId}&$expand=Phones`)).value?.[0] : null;
+    } else cliente = (await api(`Contacts?$filter=Id eq ${id}&$expand=Phones,Owner($select=Id,Name)`)).value?.[0];
+    const regs = cliente ? (await api(`InteractionRecords?$filter=ContactId eq ${cliente.Id}&$orderby=Date desc&$top=12`)).value ?? [] : [];
+    $('migalha').innerHTML = tipo === 'deal' ? '<span>Processos</span><span>›</span><b>' + esc(negocio?.Title ?? 'Negócio') + '</b>' : '<span>Clientes</span><span>›</span><b>' + esc(cliente?.Name ?? 'Cliente') + '</b>';
+    const naNeppo = !!(cliente?.Phones?.[0]?.PhoneNumber);
+    $('ficha').innerHTML =
+      '<div class="lg-card"><p class="lg-sub">' + (tipo === 'deal' ? 'Negócio' : 'Cliente') + ' · registro nativo simulado</p>'
+      + '<h1 class="lg-titulo">' + esc(tipo === 'deal' ? negocio?.Title : cliente?.Name) + '</h1>'
+      + '<div class="lg-acoes"><button class="lg-bt acao">Editar</button>'
+      + '<button class="lg-bt wa" id="contatar" ' + (naNeppo ? '' : 'disabled title="O contato ainda não está na Neppo (sem telefone)"') + '><svg width="14" height="14" viewBox="0 0 24 24" fill="#25D366"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2z"/></svg>Contatar via Neppo</button>'
+      + '<button class="lg-bt">Nova tarefa</button><button class="lg-bt">Novo registro</button></div>'
+      + '<div class="lg-grid">'
+      + (tipo === 'deal' ? '<div class="lg-campo"><label>Cliente</label><div>' + esc(cliente?.Name ?? '—') + '</div></div><div class="lg-campo"><label>Responsável</label><div>' + esc(negocio?.Owner?.Name ?? '—') + '</div></div>' : '<div class="lg-campo"><label>Responsável</label><div>' + esc(cliente?.Owner?.Name ?? '—') + '</div></div>')
+      + '<div class="lg-campo"><label>Telefone</label><div>' + esc(cliente?.Phones?.[0]?.PhoneNumber ?? '—') + '</div></div></div></div>'
+      + '<div class="lg-card"><b>Histórico</b><ul class="tl">' + (regs.length ? regs.map((r) => '<li><time>' + hora(r.Date) + '</time><div>' + esc(r.Content || '(registro sem texto)') + '</div></li>').join('') : '<li class="lg-sub">Sem registros.</li>') + '</ul></div>';
+    if ($('contatar')) $('contatar').onclick = () => abrirChatDoCliente(cliente);
+  }
+
+  // ---- chat embarcado da Neppo (simulado): abas Em andamento / Encerrados / Ativos, conversa, envio ativo
+  let N = { conversas: [], envios: [], modelos: [], grupos: [], contatos: [], limite: null }, aba = 'EM_ANDAMENTO', aberta = null;
+  async function chat() {
+    N = await (await fetch('/_bancada/neppo')).json();
+    $('nBolha').hidden = false;
+    const aguard = N.conversas.filter((c) => c.aguardando && c.status !== 'ENCERRADA').length;
+    $('nContador').hidden = !aguard; $('nContador').textContent = aguard;
+    const em = N.conversas.filter((c) => c.status === 'EM_ANDAMENTO'), enc = N.conversas.filter((c) => c.status === 'ENCERRADA'), atv = N.conversas.filter((c) => c.status === 'ATIVO');
+    $('cA').textContent = em.length; $('cE').textContent = enc.length; $('cV').textContent = atv.length + N.envios.filter((e) => e.status === 'bloqueado').length;
+    if (N.limite) { $('nLimite').textContent = 'Envios ativos no mês: ' + N.limite.usados + ' de ' + N.limite.total + (N.limite.usados >= N.limite.total ? ' · Limite atingido' : ''); $('nLimite').classList.toggle('cheio', N.limite.usados >= N.limite.total); }
+    const q = $('nBusca').value.trim().toLowerCase();
+    let itens;
+    if (aba === 'ATIVOS') {
+      itens = atv.map((c) => ({ c, html: tagHtml('ativo', 'aguardando resposta') }))
+        .concat(N.envios.filter((e) => e.status === 'bloqueado').slice().reverse().map((e) => ({ bloq: e, html: tagHtml('blq', 'bloqueado') })));
+    } else itens = (aba === 'EM_ANDAMENTO' ? em : enc).map((c) => ({ c, html: c.aguardando ? tagHtml('esp', 'aguardando') : '' }));
+    itens = itens.filter((x) => !q || (x.c?.cliente ?? x.bloq?.cliente ?? '').toLowerCase().includes(q));
+    $('nLista').innerHTML = itens.length ? itens.map((x) => {
+      if (x.bloq) return '<div class="n-item" title="' + esc(x.bloq.motivo) + '"><span class="n-ava">' + iniciais(x.bloq.cliente) + '</span><div><div class="nome">' + esc(x.bloq.cliente) + '</div><div class="trecho">' + esc(x.bloq.modelo) + ' — ' + esc(x.bloq.motivo) + '</div></div><div class="dir">' + hora(x.bloq.quando) + '<br>' + x.html + '</div></div>';
+      const u = x.c.mensagens[x.c.mensagens.length - 1];
+      return '<div class="n-item" data-s="' + x.c.sessionId + '"><span class="n-ava">' + iniciais(x.c.cliente) + '</span><div><div class="nome">' + esc(x.c.cliente) + '</div><div class="trecho">' + esc(u ? (u.de === 'vendedor' ? 'Você: ' : '') + u.texto : '—') + '</div></div><div class="dir">' + (u ? hora(u.quando) : '') + '<br>' + x.html + '</div></div>';
+    }).join('') : '<div class="n-vazio">' + (aba === 'ATIVOS' ? 'Nenhum envio ativo aguardando resposta.' : aba === 'ENCERRADA' ? 'Nenhum atendimento encerrado.' : 'Nenhum atendimento em andamento.') + '</div>';
+    document.querySelectorAll('.n-item[data-s]').forEach((d) => (d.onclick = () => abrirConversa(d.dataset.s)));
+    if (aberta) desenharConversa();
+  }
+  const tagHtml = (cls, t) => '<span class="tag ' + cls + '">' + t + '</span>';
+  function abrirConversa(sid) { aberta = sid; $('nListaWrap').style.display = 'none'; $('nConv').classList.add('on'); desenharConversa(true); }
+  function voltar() { aberta = null; $('nConv').classList.remove('on'); $('nListaWrap').style.display = 'flex'; $('nMenu').classList.remove('on'); }
+  function desenharConversa(rolar) {
+    const c = N.conversas.find((x) => x.sessionId === aberta); if (!c) return voltar();
+    $('nNome').textContent = c.cliente; $('nAva').textContent = iniciais(c.cliente);
+    $('nMeta').textContent = 'WhatsApp · ' + c.telefone + ' · protocolo ' + c.protocolo + ' · ' + (c.grupo ?? '') + (c.status === 'ENCERRADA' ? ' · encerrado' : '');
+    const ultCli = [...c.mensagens].reverse().find((m) => m.de === 'cliente');
+    const fora = !ultCli || Date.now() - new Date(ultCli.quando).getTime() > 24 * 3600 * 1000;
+    $('nAviso24').hidden = !fora && c.status !== 'ENCERRADA';
+    const box = $('nMsgs'); const fim = rolar || box.scrollTop + box.clientHeight >= box.scrollHeight - 20;
+    box.innerHTML = c.mensagens.map((m) => '<div class="msg ' + m.de + '">' + esc(m.texto) + '<small>' + hora(m.quando) + (m.de === 'vendedor' ? ' ✓✓' : '') + '</small></div>').join('');
+    if (fim) box.scrollTop = box.scrollHeight;
+  }
+  async function mandar(de) {
+    const texto = $('nTexto').value.trim(); if (!texto || !aberta) return;
+    const c = N.conversas.find((x) => x.sessionId === aberta);
+    const ultCli = [...(c?.mensagens ?? [])].reverse().find((m) => m.de === 'cliente');
+    if (de === 'vendedor' && (!ultCli || Date.now() - new Date(ultCli.quando).getTime() > 24 * 3600 * 1000)) return toast('Fora da janela de 24 h: a Neppo não entrega texto livre. Use + Envio ativo.');
+    const r = await post('neppo/enviar', { sessionId: aberta, de, texto });
+    if (!r.ok) return toast(r.motivo ?? 'Não foi possível enviar.');
+    $('nTexto').value = ''; await chat(); $('nMsgs').scrollTop = $('nMsgs').scrollHeight;
+  }
+  function abrirChatDoCliente(cli) {
+    $('neppo').classList.add('on');
+    const c = N.conversas.filter((x) => x.clienteId === cli.Id && x.status !== 'ENCERRADA').slice(-1)[0];
+    if (c) { abrirConversa(c.sessionId); return; }
+    voltar(); abrirModal(cli.Id); toast('Sem atendimento aberto com ' + cli.Name + ': inicie com um envio ativo.');
+  }
+  // modal de envio ativo
+  function abrirModal(clienteId) {
+    $('mCliente').innerHTML = N.contatos.map((c) => '<option value="' + c.id + '"' + (c.id === clienteId ? ' selected' : '') + '>' + esc(c.nome) + ' · ' + esc(c.telefone) + '</option>').join('');
+    $('mGrupo').innerHTML = N.grupos.map((g) => '<option>' + esc(g) + '</option>').join('');
+    $('mModelo').innerHTML = N.modelos.map((m) => '<option>' + esc(m.nome) + '</option>').join('');
+    $('mErro').textContent = ''; desenharParams(); $('nModal').classList.add('on');
+  }
+  function modeloAtual() { return N.modelos.find((m) => m.nome === $('mModelo').value); }
+  function desenharParams() {
+    const m = modeloAtual(); const params = [...new Set((m?.texto.match(/\{(\w+)\}/g) ?? []).map((x) => x.slice(1, -1)))];
+    const cli = N.contatos.find((c) => String(c.id) === $('mCliente').value);
+    const u = usuarios.find((x) => String(x.id) === $('usuario').value);
+    $('mParams').innerHTML = params.map((p) => '<div><label>{' + p + '}</label><input data-p="' + p + '" value="' + esc(p === 'cliente' ? cli?.nome ?? '' : p === 'vendedor' ? u?.nome ?? '' : '') + '"></div>').join('');
+    document.querySelectorAll('#mParams input').forEach((i) => (i.oninput = previa)); previa();
+  }
+  function valores() { return Object.fromEntries([...document.querySelectorAll('#mParams input')].map((i) => [i.dataset.p, i.value])); }
+  function previa() { const m = modeloAtual(); const v = valores(); $('mPrevia').textContent = (m?.texto ?? '').replace(/\{(\w+)\}/g, (_, p) => v[p] || '{' + p + '}'); }
+  $('mCliente').onchange = desenharParams; $('mModelo').onchange = desenharParams;
+  const fecharModal = () => $('nModal').classList.remove('on');
+  $('mFechar').onclick = fecharModal; $('mCancelar').onclick = fecharModal;
+  $('mEnviar').onclick = async () => {
+    const r = await post('neppo/ativo', { clienteId: Number($('mCliente').value), modelo: $('mModelo').value, valores: valores(), grupo: $('mGrupo').value });
+    if (!r.ok) { $('mErro').textContent = 'Envio bloqueado: ' + r.motivo; await chat(); return; }
+    fecharModal(); aba = 'ATIVOS'; marcarAba(); await chat(); abrirConversa(r.sessionId); toast('Modelo enviado. A conversa aparece em Ativos até o contato responder.');
+  };
+  function marcarAba() { document.querySelectorAll('.n-abas button').forEach((x) => x.classList.toggle('on', x.dataset.aba === aba)); }
+  document.querySelectorAll('.n-abas button').forEach((b) => (b.onclick = () => { aba = b.dataset.aba; marcarAba(); voltar(); chat(); }));
+  $('nBusca').oninput = chat;
+  $('nNovo').onclick = () => abrirModal(null);
+  $('nBolha').onclick = () => $('neppo').classList.toggle('on');
+  $('nFechar').onclick = () => $('neppo').classList.remove('on');
+  $('nVoltar').onclick = voltar;
+  $('nMais').onclick = () => $('nMenu').classList.toggle('on');
+  $('nFinalizar').onclick = async () => { await post('neppo/finalizar', { sessionId: aberta }); $('nMenu').classList.remove('on'); toast('Sessão finalizada.'); voltar(); chat(); };
+  $('nMandar').onclick = () => mandar('vendedor');
+  $('nCliente').onclick = () => mandar('cliente');
+  chat(); setInterval(chat, 2000);
+</script>
+</body>
+</html>

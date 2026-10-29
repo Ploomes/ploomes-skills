@@ -1,0 +1,167 @@
+<!doctype html>
+<!--
+  Ploomes Design System — snapshot estático das stories do Storybook.
+  Componente : Organisms/GridView
+  Stories    : 5 (Default, Read only (no drag/resize), Per-breakpoint columns, With drag/resize callbacks, Fixed width (1000px))
+  Story      : GridView.stories.tsx
+  Tema       : light — use <html class="dark"> para o tema escuro.
+-->
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GridView — Ploomes DS</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;600;700&display=swap">
+<link rel="stylesheet" href="../assets/design-system.css">
+<link rel="stylesheet" href="../assets/page.css">
+</head>
+<body class="ds-page">
+  <header class="ds-head">
+    <a class="ds-back" href="../index.html">← inventário</a>
+    <h1 class="ds-title">GridView</h1>
+    <p class="ds-meta">organisms · 5 stories · <code>GridView.stories.tsx</code></p>
+    <pre class="ds-code ds-import">import { GridView, GridViewChildren } from &#x27;@ploomescrm/ui&#x27;;</pre>
+  </header>
+  <section class="ds-story">
+    <h2 class="ds-story-name">Default</h2>
+    <div class="ds-story-id">organisms-gridview--default · export <b>Default</b></div>
+    <div class="ds-canvas ds-canvas--fullscreen">
+<div class="min-h-screen bg-neutral-level_1 p-[20px]"><div class="[&amp;_.react-grid-item]:min-w-[100px] [&amp;_.react-grid-item]:max-md:min-w-0 [&amp;_.react-grid-item.react-grid-placeholder]:bg-neutral-level_2! [&amp;_.react-grid-item.react-grid-placeholder]:opacity-100! [&amp;_.react-grid-item.react-grid-placeholder]:rounded-[5px] [&amp;_.react-grid-placeholder_.react-resizable-handle]:invisible [&amp;_.react-grid-item&gt;.react-resizable-handle]:after:border-font-level_1 [&amp;_.draggableHandle]:cursor-grab [&amp;_.draggableHandle:active]:cursor-grabbing"><div class="react-grid-layout" style="height: 450px;"><div class="react-grid-item react-draggable cssTransforms react-resizable" style="transform: translate(10px, 10px); width: 400px; height: 190px; position: absolute;"><div class="flex h-full w-full flex-col overflow-hidden rounded-[10px] border border-neutral-level_2 bg-background"><div class="draggableHandle flex h-[36px] shrink-0 items-center border-b border-neutral-level_2 bg-neutral-level_1 px-[10px]"><p class="text-sm font-semibold text-font">Vendas do mês</p></div><div class="flex flex-1 items-center justify-center p-[10px] text-sm text-font-level_1">Arraste pelo cabeçalho, redimensione pelo canto</div></div><span class="react-resizable-handle react-resizable-handle-se"></span></div><div class="react-grid-item react-draggable cssTransforms react-resizable" style="transform: translate(420px, 10px); width: 400px; height: 190px; position: absolute;"><div class="flex h-full w-full flex-col overflow-hidden rounded-[10px] border border-neutral-level_2 bg-background"><div class="draggableHandle flex h-[36px] shrink-0 items-center border-b border-neutral-level_2 bg-neutral-level_1 px-[10px]"><p class="text-sm font-semibold text-font">Funil</p></div><div class="flex flex-1 items-center justify-center p-[10px] text-sm text-font-level_1">Arraste pelo cabeçalho, redimensione pelo canto</div></div><span class="react-resizable-handle react-resizable-handle-se"></span></div><div class="react-grid-item react-draggable cssTransforms react-resizable" style="transform: translate(830px, 10px); width: 400px; height: 190px; position: absolute;"><div class="flex h-full w-full flex-col overflow-hidden rounded-[10px] border border-neutral-level_2 bg-background"><div class="draggableHandle flex h-[36px] shrink-0 items-center border-b border-neutral-level_2 bg-neutral-level_1 px-[10px]"><p class="text-sm font-semibold text-font">Atividades</p></div><div class="flex flex-1 items-center justify-center p-[10px] text-sm text-font-level_1">Arraste pelo cabeçalho, redimensione pelo canto</div></div><span class="react-resizable-handle react-resizable-handle-se"></span></div><div class="react-grid-item react-draggable cssTransforms react-resizable" style="transform: translate(10px, 210px); width: 810px; height: 230px; position: absolute;"><div class="flex h-full w-full flex-col overflow-hidden rounded-[10px] border border-neutral-level_2 bg-background"><div class="draggableHandle flex h-[36px] shrink-0 items-center border-b border-neutral-level_2 bg-neutral-level_1 px-[10px]"><p class="text-sm font-semibold text-font">Receita por período</p></div><div class="flex flex-1 items-center justify-center p-[10px] text-sm text-font-level_1">Arraste pelo cabeçalho, redimensione pelo canto</div></div><span class="react-resizable-handle react-resizable-handle-se"></span></div><div class="react-grid-item react-draggable cssTransforms react-resizable" style="transform: translate(830px, 210px); width: 400px; height: 230px; position: absolute;"><div class="flex h-full w-full flex-col overflow-hidden rounded-[10px] border border-neutral-level_2 bg-background"><div class="draggableHandle flex h-[36px] shrink-0 items-center border-b border-neutral-level_2 bg-neutral-level_1 px-[10px]"><p class="text-sm font-semibold text-font">Metas</p></div><div class="flex flex-1 items-center justify-center p-[10px] text-sm text-font-level_1">Arraste pelo cabeçalho, redimensione pelo canto</div></div><span class="react-resizable-handle react-resizable-handle-se"></span></div></div></div></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const Default: Story = {
+  render: () =&gt; (
+    &lt;div className=&quot;min-h-screen bg-neutral-level_1 p-[20px]&quot;&gt;
+      &lt;GridView columns={12} rowHeight={30}&gt;
+        &lt;GridViewChildren i=&quot;vendas&quot; x={0} y={0} w={4} h={5} minW={2} minH={3}&gt;
+          &lt;DemoCard title=&quot;Vendas do mês&quot; /&gt;
+        &lt;/GridViewChildren&gt;
+        &lt;GridViewChildren i=&quot;funil&quot; x={4} y={0} w={4} h={5} minW={2} minH={3}&gt;
+          &lt;DemoCard title=&quot;Funil&quot; /&gt;
+        &lt;/GridViewChildren&gt;
+        &lt;GridViewChildren
+          i=&quot;atividades&quot;
+          x={8}
+          y={0}
+          w={4}
+          h={5}
+          minW={2}
+          minH={3}
+        &gt;
+          &lt;DemoCard title=&quot;Atividades&quot; /&gt;
+        &lt;/GridViewChildren&gt;
+        &lt;GridViewChildren i=&quot;receita&quot; x={0} y={5} w={8} h={6} minW={3} minH={4}&gt;
+          &lt;DemoCard title=&quot;Receita por período&quot; /&gt;
+        &lt;/GridViewChildren&gt;
+        &lt;GridViewChildren i=&quot;metas&quot; x={8} y={5} w={4} h={6} minW={2} minH={3}&gt;
+          &lt;DemoCard title=&quot;Metas&quot; /&gt;
+        &lt;/GridViewChildren&gt;
+      &lt;/GridView&gt;
+    &lt;/div&gt;
+  ),
+}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">Read only (no drag/resize)</h2>
+    <div class="ds-story-id">organisms-gridview--read-only · export <b>ReadOnly</b></div>
+    <div class="ds-canvas ds-canvas--fullscreen">
+<div class="min-h-screen bg-neutral-level_1 p-[20px]"><div class="[&amp;_.react-grid-item]:min-w-[100px] [&amp;_.react-grid-item]:max-md:min-w-0 [&amp;_.react-grid-item.react-grid-placeholder]:bg-neutral-level_2! [&amp;_.react-grid-item.react-grid-placeholder]:opacity-100! [&amp;_.react-grid-item.react-grid-placeholder]:rounded-[5px] [&amp;_.react-grid-placeholder_.react-resizable-handle]:invisible [&amp;_.react-grid-item&gt;.react-resizable-handle]:after:border-font-level_1 [&amp;_.draggableHandle]:cursor-grab [&amp;_.draggableHandle:active]:cursor-grabbing"><div class="react-grid-layout" style="height: 210px;"><div class="react-grid-item cssTransforms react-resizable-hide react-resizable" style="transform: translate(10px, 10px); width: 605px; height: 190px; position: absolute;"><div class="flex h-full w-full flex-col overflow-hidden rounded-[10px] border border-neutral-level_2 bg-background"><div class="draggableHandle flex h-[36px] shrink-0 items-center border-b border-neutral-level_2 bg-neutral-level_1 px-[10px]"><p class="text-sm font-semibold text-font">Somente leitura</p></div><div class="flex flex-1 items-center justify-center p-[10px] text-sm text-font-level_1">Drag e resize desabilitados</div></div><span class="react-resizable-handle react-resizable-handle-se"></span></div><div class="react-grid-item cssTransforms react-resizable-hide react-resizable" style="transform: translate(625px, 10px); width: 605px; height: 190px; position: absolute;"><div class="flex h-full w-full flex-col overflow-hidden rounded-[10px] border border-neutral-level_2 bg-background"><div class="draggableHandle flex h-[36px] shrink-0 items-center border-b border-neutral-level_2 bg-neutral-level_1 px-[10px]"><p class="text-sm font-semibold text-font">Somente leitura</p></div><div class="flex flex-1 items-center justify-center p-[10px] text-sm text-font-level_1">Drag e resize desabilitados</div></div><span class="react-resizable-handle react-resizable-handle-se"></span></div></div></div></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const ReadOnly: Story = {
+  name: &#x27;Read only (no drag/resize)&#x27;,
+  render: () =&gt; (
+    &lt;div className=&quot;min-h-screen bg-neutral-level_1 p-[20px]&quot;&gt;
+      &lt;GridView
+        columns={12}
+        rowHeight={30}
+        isDraggable={false}
+        isResizable={false}
+      &gt;
+        &lt;GridViewChildren i=&quot;a&quot; x={0} y={0} w={6} h={5}&gt;
+          &lt;DemoCard title=&quot;Somente leitura&quot;&gt;
+            Drag e resize desabilitados
+          &lt;/DemoCard&gt;
+        &lt;/GridViewChildren&gt;
+        &lt;GridViewChildren i=&quot;b&quot; x={6} y={0} w={6} h={5}&gt;
+          &lt;DemoCard title=&quot;Somente leitura&quot;&gt;
+            Drag e resize desabilitados
+          &lt;/DemoCard&gt;
+        &lt;/GridViewChildren&gt;
+      &lt;/GridView&gt;
+    &lt;/div&gt;
+  ),
+}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">Per-breakpoint columns</h2>
+    <div class="ds-story-id">organisms-gridview--per-breakpoint-columns · export <b>PerBreakpointColumns</b></div>
+    <div class="ds-canvas ds-canvas--fullscreen">
+<div class="min-h-screen bg-neutral-level_1 p-[20px]"><p class="mb-[10px] text-sm text-font-level_1">Redimensione o canvas: lg=12, md=8, sm=4, xs=2, xxs=1 colunas</p><div class="[&amp;_.react-grid-item]:min-w-[100px] [&amp;_.react-grid-item]:max-md:min-w-0 [&amp;_.react-grid-item.react-grid-placeholder]:bg-neutral-level_2! [&amp;_.react-grid-item.react-grid-placeholder]:opacity-100! [&amp;_.react-grid-item.react-grid-placeholder]:rounded-[5px] [&amp;_.react-grid-placeholder_.react-resizable-handle]:invisible [&amp;_.react-grid-item&gt;.react-resizable-handle]:after:border-font-level_1 [&amp;_.draggableHandle]:cursor-grab [&amp;_.draggableHandle:active]:cursor-grabbing"><div class="react-grid-layout" style="height: 170px;"><div class="react-grid-item react-draggable cssTransforms react-resizable" style="transform: translate(10px, 10px); width: 298px; height: 150px; position: absolute;"><div class="flex h-full w-full flex-col overflow-hidden rounded-[10px] border border-neutral-level_2 bg-background"><div class="draggableHandle flex h-[36px] shrink-0 items-center border-b border-neutral-level_2 bg-neutral-level_1 px-[10px]"><p class="text-sm font-semibold text-font">Card A</p></div><div class="flex flex-1 items-center justify-center p-[10px] text-sm text-font-level_1">Arraste pelo cabeçalho, redimensione pelo canto</div></div><span class="react-resizable-handle react-resizable-handle-se"></span></div><div class="react-grid-item react-draggable cssTransforms react-resizable" style="transform: translate(318px, 10px); width: 297px; height: 150px; position: absolute;"><div class="flex h-full w-full flex-col overflow-hidden rounded-[10px] border border-neutral-level_2 bg-background"><div class="draggableHandle flex h-[36px] shrink-0 items-center border-b border-neutral-level_2 bg-neutral-level_1 px-[10px]"><p class="text-sm font-semibold text-font">Card B</p></div><div class="flex flex-1 items-center justify-center p-[10px] text-sm text-font-level_1">Arraste pelo cabeçalho, redimensione pelo canto</div></div><span class="react-resizable-handle react-resizable-handle-se"></span></div><div class="react-grid-item react-draggable cssTransforms react-resizable" style="transform: translate(625px, 10px); width: 298px; height: 150px; position: absolute;"><div class="flex h-full w-full flex-col overflow-hidden rounded-[10px] border border-neutral-level_2 bg-background"><div class="draggableHandle flex h-[36px] shrink-0 items-center border-b border-neutral-level_2 bg-neutral-level_1 px-[10px]"><p class="text-sm font-semibold text-font">Card C</p></div><div class="flex flex-1 items-center justify-center p-[10px] text-sm text-font-level_1">Arraste pelo cabeçalho, redimensione pelo canto</div></div><span class="react-resizable-handle react-resizable-handle-se"></span></div><div class="react-grid-item react-draggable cssTransforms react-resizable" style="transform: translate(933px, 10px); width: 297px; height: 150px; position: absolute;"><div class="flex h-full w-full flex-col overflow-hidden rounded-[10px] border border-neutral-level_2 bg-background"><div class="draggableHandle flex h-[36px] shrink-0 items-center border-b border-neutral-level_2 bg-neutral-level_1 px-[10px]"><p class="text-sm font-semibold text-font">Card D</p></div><div class="flex flex-1 items-center justify-center p-[10px] text-sm text-font-level_1">Arraste pelo cabeçalho, redimensione pelo canto</div></div><span class="react-resizable-handle react-resizable-handle-se"></span></div></div></div></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const PerBreakpointColumns: Story = {
+  name: &#x27;Per-breakpoint columns&#x27;,
+  render: () =&gt; (
+    &lt;div className=&quot;min-h-screen bg-neutral-level_1 p-[20px]&quot;&gt;
+      &lt;p className=&quot;mb-[10px] text-sm text-font-level_1&quot;&gt;
+        Redimensione o canvas: lg=12, md=8, sm=4, xs=2, xxs=1 colunas
+      &lt;/p&gt;
+      &lt;GridView
+        columns={{ lg: 12, md: 8, sm: 4, xs: 2, xxs: 1 }}
+        rowHeight={30}
+      &gt;
+        {[&#x27;a&#x27;, &#x27;b&#x27;, &#x27;c&#x27;, &#x27;d&#x27;].map((id, index) =&gt; (
+          &lt;GridViewChildren
+            key={id}
+            i={id}
+            x={(index % 4) * 3}
+            y={0}
+            w={3}
+            h={4}
+          &gt;
+            &lt;DemoCard title={`Card ${id.toUpperCase()}`} /&gt;
+          &lt;/GridViewChildren&gt;
+        ))}
+      &lt;/GridView&gt;
+    &lt;/div&gt;
+  ),
+}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">With drag/resize callbacks</h2>
+    <div class="ds-story-id">organisms-gridview--with-callbacks · export <b>WithCallbacks</b></div>
+    <div class="ds-canvas ds-canvas--fullscreen">
+<div class="min-h-screen bg-neutral-level_1 p-[20px]"><p class="mb-[10px] rounded-[5px] border border-neutral-level_2 bg-background px-[10px] py-[5px] font-mono text-sm text-font">nenhum evento ainda</p><div class="[&amp;_.react-grid-item]:min-w-[100px] [&amp;_.react-grid-item]:max-md:min-w-0 [&amp;_.react-grid-item.react-grid-placeholder]:bg-neutral-level_2! [&amp;_.react-grid-item.react-grid-placeholder]:opacity-100! [&amp;_.react-grid-item.react-grid-placeholder]:rounded-[5px] [&amp;_.react-grid-placeholder_.react-resizable-handle]:invisible [&amp;_.react-grid-item&gt;.react-resizable-handle]:after:border-font-level_1 [&amp;_.draggableHandle]:cursor-grab [&amp;_.draggableHandle:active]:cursor-grabbing"><div class="react-grid-layout" style="height: 190px;"><div class="react-grid-item react-draggable cssTransforms react-resizable" style="transform: translate(0px, 0px); width: 407px; height: 190px; position: absolute;"><div class="flex h-full w-full flex-col overflow-hidden rounded-[10px] border border-neutral-level_2 bg-background"><div class="draggableHandle flex h-[36px] shrink-0 items-center border-b border-neutral-level_2 bg-neutral-level_1 px-[10px]"><p class="text-sm font-semibold text-font">KPI</p></div><div class="flex flex-1 items-center justify-center p-[10px] text-sm text-font-level_1">Arraste pelo cabeçalho, redimensione pelo canto</div></div><span class="react-resizable-handle react-resizable-handle-se"></span></div><div class="react-grid-item react-draggable cssTransforms react-resizable" style="transform: translate(417px, 0px); width: 511px; height: 190px; position: absolute;"><div class="flex h-full w-full flex-col overflow-hidden rounded-[10px] border border-neutral-level_2 bg-background"><div class="draggableHandle flex h-[36px] shrink-0 items-center border-b border-neutral-level_2 bg-neutral-level_1 px-[10px]"><p class="text-sm font-semibold text-font">Gráfico</p></div><div class="flex flex-1 items-center justify-center p-[10px] text-sm text-font-level_1">Arraste pelo cabeçalho, redimensione pelo canto</div></div><span class="react-resizable-handle react-resizable-handle-se"></span></div><div class="react-grid-item react-draggable cssTransforms react-resizable" style="transform: translate(938px, 0px); width: 302px; height: 190px; position: absolute;"><div class="flex h-full w-full flex-col overflow-hidden rounded-[10px] border border-neutral-level_2 bg-background"><div class="draggableHandle flex h-[36px] shrink-0 items-center border-b border-neutral-level_2 bg-neutral-level_1 px-[10px]"><p class="text-sm font-semibold text-font">Lista</p></div><div class="flex flex-1 items-center justify-center p-[10px] text-sm text-font-level_1">Arraste pelo cabeçalho, redimensione pelo canto</div></div><span class="react-resizable-handle react-resizable-handle-se"></span></div></div></div></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const WithCallbacks: Story = {
+  name: &#x27;With drag/resize callbacks&#x27;,
+  render: () =&gt; &lt;CallbacksDemo /&gt;,
+}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">Fixed width (1000px)</h2>
+    <div class="ds-story-id">organisms-gridview--fixed-width · export <b>FixedWidth</b></div>
+    <div class="ds-canvas ds-canvas--fullscreen">
+<div class="min-h-screen bg-neutral-level_1 p-[20px]"><div class="[&amp;_.react-grid-item]:min-w-[100px] [&amp;_.react-grid-item]:max-md:min-w-0 [&amp;_.react-grid-item.react-grid-placeholder]:bg-neutral-level_2! [&amp;_.react-grid-item.react-grid-placeholder]:opacity-100! [&amp;_.react-grid-item.react-grid-placeholder]:rounded-[5px] [&amp;_.react-grid-placeholder_.react-resizable-handle]:invisible [&amp;_.react-grid-item&gt;.react-resizable-handle]:after:border-font-level_1 [&amp;_.draggableHandle]:cursor-grab [&amp;_.draggableHandle:active]:cursor-grabbing mx-auto w-[1000px]"><div class="react-grid-layout" style="height: 210px;"><div class="react-grid-item react-draggable cssTransforms react-resizable" style="transform: translate(10px, 10px); width: 485px; height: 190px; position: absolute;"><div class="flex h-full w-full flex-col overflow-hidden rounded-[10px] border border-neutral-level_2 bg-background"><div class="draggableHandle flex h-[36px] shrink-0 items-center border-b border-neutral-level_2 bg-neutral-level_1 px-[10px]"><p class="text-sm font-semibold text-font">Largura fixa</p></div><div class="flex flex-1 items-center justify-center p-[10px] text-sm text-font-level_1">Arraste pelo cabeçalho, redimensione pelo canto</div></div><span class="react-resizable-handle react-resizable-handle-se"></span></div><div class="react-grid-item react-draggable cssTransforms react-resizable" style="transform: translate(505px, 10px); width: 485px; height: 190px; position: absolute;"><div class="flex h-full w-full flex-col overflow-hidden rounded-[10px] border border-neutral-level_2 bg-background"><div class="draggableHandle flex h-[36px] shrink-0 items-center border-b border-neutral-level_2 bg-neutral-level_1 px-[10px]"><p class="text-sm font-semibold text-font">Sem WidthProvider</p></div><div class="flex flex-1 items-center justify-center p-[10px] text-sm text-font-level_1">Arraste pelo cabeçalho, redimensione pelo canto</div></div><span class="react-resizable-handle react-resizable-handle-se"></span></div></div></div></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const FixedWidth: Story = {
+  name: &#x27;Fixed width (1000px)&#x27;,
+  render: () =&gt; (
+    &lt;div className=&quot;min-h-screen bg-neutral-level_1 p-[20px]&quot;&gt;
+      &lt;GridView
+        width={1000}
+        columns={10}
+        rowHeight={30}
+        className=&quot;mx-auto w-[1000px]&quot;
+      &gt;
+        &lt;GridViewChildren i=&quot;a&quot; x={0} y={0} w={5} h={5}&gt;
+          &lt;DemoCard title=&quot;Largura fixa&quot; /&gt;
+        &lt;/GridViewChildren&gt;
+        &lt;GridViewChildren i=&quot;b&quot; x={5} y={0} w={5} h={5}&gt;
+          &lt;DemoCard title=&quot;Sem WidthProvider&quot; /&gt;
+        &lt;/GridViewChildren&gt;
+      &lt;/GridView&gt;
+    &lt;/div&gt;
+  ),
+}</code></pre></details>
+  </section>
+</body>
+</html>

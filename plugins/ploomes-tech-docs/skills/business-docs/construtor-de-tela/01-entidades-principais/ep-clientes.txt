@@ -1,0 +1,21 @@
+Clientes
+
+Objetivo básico:
+- Embora essa tabela se chame “Clientes”, ela é, na realidade, um cadastro de empresas e pessoas, e que pode armazenar, além de clientes de fato, outros tipos de cadastro, como: transportadoras, fornecedores, alunos, etc.
+- Pessoas podem pertencer a empresas, e empresas também podem pertencer a outras empresas.
+- Em cada cliente do tipo empresa é possível vincular, no máximo, 1000 clientes do tipo pessoa. 
+- Não é possível vincular pessoas a outras pessoas.
+
+Dados:
+- A base de clientes se utiliza dos mecanismos de formularios_e_campos do Ploomes;
+- Pessoas e empresas ocupam uma mesma tabela de dados e compartilham da mesma lista de campos;
+- O Ploomes diferencia pessoas e empresas a partir de uma propriedade chamada "Tipo";
+- Para se armazenar múltiplas categorias de empresas e pessoas nessa tela nessa tela ao mesmo tempo (como falado antes: clientes, contatos, transportadoras, concessionárias, etc.), basta criar um campo de opções pré-cadastradas para armazenar o tipo de cadastro, e depois exibir condicionalmente no front-end os campos que fazem sentido para cada tipo. Inclusive, essa é uma boa prática, já que múltiplos front-ends serão construídos sobre uma mesma conta do Ploomes. Então essa regra de exibição de campos é importante. É aconselhável, inclusive, que você determine um padrão no nome de cada campo e utilize esse padrão para exibir ou não o campo em um determinado local, deixando as configurações do backend do Ploomes mais escaláveis, sem ter que ficar redesenvolvendo o frontend para exibir mais campos;
+- Clientes também usam o sistema de abas_e_tabelas_dinamicas. Ao montar telas, você pode se utilizar disso, ou fazer queries na API direto da forma que preferir. O benefício de se utilizar o sistema de abas é a otimização delas em termos de carregamento e exibição de dados.
+- Importante ressaltar que clientes possuem suas regras de visualização definidas em perfis_de_usuario.
+- Pessoas podem pertencer a empresas, e empresas podem pertencer a outras empresas;
+- Em cada cliente do tipo empresa é possível vincular, no máximo, 1000 clientes do tipo pessoa;
+- Não é possível vincular pessoas a outras pessoas.
+- Vínculos entre Clientes e outras entidades estão definidos no arquivo (RC) Lista_de_field_paths.txt, que é a fonte canônica de todas as relações entre entidades.
+
+Observação: para todas as entidades que possuem campos dinâmicos, sempre é possível criar um campo do tipo número inteiro e armazenar o ID de um cliente "virtualmente" vinculado, ou seja, um vínculo sem comportamento no Back-end, mas que o front-end pode se utilizar para aparentar vínculo real ao usuário.

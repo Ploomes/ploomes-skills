@@ -1,0 +1,8 @@
+Anexos
+Através desta funcionalidade, o usuário poderá armazenar no CRM arquivos que possuam as seguintes extensões:
+
+'.doc', '.docx', '.xlsx', '.xls', '.csv', '.png', '.jpg', '.jpeg', '.pdf', '.txt', '.odt', '.ppt', 'pptx', '.odp', '.gif', '.mp4', '.mp3', '.zip', '.rar', '.wmv', '.mov', '.bmp', '.tiff', '.mkv', '.avi', '.aac', '.flac', '.rm', '.rmvb', ‘.kmz’, ‘.kml’, ‘.dwg’, ‘.gpx’, ‘.bak’ e ‘.fld’.
+
+Os anexos podem estar vinculados a clientes, negócios, tarefas, e-mails (pontualmente) e a registros de interação.
+
+O tamanho máximo suportado pelo Ploomes é de 25 MB por arquivo. Cada usuário da conta possui 5 GB de armazenamento.

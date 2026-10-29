@@ -1,0 +1,109 @@
+<!doctype html>
+<!--
+  Ploomes Design System — snapshot estático das stories do Storybook.
+  Componente : Atoms/Spinner
+  Stories    : 4 (Default, Colors, Sizes, All Variants)
+  Story      : Spinner.stories.tsx
+  Tema       : light — use <html class="dark"> para o tema escuro.
+-->
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Spinner — Ploomes DS</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;600;700&display=swap">
+<link rel="stylesheet" href="../assets/design-system.css">
+<link rel="stylesheet" href="../assets/page.css">
+</head>
+<body class="ds-page">
+  <header class="ds-head">
+    <a class="ds-back" href="../index.html">← inventário</a>
+    <h1 class="ds-title">Spinner</h1>
+    <p class="ds-meta">atoms · 4 stories · <code>Spinner.stories.tsx</code></p>
+    <pre class="ds-code ds-import">import { Spinner } from &#x27;@ploomescrm/ui&#x27;;</pre>
+    <pre class="ds-code">// props padrão de todas as stories (meta.args)
+args: {
+  color: &#x27;light&#x27;,
+  size: &#x27;normal_20&#x27;,
+}</pre>
+  </header>
+  <section class="ds-story">
+    <h2 class="ds-story-name">Default</h2>
+    <div class="ds-story-id">atoms-spinner--default · export <b>Default</b></div>
+    <div class="ds-canvas ds-canvas--centered">
+<span aria-hidden="true" aria-label="loading" class="inline-flex shrink-0 items-center justify-center animate-spin text-font-level_2"><svg aria-hidden="true" class="lucide lucide-loader-circle" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M21 12a9 9 0 1 1-6.219-8.56"></path></svg></span>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const Default: Story = {}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">Colors</h2>
+    <div class="ds-story-id">atoms-spinner--colors · export <b>Colors</b></div>
+    <div class="ds-canvas ds-canvas--centered">
+<div class="flex items-center gap-6"><span aria-hidden="true" aria-label="loading" class="inline-flex shrink-0 items-center justify-center animate-spin text-font-level_2"><svg aria-hidden="true" class="lucide lucide-loader-circle" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M21 12a9 9 0 1 1-6.219-8.56"></path></svg></span><div class="rounded bg-[#1B102C] p-2"><span aria-hidden="true" aria-label="loading" class="inline-flex shrink-0 items-center justify-center animate-spin text-basic-light"><svg aria-hidden="true" class="lucide lucide-loader-circle" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M21 12a9 9 0 1 1-6.219-8.56"></path></svg></span></div><span aria-hidden="true" aria-label="loading" class="inline-flex shrink-0 items-center justify-center animate-spin text-brand"><svg aria-hidden="true" class="lucide lucide-loader-circle" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M21 12a9 9 0 1 1-6.219-8.56"></path></svg></span><span aria-hidden="true" aria-label="loading" class="inline-flex shrink-0 items-center justify-center animate-spin text-confirmation"><svg aria-hidden="true" class="lucide lucide-loader-circle" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M21 12a9 9 0 1 1-6.219-8.56"></path></svg></span></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const Colors: Story = {
+  render: (args) =&gt; (
+    &lt;div className=&quot;flex items-center gap-6&quot;&gt;
+      &lt;Spinner {...args} color=&quot;light&quot; /&gt;
+      &lt;div className=&quot;rounded bg-[#1B102C] p-2&quot;&gt;
+        &lt;Spinner {...args} color=&quot;dark&quot; /&gt;
+      &lt;/div&gt;
+      &lt;Spinner {...args} color=&quot;brand&quot; /&gt;
+      &lt;Spinner {...args} color=&quot;confirmation&quot; /&gt;
+    &lt;/div&gt;
+  ),
+}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">Sizes</h2>
+    <div class="ds-story-id">atoms-spinner--sizes · export <b>Sizes</b></div>
+    <div class="ds-canvas ds-canvas--centered">
+<div class="flex items-end gap-6"><span aria-hidden="true" aria-label="loading" class="inline-flex shrink-0 items-center justify-center animate-spin text-font-level_2"><svg aria-hidden="true" class="lucide lucide-loader-circle" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="15" xmlns="http://www.w3.org/2000/svg"><path d="M21 12a9 9 0 1 1-6.219-8.56"></path></svg></span><span aria-hidden="true" aria-label="loading" class="inline-flex shrink-0 items-center justify-center animate-spin text-font-level_2"><svg aria-hidden="true" class="lucide lucide-loader-circle" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M21 12a9 9 0 1 1-6.219-8.56"></path></svg></span><span aria-hidden="true" aria-label="loading" class="inline-flex shrink-0 items-center justify-center animate-spin text-font-level_2"><svg aria-hidden="true" class="lucide lucide-loader-circle" fill="none" height="30" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="30" xmlns="http://www.w3.org/2000/svg"><path d="M21 12a9 9 0 1 1-6.219-8.56"></path></svg></span><span aria-hidden="true" aria-label="loading" class="inline-flex shrink-0 items-center justify-center animate-spin text-font-level_2"><svg aria-hidden="true" class="lucide lucide-loader-circle" fill="none" height="90" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="90" xmlns="http://www.w3.org/2000/svg"><path d="M21 12a9 9 0 1 1-6.219-8.56"></path></svg></span></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const Sizes: Story = {
+  render: (args) =&gt; (
+    &lt;div className=&quot;flex items-end gap-6&quot;&gt;
+      &lt;Spinner {...args} size=&quot;small_15&quot; /&gt;
+      &lt;Spinner {...args} size=&quot;normal_20&quot; /&gt;
+      &lt;Spinner {...args} size=&quot;big_30&quot; /&gt;
+      &lt;Spinner {...args} size=&quot;giant_90&quot; /&gt;
+    &lt;/div&gt;
+  ),
+}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">All Variants</h2>
+    <div class="ds-story-id">atoms-spinner--all-variants · export <b>AllVariants</b></div>
+    <div class="ds-canvas ds-canvas--centered">
+<div class="flex flex-col gap-6"><div class="flex items-end gap-6 rounded p-3"><span aria-hidden="true" aria-label="loading" class="inline-flex shrink-0 items-center justify-center animate-spin text-font-level_2"><svg aria-hidden="true" class="lucide lucide-loader-circle" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="15" xmlns="http://www.w3.org/2000/svg"><path d="M21 12a9 9 0 1 1-6.219-8.56"></path></svg></span><span aria-hidden="true" aria-label="loading" class="inline-flex shrink-0 items-center justify-center animate-spin text-font-level_2"><svg aria-hidden="true" class="lucide lucide-loader-circle" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M21 12a9 9 0 1 1-6.219-8.56"></path></svg></span><span aria-hidden="true" aria-label="loading" class="inline-flex shrink-0 items-center justify-center animate-spin text-font-level_2"><svg aria-hidden="true" class="lucide lucide-loader-circle" fill="none" height="30" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="30" xmlns="http://www.w3.org/2000/svg"><path d="M21 12a9 9 0 1 1-6.219-8.56"></path></svg></span><span aria-hidden="true" aria-label="loading" class="inline-flex shrink-0 items-center justify-center animate-spin text-font-level_2"><svg aria-hidden="true" class="lucide lucide-loader-circle" fill="none" height="90" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="90" xmlns="http://www.w3.org/2000/svg"><path d="M21 12a9 9 0 1 1-6.219-8.56"></path></svg></span><span class="self-center text-xs" style="color: rgb(136, 136, 136);">light</span></div><div class="flex items-end gap-6 rounded p-3" style="background: rgb(27, 16, 44);"><span aria-hidden="true" aria-label="loading" class="inline-flex shrink-0 items-center justify-center animate-spin text-basic-light"><svg aria-hidden="true" class="lucide lucide-loader-circle" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="15" xmlns="http://www.w3.org/2000/svg"><path d="M21 12a9 9 0 1 1-6.219-8.56"></path></svg></span><span aria-hidden="true" aria-label="loading" class="inline-flex shrink-0 items-center justify-center animate-spin text-basic-light"><svg aria-hidden="true" class="lucide lucide-loader-circle" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M21 12a9 9 0 1 1-6.219-8.56"></path></svg></span><span aria-hidden="true" aria-label="loading" class="inline-flex shrink-0 items-center justify-center animate-spin text-basic-light"><svg aria-hidden="true" class="lucide lucide-loader-circle" fill="none" height="30" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="30" xmlns="http://www.w3.org/2000/svg"><path d="M21 12a9 9 0 1 1-6.219-8.56"></path></svg></span><span aria-hidden="true" aria-label="loading" class="inline-flex shrink-0 items-center justify-center animate-spin text-basic-light"><svg aria-hidden="true" class="lucide lucide-loader-circle" fill="none" height="90" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="90" xmlns="http://www.w3.org/2000/svg"><path d="M21 12a9 9 0 1 1-6.219-8.56"></path></svg></span><span class="self-center text-xs" style="color: rgb(255, 255, 255);">dark</span></div><div class="flex items-end gap-6 rounded p-3"><span aria-hidden="true" aria-label="loading" class="inline-flex shrink-0 items-center justify-center animate-spin text-brand"><svg aria-hidden="true" class="lucide lucide-loader-circle" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="15" xmlns="http://www.w3.org/2000/svg"><path d="M21 12a9 9 0 1 1-6.219-8.56"></path></svg></span><span aria-hidden="true" aria-label="loading" class="inline-flex shrink-0 items-center justify-center animate-spin text-brand"><svg aria-hidden="true" class="lucide lucide-loader-circle" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M21 12a9 9 0 1 1-6.219-8.56"></path></svg></span><span aria-hidden="true" aria-label="loading" class="inline-flex shrink-0 items-center justify-center animate-spin text-brand"><svg aria-hidden="true" class="lucide lucide-loader-circle" fill="none" height="30" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="30" xmlns="http://www.w3.org/2000/svg"><path d="M21 12a9 9 0 1 1-6.219-8.56"></path></svg></span><span aria-hidden="true" aria-label="loading" class="inline-flex shrink-0 items-center justify-center animate-spin text-brand"><svg aria-hidden="true" class="lucide lucide-loader-circle" fill="none" height="90" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="90" xmlns="http://www.w3.org/2000/svg"><path d="M21 12a9 9 0 1 1-6.219-8.56"></path></svg></span><span class="self-center text-xs" style="color: rgb(136, 136, 136);">brand</span></div><div class="flex items-end gap-6 rounded p-3"><span aria-hidden="true" aria-label="loading" class="inline-flex shrink-0 items-center justify-center animate-spin text-confirmation"><svg aria-hidden="true" class="lucide lucide-loader-circle" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="15" xmlns="http://www.w3.org/2000/svg"><path d="M21 12a9 9 0 1 1-6.219-8.56"></path></svg></span><span aria-hidden="true" aria-label="loading" class="inline-flex shrink-0 items-center justify-center animate-spin text-confirmation"><svg aria-hidden="true" class="lucide lucide-loader-circle" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M21 12a9 9 0 1 1-6.219-8.56"></path></svg></span><span aria-hidden="true" aria-label="loading" class="inline-flex shrink-0 items-center justify-center animate-spin text-confirmation"><svg aria-hidden="true" class="lucide lucide-loader-circle" fill="none" height="30" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="30" xmlns="http://www.w3.org/2000/svg"><path d="M21 12a9 9 0 1 1-6.219-8.56"></path></svg></span><span aria-hidden="true" aria-label="loading" class="inline-flex shrink-0 items-center justify-center animate-spin text-confirmation"><svg aria-hidden="true" class="lucide lucide-loader-circle" fill="none" height="90" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="90" xmlns="http://www.w3.org/2000/svg"><path d="M21 12a9 9 0 1 1-6.219-8.56"></path></svg></span><span class="self-center text-xs" style="color: rgb(136, 136, 136);">confirmation</span></div></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const AllVariants: Story = {
+  render: () =&gt; {
+    const colors = [&#x27;light&#x27;, &#x27;dark&#x27;, &#x27;brand&#x27;, &#x27;confirmation&#x27;] as const;
+    const sizes = [&#x27;small_15&#x27;, &#x27;normal_20&#x27;, &#x27;big_30&#x27;, &#x27;giant_90&#x27;] as const;
+    return (
+      &lt;div className=&quot;flex flex-col gap-6&quot;&gt;
+        {colors.map((color) =&gt; (
+          &lt;div
+            key={color}
+            className=&quot;flex items-end gap-6 rounded p-3&quot;
+            style={{ background: color === &#x27;dark&#x27; ? &#x27;#1B102C&#x27; : undefined }}
+          &gt;
+            {sizes.map((size) =&gt; (
+              &lt;Spinner key={size} color={color} size={size} /&gt;
+            ))}
+            &lt;span
+              className=&quot;self-center text-xs&quot;
+              style={{ color: color === &#x27;dark&#x27; ? &#x27;#fff&#x27; : &#x27;#888&#x27; }}
+            &gt;
+              {color}
+            &lt;/span&gt;
+          &lt;/div&gt;
+        ))}
+      &lt;/div&gt;
+    );
+  },
+}</code></pre></details>
+  </section>
+</body>
+</html>

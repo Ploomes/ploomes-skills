@@ -1,0 +1,88 @@
+[
+ {
+  "Id": 1000,
+  "Name": "1. Prospecção",
+  "SingularUnitName": "Oportunidade",
+  "PluralUnitName": "Oportunidades",
+  "Color": "#7E33E6",
+  "WinDealOnLastStage": false,
+  "MayWinDeals": true,
+  "MayLoseDeals": true,
+  "Stages": [
+   {
+    "Id": 10001,
+    "Name": "Contato",
+    "Ordination": 0
+   },
+   {
+    "Id": 10002,
+    "Name": "Qualificação",
+    "Ordination": 1
+   },
+   {
+    "Id": 10003,
+    "Name": "Visita",
+    "Ordination": 2
+   },
+   {
+    "Id": 10004,
+    "Name": "Proposta",
+    "Ordination": 3
+   },
+   {
+    "Id": 10005,
+    "Name": "Negociação",
+    "Ordination": 4
+   },
+   {
+    "Id": 10006,
+    "Name": "Fechamento",
+    "Ordination": 5
+   }
+  ]
+ },
+ {
+  "Id": 2000,
+  "Name": "2. Implementação",
+  "SingularUnitName": "Projeto",
+  "PluralUnitName": "Projetos",
+  "Color": "#1C9E6B",
+  "WinDealOnLastStage": false,
+  "MayWinDeals": true,
+  "MayLoseDeals": false,
+  "Stages": [
+   {
+    "Id": 20001,
+    "Name": "Kickoff",
+    "Ordination": 0
+   },
+   {
+    "Id": 20002,
+    "Name": "Treinamento",
+    "Ordination": 1
+   }
+  ]
+ },
+ {
+  "Id": 3000,
+  "Name": "3. Pós-venda",
+  "SingularUnitName": "Chamado",
+  "PluralUnitName": "Chamados",
+  "Color": "#E8833A",
+  "WinDealOnLastStage": true,
+  "MayWinDeals": false,
+  "MayLoseDeals": false,
+  "Stages": [
+   {
+    "Id": 30001,
+    "Name": "Aberto",
+    "Ordination": 0
+   },
+   {
+    "Id": 30002,
+    "Name": "Resolvido",
+    "Ordination": 1
+   }
+  ]
+ }
+]

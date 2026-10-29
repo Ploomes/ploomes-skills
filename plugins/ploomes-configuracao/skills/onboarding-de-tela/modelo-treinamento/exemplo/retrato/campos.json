@@ -1,0 +1,55 @@
+[
+ {
+  "Id": 101,
+  "Key": "deal_0B1C2D3E-0000-4000-8000-000000000101",
+  "Name": "Origem do lead",
+  "EntityId": 2,
+  "TypeId": 7,
+  "OptionsTable": {
+   "Options": [
+    {
+     "Id": 9001,
+     "Name": "Indicação"
+    },
+    {
+     "Id": 9002,
+     "Name": "Site"
+    },
+    {
+     "Id": 9003,
+     "Name": "Feira"
+    }
+   ]
+  }
+ },
+ {
+  "Id": 102,
+  "Key": "deal_0B1C2D3E-0000-4000-8000-000000000102",
+  "Name": "Visita realizada?",
+  "EntityId": 2,
+  "TypeId": 10
+ },
+ {
+  "Id": 103,
+  "Key": "deal_0B1C2D3E-0000-4000-8000-000000000103",
+  "Name": "Farol do cliente",
+  "EntityId": 2,
+  "TypeId": 7,
+  "OptionsTable": {
+   "Options": [
+    {
+     "Id": 9101,
+     "Name": "Verde"
+    },
+    {
+     "Id": 9102,
+     "Name": "Amarelo"
+    },
+    {
+     "Id": 9103,
+     "Name": "Vermelho"
+    }
+   ]
+  }
+ }
+]

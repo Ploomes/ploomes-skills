@@ -1,0 +1,141 @@
+Perfis de usuário
+Entre as ferramentas disponíveis para manipulação e visualização de dados no Ploomes, destaca-se o perfil de usuário. Até o momento, nós falamos sobre as funcionalidades do CRM para manuseio dos dados, mas os perfis de usuário permeiam o sistema completo, incluindo essas funcionalidades.
+
+Importante notar que a administração de perfis de usuário não poderá ser desenvolvida no construtor de telas a pedido do usuário, ou seja, essa administração ocorre somente na parte de administração do Ploomes, onde só administradores podem acessar.
+
+
+É no perfil de usuário que definimos as regras de permissão da plataforma. As regras são baseadas em dois pilares: 
+
+Permissões gerais: perfis de usuário e equipes;
+
+Permissões específicas: abas, filtros, painéis de relatórios e metas, funis, modelos de documento e e-mail, seções de formulários, campos de formulários, pastas da biblioteca e grupos de produto.
+
+Permissões gerais
+Primeiro, criamos um novo “Perfil” de usuário, que nada mais é do que um conjunto de regras que definem o que os usuários com aquele perfil podem ou não fazer no Ploomes. Este perfil, então, pode ser aplicado a um ou mais usuários. 
+
+Antes de entendermos as regras que o Ploomes permite configurar, é importante definirmos um conceito chamado CRUD: esta sigla vem das possibilidades de manipulação de dados de um cadastro dentro do Ploomes, que são:
+
+Create: criação de um novo cadastro;
+
+Read: visualização de um determinado cadastro;
+
+Update: edição de um cadastro já existente; 
+
+Delete: exclusão de um cadastro já existente; 
+
+Grande parte das regras de perfil do Ploomes estão relacionadas à possibilidade ou não de um usuário realizar o CRUD para uma determinada entidade principal. Geralmente, a possibilidade de um usuário realizar ou não cada uma das 4 ações é separada, ou seja, é possível permitir que um perfil crie clientes, mas não edite. 
+
+‍
+
+As regras do perfil são separadas por entidade e são configuradas da seguinte forma:
+
+Equipes:
+
+Usuários do Ploomes podem ser alocados em uma ou mais equipes. Elas trabalham junto das regras de perfil de usuário para ampliar as possibilidades de nível de acesso.
+
+Regras de cliente:
+
+Visualização do módulo: os usuários com este perfil podem visualizar o módulo de clientes? 
+
+C (Create): os usuários com este perfil podem criar novos clientes?
+
+RUD (Read, Update e Delete): quais clientes este perfil poderá visualizar? e quais ele poderá editar? E quais poderá excluir? Neste caso, as permissões são baseadas em três propriedades: campo de responsável do cliente, campo de usuários colaboradores do cliente e campo de equipe do usuário. É possível restringir, por exemplo, a visualização dos clientes para somente aqueles que o usuário é responsável. Também é possível restringir a visualização para somente os clientes cujo responsável seja um membro de sua equipe;
+
+Responsável e Usuário colaborador: é importante ressaltar que um cliente pode ter somente um responsável. Entretanto, o campo de usuários colaboradores é múltiplo e permite a seleção de vários usuários. Mas qual a diferença entre estes dois campos? Vamos imaginar o seguinte cenário: o Usuário A e o Usuário B possuem o mesmo perfil e estão dentro da mesma equipe. Este perfil diz que ambos podem visualizar somente os clientes que estejam sob responsabilidade de membros de sua equipe. Assim, se eu colocar o Cliente X sob a responsabilidade do Usuário A, tanto o Usuário A quanto o Usuário B conseguirão visualizá-lo. Entretanto, se eu colocar o Usuário A como Usuário Colaborador do Cliente X, somente o Usuário A conseguirá visualizá-lo. O Usuário B não;
+
+Comportamentos específicos: 
+
+Se eu consigo visualizar um cliente, eu também consigo ver todas as pessoas, produtos do cliente e anexos vinculados a ele. Registros de interação e tarefas, no entanto, possuem um comportamento especial: caso estejam vinculados somente ao cliente, eu poderei visualizá-las caso eu tenha acesso ao cliente. Se estiverem vinculadas a um negócio, eu conseguirei visualizá-las somente se eu também conseguir visualizar o negócio (que, lembrando, possuem nível de acesso independente de clientes);
+
+Se eu consigo visualizar um cliente, eu conseguirei visualizar todos os seus dados cadastrais, a menos que eu crie uma restrição de visualização de campos (explicado acima, no tópico “Formulários e campos”); 
+
+Para usuários que estiverem limitados a visualizar somente os clientes sob sua responsabilidade, clientes sem responsável ou clientes cujos responsáveis estiverem inativos também aparecerão para eles.
+
+Limitações: 
+
+O Ploomes não possui um nível de permissões baseado em hierarquia. Vamos tomar o seguinte exemplo: temos 1 gerente, 2 coordenadores abaixo dele e 4 vendedores abaixo de cada coordenador. A estrutura mais comum é criar um perfil para cada cargo. No caso dos vendedores, definiríamos que eles poderiam visualizar somente seus clientes. Já para os coordenadores, faz mais sentido que eles visualizem os clientes de todos os seus vendedores. Para tanto, criamos uma equipe para cada coordenador, alocamos os seus vendedores dentro dela, e definimos que o perfil de coordenador pode visualizar clientes sob responsabilidade de membros de sua equipe. Mas e para o gerente? O que o Ploomes permite é usar o mesmo nível de acesso do coordenador, e alocá-lo nas duas equipes, assim ele consegue acompanhar o trabalho de todos os vendedores e coordenadores. Entretanto, como o gerente agora faz parte das duas equipes, caso ele tenha clientes sob sua responsabilidade, os dois coordenadores poderão ver seus clientes também; 
+
+Não é possível alocar uma equipe como responsável por um cliente, somente usuários. Entretanto, o Ploomes permite a criação de usuários sem login e sem custo. É possível, portanto, criar um usuário sem login com o nome de uma equipe e torná-lo responsável por um cliente. Desta forma, você pode alocar este usuário dentro de uma equipe com outros usuários e, dependendo do nível de acesso deles, poderiam visualizar o cliente em questão. 
+
+Regras de produto do cliente:
+
+Dependência das permissões de cliente: as permissões de produto do cliente dependem das permissões de cliente. Isso significa que, se eu não consigo visualizar o cliente, eu não consigo visualizar ou manipular os produtos vinculados a ele; 
+
+Visualização do módulo: os usuários com este perfil podem visualizar o módulo de produtos do cliente?
+
+CRUD simples: os usuários com este perfil podem criar novos produtos de cliente? Podem ver produtos de cliente? Podem atualizar produtos de cliente? Podem deletar produtos de cliente? A diferença entre (I) CRUD de produtos do cliente e o (II) CRUD de clientes é que, no caso (I), a resposta é simples (SIM ou NÃO). No caso (II), a resposta é complexa (dentro da resposta SIM, ainda é possível definir QUAIS).
+
+Regras de negócio:
+
+Regras similares a clientes: as regras que regem negócios são basicamente as mesmas de clientes. Da mesma forma, os negócios possuem um campo de responsável e um de usuários colaboradores;
+
+Visualização atrelada a clientes: a primeira diferença está em uma regra especial para negócios. Por ela, eu consigo definir que, caso eu visualize o cliente, eu também poderei visualizar todos os seus negócios, independente se sou ou não responsável ou usuário colaborador do negócio;
+
+Ações específicas de negócios: a segunda diferença é poder definir se o usuário que contém um determinado perfil pode finalizar um negócio (seja ganhando, seja perdendo) ou reabrir um negócio já finalizado; 
+
+Obs.: as permissões de negócio e de cliente são independentes, ou seja, é possível visualizar um negócio vinculado a um cliente ao qual não tenho acesso. 
+
+Regras de proposta e documento de negócio: 
+
+Dependência das permissões de negócio: as permissões de propostas e documentos de negócio dependem das permissões de negócio. Isso significa que, se eu não consigo visualizar negócio, eu não consigo visualizar ou manipular suas propostas e documentos. E o contrário é verdadeiro;
+
+Visualização do módulo: os usuários com este perfil podem visualizar o módulo de propostas e de documentos? 
+
+CRUD simples;
+
+Ações específicas: os usuários com este perfil podem compartilhar propostas e documentos? 
+
+Regras de documento de cliente:
+
+Dependência das permissões de cliente: as permissões de documento do cliente dependem das permissões de cliente. Isso significa que, se eu não consigo visualizar o cliente, eu não consigo visualizar ou manipular seus documentos. Do lado oposto, caso eu consiga visualizar o cliente, eu conseguirei visualizar seus documentos obrigatoriamente;‍
+
+Visualização do módulo: os usuários com este perfil podem visualizar o módulo de documentos?‍
+
+CRUD simples;
+
+Ações específicas: os usuários com este perfil podem compartilhar documentos?
+
+Regras de venda:
+
+Regras similares a clientes: as regras que regem vendas são basicamente as mesmas de clientes. Entretanto, vendas possuem somente um campo de responsável, usuários colaboradores não;
+
+CRUD simples;
+
+Ações específicas: os usuários com este perfil podem compartilhar vendas?
+
+Regras de produto, grupos de produto e famílias de produto:
+
+Visualização do módulo: os usuários com este perfil podem visualizar o módulo de produtos?
+
+CRUD simples;
+
+Obs.: o Ploomes permite ocultar produtos de determinados grupos a usuários selecionados, mas isso será explicado em Permissões Específicas.
+
+Outras configurações dentro de permissões gerais:
+
+Além das regras acima, o Ploomes possui possibilidade de configuração de outras regras mais específicas. Você pode verificá-las criando uma conta de testes de nossa ferramenta ou solicitando uma apresentação ao seu consultor Ploomes. 
+
+Permissões específicas
+As permissões específicas não ocorrem de forma geral, mas de forma pontual nos seguintes locais:
+
+Abas e filtros de clientes, negócios, produtos, entre outras entidades que se utilizam da tabela dinâmica do Ploomes;
+
+Painéis de relatórios e metas;
+
+Metas específicas;
+
+Funis;
+
+Modelos de propostas, vendas e documentos;
+
+Modelos de e-mail;
+
+Seções e campos de formulários;
+
+Biblioteca;
+
+Grupos de produtos.
+
+Todas as permissões acima são relacionadas à visualização de cada um dos itens. Para cada um dos itens acima, o padrão é a visualização estar disponível para toda a empresa. Entretanto, eu tenho a possibilidade de limitar esta visualização a somente alguns usuários ou a algumas equipes. Em alguns casos, também é possível restringir a visualização a determinados perfis de usuário. 
+
+Exemplo: eu posso criar uma nova aba na tela de clientes e definir que ela poderá ser visualizada somente por mim. Com isso, quando outros usuários entrarem na tela de clientes, esta aba não estará disponível para eles. É importante ressaltar que, caso eu crie uma aba para visualizar clientes de São Paulo, por exemplo, se eu não tiver nenhum cliente sob minha responsabilidade em São Paulo e meu perfil determinar que só posso visualizar clientes sob minha responsabilidade, a minha aba aparecerá vazia, ou seja, as Permissões Gerais são sempre prioritárias com relação às permissões específicas.

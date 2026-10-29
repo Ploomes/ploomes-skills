@@ -1,0 +1,184 @@
+<!doctype html>
+<!--
+  Ploomes Design System — snapshot estático das stories do Storybook.
+  Componente : Organisms/ResizableDrawer
+  Stories    : 7 (Default, Collapsed, Controlled, Min width 250px, Min width 350px, With real content, All Figma variants)
+  Story      : ResizableDrawer.stories.tsx
+  Tema       : light — use <html class="dark"> para o tema escuro.
+-->
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ResizableDrawer — Ploomes DS</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;600;700&display=swap">
+<link rel="stylesheet" href="../assets/design-system.css">
+<link rel="stylesheet" href="../assets/page.css">
+</head>
+<body class="ds-page">
+  <header class="ds-head">
+    <a class="ds-back" href="../index.html">← inventário</a>
+    <h1 class="ds-title">ResizableDrawer</h1>
+    <p class="ds-meta">organisms · 7 stories · <code>ResizableDrawer.stories.tsx</code></p>
+    <pre class="ds-code ds-import">import { ResizableDrawer } from &#x27;@ploomescrm/ui&#x27;;</pre>
+  </header>
+  <section class="ds-story">
+    <h2 class="ds-story-name">Default</h2>
+    <div class="ds-story-id">organisms-resizabledrawer--default · export <b>Default</b></div>
+    <div class="ds-canvas ds-canvas--fullscreen">
+<div class="flex h-screen bg-neutral-level_1"><div class="relative flex h-full shrink-0 flex-col bg-background transition-[width] duration-200 ease-out border-r border-neutral-level_2" style="width: 200px;"><div aria-hidden="false" class="min-h-0 flex-1 overflow-y-auto overflow-x-hidden transition-opacity duration-200 ease-out"><div class="flex h-full w-full items-center justify-center text-sm text-font-level_2">Replaceable content</div></div><div class="absolute right-[-19px] top-1/2 -translate-y-1/2 z-10"><button aria-label="Recolher drawer" class="relative isolate inline-flex shrink-0 cursor-pointer items-center gap-[5px] rounded-[5px] text-sm text-font transition-colors before:pointer-events-none before:absolute before:inset-0 before:-z-10 before:rounded-[5px] before:bg-transparent before:transition-colors before:content-[''] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-confirmation focus-visible:ring-offset-1 disabled:pointer-events-none disabled:opacity-40 border border-neutral-level_2 bg-background hover:before:bg-neutral-level_1 active:before:bg-neutral-level_2 h-[35px] aspect-square justify-center px-0 shadow-2dp max-md:min-h-[44px] max-md:min-w-[44px]" type="button"><span class="flex shrink-0 items-center justify-center"><span aria-hidden="true" class="inline-flex shrink-0 items-center justify-center text-font"><svg aria-hidden="true" class="lucide lucide-arrow-left" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="15" xmlns="http://www.w3.org/2000/svg"><path d="m12 19-7-7 7-7"></path><path d="M19 12H5"></path></svg></span></span></button></div><div aria-hidden="true" class="absolute inset-y-0 right-[-2px] w-[5px] cursor-col-resize"></div></div><div class="flex flex-1 items-center justify-center text-sm text-font-level_2">Main content area</div></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const Default: Story = {
+  render: () =&gt; (
+    &lt;Layout&gt;
+      &lt;ResizableDrawer defaultWidth={200}&gt;
+        &lt;PlaceholderContent /&gt;
+      &lt;/ResizableDrawer&gt;
+    &lt;/Layout&gt;
+  ),
+}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">Collapsed</h2>
+    <div class="ds-story-id">organisms-resizabledrawer--collapsed · export <b>Collapsed</b></div>
+    <div class="ds-canvas ds-canvas--fullscreen">
+<div class="flex h-screen bg-neutral-level_1"><div class="relative flex h-full shrink-0 flex-col bg-background transition-[width] duration-200 ease-out border-r-2 border-neutral-level_2" style="width: 2px;"><div aria-hidden="true" class="min-h-0 flex-1 overflow-y-auto overflow-x-hidden transition-opacity duration-200 ease-out pointer-events-none opacity-0"><div class="flex h-full w-full items-center justify-center text-sm text-font-level_2">Replaceable content</div></div><div class="absolute right-[-19px] top-1/2 -translate-y-1/2 z-10"><button aria-label="Expandir drawer" class="relative isolate inline-flex shrink-0 cursor-pointer items-center gap-[5px] rounded-[5px] text-sm text-font transition-colors before:pointer-events-none before:absolute before:inset-0 before:-z-10 before:rounded-[5px] before:bg-transparent before:transition-colors before:content-[''] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-confirmation focus-visible:ring-offset-1 disabled:pointer-events-none disabled:opacity-40 border border-neutral-level_2 bg-background hover:before:bg-neutral-level_1 active:before:bg-neutral-level_2 h-[35px] aspect-square justify-center px-0 shadow-2dp max-md:min-h-[44px] max-md:min-w-[44px]" type="button"><span class="flex shrink-0 items-center justify-center"><span aria-hidden="true" class="inline-flex shrink-0 items-center justify-center text-font"><svg aria-hidden="true" class="lucide lucide-arrow-right" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="15" xmlns="http://www.w3.org/2000/svg"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></span></span></button></div></div><div class="flex flex-1 items-center justify-center text-sm text-font-level_2">Main content area</div></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const Collapsed: Story = {
+  render: () =&gt; (
+    &lt;Layout&gt;
+      &lt;ResizableDrawer defaultCollapsed&gt;
+        &lt;PlaceholderContent /&gt;
+      &lt;/ResizableDrawer&gt;
+    &lt;/Layout&gt;
+  ),
+}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">Controlled</h2>
+    <div class="ds-story-id">organisms-resizabledrawer--controlled · export <b>Controlled</b></div>
+    <div class="ds-canvas ds-canvas--fullscreen">
+<div class="flex flex-col gap-4 p-4"><div class="flex gap-2"><button class="rounded-[5px] border border-neutral-level_2 px-3 py-1 text-sm" type="button">Recolher</button><span class="text-sm text-font-level_1">Largura: 250px | Estado: expanded</span></div><div class="flex h-[400px] border border-neutral-level_2 rounded-[5px] overflow-hidden"><div class="relative flex h-full shrink-0 flex-col bg-background transition-[width] duration-200 ease-out border-r border-neutral-level_2" style="width: 250px;"><div aria-hidden="false" class="min-h-0 flex-1 overflow-y-auto overflow-x-hidden transition-opacity duration-200 ease-out"><div class="flex h-full w-full items-center justify-center text-sm text-font-level_2">Replaceable content</div></div><div class="absolute right-[-19px] top-1/2 -translate-y-1/2 z-10"><button aria-label="Recolher drawer" class="relative isolate inline-flex shrink-0 cursor-pointer items-center gap-[5px] rounded-[5px] text-sm text-font transition-colors before:pointer-events-none before:absolute before:inset-0 before:-z-10 before:rounded-[5px] before:bg-transparent before:transition-colors before:content-[''] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-confirmation focus-visible:ring-offset-1 disabled:pointer-events-none disabled:opacity-40 border border-neutral-level_2 bg-background hover:before:bg-neutral-level_1 active:before:bg-neutral-level_2 h-[35px] aspect-square justify-center px-0 shadow-2dp max-md:min-h-[44px] max-md:min-w-[44px]" type="button"><span class="flex shrink-0 items-center justify-center"><span aria-hidden="true" class="inline-flex shrink-0 items-center justify-center text-font"><svg aria-hidden="true" class="lucide lucide-arrow-left" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="15" xmlns="http://www.w3.org/2000/svg"><path d="m12 19-7-7 7-7"></path><path d="M19 12H5"></path></svg></span></span></button></div><div aria-hidden="true" class="absolute inset-y-0 right-[-2px] w-[5px] cursor-col-resize"></div></div><div class="flex flex-1 items-center justify-center text-sm text-font-level_2">Main content area</div></div></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const Controlled: Story = {
+  render: () =&gt; &lt;ControlledDemo /&gt;,
+}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">Min width 250px</h2>
+    <div class="ds-story-id">organisms-resizabledrawer--min-width-250 · export <b>MinWidth250</b></div>
+    <div class="ds-canvas ds-canvas--fullscreen">
+<div class="flex h-screen bg-neutral-level_1"><div class="relative flex h-full shrink-0 flex-col bg-background transition-[width] duration-200 ease-out border-r border-neutral-level_2" style="width: 250px;"><div aria-hidden="false" class="min-h-0 flex-1 overflow-y-auto overflow-x-hidden transition-opacity duration-200 ease-out"><div class="flex h-full w-full items-center justify-center text-sm text-font-level_2">Replaceable content</div></div><div class="absolute right-[-19px] top-1/2 -translate-y-1/2 z-10"><button aria-label="Recolher drawer" class="relative isolate inline-flex shrink-0 cursor-pointer items-center gap-[5px] rounded-[5px] text-sm text-font transition-colors before:pointer-events-none before:absolute before:inset-0 before:-z-10 before:rounded-[5px] before:bg-transparent before:transition-colors before:content-[''] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-confirmation focus-visible:ring-offset-1 disabled:pointer-events-none disabled:opacity-40 border border-neutral-level_2 bg-background hover:before:bg-neutral-level_1 active:before:bg-neutral-level_2 h-[35px] aspect-square justify-center px-0 shadow-2dp max-md:min-h-[44px] max-md:min-w-[44px]" type="button"><span class="flex shrink-0 items-center justify-center"><span aria-hidden="true" class="inline-flex shrink-0 items-center justify-center text-font"><svg aria-hidden="true" class="lucide lucide-arrow-left" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="15" xmlns="http://www.w3.org/2000/svg"><path d="m12 19-7-7 7-7"></path><path d="M19 12H5"></path></svg></span></span></button></div><div aria-hidden="true" class="absolute inset-y-0 right-[-2px] w-[5px] cursor-col-resize"></div></div><div class="flex flex-1 items-center justify-center text-sm text-font-level_2">Main content area</div></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const MinWidth250: Story = {
+  name: &#x27;Min width 250px&#x27;,
+  render: () =&gt; (
+    &lt;Layout&gt;
+      &lt;ResizableDrawer defaultWidth={250} minWidth={250}&gt;
+        &lt;PlaceholderContent /&gt;
+      &lt;/ResizableDrawer&gt;
+    &lt;/Layout&gt;
+  ),
+}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">Min width 350px</h2>
+    <div class="ds-story-id">organisms-resizabledrawer--min-width-350 · export <b>MinWidth350</b></div>
+    <div class="ds-canvas ds-canvas--fullscreen">
+<div class="flex h-screen bg-neutral-level_1"><div class="relative flex h-full shrink-0 flex-col bg-background transition-[width] duration-200 ease-out border-r border-neutral-level_2" style="width: 350px;"><div aria-hidden="false" class="min-h-0 flex-1 overflow-y-auto overflow-x-hidden transition-opacity duration-200 ease-out"><div class="flex h-full w-full items-center justify-center text-sm text-font-level_2">Replaceable content</div></div><div class="absolute right-[-19px] top-1/2 -translate-y-1/2 z-10"><button aria-label="Recolher drawer" class="relative isolate inline-flex shrink-0 cursor-pointer items-center gap-[5px] rounded-[5px] text-sm text-font transition-colors before:pointer-events-none before:absolute before:inset-0 before:-z-10 before:rounded-[5px] before:bg-transparent before:transition-colors before:content-[''] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-confirmation focus-visible:ring-offset-1 disabled:pointer-events-none disabled:opacity-40 border border-neutral-level_2 bg-background hover:before:bg-neutral-level_1 active:before:bg-neutral-level_2 h-[35px] aspect-square justify-center px-0 shadow-2dp max-md:min-h-[44px] max-md:min-w-[44px]" type="button"><span class="flex shrink-0 items-center justify-center"><span aria-hidden="true" class="inline-flex shrink-0 items-center justify-center text-font"><svg aria-hidden="true" class="lucide lucide-arrow-left" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="15" xmlns="http://www.w3.org/2000/svg"><path d="m12 19-7-7 7-7"></path><path d="M19 12H5"></path></svg></span></span></button></div><div aria-hidden="true" class="absolute inset-y-0 right-[-2px] w-[5px] cursor-col-resize"></div></div><div class="flex flex-1 items-center justify-center text-sm text-font-level_2">Main content area</div></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const MinWidth350: Story = {
+  name: &#x27;Min width 350px&#x27;,
+  render: () =&gt; (
+    &lt;Layout&gt;
+      &lt;ResizableDrawer defaultWidth={350} minWidth={350}&gt;
+        &lt;PlaceholderContent /&gt;
+      &lt;/ResizableDrawer&gt;
+    &lt;/Layout&gt;
+  ),
+}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">With real content</h2>
+    <div class="ds-story-id">organisms-resizabledrawer--with-real-content · export <b>WithRealContent</b></div>
+    <div class="ds-canvas ds-canvas--fullscreen">
+<div class="flex h-screen"><div class="relative flex h-full shrink-0 flex-col bg-background transition-[width] duration-200 ease-out border-r border-neutral-level_2" style="width: 240px;"><div aria-hidden="false" class="min-h-0 flex-1 overflow-y-auto overflow-x-hidden transition-opacity duration-200 ease-out"><div class="flex flex-col gap-1 p-[10px]"><button class="flex h-[35px] w-full items-center rounded-[5px] px-[10px] text-left text-sm text-font hover:bg-neutral-level_1" type="button">Registros</button><button class="flex h-[35px] w-full items-center rounded-[5px] px-[10px] text-left text-sm text-font hover:bg-neutral-level_1" type="button">Contatos</button><button class="flex h-[35px] w-full items-center rounded-[5px] px-[10px] text-left text-sm text-font hover:bg-neutral-level_1" type="button">Negócios</button><button class="flex h-[35px] w-full items-center rounded-[5px] px-[10px] text-left text-sm text-font hover:bg-neutral-level_1" type="button">Tarefas</button><button class="flex h-[35px] w-full items-center rounded-[5px] px-[10px] text-left text-sm text-font hover:bg-neutral-level_1" type="button">Relatórios</button></div></div><div class="absolute right-[-19px] top-1/2 -translate-y-1/2 z-10"><button aria-label="Recolher drawer" class="relative isolate inline-flex shrink-0 cursor-pointer items-center gap-[5px] rounded-[5px] text-sm text-font transition-colors before:pointer-events-none before:absolute before:inset-0 before:-z-10 before:rounded-[5px] before:bg-transparent before:transition-colors before:content-[''] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-confirmation focus-visible:ring-offset-1 disabled:pointer-events-none disabled:opacity-40 border border-neutral-level_2 bg-background hover:before:bg-neutral-level_1 active:before:bg-neutral-level_2 h-[35px] aspect-square justify-center px-0 shadow-2dp max-md:min-h-[44px] max-md:min-w-[44px]" type="button"><span class="flex shrink-0 items-center justify-center"><span aria-hidden="true" class="inline-flex shrink-0 items-center justify-center text-font"><svg aria-hidden="true" class="lucide lucide-arrow-left" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="15" xmlns="http://www.w3.org/2000/svg"><path d="m12 19-7-7 7-7"></path><path d="M19 12H5"></path></svg></span></span></button></div><div aria-hidden="true" class="absolute inset-y-0 right-[-2px] w-[5px] cursor-col-resize"></div></div><div class="flex flex-1 items-center justify-center bg-background text-sm text-font-level_2">Main content</div></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const WithRealContent: Story = {
+  name: &#x27;With real content&#x27;,
+  render: () =&gt; (
+    &lt;div className=&quot;flex h-screen&quot;&gt;
+      &lt;ResizableDrawer defaultWidth={240} minWidth={160} maxWidth={480}&gt;
+        &lt;div className=&quot;flex flex-col gap-1 p-[10px]&quot;&gt;
+          {[&#x27;Registros&#x27;, &#x27;Contatos&#x27;, &#x27;Negócios&#x27;, &#x27;Tarefas&#x27;, &#x27;Relatórios&#x27;].map(
+            (item) =&gt; (
+              &lt;button
+                key={item}
+                type=&quot;button&quot;
+                className=&quot;flex h-[35px] w-full items-center rounded-[5px] px-[10px] text-left text-sm text-font hover:bg-neutral-level_1&quot;
+              &gt;
+                {item}
+              &lt;/button&gt;
+            ),
+          )}
+        &lt;/div&gt;
+      &lt;/ResizableDrawer&gt;
+      &lt;div className=&quot;flex flex-1 items-center justify-center bg-background text-sm text-font-level_2&quot;&gt;
+        Main content
+      &lt;/div&gt;
+    &lt;/div&gt;
+  ),
+}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">All Figma variants</h2>
+    <div class="ds-story-id">organisms-resizabledrawer--all-variants · export <b>AllVariants</b></div>
+    <div class="ds-canvas ds-canvas--fullscreen">
+<div class="flex gap-[40px] p-[40px] bg-neutral-level_1"><div class="flex flex-col gap-2"><p class="text-xs text-font-level_2">Collapsed</p><div class="flex h-[400px] overflow-visible"><div class="relative flex h-full shrink-0 flex-col bg-background transition-[width] duration-200 ease-out border-r-2 border-neutral-level_2" style="width: 2px;"><div aria-hidden="true" class="min-h-0 flex-1 overflow-y-auto overflow-x-hidden transition-opacity duration-200 ease-out pointer-events-none opacity-0"><div class="flex h-full w-full items-center justify-center text-sm text-font-level_2">Replaceable content</div></div><div class="absolute right-[-19px] top-1/2 -translate-y-1/2 z-10"><button aria-label="Expandir drawer" class="relative isolate inline-flex shrink-0 cursor-pointer items-center gap-[5px] rounded-[5px] text-sm text-font transition-colors before:pointer-events-none before:absolute before:inset-0 before:-z-10 before:rounded-[5px] before:bg-transparent before:transition-colors before:content-[''] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-confirmation focus-visible:ring-offset-1 disabled:pointer-events-none disabled:opacity-40 border border-neutral-level_2 bg-background hover:before:bg-neutral-level_1 active:before:bg-neutral-level_2 h-[35px] aspect-square justify-center px-0 shadow-2dp max-md:min-h-[44px] max-md:min-w-[44px]" type="button"><span class="flex shrink-0 items-center justify-center"><span aria-hidden="true" class="inline-flex shrink-0 items-center justify-center text-font"><svg aria-hidden="true" class="lucide lucide-arrow-right" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="15" xmlns="http://www.w3.org/2000/svg"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></span></span></button></div></div><div class="w-[100px] bg-background border border-neutral-level_2"></div></div></div><div class="flex flex-col gap-2"><p class="text-xs text-font-level_2">200px</p><div class="flex h-[400px] overflow-visible"><div class="relative flex h-full shrink-0 flex-col bg-background transition-[width] duration-200 ease-out border-r border-neutral-level_2" style="width: 200px;"><div aria-hidden="false" class="min-h-0 flex-1 overflow-y-auto overflow-x-hidden transition-opacity duration-200 ease-out"><div class="flex h-full w-full items-center justify-center text-sm text-font-level_2">Replaceable content</div></div><div class="absolute right-[-19px] top-1/2 -translate-y-1/2 z-10"><button aria-label="Recolher drawer" class="relative isolate inline-flex shrink-0 cursor-pointer items-center gap-[5px] rounded-[5px] text-sm text-font transition-colors before:pointer-events-none before:absolute before:inset-0 before:-z-10 before:rounded-[5px] before:bg-transparent before:transition-colors before:content-[''] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-confirmation focus-visible:ring-offset-1 disabled:pointer-events-none disabled:opacity-40 border border-neutral-level_2 bg-background hover:before:bg-neutral-level_1 active:before:bg-neutral-level_2 h-[35px] aspect-square justify-center px-0 shadow-2dp max-md:min-h-[44px] max-md:min-w-[44px]" type="button"><span class="flex shrink-0 items-center justify-center"><span aria-hidden="true" class="inline-flex shrink-0 items-center justify-center text-font"><svg aria-hidden="true" class="lucide lucide-arrow-left" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="15" xmlns="http://www.w3.org/2000/svg"><path d="m12 19-7-7 7-7"></path><path d="M19 12H5"></path></svg></span></span></button></div><div aria-hidden="true" class="absolute inset-y-0 right-[-2px] w-[5px] cursor-col-resize"></div></div><div class="w-[100px] bg-background border border-neutral-level_2 border-l-0"></div></div></div><div class="flex flex-col gap-2"><p class="text-xs text-font-level_2">250px</p><div class="flex h-[400px] overflow-visible"><div class="relative flex h-full shrink-0 flex-col bg-background transition-[width] duration-200 ease-out border-r border-neutral-level_2" style="width: 250px;"><div aria-hidden="false" class="min-h-0 flex-1 overflow-y-auto overflow-x-hidden transition-opacity duration-200 ease-out"><div class="flex h-full w-full items-center justify-center text-sm text-font-level_2">Replaceable content</div></div><div class="absolute right-[-19px] top-1/2 -translate-y-1/2 z-10"><button aria-label="Recolher drawer" class="relative isolate inline-flex shrink-0 cursor-pointer items-center gap-[5px] rounded-[5px] text-sm text-font transition-colors before:pointer-events-none before:absolute before:inset-0 before:-z-10 before:rounded-[5px] before:bg-transparent before:transition-colors before:content-[''] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-confirmation focus-visible:ring-offset-1 disabled:pointer-events-none disabled:opacity-40 border border-neutral-level_2 bg-background hover:before:bg-neutral-level_1 active:before:bg-neutral-level_2 h-[35px] aspect-square justify-center px-0 shadow-2dp max-md:min-h-[44px] max-md:min-w-[44px]" type="button"><span class="flex shrink-0 items-center justify-center"><span aria-hidden="true" class="inline-flex shrink-0 items-center justify-center text-font"><svg aria-hidden="true" class="lucide lucide-arrow-left" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="15" xmlns="http://www.w3.org/2000/svg"><path d="m12 19-7-7 7-7"></path><path d="M19 12H5"></path></svg></span></span></button></div><div aria-hidden="true" class="absolute inset-y-0 right-[-2px] w-[5px] cursor-col-resize"></div></div><div class="w-[100px] bg-background border border-neutral-level_2 border-l-0"></div></div></div><div class="flex flex-col gap-2"><p class="text-xs text-font-level_2">350px</p><div class="flex h-[400px] overflow-visible"><div class="relative flex h-full shrink-0 flex-col bg-background transition-[width] duration-200 ease-out border-r border-neutral-level_2" style="width: 350px;"><div aria-hidden="false" class="min-h-0 flex-1 overflow-y-auto overflow-x-hidden transition-opacity duration-200 ease-out"><div class="flex h-full w-full items-center justify-center text-sm text-font-level_2">Replaceable content</div></div><div class="absolute right-[-19px] top-1/2 -translate-y-1/2 z-10"><button aria-label="Recolher drawer" class="relative isolate inline-flex shrink-0 cursor-pointer items-center gap-[5px] rounded-[5px] text-sm text-font transition-colors before:pointer-events-none before:absolute before:inset-0 before:-z-10 before:rounded-[5px] before:bg-transparent before:transition-colors before:content-[''] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-confirmation focus-visible:ring-offset-1 disabled:pointer-events-none disabled:opacity-40 border border-neutral-level_2 bg-background hover:before:bg-neutral-level_1 active:before:bg-neutral-level_2 h-[35px] aspect-square justify-center px-0 shadow-2dp max-md:min-h-[44px] max-md:min-w-[44px]" type="button"><span class="flex shrink-0 items-center justify-center"><span aria-hidden="true" class="inline-flex shrink-0 items-center justify-center text-font"><svg aria-hidden="true" class="lucide lucide-arrow-left" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="15" xmlns="http://www.w3.org/2000/svg"><path d="m12 19-7-7 7-7"></path><path d="M19 12H5"></path></svg></span></span></button></div><div aria-hidden="true" class="absolute inset-y-0 right-[-2px] w-[5px] cursor-col-resize"></div></div><div class="w-[100px] bg-background border border-neutral-level_2 border-l-0"></div></div></div></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const AllVariants: Story = {
+  name: &#x27;All Figma variants&#x27;,
+  render: () =&gt; (
+    &lt;div className=&quot;flex gap-[40px] p-[40px] bg-neutral-level_1&quot;&gt;
+      &lt;div className=&quot;flex flex-col gap-2&quot;&gt;
+        &lt;p className=&quot;text-xs text-font-level_2&quot;&gt;Collapsed&lt;/p&gt;
+        &lt;div className=&quot;flex h-[400px] overflow-visible&quot;&gt;
+          &lt;ResizableDrawer defaultCollapsed&gt;
+            &lt;PlaceholderContent /&gt;
+          &lt;/ResizableDrawer&gt;
+          &lt;div className=&quot;w-[100px] bg-background border border-neutral-level_2&quot; /&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div className=&quot;flex flex-col gap-2&quot;&gt;
+        &lt;p className=&quot;text-xs text-font-level_2&quot;&gt;200px&lt;/p&gt;
+        &lt;div className=&quot;flex h-[400px] overflow-visible&quot;&gt;
+          &lt;ResizableDrawer defaultWidth={200}&gt;
+            &lt;PlaceholderContent /&gt;
+          &lt;/ResizableDrawer&gt;
+          &lt;div className=&quot;w-[100px] bg-background border border-neutral-level_2 border-l-0&quot; /&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div className=&quot;flex flex-col gap-2&quot;&gt;
+        &lt;p className=&quot;text-xs text-font-level_2&quot;&gt;250px&lt;/p&gt;
+        &lt;div className=&quot;flex h-[400px] overflow-visible&quot;&gt;
+          &lt;ResizableDrawer defaultWidth={250}&gt;
+            &lt;PlaceholderContent /&gt;
+          &lt;/ResizableDrawer&gt;
+          &lt;div className=&quot;w-[100px] bg-background border border-neutral-level_2 border-l-0&quot; /&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div className=&quot;flex flex-col gap-2&quot;&gt;
+        &lt;p className=&quot;text-xs text-font-level_2&quot;&gt;350px&lt;/p&gt;
+        &lt;div className=&quot;flex h-[400px] overflow-visible&quot;&gt;
+          &lt;ResizableDrawer defaultWidth={350}&gt;
+            &lt;PlaceholderContent /&gt;
+          &lt;/ResizableDrawer&gt;
+          &lt;div className=&quot;w-[100px] bg-background border border-neutral-level_2 border-l-0&quot; /&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  ),
+}</code></pre></details>
+  </section>
+</body>
+</html>

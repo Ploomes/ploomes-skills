@@ -1,0 +1,211 @@
+<!doctype html>
+<!--
+  Ploomes Design System — snapshot estático das stories do Storybook.
+  Componente : Components/HeaderModal
+  Stories    : 8 (No Left, With Text, With Button Soft, With 2 Button Soft, With Breadcrumbs, With Intercom Button, With Right Content, All Variants)
+  Story      : HeaderModal.stories.tsx
+  Tema       : light — use <html class="dark"> para o tema escuro.
+-->
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HeaderModal — Ploomes DS</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;600;700&display=swap">
+<link rel="stylesheet" href="../assets/design-system.css">
+<link rel="stylesheet" href="../assets/page.css">
+</head>
+<body class="ds-page">
+  <header class="ds-head">
+    <a class="ds-back" href="../index.html">← inventário</a>
+    <h1 class="ds-title">HeaderModal</h1>
+    <p class="ds-meta">components · 8 stories · <code>HeaderModal.stories.tsx</code></p>
+    <pre class="ds-code ds-import">import { HeaderModal } from &#x27;@ploomescrm/ui&#x27;;</pre>
+    <pre class="ds-code">// props padrão de todas as stories (meta.args)
+args: {
+  left: undefined,
+  title: &#x27;Lorem Ipsum&#x27;,
+  intercomButton: false,
+}</pre>
+  </header>
+  <section class="ds-story">
+    <h2 class="ds-story-name">No Left</h2>
+    <div class="ds-story-id">components-headermodal--no-left · export <b>NoLeft</b></div>
+    <div class="ds-canvas ds-canvas--fullscreen">
+<div class="flex w-full items-center border-b border-neutral-level_2 bg-background"><div class="flex h-[50px] flex-1 items-center justify-end px-[15px] gap-0"><div class="flex shrink-0 items-center gap-[10px]"><button aria-label="Fechar" class="flex size-[35px] max-md:min-h-[44px] max-md:min-w-[44px] shrink-0 cursor-pointer items-center justify-center rounded-[5px] border border-neutral-level_2 bg-background transition-colors hover:bg-neutral-level_1 active:bg-neutral-level_2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-confirmation focus-visible:ring-offset-1" type="button"><span aria-hidden="true" class="inline-flex shrink-0 items-center justify-center text-font"><svg aria-hidden="true" class="lucide lucide-x" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="15" xmlns="http://www.w3.org/2000/svg"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg></span></button></div></div></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const NoLeft: Story = {
+  args: { left: undefined },
+}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">With Text</h2>
+    <div class="ds-story-id">components-headermodal--with-text · export <b>WithText</b></div>
+    <div class="ds-canvas ds-canvas--fullscreen">
+<div class="flex w-full items-center border-b border-neutral-level_2 bg-background"><div class="flex h-[50px] flex-1 items-center justify-end px-[15px] gap-[10px]"><div class="flex min-w-0 flex-1 items-center"><span class="truncate text-base font-semibold text-font-level_1">Título do modal</span></div><div class="flex shrink-0 items-center gap-[10px]"><button aria-label="Fechar" class="flex size-[35px] max-md:min-h-[44px] max-md:min-w-[44px] shrink-0 cursor-pointer items-center justify-center rounded-[5px] border border-neutral-level_2 bg-background transition-colors hover:bg-neutral-level_1 active:bg-neutral-level_2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-confirmation focus-visible:ring-offset-1" type="button"><span aria-hidden="true" class="inline-flex shrink-0 items-center justify-center text-font"><svg aria-hidden="true" class="lucide lucide-x" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="15" xmlns="http://www.w3.org/2000/svg"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg></span></button></div></div></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const WithText: Story = {
+  args: {
+    left: &#x27;text&#x27;,
+    title: &#x27;Título do modal&#x27;,
+  },
+}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">With Button Soft</h2>
+    <div class="ds-story-id">components-headermodal--with-button-soft · export <b>WithButtonSoft</b></div>
+    <div class="ds-canvas ds-canvas--fullscreen">
+<div class="flex w-full items-center border-b border-neutral-level_2 bg-background"><div class="flex h-[50px] flex-1 items-center justify-end px-[15px] gap-[10px]"><div class="flex min-w-0 flex-1 items-center"><button class="relative isolate inline-flex shrink-0 cursor-pointer items-center gap-[5px] rounded-[5px] px-[5px] text-sm text-font transition-colors before:pointer-events-none before:absolute before:inset-0 before:-z-10 before:rounded-[5px] before:bg-transparent before:transition-colors before:content-[''] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-confirmation focus-visible:ring-offset-1 disabled:pointer-events-none disabled:opacity-40 border border-neutral-level_2 bg-background hover:before:bg-neutral-level_1 active:before:bg-neutral-level_2 h-[35px]"><span class="overflow-hidden text-ellipsis whitespace-nowrap px-[5px]">Lorem Ipsum</span></button></div><div class="flex shrink-0 items-center gap-[10px]"><button aria-label="Fechar" class="flex size-[35px] max-md:min-h-[44px] max-md:min-w-[44px] shrink-0 cursor-pointer items-center justify-center rounded-[5px] border border-neutral-level_2 bg-background transition-colors hover:bg-neutral-level_1 active:bg-neutral-level_2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-confirmation focus-visible:ring-offset-1" type="button"><span aria-hidden="true" class="inline-flex shrink-0 items-center justify-center text-font"><svg aria-hidden="true" class="lucide lucide-x" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="15" xmlns="http://www.w3.org/2000/svg"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg></span></button></div></div></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const WithButtonSoft: Story = {
+  args: {
+    left: &#x27;button_soft&#x27;,
+    leftButtons: [{ label: &#x27;Lorem Ipsum&#x27;, onClick: () =&gt; {} }],
+  },
+}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">With 2 Button Soft</h2>
+    <div class="ds-story-id">components-headermodal--with-2-button-soft · export <b>With2ButtonSoft</b></div>
+    <div class="ds-canvas ds-canvas--fullscreen">
+<div class="flex w-full items-center border-b border-neutral-level_2 bg-background"><div class="flex h-[50px] flex-1 items-center justify-end px-[15px] gap-[10px]"><div class="flex min-w-0 flex-1 items-center gap-[10px]"><button class="relative isolate inline-flex shrink-0 cursor-pointer items-center gap-[5px] rounded-[5px] px-[5px] text-sm text-font transition-colors before:pointer-events-none before:absolute before:inset-0 before:-z-10 before:rounded-[5px] before:bg-transparent before:transition-colors before:content-[''] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-confirmation focus-visible:ring-offset-1 disabled:pointer-events-none disabled:opacity-40 border border-neutral-level_2 bg-background hover:before:bg-neutral-level_1 active:before:bg-neutral-level_2 h-[35px]"><span class="overflow-hidden text-ellipsis whitespace-nowrap px-[5px]">Lorem Ipsum</span></button><button class="relative isolate inline-flex shrink-0 cursor-pointer items-center gap-[5px] rounded-[5px] px-[5px] text-sm text-font transition-colors before:pointer-events-none before:absolute before:inset-0 before:-z-10 before:rounded-[5px] before:bg-transparent before:transition-colors before:content-[''] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-confirmation focus-visible:ring-offset-1 disabled:pointer-events-none disabled:opacity-40 border border-neutral-level_2 bg-background hover:before:bg-neutral-level_1 active:before:bg-neutral-level_2 h-[35px]"><span class="overflow-hidden text-ellipsis whitespace-nowrap px-[5px]">Lorem Ipsum</span></button></div><div class="flex shrink-0 items-center gap-[10px]"><button aria-label="Fechar" class="flex size-[35px] max-md:min-h-[44px] max-md:min-w-[44px] shrink-0 cursor-pointer items-center justify-center rounded-[5px] border border-neutral-level_2 bg-background transition-colors hover:bg-neutral-level_1 active:bg-neutral-level_2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-confirmation focus-visible:ring-offset-1" type="button"><span aria-hidden="true" class="inline-flex shrink-0 items-center justify-center text-font"><svg aria-hidden="true" class="lucide lucide-x" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="15" xmlns="http://www.w3.org/2000/svg"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg></span></button></div></div></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const With2ButtonSoft: Story = {
+  args: {
+    left: &#x27;2_button_soft&#x27;,
+    leftButtons: [
+      { label: &#x27;Lorem Ipsum&#x27;, onClick: () =&gt; {} },
+      { label: &#x27;Lorem Ipsum&#x27;, onClick: () =&gt; {} },
+    ],
+  },
+}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">With Breadcrumbs</h2>
+    <div class="ds-story-id">components-headermodal--with-breadcrumbs · export <b>WithBreadcrumbs</b></div>
+    <div class="ds-canvas ds-canvas--fullscreen">
+<div class="flex w-full items-center border-b border-neutral-level_2 bg-background"><div class="flex h-[50px] flex-1 items-center justify-end px-[15px] gap-[10px]"><div class="flex min-w-0 flex-1 items-center"><nav aria-label="Navegação" class="flex items-center gap-[5px] max-md:overflow-x-auto max-md:scrollbar-custom"><div class="flex shrink-0 items-center gap-[5px]"><a class="relative isolate inline-flex shrink-0 cursor-pointer items-center gap-[5px] rounded-[5px] px-[5px] text-sm text-font transition-colors before:pointer-events-none before:absolute before:inset-0 before:-z-10 before:rounded-[5px] before:bg-transparent before:transition-colors before:content-[''] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-confirmation focus-visible:ring-offset-1 disabled:pointer-events-none disabled:opacity-40 border border-transparent bg-transparent hover:before:bg-neutral-level_1 active:before:bg-neutral-level_2 h-[30px] max-w-[150px]" href="#"><span class="block min-w-0 overflow-hidden text-ellipsis whitespace-nowrap px-[5px]">Home</span></a><span aria-hidden="true" class="inline-flex items-center justify-center shrink-0 text-font-level_2"><svg aria-hidden="true" class="lucide lucide-chevron-right" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="15" xmlns="http://www.w3.org/2000/svg"><path d="m9 18 6-6-6-6"></path></svg></span></div><div class="flex shrink-0 items-center gap-[5px]"><a class="relative isolate inline-flex shrink-0 cursor-pointer items-center gap-[5px] rounded-[5px] px-[5px] text-sm text-font transition-colors before:pointer-events-none before:absolute before:inset-0 before:-z-10 before:rounded-[5px] before:bg-transparent before:transition-colors before:content-[''] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-confirmation focus-visible:ring-offset-1 disabled:pointer-events-none disabled:opacity-40 border border-transparent bg-transparent hover:before:bg-neutral-level_1 active:before:bg-neutral-level_2 h-[30px] max-w-[150px]" href="#"><span class="block min-w-0 overflow-hidden text-ellipsis whitespace-nowrap px-[5px]">Módulo</span></a><span aria-hidden="true" class="inline-flex items-center justify-center shrink-0 text-font-level_2"><svg aria-hidden="true" class="lucide lucide-chevron-right" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="15" xmlns="http://www.w3.org/2000/svg"><path d="m9 18 6-6-6-6"></path></svg></span></div><button aria-current="page" class="relative isolate inline-flex shrink-0 cursor-pointer items-center gap-[5px] rounded-[5px] px-[5px] text-sm text-font transition-colors before:pointer-events-none before:absolute before:inset-0 before:-z-10 before:rounded-[5px] before:bg-transparent before:transition-colors before:content-[''] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-confirmation focus-visible:ring-offset-1 disabled:pointer-events-none disabled:opacity-40 border border-neutral-level_2 bg-background hover:before:bg-neutral-level_1 active:before:bg-neutral-level_2 h-[30px] max-w-[150px]" type="button"><span class="block min-w-0 overflow-hidden text-ellipsis whitespace-nowrap px-[5px]">Página atual</span><span class="flex shrink-0 items-center justify-center pr-[5px]"><span aria-hidden="true" class="inline-flex shrink-0 items-center justify-center text-font"><svg aria-hidden="true" class="lucide lucide-chevron-down" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="15" xmlns="http://www.w3.org/2000/svg"><path d="m6 9 6 6 6-6"></path></svg></span></span></button></nav></div><div class="flex shrink-0 items-center gap-[10px]"><button aria-label="Fechar" class="flex size-[35px] max-md:min-h-[44px] max-md:min-w-[44px] shrink-0 cursor-pointer items-center justify-center rounded-[5px] border border-neutral-level_2 bg-background transition-colors hover:bg-neutral-level_1 active:bg-neutral-level_2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-confirmation focus-visible:ring-offset-1" type="button"><span aria-hidden="true" class="inline-flex shrink-0 items-center justify-center text-font"><svg aria-hidden="true" class="lucide lucide-x" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="15" xmlns="http://www.w3.org/2000/svg"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg></span></button></div></div></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const WithBreadcrumbs: Story = {
+  args: {
+    left: &#x27;breadcrumbs&#x27;,
+    breadcrumbItems: [
+      { label: &#x27;Home&#x27;, href: &#x27;#&#x27; },
+      { label: &#x27;Módulo&#x27;, href: &#x27;#&#x27; },
+      { label: &#x27;Página atual&#x27; },
+    ],
+    breadcrumbSize: &#x27;sm&#x27;,
+  },
+}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">With Intercom Button</h2>
+    <div class="ds-story-id">components-headermodal--with-intercom-button · export <b>WithIntercomButton</b></div>
+    <div class="ds-canvas ds-canvas--fullscreen">
+<div class="flex w-full items-center border-b border-neutral-level_2 bg-background"><div class="flex h-[50px] flex-1 items-center justify-end px-[15px] gap-[10px]"><div class="flex min-w-0 flex-1 items-center"><span class="truncate text-base font-semibold text-font-level_1">Modal com ajuda</span></div><div class="flex shrink-0 items-center gap-[10px]"><button aria-label="Ajuda" class="flex size-[35px] max-md:min-h-[44px] max-md:min-w-[44px] shrink-0 cursor-pointer items-center justify-center rounded-[5px] border border-neutral-level_2 bg-background transition-colors hover:bg-neutral-level_1 active:bg-neutral-level_2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-confirmation focus-visible:ring-offset-1" type="button"><span aria-hidden="true" class="inline-flex shrink-0 items-center justify-center text-font-level_2"><svg aria-hidden="true" class="lucide lucide-circle-question-mark" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="15" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><path d="M12 17h.01"></path></svg></span></button><button aria-label="Fechar" class="flex size-[35px] max-md:min-h-[44px] max-md:min-w-[44px] shrink-0 cursor-pointer items-center justify-center rounded-[5px] border border-neutral-level_2 bg-background transition-colors hover:bg-neutral-level_1 active:bg-neutral-level_2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-confirmation focus-visible:ring-offset-1" type="button"><span aria-hidden="true" class="inline-flex shrink-0 items-center justify-center text-font"><svg aria-hidden="true" class="lucide lucide-x" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="15" xmlns="http://www.w3.org/2000/svg"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg></span></button></div></div></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const WithIntercomButton: Story = {
+  args: {
+    left: &#x27;text&#x27;,
+    title: &#x27;Modal com ajuda&#x27;,
+    intercomButton: true,
+    onIntercomClick: () =&gt; {},
+  },
+}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">With Right Content</h2>
+    <div class="ds-story-id">components-headermodal--with-right-content · export <b>WithRightContent</b></div>
+    <div class="ds-canvas ds-canvas--fullscreen">
+<div class="flex w-full items-center border-b border-neutral-level_2 bg-background"><div class="flex h-[50px] flex-1 items-center justify-end px-[15px] gap-[10px]"><div class="flex min-w-0 flex-1 items-center"><span class="truncate text-base font-semibold text-font-level_1">Título do modal</span></div><div class="flex shrink-0 items-center gap-[10px]"><span style="font-size: 13px; color: rgb(139, 133, 149); border: 1px dashed rgba(27, 16, 44, 0.1); border-radius: 4px; padding: 4px 12px;">Conteúdo customizado</span><button aria-label="Fechar" class="flex size-[35px] max-md:min-h-[44px] max-md:min-w-[44px] shrink-0 cursor-pointer items-center justify-center rounded-[5px] border border-neutral-level_2 bg-background transition-colors hover:bg-neutral-level_1 active:bg-neutral-level_2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-confirmation focus-visible:ring-offset-1" type="button"><span aria-hidden="true" class="inline-flex shrink-0 items-center justify-center text-font"><svg aria-hidden="true" class="lucide lucide-x" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="15" xmlns="http://www.w3.org/2000/svg"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg></span></button></div></div></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const WithRightContent: Story = {
+  args: {
+    left: &#x27;text&#x27;,
+    title: &#x27;Título do modal&#x27;,
+    rightContent: (
+      &lt;span
+        style={{
+          fontSize: 13,
+          color: &#x27;#8b8595&#x27;,
+          border: &#x27;1px dashed rgba(27,16,44,0.1)&#x27;,
+          borderRadius: 4,
+          padding: &#x27;4px 12px&#x27;,
+        }}
+      &gt;
+        Conteúdo customizado
+      &lt;/span&gt;
+    ),
+  },
+}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">All Variants</h2>
+    <div class="ds-story-id">components-headermodal--all-variants · export <b>AllVariants</b></div>
+    <div class="ds-canvas ds-canvas--fullscreen">
+<div style="display: flex; flex-direction: column; gap: 2px;"><div><p style="font-size: 11px; color: rgb(139, 133, 149); padding: 4px 8px; background: rgb(245, 243, 248);">null (no left)</p><div class="flex w-full items-center border-b border-neutral-level_2 bg-background"><div class="flex h-[50px] flex-1 items-center justify-end px-[15px] gap-0"><div class="flex shrink-0 items-center gap-[10px]"><button aria-label="Fechar" class="flex size-[35px] max-md:min-h-[44px] max-md:min-w-[44px] shrink-0 cursor-pointer items-center justify-center rounded-[5px] border border-neutral-level_2 bg-background transition-colors hover:bg-neutral-level_1 active:bg-neutral-level_2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-confirmation focus-visible:ring-offset-1" type="button"><span aria-hidden="true" class="inline-flex shrink-0 items-center justify-center text-font"><svg aria-hidden="true" class="lucide lucide-x" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="15" xmlns="http://www.w3.org/2000/svg"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg></span></button></div></div></div></div><div><p style="font-size: 11px; color: rgb(139, 133, 149); padding: 4px 8px; background: rgb(245, 243, 248);">text</p><div class="flex w-full items-center border-b border-neutral-level_2 bg-background"><div class="flex h-[50px] flex-1 items-center justify-end px-[15px] gap-[10px]"><div class="flex min-w-0 flex-1 items-center"><span class="truncate text-base font-semibold text-font-level_1">Título do modal</span></div><div class="flex shrink-0 items-center gap-[10px]"><button aria-label="Fechar" class="flex size-[35px] max-md:min-h-[44px] max-md:min-w-[44px] shrink-0 cursor-pointer items-center justify-center rounded-[5px] border border-neutral-level_2 bg-background transition-colors hover:bg-neutral-level_1 active:bg-neutral-level_2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-confirmation focus-visible:ring-offset-1" type="button"><span aria-hidden="true" class="inline-flex shrink-0 items-center justify-center text-font"><svg aria-hidden="true" class="lucide lucide-x" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="15" xmlns="http://www.w3.org/2000/svg"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg></span></button></div></div></div></div><div><p style="font-size: 11px; color: rgb(139, 133, 149); padding: 4px 8px; background: rgb(245, 243, 248);">button_soft</p><div class="flex w-full items-center border-b border-neutral-level_2 bg-background"><div class="flex h-[50px] flex-1 items-center justify-end px-[15px] gap-[10px]"><div class="flex min-w-0 flex-1 items-center"><button class="relative isolate inline-flex shrink-0 cursor-pointer items-center gap-[5px] rounded-[5px] px-[5px] text-sm text-font transition-colors before:pointer-events-none before:absolute before:inset-0 before:-z-10 before:rounded-[5px] before:bg-transparent before:transition-colors before:content-[''] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-confirmation focus-visible:ring-offset-1 disabled:pointer-events-none disabled:opacity-40 border border-neutral-level_2 bg-background hover:before:bg-neutral-level_1 active:before:bg-neutral-level_2 h-[35px]"><span class="overflow-hidden text-ellipsis whitespace-nowrap px-[5px]">Lorem Ipsum</span></button></div><div class="flex shrink-0 items-center gap-[10px]"><button aria-label="Fechar" class="flex size-[35px] max-md:min-h-[44px] max-md:min-w-[44px] shrink-0 cursor-pointer items-center justify-center rounded-[5px] border border-neutral-level_2 bg-background transition-colors hover:bg-neutral-level_1 active:bg-neutral-level_2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-confirmation focus-visible:ring-offset-1" type="button"><span aria-hidden="true" class="inline-flex shrink-0 items-center justify-center text-font"><svg aria-hidden="true" class="lucide lucide-x" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="15" xmlns="http://www.w3.org/2000/svg"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg></span></button></div></div></div></div><div><p style="font-size: 11px; color: rgb(139, 133, 149); padding: 4px 8px; background: rgb(245, 243, 248);">2_button_soft</p><div class="flex w-full items-center border-b border-neutral-level_2 bg-background"><div class="flex h-[50px] flex-1 items-center justify-end px-[15px] gap-[10px]"><div class="flex min-w-0 flex-1 items-center gap-[10px]"><button class="relative isolate inline-flex shrink-0 cursor-pointer items-center gap-[5px] rounded-[5px] px-[5px] text-sm text-font transition-colors before:pointer-events-none before:absolute before:inset-0 before:-z-10 before:rounded-[5px] before:bg-transparent before:transition-colors before:content-[''] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-confirmation focus-visible:ring-offset-1 disabled:pointer-events-none disabled:opacity-40 border border-neutral-level_2 bg-background hover:before:bg-neutral-level_1 active:before:bg-neutral-level_2 h-[35px]"><span class="overflow-hidden text-ellipsis whitespace-nowrap px-[5px]">Lorem Ipsum</span></button><button class="relative isolate inline-flex shrink-0 cursor-pointer items-center gap-[5px] rounded-[5px] px-[5px] text-sm text-font transition-colors before:pointer-events-none before:absolute before:inset-0 before:-z-10 before:rounded-[5px] before:bg-transparent before:transition-colors before:content-[''] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-confirmation focus-visible:ring-offset-1 disabled:pointer-events-none disabled:opacity-40 border border-neutral-level_2 bg-background hover:before:bg-neutral-level_1 active:before:bg-neutral-level_2 h-[35px]"><span class="overflow-hidden text-ellipsis whitespace-nowrap px-[5px]">Lorem Ipsum</span></button></div><div class="flex shrink-0 items-center gap-[10px]"><button aria-label="Fechar" class="flex size-[35px] max-md:min-h-[44px] max-md:min-w-[44px] shrink-0 cursor-pointer items-center justify-center rounded-[5px] border border-neutral-level_2 bg-background transition-colors hover:bg-neutral-level_1 active:bg-neutral-level_2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-confirmation focus-visible:ring-offset-1" type="button"><span aria-hidden="true" class="inline-flex shrink-0 items-center justify-center text-font"><svg aria-hidden="true" class="lucide lucide-x" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="15" xmlns="http://www.w3.org/2000/svg"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg></span></button></div></div></div></div><div><p style="font-size: 11px; color: rgb(139, 133, 149); padding: 4px 8px; background: rgb(245, 243, 248);">breadcrumbs</p><div class="flex w-full items-center border-b border-neutral-level_2 bg-background"><div class="flex h-[50px] flex-1 items-center justify-end px-[15px] gap-[10px]"><div class="flex min-w-0 flex-1 items-center"><nav aria-label="Navegação" class="flex items-center gap-[5px] max-md:overflow-x-auto max-md:scrollbar-custom"><div class="flex shrink-0 items-center gap-[5px]"><a class="relative isolate inline-flex shrink-0 cursor-pointer items-center gap-[5px] rounded-[5px] px-[5px] text-sm text-font transition-colors before:pointer-events-none before:absolute before:inset-0 before:-z-10 before:rounded-[5px] before:bg-transparent before:transition-colors before:content-[''] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-confirmation focus-visible:ring-offset-1 disabled:pointer-events-none disabled:opacity-40 border border-transparent bg-transparent hover:before:bg-neutral-level_1 active:before:bg-neutral-level_2 h-[30px] max-w-[150px]" href="#"><span class="block min-w-0 overflow-hidden text-ellipsis whitespace-nowrap px-[5px]">Home</span></a><span aria-hidden="true" class="inline-flex items-center justify-center shrink-0 text-font-level_2"><svg aria-hidden="true" class="lucide lucide-chevron-right" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="15" xmlns="http://www.w3.org/2000/svg"><path d="m9 18 6-6-6-6"></path></svg></span></div><div class="flex shrink-0 items-center gap-[5px]"><a class="relative isolate inline-flex shrink-0 cursor-pointer items-center gap-[5px] rounded-[5px] px-[5px] text-sm text-font transition-colors before:pointer-events-none before:absolute before:inset-0 before:-z-10 before:rounded-[5px] before:bg-transparent before:transition-colors before:content-[''] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-confirmation focus-visible:ring-offset-1 disabled:pointer-events-none disabled:opacity-40 border border-transparent bg-transparent hover:before:bg-neutral-level_1 active:before:bg-neutral-level_2 h-[30px] max-w-[150px]" href="#"><span class="block min-w-0 overflow-hidden text-ellipsis whitespace-nowrap px-[5px]">Seção</span></a><span aria-hidden="true" class="inline-flex items-center justify-center shrink-0 text-font-level_2"><svg aria-hidden="true" class="lucide lucide-chevron-right" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="15" xmlns="http://www.w3.org/2000/svg"><path d="m9 18 6-6-6-6"></path></svg></span></div><button aria-current="page" class="relative isolate inline-flex shrink-0 cursor-pointer items-center gap-[5px] rounded-[5px] px-[5px] text-sm text-font transition-colors before:pointer-events-none before:absolute before:inset-0 before:-z-10 before:rounded-[5px] before:bg-transparent before:transition-colors before:content-[''] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-confirmation focus-visible:ring-offset-1 disabled:pointer-events-none disabled:opacity-40 border border-neutral-level_2 bg-background hover:before:bg-neutral-level_1 active:before:bg-neutral-level_2 h-[30px] max-w-[150px]" type="button"><span class="block min-w-0 overflow-hidden text-ellipsis whitespace-nowrap px-[5px]">Página</span><span class="flex shrink-0 items-center justify-center pr-[5px]"><span aria-hidden="true" class="inline-flex shrink-0 items-center justify-center text-font"><svg aria-hidden="true" class="lucide lucide-chevron-down" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="15" xmlns="http://www.w3.org/2000/svg"><path d="m6 9 6 6 6-6"></path></svg></span></span></button></nav></div><div class="flex shrink-0 items-center gap-[10px]"><button aria-label="Fechar" class="flex size-[35px] max-md:min-h-[44px] max-md:min-w-[44px] shrink-0 cursor-pointer items-center justify-center rounded-[5px] border border-neutral-level_2 bg-background transition-colors hover:bg-neutral-level_1 active:bg-neutral-level_2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-confirmation focus-visible:ring-offset-1" type="button"><span aria-hidden="true" class="inline-flex shrink-0 items-center justify-center text-font"><svg aria-hidden="true" class="lucide lucide-x" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="15" xmlns="http://www.w3.org/2000/svg"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg></span></button></div></div></div></div><div><p style="font-size: 11px; color: rgb(139, 133, 149); padding: 4px 8px; background: rgb(245, 243, 248);">text + intercomButton</p><div class="flex w-full items-center border-b border-neutral-level_2 bg-background"><div class="flex h-[50px] flex-1 items-center justify-end px-[15px] gap-[10px]"><div class="flex min-w-0 flex-1 items-center"><span class="truncate text-base font-semibold text-font-level_1">Com ajuda</span></div><div class="flex shrink-0 items-center gap-[10px]"><button aria-label="Ajuda" class="flex size-[35px] max-md:min-h-[44px] max-md:min-w-[44px] shrink-0 cursor-pointer items-center justify-center rounded-[5px] border border-neutral-level_2 bg-background transition-colors hover:bg-neutral-level_1 active:bg-neutral-level_2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-confirmation focus-visible:ring-offset-1" type="button"><span aria-hidden="true" class="inline-flex shrink-0 items-center justify-center text-font-level_2"><svg aria-hidden="true" class="lucide lucide-circle-question-mark" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="15" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><path d="M12 17h.01"></path></svg></span></button><button aria-label="Fechar" class="flex size-[35px] max-md:min-h-[44px] max-md:min-w-[44px] shrink-0 cursor-pointer items-center justify-center rounded-[5px] border border-neutral-level_2 bg-background transition-colors hover:bg-neutral-level_1 active:bg-neutral-level_2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-confirmation focus-visible:ring-offset-1" type="button"><span aria-hidden="true" class="inline-flex shrink-0 items-center justify-center text-font"><svg aria-hidden="true" class="lucide lucide-x" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="15" xmlns="http://www.w3.org/2000/svg"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg></span></button></div></div></div></div></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const AllVariants: Story = {
+  render: () =&gt; (
+    &lt;div style={{ display: &#x27;flex&#x27;, flexDirection: &#x27;column&#x27;, gap: 2 }}&gt;
+      {[
+        { label: &#x27;null (no left)&#x27;, props: {} },
+        {
+          label: &#x27;text&#x27;,
+          props: { left: &#x27;text&#x27; as const, title: &#x27;Título do modal&#x27; },
+        },
+        {
+          label: &#x27;button_soft&#x27;,
+          props: {
+            left: &#x27;button_soft&#x27; as const,
+            leftButtons: [{ label: &#x27;Lorem Ipsum&#x27; }],
+          },
+        },
+        {
+          label: &#x27;2_button_soft&#x27;,
+          props: {
+            left: &#x27;2_button_soft&#x27; as const,
+            leftButtons: [{ label: &#x27;Lorem Ipsum&#x27; }, { label: &#x27;Lorem Ipsum&#x27; }],
+          },
+        },
+        {
+          label: &#x27;breadcrumbs&#x27;,
+          props: {
+            left: &#x27;breadcrumbs&#x27; as const,
+            breadcrumbItems: [
+              { label: &#x27;Home&#x27;, href: &#x27;#&#x27; },
+              { label: &#x27;Seção&#x27;, href: &#x27;#&#x27; },
+              { label: &#x27;Página&#x27; },
+            ],
+            breadcrumbSize: &#x27;sm&#x27; as const,
+          },
+        },
+        {
+          label: &#x27;text + intercomButton&#x27;,
+          props: {
+            left: &#x27;text&#x27; as const,
+            title: &#x27;Com ajuda&#x27;,
+            intercomButton: true,
+          },
+        },
+      ].map(({ label, props }) =&gt; (
+        &lt;div key={label}&gt;
+          &lt;p
+            style={{
+              fontSize: 11,
+              color: &#x27;#8b8595&#x27;,
+              padding: &#x27;4px 8px&#x27;,
+              background: &#x27;#f5f3f8&#x27;,
+            }}
+          &gt;
+            {label}
+          &lt;/p&gt;
+          &lt;HeaderModal {...props} onClose={() =&gt; {}} /&gt;
+        &lt;/div&gt;
+      ))}
+    &lt;/div&gt;
+  ),
+}</code></pre></details>
+  </section>
+</body>
+</html>

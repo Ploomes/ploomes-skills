@@ -1,0 +1,19 @@
+{
+  "name": "ploomes-skills",
+  "description": "Marketplace público da Ploomes: documentação técnica do Ploomes CRM e skills para configurar uma conta e construir telas próprias, para quem administra a própria conta ou implanta o Ploomes.",
+  "owner": {
+    "name": "Ploomes"
+  },
+  "plugins": [
+    {
+      "name": "ploomes-tech-docs",
+      "source": "./plugins/ploomes-tech-docs",
+      "description": "Documentação técnica do Ploomes CRM: regras de negócio e configuração, API, comportamento de tela e design system do CRM Web."
+    },
+    {
+      "name": "ploomes-configuracao",
+      "source": "./plugins/ploomes-configuracao",
+      "description": "Configuração da conta do Ploomes (funis, checklists, automações, fluxos de aprovação e modelos de proposta) e construção de telas próprias com onboarding, trabalhando numa pasta local."
+    }
+  ]
+}

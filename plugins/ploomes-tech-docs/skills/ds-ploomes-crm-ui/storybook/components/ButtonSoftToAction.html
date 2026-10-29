@@ -1,0 +1,239 @@
+<!doctype html>
+<!--
+  Ploomes Design System — snapshot estático das stories do Storybook.
+  Componente : Components/ButtonSoftToAction
+  Stories    : 8 (Default, Active, Ghost, Disabled, With Right Icon, Colors, Colors (Active), All Variants)
+  Story      : ButtonSoftToAction.stories.tsx
+  Tema       : light — use <html class="dark"> para o tema escuro.
+-->
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ButtonSoftToAction — Ploomes DS</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;600;700&display=swap">
+<link rel="stylesheet" href="../assets/design-system.css">
+<link rel="stylesheet" href="../assets/page.css">
+</head>
+<body class="ds-page">
+  <header class="ds-head">
+    <a class="ds-back" href="../index.html">← inventário</a>
+    <h1 class="ds-title">ButtonSoftToAction</h1>
+    <p class="ds-meta">components · 8 stories · <code>ButtonSoftToAction.stories.tsx</code></p>
+    <pre class="ds-code ds-import">import { ButtonSoftToAction } from &#x27;@ploomescrm/ui&#x27;;</pre>
+    <pre class="ds-code">// props padrão de todas as stories (meta.args)
+args: {
+  children: &#x27;Lorem Ipsum&#x27;,
+  color: &#x27;confirmation&#x27;,
+  variant: &#x27;outline&#x27;,
+  size: &#x27;sm&#x27;,
+  active: false,
+  disabled: false,
+}</pre>
+  </header>
+  <section class="ds-story">
+    <h2 class="ds-story-name">Default</h2>
+    <div class="ds-story-id">components-buttonsofttoaction--default · export <b>Default</b></div>
+    <div class="ds-canvas ds-canvas--padded">
+<button class="inline-flex shrink-0 cursor-pointer items-center gap-[5px] rounded-[5px] px-[5px] text-sm text-font transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-1 disabled:pointer-events-none disabled:opacity-40 focus-visible:ring-confirmation border border-neutral-level_2 bg-background h-[30px] hover:border-confirmation hover:bg-neutral-level_1 active:bg-neutral-level_2"><span class="flex shrink-0 items-center justify-center pl-[5px] text-confirmation"><svg fill="none" height="14" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="14"><circle cx="12" cy="8" r="4"></circle><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"></path></svg></span><span class="overflow-hidden text-ellipsis whitespace-nowrap px-[5px] text-font">Lorem Ipsum</span></button>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const Default: Story = {
+  args: { leftIcon: &lt;Icon /&gt; },
+}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">Active</h2>
+    <div class="ds-story-id">components-buttonsofttoaction--active · export <b>Active</b></div>
+    <div class="ds-canvas ds-canvas--padded">
+<button class="inline-flex shrink-0 cursor-pointer items-center gap-[5px] rounded-[5px] px-[5px] text-sm text-font transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-1 disabled:pointer-events-none disabled:opacity-40 focus-visible:ring-confirmation border bg-background h-[30px] hover:border-confirmation hover:bg-neutral-level_1 active:bg-neutral-level_2 border-confirmation"><span class="flex shrink-0 items-center justify-center pl-[5px] text-confirmation"><svg fill="none" height="14" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="14"><circle cx="12" cy="8" r="4"></circle><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"></path></svg></span><span class="overflow-hidden text-ellipsis whitespace-nowrap px-[5px] text-font">Lorem Ipsum</span></button>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const Active: Story = {
+  args: { leftIcon: &lt;Icon /&gt;, active: true },
+}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">Ghost</h2>
+    <div class="ds-story-id">components-buttonsofttoaction--ghost · export <b>Ghost</b></div>
+    <div class="ds-canvas ds-canvas--padded">
+<button class="inline-flex shrink-0 cursor-pointer items-center gap-[5px] rounded-[5px] px-[5px] text-sm text-font transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-1 disabled:pointer-events-none disabled:opacity-40 focus-visible:ring-confirmation border border-transparent bg-transparent h-[30px] hover:bg-neutral-level_1 active:bg-neutral-level_2"><span class="flex shrink-0 items-center justify-center pl-[5px] text-confirmation"><svg fill="none" height="14" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="14"><circle cx="12" cy="8" r="4"></circle><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"></path></svg></span><span class="overflow-hidden text-ellipsis whitespace-nowrap px-[5px] text-font">Lorem Ipsum</span></button>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const Ghost: Story = {
+  args: { variant: &#x27;ghost&#x27;, leftIcon: &lt;Icon /&gt; },
+}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">Disabled</h2>
+    <div class="ds-story-id">components-buttonsofttoaction--disabled · export <b>Disabled</b></div>
+    <div class="ds-canvas ds-canvas--padded">
+<button class="inline-flex shrink-0 cursor-pointer items-center gap-[5px] rounded-[5px] px-[5px] text-sm text-font transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-1 disabled:pointer-events-none disabled:opacity-40 focus-visible:ring-confirmation border border-neutral-level_2 bg-background h-[30px] hover:border-confirmation hover:bg-neutral-level_1 active:bg-neutral-level_2" disabled=""><span class="flex shrink-0 items-center justify-center pl-[5px] text-confirmation"><svg fill="none" height="14" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="14"><circle cx="12" cy="8" r="4"></circle><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"></path></svg></span><span class="overflow-hidden text-ellipsis whitespace-nowrap px-[5px] text-font">Lorem Ipsum</span></button>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const Disabled: Story = {
+  args: { leftIcon: &lt;Icon /&gt;, disabled: true },
+}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">With Right Icon</h2>
+    <div class="ds-story-id">components-buttonsofttoaction--with-right-icon · export <b>WithRightIcon</b></div>
+    <div class="ds-canvas ds-canvas--padded">
+<button class="inline-flex shrink-0 cursor-pointer items-center gap-[5px] rounded-[5px] px-[5px] text-sm text-font transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-1 disabled:pointer-events-none disabled:opacity-40 focus-visible:ring-confirmation border border-neutral-level_2 bg-background h-[30px] hover:border-confirmation hover:bg-neutral-level_1 active:bg-neutral-level_2"><span class="flex shrink-0 items-center justify-center pl-[5px] text-confirmation"><svg fill="none" height="14" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="14"><circle cx="12" cy="8" r="4"></circle><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"></path></svg></span><span class="overflow-hidden text-ellipsis whitespace-nowrap px-[5px] text-font">Lorem Ipsum</span><span class="flex shrink-0 items-center justify-center pr-[5px] text-font"><svg fill="none" height="10" stroke="currentColor" stroke-width="2.5" viewbox="0 0 24 24" width="10"><path d="M6 9l6 6 6-6"></path></svg></span></button>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const WithRightIcon: Story = {
+  args: { leftIcon: &lt;Icon /&gt;, rightIcon: &lt;Chevron /&gt; },
+}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">Colors</h2>
+    <div class="ds-story-id">components-buttonsofttoaction--colors · export <b>Colors</b></div>
+    <div class="ds-canvas ds-canvas--padded">
+<div style="display: flex; gap: 12px; align-items: center; flex-wrap: wrap;"><button class="inline-flex shrink-0 cursor-pointer items-center gap-[5px] rounded-[5px] px-[5px] text-sm text-font transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-1 disabled:pointer-events-none disabled:opacity-40 focus-visible:ring-confirmation border border-neutral-level_2 bg-background h-[30px] hover:border-confirmation hover:bg-neutral-level_1 active:bg-neutral-level_2"><span class="flex shrink-0 items-center justify-center pl-[5px] text-confirmation"><svg fill="none" height="14" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="14"><circle cx="12" cy="8" r="4"></circle><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"></path></svg></span><span class="overflow-hidden text-ellipsis whitespace-nowrap px-[5px] text-font">Info</span></button><button class="inline-flex shrink-0 cursor-pointer items-center gap-[5px] rounded-[5px] px-[5px] text-sm text-font transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-1 disabled:pointer-events-none disabled:opacity-40 focus-visible:ring-danger border border-neutral-level_2 bg-background h-[30px] hover:border-danger hover:bg-neutral-level_1 active:bg-neutral-level_2"><span class="flex shrink-0 items-center justify-center pl-[5px] text-danger"><svg fill="none" height="14" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="14"><circle cx="12" cy="8" r="4"></circle><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"></path></svg></span><span class="overflow-hidden text-ellipsis whitespace-nowrap px-[5px] text-font">Danger</span></button><button class="inline-flex shrink-0 cursor-pointer items-center gap-[5px] rounded-[5px] px-[5px] text-sm text-font transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-1 disabled:pointer-events-none disabled:opacity-40 focus-visible:ring-alert border border-neutral-level_2 bg-background h-[30px] hover:border-alert hover:bg-neutral-level_1 active:bg-neutral-level_2"><span class="flex shrink-0 items-center justify-center pl-[5px] text-alert"><svg fill="none" height="14" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="14"><circle cx="12" cy="8" r="4"></circle><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"></path></svg></span><span class="overflow-hidden text-ellipsis whitespace-nowrap px-[5px] text-font">Warning</span></button><button class="inline-flex shrink-0 cursor-pointer items-center gap-[5px] rounded-[5px] px-[5px] text-sm text-font transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-1 disabled:pointer-events-none disabled:opacity-40 focus-visible:ring-success border border-neutral-level_2 bg-background h-[30px] hover:border-success hover:bg-neutral-level_1 active:bg-neutral-level_2"><span class="flex shrink-0 items-center justify-center pl-[5px] text-success"><svg fill="none" height="14" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="14"><circle cx="12" cy="8" r="4"></circle><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"></path></svg></span><span class="overflow-hidden text-ellipsis whitespace-nowrap px-[5px] text-font">Success</span></button><button class="inline-flex shrink-0 cursor-pointer items-center gap-[5px] rounded-[5px] px-[5px] text-sm text-font transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-1 disabled:pointer-events-none disabled:opacity-40 focus-visible:ring-ia border border-neutral-level_2 bg-background h-[30px] hover:border-ia hover:bg-[image:var(--color-ia-neutral-level_1)] active:bg-[image:var(--color-ia-neutral-level_2)]"><span class="flex shrink-0 items-center justify-center pl-[5px] text-ia"><svg fill="none" height="14" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="14"><circle cx="12" cy="8" r="4"></circle><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"></path></svg></span><span class="overflow-hidden text-ellipsis whitespace-nowrap px-[5px] text-font">AI</span></button></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const Colors: Story = {
+  render: (args) =&gt; (
+    &lt;div
+      style={{
+        display: &#x27;flex&#x27;,
+        gap: 12,
+        alignItems: &#x27;center&#x27;,
+        flexWrap: &#x27;wrap&#x27;,
+      }}
+    &gt;
+      &lt;ButtonSoftToAction {...args} color=&quot;confirmation&quot; leftIcon={&lt;Icon /&gt;}&gt;
+        Info
+      &lt;/ButtonSoftToAction&gt;
+      &lt;ButtonSoftToAction {...args} color=&quot;danger&quot; leftIcon={&lt;Icon /&gt;}&gt;
+        Danger
+      &lt;/ButtonSoftToAction&gt;
+      &lt;ButtonSoftToAction {...args} color=&quot;alert&quot; leftIcon={&lt;Icon /&gt;}&gt;
+        Warning
+      &lt;/ButtonSoftToAction&gt;
+      &lt;ButtonSoftToAction {...args} color=&quot;success&quot; leftIcon={&lt;Icon /&gt;}&gt;
+        Success
+      &lt;/ButtonSoftToAction&gt;
+      &lt;ButtonSoftToAction {...args} color=&quot;ai&quot; leftIcon={&lt;Icon /&gt;}&gt;
+        AI
+      &lt;/ButtonSoftToAction&gt;
+    &lt;/div&gt;
+  ),
+}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">Colors (Active)</h2>
+    <div class="ds-story-id">components-buttonsofttoaction--colors-active · export <b>ColorsActive</b></div>
+    <div class="ds-canvas ds-canvas--padded">
+<div style="display: flex; gap: 12px; align-items: center; flex-wrap: wrap;"><button class="inline-flex shrink-0 cursor-pointer items-center gap-[5px] rounded-[5px] px-[5px] text-sm text-font transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-1 disabled:pointer-events-none disabled:opacity-40 focus-visible:ring-confirmation border bg-background h-[30px] hover:border-confirmation hover:bg-neutral-level_1 active:bg-neutral-level_2 border-confirmation"><span class="flex shrink-0 items-center justify-center pl-[5px] text-confirmation"><svg fill="none" height="14" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="14"><circle cx="12" cy="8" r="4"></circle><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"></path></svg></span><span class="overflow-hidden text-ellipsis whitespace-nowrap px-[5px] text-font">Info</span></button><button class="inline-flex shrink-0 cursor-pointer items-center gap-[5px] rounded-[5px] px-[5px] text-sm text-font transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-1 disabled:pointer-events-none disabled:opacity-40 focus-visible:ring-danger border bg-background h-[30px] hover:border-danger hover:bg-neutral-level_1 active:bg-neutral-level_2 border-danger"><span class="flex shrink-0 items-center justify-center pl-[5px] text-danger"><svg fill="none" height="14" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="14"><circle cx="12" cy="8" r="4"></circle><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"></path></svg></span><span class="overflow-hidden text-ellipsis whitespace-nowrap px-[5px] text-font">Danger</span></button><button class="inline-flex shrink-0 cursor-pointer items-center gap-[5px] rounded-[5px] px-[5px] text-sm text-font transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-1 disabled:pointer-events-none disabled:opacity-40 focus-visible:ring-alert border bg-background h-[30px] hover:border-alert hover:bg-neutral-level_1 active:bg-neutral-level_2 border-alert"><span class="flex shrink-0 items-center justify-center pl-[5px] text-alert"><svg fill="none" height="14" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="14"><circle cx="12" cy="8" r="4"></circle><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"></path></svg></span><span class="overflow-hidden text-ellipsis whitespace-nowrap px-[5px] text-font">Warning</span></button><button class="inline-flex shrink-0 cursor-pointer items-center gap-[5px] rounded-[5px] px-[5px] text-sm text-font transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-1 disabled:pointer-events-none disabled:opacity-40 focus-visible:ring-success border bg-background h-[30px] hover:border-success hover:bg-neutral-level_1 active:bg-neutral-level_2 border-success"><span class="flex shrink-0 items-center justify-center pl-[5px] text-success"><svg fill="none" height="14" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="14"><circle cx="12" cy="8" r="4"></circle><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"></path></svg></span><span class="overflow-hidden text-ellipsis whitespace-nowrap px-[5px] text-font">Success</span></button><button class="inline-flex shrink-0 cursor-pointer items-center gap-[5px] rounded-[5px] px-[5px] text-sm text-font transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-1 disabled:pointer-events-none disabled:opacity-40 focus-visible:ring-ia border bg-background h-[30px] hover:border-ia hover:bg-[image:var(--color-ia-neutral-level_1)] active:bg-[image:var(--color-ia-neutral-level_2)] border-ia"><span class="flex shrink-0 items-center justify-center pl-[5px] text-ia"><svg fill="none" height="14" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="14"><circle cx="12" cy="8" r="4"></circle><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"></path></svg></span><span class="overflow-hidden text-ellipsis whitespace-nowrap px-[5px] text-font">AI</span></button></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const ColorsActive: Story = {
+  name: &#x27;Colors (Active)&#x27;,
+  render: (args) =&gt; (
+    &lt;div
+      style={{
+        display: &#x27;flex&#x27;,
+        gap: 12,
+        alignItems: &#x27;center&#x27;,
+        flexWrap: &#x27;wrap&#x27;,
+      }}
+    &gt;
+      &lt;ButtonSoftToAction
+        {...args}
+        color=&quot;confirmation&quot;
+        active
+        leftIcon={&lt;Icon /&gt;}
+      &gt;
+        Info
+      &lt;/ButtonSoftToAction&gt;
+      &lt;ButtonSoftToAction {...args} color=&quot;danger&quot; active leftIcon={&lt;Icon /&gt;}&gt;
+        Danger
+      &lt;/ButtonSoftToAction&gt;
+      &lt;ButtonSoftToAction {...args} color=&quot;alert&quot; active leftIcon={&lt;Icon /&gt;}&gt;
+        Warning
+      &lt;/ButtonSoftToAction&gt;
+      &lt;ButtonSoftToAction {...args} color=&quot;success&quot; active leftIcon={&lt;Icon /&gt;}&gt;
+        Success
+      &lt;/ButtonSoftToAction&gt;
+      &lt;ButtonSoftToAction {...args} color=&quot;ai&quot; active leftIcon={&lt;Icon /&gt;}&gt;
+        AI
+      &lt;/ButtonSoftToAction&gt;
+    &lt;/div&gt;
+  ),
+}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">All Variants</h2>
+    <div class="ds-story-id">components-buttonsofttoaction--all-variants · export <b>AllVariants</b></div>
+    <div class="ds-canvas ds-canvas--padded">
+<div style="display: flex; flex-direction: column; gap: 20px;"><div style="display: flex; gap: 12px; align-items: center; flex-wrap: wrap;"><button class="inline-flex shrink-0 cursor-pointer items-center gap-[5px] rounded-[5px] px-[5px] text-sm text-font transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-1 disabled:pointer-events-none disabled:opacity-40 focus-visible:ring-confirmation border border-neutral-level_2 bg-background h-[30px] hover:border-confirmation hover:bg-neutral-level_1 active:bg-neutral-level_2"><span class="flex shrink-0 items-center justify-center pl-[5px] text-confirmation"><svg fill="none" height="14" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="14"><circle cx="12" cy="8" r="4"></circle><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"></path></svg></span><span class="overflow-hidden text-ellipsis whitespace-nowrap px-[5px] text-font">Outline confirmation</span></button><button class="inline-flex shrink-0 cursor-pointer items-center gap-[5px] rounded-[5px] px-[5px] text-sm text-font transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-1 disabled:pointer-events-none disabled:opacity-40 focus-visible:ring-confirmation border bg-background h-[30px] hover:border-confirmation hover:bg-neutral-level_1 active:bg-neutral-level_2 border-confirmation"><span class="flex shrink-0 items-center justify-center pl-[5px] text-confirmation"><svg fill="none" height="14" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="14"><circle cx="12" cy="8" r="4"></circle><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"></path></svg></span><span class="overflow-hidden text-ellipsis whitespace-nowrap px-[5px] text-font">Active</span></button><button class="inline-flex shrink-0 cursor-pointer items-center gap-[5px] rounded-[5px] px-[5px] text-sm text-font transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-1 disabled:pointer-events-none disabled:opacity-40 focus-visible:ring-confirmation border border-transparent bg-transparent h-[30px] hover:bg-neutral-level_1 active:bg-neutral-level_2"><span class="flex shrink-0 items-center justify-center pl-[5px] text-confirmation"><svg fill="none" height="14" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="14"><circle cx="12" cy="8" r="4"></circle><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"></path></svg></span><span class="overflow-hidden text-ellipsis whitespace-nowrap px-[5px] text-font">Ghost</span></button><button class="inline-flex shrink-0 cursor-pointer items-center gap-[5px] rounded-[5px] px-[5px] text-sm text-font transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-1 disabled:pointer-events-none disabled:opacity-40 focus-visible:ring-confirmation border border-neutral-level_2 bg-background h-[35px] hover:border-confirmation hover:bg-neutral-level_1 active:bg-neutral-level_2"><span class="flex shrink-0 items-center justify-center pl-[5px] text-confirmation"><svg fill="none" height="14" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="14"><circle cx="12" cy="8" r="4"></circle><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"></path></svg></span><span class="overflow-hidden text-ellipsis whitespace-nowrap px-[5px] text-font">Medium</span><span class="flex shrink-0 items-center justify-center pr-[5px] text-font"><svg fill="none" height="10" stroke="currentColor" stroke-width="2.5" viewbox="0 0 24 24" width="10"><path d="M6 9l6 6 6-6"></path></svg></span></button><button class="inline-flex shrink-0 cursor-pointer items-center gap-[5px] rounded-[5px] px-[5px] text-sm text-font transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-1 disabled:pointer-events-none disabled:opacity-40 focus-visible:ring-confirmation border border-neutral-level_2 bg-background h-[40px] hover:border-confirmation hover:bg-neutral-level_1 active:bg-neutral-level_2"><span class="flex shrink-0 items-center justify-center pl-[5px] text-confirmation"><svg fill="none" height="14" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="14"><circle cx="12" cy="8" r="4"></circle><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"></path></svg></span><span class="overflow-hidden text-ellipsis whitespace-nowrap px-[5px] text-font">Large</span></button><button class="inline-flex shrink-0 cursor-pointer items-center gap-[5px] rounded-[5px] px-[5px] text-sm text-font transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-1 disabled:pointer-events-none disabled:opacity-40 focus-visible:ring-confirmation border border-neutral-level_2 bg-background h-[30px] hover:border-confirmation hover:bg-neutral-level_1 active:bg-neutral-level_2" disabled=""><span class="flex shrink-0 items-center justify-center pl-[5px] text-confirmation"><svg fill="none" height="14" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="14"><circle cx="12" cy="8" r="4"></circle><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"></path></svg></span><span class="overflow-hidden text-ellipsis whitespace-nowrap px-[5px] text-font">Disabled</span></button></div><div style="display: flex; gap: 12px; align-items: center; flex-wrap: wrap;"><button class="inline-flex shrink-0 cursor-pointer items-center gap-[5px] rounded-[5px] px-[5px] text-sm text-font transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-1 disabled:pointer-events-none disabled:opacity-40 focus-visible:ring-danger border border-neutral-level_2 bg-background h-[30px] hover:border-danger hover:bg-neutral-level_1 active:bg-neutral-level_2"><span class="flex shrink-0 items-center justify-center pl-[5px] text-danger"><svg fill="none" height="14" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="14"><circle cx="12" cy="8" r="4"></circle><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"></path></svg></span><span class="overflow-hidden text-ellipsis whitespace-nowrap px-[5px] text-font">Outline danger</span></button><button class="inline-flex shrink-0 cursor-pointer items-center gap-[5px] rounded-[5px] px-[5px] text-sm text-font transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-1 disabled:pointer-events-none disabled:opacity-40 focus-visible:ring-danger border bg-background h-[30px] hover:border-danger hover:bg-neutral-level_1 active:bg-neutral-level_2 border-danger"><span class="flex shrink-0 items-center justify-center pl-[5px] text-danger"><svg fill="none" height="14" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="14"><circle cx="12" cy="8" r="4"></circle><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"></path></svg></span><span class="overflow-hidden text-ellipsis whitespace-nowrap px-[5px] text-font">Active</span></button><button class="inline-flex shrink-0 cursor-pointer items-center gap-[5px] rounded-[5px] px-[5px] text-sm text-font transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-1 disabled:pointer-events-none disabled:opacity-40 focus-visible:ring-danger border border-transparent bg-transparent h-[30px] hover:bg-neutral-level_1 active:bg-neutral-level_2"><span class="flex shrink-0 items-center justify-center pl-[5px] text-danger"><svg fill="none" height="14" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="14"><circle cx="12" cy="8" r="4"></circle><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"></path></svg></span><span class="overflow-hidden text-ellipsis whitespace-nowrap px-[5px] text-font">Ghost</span></button><button class="inline-flex shrink-0 cursor-pointer items-center gap-[5px] rounded-[5px] px-[5px] text-sm text-font transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-1 disabled:pointer-events-none disabled:opacity-40 focus-visible:ring-danger border border-neutral-level_2 bg-background h-[35px] hover:border-danger hover:bg-neutral-level_1 active:bg-neutral-level_2"><span class="flex shrink-0 items-center justify-center pl-[5px] text-danger"><svg fill="none" height="14" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="14"><circle cx="12" cy="8" r="4"></circle><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"></path></svg></span><span class="overflow-hidden text-ellipsis whitespace-nowrap px-[5px] text-font">Medium</span><span class="flex shrink-0 items-center justify-center pr-[5px] text-font"><svg fill="none" height="10" stroke="currentColor" stroke-width="2.5" viewbox="0 0 24 24" width="10"><path d="M6 9l6 6 6-6"></path></svg></span></button><button class="inline-flex shrink-0 cursor-pointer items-center gap-[5px] rounded-[5px] px-[5px] text-sm text-font transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-1 disabled:pointer-events-none disabled:opacity-40 focus-visible:ring-danger border border-neutral-level_2 bg-background h-[40px] hover:border-danger hover:bg-neutral-level_1 active:bg-neutral-level_2"><span class="flex shrink-0 items-center justify-center pl-[5px] text-danger"><svg fill="none" height="14" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="14"><circle cx="12" cy="8" r="4"></circle><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"></path></svg></span><span class="overflow-hidden text-ellipsis whitespace-nowrap px-[5px] text-font">Large</span></button><button class="inline-flex shrink-0 cursor-pointer items-center gap-[5px] rounded-[5px] px-[5px] text-sm text-font transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-1 disabled:pointer-events-none disabled:opacity-40 focus-visible:ring-danger border border-neutral-level_2 bg-background h-[30px] hover:border-danger hover:bg-neutral-level_1 active:bg-neutral-level_2" disabled=""><span class="flex shrink-0 items-center justify-center pl-[5px] text-danger"><svg fill="none" height="14" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="14"><circle cx="12" cy="8" r="4"></circle><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"></path></svg></span><span class="overflow-hidden text-ellipsis whitespace-nowrap px-[5px] text-font">Disabled</span></button></div><div style="display: flex; gap: 12px; align-items: center; flex-wrap: wrap;"><button class="inline-flex shrink-0 cursor-pointer items-center gap-[5px] rounded-[5px] px-[5px] text-sm text-font transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-1 disabled:pointer-events-none disabled:opacity-40 focus-visible:ring-alert border border-neutral-level_2 bg-background h-[30px] hover:border-alert hover:bg-neutral-level_1 active:bg-neutral-level_2"><span class="flex shrink-0 items-center justify-center pl-[5px] text-alert"><svg fill="none" height="14" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="14"><circle cx="12" cy="8" r="4"></circle><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"></path></svg></span><span class="overflow-hidden text-ellipsis whitespace-nowrap px-[5px] text-font">Outline alert</span></button><button class="inline-flex shrink-0 cursor-pointer items-center gap-[5px] rounded-[5px] px-[5px] text-sm text-font transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-1 disabled:pointer-events-none disabled:opacity-40 focus-visible:ring-alert border bg-background h-[30px] hover:border-alert hover:bg-neutral-level_1 active:bg-neutral-level_2 border-alert"><span class="flex shrink-0 items-center justify-center pl-[5px] text-alert"><svg fill="none" height="14" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="14"><circle cx="12" cy="8" r="4"></circle><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"></path></svg></span><span class="overflow-hidden text-ellipsis whitespace-nowrap px-[5px] text-font">Active</span></button><button class="inline-flex shrink-0 cursor-pointer items-center gap-[5px] rounded-[5px] px-[5px] text-sm text-font transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-1 disabled:pointer-events-none disabled:opacity-40 focus-visible:ring-alert border border-transparent bg-transparent h-[30px] hover:bg-neutral-level_1 active:bg-neutral-level_2"><span class="flex shrink-0 items-center justify-center pl-[5px] text-alert"><svg fill="none" height="14" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="14"><circle cx="12" cy="8" r="4"></circle><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"></path></svg></span><span class="overflow-hidden text-ellipsis whitespace-nowrap px-[5px] text-font">Ghost</span></button><button class="inline-flex shrink-0 cursor-pointer items-center gap-[5px] rounded-[5px] px-[5px] text-sm text-font transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-1 disabled:pointer-events-none disabled:opacity-40 focus-visible:ring-alert border border-neutral-level_2 bg-background h-[35px] hover:border-alert hover:bg-neutral-level_1 active:bg-neutral-level_2"><span class="flex shrink-0 items-center justify-center pl-[5px] text-alert"><svg fill="none" height="14" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="14"><circle cx="12" cy="8" r="4"></circle><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"></path></svg></span><span class="overflow-hidden text-ellipsis whitespace-nowrap px-[5px] text-font">Medium</span><span class="flex shrink-0 items-center justify-center pr-[5px] text-font"><svg fill="none" height="10" stroke="currentColor" stroke-width="2.5" viewbox="0 0 24 24" width="10"><path d="M6 9l6 6 6-6"></path></svg></span></button><button class="inline-flex shrink-0 cursor-pointer items-center gap-[5px] rounded-[5px] px-[5px] text-sm text-font transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-1 disabled:pointer-events-none disabled:opacity-40 focus-visible:ring-alert border border-neutral-level_2 bg-background h-[40px] hover:border-alert hover:bg-neutral-level_1 active:bg-neutral-level_2"><span class="flex shrink-0 items-center justify-center pl-[5px] text-alert"><svg fill="none" height="14" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="14"><circle cx="12" cy="8" r="4"></circle><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"></path></svg></span><span class="overflow-hidden text-ellipsis whitespace-nowrap px-[5px] text-font">Large</span></button><button class="inline-flex shrink-0 cursor-pointer items-center gap-[5px] rounded-[5px] px-[5px] text-sm text-font transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-1 disabled:pointer-events-none disabled:opacity-40 focus-visible:ring-alert border border-neutral-level_2 bg-background h-[30px] hover:border-alert hover:bg-neutral-level_1 active:bg-neutral-level_2" disabled=""><span class="flex shrink-0 items-center justify-center pl-[5px] text-alert"><svg fill="none" height="14" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="14"><circle cx="12" cy="8" r="4"></circle><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"></path></svg></span><span class="overflow-hidden text-ellipsis whitespace-nowrap px-[5px] text-font">Disabled</span></button></div><div style="display: flex; gap: 12px; align-items: center; flex-wrap: wrap;"><button class="inline-flex shrink-0 cursor-pointer items-center gap-[5px] rounded-[5px] px-[5px] text-sm text-font transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-1 disabled:pointer-events-none disabled:opacity-40 focus-visible:ring-success border border-neutral-level_2 bg-background h-[30px] hover:border-success hover:bg-neutral-level_1 active:bg-neutral-level_2"><span class="flex shrink-0 items-center justify-center pl-[5px] text-success"><svg fill="none" height="14" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="14"><circle cx="12" cy="8" r="4"></circle><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"></path></svg></span><span class="overflow-hidden text-ellipsis whitespace-nowrap px-[5px] text-font">Outline success</span></button><button class="inline-flex shrink-0 cursor-pointer items-center gap-[5px] rounded-[5px] px-[5px] text-sm text-font transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-1 disabled:pointer-events-none disabled:opacity-40 focus-visible:ring-success border bg-background h-[30px] hover:border-success hover:bg-neutral-level_1 active:bg-neutral-level_2 border-success"><span class="flex shrink-0 items-center justify-center pl-[5px] text-success"><svg fill="none" height="14" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="14"><circle cx="12" cy="8" r="4"></circle><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"></path></svg></span><span class="overflow-hidden text-ellipsis whitespace-nowrap px-[5px] text-font">Active</span></button><button class="inline-flex shrink-0 cursor-pointer items-center gap-[5px] rounded-[5px] px-[5px] text-sm text-font transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-1 disabled:pointer-events-none disabled:opacity-40 focus-visible:ring-success border border-transparent bg-transparent h-[30px] hover:bg-neutral-level_1 active:bg-neutral-level_2"><span class="flex shrink-0 items-center justify-center pl-[5px] text-success"><svg fill="none" height="14" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="14"><circle cx="12" cy="8" r="4"></circle><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"></path></svg></span><span class="overflow-hidden text-ellipsis whitespace-nowrap px-[5px] text-font">Ghost</span></button><button class="inline-flex shrink-0 cursor-pointer items-center gap-[5px] rounded-[5px] px-[5px] text-sm text-font transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-1 disabled:pointer-events-none disabled:opacity-40 focus-visible:ring-success border border-neutral-level_2 bg-background h-[35px] hover:border-success hover:bg-neutral-level_1 active:bg-neutral-level_2"><span class="flex shrink-0 items-center justify-center pl-[5px] text-success"><svg fill="none" height="14" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="14"><circle cx="12" cy="8" r="4"></circle><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"></path></svg></span><span class="overflow-hidden text-ellipsis whitespace-nowrap px-[5px] text-font">Medium</span><span class="flex shrink-0 items-center justify-center pr-[5px] text-font"><svg fill="none" height="10" stroke="currentColor" stroke-width="2.5" viewbox="0 0 24 24" width="10"><path d="M6 9l6 6 6-6"></path></svg></span></button><button class="inline-flex shrink-0 cursor-pointer items-center gap-[5px] rounded-[5px] px-[5px] text-sm text-font transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-1 disabled:pointer-events-none disabled:opacity-40 focus-visible:ring-success border border-neutral-level_2 bg-background h-[40px] hover:border-success hover:bg-neutral-level_1 active:bg-neutral-level_2"><span class="flex shrink-0 items-center justify-center pl-[5px] text-success"><svg fill="none" height="14" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="14"><circle cx="12" cy="8" r="4"></circle><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"></path></svg></span><span class="overflow-hidden text-ellipsis whitespace-nowrap px-[5px] text-font">Large</span></button><button class="inline-flex shrink-0 cursor-pointer items-center gap-[5px] rounded-[5px] px-[5px] text-sm text-font transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-1 disabled:pointer-events-none disabled:opacity-40 focus-visible:ring-success border border-neutral-level_2 bg-background h-[30px] hover:border-success hover:bg-neutral-level_1 active:bg-neutral-level_2" disabled=""><span class="flex shrink-0 items-center justify-center pl-[5px] text-success"><svg fill="none" height="14" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="14"><circle cx="12" cy="8" r="4"></circle><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"></path></svg></span><span class="overflow-hidden text-ellipsis whitespace-nowrap px-[5px] text-font">Disabled</span></button></div><div style="display: flex; gap: 12px; align-items: center; flex-wrap: wrap;"><button class="inline-flex shrink-0 cursor-pointer items-center gap-[5px] rounded-[5px] px-[5px] text-sm text-font transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-1 disabled:pointer-events-none disabled:opacity-40 focus-visible:ring-ia border border-neutral-level_2 bg-background h-[30px] hover:border-ia hover:bg-[image:var(--color-ia-neutral-level_1)] active:bg-[image:var(--color-ia-neutral-level_2)]"><span class="flex shrink-0 items-center justify-center pl-[5px] text-ia"><svg fill="none" height="14" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="14"><circle cx="12" cy="8" r="4"></circle><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"></path></svg></span><span class="overflow-hidden text-ellipsis whitespace-nowrap px-[5px] text-font">Outline ai</span></button><button class="inline-flex shrink-0 cursor-pointer items-center gap-[5px] rounded-[5px] px-[5px] text-sm text-font transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-1 disabled:pointer-events-none disabled:opacity-40 focus-visible:ring-ia border bg-background h-[30px] hover:border-ia hover:bg-[image:var(--color-ia-neutral-level_1)] active:bg-[image:var(--color-ia-neutral-level_2)] border-ia"><span class="flex shrink-0 items-center justify-center pl-[5px] text-ia"><svg fill="none" height="14" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="14"><circle cx="12" cy="8" r="4"></circle><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"></path></svg></span><span class="overflow-hidden text-ellipsis whitespace-nowrap px-[5px] text-font">Active</span></button><button class="inline-flex shrink-0 cursor-pointer items-center gap-[5px] rounded-[5px] px-[5px] text-sm text-font transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-1 disabled:pointer-events-none disabled:opacity-40 focus-visible:ring-ia border border-transparent bg-transparent h-[30px] hover:bg-transparent hover:bg-[image:var(--color-ia-neutral-level_1)] active:bg-transparent active:bg-[image:var(--color-ia-neutral-level_2)]"><span class="flex shrink-0 items-center justify-center pl-[5px] text-ia"><svg fill="none" height="14" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="14"><circle cx="12" cy="8" r="4"></circle><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"></path></svg></span><span class="overflow-hidden text-ellipsis whitespace-nowrap px-[5px] text-font">Ghost</span></button><button class="inline-flex shrink-0 cursor-pointer items-center gap-[5px] rounded-[5px] px-[5px] text-sm text-font transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-1 disabled:pointer-events-none disabled:opacity-40 focus-visible:ring-ia border border-neutral-level_2 bg-background h-[35px] hover:border-ia hover:bg-[image:var(--color-ia-neutral-level_1)] active:bg-[image:var(--color-ia-neutral-level_2)]"><span class="flex shrink-0 items-center justify-center pl-[5px] text-ia"><svg fill="none" height="14" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="14"><circle cx="12" cy="8" r="4"></circle><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"></path></svg></span><span class="overflow-hidden text-ellipsis whitespace-nowrap px-[5px] text-font">Medium</span><span class="flex shrink-0 items-center justify-center pr-[5px] text-font"><svg fill="none" height="10" stroke="currentColor" stroke-width="2.5" viewbox="0 0 24 24" width="10"><path d="M6 9l6 6 6-6"></path></svg></span></button><button class="inline-flex shrink-0 cursor-pointer items-center gap-[5px] rounded-[5px] px-[5px] text-sm text-font transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-1 disabled:pointer-events-none disabled:opacity-40 focus-visible:ring-ia border border-neutral-level_2 bg-background h-[40px] hover:border-ia hover:bg-[image:var(--color-ia-neutral-level_1)] active:bg-[image:var(--color-ia-neutral-level_2)]"><span class="flex shrink-0 items-center justify-center pl-[5px] text-ia"><svg fill="none" height="14" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="14"><circle cx="12" cy="8" r="4"></circle><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"></path></svg></span><span class="overflow-hidden text-ellipsis whitespace-nowrap px-[5px] text-font">Large</span></button><button class="inline-flex shrink-0 cursor-pointer items-center gap-[5px] rounded-[5px] px-[5px] text-sm text-font transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-1 disabled:pointer-events-none disabled:opacity-40 focus-visible:ring-ia border border-neutral-level_2 bg-background h-[30px] hover:border-ia hover:bg-[image:var(--color-ia-neutral-level_1)] active:bg-[image:var(--color-ia-neutral-level_2)]" disabled=""><span class="flex shrink-0 items-center justify-center pl-[5px] text-ia"><svg fill="none" height="14" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="14"><circle cx="12" cy="8" r="4"></circle><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"></path></svg></span><span class="overflow-hidden text-ellipsis whitespace-nowrap px-[5px] text-font">Disabled</span></button></div></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const AllVariants: Story = {
+  render: () =&gt; (
+    &lt;div style={{ display: &#x27;flex&#x27;, flexDirection: &#x27;column&#x27;, gap: 20 }}&gt;
+      {([&#x27;confirmation&#x27;, &#x27;danger&#x27;, &#x27;alert&#x27;, &#x27;success&#x27;, &#x27;ai&#x27;] as const).map(
+        (color) =&gt; (
+          &lt;div
+            key={color}
+            style={{
+              display: &#x27;flex&#x27;,
+              gap: 12,
+              alignItems: &#x27;center&#x27;,
+              flexWrap: &#x27;wrap&#x27;,
+            }}
+          &gt;
+            &lt;ButtonSoftToAction
+              color={color}
+              variant=&quot;outline&quot;
+              size=&quot;sm&quot;
+              leftIcon={&lt;Icon /&gt;}
+            &gt;
+              Outline {color}
+            &lt;/ButtonSoftToAction&gt;
+            &lt;ButtonSoftToAction
+              color={color}
+              variant=&quot;outline&quot;
+              size=&quot;sm&quot;
+              active
+              leftIcon={&lt;Icon /&gt;}
+            &gt;
+              Active
+            &lt;/ButtonSoftToAction&gt;
+            &lt;ButtonSoftToAction
+              color={color}
+              variant=&quot;ghost&quot;
+              size=&quot;sm&quot;
+              leftIcon={&lt;Icon /&gt;}
+            &gt;
+              Ghost
+            &lt;/ButtonSoftToAction&gt;
+            &lt;ButtonSoftToAction
+              color={color}
+              variant=&quot;outline&quot;
+              size=&quot;md&quot;
+              leftIcon={&lt;Icon /&gt;}
+              rightIcon={&lt;Chevron /&gt;}
+            &gt;
+              Medium
+            &lt;/ButtonSoftToAction&gt;
+            &lt;ButtonSoftToAction
+              color={color}
+              variant=&quot;outline&quot;
+              size=&quot;lg&quot;
+              leftIcon={&lt;Icon /&gt;}
+            &gt;
+              Large
+            &lt;/ButtonSoftToAction&gt;
+            &lt;ButtonSoftToAction
+              color={color}
+              variant=&quot;outline&quot;
+              size=&quot;sm&quot;
+              disabled
+              leftIcon={&lt;Icon /&gt;}
+            &gt;
+              Disabled
+            &lt;/ButtonSoftToAction&gt;
+          &lt;/div&gt;
+        ),
+      )}
+    &lt;/div&gt;
+  ),
+}</code></pre></details>
+  </section>
+</body>
+</html>

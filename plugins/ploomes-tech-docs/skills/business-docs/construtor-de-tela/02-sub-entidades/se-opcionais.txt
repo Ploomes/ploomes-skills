@@ -1,0 +1,15 @@
+Opcionais
+
+Objetivo básico:
+Por esse cadastro, é possível relacionar um ou mais produtos como filhos de outro (aqui, dizemos que o produto filho é um "opcional" ou uma "parte" do produto pai, e dizemos que entre eles existe o cadastro de um "vínculo"). Também posso transformar um grupo de produtos ou um marcador de produto como filho de um produto.
+
+Essa relação geralmente é usada no momento de geração de propostas / vendas / documentos de cliente ou de negócio. Assim que insiro um produto pai, por exemplo, os opcionais podem ser puxados automaticamente.
+
+Dados
+- Um produto pode ter múltiplos filhos. E um produto pode ser filho de vários produtos.
+- Nessa relação entre pai e filho, eu posso ter campos (com o poder de formularios_e_campos). Exemplo: quando o produto A for filho do produto B, eu posso definir um preço especial para ele.
+- Quando eu transformo gero um "vínculo", eu preciso definir uma categoria para isso. Ou seja, quando eu vinculo o produto A como filho do produto B, eu devo definir uma (e somente uma) categoria desse vínculo (sendo que categorias são configuráveis).
+- Um produto pode ter múltiplos opcionais. Ou seja, na tabela de vínculos do sistema, eu posso ter vários vínculos de um mesmo produto pai. Entre os opcionais / vínculos de um mesmo produto, eu posso estabelecer relações de 3 tipos: quando eu inserir o vínculo A, ele insere também o vínculo B. Quando eu inserir o vínculo A, ele bloqueia o vínculo B. E quando eu inserir o vínculo A, ele sugere o vínculo C.
+
+Vínculos:
+Os vínculos entre Opcionais e outras entidades estão definidos no arquivo (RC) Lista_de_field_paths.txt, que é a fonte canônica de todas as relações entre entidades.

@@ -1,0 +1,55 @@
+<!doctype html>
+<!--
+  Ploomes Design System — snapshot estático das stories do Storybook.
+  Componente : Atoms/ProfileImage
+  Stories    : 2 (Default, Sizes)
+  Story      : ProfileImage.stories.tsx
+  Tema       : light — use <html class="dark"> para o tema escuro.
+-->
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ProfileImage — Ploomes DS</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;600;700&display=swap">
+<link rel="stylesheet" href="../assets/design-system.css">
+<link rel="stylesheet" href="../assets/page.css">
+</head>
+<body class="ds-page">
+  <header class="ds-head">
+    <a class="ds-back" href="../index.html">← inventário</a>
+    <h1 class="ds-title">ProfileImage</h1>
+    <p class="ds-meta">atoms · 2 stories · <code>ProfileImage.stories.tsx</code></p>
+    <pre class="ds-code ds-import">import { ProfileImage } from &#x27;@ploomescrm/ui&#x27;;</pre>
+    <pre class="ds-code">// props padrão de todas as stories (meta.args)
+args: {
+  src: PLACEHOLDER,
+  size: &#x27;tiny&#x27;,
+}</pre>
+  </header>
+  <section class="ds-story">
+    <h2 class="ds-story-name">Default</h2>
+    <div class="ds-story-id">atoms-profileimage--default · export <b>Default</b></div>
+    <div class="ds-canvas ds-canvas--padded">
+<img alt="" class="shrink-0 rounded-full overflow-hidden object-cover size-[15px]" src="https://i.pravatar.cc/150?img=3"/>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const Default: Story = {}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">Sizes</h2>
+    <div class="ds-story-id">atoms-profileimage--sizes · export <b>Sizes</b></div>
+    <div class="ds-canvas ds-canvas--padded">
+<div style="display: flex; gap: 8px; align-items: center;"><img alt="" class="shrink-0 rounded-full overflow-hidden object-cover size-[15px]" src="https://i.pravatar.cc/150?img=3"/><img alt="" class="shrink-0 rounded-full overflow-hidden object-cover size-[20px]" src="https://i.pravatar.cc/150?img=3"/><img alt="" class="shrink-0 rounded-full overflow-hidden object-cover size-[25px]" src="https://i.pravatar.cc/150?img=3"/></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const Sizes: Story = {
+  render: (args) =&gt; (
+    &lt;div style={{ display: &#x27;flex&#x27;, gap: 8, alignItems: &#x27;center&#x27; }}&gt;
+      &lt;ProfileImage {...args} size=&quot;tiny&quot; src={PLACEHOLDER} /&gt;
+      &lt;ProfileImage {...args} size=&quot;small&quot; src={PLACEHOLDER} /&gt;
+      &lt;ProfileImage {...args} size=&quot;normal&quot; src={PLACEHOLDER} /&gt;
+    &lt;/div&gt;
+  ),
+}</code></pre></details>
+  </section>
+</body>
+</html>

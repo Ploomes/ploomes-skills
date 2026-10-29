@@ -1,0 +1,100 @@
+<!doctype html>
+<!--
+  Ploomes Design System — snapshot estático das stories do Storybook.
+  Componente : Atoms/NotifyBadge
+  Stories    : 4 (Default, Colors, Sizes, All Variants)
+  Story      : NotifyBadge.stories.tsx
+  Tema       : light — use <html class="dark"> para o tema escuro.
+-->
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NotifyBadge — Ploomes DS</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;600;700&display=swap">
+<link rel="stylesheet" href="../assets/design-system.css">
+<link rel="stylesheet" href="../assets/page.css">
+</head>
+<body class="ds-page">
+  <header class="ds-head">
+    <a class="ds-back" href="../index.html">← inventário</a>
+    <h1 class="ds-title">NotifyBadge</h1>
+    <p class="ds-meta">atoms · 4 stories · <code>NotifyBadge.stories.tsx</code></p>
+    <pre class="ds-code ds-import">import { NotifyBadge } from &#x27;@ploomescrm/ui&#x27;;</pre>
+    <pre class="ds-code">// props padrão de todas as stories (meta.args)
+args: {
+  color: &#x27;alert&#x27;,
+  size: &#x27;tiny&#x27;,
+  children: &#x27;99+&#x27;,
+}</pre>
+  </header>
+  <section class="ds-story">
+    <h2 class="ds-story-name">Default</h2>
+    <div class="ds-story-id">atoms-notifybadge--default · export <b>Default</b></div>
+    <div class="ds-canvas ds-canvas--padded">
+<span class="inline-flex shrink-0 items-center justify-center overflow-hidden rounded-[2px] font-bold whitespace-nowrap bg-alert text-font h-[15px] px-[2px] text-[10px]">99+</span>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const Default: Story = {}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">Colors</h2>
+    <div class="ds-story-id">atoms-notifybadge--colors · export <b>Colors</b></div>
+    <div class="ds-canvas ds-canvas--padded">
+<div style="display: flex; gap: 8px; align-items: center;"><span class="inline-flex shrink-0 items-center justify-center overflow-hidden rounded-[2px] font-bold whitespace-nowrap bg-alert text-font h-[15px] px-[2px] text-[10px]">99+</span><span class="inline-flex shrink-0 items-center justify-center overflow-hidden rounded-[2px] font-bold whitespace-nowrap bg-brand text-basic-light h-[15px] px-[2px] text-[10px]">99+</span><span class="inline-flex shrink-0 items-center justify-center overflow-hidden rounded-[2px] font-bold whitespace-nowrap bg-font-level_2 text-basic-light h-[15px] px-[2px] text-[10px]">99+</span></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const Colors: Story = {
+  render: (args) =&gt; (
+    &lt;div style={{ display: &#x27;flex&#x27;, gap: 8, alignItems: &#x27;center&#x27; }}&gt;
+      &lt;NotifyBadge {...args} color=&quot;alert&quot; /&gt;
+      &lt;NotifyBadge {...args} color=&quot;brand&quot; /&gt;
+      &lt;NotifyBadge {...args} color=&quot;default&quot; /&gt;
+    &lt;/div&gt;
+  ),
+}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">Sizes</h2>
+    <div class="ds-story-id">atoms-notifybadge--sizes · export <b>Sizes</b></div>
+    <div class="ds-canvas ds-canvas--padded">
+<div style="display: flex; gap: 8px; align-items: center;"><span class="inline-flex shrink-0 items-center justify-center overflow-hidden rounded-[2px] font-bold whitespace-nowrap bg-alert text-font h-[15px] px-[2px] text-[10px]">99+</span><span class="inline-flex shrink-0 items-center justify-center overflow-hidden rounded-[2px] font-bold whitespace-nowrap bg-alert text-font h-[20px] px-[5px] text-[13px]">99+</span></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const Sizes: Story = {
+  render: (args) =&gt; (
+    &lt;div style={{ display: &#x27;flex&#x27;, gap: 8, alignItems: &#x27;center&#x27; }}&gt;
+      &lt;NotifyBadge {...args} size=&quot;tiny&quot; /&gt;
+      &lt;NotifyBadge {...args} size=&quot;small&quot; /&gt;
+    &lt;/div&gt;
+  ),
+}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">All Variants</h2>
+    <div class="ds-story-id">atoms-notifybadge--all-variants · export <b>AllVariants</b></div>
+    <div class="ds-canvas ds-canvas--padded">
+<div style="display: flex; flex-direction: column; gap: 12px;"><div style="display: flex; gap: 8px; align-items: center;"><span class="inline-flex shrink-0 items-center justify-center overflow-hidden rounded-[2px] font-bold whitespace-nowrap bg-alert text-font h-[15px] px-[2px] text-[10px]">99+</span><span class="inline-flex shrink-0 items-center justify-center overflow-hidden rounded-[2px] font-bold whitespace-nowrap bg-brand text-basic-light h-[15px] px-[2px] text-[10px]">99+</span><span class="inline-flex shrink-0 items-center justify-center overflow-hidden rounded-[2px] font-bold whitespace-nowrap bg-font-level_2 text-basic-light h-[15px] px-[2px] text-[10px]">99+</span><span class="inline-flex shrink-0 items-center justify-center overflow-hidden rounded-[2px] font-bold whitespace-nowrap bg-alert text-font h-[15px] px-[2px] text-[10px]">3</span><span class="inline-flex shrink-0 items-center justify-center overflow-hidden rounded-[2px] font-bold whitespace-nowrap bg-brand text-basic-light h-[15px] px-[2px] text-[10px]">12</span></div><div style="display: flex; gap: 8px; align-items: center;"><span class="inline-flex shrink-0 items-center justify-center overflow-hidden rounded-[2px] font-bold whitespace-nowrap bg-alert text-font h-[20px] px-[5px] text-[13px]">99+</span><span class="inline-flex shrink-0 items-center justify-center overflow-hidden rounded-[2px] font-bold whitespace-nowrap bg-brand text-basic-light h-[20px] px-[5px] text-[13px]">99+</span><span class="inline-flex shrink-0 items-center justify-center overflow-hidden rounded-[2px] font-bold whitespace-nowrap bg-font-level_2 text-basic-light h-[20px] px-[5px] text-[13px]">99+</span><span class="inline-flex shrink-0 items-center justify-center overflow-hidden rounded-[2px] font-bold whitespace-nowrap bg-alert text-font h-[20px] px-[5px] text-[13px]">3</span><span class="inline-flex shrink-0 items-center justify-center overflow-hidden rounded-[2px] font-bold whitespace-nowrap bg-brand text-basic-light h-[20px] px-[5px] text-[13px]">12</span></div></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const AllVariants: Story = {
+  render: () =&gt; (
+    &lt;div style={{ display: &#x27;flex&#x27;, flexDirection: &#x27;column&#x27;, gap: 12 }}&gt;
+      {([&#x27;tiny&#x27;, &#x27;small&#x27;] as const).map((size) =&gt; (
+        &lt;div
+          key={size}
+          style={{ display: &#x27;flex&#x27;, gap: 8, alignItems: &#x27;center&#x27; }}
+        &gt;
+          &lt;NotifyBadge size={size} color=&quot;alert&quot; /&gt;
+          &lt;NotifyBadge size={size} color=&quot;brand&quot; /&gt;
+          &lt;NotifyBadge size={size} color=&quot;default&quot; /&gt;
+          &lt;NotifyBadge size={size} color=&quot;alert&quot;&gt;
+            3
+          &lt;/NotifyBadge&gt;
+          &lt;NotifyBadge size={size} color=&quot;brand&quot;&gt;
+            12
+          &lt;/NotifyBadge&gt;
+        &lt;/div&gt;
+      ))}
+    &lt;/div&gt;
+  ),
+}</code></pre></details>
+  </section>
+</body>
+</html>

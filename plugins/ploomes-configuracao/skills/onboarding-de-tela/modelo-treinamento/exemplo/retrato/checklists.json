@@ -1,0 +1,82 @@
+[
+ {
+  "Id": 1,
+  "Name": "Primeiro contato",
+  "DealStageId": 10001,
+  "DealFilterId": null,
+  "Fields": [
+   {
+    "Name": "Origem do lead",
+    "Required": true,
+    "Ordination": 0,
+    "FieldKey": "deal_0B1C2D3E-0000-4000-8000-000000000101"
+   },
+   {
+    "Name": "Telefone confirmado?",
+    "Required": true,
+    "Ordination": 1,
+    "FieldKey": "deal_0B1C2D3E-0000-4000-8000-000000000201"
+   }
+  ]
+ },
+ {
+  "Id": 2,
+  "Name": "Qualificação",
+  "DealStageId": 10002,
+  "DealFilterId": null,
+  "Fields": [
+   {
+    "Name": "Visita realizada?",
+    "Required": true,
+    "Ordination": 0,
+    "FieldKey": "deal_0B1C2D3E-0000-4000-8000-000000000102"
+   }
+  ]
+ },
+ {
+  "Id": 3,
+  "Name": "Relatório da visita",
+  "DealStageId": 10003,
+  "DealFilterId": 7,
+  "DealFilter": {
+   "Name": "Visitados (Visita realizada? = Sim)",
+   "Url": "$filter=OtherProperties/any(o:+o/FieldId+eq+102+and+o/BoolValue+eq+true)"
+  },
+  "Fields": [
+   {
+    "Name": "Relatório da visita",
+    "Required": true,
+    "Ordination": 0,
+    "FieldKey": "deal_0B1C2D3E-0000-4000-8000-000000000202"
+   }
+  ]
+ },
+ {
+  "Id": 4,
+  "Name": "Kickoff",
+  "DealStageId": 20001,
+  "DealFilterId": null,
+  "Fields": [
+   {
+    "Name": "Data do kickoff",
+    "Required": true,
+    "Ordination": 0,
+    "FieldKey": "deal_0B1C2D3E-0000-4000-8000-000000000203"
+   }
+  ]
+ },
+ {
+  "Id": 5,
+  "Name": "Atendimento",
+  "DealStageId": 30001,
+  "DealFilterId": null,
+  "Fields": [
+   {
+    "Name": "Farol do cliente",
+    "Required": true,
+    "Ordination": 0,
+    "FieldKey": "deal_0B1C2D3E-0000-4000-8000-000000000103"
+   }
+  ]
+ }
+]

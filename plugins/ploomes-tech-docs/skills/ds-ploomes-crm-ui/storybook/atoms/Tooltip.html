@@ -1,0 +1,91 @@
+<!doctype html>
+<!--
+  Ploomes Design System — snapshot estático das stories do Storybook.
+  Componente : Atoms/Tooltip
+  Stories    : 3 (Default, Placements, Trigger)
+  Story      : Tooltip.stories.tsx
+  Tema       : light — use <html class="dark"> para o tema escuro.
+-->
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tooltip — Ploomes DS</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;600;700&display=swap">
+<link rel="stylesheet" href="../assets/design-system.css">
+<link rel="stylesheet" href="../assets/page.css">
+</head>
+<body class="ds-page">
+  <header class="ds-head">
+    <a class="ds-back" href="../index.html">← inventário</a>
+    <h1 class="ds-title">Tooltip</h1>
+    <p class="ds-meta">atoms · 3 stories · <code>Tooltip.stories.tsx</code></p>
+    <pre class="ds-code ds-import">import { Tooltip, TooltipTrigger } from &#x27;@ploomescrm/ui&#x27;;</pre>
+    <pre class="ds-code">// props padrão de todas as stories (meta.args)
+args: {
+  children: &#x27;Lorem Ipsum&#x27;,
+  placement: &#x27;top&#x27;,
+}</pre>
+  </header>
+  <section class="ds-story">
+    <h2 class="ds-story-name">Default</h2>
+    <div class="ds-story-id">atoms-tooltip--default · export <b>Default</b></div>
+    <div class="ds-canvas ds-canvas--padded">
+<div class="inline-flex items-center [filter:drop-shadow(0px_1px_1px_rgba(0,0,0,0.14))_drop-shadow(0px_2px_1px_rgba(0,0,0,0.12))_drop-shadow(0px_1px_3px_rgba(0,0,0,0.20))] flex-col"><div class="bg-background text-font max-w-[min(400px,calc(100vw-16px))] overflow-hidden px-[10px] py-[5px] rounded-[3px]"><span class="text-[13px] leading-normal block break-words">Lorem Ipsum</span></div><svg aria-hidden="true" class="shrink-0 -mt-px" height="6" viewbox="0 0 10 6" width="10"><path class="fill-background" d="M0 0L5 6L10 0Z"></path></svg></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const Default: Story = {}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">Placements</h2>
+    <div class="ds-story-id">atoms-tooltip--placements · export <b>Placements</b></div>
+    <div class="ds-canvas ds-canvas--padded">
+<div style="display: flex; gap: 32px; align-items: center; padding: 32px;"><div class="inline-flex items-center [filter:drop-shadow(0px_1px_1px_rgba(0,0,0,0.14))_drop-shadow(0px_2px_1px_rgba(0,0,0,0.12))_drop-shadow(0px_1px_3px_rgba(0,0,0,0.20))] flex-col"><div class="bg-background text-font max-w-[min(400px,calc(100vw-16px))] overflow-hidden px-[10px] py-[5px] rounded-[3px]"><span class="text-[13px] leading-normal block break-words">Lorem Ipsum</span></div><svg aria-hidden="true" class="shrink-0 -mt-px" height="6" viewbox="0 0 10 6" width="10"><path class="fill-background" d="M0 0L5 6L10 0Z"></path></svg></div><div class="inline-flex items-center [filter:drop-shadow(0px_1px_1px_rgba(0,0,0,0.14))_drop-shadow(0px_2px_1px_rgba(0,0,0,0.12))_drop-shadow(0px_1px_3px_rgba(0,0,0,0.20))] flex-row"><svg aria-hidden="true" class="shrink-0" height="10" viewbox="0 0 6 10" width="6"><path class="fill-background" d="M6 0L0 5L6 10Z"></path></svg><div class="bg-background text-font max-w-[min(400px,calc(100vw-16px))] overflow-hidden px-[10px] py-[5px] rounded-[3px] -ml-px"><span class="text-[13px] leading-normal block break-words">Lorem Ipsum</span></div></div><div class="inline-flex items-center [filter:drop-shadow(0px_1px_1px_rgba(0,0,0,0.14))_drop-shadow(0px_2px_1px_rgba(0,0,0,0.12))_drop-shadow(0px_1px_3px_rgba(0,0,0,0.20))] flex-row"><div class="bg-background text-font max-w-[min(400px,calc(100vw-16px))] overflow-hidden px-[10px] py-[5px] rounded-[3px]"><span class="text-[13px] leading-normal block break-words">Lorem Ipsum</span></div><svg aria-hidden="true" class="shrink-0 -ml-px" height="10" viewbox="0 0 6 10" width="6"><path class="fill-background" d="M0 0L6 5L0 10Z"></path></svg></div><div class="inline-flex items-center [filter:drop-shadow(0px_1px_1px_rgba(0,0,0,0.14))_drop-shadow(0px_2px_1px_rgba(0,0,0,0.12))_drop-shadow(0px_1px_3px_rgba(0,0,0,0.20))] flex-col"><svg aria-hidden="true" class="shrink-0" height="6" viewbox="0 0 10 6" width="10"><path class="fill-background" d="M0 6L5 0L10 6Z"></path></svg><div class="bg-background text-font max-w-[min(400px,calc(100vw-16px))] overflow-hidden px-[10px] py-[5px] rounded-[3px] -mt-px"><span class="text-[13px] leading-normal block break-words">Lorem Ipsum</span></div></div></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const Placements: Story = {
+  render: (args) =&gt; (
+    &lt;div
+      style={{ display: &#x27;flex&#x27;, gap: 32, alignItems: &#x27;center&#x27;, padding: 32 }}
+    &gt;
+      &lt;Tooltip {...args} placement=&quot;top&quot; /&gt;
+      &lt;Tooltip {...args} placement=&quot;right&quot; /&gt;
+      &lt;Tooltip {...args} placement=&quot;left&quot; /&gt;
+      &lt;Tooltip {...args} placement=&quot;bottom&quot; /&gt;
+    &lt;/div&gt;
+  ),
+}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">Trigger</h2>
+    <div class="ds-story-id">atoms-tooltip--trigger · export <b>Trigger</b></div>
+    <div class="ds-canvas ds-canvas--padded">
+<div style="display: flex; gap: 48px; align-items: center; padding: 64px;"><span class="inline-block"><button style="padding: 6px 12px; border-radius: 5px; border: 1px solid rgb(204, 204, 204);" type="button">top</button></span><span class="inline-block"><button style="padding: 6px 12px; border-radius: 5px; border: 1px solid rgb(204, 204, 204);" type="button">right</button></span><span class="inline-block"><button style="padding: 6px 12px; border-radius: 5px; border: 1px solid rgb(204, 204, 204);" type="button">left</button></span><span class="inline-block"><button style="padding: 6px 12px; border-radius: 5px; border: 1px solid rgb(204, 204, 204);" type="button">bottom</button></span></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const Trigger: StoryObj&lt;typeof TooltipTrigger&gt; = {
+  render: () =&gt; (
+    &lt;div
+      style={{ display: &#x27;flex&#x27;, gap: 48, alignItems: &#x27;center&#x27;, padding: 64 }}
+    &gt;
+      {([&#x27;top&#x27;, &#x27;right&#x27;, &#x27;left&#x27;, &#x27;bottom&#x27;] as const).map((placement) =&gt; (
+        &lt;TooltipTrigger
+          key={placement}
+          content={`Tooltip ${placement}`}
+          placement={placement}
+        &gt;
+          &lt;button
+            type=&quot;button&quot;
+            style={{
+              padding: &#x27;6px 12px&#x27;,
+              borderRadius: 5,
+              border: &#x27;1px solid #ccc&#x27;,
+            }}
+          &gt;
+            {placement}
+          &lt;/button&gt;
+        &lt;/TooltipTrigger&gt;
+      ))}
+    &lt;/div&gt;
+  ),
+}</code></pre></details>
+  </section>
+</body>
+</html>

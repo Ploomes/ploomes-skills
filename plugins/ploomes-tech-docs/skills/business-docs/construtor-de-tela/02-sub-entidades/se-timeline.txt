@@ -1,0 +1,43 @@
+Timeline
+
+A Timeline é uma tabela do Ploomes que armazena diversos eventos ocorridos relacionados a clientes e/ou negócios. Estes eventos são ordenados a partir da data de criação deles.
+
+O objetivo desta tela é ter uma visão centralizada de tudo o que ocorreu com o cliente. Em vez de consultar diversas tabelas em paralelo, é mais fácil apenas consultar esta, já que ela armazena o vínculo às entidades que geraram os eventos dela (Exemplo: a timeline armazena o ID do registro de interação que gerou um evento nela. A partir disso, eu consigo acessar os dados deste registro e exibir ao usuário, por exemplo).
+
+Essa tabela nunca deve ser manipulada de forma direta, apenas lida, já que ela é populada somente por outros eventos que ocorrem dentro do Ploomes.
+
+Ou seja, softwares que consomem essa tabela devem apenas lê-la, nunca tentar incluir ou alterar itens dela.
+
+É possível puxar a Timeline de um cliente específico, de um negócio específico ou geral.
+
+Para a Timeline de clientes, o Ploomes retorna os seguintes tipos de evento:
+
+- Registros de interação criados (incluindo registros de interação do tipo e-mail, que buscam o conteúdo do e-mail de uma forma diferente por estarem vinculados ao módulo de e-mails do Ploomes);
+- Negócios criados e finalizados (ganhos ou perdidos), incluindo negócios criados como filhos de outros negócios;
+- Documentos criados (de cliente ou de negócio);
+- Propostas criadas;
+- Vendas criadas;
+- Criação do cliente.
+
+Para a Timeline de negócios, o Ploomes retorna os seguintes tipos de evento:
+- Registros de interação criados (incluindo registros de interação do tipo e-mail, como explicado acima);
+- Finalização do negócio (ganho ou perdido);
+- Criação de negócios vinculados como filhos;
+- Mudança de estágio do negócio;
+- Documentos criados (de cliente ou de negócio);
+- Propostas criadas;
+- Vendas criadas;
+- Aprovação de propostas que entraram em fluxo de aprovação;
+- Aprovação de vendas que entraram em fluxo de aprovação;
+- Aprovação de documentos que entraram em fluxo de aprovação;
+- Aceite do cliente a partir do link web da proposta (seja o link genérico, seja o link específico de cada pessoa que recebeu a proposta compartilhada);
+- Abertura da proposta pelo cliente a partir do link web da proposta (seja o link genérico, seja o link específico de cada pessoa que recebeu a proposta compartilhada);
+- Criação do negócio.
+
+Para a Timeline geral, o Ploomes retorna os seguintes tipos de evento:
+- Registros de interação criados (incluindo registros de interação do tipo e-mail, que buscam o conteúdo do e-mail de uma forma diferente por estarem vinculados ao módulo de e-mails do Ploomes);
+- Negócios criados e finalizados (ganhos ou perdidos), incluindo negócios criados como filhos de outros negócios;
+- Documentos criados (de cliente ou de negócio);
+- Propostas criadas;
+- Vendas criadas;
+- Clientes criados.

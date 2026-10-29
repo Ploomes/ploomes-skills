@@ -1,0 +1,24 @@
+Regras para filtros
+
+O mecanismo de filtragem nativo do Ploomes está presente em diversos locais:
+- Abas;
+- Sistema de filtros salvos;
+- Automações de funil;
+- Automações genéricas;
+- Checklists;
+- Entre outros.
+
+Toda vez que falamos de filtros, a lógica é a mesma. Como funciona:
+
+- Eu sempre parte de uma entidade base. Exemplo: quero filtrar clientes;
+- A partir disso, posso selecionar um campo da entidade. Exemplo: segmento do cliente;
+- Em seguida, eu seleciono uma operação dentro de uma lista que pode variar com o tipo de campo. Exemplo: igual a (ou seja, quero filtrar clientes cujo segmento seja igual a);
+- Depois, decido se quero filtrar por um valor específico, ou comparar com o valor armazenado em um outro campo. Se for valor específico, eu defino o valor. Se não, eu seleciono o campo da comparação. Exemplo de valor específico: transportes (ou seja, estou dizendo que quero filtrar clientes cujo segmento seja igual a transportes). Exemplo de comparação com valor de outro campo: campo Ramo de atuação (ou seja, estou dizendo que quero filtrar clientes que tenham o valor armazenado no campo segmento igual ao valor armazenado no campo Ramo de atuação).
+
+A partir do sistema de field-path, eu consigo filtrar por campos de outras entidades vinculadas à entidade base. Vamos tomar como exemplo da entidade Negócios. Eu consigo filtrar, por exemplo, negócios cujos clientes tenham segmento igual a Transportes. Basta seguir pelo field-path.
+
+Se não há field-path, não há como fazer essa filtragem pelos métodos nativos do Ploomes.
+
+Por esta descrição, fica claro que o mecanismo nativo de filtragem do Ploomes é baseado em campos. Se eu quiser fazer um filtro, por exemplo, de clientes que tenham um negócio no funil X em andamento, eu não consigo usar o mecanismo nativo do Ploomes, a menos que um campo acumulador seja criado. Ou então, esse filtro deverá ser feito direto na API, desconsiderando o sistema de filtros nativo do Ploomes.
+
+

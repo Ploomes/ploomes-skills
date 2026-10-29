@@ -1,0 +1,11 @@
+Filtros
+Para cada entidade do Ploomes, os dados podem ser solicitados a partir do uso de um filtro. O Ploomes possui um cadastro de filtros armazenáveis para grande parte das entidades (e que podem ser disponibilizados ou não para determinados usuários).
+
+Um Filtro, similar a uma aba, armazena um conjunto de filtros e só. Ou seja, não definem quais dados serão trazidos ou coisa do tipo.
+
+Filtros podem ser utilizados em paralelo com as abas, e o resultado é a intersecção de resultados. 
+
+Relação entre tabelas em filtros
+Os filtros também utilizam o sistema de Field-path do Ploomes. É possível, por exemplo, filtrar negócios vinculados a clientes que estão localizados na cidade de São Paulo.
+
+Apesar do sistema de filtros, é possível fazer requests com filtros direto na API do Ploomes. O sistema de filtros traz consigo otimizações de performance, mas podem oferecer limitações para determinados casos de uso. Além disso, como os Field-paths são pré-definidos, pode faltar algum caminho importante para o caso de uso desejado pelo usuário. Nesses casos, portanto, pode ser mais fácil usar a API para consultar essas informações sem ter que navegar pelas regras do Field-Path.

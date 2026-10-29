@@ -1,0 +1,4 @@
+N°,Nome do Funil,Objetivo,Familia,Tipo de visibilidade,Quem vê,Passar por todas as etapas,Proibido voltar,Ganhar só na última etapa,Cria venda ao ganhar,Pode ganhar,Pode perder,Usuário de automação,Gera proposta,Gera venda,Gera documento,Modelos permitidos,Unidade singular,Unidade plural,Verbo ganhar,Verbo perder,Motivos de perda
+"1","Vendas Diretas","Conduzir a venda consultiva do lead ao pedido","vendas","equipe","Comercial;Gestores","Sim","Não","Sim","Sim","Sim","Sim","Sim","Sim","Não","Não","Proposta Padrão","Oportunidade","Oportunidades","Ganhar","Perder","Preço;Prazo de entrega;Sem retorno;Concorrente"
+"2","Implantação","Entregar o projeto vendido até o go-live","implantacao","equipe","Técnica","Sim","Não","Não","Não","Sim","Sim","Sim","Não","Não","Sim","","Projeto","Projetos","Concluir","Cancelar",""
+"3","Triagem","","outro","todos","","Não","Não","Não","Sim","Não","Não","Não","Não","Não","Não","Modelo Inexistente","Item","Itens","Ganhar","Perder",""

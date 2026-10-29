@@ -1,0 +1,274 @@
+<!doctype html>
+<!--
+  Ploomes Design System — snapshot estático das stories do Storybook.
+  Componente : Fields/Field02TextMultiline
+  Stories    : 14 (Default, Filled, Danger, Alert, Disabled, View Only, Loading, With Character Counter, With Speech To Text, Without Resize, With Validation Icons, All Sizes, Cell Theme, Cell Statuses)
+  Story      : Field02TextMultiline.stories.tsx
+  Tema       : light — use <html class="dark"> para o tema escuro.
+-->
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Field02TextMultiline — Ploomes DS</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;600;700&display=swap">
+<link rel="stylesheet" href="../assets/design-system.css">
+<link rel="stylesheet" href="../assets/page.css">
+</head>
+<body class="ds-page">
+  <header class="ds-head">
+    <a class="ds-back" href="../index.html">← inventário</a>
+    <h1 class="ds-title">Field02TextMultiline</h1>
+    <p class="ds-meta">fields · 14 stories · <code>Field02TextMultiline.stories.tsx</code></p>
+    <pre class="ds-code ds-import">import { Field02TextMultiline, SpeechToTextButton } from &#x27;@ploomescrm/ui&#x27;;</pre>
+    <pre class="ds-code">// props padrão de todas as stories (meta.args)
+args: {
+  theme: &#x27;form&#x27;,
+  label: &#x27;Texto multilinha&#x27;,
+  placeholder: &#x27;Lorem Ipsum&#x27;,
+}</pre>
+  </header>
+  <section class="ds-story">
+    <h2 class="ds-story-name">Default</h2>
+    <div class="ds-story-id">fields-field02textmultiline--default · export <b>Default</b></div>
+    <div class="ds-canvas ds-canvas--padded">
+<div style="width: 300px;"><div class="flex w-full flex-col items-start"><div class="flex w-full items-center gap-[5px] pb-[5px]"><label class="shrink-0 text-sm leading-[18px] text-font" for="field-multiline-_r_0_" id="field-multiline-_r_0_-label">Texto multilinha</label><div class="flex h-4 min-w-0 flex-1 items-center gap-[5px]"></div></div><div class="relative flex w-full bg-background transition-colors rounded-[5px] border border-neutral-level_2 items-start px-0 hover:border-font-level_2 focus-within:border-confirmation"><textarea class="min-w-0 flex-1 bg-transparent px-[10px] py-[6px] text-sm leading-[18px] text-font outline-none placeholder:text-font-level_2 disabled:cursor-not-allowed h-[60px] min-h-[60px] max-md:max-h-[40vh] resize-y" id="field-multiline-_r_0_" placeholder="Lorem Ipsum"></textarea></div></div></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const Default: Story = {}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">Filled</h2>
+    <div class="ds-story-id">fields-field02textmultiline--filled · export <b>Filled</b></div>
+    <div class="ds-canvas ds-canvas--padded">
+<div style="width: 300px;"><div class="flex w-full flex-col items-start"><div class="flex w-full items-center gap-[5px] pb-[5px]"><label class="shrink-0 text-sm leading-[18px] text-font" for="field-multiline-_r_0_" id="field-multiline-_r_0_-label">Texto multilinha</label><div class="flex h-4 min-w-0 flex-1 items-center gap-[5px]"></div></div><div class="relative flex w-full bg-background transition-colors rounded-[5px] border border-neutral-level_2 items-start px-0 hover:border-font-level_2 focus-within:border-confirmation"><textarea class="min-w-0 flex-1 bg-transparent px-[10px] py-[6px] text-sm leading-[18px] text-font outline-none placeholder:text-font-level_2 disabled:cursor-not-allowed h-[60px] min-h-[60px] max-md:max-h-[40vh] resize-y" id="field-multiline-_r_0_" placeholder="Lorem Ipsum">Lorem Ipsum dolor sit amet, consectetur adipiscing elit.</textarea></div></div></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const Filled: Story = {
+  args: {
+    defaultValue: &#x27;Lorem Ipsum dolor sit amet, consectetur adipiscing elit.&#x27;,
+  },
+}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">Danger</h2>
+    <div class="ds-story-id">fields-field02textmultiline--danger · export <b>Danger</b></div>
+    <div class="ds-canvas ds-canvas--padded">
+<div style="width: 300px;"><div class="flex w-full flex-col items-start"><div class="flex w-full items-center gap-[5px] pb-[5px]"><label class="shrink-0 text-sm leading-[18px] text-font" for="field-multiline-_r_0_" id="field-multiline-_r_0_-label">Texto multilinha</label><div class="flex h-4 min-w-0 flex-1 items-center gap-[5px]"></div></div><div class="relative flex w-full bg-background transition-colors rounded-[5px] border border-danger items-start px-0"><textarea aria-describedby="field-multiline-_r_0_-help" aria-invalid="true" class="min-w-0 flex-1 bg-transparent px-[10px] py-[6px] text-sm leading-[18px] text-font outline-none placeholder:text-font-level_2 disabled:cursor-not-allowed h-[60px] min-h-[60px] max-md:max-h-[40vh] resize-y" id="field-multiline-_r_0_" placeholder="Lorem Ipsum"></textarea></div><p class="w-full whitespace-normal px-[10px] pt-[3px] text-[13px] leading-[18px] md:truncate text-danger" id="field-multiline-_r_0_-help">Texto de ajuda</p></div></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const Danger: Story = {
+  args: { status: &#x27;danger&#x27;, helpText: &#x27;Texto de ajuda&#x27; },
+}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">Alert</h2>
+    <div class="ds-story-id">fields-field02textmultiline--alert · export <b>Alert</b></div>
+    <div class="ds-canvas ds-canvas--padded">
+<div style="width: 300px;"><div class="flex w-full flex-col items-start"><div class="flex w-full items-center gap-[5px] pb-[5px]"><label class="shrink-0 text-sm leading-[18px] text-font" for="field-multiline-_r_0_" id="field-multiline-_r_0_-label">Texto multilinha</label><div class="flex h-4 min-w-0 flex-1 items-center gap-[5px]"></div></div><div class="relative flex w-full bg-background transition-colors rounded-[5px] border border-alert items-start px-0"><textarea aria-describedby="field-multiline-_r_0_-help" class="min-w-0 flex-1 bg-transparent px-[10px] py-[6px] text-sm leading-[18px] text-font outline-none placeholder:text-font-level_2 disabled:cursor-not-allowed h-[60px] min-h-[60px] max-md:max-h-[40vh] resize-y" id="field-multiline-_r_0_" placeholder="Lorem Ipsum"></textarea></div><p class="w-full whitespace-normal px-[10px] pt-[3px] text-[13px] leading-[18px] md:truncate text-font-level_2" id="field-multiline-_r_0_-help">Texto de ajuda</p></div></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const Alert: Story = {
+  args: { status: &#x27;alert&#x27;, helpText: &#x27;Texto de ajuda&#x27; },
+}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">Disabled</h2>
+    <div class="ds-story-id">fields-field02textmultiline--disabled · export <b>Disabled</b></div>
+    <div class="ds-canvas ds-canvas--padded">
+<div style="width: 300px;"><div class="flex w-full flex-col items-start"><div class="flex w-full items-center gap-[5px] pb-[5px]"><label class="shrink-0 text-sm leading-[18px] text-font" for="field-multiline-_r_0_" id="field-multiline-_r_0_-label">Texto multilinha</label><div class="flex h-4 min-w-0 flex-1 items-center gap-[5px]"></div></div><div class="relative flex w-full transition-colors rounded-[5px] border border-neutral-level_2 items-start px-0 bg-neutral-level_1"><textarea class="min-w-0 flex-1 bg-transparent px-[10px] py-[6px] text-sm leading-[18px] text-font outline-none placeholder:text-font-level_2 disabled:cursor-not-allowed h-[60px] min-h-[60px] resize-none" disabled="" id="field-multiline-_r_0_" placeholder="Lorem Ipsum">Lorem Ipsum</textarea></div></div></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const Disabled: Story = {
+  args: { disabled: true, defaultValue: &#x27;Lorem Ipsum&#x27; },
+}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">View Only</h2>
+    <div class="ds-story-id">fields-field02textmultiline--view-only · export <b>ViewOnly</b></div>
+    <div class="ds-canvas ds-canvas--padded">
+<div style="width: 300px;"><div class="flex w-full flex-col items-start"><div class="flex w-full items-center gap-[5px] pb-[5px]"><label class="shrink-0 text-sm leading-[18px] text-font" for="field-multiline-_r_0_" id="field-multiline-_r_0_-label">Texto multilinha</label><div class="flex h-4 min-w-0 flex-1 items-center gap-[5px]"></div></div><div class="relative flex w-full bg-background transition-colors rounded-[5px] border border-neutral-level_2 items-start px-0"><textarea class="min-w-0 flex-1 bg-transparent px-[10px] py-[6px] text-sm leading-[18px] text-font outline-none placeholder:text-font-level_2 disabled:cursor-not-allowed h-[60px] min-h-[60px] resize-none cursor-default" id="field-multiline-_r_0_" placeholder="Lorem Ipsum" readonly="">Lorem Ipsum</textarea></div></div></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const ViewOnly: Story = {
+  args: { viewOnly: true, defaultValue: &#x27;Lorem Ipsum&#x27; },
+}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">Loading</h2>
+    <div class="ds-story-id">fields-field02textmultiline--loading · export <b>Loading</b></div>
+    <div class="ds-canvas ds-canvas--padded">
+<div style="width: 300px;"><div class="flex w-full flex-col items-start"><div class="flex w-full items-center gap-[5px] pb-[5px]"><label class="shrink-0 text-sm leading-[18px] text-font" for="field-multiline-_r_0_" id="field-multiline-_r_0_-label">Texto multilinha</label><div class="flex h-4 min-w-0 flex-1 items-center gap-[5px]"></div></div><div aria-busy="true" class="relative flex w-full bg-background transition-colors rounded-[5px] border border-neutral-level_2 items-start px-0 h-[60px]"><span class="my-[5px] h-[calc(100%-10px)] w-full animate-pulse rounded-[2px] bg-neutral-level_2 mx-[5px]" data-testid="field-skeleton"></span></div></div></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const Loading: Story = {
+  args: { loading: true },
+}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">With Character Counter</h2>
+    <div class="ds-story-id">fields-field02textmultiline--with-character-counter · export <b>WithCharacterCounter</b></div>
+    <div class="ds-canvas ds-canvas--padded">
+<div style="width: 300px;"><div class="flex w-full flex-col items-start"><div class="flex w-full items-center gap-[5px] pb-[5px]"><label class="shrink-0 text-sm leading-[18px] text-font" for="field-multiline-_r_0_" id="field-multiline-_r_0_-label">Texto multilinha</label><div class="flex h-4 min-w-0 flex-1 items-center gap-[5px]"><span class="min-w-0 flex-1 text-right text-[13px] text-font-level_2">0/200</span></div></div><div class="relative flex w-full bg-background transition-colors rounded-[5px] border border-neutral-level_2 items-start px-0 hover:border-font-level_2 focus-within:border-confirmation"><textarea class="min-w-0 flex-1 bg-transparent px-[10px] py-[6px] text-sm leading-[18px] text-font outline-none placeholder:text-font-level_2 disabled:cursor-not-allowed h-[60px] min-h-[60px] max-md:max-h-[40vh] resize-y" id="field-multiline-_r_0_" maxlength="200" placeholder="Lorem Ipsum"></textarea></div></div></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const WithCharacterCounter: Story = {
+  render: function Render(args) {
+    const [value, setValue] = useState(&#x27;&#x27;);
+    return (
+      &lt;Field02TextMultiline
+        {...args}
+        maxLength={200}
+        value={value}
+        onChange={(e) =&gt; setValue(e.target.value)}
+      /&gt;
+    );
+  },
+}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">With Speech To Text</h2>
+    <div class="ds-story-id">fields-field02textmultiline--with-speech-to-text · export <b>WithSpeechToText</b></div>
+    <div class="ds-canvas ds-canvas--padded">
+<div style="width: 300px;"><div class="flex w-full flex-col items-start"><div class="flex w-full items-center gap-[5px] pb-[5px]"><label class="shrink-0 text-sm leading-[18px] text-font" for="field-multiline-_r_0_" id="field-multiline-_r_0_-label">Texto multilinha</label><div class="flex h-4 min-w-0 flex-1 items-center gap-[5px]"></div></div><div class="relative flex w-full bg-background transition-colors rounded-[5px] border border-neutral-level_2 items-start px-0 hover:border-font-level_2 focus-within:border-confirmation"><textarea class="min-w-0 flex-1 bg-transparent px-[10px] py-[6px] text-sm leading-[18px] text-font outline-none placeholder:text-font-level_2 disabled:cursor-not-allowed h-[60px] min-h-[60px] max-md:max-h-[40vh] resize-y" id="field-multiline-_r_0_" placeholder="Lorem Ipsum"></textarea><div class="absolute right-[4px] top-[4px] flex items-center gap-[2px]"><span class="inline-block"><button aria-label="Clique para gravar" aria-pressed="false" class="flex size-[25px] cursor-pointer items-center justify-center rounded-[5px] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-confirmation disabled:cursor-not-allowed disabled:opacity-40 text-font-level_2 hover:bg-neutral-level_2" type="button"><span aria-hidden="true" class="inline-flex shrink-0 items-center justify-center text-current"><svg aria-hidden="true" class="lucide lucide-mic" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="15" xmlns="http://www.w3.org/2000/svg"><path d="M12 19v3"></path><path d="M19 10v2a7 7 0 0 1-14 0v-2"></path><rect height="13" rx="3" width="6" x="9" y="2"></rect></svg></span></button></span></div></div></div></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const WithSpeechToText: Story = {
+  render: function Render(args) {
+    const [value, setValue] = useState(&#x27;&#x27;);
+    const [recording, setRecording] = useState(false);
+    return (
+      &lt;Field02TextMultiline
+        {...args}
+        value={value}
+        onChange={(e) =&gt; setValue(e.target.value)}
+        replaceableRight={
+          &lt;SpeechToTextButton
+            recording={recording}
+            onToggle={(next) =&gt; {
+              setRecording(next);
+              // Here the application starts/stops recognition (Web Speech API,
+              // a custom service, etc.) and writes the transcription to the value.
+            }}
+          /&gt;
+        }
+      /&gt;
+    );
+  },
+}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">Without Resize</h2>
+    <div class="ds-story-id">fields-field02textmultiline--without-resize · export <b>WithoutResize</b></div>
+    <div class="ds-canvas ds-canvas--padded">
+<div style="width: 300px;"><div class="flex w-full flex-col items-start"><div class="flex w-full items-center gap-[5px] pb-[5px]"><label class="shrink-0 text-sm leading-[18px] text-font" for="field-multiline-_r_0_" id="field-multiline-_r_0_-label">Texto multilinha</label><div class="flex h-4 min-w-0 flex-1 items-center gap-[5px]"></div></div><div class="relative flex w-full bg-background transition-colors rounded-[5px] border border-neutral-level_2 items-start px-0 hover:border-font-level_2 focus-within:border-confirmation"><textarea class="min-w-0 flex-1 bg-transparent px-[10px] py-[6px] text-sm leading-[18px] text-font outline-none placeholder:text-font-level_2 disabled:cursor-not-allowed h-[60px] min-h-[60px] resize-none" id="field-multiline-_r_0_" placeholder="Lorem Ipsum">Lorem Ipsum</textarea></div></div></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const WithoutResize: Story = {
+  args: { allowResize: false, defaultValue: &#x27;Lorem Ipsum&#x27; },
+}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">With Validation Icons</h2>
+    <div class="ds-story-id">fields-field02textmultiline--with-validation-icons · export <b>WithValidationIcons</b></div>
+    <div class="ds-canvas ds-canvas--padded">
+<div style="width: 300px;"><div class="flex w-full flex-col items-start"><div class="flex w-full items-center gap-[5px] pb-[5px]"><label class="shrink-0 text-sm leading-[18px] text-font" for="field-multiline-_r_0_" id="field-multiline-_r_0_-label">Texto multilinha</label><div class="flex h-4 min-w-0 flex-1 items-center gap-[5px]"><div class="flex shrink-0 items-center gap-[5px]"><span class="inline-block"><span aria-hidden="true" class="inline-flex shrink-0 items-center justify-center text-font-level_2"><svg aria-hidden="true" class="lucide lucide-circle-alert" fill="none" height="10" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="10" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="10"></circle><line x1="12" x2="12" y1="8" y2="12"></line><line x1="12" x2="12.01" y1="16" y2="16"></line></svg></span></span><span aria-hidden="true" class="inline-flex shrink-0 items-center justify-center text-font-level_2"><svg aria-hidden="true" class="lucide lucide-calculator" fill="none" height="10" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="10" xmlns="http://www.w3.org/2000/svg"><rect height="20" rx="2" width="16" x="4" y="2"></rect><line x1="8" x2="16" y1="6" y2="6"></line><line x1="16" x2="16" y1="14" y2="18"></line><path d="M16 10h.01"></path><path d="M12 10h.01"></path><path d="M8 10h.01"></path><path d="M12 14h.01"></path><path d="M8 14h.01"></path><path d="M12 18h.01"></path><path d="M8 18h.01"></path></svg></span><span class="inline-block"><span aria-hidden="true" class="inline-flex shrink-0 items-center justify-center text-font-level_2"><svg aria-hidden="true" class="lucide lucide-info" fill="none" height="10" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="10" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="10"></circle><path d="M12 16v-4"></path><path d="M12 8h.01"></path></svg></span></span></div><span class="min-w-0 flex-1 text-right text-[13px] text-font-level_2">0/200</span></div></div><div class="relative flex w-full bg-background transition-colors rounded-[5px] border border-neutral-level_2 items-start px-0 hover:border-font-level_2 focus-within:border-confirmation"><textarea aria-required="true" class="min-w-0 flex-1 bg-transparent px-[10px] py-[6px] text-sm leading-[18px] text-font outline-none placeholder:text-font-level_2 disabled:cursor-not-allowed h-[60px] min-h-[60px] max-md:max-h-[40vh] resize-y" id="field-multiline-_r_0_" maxlength="200" placeholder="Lorem Ipsum"></textarea></div></div></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const WithValidationIcons: Story = {
+  args: {
+    required: true,
+    hasFormula: true,
+    infoMessage: &#x27;Informação sobre o campo&#x27;,
+    maxLength: 200,
+  },
+}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">All Sizes</h2>
+    <div class="ds-story-id">fields-field02textmultiline--all-sizes · export <b>AllSizes</b></div>
+    <div class="ds-canvas ds-canvas--padded">
+<div style="width: 300px;"><div style="display: flex; flex-direction: column; gap: 16px;"><div class="flex w-full flex-col items-start"><div class="flex w-full items-center gap-[5px] pb-[5px]"><label class="shrink-0 text-sm leading-[18px] text-font" for="field-multiline-_r_0_" id="field-multiline-_r_0_-label">Small (30px)</label><div class="flex h-4 min-w-0 flex-1 items-center gap-[5px]"></div></div><div class="relative flex w-full bg-background transition-colors rounded-[5px] border border-neutral-level_2 items-start px-0 hover:border-font-level_2 focus-within:border-confirmation"><textarea class="min-w-0 flex-1 bg-transparent px-[10px] py-[6px] text-sm leading-[18px] text-font outline-none placeholder:text-font-level_2 disabled:cursor-not-allowed h-[30px] min-h-[30px] max-md:max-h-[40vh] resize-y" id="field-multiline-_r_0_" placeholder="Lorem Ipsum"></textarea></div></div><div class="flex w-full flex-col items-start"><div class="flex w-full items-center gap-[5px] pb-[5px]"><label class="shrink-0 text-sm leading-[18px] text-font" for="field-multiline-_r_1_" id="field-multiline-_r_1_-label">Normal (35px)</label><div class="flex h-4 min-w-0 flex-1 items-center gap-[5px]"></div></div><div class="relative flex w-full bg-background transition-colors rounded-[5px] border border-neutral-level_2 items-start px-0 hover:border-font-level_2 focus-within:border-confirmation"><textarea class="min-w-0 flex-1 bg-transparent px-[10px] py-[6px] text-sm leading-[18px] text-font outline-none placeholder:text-font-level_2 disabled:cursor-not-allowed h-[35px] min-h-[35px] max-md:max-h-[40vh] resize-y" id="field-multiline-_r_1_" placeholder="Lorem Ipsum"></textarea></div></div><div class="flex w-full flex-col items-start"><div class="flex w-full items-center gap-[5px] pb-[5px]"><label class="shrink-0 text-sm leading-[18px] text-font" for="field-multiline-_r_2_" id="field-multiline-_r_2_-label">Big (40px)</label><div class="flex h-4 min-w-0 flex-1 items-center gap-[5px]"></div></div><div class="relative flex w-full bg-background transition-colors rounded-[5px] border border-neutral-level_2 items-start px-0 hover:border-font-level_2 focus-within:border-confirmation"><textarea class="min-w-0 flex-1 bg-transparent px-[10px] py-[6px] text-sm leading-[18px] text-font outline-none placeholder:text-font-level_2 disabled:cursor-not-allowed h-[40px] min-h-[40px] max-md:max-h-[40vh] resize-y" id="field-multiline-_r_2_" placeholder="Lorem Ipsum"></textarea></div></div><div class="flex w-full flex-col items-start"><div class="flex w-full items-center gap-[5px] pb-[5px]"><label class="shrink-0 text-sm leading-[18px] text-font" for="field-multiline-_r_3_" id="field-multiline-_r_3_-label">Fixed (60px)</label><div class="flex h-4 min-w-0 flex-1 items-center gap-[5px]"></div></div><div class="relative flex w-full bg-background transition-colors rounded-[5px] border border-neutral-level_2 items-start px-0 hover:border-font-level_2 focus-within:border-confirmation"><textarea class="min-w-0 flex-1 bg-transparent px-[10px] py-[6px] text-sm leading-[18px] text-font outline-none placeholder:text-font-level_2 disabled:cursor-not-allowed h-[60px] min-h-[60px] max-md:max-h-[40vh] resize-y" id="field-multiline-_r_3_" placeholder="Lorem Ipsum"></textarea></div></div></div></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const AllSizes: Story = {
+  render: (args) =&gt; (
+    &lt;div style={{ display: &#x27;flex&#x27;, flexDirection: &#x27;column&#x27;, gap: 16 }}&gt;
+      &lt;Field02TextMultiline {...args} size=&quot;sm&quot; label=&quot;Small (30px)&quot; /&gt;
+      &lt;Field02TextMultiline {...args} size=&quot;md&quot; label=&quot;Normal (35px)&quot; /&gt;
+      &lt;Field02TextMultiline {...args} size=&quot;lg&quot; label=&quot;Big (40px)&quot; /&gt;
+      &lt;Field02TextMultiline {...args} size=&quot;xl&quot; label=&quot;Fixed (60px)&quot; /&gt;
+    &lt;/div&gt;
+  ),
+}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">Cell Theme</h2>
+    <div class="ds-story-id">fields-field02textmultiline--cell-theme · export <b>CellTheme</b></div>
+    <div class="ds-canvas ds-canvas--padded">
+<div style="width: 300px;"><div style="width: 200px; height: 280px;"><div class="relative flex w-full flex-col items-start" role="presentation"><button aria-expanded="false" aria-haspopup="dialog" aria-label="Título do campo" class="relative flex w-full bg-background px-[10px] transition-colors rounded-none border-[0.5px] border-neutral-level_2 items-center gap-[10px] text-left h-[40px] hover:border hover:border-font-level_2 focus-within:border focus-within:border-confirmation focus-within:ring-2 focus-within:ring-confirmation-default_30 cursor-pointer" type="button"><span class="min-w-0 flex-1 truncate text-sm text-font-level_2">Lorem Ipsum</span><span aria-hidden="true" class="inline-flex items-center justify-center shrink-0 text-font-level_2"><svg aria-hidden="true" class="lucide lucide-maximize2 lucide-maximize-2" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="15" xmlns="http://www.w3.org/2000/svg"><path d="M15 3h6v6"></path><path d="m21 3-7 7"></path><path d="m3 21 7-7"></path><path d="M9 21H3v-6"></path></svg></span></button></div></div></div>
+    </div>
+    <p class="ds-state">estado aberto — após clique no gatilho</p>
+    <div class="ds-canvas ds-canvas--overlay">
+<div style="width: 300px;"><div style="width: 200px; height: 280px;"><div class="relative flex w-full flex-col items-start" role="presentation"><button aria-expanded="true" aria-haspopup="dialog" aria-label="Título do campo" class="relative flex w-full bg-background px-[10px] transition-colors rounded-none items-center gap-[10px] text-left h-[40px] cursor-pointer border border-confirmation" type="button"><span class="min-w-0 flex-1 truncate text-sm text-font-level_2">Lorem Ipsum</span><span aria-hidden="true" class="inline-flex items-center justify-center shrink-0 text-font-level_2"><svg aria-hidden="true" class="lucide lucide-maximize2 lucide-maximize-2" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="15" xmlns="http://www.w3.org/2000/svg"><path d="M15 3h6v6"></path><path d="m21 3-7 7"></path><path d="m3 21 7-7"></path><path d="M9 21H3v-6"></path></svg></span></button></div></div></div><div aria-label="Título do campo" class="w-[350px]" role="dialog" style="position: fixed; top: 57px; left: 16px; z-index: 60; visibility: visible; max-height: 692px; max-width: 1264px;"><div class="flex flex-col overflow-hidden rounded-[5px] bg-background max-w-[calc(100vw-32px)] shadow-[0px_8px_10px_0px_rgba(0,0,0,0.14),0px_3px_14px_0px_rgba(0,0,0,0.12),0px_5px_5px_0px_rgba(0,0,0,0.20)]"><div class="flex w-full items-center border-b border-neutral-level_2 bg-background"><div class="flex h-[50px] flex-1 items-center justify-end px-[15px] gap-[10px]"><div class="flex min-w-0 flex-1 items-center"><span class="truncate text-base font-semibold text-font-level_1">Título do campo</span></div><div class="flex shrink-0 items-center gap-[10px]"><button aria-label="Fechar" class="flex size-[35px] max-md:min-h-[44px] max-md:min-w-[44px] shrink-0 cursor-pointer items-center justify-center rounded-[5px] border border-neutral-level_2 bg-background transition-colors hover:bg-neutral-level_1 active:bg-neutral-level_2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-confirmation focus-visible:ring-offset-1" type="button"><span aria-hidden="true" class="inline-flex shrink-0 items-center justify-center text-font"><svg aria-hidden="true" class="lucide lucide-x" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="15" xmlns="http://www.w3.org/2000/svg"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg></span></button></div></div></div><div class="min-h-0 flex-1 overflow-y-auto p-[15px]" tabindex="0"><div class="flex w-full flex-col items-start"><div class="relative flex w-full bg-background transition-colors rounded-[5px] border border-neutral-level_2 items-start px-0 hover:border-font-level_2 focus-within:border-confirmation"><textarea class="min-w-0 flex-1 bg-transparent px-[10px] py-[6px] text-sm leading-[18px] text-font outline-none placeholder:text-font-level_2 disabled:cursor-not-allowed h-[60px] min-h-[60px] max-md:max-h-[40vh] resize-y" id="field-multiline-_r_1_" placeholder="Lorem Ipsum"></textarea></div></div></div></div></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const CellTheme: Story = {
+  args: { theme: &#x27;cell&#x27;, label: &#x27;Título do campo&#x27; },
+  decorators: [
+    (Story) =&gt; (
+      &lt;div style={{ width: 200, height: 280 }}&gt;
+        &lt;Story /&gt;
+      &lt;/div&gt;
+    ),
+  ],
+}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">Cell Statuses</h2>
+    <div class="ds-story-id">fields-field02textmultiline--cell-statuses · export <b>CellStatuses</b></div>
+    <div class="ds-canvas ds-canvas--padded">
+<div style="width: 300px;"><div style="display: flex; flex-direction: column; gap: 16px; width: 200px; padding-bottom: 240px;"><div class="relative flex w-full flex-col items-start" role="presentation"><button aria-expanded="false" aria-haspopup="dialog" aria-label="Neutral" class="relative flex w-full bg-background px-[10px] transition-colors rounded-none border-[0.5px] border-neutral-level_2 items-center gap-[10px] text-left h-[40px] hover:border hover:border-font-level_2 focus-within:border focus-within:border-confirmation focus-within:ring-2 focus-within:ring-confirmation-default_30 cursor-pointer" type="button"><span class="min-w-0 flex-1 truncate text-sm text-font-level_2">Neutral</span><span aria-hidden="true" class="inline-flex items-center justify-center shrink-0 text-font-level_2"><svg aria-hidden="true" class="lucide lucide-maximize2 lucide-maximize-2" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="15" xmlns="http://www.w3.org/2000/svg"><path d="M15 3h6v6"></path><path d="m21 3-7 7"></path><path d="m3 21 7-7"></path><path d="M9 21H3v-6"></path></svg></span></button></div><div class="relative flex w-full flex-col items-start" role="presentation"><button aria-expanded="false" aria-haspopup="dialog" aria-label="Danger" class="relative flex w-full bg-background px-[10px] transition-colors rounded-none border-[0.5px] border-danger items-center gap-[10px] text-left h-[40px] hover:border focus-within:border focus-within:ring-2 focus-within:ring-danger-default_30 cursor-pointer" type="button"><span class="min-w-0 flex-1 truncate text-sm text-font-level_2">Danger</span><span aria-hidden="true" class="inline-flex items-center justify-center shrink-0 text-font-level_2"><svg aria-hidden="true" class="lucide lucide-maximize2 lucide-maximize-2" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="15" xmlns="http://www.w3.org/2000/svg"><path d="M15 3h6v6"></path><path d="m21 3-7 7"></path><path d="m3 21 7-7"></path><path d="M9 21H3v-6"></path></svg></span></button></div><div class="relative flex w-full flex-col items-start" role="presentation"><button aria-expanded="false" aria-haspopup="dialog" aria-label="Alert" class="relative flex w-full bg-background px-[10px] transition-colors rounded-none border-[0.5px] border-alert items-center gap-[10px] text-left h-[40px] hover:border focus-within:border focus-within:ring-2 focus-within:ring-alert-default_30 cursor-pointer" type="button"><span class="min-w-0 flex-1 truncate text-sm text-font-level_2">Alert</span><span aria-hidden="true" class="inline-flex items-center justify-center shrink-0 text-font-level_2"><svg aria-hidden="true" class="lucide lucide-maximize2 lucide-maximize-2" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="15" xmlns="http://www.w3.org/2000/svg"><path d="M15 3h6v6"></path><path d="m21 3-7 7"></path><path d="m3 21 7-7"></path><path d="M9 21H3v-6"></path></svg></span></button></div><div class="relative flex w-full flex-col items-start" role="presentation"><button aria-expanded="false" aria-haspopup="dialog" aria-label="Disabled" class="relative flex w-full px-[10px] transition-colors rounded-none border-[0.5px] border-neutral-level_2 items-center gap-[10px] text-left h-[40px] cursor-default bg-neutral-level_1" disabled="" type="button"><span class="min-w-0 flex-1 truncate text-sm text-font-level_2">Disabled</span><span aria-hidden="true" class="inline-flex items-center justify-center shrink-0 text-font-level_2"><svg aria-hidden="true" class="lucide lucide-maximize2 lucide-maximize-2" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="15" xmlns="http://www.w3.org/2000/svg"><path d="M15 3h6v6"></path><path d="m21 3-7 7"></path><path d="m3 21 7-7"></path><path d="M9 21H3v-6"></path></svg></span></button></div><div class="relative flex w-full flex-col items-start" role="presentation"><button aria-expanded="false" aria-haspopup="dialog" aria-label="View only" class="relative flex w-full bg-background px-[10px] transition-colors rounded-none border-[0.5px] border-neutral-level_2 items-center gap-[10px] text-left h-[40px] cursor-default" type="button"><span class="min-w-0 flex-1 truncate text-sm text-font">View only</span></button></div></div></div>
+    </div>
+    <p class="ds-state">estado aberto — após clique no gatilho</p>
+    <div class="ds-canvas ds-canvas--overlay">
+<div style="width: 300px;"><div style="display: flex; flex-direction: column; gap: 16px; width: 200px; padding-bottom: 240px;"><div class="relative flex w-full flex-col items-start" role="presentation"><button aria-expanded="true" aria-haspopup="dialog" aria-label="Neutral" class="relative flex w-full bg-background px-[10px] transition-colors rounded-none items-center gap-[10px] text-left h-[40px] cursor-pointer border border-confirmation" type="button"><span class="min-w-0 flex-1 truncate text-sm text-font-level_2">Neutral</span><span aria-hidden="true" class="inline-flex items-center justify-center shrink-0 text-font-level_2"><svg aria-hidden="true" class="lucide lucide-maximize2 lucide-maximize-2" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="15" xmlns="http://www.w3.org/2000/svg"><path d="M15 3h6v6"></path><path d="m21 3-7 7"></path><path d="m3 21 7-7"></path><path d="M9 21H3v-6"></path></svg></span></button></div><div class="relative flex w-full flex-col items-start" role="presentation"><button aria-expanded="false" aria-haspopup="dialog" aria-label="Danger" class="relative flex w-full bg-background px-[10px] transition-colors rounded-none border-[0.5px] border-danger items-center gap-[10px] text-left h-[40px] hover:border focus-within:border focus-within:ring-2 focus-within:ring-danger-default_30 cursor-pointer" type="button"><span class="min-w-0 flex-1 truncate text-sm text-font-level_2">Danger</span><span aria-hidden="true" class="inline-flex items-center justify-center shrink-0 text-font-level_2"><svg aria-hidden="true" class="lucide lucide-maximize2 lucide-maximize-2" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="15" xmlns="http://www.w3.org/2000/svg"><path d="M15 3h6v6"></path><path d="m21 3-7 7"></path><path d="m3 21 7-7"></path><path d="M9 21H3v-6"></path></svg></span></button></div><div class="relative flex w-full flex-col items-start" role="presentation"><button aria-expanded="false" aria-haspopup="dialog" aria-label="Alert" class="relative flex w-full bg-background px-[10px] transition-colors rounded-none border-[0.5px] border-alert items-center gap-[10px] text-left h-[40px] hover:border focus-within:border focus-within:ring-2 focus-within:ring-alert-default_30 cursor-pointer" type="button"><span class="min-w-0 flex-1 truncate text-sm text-font-level_2">Alert</span><span aria-hidden="true" class="inline-flex items-center justify-center shrink-0 text-font-level_2"><svg aria-hidden="true" class="lucide lucide-maximize2 lucide-maximize-2" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="15" xmlns="http://www.w3.org/2000/svg"><path d="M15 3h6v6"></path><path d="m21 3-7 7"></path><path d="m3 21 7-7"></path><path d="M9 21H3v-6"></path></svg></span></button></div><div class="relative flex w-full flex-col items-start" role="presentation"><button aria-expanded="false" aria-haspopup="dialog" aria-label="Disabled" class="relative flex w-full px-[10px] transition-colors rounded-none border-[0.5px] border-neutral-level_2 items-center gap-[10px] text-left h-[40px] cursor-default bg-neutral-level_1" disabled="" type="button"><span class="min-w-0 flex-1 truncate text-sm text-font-level_2">Disabled</span><span aria-hidden="true" class="inline-flex items-center justify-center shrink-0 text-font-level_2"><svg aria-hidden="true" class="lucide lucide-maximize2 lucide-maximize-2" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="15" xmlns="http://www.w3.org/2000/svg"><path d="M15 3h6v6"></path><path d="m21 3-7 7"></path><path d="m3 21 7-7"></path><path d="M9 21H3v-6"></path></svg></span></button></div><div class="relative flex w-full flex-col items-start" role="presentation"><button aria-expanded="false" aria-haspopup="dialog" aria-label="View only" class="relative flex w-full bg-background px-[10px] transition-colors rounded-none border-[0.5px] border-neutral-level_2 items-center gap-[10px] text-left h-[40px] cursor-default" type="button"><span class="min-w-0 flex-1 truncate text-sm text-font">View only</span></button></div></div></div><div aria-label="Neutral" class="w-[350px]" role="dialog" style="position: fixed; top: 57px; left: 16px; z-index: 60; visibility: visible; max-height: 692px; max-width: 1264px;"><div class="flex flex-col overflow-hidden rounded-[5px] bg-background max-w-[calc(100vw-32px)] shadow-[0px_8px_10px_0px_rgba(0,0,0,0.14),0px_3px_14px_0px_rgba(0,0,0,0.12),0px_5px_5px_0px_rgba(0,0,0,0.20)]"><div class="flex w-full items-center border-b border-neutral-level_2 bg-background"><div class="flex h-[50px] flex-1 items-center justify-end px-[15px] gap-[10px]"><div class="flex min-w-0 flex-1 items-center"><span class="truncate text-base font-semibold text-font-level_1">Neutral</span></div><div class="flex shrink-0 items-center gap-[10px]"><button aria-label="Fechar" class="flex size-[35px] max-md:min-h-[44px] max-md:min-w-[44px] shrink-0 cursor-pointer items-center justify-center rounded-[5px] border border-neutral-level_2 bg-background transition-colors hover:bg-neutral-level_1 active:bg-neutral-level_2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-confirmation focus-visible:ring-offset-1" type="button"><span aria-hidden="true" class="inline-flex shrink-0 items-center justify-center text-font"><svg aria-hidden="true" class="lucide lucide-x" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="15" xmlns="http://www.w3.org/2000/svg"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg></span></button></div></div></div><div class="min-h-0 flex-1 overflow-y-auto p-[15px]" tabindex="0"><div class="flex w-full flex-col items-start"><div class="relative flex w-full bg-background transition-colors rounded-[5px] border border-neutral-level_2 items-start px-0 hover:border-font-level_2 focus-within:border-confirmation"><textarea class="min-w-0 flex-1 bg-transparent px-[10px] py-[6px] text-sm leading-[18px] text-font outline-none placeholder:text-font-level_2 disabled:cursor-not-allowed h-[60px] min-h-[60px] max-md:max-h-[40vh] resize-y" id="field-multiline-_r_5_" placeholder="Neutral"></textarea></div></div></div></div></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const CellStatuses: Story = {
+  render: (args) =&gt; (
+    &lt;div
+      style={{
+        display: &#x27;flex&#x27;,
+        flexDirection: &#x27;column&#x27;,
+        gap: 16,
+        width: 200,
+        paddingBottom: 240,
+      }}
+    &gt;
+      &lt;Field02TextMultiline
+        {...args}
+        theme=&quot;cell&quot;
+        label=&quot;Neutral&quot;
+        placeholder=&quot;Neutral&quot;
+      /&gt;
+      &lt;Field02TextMultiline
+        {...args}
+        theme=&quot;cell&quot;
+        label=&quot;Danger&quot;
+        status=&quot;danger&quot;
+        placeholder=&quot;Danger&quot;
+      /&gt;
+      &lt;Field02TextMultiline
+        {...args}
+        theme=&quot;cell&quot;
+        label=&quot;Alert&quot;
+        status=&quot;alert&quot;
+        placeholder=&quot;Alert&quot;
+      /&gt;
+      &lt;Field02TextMultiline
+        {...args}
+        theme=&quot;cell&quot;
+        label=&quot;Disabled&quot;
+        disabled
+        placeholder=&quot;Disabled&quot;
+      /&gt;
+      &lt;Field02TextMultiline
+        {...args}
+        theme=&quot;cell&quot;
+        label=&quot;View only&quot;
+        viewOnly
+        defaultValue=&quot;View only&quot;
+      /&gt;
+    &lt;/div&gt;
+  ),
+}</code></pre></details>
+  </section>
+</body>
+</html>

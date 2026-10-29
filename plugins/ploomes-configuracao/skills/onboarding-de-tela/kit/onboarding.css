@@ -1,0 +1,165 @@
+/* Kit de onboarding — NÃO EDITE nesta tela (cópia de kit/ da skill onboarding-de-tela).
+   Só tokens de src/index.css: acompanha whitelabel e modo escuro. */
+
+.ob-camada { position: fixed; inset: 0; z-index: 4000; }
+/* a largura declarada inclui o padding: sem isso o cartão do tour (340 + 36 px) vazava na beira da tela */
+.ob-camada *, .ob-camada *::before, .ob-camada *::after, .ob-painel, .ob-painel *, .ob-menu, .ob-dica-balao { box-sizing: border-box; }
+.ob-veu { position: absolute; inset: 0; background: var(--color-background_opacity-level_1); }
+.ob-oculto { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+
+.ob-botao {
+  font: inherit; font-size: 14px; font-weight: 600; cursor: pointer; border-radius: 8px; padding: 8px 14px;
+  border: 1px solid var(--color-neutral-level_3); background: var(--color-background); color: var(--color-font);
+}
+.ob-botao:hover { background: var(--color-neutral-level_1); }
+.ob-botao:focus-visible, .ob-tarefa:focus-visible, .ob-dica-botao:focus-visible, .ob-botao-ajuda:focus-visible, .ob-lancador:focus-visible {
+  outline: 2px solid var(--color-brand); outline-offset: 2px;
+}
+.ob-botao-principal { background: var(--color-brand); border-color: var(--color-brand); color: var(--color-white); }
+.ob-botao-principal:hover { background: var(--color-brand-level_2); }
+.ob-botao-leve { border-color: var(--color-background); background: var(--color-background); color: var(--color-font-level_1); }
+.ob-acoes { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-top: 18px; }
+.ob-acoes-direita { display: flex; gap: 8px; }
+.ob-fechar {
+  position: absolute; top: 12px; right: 12px; width: 32px; height: 32px; display: grid; place-items: center; cursor: pointer;
+  border-radius: 8px; border: 0; background: var(--color-background); color: var(--color-font-level_1);
+}
+.ob-fechar:hover { background: var(--color-neutral-level_1); }
+.ob-sobretitulo { margin: 0 0 4px; font-size: 12px; font-weight: 600; letter-spacing: .02em; text-transform: uppercase; color: var(--color-brand); }
+
+/* ---- Boas-vindas */
+.ob-boas-vindas {
+  position: absolute; left: 50%; top: 50%; translate: -50% -50%; width: min(460px, calc(100vw - 32px));
+  background: var(--color-background); color: var(--color-font); border-radius: 16px; padding: 28px 28px 22px;
+  box-shadow: 0 24px 60px var(--color-neutral-level_3), 0 0 0 1px var(--color-neutral-level_2);
+}
+.ob-palco { position: relative; min-height: 190px; overflow: hidden; }
+.ob-cartao { display: flex; flex-direction: column; gap: 6px; }
+.ob-cartao h2 { margin: 12px 0 0; font-size: 20px; line-height: 1.25; }
+.ob-cartao p { margin: 0; font-size: 15px; line-height: 1.5; color: var(--color-font-level_1); }
+.ob-icone {
+  width: 52px; height: 52px; border-radius: 14px; display: grid; place-items: center;
+  background: var(--color-brand-default_30); color: var(--color-brand);
+}
+.ob-pontos { display: flex; gap: 8px; justify-content: center; margin-top: 14px; }
+.ob-ponto { position: relative; width: 8px; height: 8px; padding: 0; border-radius: 99px; border: 0; cursor: pointer; background: var(--color-neutral-level_3); }
+.ob-ponto-ativo { position: absolute; inset: -1px -6px; border-radius: 99px; background: var(--color-brand); }
+
+/* ---- Tour */
+.ob-camada-tour { pointer-events: none; }
+.ob-holofote { position: absolute; inset: 0; }
+.ob-holofote-escuro { fill: var(--color-background_opacity); }
+.ob-holofote-borda { stroke: var(--color-brand); stroke-width: 2; }
+.ob-faixa { position: absolute; pointer-events: auto; }
+.ob-cartao-tour {
+  position: absolute; pointer-events: auto; background: var(--color-background); color: var(--color-font);
+  border-radius: 14px; padding: 18px 18px 14px; outline: none;
+  box-shadow: 0 18px 48px var(--color-neutral-level_3), 0 0 0 1px var(--color-neutral-level_2);
+  /* texto longo rola dentro do cartão, nunca passa da tela */
+  max-height: calc(100vh - 32px); overflow-y: auto;
+}
+.ob-cartao-tour h3 { margin: 2px 0 6px; font-size: 16px; line-height: 1.3; }
+.ob-texto { margin: 0; font-size: 14px; line-height: 1.5; color: var(--color-font-level_1); }
+.ob-contagem { margin: 8px 0 0; font-size: 12px; font-weight: 600; color: var(--color-font-level_2); }
+.ob-experimente {
+  display: flex; gap: 6px; align-items: flex-start; margin: 10px 0 0; padding: 8px 10px; border-radius: 8px; font-size: 13px;
+  background: var(--color-brand-default_30); color: var(--color-font);
+}
+.ob-experimente svg { color: var(--color-brand); flex: none; margin-top: 1px; }
+.ob-nota { margin: 10px 0 0; font-size: 13px; color: var(--color-font-level_2); }
+.ob-progresso { height: 4px; border-radius: 99px; background: var(--color-neutral-level_2); overflow: hidden; }
+.ob-progresso-barra { height: 100%; border-radius: 99px; background: var(--color-brand); }
+
+/* ---- Primeiros passos
+   O lançador fica no canto inferior esquerdo. Se a tela tiver algo ali (os controles do React Flow, por
+   exemplo), ela muda o lugar no próprio CSS, sem editar o kit:
+   :root { --ob-lancador-esquerda: 120px; --ob-lancador-baixo: 16px; } */
+.ob-lancador {
+  position: fixed; left: var(--ob-lancador-esquerda, 16px); bottom: var(--ob-lancador-baixo, 16px); z-index: 3500; display: flex; align-items: center; gap: 8px;
+  padding: 8px 14px 8px 10px; border-radius: 99px; cursor: pointer; font: inherit; font-size: 14px; font-weight: 600;
+  background: var(--color-background); color: var(--color-font); border: 1px solid var(--color-neutral-level_3);
+  box-shadow: 0 8px 24px var(--color-neutral-level_2);
+}
+.ob-lancador-conta { font-size: 12px; color: var(--color-font-level_2); }
+.ob-anel-fundo { fill: none; stroke: var(--color-neutral-level_2); stroke-width: 4; }
+.ob-anel-frente { fill: none; stroke: var(--color-success); stroke-width: 4; stroke-linecap: round; }
+.ob-painel {
+  position: fixed; left: var(--ob-lancador-esquerda, 16px); bottom: calc(var(--ob-lancador-baixo, 16px) + 52px); z-index: 3600; width: min(360px, calc(100vw - 32px)); max-height: min(560px, calc(100vh - 100px));
+  overflow: auto; background: var(--color-background); color: var(--color-font); border-radius: 14px; padding: 16px;
+  box-shadow: 0 18px 48px var(--color-neutral-level_3), 0 0 0 1px var(--color-neutral-level_2);
+}
+.ob-painel-topo { position: relative; padding-right: 36px; }
+.ob-painel-topo .ob-fechar { top: -4px; right: -4px; }
+.ob-painel-topo h3 { margin: 0; font-size: 16px; }
+.ob-lista { list-style: none; margin: 12px 0 0; padding: 0; display: grid; gap: 4px; }
+.ob-tarefa {
+  width: 100%; display: flex; align-items: flex-start; gap: 10px; text-align: left; cursor: pointer; font: inherit;
+  padding: 10px; border-radius: 10px; border: 0; background: var(--color-background); color: var(--color-font);
+}
+.ob-tarefa:hover { background: var(--color-neutral-level_1); }
+.ob-tarefa-texto { display: grid; gap: 2px; flex: 1; }
+.ob-tarefa-texto strong { font-size: 14px; }
+.ob-tarefa-texto small { font-size: 12.5px; color: var(--color-font-level_1); line-height: 1.4; }
+.ob-tarefa-feita .ob-tarefa-texto strong { color: var(--color-font-level_2); text-decoration: line-through; }
+.ob-tarefa-seta { color: var(--color-font-level_2); margin-top: 2px; }
+.ob-caixinha {
+  flex: none; width: 20px; height: 20px; margin-top: 1px; border-radius: 6px; display: grid; place-items: center;
+  border: 2px solid var(--color-neutral-level_3); color: var(--color-white);
+}
+.ob-tarefa-feita .ob-caixinha { background: var(--color-success); border-color: var(--color-success); }
+.ob-painel-rodape { display: flex; gap: 8px; margin-top: 14px; padding-top: 12px; border-top: 1px solid var(--color-neutral-level_2); }
+.ob-realce {
+  position: fixed; z-index: 3400; pointer-events: none; border-radius: 12px;
+  box-shadow: 0 0 0 3px var(--color-brand), 0 0 0 9px var(--color-brand-default_30);
+}
+.ob-comemoracao { position: relative; height: 64px; display: grid; place-items: center; margin-top: 8px; }
+.ob-comemoracao-check { width: 40px; height: 40px; border-radius: 99px; display: grid; place-items: center; background: var(--color-success); color: var(--color-white); }
+.ob-confete { position: absolute; width: 7px; height: 7px; border-radius: 2px; }
+.ob-confete-0 { background: var(--color-brand); }
+.ob-confete-1 { background: var(--color-success); }
+.ob-confete-2 { background: var(--color-alert); }
+
+/* ---- Ajuda e dicas */
+.ob-ajuda { position: relative; display: inline-flex; }
+.ob-botao-ajuda {
+  display: inline-flex; align-items: center; gap: 6px; font: inherit; font-size: 14px; font-weight: 600; cursor: pointer;
+  padding: 7px 12px; border-radius: 8px; border: 1px solid var(--color-neutral-level_3); background: var(--color-background); color: var(--color-font);
+}
+.ob-botao-ajuda:hover { background: var(--color-neutral-level_1); }
+.ob-menu {
+  position: absolute; right: 0; top: calc(100% + 6px); z-index: 3700; min-width: 220px; display: grid; padding: 6px;
+  background: var(--color-background); border-radius: 10px; box-shadow: 0 12px 32px var(--color-neutral-level_3), 0 0 0 1px var(--color-neutral-level_2);
+}
+.ob-menu button { font: inherit; font-size: 14px; text-align: left; padding: 9px 10px; border: 0; border-radius: 6px; cursor: pointer; background: var(--color-background); color: var(--color-font); }
+.ob-menu button:hover, .ob-menu button:focus-visible { background: var(--color-neutral-level_1); outline: none; }
+.ob-dica { position: relative; display: inline-flex; vertical-align: middle; margin-left: 4px; }
+.ob-dica-botao {
+  width: 18px; height: 18px; padding: 0; border-radius: 99px; cursor: help; font: inherit; font-size: 11px; font-weight: 700; line-height: 1;
+  border: 1px solid var(--color-neutral-level_3); background: var(--color-background); color: var(--color-font-level_1);
+}
+.ob-dica-balao {
+  position: fixed; translate: -50% 0; z-index: 4100; width: max-content; max-width: 260px; pointer-events: none;
+  font-family: Inter, 'Segoe UI', Roboto, system-ui, -apple-system, sans-serif;
+  display: grid; gap: 4px; padding: 10px 12px; border-radius: 10px; font-size: 13px; line-height: 1.45; text-align: left;
+  background: var(--color-font); color: var(--color-background); box-shadow: 0 10px 28px var(--color-neutral-level_3);
+}
+.ob-dica-balao strong { font-size: 13px; }
+.ob-dica-acima { translate: -50% -100%; }
+
+/* O que há de novo: a lista dos passos que entraram nesta versão */
+.ob-novidades { list-style: none; margin: 10px 0 0; padding: 0; display: grid; gap: 8px; max-height: 40vh; overflow: auto; }
+.ob-novidades li { display: flex; gap: 8px; align-items: flex-start; font-size: 14px; line-height: 1.45; color: var(--color-font-level_1); }
+.ob-novidades li svg { flex: none; margin-top: 2px; color: var(--color-success); }
+.ob-novidades strong { color: var(--color-font); }
+
+@media (max-width: 600px) {
+  .ob-boas-vindas { padding: 22px 18px 16px; }
+  .ob-lancador span:not(.ob-lancador-conta) { display: none; }
+}
+
+/* no fim do arquivo para vencer o "font: inherit" dos botões-raiz (o lançador) */
+/* o kit desenha em portal no <body>, fora da tela: a base não dá fonte ao body, então cada raiz traz a sua */
+.ob-camada, .ob-lancador, .ob-painel, .ob-comemoracao, .ob-ajuda, .ob-dica {
+  font-family: Inter, 'Segoe UI', Roboto, system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}

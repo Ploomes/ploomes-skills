@@ -1,0 +1,153 @@
+<!doctype html>
+<!--
+  Ploomes Design System — snapshot estático das stories do Storybook.
+  Componente : Fields/Field17Address
+  Stories    : 10 (Default, Filled, With Location Action, Danger, Alert, Disabled, View Only, Loading, All Sizes, Cell Statuses)
+  Story      : Field17Address.stories.tsx
+  Tema       : light — use <html class="dark"> para o tema escuro.
+-->
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Field17Address — Ploomes DS</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;600;700&display=swap">
+<link rel="stylesheet" href="../assets/design-system.css">
+<link rel="stylesheet" href="../assets/page.css">
+</head>
+<body class="ds-page">
+  <header class="ds-head">
+    <a class="ds-back" href="../index.html">← inventário</a>
+    <h1 class="ds-title">Field17Address</h1>
+    <p class="ds-meta">fields · 10 stories · <code>Field17Address.stories.tsx</code></p>
+    <pre class="ds-code ds-import">import { Field17Address } from &#x27;@ploomescrm/ui&#x27;;</pre>
+    <pre class="ds-code">// props padrão de todas as stories (meta.args)
+args: {
+  label: &#x27;Endereço&#x27;,
+  placeholder: &#x27;Lorem Ipsum&#x27;,
+}</pre>
+  </header>
+  <section class="ds-story">
+    <h2 class="ds-story-name">Default</h2>
+    <div class="ds-story-id">fields-field17address--default · export <b>Default</b></div>
+    <div class="ds-canvas ds-canvas--padded">
+<div style="width: 300px;"><div class="flex w-full flex-col items-start"><div class="flex w-full items-center gap-[5px] pb-[5px]"><label class="shrink-0 text-sm leading-[18px] text-font" for="field-address-_r_0_" id="field-address-_r_0_-label">Endereço</label><div class="flex h-4 min-w-0 flex-1 items-center gap-[5px]"></div></div><div class="relative flex w-full bg-background px-[10px] transition-colors rounded-[5px] border border-neutral-level_2 items-center gap-[10px] h-[30px] hover:border-font-level_2 focus-within:border-confirmation"><input class="min-w-0 flex-1 truncate bg-transparent text-font outline-none placeholder:text-font-level_2 disabled:cursor-not-allowed text-sm" id="field-address-_r_0_" placeholder="Lorem Ipsum" value=""/><span class="flex shrink-0 items-center justify-center text-font-level_2"><span aria-hidden="true" class="inline-flex shrink-0 items-center justify-center text-current"><svg aria-hidden="true" class="lucide lucide-map-pin" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="15" xmlns="http://www.w3.org/2000/svg"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path><circle cx="12" cy="10" r="3"></circle></svg></span></span></div></div></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const Default: Story = {}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">Filled</h2>
+    <div class="ds-story-id">fields-field17address--filled · export <b>Filled</b></div>
+    <div class="ds-canvas ds-canvas--padded">
+<div style="width: 300px;"><div class="flex w-full flex-col items-start"><div class="flex w-full items-center gap-[5px] pb-[5px]"><label class="shrink-0 text-sm leading-[18px] text-font" for="field-address-_r_0_" id="field-address-_r_0_-label">Endereço</label><div class="flex h-4 min-w-0 flex-1 items-center gap-[5px]"></div></div><div class="relative flex w-full bg-background px-[10px] transition-colors rounded-[5px] border border-neutral-level_2 items-center gap-[10px] h-[30px] hover:border-font-level_2 focus-within:border-confirmation"><input class="min-w-0 flex-1 truncate bg-transparent text-font outline-none placeholder:text-font-level_2 disabled:cursor-not-allowed text-sm" id="field-address-_r_0_" placeholder="Lorem Ipsum" value="Rua Exemplo, 100 - Centro, São Paulo"/><span class="flex shrink-0 items-center justify-center text-font-level_2"><span aria-hidden="true" class="inline-flex shrink-0 items-center justify-center text-current"><svg aria-hidden="true" class="lucide lucide-map-pin" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="15" xmlns="http://www.w3.org/2000/svg"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path><circle cx="12" cy="10" r="3"></circle></svg></span></span></div></div></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const Filled: Story = {
+  args: { defaultValue: &#x27;Rua Exemplo, 100 - Centro, São Paulo&#x27; },
+}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">With Location Action</h2>
+    <div class="ds-story-id">fields-field17address--with-location-action · export <b>WithLocationAction</b></div>
+    <div class="ds-canvas ds-canvas--padded">
+<div style="width: 300px;"><div class="flex w-full flex-col items-start"><div class="flex w-full items-center gap-[5px] pb-[5px]"><label class="shrink-0 text-sm leading-[18px] text-font" for="field-address-_r_0_" id="field-address-_r_0_-label">Endereço</label><div class="flex h-4 min-w-0 flex-1 items-center gap-[5px]"></div></div><div class="relative flex w-full bg-background px-[10px] transition-colors rounded-[5px] border border-neutral-level_2 items-center gap-[10px] h-[30px] hover:border-font-level_2 focus-within:border-confirmation"><input class="min-w-0 flex-1 truncate bg-transparent text-font outline-none placeholder:text-font-level_2 disabled:cursor-not-allowed text-sm" id="field-address-_r_0_" placeholder="Lorem Ipsum" value="Rua Exemplo, 100 - Centro, São Paulo"/><button aria-label="Abrir localização" class="flex shrink-0 cursor-pointer items-center justify-center text-font-level_2 transition-colors hover:text-font disabled:cursor-default disabled:hover:text-font-level_2" tabindex="-1" type="button"><span aria-hidden="true" class="inline-flex shrink-0 items-center justify-center text-current"><svg aria-hidden="true" class="lucide lucide-map-pin" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="15" xmlns="http://www.w3.org/2000/svg"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path><circle cx="12" cy="10" r="3"></circle></svg></span></button></div></div></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const WithLocationAction: Story = {
+  args: {
+    defaultValue: &#x27;Rua Exemplo, 100 - Centro, São Paulo&#x27;,
+    onLocationClick: () =&gt; {},
+  },
+}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">Danger</h2>
+    <div class="ds-story-id">fields-field17address--danger · export <b>Danger</b></div>
+    <div class="ds-canvas ds-canvas--padded">
+<div style="width: 300px;"><div class="flex w-full flex-col items-start"><div class="flex w-full items-center gap-[5px] pb-[5px]"><label class="shrink-0 text-sm leading-[18px] text-font" for="field-address-_r_0_" id="field-address-_r_0_-label">Endereço</label><div class="flex h-4 min-w-0 flex-1 items-center gap-[5px]"></div></div><div class="relative flex w-full bg-background px-[10px] transition-colors rounded-[5px] border border-danger items-center gap-[10px] h-[30px]"><input aria-describedby="field-address-_r_0_-help" aria-invalid="true" class="min-w-0 flex-1 truncate bg-transparent text-font outline-none placeholder:text-font-level_2 disabled:cursor-not-allowed text-sm" id="field-address-_r_0_" placeholder="Lorem Ipsum" value=""/><span class="flex shrink-0 items-center justify-center text-font-level_2"><span aria-hidden="true" class="inline-flex shrink-0 items-center justify-center text-current"><svg aria-hidden="true" class="lucide lucide-map-pin" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="15" xmlns="http://www.w3.org/2000/svg"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path><circle cx="12" cy="10" r="3"></circle></svg></span></span></div><p class="w-full whitespace-normal px-[10px] pt-[3px] text-[13px] leading-[18px] md:truncate text-danger" id="field-address-_r_0_-help">Texto de ajuda</p></div></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const Danger: Story = {
+  args: { status: &#x27;danger&#x27;, helpText: &#x27;Texto de ajuda&#x27; },
+}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">Alert</h2>
+    <div class="ds-story-id">fields-field17address--alert · export <b>Alert</b></div>
+    <div class="ds-canvas ds-canvas--padded">
+<div style="width: 300px;"><div class="flex w-full flex-col items-start"><div class="flex w-full items-center gap-[5px] pb-[5px]"><label class="shrink-0 text-sm leading-[18px] text-font" for="field-address-_r_0_" id="field-address-_r_0_-label">Endereço</label><div class="flex h-4 min-w-0 flex-1 items-center gap-[5px]"></div></div><div class="relative flex w-full bg-background px-[10px] transition-colors rounded-[5px] border border-alert items-center gap-[10px] h-[30px]"><input aria-describedby="field-address-_r_0_-help" class="min-w-0 flex-1 truncate bg-transparent text-font outline-none placeholder:text-font-level_2 disabled:cursor-not-allowed text-sm" id="field-address-_r_0_" placeholder="Lorem Ipsum" value=""/><span class="flex shrink-0 items-center justify-center text-font-level_2"><span aria-hidden="true" class="inline-flex shrink-0 items-center justify-center text-current"><svg aria-hidden="true" class="lucide lucide-map-pin" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="15" xmlns="http://www.w3.org/2000/svg"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path><circle cx="12" cy="10" r="3"></circle></svg></span></span></div><p class="w-full whitespace-normal px-[10px] pt-[3px] text-[13px] leading-[18px] md:truncate text-font-level_2" id="field-address-_r_0_-help">Texto de ajuda</p></div></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const Alert: Story = {
+  args: { status: &#x27;alert&#x27;, helpText: &#x27;Texto de ajuda&#x27; },
+}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">Disabled</h2>
+    <div class="ds-story-id">fields-field17address--disabled · export <b>Disabled</b></div>
+    <div class="ds-canvas ds-canvas--padded">
+<div style="width: 300px;"><div class="flex w-full flex-col items-start"><div class="flex w-full items-center gap-[5px] pb-[5px]"><label class="shrink-0 text-sm leading-[18px] text-font" for="field-address-_r_0_" id="field-address-_r_0_-label">Endereço</label><div class="flex h-4 min-w-0 flex-1 items-center gap-[5px]"></div></div><div class="relative flex w-full px-[10px] transition-colors rounded-[5px] border border-neutral-level_2 items-center gap-[10px] h-[30px] bg-neutral-level_1"><input class="min-w-0 flex-1 truncate bg-transparent text-font outline-none placeholder:text-font-level_2 disabled:cursor-not-allowed text-sm" disabled="" id="field-address-_r_0_" placeholder="Lorem Ipsum" value="Rua Exemplo, 100 - Centro"/><span class="flex shrink-0 items-center justify-center text-font-level_2"><span aria-hidden="true" class="inline-flex shrink-0 items-center justify-center text-current"><svg aria-hidden="true" class="lucide lucide-map-pin" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="15" xmlns="http://www.w3.org/2000/svg"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path><circle cx="12" cy="10" r="3"></circle></svg></span></span></div></div></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const Disabled: Story = {
+  args: { disabled: true, defaultValue: &#x27;Rua Exemplo, 100 - Centro&#x27; },
+}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">View Only</h2>
+    <div class="ds-story-id">fields-field17address--view-only · export <b>ViewOnly</b></div>
+    <div class="ds-canvas ds-canvas--padded">
+<div style="width: 300px;"><div class="flex w-full flex-col items-start"><div class="flex w-full items-center gap-[5px] pb-[5px]"><label class="shrink-0 text-sm leading-[18px] text-font" for="field-address-_r_0_" id="field-address-_r_0_-label">Endereço</label><div class="flex h-4 min-w-0 flex-1 items-center gap-[5px]"></div></div><div class="relative flex w-full bg-background px-[10px] transition-colors rounded-[5px] border border-neutral-level_2 items-center gap-[10px] h-[30px]"><input class="min-w-0 flex-1 truncate bg-transparent text-font outline-none placeholder:text-font-level_2 disabled:cursor-not-allowed cursor-default text-sm" id="field-address-_r_0_" placeholder="Lorem Ipsum" readonly="" value="Rua Exemplo, 100 - Centro"/><span class="flex shrink-0 items-center justify-center text-font-level_2"><span aria-hidden="true" class="inline-flex shrink-0 items-center justify-center text-current"><svg aria-hidden="true" class="lucide lucide-map-pin" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="15" xmlns="http://www.w3.org/2000/svg"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path><circle cx="12" cy="10" r="3"></circle></svg></span></span></div></div></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const ViewOnly: Story = {
+  args: { viewOnly: true, defaultValue: &#x27;Rua Exemplo, 100 - Centro&#x27; },
+}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">Loading</h2>
+    <div class="ds-story-id">fields-field17address--loading · export <b>Loading</b></div>
+    <div class="ds-canvas ds-canvas--padded">
+<div style="width: 300px;"><div class="flex w-full flex-col items-start"><div class="flex w-full items-center gap-[5px] pb-[5px]"><label class="shrink-0 text-sm leading-[18px] text-font" for="field-address-_r_0_" id="field-address-_r_0_-label">Endereço</label><div class="flex h-4 min-w-0 flex-1 items-center gap-[5px]"></div></div><div aria-busy="true" class="relative flex w-full bg-background px-[10px] transition-colors rounded-[5px] border border-neutral-level_2 items-center gap-[10px] h-[30px]"><span class="my-[5px] h-[calc(100%-10px)] w-full animate-pulse rounded-[2px] bg-neutral-level_2" data-testid="field-skeleton"></span></div></div></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const Loading: Story = {
+  args: { loading: true },
+}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">All Sizes</h2>
+    <div class="ds-story-id">fields-field17address--all-sizes · export <b>AllSizes</b></div>
+    <div class="ds-canvas ds-canvas--padded">
+<div style="width: 300px;"><div style="display: flex; flex-direction: column; gap: 16px;"><div class="flex w-full flex-col items-start"><div class="flex w-full items-center gap-[5px] pb-[5px]"><label class="shrink-0 text-sm leading-[18px] text-font" for="field-address-_r_0_" id="field-address-_r_0_-label">Small (30px)</label><div class="flex h-4 min-w-0 flex-1 items-center gap-[5px]"></div></div><div class="relative flex w-full bg-background px-[10px] transition-colors rounded-[5px] border border-neutral-level_2 items-center gap-[10px] h-[30px] hover:border-font-level_2 focus-within:border-confirmation"><input class="min-w-0 flex-1 truncate bg-transparent text-font outline-none placeholder:text-font-level_2 disabled:cursor-not-allowed text-sm" id="field-address-_r_0_" placeholder="Lorem Ipsum" value=""/><span class="flex shrink-0 items-center justify-center text-font-level_2"><span aria-hidden="true" class="inline-flex shrink-0 items-center justify-center text-current"><svg aria-hidden="true" class="lucide lucide-map-pin" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="15" xmlns="http://www.w3.org/2000/svg"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path><circle cx="12" cy="10" r="3"></circle></svg></span></span></div></div><div class="flex w-full flex-col items-start"><div class="flex w-full items-center gap-[5px] pb-[5px]"><label class="shrink-0 text-sm leading-[18px] text-font" for="field-address-_r_1_" id="field-address-_r_1_-label">Normal (35px)</label><div class="flex h-4 min-w-0 flex-1 items-center gap-[5px]"></div></div><div class="relative flex w-full bg-background px-[10px] transition-colors rounded-[5px] border border-neutral-level_2 items-center gap-[10px] h-[35px] hover:border-font-level_2 focus-within:border-confirmation"><input class="min-w-0 flex-1 truncate bg-transparent text-font outline-none placeholder:text-font-level_2 disabled:cursor-not-allowed text-sm" id="field-address-_r_1_" placeholder="Lorem Ipsum" value=""/><span class="flex shrink-0 items-center justify-center text-font-level_2"><span aria-hidden="true" class="inline-flex shrink-0 items-center justify-center text-current"><svg aria-hidden="true" class="lucide lucide-map-pin" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="15" xmlns="http://www.w3.org/2000/svg"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path><circle cx="12" cy="10" r="3"></circle></svg></span></span></div></div><div class="flex w-full flex-col items-start"><div class="flex w-full items-center gap-[5px] pb-[5px]"><label class="shrink-0 text-sm leading-[18px] text-font" for="field-address-_r_2_" id="field-address-_r_2_-label">Big (40px)</label><div class="flex h-4 min-w-0 flex-1 items-center gap-[5px]"></div></div><div class="relative flex w-full bg-background px-[10px] transition-colors rounded-[5px] border border-neutral-level_2 items-center gap-[10px] h-[40px] hover:border-font-level_2 focus-within:border-confirmation"><input class="min-w-0 flex-1 truncate bg-transparent text-font outline-none placeholder:text-font-level_2 disabled:cursor-not-allowed text-base" id="field-address-_r_2_" placeholder="Lorem Ipsum" value=""/><span class="flex shrink-0 items-center justify-center text-font-level_2"><span aria-hidden="true" class="inline-flex shrink-0 items-center justify-center text-current"><svg aria-hidden="true" class="lucide lucide-map-pin" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="15" xmlns="http://www.w3.org/2000/svg"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path><circle cx="12" cy="10" r="3"></circle></svg></span></span></div></div></div></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const AllSizes: Story = {
+  render: (args) =&gt; (
+    &lt;div style={{ display: &#x27;flex&#x27;, flexDirection: &#x27;column&#x27;, gap: 16 }}&gt;
+      &lt;Field17Address {...args} size=&quot;sm&quot; label=&quot;Small (30px)&quot; /&gt;
+      &lt;Field17Address {...args} size=&quot;md&quot; label=&quot;Normal (35px)&quot; /&gt;
+      &lt;Field17Address {...args} size=&quot;lg&quot; label=&quot;Big (40px)&quot; /&gt;
+    &lt;/div&gt;
+  ),
+}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">Cell Statuses</h2>
+    <div class="ds-story-id">fields-field17address--cell-statuses · export <b>CellStatuses</b></div>
+    <div class="ds-canvas ds-canvas--padded">
+<div style="width: 300px;"><div style="display: flex; flex-direction: column; gap: 16px; width: 200px;"><div class="flex w-full flex-col items-start"><div class="relative flex w-full bg-background px-[10px] transition-colors rounded-none border-[0.5px] border-neutral-level_2 items-center gap-[10px] h-[40px] hover:border hover:border-font-level_2 focus-within:border focus-within:border-confirmation focus-within:ring-2 focus-within:ring-confirmation-default_30"><input class="min-w-0 flex-1 truncate bg-transparent text-font outline-none placeholder:text-font-level_2 disabled:cursor-not-allowed text-sm" id="field-address-_r_0_" placeholder="Lorem Ipsum" value=""/><span class="flex shrink-0 items-center justify-center text-font-level_2"><span aria-hidden="true" class="inline-flex shrink-0 items-center justify-center text-current"><svg aria-hidden="true" class="lucide lucide-map-pin" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="15" xmlns="http://www.w3.org/2000/svg"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path><circle cx="12" cy="10" r="3"></circle></svg></span></span></div></div><div class="flex w-full flex-col items-start"><div class="relative flex w-full bg-background px-[10px] transition-colors rounded-none border-[0.5px] border-danger items-center gap-[10px] h-[40px] hover:border focus-within:border focus-within:ring-2 focus-within:ring-danger-default_30"><input aria-invalid="true" class="min-w-0 flex-1 truncate bg-transparent text-font outline-none placeholder:text-font-level_2 disabled:cursor-not-allowed text-sm" id="field-address-_r_1_" placeholder="Lorem Ipsum" value=""/><span class="flex shrink-0 items-center justify-center text-font-level_2"><span aria-hidden="true" class="inline-flex shrink-0 items-center justify-center text-current"><svg aria-hidden="true" class="lucide lucide-map-pin" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="15" xmlns="http://www.w3.org/2000/svg"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path><circle cx="12" cy="10" r="3"></circle></svg></span></span></div></div><div class="flex w-full flex-col items-start"><div class="relative flex w-full bg-background px-[10px] transition-colors rounded-none border-[0.5px] border-alert items-center gap-[10px] h-[40px] hover:border focus-within:border focus-within:ring-2 focus-within:ring-alert-default_30"><input class="min-w-0 flex-1 truncate bg-transparent text-font outline-none placeholder:text-font-level_2 disabled:cursor-not-allowed text-sm" id="field-address-_r_2_" placeholder="Lorem Ipsum" value=""/><span class="flex shrink-0 items-center justify-center text-font-level_2"><span aria-hidden="true" class="inline-flex shrink-0 items-center justify-center text-current"><svg aria-hidden="true" class="lucide lucide-map-pin" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="15" xmlns="http://www.w3.org/2000/svg"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path><circle cx="12" cy="10" r="3"></circle></svg></span></span></div></div><div class="flex w-full flex-col items-start"><div class="relative flex w-full px-[10px] transition-colors rounded-none border-[0.5px] border-neutral-level_2 items-center gap-[10px] h-[40px] bg-neutral-level_1"><input class="min-w-0 flex-1 truncate bg-transparent text-font outline-none placeholder:text-font-level_2 disabled:cursor-not-allowed text-sm" disabled="" id="field-address-_r_3_" placeholder="Lorem Ipsum" value=""/><span class="flex shrink-0 items-center justify-center text-font-level_2"><span aria-hidden="true" class="inline-flex shrink-0 items-center justify-center text-current"><svg aria-hidden="true" class="lucide lucide-map-pin" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="15" xmlns="http://www.w3.org/2000/svg"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path><circle cx="12" cy="10" r="3"></circle></svg></span></span></div></div><div class="flex w-full flex-col items-start"><div class="relative flex w-full bg-background px-[10px] transition-colors rounded-none border-[0.5px] border-neutral-level_2 items-center gap-[10px] h-[40px]"><input class="min-w-0 flex-1 truncate bg-transparent text-font outline-none placeholder:text-font-level_2 disabled:cursor-not-allowed cursor-default text-sm" id="field-address-_r_4_" placeholder="Lorem Ipsum" readonly="" value="Rua Exemplo, 100"/><span class="flex shrink-0 items-center justify-center text-font-level_2"><span aria-hidden="true" class="inline-flex shrink-0 items-center justify-center text-current"><svg aria-hidden="true" class="lucide lucide-map-pin" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="15" xmlns="http://www.w3.org/2000/svg"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path><circle cx="12" cy="10" r="3"></circle></svg></span></span></div></div></div></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const CellStatuses: Story = {
+  render: (args) =&gt; (
+    &lt;div
+      style={{ display: &#x27;flex&#x27;, flexDirection: &#x27;column&#x27;, gap: 16, width: 200 }}
+    &gt;
+      &lt;Field17Address {...args} theme=&quot;cell&quot; /&gt;
+      &lt;Field17Address {...args} theme=&quot;cell&quot; status=&quot;danger&quot; /&gt;
+      &lt;Field17Address {...args} theme=&quot;cell&quot; status=&quot;alert&quot; /&gt;
+      &lt;Field17Address {...args} theme=&quot;cell&quot; disabled /&gt;
+      &lt;Field17Address
+        {...args}
+        theme=&quot;cell&quot;
+        viewOnly
+        defaultValue=&quot;Rua Exemplo, 100&quot;
+      /&gt;
+    &lt;/div&gt;
+  ),
+}</code></pre></details>
+  </section>
+</body>
+</html>

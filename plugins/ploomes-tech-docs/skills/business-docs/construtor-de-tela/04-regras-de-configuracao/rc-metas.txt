@@ -1,0 +1,121 @@
+Regras para configuração de metas
+
+Para a criação de uma nova meta, é necessário, primeiro, criar um painel de metas, porque metas devem ser organizadas dentro de painéis.
+
+- Nome do painel;
+
+- Quem pode ver esse painel: primeiro, deve ser informado se essa configuração é por usuário, por perfil de usuário, por equipe ou para toda a empresa. Em seguida, eu defino uma lista de usuários, perfis ou equipes;
+
+Para a criação de uma nova meta dentro de um painel, as seguintes propriedades devem ou podem ser configuradas:
+
+0. Painel da meta
+
+Definir em qual painel a meta será criada.
+
+1. Nome da meta
+
+Define como a meta será identificada.
+
+Exemplos:
+
+Meta de vendas trimestral
+Meta de novos clientes
+Meta de propostas enviadas
+Meta de receita por vendedor
+
+Campo obrigatório, com limite aparente de 150 caracteres.
+
+2. Dado que será metrificado
+
+Define qual informação será medida pela meta. Configurar
+
+Entidade:
+Campo:
+
+Exemplos:
+
+Entidade: Negócio
+Campo: Valor
+
+Entidade: Cliente
+Campo: Quantidade de clientes criados
+
+3. Forma de agregação
+
+Define como os dados serão calculados. Escolher um dos tipos de agregação abaixo:
+
+Soma
+Contagem
+Média
+Máximo
+Mínimo
+
+4. Usuários ou equipes que precisam atingir a meta
+
+Define os usuários ou equipes de usuários vinculados à entidade da meta que entram no cálculo do atingido da meta.
+
+5. Papel dos usuários na meta
+
+Define qual campo de usuário (como descrito no item anterior) será usado para atribuir os resultados da meta.
+
+Exemplos:
+
+Responsável pelo negócio
+Criador do cliente
+Responsável pela proposta
+Vendedor
+SDR
+Closer
+CS responsável
+
+6. Usuários ou equipes que podem ver a meta
+
+Define quem pode ver essa meta: primeiro, deve ser informado se essa configuração é por usuário, por equipe ou para toda a empresa. Em seguida, eu defino uma lista de usuários, perfis ou equipes;
+
+7. Data de início
+
+Define a partir de quando a meta começa a ser medida.
+
+Exemplo:
+
+01/01/2026
+
+8. Data de término
+
+Define até quando a meta será medida.
+
+Exemplo:
+
+31/03/2026
+
+9. Campo de data considerado no intervalo
+
+Define qual campo de data da entidade da meta será usado para decidir se um registro entra ou não no período da meta.
+
+Exemplos:
+
+Data de criação
+Data de ganho
+Data de fechamento
+Data da proposta
+Data de emissão
+Data de conclusão
+
+10. Separação do intervalo
+
+Define como o período da meta será quebrado para acompanhamento. Escolher uma das opções abaixo:
+- Diário
+- Semanal
+- Mensal
+- Trimestral
+- Anual.
+
+11. Cor da meta
+
+Define a cor usada para exibir a meta na interface. Deve ser configurada em formato hexadecimal.
+
+Exemplo:
+
+#1E88E5
+
+12. Exibir apenas em porcentagem: ignorar propriedade.

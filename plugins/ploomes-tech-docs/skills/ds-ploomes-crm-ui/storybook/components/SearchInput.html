@@ -1,0 +1,151 @@
+<!doctype html>
+<!--
+  Ploomes Design System — snapshot estático das stories do Storybook.
+  Componente : Components/SearchInput
+  Stories    : 9 (Default, Size Sm, Size Md, Size Lg, With Value, All Sizes, All Sizes With Value, Controlled, All Variants)
+  Story      : SearchInput.stories.tsx
+  Tema       : light — use <html class="dark"> para o tema escuro.
+-->
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SearchInput — Ploomes DS</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;600;700&display=swap">
+<link rel="stylesheet" href="../assets/design-system.css">
+<link rel="stylesheet" href="../assets/page.css">
+</head>
+<body class="ds-page">
+  <header class="ds-head">
+    <a class="ds-back" href="../index.html">← inventário</a>
+    <h1 class="ds-title">SearchInput</h1>
+    <p class="ds-meta">components · 9 stories · <code>SearchInput.stories.tsx</code></p>
+    <pre class="ds-code ds-import">import { SearchInput } from &#x27;@ploomescrm/ui&#x27;;</pre>
+    <pre class="ds-code">// props padrão de todas as stories (meta.args)
+args: {
+  size: &#x27;sm&#x27;,
+  placeholder: &#x27;Buscar...&#x27;,
+}</pre>
+  </header>
+  <section class="ds-story">
+    <h2 class="ds-story-name">Default</h2>
+    <div class="ds-story-id">components-searchinput--default · export <b>Default</b></div>
+    <div class="ds-canvas ds-canvas--padded">
+<div class="flex items-center overflow-hidden rounded-[5px] bg-neutral-level_1 border border-transparent transition-colors focus-within:border-confirmation h-[30px]"><input class="min-w-0 flex-1 bg-transparent px-[10px] outline-none text-font placeholder:text-font-level_2 text-sm" placeholder="Buscar..." value=""/><button aria-label="Buscar" class="flex shrink-0 items-center justify-center rounded-[5px] transition-colors text-font cursor-default size-[30px]" tabindex="-1" type="button"><span aria-hidden="true" class="inline-flex shrink-0 items-center justify-center text-font"><svg aria-hidden="true" class="lucide lucide-search" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="15" xmlns="http://www.w3.org/2000/svg"><path d="m21 21-4.34-4.34"></path><circle cx="11" cy="11" r="8"></circle></svg></span></button></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const Default: Story = {}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">Size Sm</h2>
+    <div class="ds-story-id">components-searchinput--size-sm · export <b>SizeSm</b></div>
+    <div class="ds-canvas ds-canvas--padded">
+<div class="flex items-center overflow-hidden rounded-[5px] bg-neutral-level_1 border border-transparent transition-colors focus-within:border-confirmation h-[30px]"><input class="min-w-0 flex-1 bg-transparent px-[10px] outline-none text-font placeholder:text-font-level_2 text-sm" placeholder="Buscar..." value=""/><button aria-label="Buscar" class="flex shrink-0 items-center justify-center rounded-[5px] transition-colors text-font cursor-default size-[30px]" tabindex="-1" type="button"><span aria-hidden="true" class="inline-flex shrink-0 items-center justify-center text-font"><svg aria-hidden="true" class="lucide lucide-search" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="15" xmlns="http://www.w3.org/2000/svg"><path d="m21 21-4.34-4.34"></path><circle cx="11" cy="11" r="8"></circle></svg></span></button></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const SizeSm: Story = {
+  args: { size: &#x27;sm&#x27; },
+}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">Size Md</h2>
+    <div class="ds-story-id">components-searchinput--size-md · export <b>SizeMd</b></div>
+    <div class="ds-canvas ds-canvas--padded">
+<div class="flex items-center overflow-hidden rounded-[5px] bg-neutral-level_1 border border-transparent transition-colors focus-within:border-confirmation h-[35px]"><input class="min-w-0 flex-1 bg-transparent px-[10px] outline-none text-font placeholder:text-font-level_2 text-sm" placeholder="Buscar..." value=""/><button aria-label="Buscar" class="flex shrink-0 items-center justify-center rounded-[5px] transition-colors text-font cursor-default size-[35px]" tabindex="-1" type="button"><span aria-hidden="true" class="inline-flex shrink-0 items-center justify-center text-font"><svg aria-hidden="true" class="lucide lucide-search" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="15" xmlns="http://www.w3.org/2000/svg"><path d="m21 21-4.34-4.34"></path><circle cx="11" cy="11" r="8"></circle></svg></span></button></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const SizeMd: Story = {
+  args: { size: &#x27;md&#x27; },
+}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">Size Lg</h2>
+    <div class="ds-story-id">components-searchinput--size-lg · export <b>SizeLg</b></div>
+    <div class="ds-canvas ds-canvas--padded">
+<div class="flex items-center overflow-hidden rounded-[5px] bg-neutral-level_1 border border-transparent transition-colors focus-within:border-confirmation h-[40px]"><input class="min-w-0 flex-1 bg-transparent px-[10px] outline-none text-font placeholder:text-font-level_2 text-base" placeholder="Buscar..." value=""/><button aria-label="Buscar" class="flex shrink-0 items-center justify-center rounded-[5px] transition-colors text-font cursor-default size-[35px]" tabindex="-1" type="button"><span aria-hidden="true" class="inline-flex shrink-0 items-center justify-center text-font"><svg aria-hidden="true" class="lucide lucide-search" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="15" xmlns="http://www.w3.org/2000/svg"><path d="m21 21-4.34-4.34"></path><circle cx="11" cy="11" r="8"></circle></svg></span></button></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const SizeLg: Story = {
+  args: { size: &#x27;lg&#x27; },
+}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">With Value</h2>
+    <div class="ds-story-id">components-searchinput--with-value · export <b>WithValue</b></div>
+    <div class="ds-canvas ds-canvas--padded">
+<div class="flex items-center overflow-hidden rounded-[5px] bg-neutral-level_1 border border-transparent transition-colors focus-within:border-confirmation h-[30px]"><input class="min-w-0 flex-1 bg-transparent px-[10px] outline-none text-font placeholder:text-font-level_2 text-sm" placeholder="Buscar..." value="Lorem Ipsum"/><button aria-label="Limpar" class="flex shrink-0 items-center justify-center rounded-[5px] transition-colors text-font cursor-pointer hover:bg-neutral-level_2 active:bg-neutral-level_2/70 size-[30px]" tabindex="-1" type="button"><span aria-hidden="true" class="inline-flex shrink-0 items-center justify-center text-font"><svg aria-hidden="true" class="lucide lucide-x" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="15" xmlns="http://www.w3.org/2000/svg"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg></span></button></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const WithValue: Story = {
+  args: { size: &#x27;sm&#x27;, defaultValue: &#x27;Lorem Ipsum&#x27; },
+}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">All Sizes</h2>
+    <div class="ds-story-id">components-searchinput--all-sizes · export <b>AllSizes</b></div>
+    <div class="ds-canvas ds-canvas--padded">
+<div style="display: flex; flex-direction: column; gap: 8px; width: 200px;"><div class="flex items-center overflow-hidden rounded-[5px] bg-neutral-level_1 border border-transparent transition-colors focus-within:border-confirmation h-[30px]"><input class="min-w-0 flex-1 bg-transparent px-[10px] outline-none text-font placeholder:text-font-level_2 text-sm" placeholder="Small (30px)" value=""/><button aria-label="Buscar" class="flex shrink-0 items-center justify-center rounded-[5px] transition-colors text-font cursor-default size-[30px]" tabindex="-1" type="button"><span aria-hidden="true" class="inline-flex shrink-0 items-center justify-center text-font"><svg aria-hidden="true" class="lucide lucide-search" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="15" xmlns="http://www.w3.org/2000/svg"><path d="m21 21-4.34-4.34"></path><circle cx="11" cy="11" r="8"></circle></svg></span></button></div><div class="flex items-center overflow-hidden rounded-[5px] bg-neutral-level_1 border border-transparent transition-colors focus-within:border-confirmation h-[35px]"><input class="min-w-0 flex-1 bg-transparent px-[10px] outline-none text-font placeholder:text-font-level_2 text-sm" placeholder="Normal (35px)" value=""/><button aria-label="Buscar" class="flex shrink-0 items-center justify-center rounded-[5px] transition-colors text-font cursor-default size-[35px]" tabindex="-1" type="button"><span aria-hidden="true" class="inline-flex shrink-0 items-center justify-center text-font"><svg aria-hidden="true" class="lucide lucide-search" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="15" xmlns="http://www.w3.org/2000/svg"><path d="m21 21-4.34-4.34"></path><circle cx="11" cy="11" r="8"></circle></svg></span></button></div><div class="flex items-center overflow-hidden rounded-[5px] bg-neutral-level_1 border border-transparent transition-colors focus-within:border-confirmation h-[40px]"><input class="min-w-0 flex-1 bg-transparent px-[10px] outline-none text-font placeholder:text-font-level_2 text-base" placeholder="Big (40px)" value=""/><button aria-label="Buscar" class="flex shrink-0 items-center justify-center rounded-[5px] transition-colors text-font cursor-default size-[35px]" tabindex="-1" type="button"><span aria-hidden="true" class="inline-flex shrink-0 items-center justify-center text-font"><svg aria-hidden="true" class="lucide lucide-search" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="15" xmlns="http://www.w3.org/2000/svg"><path d="m21 21-4.34-4.34"></path><circle cx="11" cy="11" r="8"></circle></svg></span></button></div></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const AllSizes: Story = {
+  render: (args) =&gt; (
+    &lt;div
+      style={{ display: &#x27;flex&#x27;, flexDirection: &#x27;column&#x27;, gap: 8, width: 200 }}
+    &gt;
+      &lt;SearchInput {...args} size=&quot;sm&quot; placeholder=&quot;Small (30px)&quot; /&gt;
+      &lt;SearchInput {...args} size=&quot;md&quot; placeholder=&quot;Normal (35px)&quot; /&gt;
+      &lt;SearchInput {...args} size=&quot;lg&quot; placeholder=&quot;Big (40px)&quot; /&gt;
+    &lt;/div&gt;
+  ),
+}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">All Sizes With Value</h2>
+    <div class="ds-story-id">components-searchinput--all-sizes-with-value · export <b>AllSizesWithValue</b></div>
+    <div class="ds-canvas ds-canvas--padded">
+<div style="display: flex; flex-direction: column; gap: 8px; width: 200px;"><div class="flex items-center overflow-hidden rounded-[5px] bg-neutral-level_1 border border-transparent transition-colors focus-within:border-confirmation h-[30px]"><input class="min-w-0 flex-1 bg-transparent px-[10px] outline-none text-font placeholder:text-font-level_2 text-sm" placeholder="Buscar..." value="Lorem Ipsum"/><button aria-label="Limpar" class="flex shrink-0 items-center justify-center rounded-[5px] transition-colors text-font cursor-pointer hover:bg-neutral-level_2 active:bg-neutral-level_2/70 size-[30px]" tabindex="-1" type="button"><span aria-hidden="true" class="inline-flex shrink-0 items-center justify-center text-font"><svg aria-hidden="true" class="lucide lucide-x" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="15" xmlns="http://www.w3.org/2000/svg"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg></span></button></div><div class="flex items-center overflow-hidden rounded-[5px] bg-neutral-level_1 border border-transparent transition-colors focus-within:border-confirmation h-[35px]"><input class="min-w-0 flex-1 bg-transparent px-[10px] outline-none text-font placeholder:text-font-level_2 text-sm" placeholder="Buscar..." value="Lorem Ipsum"/><button aria-label="Limpar" class="flex shrink-0 items-center justify-center rounded-[5px] transition-colors text-font cursor-pointer hover:bg-neutral-level_2 active:bg-neutral-level_2/70 size-[35px]" tabindex="-1" type="button"><span aria-hidden="true" class="inline-flex shrink-0 items-center justify-center text-font"><svg aria-hidden="true" class="lucide lucide-x" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="15" xmlns="http://www.w3.org/2000/svg"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg></span></button></div><div class="flex items-center overflow-hidden rounded-[5px] bg-neutral-level_1 border border-transparent transition-colors focus-within:border-confirmation h-[40px]"><input class="min-w-0 flex-1 bg-transparent px-[10px] outline-none text-font placeholder:text-font-level_2 text-base" placeholder="Buscar..." value="Lorem Ipsum"/><button aria-label="Limpar" class="flex shrink-0 items-center justify-center rounded-[5px] transition-colors text-font cursor-pointer hover:bg-neutral-level_2 active:bg-neutral-level_2/70 size-[35px]" tabindex="-1" type="button"><span aria-hidden="true" class="inline-flex shrink-0 items-center justify-center text-font"><svg aria-hidden="true" class="lucide lucide-x" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="15" xmlns="http://www.w3.org/2000/svg"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg></span></button></div></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const AllSizesWithValue: Story = {
+  render: (args) =&gt; (
+    &lt;div
+      style={{ display: &#x27;flex&#x27;, flexDirection: &#x27;column&#x27;, gap: 8, width: 200 }}
+    &gt;
+      &lt;SearchInput {...args} size=&quot;sm&quot; defaultValue=&quot;Lorem Ipsum&quot; /&gt;
+      &lt;SearchInput {...args} size=&quot;md&quot; defaultValue=&quot;Lorem Ipsum&quot; /&gt;
+      &lt;SearchInput {...args} size=&quot;lg&quot; defaultValue=&quot;Lorem Ipsum&quot; /&gt;
+    &lt;/div&gt;
+  ),
+}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">Controlled</h2>
+    <div class="ds-story-id">components-searchinput--controlled · export <b>Controlled</b></div>
+    <div class="ds-canvas ds-canvas--padded">
+<div style="display: flex; flex-direction: column; gap: 12px; width: 240px;"><div class="flex items-center overflow-hidden rounded-[5px] bg-neutral-level_1 border border-transparent transition-colors focus-within:border-confirmation h-[35px]"><input class="min-w-0 flex-1 bg-transparent px-[10px] outline-none text-font placeholder:text-font-level_2 text-sm" placeholder="Digite para buscar..." value=""/><button aria-label="Buscar" class="flex shrink-0 items-center justify-center rounded-[5px] transition-colors text-font cursor-default size-[35px]" tabindex="-1" type="button"><span aria-hidden="true" class="inline-flex shrink-0 items-center justify-center text-font"><svg aria-hidden="true" class="lucide lucide-search" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="15" xmlns="http://www.w3.org/2000/svg"><path d="m21 21-4.34-4.34"></path><circle cx="11" cy="11" r="8"></circle></svg></span></button></div><p style="font-size: 13px; color: rgb(139, 133, 149);">Valor: <strong>(vazio)</strong></p></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const Controlled: Story = {
+  render: () =&gt; &lt;ControlledDemo /&gt;,
+}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">All Variants</h2>
+    <div class="ds-story-id">components-searchinput--all-variants · export <b>AllVariants</b></div>
+    <div class="ds-canvas ds-canvas--padded">
+<div style="display: grid; grid-template-columns: repeat(3, 200px); gap: 8px;"><div class="flex items-center overflow-hidden rounded-[5px] bg-neutral-level_1 border border-transparent transition-colors focus-within:border-confirmation h-[30px]"><input class="min-w-0 flex-1 bg-transparent px-[10px] outline-none text-font placeholder:text-font-level_2 text-sm" placeholder="Small placeholder" value=""/><button aria-label="Buscar" class="flex shrink-0 items-center justify-center rounded-[5px] transition-colors text-font cursor-default size-[30px]" tabindex="-1" type="button"><span aria-hidden="true" class="inline-flex shrink-0 items-center justify-center text-font"><svg aria-hidden="true" class="lucide lucide-search" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="15" xmlns="http://www.w3.org/2000/svg"><path d="m21 21-4.34-4.34"></path><circle cx="11" cy="11" r="8"></circle></svg></span></button></div><div class="flex items-center overflow-hidden rounded-[5px] bg-neutral-level_1 border border-transparent transition-colors focus-within:border-confirmation h-[35px]"><input class="min-w-0 flex-1 bg-transparent px-[10px] outline-none text-font placeholder:text-font-level_2 text-sm" placeholder="Normal placeholder" value=""/><button aria-label="Buscar" class="flex shrink-0 items-center justify-center rounded-[5px] transition-colors text-font cursor-default size-[35px]" tabindex="-1" type="button"><span aria-hidden="true" class="inline-flex shrink-0 items-center justify-center text-font"><svg aria-hidden="true" class="lucide lucide-search" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="15" xmlns="http://www.w3.org/2000/svg"><path d="m21 21-4.34-4.34"></path><circle cx="11" cy="11" r="8"></circle></svg></span></button></div><div class="flex items-center overflow-hidden rounded-[5px] bg-neutral-level_1 border border-transparent transition-colors focus-within:border-confirmation h-[40px]"><input class="min-w-0 flex-1 bg-transparent px-[10px] outline-none text-font placeholder:text-font-level_2 text-base" placeholder="Big placeholder" value=""/><button aria-label="Buscar" class="flex shrink-0 items-center justify-center rounded-[5px] transition-colors text-font cursor-default size-[35px]" tabindex="-1" type="button"><span aria-hidden="true" class="inline-flex shrink-0 items-center justify-center text-font"><svg aria-hidden="true" class="lucide lucide-search" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="15" xmlns="http://www.w3.org/2000/svg"><path d="m21 21-4.34-4.34"></path><circle cx="11" cy="11" r="8"></circle></svg></span></button></div><div class="flex items-center overflow-hidden rounded-[5px] bg-neutral-level_1 border border-transparent transition-colors focus-within:border-confirmation h-[30px]"><input class="min-w-0 flex-1 bg-transparent px-[10px] outline-none text-font placeholder:text-font-level_2 text-sm" value="Lorem Ipsum"/><button aria-label="Limpar" class="flex shrink-0 items-center justify-center rounded-[5px] transition-colors text-font cursor-pointer hover:bg-neutral-level_2 active:bg-neutral-level_2/70 size-[30px]" tabindex="-1" type="button"><span aria-hidden="true" class="inline-flex shrink-0 items-center justify-center text-font"><svg aria-hidden="true" class="lucide lucide-x" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="15" xmlns="http://www.w3.org/2000/svg"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg></span></button></div><div class="flex items-center overflow-hidden rounded-[5px] bg-neutral-level_1 border border-transparent transition-colors focus-within:border-confirmation h-[35px]"><input class="min-w-0 flex-1 bg-transparent px-[10px] outline-none text-font placeholder:text-font-level_2 text-sm" value="Lorem Ipsum"/><button aria-label="Limpar" class="flex shrink-0 items-center justify-center rounded-[5px] transition-colors text-font cursor-pointer hover:bg-neutral-level_2 active:bg-neutral-level_2/70 size-[35px]" tabindex="-1" type="button"><span aria-hidden="true" class="inline-flex shrink-0 items-center justify-center text-font"><svg aria-hidden="true" class="lucide lucide-x" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="15" xmlns="http://www.w3.org/2000/svg"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg></span></button></div><div class="flex items-center overflow-hidden rounded-[5px] bg-neutral-level_1 border border-transparent transition-colors focus-within:border-confirmation h-[40px]"><input class="min-w-0 flex-1 bg-transparent px-[10px] outline-none text-font placeholder:text-font-level_2 text-base" value="Lorem Ipsum"/><button aria-label="Limpar" class="flex shrink-0 items-center justify-center rounded-[5px] transition-colors text-font cursor-pointer hover:bg-neutral-level_2 active:bg-neutral-level_2/70 size-[35px]" tabindex="-1" type="button"><span aria-hidden="true" class="inline-flex shrink-0 items-center justify-center text-font"><svg aria-hidden="true" class="lucide lucide-x" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="15" xmlns="http://www.w3.org/2000/svg"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg></span></button></div></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const AllVariants: Story = {
+  render: () =&gt; (
+    &lt;div
+      style={{
+        display: &#x27;grid&#x27;,
+        gridTemplateColumns: &#x27;repeat(3, 200px)&#x27;,
+        gap: 8,
+      }}
+    &gt;
+      &lt;SearchInput size=&quot;sm&quot; placeholder=&quot;Small placeholder&quot; /&gt;
+      &lt;SearchInput size=&quot;md&quot; placeholder=&quot;Normal placeholder&quot; /&gt;
+      &lt;SearchInput size=&quot;lg&quot; placeholder=&quot;Big placeholder&quot; /&gt;
+      {/* with value (focused ring visible on click) */}
+      &lt;SearchInput size=&quot;sm&quot; defaultValue=&quot;Lorem Ipsum&quot; /&gt;
+      &lt;SearchInput size=&quot;md&quot; defaultValue=&quot;Lorem Ipsum&quot; /&gt;
+      &lt;SearchInput size=&quot;lg&quot; defaultValue=&quot;Lorem Ipsum&quot; /&gt;
+    &lt;/div&gt;
+  ),
+}</code></pre></details>
+  </section>
+</body>
+</html>

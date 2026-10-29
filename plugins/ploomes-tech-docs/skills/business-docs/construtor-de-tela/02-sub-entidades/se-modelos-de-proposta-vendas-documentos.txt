@@ -1,0 +1,17 @@
+Modelos de proposta, vendas e documentos (chamaremos de PVD)
+
+Para gerar PVDs, o Ploomes demanda a seleção de um modelo.
+
+Um modelo contém um formulário (conjunto de campos), um código HTML (que contém, dentro de si, referências para campos de entidades envolvidas que serão substituídos por valores após o usuário gerar uma PVD) e algumas configurações. Ou seja, quando o usuário clica no botão para gerar uma PVD no frontend nativo do Ploomes, ele seleciona o modelo, e o Ploomes exibe a lista de campos específica daquele modelo para serem preenchidos. Quando salvo, o HTML do modelo é gerado com os valores dos campos substituídos. Esse HTML com campos substituídos também é usado para a geração de um PDF daquele PVD específico.
+
+Na construção do software, caso exista a necessidade de geração de PVD, você pode buscar um modelo já existente como base. Caso não existam modelos, você pode gerar seu próprio modelo, incluindo os campos que você julga necessário e um HTML que dialogue com a demanda, incluindo no seu conteúdo os campos que serão posteriormente exibidos no HTML do PVD gerado.
+
+O formulário dos modelos são quebrados em 5 entidades:
+- Campos de proposta, venda e documento: são os campos que compõem o "cabeçalho" do PVD;
+- Campos de blocos de PVD: posso criar vários blocos dentro de um PVD. Geralmente, são usados para agrupar produtos (ex.: um bloco de produtos, outro de serviços). Esses blocos podem ser pré-fixados, mas posso pegar um bloco e incluir vários dele durante a geração de um novo PVD;
+- Campos de produtos de PVD: produtos de PVD e seus campos ficam dentro dos blocos;
+- Campos de opcionais de PVD: opcionais de PVD e seus campos ficam dentro dos produtos.
+
+O modelo é específico para proposta, venda ou documento. Ou seja, não consigo usar um mesmo modelo para mais de uma dessas entidades. Além disso, os modelos de documento de cliente são separados dos modelos de documento de negócio.
+
+Na prática, você pode desenvolver seu software para atender a demanda ignorando o formulário do modelo. Quando você criar uma PVD no sistema vinculado a um modelo, o HTML será gerado de qualquer forma. Mas é importante que o formulário que você criar contenha todos os campos que precisam ser substituídos durante a geração do HTML final, porque se não o HTML gerado ficará com "buracos" por campos que nem apareceram para o usuário preencher.

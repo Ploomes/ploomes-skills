@@ -1,0 +1,55 @@
+{
+  "conta": {
+    "nome": "Conta Exemplo"
+  },
+  "perfis": [
+    {
+      "id": 1,
+      "nome": "Administrador",
+      "administrador": true
+    },
+    {
+      "id": 2,
+      "nome": "Vendedor"
+    }
+  ],
+  "usuarios": [
+    {
+      "nome": "Ana Ribeiro",
+      "perfil": "Vendedor"
+    },
+    {
+      "nome": "Bruno Castro",
+      "perfil": "Administrador"
+    }
+  ],
+  "funis": [],
+  "campos": [
+    {
+      "fieldKey": "user_0B1C2D3E-0000-4000-8000-000000000001",
+      "nome": "Vezes que assistiu o onboarding",
+      "typeId": 4
+    },
+    {
+      "fieldKey": "user_0B1C2D3E-0000-4000-8000-000000000002",
+      "nome": "Vezes que consultou o onboarding",
+      "typeId": 4
+    },
+    {
+      "fieldKey": "user_0B1C2D3E-0000-4000-8000-000000000003",
+      "nome": "Concluiu o onboarding",
+      "typeId": 10
+    },
+    {
+      "fieldKey": "user_0B1C2D3E-0000-4000-8000-000000000004",
+      "nome": "Última conclusão do onboarding",
+      "typeId": 9
+    }
+  ],
+  "flowDoOnboarding": {
+    "assistiu": "user_0B1C2D3E-0000-4000-8000-000000000001",
+    "consultou": "user_0B1C2D3E-0000-4000-8000-000000000002",
+    "concluiu": "user_0B1C2D3E-0000-4000-8000-000000000003",
+    "ultimaConclusao": "user_0B1C2D3E-0000-4000-8000-000000000004"
+  }
+}

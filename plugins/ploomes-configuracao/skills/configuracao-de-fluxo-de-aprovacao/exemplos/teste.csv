@@ -1,0 +1,5 @@
+Nome do Fluxo,Tipo,Condição,Aviso,Ação,Campo nativo?,Conteúdo do campo
+"Aprovação de desconto acima de 20%","Proposta","""Desconto"" Maior que 20","Esta proposta exige aprovação por desconto acima do limite.","Fluxo de aprovação","Sim",""
+"Bloqueio de venda sem CNPJ","Proposta","""CNPJ do cliente"" Igual a vazio","","Bloqueio","Sim",""
+"Alçada do Roberto Silva","Proposta","""Criador"" Contém Roberto Silva","Aprovação necessária.","Fluxo de aprovação","Sim",""
+"Aprovação de prazo longo","Negócio","""Prazo"" Entre 60 e 90","Prazo acima do padrão.","Alerta","Não",""

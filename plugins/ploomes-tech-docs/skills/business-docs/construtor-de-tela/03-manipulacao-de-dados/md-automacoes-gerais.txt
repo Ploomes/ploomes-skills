@@ -1,0 +1,51 @@
+Automações gerais
+
+Automações são ações disparadas quando determinados gatilhos são “puxados”.
+
+O Ploomes possui dois tipos de automações: as automações de funil e as automações gerais. A principal diferença entre elas está nas entidades envolvidas e nos gatilhos. As automações de funil são baseadas na entidade de negócios, os seus gatilhos são definidos por estágio do funil e são baseados nas ações dentro desses estágios (quando entrou no estágio, quando ganhou no estágio, quando editou campo no estágio, entre outros). No caso de automações gerais, elas são baseadas em diversas entidades do Ploomes, e os gatilhos são mais abrangentes (quando um cliente for criado, quando um negócio for alterado, quando uma tarefa for excluída, etc.).
+
+As automações existem para as seguintes entidades:
+
+- Clientes; 
+- Cards / negócios;
+- Vendas;
+- Propostas;
+- Produtos;
+- Tarefas;
+- Usuários;
+- Registros de interação;
+- Documentos;
+- Produtos do cliente.
+
+De maneira geral, os seguintes gatilhos estão disponíveis para todas essas entidades nas automações gerais:
+- Quando o item for criado;
+- Quando o item for editado (com a possibilidade de restringir à edição a um até quatro campos específicos);
+- Quando o item for excluído;
+- Periodicamente: nesse caso, a automação roda com frequência configurável, executando para todos os itens que se encaixarem em um determinado filtro. Quando um item se encaixa naquele filtro, a automação executa a(s) ação(ões) para ele.
+
+Entretanto, algumas entidades possuem alguns gatilhos específicos:
+- Negócios possui 3 gatilhos a mais: quando o negócio for ganho, quando for perdido e quando for reaberto. Como as automações gerais de negócio rodam de forma independente dos estágios, é preferível utilizá-las quando for possível, assim evitamos de configurar várias automações iguais para vários estágios do funil;
+- Vendas, propostas e documentos possuem 2 gatilhos a mais: Quando a venda for aprovada ou reprovada (ou seja, quando uma dessas entidades entrar em fluxo de aprovação, quando o fluxo se encerrar, a automação é engatilhada) e Quando a venda for aprovada ou reprovada (online) (ou seja, quando uma dessas entidades tiver o compartilhamento web ligado e, pela interface compartilhada, a pessoa do outro lado clicar em "Aceitar", a automação é engatilhada). Estes gatilhos acontecem o sistema de fluxo de aprovação do Ploomes for disparado e os aprovadores aprovarem ou recusarem a aprovação;
+- Tarefas possuem 2 gatilhos a mais: quando a tarefa for finalizada e quando for reaberta.
+
+Uma vez que a automação rodou, de maneira geral, as seguintes ações estão disponíveis para todas essas entidades nas automações gerais:
+- Edição de dados e propriedades da entidade e entidades vinculadas a ela com field-path disponível;
+- Disparo de e-mail;
+- Criação de nova tarefa para um ou mais usuários (não disponível para a entidade Produtos);
+- Adição de registro de interação vinculado ao negócio (não disponível para a entidade Produtos);
+- Criação de um novo negócio (caso a automação esteja relacionada à entidade negócio, o negócio a ser criado pela automação se torna filho do negócio que disparou a automação).
+
+Entretanto, algumas entidades possuem algumas ações específicas:
+
+- Negócios possuem 2 ações específicas: finalizar negócio como ganho ou como perdido;
+- Vendas, propostas, documentos e tarefas possuem 2 ações específicas cada: finalizar negócio vincular à venda como ganho ou como perdido.
+
+Uma automação tem um único gatilho, mas pode ter várias ações que rodam de forma síncrona em seguida.
+
+Para as ações de edição de dados, criação de nova tarefa, adição de registro de interação e  criação de um novo negócio, os campos podem ser preenchidos das seguintes forma:
+
+- Valor fixos: posso, por exemplo, dizer que o título de um negócio criado por automação será sempre "Negócio criado por automação";
+
+- Puxar valor de um campo: posso, por exemplo, dizer que o título de um negócio criado por automação deverá puxar o nome do Cliente ao qual aquele negócio está vinculado;
+
+- Fórmula simples: posso, por exemplo, dizer que o título de um negócio criado por automação deverá ser igual a "Marketing Digital", caso o cliente tenha um campo dinâmico chamado "Origem do cliente" preenchido com a opção "Google Ads" ou "Blog", ou "Marketing Físico", caso este mesmo campo esteja preenchido com "Evento" ou "Prospecção ativa". Para isso, o Ploomes permite a configuração de um código em javascript que se utiliza dos campos das entidades envolvidas (utilizando a tecnologia de field-path para buscar dados de entidades vinculadas). Quando a automação é engatilhada, esse código javascript roda e traz o retorno que deverá ser armazenado no campo. Importante notar que o retorno do javascript precisa ser compatível com o campo que está sendo preenchido por ele.

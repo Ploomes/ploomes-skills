@@ -1,0 +1,217 @@
+<!doctype html>
+<!--
+  Ploomes Design System — snapshot estático das stories do Storybook.
+  Componente : Components/FooterModal
+  Stories    : 9 (Action Only, Space Between No Left, With Secondary, With Secondary No Space Between, With Text, With Text And Secondary, Brand Color, Secondary Only, All Variants)
+  Story      : FooterModal.stories.tsx
+  Tema       : light — use <html class="dark"> para o tema escuro.
+-->
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FooterModal — Ploomes DS</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;600;700&display=swap">
+<link rel="stylesheet" href="../assets/design-system.css">
+<link rel="stylesheet" href="../assets/page.css">
+</head>
+<body class="ds-page">
+  <header class="ds-head">
+    <a class="ds-back" href="../index.html">← inventário</a>
+    <h1 class="ds-title">FooterModal</h1>
+    <p class="ds-meta">components · 9 stories · <code>FooterModal.stories.tsx</code></p>
+    <pre class="ds-code ds-import">import { FooterModal } from &#x27;@ploomescrm/ui&#x27;;</pre>
+    <pre class="ds-code">// props padrão de todas as stories (meta.args)
+args: {
+  actionLabel: &#x27;Confirmar&#x27;,
+  actionColor: &#x27;confirmation&#x27;,
+  spaceBetween: true,
+}</pre>
+  </header>
+  <section class="ds-story">
+    <h2 class="ds-story-name">Action Only</h2>
+    <div class="ds-story-id">components-footermodal--action-only · export <b>ActionOnly</b></div>
+    <div class="ds-canvas ds-canvas--fullscreen">
+<div class="w-full border-t border-neutral-level_2 bg-background"><div class="flex h-[50px] items-center overflow-hidden px-[10px] justify-end gap-0 max-sm:h-auto max-sm:flex-col-reverse max-sm:items-stretch max-sm:gap-[10px] max-sm:overflow-visible max-sm:py-[10px]"><button class="inline-flex shrink-0 cursor-pointer items-center gap-[5px] rounded-[5px] px-[5px] font-semibold text-basic-light transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-30 bg-confirmation hover:bg-confirmation-level_1 active:bg-confirmation-level_2 focus-visible:ring-confirmation h-[35px] text-sm max-sm:w-full"><span class="overflow-hidden text-ellipsis whitespace-nowrap px-[5px]">Salvar</span></button></div></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const ActionOnly: Story = {
+  args: {
+    actionLabel: &#x27;Salvar&#x27;,
+    spaceBetween: false,
+  },
+}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">Space Between No Left</h2>
+    <div class="ds-story-id">components-footermodal--space-between-no-left · export <b>SpaceBetweenNoLeft</b></div>
+    <div class="ds-canvas ds-canvas--fullscreen">
+<div class="w-full border-t border-neutral-level_2 bg-background"><div class="flex h-[50px] items-center overflow-hidden px-[10px] justify-end gap-0 max-sm:h-auto max-sm:flex-col-reverse max-sm:items-stretch max-sm:gap-[10px] max-sm:overflow-visible max-sm:py-[10px]"><div aria-hidden="true" class="h-[35px] w-[57px] shrink-0 max-sm:hidden"></div><button class="inline-flex shrink-0 cursor-pointer items-center gap-[5px] rounded-[5px] px-[5px] font-semibold text-basic-light transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-30 bg-confirmation hover:bg-confirmation-level_1 active:bg-confirmation-level_2 focus-visible:ring-confirmation h-[35px] text-sm max-sm:w-full"><span class="overflow-hidden text-ellipsis whitespace-nowrap px-[5px]">Salvar</span></button></div></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const SpaceBetweenNoLeft: Story = {
+  args: {
+    actionLabel: &#x27;Salvar&#x27;,
+    spaceBetween: true,
+  },
+}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">With Secondary</h2>
+    <div class="ds-story-id">components-footermodal--with-secondary · export <b>WithSecondary</b></div>
+    <div class="ds-canvas ds-canvas--fullscreen">
+<div class="w-full border-t border-neutral-level_2 bg-background"><div class="flex h-[50px] items-center overflow-hidden px-[10px] justify-between max-sm:h-auto max-sm:flex-col-reverse max-sm:items-stretch max-sm:gap-[10px] max-sm:overflow-visible max-sm:py-[10px]"><button class="relative isolate inline-flex shrink-0 cursor-pointer items-center gap-[5px] rounded-[5px] px-[5px] text-sm text-font transition-colors before:pointer-events-none before:absolute before:inset-0 before:-z-10 before:rounded-[5px] before:bg-transparent before:transition-colors before:content-[''] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-confirmation focus-visible:ring-offset-1 disabled:pointer-events-none disabled:opacity-40 border border-neutral-level_2 bg-background hover:before:bg-neutral-level_1 active:before:bg-neutral-level_2 h-[35px] max-sm:w-full"><span class="overflow-hidden text-ellipsis whitespace-nowrap px-[5px]">Cancelar</span></button><button class="inline-flex shrink-0 cursor-pointer items-center gap-[5px] rounded-[5px] px-[5px] font-semibold text-basic-light transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-30 bg-confirmation hover:bg-confirmation-level_1 active:bg-confirmation-level_2 focus-visible:ring-confirmation h-[35px] text-sm max-sm:w-full"><span class="overflow-hidden text-ellipsis whitespace-nowrap px-[5px]">Salvar</span></button></div></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const WithSecondary: Story = {
+  args: {
+    secondaryLabel: &#x27;Cancelar&#x27;,
+    actionLabel: &#x27;Salvar&#x27;,
+    spaceBetween: true,
+  },
+}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">With Secondary No Space Between</h2>
+    <div class="ds-story-id">components-footermodal--with-secondary-no-space-between · export <b>WithSecondaryNoSpaceBetween</b></div>
+    <div class="ds-canvas ds-canvas--fullscreen">
+<div class="w-full border-t border-neutral-level_2 bg-background"><div class="flex h-[50px] items-center overflow-hidden px-[10px] justify-end gap-[10px] max-sm:h-auto max-sm:flex-col-reverse max-sm:items-stretch max-sm:gap-[10px] max-sm:overflow-visible max-sm:py-[10px]"><button class="relative isolate inline-flex shrink-0 cursor-pointer items-center gap-[5px] rounded-[5px] px-[5px] text-sm text-font transition-colors before:pointer-events-none before:absolute before:inset-0 before:-z-10 before:rounded-[5px] before:bg-transparent before:transition-colors before:content-[''] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-confirmation focus-visible:ring-offset-1 disabled:pointer-events-none disabled:opacity-40 border border-neutral-level_2 bg-background hover:before:bg-neutral-level_1 active:before:bg-neutral-level_2 h-[35px] max-sm:w-full"><span class="overflow-hidden text-ellipsis whitespace-nowrap px-[5px]">Cancelar</span></button><button class="inline-flex shrink-0 cursor-pointer items-center gap-[5px] rounded-[5px] px-[5px] font-semibold text-basic-light transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-30 bg-confirmation hover:bg-confirmation-level_1 active:bg-confirmation-level_2 focus-visible:ring-confirmation h-[35px] text-sm max-sm:w-full"><span class="overflow-hidden text-ellipsis whitespace-nowrap px-[5px]">Salvar</span></button></div></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const WithSecondaryNoSpaceBetween: Story = {
+  args: {
+    secondaryLabel: &#x27;Cancelar&#x27;,
+    actionLabel: &#x27;Salvar&#x27;,
+    spaceBetween: false,
+  },
+}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">With Text</h2>
+    <div class="ds-story-id">components-footermodal--with-text · export <b>WithText</b></div>
+    <div class="ds-canvas ds-canvas--fullscreen">
+<div class="w-full border-t border-neutral-level_2 bg-background"><div class="flex h-[50px] items-center overflow-hidden px-[10px] justify-end gap-0 max-sm:h-auto max-sm:flex-col-reverse max-sm:items-stretch max-sm:gap-[10px] max-sm:overflow-visible max-sm:py-[10px]"><span class="min-w-0 flex-1 truncate text-base font-semibold text-font-level_1 max-sm:flex-none max-sm:whitespace-normal max-sm:text-center">3 itens selecionados</span><button class="inline-flex shrink-0 cursor-pointer items-center gap-[5px] rounded-[5px] px-[5px] font-semibold text-basic-light transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-30 bg-confirmation hover:bg-confirmation-level_1 active:bg-confirmation-level_2 focus-visible:ring-confirmation h-[35px] text-sm max-sm:w-full"><span class="overflow-hidden text-ellipsis whitespace-nowrap px-[5px]">Aplicar</span></button></div></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const WithText: Story = {
+  args: {
+    text: &#x27;3 itens selecionados&#x27;,
+    actionLabel: &#x27;Aplicar&#x27;,
+    spaceBetween: false,
+  },
+}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">With Text And Secondary</h2>
+    <div class="ds-story-id">components-footermodal--with-text-and-secondary · export <b>WithTextAndSecondary</b></div>
+    <div class="ds-canvas ds-canvas--fullscreen">
+<div class="w-full border-t border-neutral-level_2 bg-background"><div class="flex h-[50px] items-center overflow-hidden px-[10px] justify-end gap-[10px] max-sm:h-auto max-sm:flex-col-reverse max-sm:items-stretch max-sm:gap-[10px] max-sm:overflow-visible max-sm:py-[10px]"><span class="min-w-0 flex-1 truncate text-base font-semibold text-font-level_1 max-sm:flex-none max-sm:whitespace-normal max-sm:text-center">3 itens selecionados</span><button class="relative isolate inline-flex shrink-0 cursor-pointer items-center gap-[5px] rounded-[5px] px-[5px] text-sm text-font transition-colors before:pointer-events-none before:absolute before:inset-0 before:-z-10 before:rounded-[5px] before:bg-transparent before:transition-colors before:content-[''] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-confirmation focus-visible:ring-offset-1 disabled:pointer-events-none disabled:opacity-40 border border-neutral-level_2 bg-background hover:before:bg-neutral-level_1 active:before:bg-neutral-level_2 h-[35px] max-sm:w-full"><span class="overflow-hidden text-ellipsis whitespace-nowrap px-[5px]">Cancelar</span></button><button class="inline-flex shrink-0 cursor-pointer items-center gap-[5px] rounded-[5px] px-[5px] font-semibold text-basic-light transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-30 bg-confirmation hover:bg-confirmation-level_1 active:bg-confirmation-level_2 focus-visible:ring-confirmation h-[35px] text-sm max-sm:w-full"><span class="overflow-hidden text-ellipsis whitespace-nowrap px-[5px]">Aplicar</span></button></div></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const WithTextAndSecondary: Story = {
+  args: {
+    text: &#x27;3 itens selecionados&#x27;,
+    secondaryLabel: &#x27;Cancelar&#x27;,
+    actionLabel: &#x27;Aplicar&#x27;,
+    spaceBetween: false,
+  },
+}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">Brand Color</h2>
+    <div class="ds-story-id">components-footermodal--brand-color · export <b>BrandColor</b></div>
+    <div class="ds-canvas ds-canvas--fullscreen">
+<div class="w-full border-t border-neutral-level_2 bg-background"><div class="flex h-[50px] items-center overflow-hidden px-[10px] justify-between max-sm:h-auto max-sm:flex-col-reverse max-sm:items-stretch max-sm:gap-[10px] max-sm:overflow-visible max-sm:py-[10px]"><button class="relative isolate inline-flex shrink-0 cursor-pointer items-center gap-[5px] rounded-[5px] px-[5px] text-sm text-font transition-colors before:pointer-events-none before:absolute before:inset-0 before:-z-10 before:rounded-[5px] before:bg-transparent before:transition-colors before:content-[''] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-confirmation focus-visible:ring-offset-1 disabled:pointer-events-none disabled:opacity-40 border border-neutral-level_2 bg-background hover:before:bg-neutral-level_1 active:before:bg-neutral-level_2 h-[35px] max-sm:w-full"><span class="overflow-hidden text-ellipsis whitespace-nowrap px-[5px]">Voltar</span></button><button class="inline-flex shrink-0 cursor-pointer items-center gap-[5px] rounded-[5px] px-[5px] font-semibold text-basic-light transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-30 bg-brand hover:bg-brand-level_1 active:bg-brand-level_2 focus-visible:ring-brand h-[35px] text-sm max-sm:w-full"><span class="overflow-hidden text-ellipsis whitespace-nowrap px-[5px]">Próximo</span></button></div></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const BrandColor: Story = {
+  args: {
+    secondaryLabel: &#x27;Voltar&#x27;,
+    actionLabel: &#x27;Próximo&#x27;,
+    actionColor: &#x27;brand&#x27;,
+    spaceBetween: true,
+  },
+}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">Secondary Only</h2>
+    <div class="ds-story-id">components-footermodal--secondary-only · export <b>SecondaryOnly</b></div>
+    <div class="ds-canvas ds-canvas--fullscreen">
+<div class="w-full border-t border-neutral-level_2 bg-background"><div class="flex h-[50px] items-center overflow-hidden px-[10px] justify-end gap-[10px] max-sm:h-auto max-sm:flex-col-reverse max-sm:items-stretch max-sm:gap-[10px] max-sm:overflow-visible max-sm:py-[10px]"><button class="relative isolate inline-flex shrink-0 cursor-pointer items-center gap-[5px] rounded-[5px] px-[5px] text-sm text-font transition-colors before:pointer-events-none before:absolute before:inset-0 before:-z-10 before:rounded-[5px] before:bg-transparent before:transition-colors before:content-[''] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-confirmation focus-visible:ring-offset-1 disabled:pointer-events-none disabled:opacity-40 border border-neutral-level_2 bg-background hover:before:bg-neutral-level_1 active:before:bg-neutral-level_2 h-[35px] max-sm:w-full"><span class="overflow-hidden text-ellipsis whitespace-nowrap px-[5px]">Cancelar</span></button><button class="inline-flex shrink-0 cursor-pointer items-center gap-[5px] rounded-[5px] px-[5px] font-semibold text-basic-light transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-30 bg-confirmation hover:bg-confirmation-level_1 active:bg-confirmation-level_2 focus-visible:ring-confirmation h-[35px] text-sm max-sm:w-full"><span class="overflow-hidden text-ellipsis whitespace-nowrap px-[5px]">Confirmar</span></button></div></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const SecondaryOnly: Story = {
+  args: {
+    secondaryLabel: &#x27;Cancelar&#x27;,
+    spaceBetween: false,
+  },
+}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">All Variants</h2>
+    <div class="ds-story-id">components-footermodal--all-variants · export <b>AllVariants</b></div>
+    <div class="ds-canvas ds-canvas--fullscreen">
+<div style="display: flex; flex-direction: column; gap: 2px;"><div><p style="font-size: 11px; color: rgb(139, 133, 149); padding: 4px 8px; background: rgb(245, 243, 248);">1 · spaceBetween, no left</p><div class="w-full border-t border-neutral-level_2 bg-background"><div class="flex h-[50px] items-center overflow-hidden px-[10px] justify-end gap-0 max-sm:h-auto max-sm:flex-col-reverse max-sm:items-stretch max-sm:gap-[10px] max-sm:overflow-visible max-sm:py-[10px]"><div aria-hidden="true" class="h-[35px] w-[57px] shrink-0 max-sm:hidden"></div><button class="inline-flex shrink-0 cursor-pointer items-center gap-[5px] rounded-[5px] px-[5px] font-semibold text-basic-light transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-30 bg-confirmation hover:bg-confirmation-level_1 active:bg-confirmation-level_2 focus-visible:ring-confirmation h-[35px] text-sm max-sm:w-full"><span class="overflow-hidden text-ellipsis whitespace-nowrap px-[5px]">Lorem Ipsum</span></button></div></div></div><div><p style="font-size: 11px; color: rgb(139, 133, 149); padding: 4px 8px; background: rgb(245, 243, 248);">2 · spaceBetween, with secondary</p><div class="w-full border-t border-neutral-level_2 bg-background"><div class="flex h-[50px] items-center overflow-hidden px-[10px] justify-between max-sm:h-auto max-sm:flex-col-reverse max-sm:items-stretch max-sm:gap-[10px] max-sm:overflow-visible max-sm:py-[10px]"><button class="relative isolate inline-flex shrink-0 cursor-pointer items-center gap-[5px] rounded-[5px] px-[5px] text-sm text-font transition-colors before:pointer-events-none before:absolute before:inset-0 before:-z-10 before:rounded-[5px] before:bg-transparent before:transition-colors before:content-[''] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-confirmation focus-visible:ring-offset-1 disabled:pointer-events-none disabled:opacity-40 border border-neutral-level_2 bg-background hover:before:bg-neutral-level_1 active:before:bg-neutral-level_2 h-[35px] max-sm:w-full"><span class="overflow-hidden text-ellipsis whitespace-nowrap px-[5px]">Lorem Ipsum</span></button><button class="inline-flex shrink-0 cursor-pointer items-center gap-[5px] rounded-[5px] px-[5px] font-semibold text-basic-light transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-30 bg-confirmation hover:bg-confirmation-level_1 active:bg-confirmation-level_2 focus-visible:ring-confirmation h-[35px] text-sm max-sm:w-full"><span class="overflow-hidden text-ellipsis whitespace-nowrap px-[5px]">Lorem Ipsum</span></button></div></div></div><div><p style="font-size: 11px; color: rgb(139, 133, 149); padding: 4px 8px; background: rgb(245, 243, 248);">3 · justify-end, action only</p><div class="w-full border-t border-neutral-level_2 bg-background"><div class="flex h-[50px] items-center overflow-hidden px-[10px] justify-end gap-0 max-sm:h-auto max-sm:flex-col-reverse max-sm:items-stretch max-sm:gap-[10px] max-sm:overflow-visible max-sm:py-[10px]"><button class="inline-flex shrink-0 cursor-pointer items-center gap-[5px] rounded-[5px] px-[5px] font-semibold text-basic-light transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-30 bg-confirmation hover:bg-confirmation-level_1 active:bg-confirmation-level_2 focus-visible:ring-confirmation h-[35px] text-sm max-sm:w-full"><span class="overflow-hidden text-ellipsis whitespace-nowrap px-[5px]">Lorem Ipsum</span></button></div></div></div><div><p style="font-size: 11px; color: rgb(139, 133, 149); padding: 4px 8px; background: rgb(245, 243, 248);">4 · justify-end, secondary + action</p><div class="w-full border-t border-neutral-level_2 bg-background"><div class="flex h-[50px] items-center overflow-hidden px-[10px] justify-end gap-[10px] max-sm:h-auto max-sm:flex-col-reverse max-sm:items-stretch max-sm:gap-[10px] max-sm:overflow-visible max-sm:py-[10px]"><button class="relative isolate inline-flex shrink-0 cursor-pointer items-center gap-[5px] rounded-[5px] px-[5px] text-sm text-font transition-colors before:pointer-events-none before:absolute before:inset-0 before:-z-10 before:rounded-[5px] before:bg-transparent before:transition-colors before:content-[''] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-confirmation focus-visible:ring-offset-1 disabled:pointer-events-none disabled:opacity-40 border border-neutral-level_2 bg-background hover:before:bg-neutral-level_1 active:before:bg-neutral-level_2 h-[35px] max-sm:w-full"><span class="overflow-hidden text-ellipsis whitespace-nowrap px-[5px]">Lorem Ipsum</span></button><button class="inline-flex shrink-0 cursor-pointer items-center gap-[5px] rounded-[5px] px-[5px] font-semibold text-basic-light transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-30 bg-confirmation hover:bg-confirmation-level_1 active:bg-confirmation-level_2 focus-visible:ring-confirmation h-[35px] text-sm max-sm:w-full"><span class="overflow-hidden text-ellipsis whitespace-nowrap px-[5px]">Lorem Ipsum</span></button></div></div></div><div><p style="font-size: 11px; color: rgb(139, 133, 149); padding: 4px 8px; background: rgb(245, 243, 248);">5 · justify-end, text + secondary + action</p><div class="w-full border-t border-neutral-level_2 bg-background"><div class="flex h-[50px] items-center overflow-hidden px-[10px] justify-end gap-[10px] max-sm:h-auto max-sm:flex-col-reverse max-sm:items-stretch max-sm:gap-[10px] max-sm:overflow-visible max-sm:py-[10px]"><span class="min-w-0 flex-1 truncate text-base font-semibold text-font-level_1 max-sm:flex-none max-sm:whitespace-normal max-sm:text-center">Lorem Ipsum</span><button class="relative isolate inline-flex shrink-0 cursor-pointer items-center gap-[5px] rounded-[5px] px-[5px] text-sm text-font transition-colors before:pointer-events-none before:absolute before:inset-0 before:-z-10 before:rounded-[5px] before:bg-transparent before:transition-colors before:content-[''] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-confirmation focus-visible:ring-offset-1 disabled:pointer-events-none disabled:opacity-40 border border-neutral-level_2 bg-background hover:before:bg-neutral-level_1 active:before:bg-neutral-level_2 h-[35px] max-sm:w-full"><span class="overflow-hidden text-ellipsis whitespace-nowrap px-[5px]">Lorem Ipsum</span></button><button class="inline-flex shrink-0 cursor-pointer items-center gap-[5px] rounded-[5px] px-[5px] font-semibold text-basic-light transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-30 bg-confirmation hover:bg-confirmation-level_1 active:bg-confirmation-level_2 focus-visible:ring-confirmation h-[35px] text-sm max-sm:w-full"><span class="overflow-hidden text-ellipsis whitespace-nowrap px-[5px]">Lorem Ipsum</span></button></div></div></div><div><p style="font-size: 11px; color: rgb(139, 133, 149); padding: 4px 8px; background: rgb(245, 243, 248);">6 · justify-end, text + action</p><div class="w-full border-t border-neutral-level_2 bg-background"><div class="flex h-[50px] items-center overflow-hidden px-[10px] justify-end gap-0 max-sm:h-auto max-sm:flex-col-reverse max-sm:items-stretch max-sm:gap-[10px] max-sm:overflow-visible max-sm:py-[10px]"><span class="min-w-0 flex-1 truncate text-base font-semibold text-font-level_1 max-sm:flex-none max-sm:whitespace-normal max-sm:text-center">Lorem Ipsum</span><button class="inline-flex shrink-0 cursor-pointer items-center gap-[5px] rounded-[5px] px-[5px] font-semibold text-basic-light transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-30 bg-confirmation hover:bg-confirmation-level_1 active:bg-confirmation-level_2 focus-visible:ring-confirmation h-[35px] text-sm max-sm:w-full"><span class="overflow-hidden text-ellipsis whitespace-nowrap px-[5px]">Lorem Ipsum</span></button></div></div></div></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const AllVariants: Story = {
+  render: () =&gt; (
+    &lt;div style={{ display: &#x27;flex&#x27;, flexDirection: &#x27;column&#x27;, gap: 2 }}&gt;
+      {[
+        {
+          label: &#x27;1 · spaceBetween, no left&#x27;,
+          props: { actionLabel: &#x27;Lorem Ipsum&#x27;, spaceBetween: true },
+        },
+        {
+          label: &#x27;2 · spaceBetween, with secondary&#x27;,
+          props: {
+            secondaryLabel: &#x27;Lorem Ipsum&#x27;,
+            actionLabel: &#x27;Lorem Ipsum&#x27;,
+            spaceBetween: true,
+          },
+        },
+        {
+          label: &#x27;3 · justify-end, action only&#x27;,
+          props: { actionLabel: &#x27;Lorem Ipsum&#x27;, spaceBetween: false },
+        },
+        {
+          label: &#x27;4 · justify-end, secondary + action&#x27;,
+          props: {
+            secondaryLabel: &#x27;Lorem Ipsum&#x27;,
+            actionLabel: &#x27;Lorem Ipsum&#x27;,
+            spaceBetween: false,
+          },
+        },
+        {
+          label: &#x27;5 · justify-end, text + secondary + action&#x27;,
+          props: {
+            text: &#x27;Lorem Ipsum&#x27;,
+            secondaryLabel: &#x27;Lorem Ipsum&#x27;,
+            actionLabel: &#x27;Lorem Ipsum&#x27;,
+            spaceBetween: false,
+          },
+        },
+        {
+          label: &#x27;6 · justify-end, text + action&#x27;,
+          props: {
+            text: &#x27;Lorem Ipsum&#x27;,
+            actionLabel: &#x27;Lorem Ipsum&#x27;,
+            spaceBetween: false,
+          },
+        },
+      ].map(({ label, props }) =&gt; (
+        &lt;div key={label}&gt;
+          &lt;p
+            style={{
+              fontSize: 11,
+              color: &#x27;#8b8595&#x27;,
+              padding: &#x27;4px 8px&#x27;,
+              background: &#x27;#f5f3f8&#x27;,
+            }}
+          &gt;
+            {label}
+          &lt;/p&gt;
+          &lt;FooterModal
+            {...props}
+            onSecondaryClick={() =&gt; {}}
+            onActionClick={() =&gt; {}}
+          /&gt;
+        &lt;/div&gt;
+      ))}
+    &lt;/div&gt;
+  ),
+}</code></pre></details>
+  </section>
+</body>
+</html>

@@ -1,0 +1,22 @@
+Registros de interação
+
+Objetivo básico:
+- Registros de interação são anotações vinculadas à tabela de clientes e, opcionalmente, à tabela de negócios. Os registros são separados em sete tipos: simples, visita, ligação, e-mail, reunião, conferência e WhatsApp. Eles são usados para armazenar o histórico de empresas / pessoas / negócios.
+
+- É possível armazenar anexos dentro dos registros de interação, com a limitação de 25 mb para cada arquivo. 
+
+- Ao digitar “@“ durante a criação de um registro de interação existe a opção de marcar um ou mais usuários selecionando-os na lista suspensa, que varia de acordo com o perfil de cada usuário - que determina quais usuários são visíveis para cada acesso. Usuários marcados em registros de interação recebem notificações do sistema;
+
+- Registros de interação possuem comentários, ou seja, dentro de uma tarefa, eu posso ter um histórico de comentários e conversa entre diferentes usuários.
+
+
+Dados:
+- A base de registros de interação se utiliza dos mecanismos de formularios_e_campos do Ploomes;
+- A base de registros de interação se utiliza dos mecanismos de abas_e_tabelas_dinamicas do Ploomes;
+- A base de registros de interação se utiliza dos mecanismos de filtros do Ploomes;
+- A base de registros de interação se utiliza dos mecanismos de automações_gerais do Ploomes;
+- Os níveis de acesso de registros de interação andam junto com os níveis de acesso de clientes / negócios.
+
+Vínculos:
+- Registros de interação, além dos vínculos com empresas / pessoas / negócios, são gerados automaticamente, por padrão a partir da finalização de uma tarefa. Isso estabelece um vínculo entre o registro e a tarefa finalizada;
+- Além disso, todo registro de interação gera também um registro na Timeline do sistema.

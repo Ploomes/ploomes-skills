@@ -1,0 +1,105 @@
+<!doctype html>
+<!--
+  Ploomes Design System — snapshot estático das stories do Storybook.
+  Componente : Fields/Field22Developer
+  Stories    : 6 (Default, Tall Content, Tall Content Expanded, With Validation Icons, Loading, Cell Theme)
+  Story      : Field22Developer.stories.tsx
+  Tema       : light — use <html class="dark"> para o tema escuro.
+-->
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Field22Developer — Ploomes DS</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;600;700&display=swap">
+<link rel="stylesheet" href="../assets/design-system.css">
+<link rel="stylesheet" href="../assets/page.css">
+</head>
+<body class="ds-page">
+  <header class="ds-head">
+    <a class="ds-back" href="../index.html">← inventário</a>
+    <h1 class="ds-title">Field22Developer</h1>
+    <p class="ds-meta">fields · 6 stories · <code>Field22Developer.stories.tsx</code></p>
+    <pre class="ds-code ds-import">import { Field22Developer } from &#x27;@ploomescrm/ui&#x27;;</pre>
+    <pre class="ds-code">// props padrão de todas as stories (meta.args)
+args: {
+  theme: &#x27;form&#x27;,
+  label: &#x27;Campo de desenvolvedor&#x27;,
+  value: SAMPLE_HTML,
+}</pre>
+  </header>
+  <section class="ds-story">
+    <h2 class="ds-story-name">Default</h2>
+    <div class="ds-story-id">fields-field22developer--default · export <b>Default</b></div>
+    <div class="ds-canvas ds-canvas--padded">
+<div style="width: 100%; max-width: 400px;"><div class="flex w-full flex-col items-start"><div class="flex w-full items-center gap-[5px] pb-[5px]"><label class="shrink-0 text-sm leading-[18px] text-font" for="field-developer-_r_0_" id="field-developer-_r_0_-label">Campo de desenvolvedor</label><div class="flex h-4 min-w-0 flex-1 items-center gap-[5px]"></div></div><div class="relative w-full"><iframe class="w-full max-h-[300px]" height="101" id="field-developer-_r_0_" tabindex="-1" title="Campo de desenvolvedor"></iframe></div></div></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const Default: Story = {}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">Tall Content</h2>
+    <div class="ds-story-id">fields-field22developer--tall-content · export <b>TallContent</b></div>
+    <div class="ds-canvas ds-canvas--padded">
+<div style="width: 100%; max-width: 400px;"><div class="flex w-full flex-col items-start"><div class="flex w-full items-center gap-[5px] pb-[5px]"><label class="shrink-0 text-sm leading-[18px] text-font" for="field-developer-_r_0_" id="field-developer-_r_0_-label">Campo de desenvolvedor</label><div class="flex h-4 min-w-0 flex-1 items-center gap-[5px]"></div></div><div class="relative w-full"><iframe class="w-full max-h-[300px]" height="640" id="field-developer-_r_0_" tabindex="-1" title="Campo de desenvolvedor"></iframe><button aria-label="Expandir campo" class="absolute top-[10px] flex size-[25px] cursor-pointer items-center justify-center rounded-[5px] bg-background text-font-level_2 transition-colors hover:bg-neutral-level_2 right-[30px] max-md:right-[10px] max-md:min-h-[44px] max-md:min-w-[44px]" type="button"><span aria-hidden="true" class="inline-flex shrink-0 items-center justify-center text-current"><svg aria-hidden="true" class="lucide lucide-maximize2 lucide-maximize-2" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="15" xmlns="http://www.w3.org/2000/svg"><path d="M15 3h6v6"></path><path d="m21 3-7 7"></path><path d="m3 21 7-7"></path><path d="M9 21H3v-6"></path></svg></span></button></div></div></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const TallContent: Story = {
+  args: { value: TALL_HTML },
+}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">Tall Content Expanded</h2>
+    <div class="ds-story-id">fields-field22developer--tall-content-expanded · export <b>TallContentExpanded</b></div>
+    <div class="ds-canvas ds-canvas--padded">
+<div style="width: 100%; max-width: 400px;"><div class="flex w-full flex-col items-start"><div class="flex w-full items-center gap-[5px] pb-[5px]"><label class="shrink-0 text-sm leading-[18px] text-font" for="field-developer-_r_0_" id="field-developer-_r_0_-label">Campo de desenvolvedor</label><div class="flex h-4 min-w-0 flex-1 items-center gap-[5px]"></div></div><div class="relative w-full"><iframe class="w-full" height="640" id="field-developer-_r_0_" tabindex="-1" title="Campo de desenvolvedor"></iframe><button aria-label="Recolher campo" class="absolute top-[10px] flex size-[25px] cursor-pointer items-center justify-center rounded-[5px] bg-background text-font-level_2 transition-colors hover:bg-neutral-level_2 right-[10px] max-md:min-h-[44px] max-md:min-w-[44px]" type="button"><span aria-hidden="true" class="inline-flex shrink-0 items-center justify-center text-current"><svg aria-hidden="true" class="lucide lucide-minimize2 lucide-minimize-2" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="15" xmlns="http://www.w3.org/2000/svg"><path d="m14 10 7-7"></path><path d="M20 10h-6V4"></path><path d="m3 21 7-7"></path><path d="M4 14h6v6"></path></svg></span></button></div></div></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const TallContentExpanded: Story = {
+  args: { value: TALL_HTML, defaultExpanded: true },
+}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">With Validation Icons</h2>
+    <div class="ds-story-id">fields-field22developer--with-validation-icons · export <b>WithValidationIcons</b></div>
+    <div class="ds-canvas ds-canvas--padded">
+<div style="width: 100%; max-width: 400px;"><div class="flex w-full flex-col items-start"><div class="flex w-full items-center gap-[5px] pb-[5px]"><label class="shrink-0 text-sm leading-[18px] text-font" for="field-developer-_r_0_" id="field-developer-_r_0_-label">Campo de desenvolvedor</label><div class="flex h-4 min-w-0 flex-1 items-center gap-[5px]"><div class="flex shrink-0 items-center gap-[5px]"><span class="inline-block"><span aria-hidden="true" class="inline-flex shrink-0 items-center justify-center text-font-level_2"><svg aria-hidden="true" class="lucide lucide-circle-alert" fill="none" height="10" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="10" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="10"></circle><line x1="12" x2="12" y1="8" y2="12"></line><line x1="12" x2="12.01" y1="16" y2="16"></line></svg></span></span><span aria-hidden="true" class="inline-flex shrink-0 items-center justify-center text-font-level_2"><svg aria-hidden="true" class="lucide lucide-calculator" fill="none" height="10" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="10" xmlns="http://www.w3.org/2000/svg"><rect height="20" rx="2" width="16" x="4" y="2"></rect><line x1="8" x2="16" y1="6" y2="6"></line><line x1="16" x2="16" y1="14" y2="18"></line><path d="M16 10h.01"></path><path d="M12 10h.01"></path><path d="M8 10h.01"></path><path d="M12 14h.01"></path><path d="M8 14h.01"></path><path d="M12 18h.01"></path><path d="M8 18h.01"></path></svg></span><span class="inline-block"><span aria-hidden="true" class="inline-flex shrink-0 items-center justify-center text-font-level_2"><svg aria-hidden="true" class="lucide lucide-info" fill="none" height="10" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="10" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="10"></circle><path d="M12 16v-4"></path><path d="M12 8h.01"></path></svg></span></span></div></div></div><div class="relative w-full"><iframe class="w-full max-h-[300px]" height="101" id="field-developer-_r_0_" tabindex="-1" title="Campo de desenvolvedor"></iframe></div></div></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const WithValidationIcons: Story = {
+  args: {
+    required: true,
+    hasFormula: true,
+    infoMessage: &#x27;Informação sobre o campo&#x27;,
+  },
+}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">Loading</h2>
+    <div class="ds-story-id">fields-field22developer--loading · export <b>Loading</b></div>
+    <div class="ds-canvas ds-canvas--padded">
+<div style="width: 100%; max-width: 400px;"><div class="flex w-full flex-col items-start"><div class="flex w-full items-center gap-[5px] pb-[5px]"><label class="shrink-0 text-sm leading-[18px] text-font" for="field-developer-_r_0_" id="field-developer-_r_0_-label">Campo de desenvolvedor</label><div class="flex h-4 min-w-0 flex-1 items-center gap-[5px]"></div></div><div aria-busy="true" class="flex h-[60px] w-full items-center rounded-[5px] border border-neutral-level_2 bg-background px-[10px]"><span class="my-[5px] h-[calc(100%-10px)] w-full animate-pulse rounded-[2px] bg-neutral-level_2" data-testid="field-skeleton"></span></div></div></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const Loading: Story = {
+  args: { loading: true },
+}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">Cell Theme</h2>
+    <div class="ds-story-id">fields-field22developer--cell-theme · export <b>CellTheme</b></div>
+    <div class="ds-canvas ds-canvas--padded">
+<div style="width: 100%; max-width: 400px;"><div style="width: 200px;"><div class="flex w-full flex-col items-start"><button aria-expanded="false" aria-haspopup="dialog" aria-label="Campo de desenvolvedor" class="relative flex w-full bg-background px-[10px] transition-colors rounded-none border-[0.5px] border-neutral-level_2 h-[40px] cursor-pointer select-none items-center gap-[10px] text-left hover:border hover:border-font-level_2 focus-within:border focus-within:border-confirmation focus-within:ring-2 focus-within:ring-confirmation-default_30" type="button"><span class="min-w-0 flex-1 truncate text-sm text-font">Visualizar</span><span aria-hidden="true" class="inline-flex items-center justify-center shrink-0 text-font-level_2"><svg aria-hidden="true" class="lucide lucide-maximize2 lucide-maximize-2" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="15" xmlns="http://www.w3.org/2000/svg"><path d="M15 3h6v6"></path><path d="m21 3-7 7"></path><path d="m3 21 7-7"></path><path d="M9 21H3v-6"></path></svg></span></button></div></div></div>
+    </div>
+    <p class="ds-state">estado aberto — após clique no gatilho</p>
+    <div class="ds-canvas ds-canvas--overlay">
+<div style="width: 100%; max-width: 400px;"><div style="width: 200px;"><div class="flex w-full flex-col items-start"><button aria-expanded="true" aria-haspopup="dialog" aria-label="Campo de desenvolvedor" class="relative flex w-full bg-background px-[10px] transition-colors rounded-none border-[0.5px] border-neutral-level_2 h-[40px] cursor-pointer select-none items-center gap-[10px] text-left hover:border hover:border-font-level_2 focus-within:border focus-within:border-confirmation focus-within:ring-2 focus-within:ring-confirmation-default_30" type="button"><span class="min-w-0 flex-1 truncate text-sm text-font">Visualizar</span><span aria-hidden="true" class="inline-flex items-center justify-center shrink-0 text-font-level_2"><svg aria-hidden="true" class="lucide lucide-maximize2 lucide-maximize-2" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="15" xmlns="http://www.w3.org/2000/svg"><path d="M15 3h6v6"></path><path d="m21 3-7 7"></path><path d="m3 21 7-7"></path><path d="M9 21H3v-6"></path></svg></span></button></div></div></div><div class="fixed inset-0 z-50 flex items-center justify-center p-[30px] bg-[rgba(76,85,102,0.8)] max-md:p-[8px] transition-opacity duration-200 ease-out opacity-100" role="presentation"><div aria-label="Campo de desenvolvedor" aria-modal="true" class="flex max-h-full w-full flex-col overflow-hidden rounded-[5px] bg-background transition-[opacity,translate] duration-200 ease-out translate-y-0 opacity-100 shadow-[0px_24px_38px_0px_rgba(0,0,0,0.14),0px_9px_46px_0px_rgba(0,0,0,0.12),0px_11px_15px_0px_rgba(0,0,0,0.20)]" role="dialog" style="max-width: 800px;"><div class="flex w-full items-center border-b border-neutral-level_2 bg-background"><div class="flex h-[50px] flex-1 items-center justify-end px-[15px] gap-[10px]"><div class="flex min-w-0 flex-1 items-center"><span class="truncate text-base font-semibold text-font-level_1">Campo de desenvolvedor</span></div><div class="flex shrink-0 items-center gap-[10px]"><button aria-label="Fechar" class="flex size-[35px] max-md:min-h-[44px] max-md:min-w-[44px] shrink-0 cursor-pointer items-center justify-center rounded-[5px] border border-neutral-level_2 bg-background transition-colors hover:bg-neutral-level_1 active:bg-neutral-level_2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-confirmation focus-visible:ring-offset-1" type="button"><span aria-hidden="true" class="inline-flex shrink-0 items-center justify-center text-font"><svg aria-hidden="true" class="lucide lucide-x" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="15" xmlns="http://www.w3.org/2000/svg"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg></span></button></div></div></div><div class="min-h-0 flex-1 overflow-y-auto p-[15px]" tabindex="0"><div class="relative w-full"><iframe class="w-full max-h-[300px] border-b border-neutral-level_2" height="83" id="field-developer-_r_0_" tabindex="-1" title="Campo de desenvolvedor"></iframe></div></div></div></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const CellTheme: Story = {
+  args: { theme: &#x27;cell&#x27; },
+  decorators: [
+    (Story) =&gt; (
+      &lt;div style={{ width: 200 }}&gt;
+        &lt;Story /&gt;
+      &lt;/div&gt;
+    ),
+  ],
+}</code></pre></details>
+  </section>
+</body>
+</html>

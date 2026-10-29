@@ -1,0 +1,307 @@
+{
+  "versao": 1,
+  "tela": {
+    "nome": "Mapa do processo comercial",
+    "slug": "mapa-do-processo"
+  },
+  "funis": {},
+  "modelos": {},
+  "campos": {
+    "asIs": {
+      "porNome": {
+        "entidade": 15,
+        "nome": "Mapeamento as-is (tela)"
+      },
+      "typeId": 2,
+      "opcional": true
+    }
+  },
+  "leituras": {
+    "funisDaConta": {
+      "rota": "DealsPipelines",
+      "select": [
+        "Id",
+        "Name",
+        "MustPassAllStages",
+        "ForbiddenStageReturn",
+        "WinDealOnLastStage"
+      ],
+      "expand": [
+        "Stages($select=Id,Name,Ordination)"
+      ],
+      "pagina": 100
+    },
+    "abertosPorEtapa": {
+      "rota": "Deals",
+      "filtro": "StatusId eq 1",
+      "agregar": {
+        "por": [
+          "PipelineId",
+          "StageId"
+        ],
+        "medidas": {
+          "Quantidade": "$count",
+          "Valor": "Amount with sum",
+          "DiasMedios": "DaysInStage with average"
+        }
+      }
+    },
+    "abertosPorEtapaDoResponsavel": {
+      "rota": "Deals",
+      "filtro": "StatusId eq 1 and OwnerId eq {param:responsavelId}",
+      "parametros": {
+        "responsavelId": "number"
+      },
+      "agregar": {
+        "por": [
+          "PipelineId",
+          "StageId"
+        ],
+        "medidas": {
+          "Quantidade": "$count",
+          "Valor": "Amount with sum",
+          "DiasMedios": "DaysInStage with average"
+        }
+      }
+    },
+    "fechadosPorEtapa": {
+      "rota": "Deals",
+      "filtro": "StatusId ne 1 and FinishDate ge {param:desde}",
+      "parametros": {
+        "desde": "date"
+      },
+      "agregar": {
+        "por": [
+          "PipelineId",
+          "StageId",
+          "StatusId"
+        ],
+        "medidas": {
+          "Quantidade": "$count",
+          "Valor": "Amount with sum"
+        }
+      }
+    },
+    "fechadosPorEtapaDoResponsavel": {
+      "rota": "Deals",
+      "filtro": "StatusId ne 1 and FinishDate ge {param:desde} and OwnerId eq {param:responsavelId}",
+      "parametros": {
+        "desde": "date",
+        "responsavelId": "number"
+      },
+      "agregar": {
+        "por": [
+          "PipelineId",
+          "StageId",
+          "StatusId"
+        ],
+        "medidas": {
+          "Quantidade": "$count",
+          "Valor": "Amount with sum"
+        }
+      }
+    },
+    "passagensPorEtapa": {
+      "rota": "DealsStagesHistory",
+      "filtro": "CreateDate ge {param:desde} and StageId ne 1",
+      "parametros": {
+        "desde": "date"
+      },
+      "agregar": {
+        "por": [
+          "StageId",
+          "Advanced",
+          "Won",
+          "Lost"
+        ],
+        "medidas": {
+          "Quantidade": "$count",
+          "DiasMedios": "Days with average"
+        }
+      }
+    },
+    "passagensPorEtapaDoResponsavel": {
+      "rota": "DealsStagesHistory",
+      "filtro": "CreateDate ge {param:desde} and StageId ne 1 and Deal/OwnerId eq {param:responsavelId}",
+      "parametros": {
+        "desde": "date",
+        "responsavelId": "number"
+      },
+      "agregar": {
+        "por": [
+          "StageId",
+          "Advanced",
+          "Won",
+          "Lost"
+        ],
+        "medidas": {
+          "Quantidade": "$count",
+          "DiasMedios": "Days with average"
+        }
+      }
+    },
+    "negociosDaEtapa": {
+      "rota": "Deals",
+      "select": [
+        "Id",
+        "Title",
+        "Amount",
+        "DaysInStage",
+        "StageId",
+        "OwnerId"
+      ],
+      "expand": [
+        "Contact($select=Id,Name)",
+        "Owner($select=Id,Name)"
+      ],
+      "filtro": "StageId eq {param:etapaId} and StatusId eq 1",
+      "parametros": {
+        "etapaId": "number"
+      },
+      "pagina": 30
+    },
+    "negociosDaEtapaDoResponsavel": {
+      "rota": "Deals",
+      "select": [
+        "Id",
+        "Title",
+        "Amount",
+        "DaysInStage",
+        "StageId",
+        "OwnerId"
+      ],
+      "expand": [
+        "Contact($select=Id,Name)",
+        "Owner($select=Id,Name)"
+      ],
+      "filtro": "StageId eq {param:etapaId} and StatusId eq 1 and OwnerId eq {param:responsavelId}",
+      "parametros": {
+        "etapaId": "number",
+        "responsavelId": "number"
+      },
+      "pagina": 30
+    },
+    "automacoes": {
+      "rota": "Automations",
+      "select": [
+        "Id",
+        "Name",
+        "EntityId",
+        "TriggerId",
+        "TriggerDealStageId",
+        "Enabled",
+        "DisabledDueToError",
+        "LastRunTime"
+      ],
+      "expand": [
+        "Actions($select=Id,ActionId,DealStageId,FieldKey,ShouldGenerateDocument,TaskDaysFromNow)"
+      ],
+      "pagina": 200
+    },
+    "gatilhos": {
+      "rota": "AutomationsTriggers",
+      "select": [
+        "Id",
+        "Name"
+      ],
+      "pagina": 100
+    },
+    "tiposDeAcao": {
+      "rota": "AutomationsActionsActions",
+      "select": [
+        "Id",
+        "Name"
+      ],
+      "pagina": 100
+    },
+    "checklists": {
+      "rota": "Checklists",
+      "select": [
+        "Id",
+        "Name",
+        "DealStageId"
+      ],
+      "expand": [
+        "Fields($select=Id,Name,Required)"
+      ],
+      "pagina": 200
+    },
+    "modelosDeDocumento": {
+      "rota": "DocumentTemplates",
+      "select": [
+        "Id",
+        "Name",
+        "EntityId"
+      ],
+      "pagina": 200
+    },
+    "webhooks": {
+      "rota": "Webhooks",
+      "select": [
+        "Id",
+        "Name",
+        "EntityId",
+        "ActionId",
+        "Active",
+        "IsNativeIntegration"
+      ],
+      "pagina": 200
+    },
+    "acoesDeWebhook": {
+      "rota": "WebhooksActions",
+      "select": [
+        "Id",
+        "Name"
+      ],
+      "pagina": 100
+    },
+    "integracoesDaConta": {
+      "rota": "AccountIntegrations",
+      "select": [
+        "Id",
+        "IntegrationId",
+        "Enabled",
+        "StatusId"
+      ],
+      "pagina": 100
+    },
+    "catalogoDeIntegracoes": {
+      "rota": "Integrations",
+      "select": [
+        "Id",
+        "Name"
+      ],
+      "pagina": 200
+    },
+    "usuarios": {
+      "rota": "Users",
+      "select": [
+        "Id",
+        "Name"
+      ],
+      "filtro": "Suspended ne true",
+      "pagina": 100
+    },
+    "contaComAsIs": {
+      "rota": "Account",
+      "select": [
+        "Id",
+        "Name"
+      ],
+      "outrosCampos": [
+        "asIs"
+      ],
+      "pagina": 1
+    }
+  },
+  "escritas": {
+    "salvarAsIs": {
+      "rota": "Account",
+      "metodo": "PATCH",
+      "nativos": [],
+      "campos": [
+        "asIs"
+      ]
+    }
+  }
+}

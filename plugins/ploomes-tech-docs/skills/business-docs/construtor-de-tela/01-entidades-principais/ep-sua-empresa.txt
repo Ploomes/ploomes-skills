@@ -1,0 +1,8 @@
+Sua empresa
+Esta entidade armazena dados avulsos no Ploomes, ou seja, que não possuem conexão com nenhuma entidade, mas funcionam como uma central de informações genéricas. É como uma central de informações globais que podem ser usadas a partir de qualquer parte do sistema (via front-end).
+
+É possível deixar aqui informações como cotação do dólar do dia, nome da empresa (para geração de documentos, por exemplo), parâmetros para cálculos, entre outros.
+ 
+
+Dados:
+- "Sua empresa" se utiliza dos mecanismos de formularios_e_campos do Ploomes.

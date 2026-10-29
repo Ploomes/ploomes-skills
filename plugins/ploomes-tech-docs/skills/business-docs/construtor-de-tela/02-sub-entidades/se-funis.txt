@@ -1,0 +1,23 @@
+Funis
+
+Objetivo básico:
+- Um funil é, basicamente, um fluxo de trabalho;
+- Dentro de um funil, eu posso configurar as etapas pelas quais um negócio pode / deve passar;
+- Dentro de cada etapa, eu posso configurar automações de funil e checklists, que podem ser ativados de forma condicional;
+- Um funil pode limitar quem pode visualizá-lo, para quais processos ele pode ser movido, entre outras regras (se é possível pular etapas nele, se é possível ganhar ou perder negócios nele, entre outros);
+- Um funil também possui motivos de perda, já que todo negócio perdido precisa de um motivo de perda;
+- Funis podem ser favoritados e ordenados entre si. Isso é feito por usuário, ou seja, cada usuário pode ter seus próprios funis preferidos e sua própria ordenação de funis.
+
+Exemplos de funis:
+
+- Funil de vendas: processo de vendas com etapas que guiam o vendedor e trazem visibilidade ao gestor da situação das negociações que estão em andamento;
+
+- Licitações: processos burocráticos que envolvem múltiplos colaboradores, fluxos de documentos, alertas de prazos, entre outros;
+
+- Vendas complexas: processos que podem envolver múltiplas equipes: Levantamento técnico com pré-vendas, Desenvolvimento de projeto por equipe de engenharia, Estudo de viabilidade pela equipe financeira, entre outros.
+
+- Renovação de contratos: alertas automáticos a partir de prazos de renovação, processos de assinatura e envolvimento de equipe jurídica para adição de cláusulas;
+
+- Implantação: o Ploomes trabalha não somente com funis / processos relacionados a vendas, mas qualquer funil / processo relacionado a clientes (pós-vendas, por exemplo). A passagem de bastão da equipe de vendas para uma equipe técnica é muito comum. Falamos aqui de visitas de vistoria, instalação, entre outros;
+
+- Chamados técnicos: chamados técnicos, muito comumente, são processos simples. Neste caso, o Ploomes trabalha como repositório centralizador de solicitações, facilitando e organizando a passagem de bastão entre as equipes.

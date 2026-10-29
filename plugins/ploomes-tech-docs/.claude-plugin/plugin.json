@@ -1,0 +1,10 @@
+{
+  "name": "ploomes-tech-docs",
+  "description": "Documentação técnica do Ploomes CRM para IA: regras de negócio e o que é possível configurar (business-docs), a API (api-docs), como a tela se comporta (frontend-docs) e o design system do CRM Web (ds-ploomes-crm-ui).",
+  "version": "1.0.0",
+  "author": {
+    "name": "Ploomes"
+  },
+  "repository": "https://github.com/Ploomes/ploomes-skills",
+  "license": "UNLICENSED"
+}

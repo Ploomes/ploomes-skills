@@ -1,0 +1,30 @@
+[
+ {
+  "Id": 401,
+  "Key": "user_0B1C2D3E-0000-4000-8000-000000000001",
+  "Name": "Vezes que assistiu o onboarding",
+  "EntityId": 24,
+  "TypeId": 4
+ },
+ {
+  "Id": 402,
+  "Key": "user_0B1C2D3E-0000-4000-8000-000000000002",
+  "Name": "Vezes que consultou o onboarding",
+  "EntityId": 24,
+  "TypeId": 4
+ },
+ {
+  "Id": 403,
+  "Key": "user_0B1C2D3E-0000-4000-8000-000000000003",
+  "Name": "Concluiu o onboarding",
+  "EntityId": 24,
+  "TypeId": 10
+ },
+ {
+  "Id": 404,
+  "Key": "user_0B1C2D3E-0000-4000-8000-000000000004",
+  "Name": "Última conclusão do onboarding",
+  "EntityId": 24,
+  "TypeId": 9
+ }
+]

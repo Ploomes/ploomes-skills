@@ -1,0 +1,21 @@
+Regras para configuração de Checklists:
+
+Para a criação de um novo checklist, as seguintes propriedades devem ou podem opcionalmente ser enviadas:
+
+- Estágio de funil: a qual estágio de funil aquele checklist pertence;
+
+- Título do checklist;
+
+- Texto informativo do checklist: apenas para apoio a quem está preenchendo o checklist. Geralmente usando dentro de um tooltip no frontend;
+
+- Filtros do checklist: um checklist pode ou não ter filtros. Quando tem, o checklist é aplicado condicionalmente caso o filtro seja satisfeito.
+
+- Itens do checklist: o checklist pode ter vários itens. Dentro do item, o usuário deve preencher:
+-- A descrição do item;
+-- O campo vinculado a este item que poderá ser preenchido a partir do checklist (permitidos campos do negócio, do cliente do negócio e do contato do negócio;
+-- Possibilidade de incluir uma condição para avanço do negócio a partir do que estiver preenchido neste item do checklist. Exemplo: só deixar o negócio avançar caso o CNPJ do cliente do negócio esteja preenchido.
+
+Os itens deve ser ordenados, porque eles são devolvidos pela API do Ploomes na ordem definida.
+
+Em resumo, um item de checklist é um apontamento para um campo do negócio, do cliente do negócio e do contato do negócio. A descrição do item é para a identificação do que fazer pelo usuário final (Exemplo: o campo do item do checklist é o CNPJ do cliente. Posso escrever na descrição: preencha o CNPJ do cliente. Dessa forma, fica mais intuitivo ao usuário).
+

@@ -1,0 +1,174 @@
+<!doctype html>
+<!--
+  Ploomes Design System — snapshot estático das stories do Storybook.
+  Componente : Fields/Field13NumberPercentage
+  Stories    : 11 (Default, Filled, Decimal, Danger, Alert, Disabled, View Only, Loading, Controlled, All Sizes, Cell Statuses)
+  Story      : Field13NumberPercentage.stories.tsx
+  Tema       : light — use <html class="dark"> para o tema escuro.
+-->
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Field13NumberPercentage — Ploomes DS</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;600;700&display=swap">
+<link rel="stylesheet" href="../assets/design-system.css">
+<link rel="stylesheet" href="../assets/page.css">
+</head>
+<body class="ds-page">
+  <header class="ds-head">
+    <a class="ds-back" href="../index.html">← inventário</a>
+    <h1 class="ds-title">Field13NumberPercentage</h1>
+    <p class="ds-meta">fields · 11 stories · <code>Field13NumberPercentage.stories.tsx</code></p>
+    <pre class="ds-code ds-import">import { Field13NumberPercentage } from &#x27;@ploomescrm/ui&#x27;;</pre>
+    <pre class="ds-code">// props padrão de todas as stories (meta.args)
+args: {
+  label: &#x27;Desconto&#x27;,
+  placeholder: &#x27;0&#x27;,
+}</pre>
+  </header>
+  <section class="ds-story">
+    <h2 class="ds-story-name">Default</h2>
+    <div class="ds-story-id">fields-field13numberpercentage--default · export <b>Default</b></div>
+    <div class="ds-canvas ds-canvas--padded">
+<div style="width: 300px;"><div class="flex w-full flex-col items-start"><div class="flex w-full items-center gap-[5px] pb-[5px]"><label class="shrink-0 text-sm leading-[18px] text-font" for="field-percentage-_r_0_" id="field-percentage-_r_0_-label">Desconto</label><div class="flex h-4 min-w-0 flex-1 items-center gap-[5px]"></div></div><div class="relative flex w-full bg-background px-[10px] transition-colors rounded-[5px] border border-neutral-level_2 items-center gap-[10px] h-[30px] hover:border-font-level_2 focus-within:border-confirmation"><input class="min-w-0 flex-1 bg-transparent text-font outline-none placeholder:text-font-level_2 disabled:cursor-not-allowed text-sm" id="field-percentage-_r_0_" inputmode="decimal" placeholder="0" type="text" value=""/><span aria-hidden="true" class="inline-flex items-center justify-center shrink-0 text-font-level_2"><svg aria-hidden="true" class="lucide lucide-percent" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="15" xmlns="http://www.w3.org/2000/svg"><line x1="19" x2="5" y1="5" y2="19"></line><circle cx="6.5" cy="6.5" r="2.5"></circle><circle cx="17.5" cy="17.5" r="2.5"></circle></svg></span></div></div></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const Default: Story = {}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">Filled</h2>
+    <div class="ds-story-id">fields-field13numberpercentage--filled · export <b>Filled</b></div>
+    <div class="ds-canvas ds-canvas--padded">
+<div style="width: 300px;"><div class="flex w-full flex-col items-start"><div class="flex w-full items-center gap-[5px] pb-[5px]"><label class="shrink-0 text-sm leading-[18px] text-font" for="field-percentage-_r_0_" id="field-percentage-_r_0_-label">Desconto</label><div class="flex h-4 min-w-0 flex-1 items-center gap-[5px]"></div></div><div class="relative flex w-full bg-background px-[10px] transition-colors rounded-[5px] border border-neutral-level_2 items-center gap-[10px] h-[30px] hover:border-font-level_2 focus-within:border-confirmation"><input class="min-w-0 flex-1 bg-transparent text-font outline-none placeholder:text-font-level_2 disabled:cursor-not-allowed text-sm" id="field-percentage-_r_0_" inputmode="decimal" placeholder="0" type="text" value="10"/><span aria-hidden="true" class="inline-flex items-center justify-center shrink-0 text-font-level_2"><svg aria-hidden="true" class="lucide lucide-percent" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="15" xmlns="http://www.w3.org/2000/svg"><line x1="19" x2="5" y1="5" y2="19"></line><circle cx="6.5" cy="6.5" r="2.5"></circle><circle cx="17.5" cy="17.5" r="2.5"></circle></svg></span></div></div></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const Filled: Story = {
+  args: { defaultValue: 10 },
+}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">Decimal</h2>
+    <div class="ds-story-id">fields-field13numberpercentage--decimal · export <b>Decimal</b></div>
+    <div class="ds-canvas ds-canvas--padded">
+<div style="width: 300px;"><div class="flex w-full flex-col items-start"><div class="flex w-full items-center gap-[5px] pb-[5px]"><label class="shrink-0 text-sm leading-[18px] text-font" for="field-percentage-_r_0_" id="field-percentage-_r_0_-label">Desconto</label><div class="flex h-4 min-w-0 flex-1 items-center gap-[5px]"></div></div><div class="relative flex w-full bg-background px-[10px] transition-colors rounded-[5px] border border-neutral-level_2 items-center gap-[10px] h-[30px] hover:border-font-level_2 focus-within:border-confirmation"><input class="min-w-0 flex-1 bg-transparent text-font outline-none placeholder:text-font-level_2 disabled:cursor-not-allowed text-sm" id="field-percentage-_r_0_" inputmode="decimal" placeholder="0" type="text" value="12,5"/><span aria-hidden="true" class="inline-flex items-center justify-center shrink-0 text-font-level_2"><svg aria-hidden="true" class="lucide lucide-percent" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="15" xmlns="http://www.w3.org/2000/svg"><line x1="19" x2="5" y1="5" y2="19"></line><circle cx="6.5" cy="6.5" r="2.5"></circle><circle cx="17.5" cy="17.5" r="2.5"></circle></svg></span></div></div></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const Decimal: Story = {
+  args: { defaultValue: 12.5 },
+}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">Danger</h2>
+    <div class="ds-story-id">fields-field13numberpercentage--danger · export <b>Danger</b></div>
+    <div class="ds-canvas ds-canvas--padded">
+<div style="width: 300px;"><div class="flex w-full flex-col items-start"><div class="flex w-full items-center gap-[5px] pb-[5px]"><label class="shrink-0 text-sm leading-[18px] text-font" for="field-percentage-_r_0_" id="field-percentage-_r_0_-label">Desconto</label><div class="flex h-4 min-w-0 flex-1 items-center gap-[5px]"></div></div><div class="relative flex w-full bg-background px-[10px] transition-colors rounded-[5px] border border-danger items-center gap-[10px] h-[30px]"><input aria-describedby="field-percentage-_r_0_-help" aria-invalid="true" class="min-w-0 flex-1 bg-transparent text-font outline-none placeholder:text-font-level_2 disabled:cursor-not-allowed text-sm" id="field-percentage-_r_0_" inputmode="decimal" placeholder="0" type="text" value=""/><span aria-hidden="true" class="inline-flex items-center justify-center shrink-0 text-font-level_2"><svg aria-hidden="true" class="lucide lucide-percent" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="15" xmlns="http://www.w3.org/2000/svg"><line x1="19" x2="5" y1="5" y2="19"></line><circle cx="6.5" cy="6.5" r="2.5"></circle><circle cx="17.5" cy="17.5" r="2.5"></circle></svg></span></div><p class="w-full whitespace-normal px-[10px] pt-[3px] text-[13px] leading-[18px] md:truncate text-danger" id="field-percentage-_r_0_-help">Texto de ajuda</p></div></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const Danger: Story = {
+  args: { status: &#x27;danger&#x27;, helpText: &#x27;Texto de ajuda&#x27; },
+}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">Alert</h2>
+    <div class="ds-story-id">fields-field13numberpercentage--alert · export <b>Alert</b></div>
+    <div class="ds-canvas ds-canvas--padded">
+<div style="width: 300px;"><div class="flex w-full flex-col items-start"><div class="flex w-full items-center gap-[5px] pb-[5px]"><label class="shrink-0 text-sm leading-[18px] text-font" for="field-percentage-_r_0_" id="field-percentage-_r_0_-label">Desconto</label><div class="flex h-4 min-w-0 flex-1 items-center gap-[5px]"></div></div><div class="relative flex w-full bg-background px-[10px] transition-colors rounded-[5px] border border-alert items-center gap-[10px] h-[30px]"><input aria-describedby="field-percentage-_r_0_-help" class="min-w-0 flex-1 bg-transparent text-font outline-none placeholder:text-font-level_2 disabled:cursor-not-allowed text-sm" id="field-percentage-_r_0_" inputmode="decimal" placeholder="0" type="text" value=""/><span aria-hidden="true" class="inline-flex items-center justify-center shrink-0 text-font-level_2"><svg aria-hidden="true" class="lucide lucide-percent" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="15" xmlns="http://www.w3.org/2000/svg"><line x1="19" x2="5" y1="5" y2="19"></line><circle cx="6.5" cy="6.5" r="2.5"></circle><circle cx="17.5" cy="17.5" r="2.5"></circle></svg></span></div><p class="w-full whitespace-normal px-[10px] pt-[3px] text-[13px] leading-[18px] md:truncate text-font-level_2" id="field-percentage-_r_0_-help">Texto de ajuda</p></div></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const Alert: Story = {
+  args: { status: &#x27;alert&#x27;, helpText: &#x27;Texto de ajuda&#x27; },
+}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">Disabled</h2>
+    <div class="ds-story-id">fields-field13numberpercentage--disabled · export <b>Disabled</b></div>
+    <div class="ds-canvas ds-canvas--padded">
+<div style="width: 300px;"><div class="flex w-full flex-col items-start"><div class="flex w-full items-center gap-[5px] pb-[5px]"><label class="shrink-0 text-sm leading-[18px] text-font" for="field-percentage-_r_0_" id="field-percentage-_r_0_-label">Desconto</label><div class="flex h-4 min-w-0 flex-1 items-center gap-[5px]"></div></div><div class="relative flex w-full px-[10px] transition-colors rounded-[5px] border border-neutral-level_2 items-center gap-[10px] h-[30px] bg-neutral-level_1"><input class="min-w-0 flex-1 bg-transparent text-font outline-none placeholder:text-font-level_2 disabled:cursor-not-allowed text-sm" disabled="" id="field-percentage-_r_0_" inputmode="decimal" placeholder="0" type="text" value="10"/><span aria-hidden="true" class="inline-flex items-center justify-center shrink-0 text-font-level_2"><svg aria-hidden="true" class="lucide lucide-percent" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="15" xmlns="http://www.w3.org/2000/svg"><line x1="19" x2="5" y1="5" y2="19"></line><circle cx="6.5" cy="6.5" r="2.5"></circle><circle cx="17.5" cy="17.5" r="2.5"></circle></svg></span></div></div></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const Disabled: Story = {
+  args: { disabled: true, defaultValue: 10 },
+}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">View Only</h2>
+    <div class="ds-story-id">fields-field13numberpercentage--view-only · export <b>ViewOnly</b></div>
+    <div class="ds-canvas ds-canvas--padded">
+<div style="width: 300px;"><div class="flex w-full flex-col items-start"><div class="flex w-full items-center gap-[5px] pb-[5px]"><label class="shrink-0 text-sm leading-[18px] text-font" for="field-percentage-_r_0_" id="field-percentage-_r_0_-label">Desconto</label><div class="flex h-4 min-w-0 flex-1 items-center gap-[5px]"></div></div><div class="relative flex w-full bg-background px-[10px] transition-colors rounded-[5px] border border-neutral-level_2 items-center gap-[10px] h-[30px]"><input class="min-w-0 flex-1 bg-transparent text-font outline-none placeholder:text-font-level_2 disabled:cursor-not-allowed cursor-default text-sm" id="field-percentage-_r_0_" inputmode="decimal" placeholder="0" readonly="" type="text" value="10"/><span aria-hidden="true" class="inline-flex items-center justify-center shrink-0 text-font-level_2"><svg aria-hidden="true" class="lucide lucide-percent" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="15" xmlns="http://www.w3.org/2000/svg"><line x1="19" x2="5" y1="5" y2="19"></line><circle cx="6.5" cy="6.5" r="2.5"></circle><circle cx="17.5" cy="17.5" r="2.5"></circle></svg></span></div></div></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const ViewOnly: Story = {
+  args: { viewOnly: true, defaultValue: 10 },
+}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">Loading</h2>
+    <div class="ds-story-id">fields-field13numberpercentage--loading · export <b>Loading</b></div>
+    <div class="ds-canvas ds-canvas--padded">
+<div style="width: 300px;"><div class="flex w-full flex-col items-start"><div class="flex w-full items-center gap-[5px] pb-[5px]"><label class="shrink-0 text-sm leading-[18px] text-font" for="field-percentage-_r_0_" id="field-percentage-_r_0_-label">Desconto</label><div class="flex h-4 min-w-0 flex-1 items-center gap-[5px]"></div></div><div aria-busy="true" class="relative flex w-full bg-background px-[10px] transition-colors rounded-[5px] border border-neutral-level_2 items-center gap-[10px] h-[30px]"><span class="my-[5px] h-[calc(100%-10px)] w-full animate-pulse rounded-[2px] bg-neutral-level_2" data-testid="field-skeleton"></span></div></div></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const Loading: Story = {
+  args: { loading: true },
+}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">Controlled</h2>
+    <div class="ds-story-id">fields-field13numberpercentage--controlled · export <b>Controlled</b></div>
+    <div class="ds-canvas ds-canvas--padded">
+<div style="width: 300px;"><div style="display: flex; flex-direction: column; gap: 8px;"><div class="flex w-full flex-col items-start"><div class="flex w-full items-center gap-[5px] pb-[5px]"><label class="shrink-0 text-sm leading-[18px] text-font" for="field-percentage-_r_0_" id="field-percentage-_r_0_-label">Desconto</label><div class="flex h-4 min-w-0 flex-1 items-center gap-[5px]"></div></div><div class="relative flex w-full bg-background px-[10px] transition-colors rounded-[5px] border border-neutral-level_2 items-center gap-[10px] h-[30px] hover:border-font-level_2 focus-within:border-confirmation"><input class="min-w-0 flex-1 bg-transparent text-font outline-none placeholder:text-font-level_2 disabled:cursor-not-allowed text-sm" id="field-percentage-_r_0_" inputmode="decimal" placeholder="0" type="text" value="10"/><span aria-hidden="true" class="inline-flex items-center justify-center shrink-0 text-font-level_2"><svg aria-hidden="true" class="lucide lucide-percent" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="15" xmlns="http://www.w3.org/2000/svg"><line x1="19" x2="5" y1="5" y2="19"></line><circle cx="6.5" cy="6.5" r="2.5"></circle><circle cx="17.5" cy="17.5" r="2.5"></circle></svg></span></div></div><span style="font-size: 13px; color: rgb(139, 133, 149);">Valor numérico: 10</span></div></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const Controlled: Story = {
+  render: function Render(args) {
+    const [value, setValue] = useState&lt;number | null&gt;(10);
+    return (
+      &lt;div style={{ display: &#x27;flex&#x27;, flexDirection: &#x27;column&#x27;, gap: 8 }}&gt;
+        &lt;Field13NumberPercentage
+          {...args}
+          value={value}
+          onValueChange={setValue}
+        /&gt;
+        &lt;span style={{ fontSize: 13, color: &#x27;#8b8595&#x27; }}&gt;
+          Valor numérico: {value ?? &#x27;null&#x27;}
+        &lt;/span&gt;
+      &lt;/div&gt;
+    );
+  },
+}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">All Sizes</h2>
+    <div class="ds-story-id">fields-field13numberpercentage--all-sizes · export <b>AllSizes</b></div>
+    <div class="ds-canvas ds-canvas--padded">
+<div style="width: 300px;"><div style="display: flex; flex-direction: column; gap: 16px;"><div class="flex w-full flex-col items-start"><div class="flex w-full items-center gap-[5px] pb-[5px]"><label class="shrink-0 text-sm leading-[18px] text-font" for="field-percentage-_r_0_" id="field-percentage-_r_0_-label">Small (30px)</label><div class="flex h-4 min-w-0 flex-1 items-center gap-[5px]"></div></div><div class="relative flex w-full bg-background px-[10px] transition-colors rounded-[5px] border border-neutral-level_2 items-center gap-[10px] h-[30px] hover:border-font-level_2 focus-within:border-confirmation"><input class="min-w-0 flex-1 bg-transparent text-font outline-none placeholder:text-font-level_2 disabled:cursor-not-allowed text-sm" id="field-percentage-_r_0_" inputmode="decimal" placeholder="0" type="text" value=""/><span aria-hidden="true" class="inline-flex items-center justify-center shrink-0 text-font-level_2"><svg aria-hidden="true" class="lucide lucide-percent" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="15" xmlns="http://www.w3.org/2000/svg"><line x1="19" x2="5" y1="5" y2="19"></line><circle cx="6.5" cy="6.5" r="2.5"></circle><circle cx="17.5" cy="17.5" r="2.5"></circle></svg></span></div></div><div class="flex w-full flex-col items-start"><div class="flex w-full items-center gap-[5px] pb-[5px]"><label class="shrink-0 text-sm leading-[18px] text-font" for="field-percentage-_r_1_" id="field-percentage-_r_1_-label">Normal (35px)</label><div class="flex h-4 min-w-0 flex-1 items-center gap-[5px]"></div></div><div class="relative flex w-full bg-background px-[10px] transition-colors rounded-[5px] border border-neutral-level_2 items-center gap-[10px] h-[35px] hover:border-font-level_2 focus-within:border-confirmation"><input class="min-w-0 flex-1 bg-transparent text-font outline-none placeholder:text-font-level_2 disabled:cursor-not-allowed text-sm" id="field-percentage-_r_1_" inputmode="decimal" placeholder="0" type="text" value=""/><span aria-hidden="true" class="inline-flex items-center justify-center shrink-0 text-font-level_2"><svg aria-hidden="true" class="lucide lucide-percent" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="15" xmlns="http://www.w3.org/2000/svg"><line x1="19" x2="5" y1="5" y2="19"></line><circle cx="6.5" cy="6.5" r="2.5"></circle><circle cx="17.5" cy="17.5" r="2.5"></circle></svg></span></div></div><div class="flex w-full flex-col items-start"><div class="flex w-full items-center gap-[5px] pb-[5px]"><label class="shrink-0 text-sm leading-[18px] text-font" for="field-percentage-_r_2_" id="field-percentage-_r_2_-label">Big (40px)</label><div class="flex h-4 min-w-0 flex-1 items-center gap-[5px]"></div></div><div class="relative flex w-full bg-background px-[10px] transition-colors rounded-[5px] border border-neutral-level_2 items-center gap-[10px] h-[40px] hover:border-font-level_2 focus-within:border-confirmation"><input class="min-w-0 flex-1 bg-transparent text-font outline-none placeholder:text-font-level_2 disabled:cursor-not-allowed text-base" id="field-percentage-_r_2_" inputmode="decimal" placeholder="0" type="text" value=""/><span aria-hidden="true" class="inline-flex items-center justify-center shrink-0 text-font-level_2"><svg aria-hidden="true" class="lucide lucide-percent" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="15" xmlns="http://www.w3.org/2000/svg"><line x1="19" x2="5" y1="5" y2="19"></line><circle cx="6.5" cy="6.5" r="2.5"></circle><circle cx="17.5" cy="17.5" r="2.5"></circle></svg></span></div></div></div></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const AllSizes: Story = {
+  render: (args) =&gt; (
+    &lt;div style={{ display: &#x27;flex&#x27;, flexDirection: &#x27;column&#x27;, gap: 16 }}&gt;
+      &lt;Field13NumberPercentage {...args} size=&quot;sm&quot; label=&quot;Small (30px)&quot; /&gt;
+      &lt;Field13NumberPercentage {...args} size=&quot;md&quot; label=&quot;Normal (35px)&quot; /&gt;
+      &lt;Field13NumberPercentage {...args} size=&quot;lg&quot; label=&quot;Big (40px)&quot; /&gt;
+    &lt;/div&gt;
+  ),
+}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">Cell Statuses</h2>
+    <div class="ds-story-id">fields-field13numberpercentage--cell-statuses · export <b>CellStatuses</b></div>
+    <div class="ds-canvas ds-canvas--padded">
+<div style="width: 300px;"><div style="display: flex; flex-direction: column; gap: 16px; width: 200px;"><div class="flex w-full flex-col items-start"><div class="relative flex w-full bg-background px-[10px] transition-colors rounded-none border-[0.5px] border-neutral-level_2 items-center gap-[10px] h-[40px] hover:border hover:border-font-level_2 focus-within:border focus-within:border-confirmation focus-within:ring-2 focus-within:ring-confirmation-default_30"><input class="min-w-0 flex-1 bg-transparent text-font outline-none placeholder:text-font-level_2 disabled:cursor-not-allowed text-sm" id="field-percentage-_r_0_" inputmode="decimal" placeholder="0" type="text" value=""/><span aria-hidden="true" class="inline-flex items-center justify-center shrink-0 text-font-level_2"><svg aria-hidden="true" class="lucide lucide-percent" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="15" xmlns="http://www.w3.org/2000/svg"><line x1="19" x2="5" y1="5" y2="19"></line><circle cx="6.5" cy="6.5" r="2.5"></circle><circle cx="17.5" cy="17.5" r="2.5"></circle></svg></span></div></div><div class="flex w-full flex-col items-start"><div class="relative flex w-full bg-background px-[10px] transition-colors rounded-none border-[0.5px] border-danger items-center gap-[10px] h-[40px] hover:border focus-within:border focus-within:ring-2 focus-within:ring-danger-default_30"><input aria-invalid="true" class="min-w-0 flex-1 bg-transparent text-font outline-none placeholder:text-font-level_2 disabled:cursor-not-allowed text-sm" id="field-percentage-_r_1_" inputmode="decimal" placeholder="0" type="text" value=""/><span aria-hidden="true" class="inline-flex items-center justify-center shrink-0 text-font-level_2"><svg aria-hidden="true" class="lucide lucide-percent" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="15" xmlns="http://www.w3.org/2000/svg"><line x1="19" x2="5" y1="5" y2="19"></line><circle cx="6.5" cy="6.5" r="2.5"></circle><circle cx="17.5" cy="17.5" r="2.5"></circle></svg></span></div></div><div class="flex w-full flex-col items-start"><div class="relative flex w-full bg-background px-[10px] transition-colors rounded-none border-[0.5px] border-alert items-center gap-[10px] h-[40px] hover:border focus-within:border focus-within:ring-2 focus-within:ring-alert-default_30"><input class="min-w-0 flex-1 bg-transparent text-font outline-none placeholder:text-font-level_2 disabled:cursor-not-allowed text-sm" id="field-percentage-_r_2_" inputmode="decimal" placeholder="0" type="text" value=""/><span aria-hidden="true" class="inline-flex items-center justify-center shrink-0 text-font-level_2"><svg aria-hidden="true" class="lucide lucide-percent" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="15" xmlns="http://www.w3.org/2000/svg"><line x1="19" x2="5" y1="5" y2="19"></line><circle cx="6.5" cy="6.5" r="2.5"></circle><circle cx="17.5" cy="17.5" r="2.5"></circle></svg></span></div></div><div class="flex w-full flex-col items-start"><div class="relative flex w-full px-[10px] transition-colors rounded-none border-[0.5px] border-neutral-level_2 items-center gap-[10px] h-[40px] bg-neutral-level_1"><input class="min-w-0 flex-1 bg-transparent text-font outline-none placeholder:text-font-level_2 disabled:cursor-not-allowed text-sm" disabled="" id="field-percentage-_r_3_" inputmode="decimal" placeholder="0" type="text" value=""/><span aria-hidden="true" class="inline-flex items-center justify-center shrink-0 text-font-level_2"><svg aria-hidden="true" class="lucide lucide-percent" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="15" xmlns="http://www.w3.org/2000/svg"><line x1="19" x2="5" y1="5" y2="19"></line><circle cx="6.5" cy="6.5" r="2.5"></circle><circle cx="17.5" cy="17.5" r="2.5"></circle></svg></span></div></div><div class="flex w-full flex-col items-start"><div class="relative flex w-full bg-background px-[10px] transition-colors rounded-none border-[0.5px] border-neutral-level_2 items-center gap-[10px] h-[40px]"><input class="min-w-0 flex-1 bg-transparent text-font outline-none placeholder:text-font-level_2 disabled:cursor-not-allowed cursor-default text-sm" id="field-percentage-_r_4_" inputmode="decimal" placeholder="0" readonly="" type="text" value="10"/><span aria-hidden="true" class="inline-flex items-center justify-center shrink-0 text-font-level_2"><svg aria-hidden="true" class="lucide lucide-percent" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="15" xmlns="http://www.w3.org/2000/svg"><line x1="19" x2="5" y1="5" y2="19"></line><circle cx="6.5" cy="6.5" r="2.5"></circle><circle cx="17.5" cy="17.5" r="2.5"></circle></svg></span></div></div></div></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const CellStatuses: Story = {
+  render: (args) =&gt; (
+    &lt;div
+      style={{ display: &#x27;flex&#x27;, flexDirection: &#x27;column&#x27;, gap: 16, width: 200 }}
+    &gt;
+      &lt;Field13NumberPercentage {...args} theme=&quot;cell&quot; /&gt;
+      &lt;Field13NumberPercentage {...args} theme=&quot;cell&quot; status=&quot;danger&quot; /&gt;
+      &lt;Field13NumberPercentage {...args} theme=&quot;cell&quot; status=&quot;alert&quot; /&gt;
+      &lt;Field13NumberPercentage {...args} theme=&quot;cell&quot; disabled /&gt;
+      &lt;Field13NumberPercentage
+        {...args}
+        theme=&quot;cell&quot;
+        viewOnly
+        defaultValue={10}
+      /&gt;
+    &lt;/div&gt;
+  ),
+}</code></pre></details>
+  </section>
+</body>
+</html>

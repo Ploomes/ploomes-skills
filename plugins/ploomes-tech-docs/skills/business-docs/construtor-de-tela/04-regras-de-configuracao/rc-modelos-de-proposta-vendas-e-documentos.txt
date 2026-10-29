@@ -1,0 +1,54 @@
+Modelos de proposta, vendas e documentos (chamaremos de PVD)
+
+Para a criação de um novo modelo de PVD, as seguintes propriedades devem ou podem opcionalmente ser enviadas:
+
+1. Tipo de modelo
+
+Selecionar a qual entidade o modelo se refere:
+- Proposta
+- Venda
+- Documento do Negócio
+- Documento do Cliente
+
+2. Nome do modelo
+
+Nome usado para identificar o modelo.
+
+Exemplos:
+
+Proposta comercial padrão
+Contrato de venda
+Documento de escopo do negócio
+Ficha cadastral do cliente
+
+3. Quem pode ver esse modelo
+
+Primeiro, deve ser informado se essa configuração é por usuário, por equipe ou para toda a empresa. Em seguida, eu defino uma lista de usuários ou equipes, se uma dessas opções for selecionada.
+
+4. Opções gerais do modelo
+
+- Modelo tem paginação: Sim/Não. Isso reflete no PDF gerado pelo Ploomes, mas não reflete no HTML.
+- Personalizar nome do PDF: Sim/Não. Isso permite ao usuário fazer o download do PDF gerado pelo Ploomes já com nomenclatura padronizada.
+- Nome personalizado do PDF, se aplicável
+- Obrigatório ter parcelas preenchidas: Sim/Não. Isso força o usuário a preencher o campo de parcelas, caso o modelo contenha a entidade de parcelas.
+- Campo de total das parcelas do modelo, se aplicável. Se o modelo usa a entidade de parcelas, o usuário deve definir qual é o campo que armazena o valor que será parcelado.
+
+4. Seções do modelo
+
+- Um documento é baseado em uma ou mais seções. Seções são formas de separar partes do conteúdo do documento.
+- Para cada seção, é necessário definir:
+-- Nome da seção;
+-- Margem superior da seção: define distância, em mm, entre o cabeçalho / topo da página da seção e o início do conteúdo dela;
+-- Margem inferior da seção: define distância, em mm, entre o rodapé / fundo da página da seção e o início do conteúdo dela; 
+-- Margem lateral da seção: define distância, em mm, entre as laterais da página da seção e o conteúdo dela;
+-- Cabeçalho da seção: armazena um código HTML com referências internas a campos e outras lógicas usado quando uma PVD é gerada (tanto o HTML final quanto o PDF);
+-- Rodapé da seção: armazena um código HTML com referências internas a campos e outras lógicas usado quando uma PVD é gerada (tanto o HTML final quanto o PDF).
+
+Quando uma PVD é gerada, cabeçalho e rodapé são exibidos no início e no fim do HTML de determinada seção. Quando o PDF é gerado, o cabeçalho e o rodapé são gerados em cada página daquela seção. Quando uma seção termina, a nova sempre começa em uma página seguinte.
+
+
+5. Conteúdo de cada seção (HTML e campos)
+
+- O conteúdo das seções segue a mesma estrutura do cabeçalho e rodapé. É basicamente um código HTML com referência a campos e algumas propriedades usadas pelo backend que pega uma PVD gerada e seu modelo e transforma no HTML final e no PDF. Essas propriedades incluem exibição condicional de trechos de HTML a partir do que está preenchido em um campo (exemplo: exibir trecho se o campo X for preenchido com a opção A), definição dos trecho de HTML onde serão inclusos blocos, produtos, opcionais e parcelas da PVD gerada (essas entidades não podem ser inclusas em cabeçalhos e rodapé, somente no conteúdo das seções), quebras de página (usados pelo gerador de PDF), entre outros.
+
+Importante notar que o Ploomes trabalha somente com formato A4 em retrato, nunca paisagem.

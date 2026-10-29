@@ -1,0 +1,490 @@
+{
+  "conta": {
+    "nome": "Andaime Forte Equipamentos (bancada)",
+    "campos": {
+      "account_AF000000-0000-4000-8000-0000000000A1": "{\"formato\": \"ploomes-mapa-asis\", \"versao\": 1, \"atualizadoEm\": \"2026-09-12T14:00:00Z\", \"atualizadoPor\": {\"id\": 0, \"nome\": \"Implantação (importação)\"}, \"origem\": {\"tipo\": \"matriz-asis\", \"arquivo\": \"as-is-matriz-andaime-forte.json\", \"importadoEm\": \"2026-09-12T14:00:00Z\"}, \"raias\": [{\"id\": \"r1\", \"nome\": \"Comercial interno\"}, {\"id\": \"r2\", \"nome\": \"Engenharia de montagem\"}, {\"id\": \"r3\", \"nome\": \"Logística e obra\"}, {\"id\": \"r4\", \"nome\": \"Planilha de controle (sistema)\"}], \"etapas\": [{\"id\": \"ASIS-001\", \"tipo\": \"inicio\", \"nome\": \"Pedido de orçamento por telefone ou WhatsApp\", \"raia\": \"r1\", \"fase\": \"Atendimento\", \"canal\": \"Telefone; WhatsApp\"}, {\"id\": \"ASIS-002\", \"tipo\": \"tarefa\", \"nome\": \"Anotar a obra na planilha de pedidos\", \"raia\": \"r4\", \"fase\": \"Atendimento\", \"sistemas\": [\"Excel\"], \"lacuna\": \"Não há dono da planilha; cada vendedor tem a sua cópia.\"}, {\"id\": \"ASIS-003\", \"tipo\": \"tarefa\", \"nome\": \"Ir à obra medir a fachada\", \"raia\": \"r2\", \"fase\": \"Levantamento\", \"responsavel\": \"Técnico de montagem\"}, {\"id\": \"ASIS-004\", \"tipo\": \"decisao\", \"nome\": \"Obra comporta andaime fachadeiro?\", \"raia\": \"r2\", \"fase\": \"Levantamento\"}, {\"id\": \"ASIS-005\", \"tipo\": \"tarefa\", \"nome\": \"Desenhar o projeto de montagem e emitir a ART\", \"raia\": \"r2\", \"fase\": \"Projeto\", \"documentos\": [\"Projeto de montagem\", \"ART\"]}, {\"id\": \"ASIS-006\", \"tipo\": \"tarefa\", \"nome\": \"Montar a proposta no Word e mandar por e-mail\", \"raia\": \"r1\", \"fase\": \"Proposta\", \"sistemas\": [\"Word\", \"Outlook\"], \"regra\": \"Desconto acima de 8% precisa do diretor.\"}, {\"id\": \"ASIS-007\", \"tipo\": \"espera\", \"nome\": \"Esperar o retorno do cliente\", \"raia\": \"r1\", \"fase\": \"Proposta\", \"lacuna\": \"Sem follow-up: a proposta esfria.\"}, {\"id\": \"ASIS-008\", \"tipo\": \"decisao\", \"nome\": \"Cliente aprovou?\", \"raia\": \"r1\", \"fase\": \"Negociação\"}, {\"id\": \"ASIS-009\", \"tipo\": \"tarefa\", \"nome\": \"Separar o material e agendar o caminhão\", \"raia\": \"r3\", \"fase\": \"Entrega\"}, {\"id\": \"ASIS-010\", \"tipo\": \"fim\", \"nome\": \"Andaime montado na obra\", \"raia\": \"r3\", \"fase\": \"Entrega\"}, {\"id\": \"ASIS-011\", \"tipo\": \"fim\", \"nome\": \"Orçamento perdido\", \"raia\": \"r1\", \"fase\": \"Negociação\"}], \"ligacoes\": [{\"id\": \"ASIS-001>ASIS-002\", \"de\": \"ASIS-001\", \"para\": \"ASIS-002\"}, {\"id\": \"ASIS-002>ASIS-003\", \"de\": \"ASIS-002\", \"para\": \"ASIS-003\"}, {\"id\": \"ASIS-003>ASIS-004\", \"de\": \"ASIS-003\", \"para\": \"ASIS-004\"}, {\"id\": \"ASIS-004>ASIS-005\", \"de\": \"ASIS-004\", \"para\": \"ASIS-005\", \"rotulo\": \"Sim\"}, {\"id\": \"ASIS-004>ASIS-011\", \"de\": \"ASIS-004\", \"para\": \"ASIS-011\", \"rotulo\": \"Não — suspenso ou balancim\"}, {\"id\": \"ASIS-005>ASIS-006\", \"de\": \"ASIS-005\", \"para\": \"ASIS-006\"}, {\"id\": \"ASIS-006>ASIS-007\", \"de\": \"ASIS-006\", \"para\": \"ASIS-007\"}, {\"id\": \"ASIS-007>ASIS-008\", \"de\": \"ASIS-007\", \"para\": \"ASIS-008\"}, {\"id\": \"ASIS-008>ASIS-009\", \"de\": \"ASIS-008\", \"para\": \"ASIS-009\", \"rotulo\": \"Sim\"}, {\"id\": \"ASIS-008>ASIS-011\", \"de\": \"ASIS-008\", \"para\": \"ASIS-011\", \"rotulo\": \"Não\"}, {\"id\": \"ASIS-009>ASIS-010\", \"de\": \"ASIS-009\", \"para\": \"ASIS-010\"}], \"anteriores\": []}"
+    }
+  },
+  "usuarios": [
+    {
+      "nome": "Carla Menezes",
+      "email": "carla@andaimeforte.invalid"
+    },
+    {
+      "nome": "Rafael Duarte",
+      "email": "rafael@andaimeforte.invalid"
+    },
+    {
+      "nome": "Beatriz Lima",
+      "email": "beatriz@andaimeforte.invalid"
+    },
+    {
+      "nome": "Otávio Prado",
+      "email": "otavio@andaimeforte.invalid"
+    }
+  ],
+  "clientes": [
+    {
+      "nome": "Construtora Horizonte"
+    },
+    {
+      "nome": "Engeplan Obras"
+    },
+    {
+      "nome": "Vale Verde Incorporadora"
+    },
+    {
+      "nome": "MRX Montagens Industriais"
+    },
+    {
+      "nome": "Porto Seguro Estaleiro"
+    },
+    {
+      "nome": "Concreta Engenharia"
+    }
+  ],
+  "funis": [
+    {
+      "nome": "Prospecção",
+      "unidade": "Oportunidade",
+      "unidades": "Oportunidades",
+      "etapas": [
+        "Lead recebido",
+        "Qualificação",
+        "Visita técnica agendada"
+      ]
+    },
+    {
+      "nome": "Vendas — Locação de andaimes",
+      "unidade": "Contrato",
+      "unidades": "Contratos",
+      "verboGanhar": "Fechar",
+      "regras": {
+        "forbiddenStageReturn": true,
+        "winDealOnLastStage": true
+      },
+      "etapas": [
+        "Levantamento da obra",
+        "Projeto de montagem",
+        "Proposta enviada",
+        "Negociação",
+        "Aprovação do contrato"
+      ]
+    },
+    {
+      "nome": "Implantação na obra",
+      "unidade": "Obra",
+      "unidades": "Obras",
+      "regras": {
+        "mustPassAllStages": true
+      },
+      "etapas": [
+        "Kick-off",
+        "Entrega do material",
+        "Montagem",
+        "Obra em locação"
+      ]
+    }
+  ],
+  "modelos": [
+    "Proposta de locação",
+    "Contrato de locação",
+    "Termo de entrega na obra"
+  ],
+  "motivosDePerda": [
+    "Preço acima do concorrente",
+    "Obra adiada",
+    "Sem retorno do cliente"
+  ],
+  "campos": [
+    {
+      "fieldKey": "deal_AF000000-0000-4000-8000-000000000001",
+      "nome": "Metragem da fachada (m²)",
+      "typeId": 6
+    },
+    {
+      "fieldKey": "deal_AF000000-0000-4000-8000-000000000002",
+      "nome": "Prazo de locação (meses)",
+      "typeId": 4
+    },
+    {
+      "fieldKey": "deal_AF000000-0000-4000-8000-000000000003",
+      "nome": "Data de início da obra",
+      "typeId": 8
+    },
+    {
+      "fieldKey": "deal_AF000000-0000-4000-8000-000000000004",
+      "nome": "ART do projeto de montagem",
+      "typeId": 1
+    },
+    {
+      "fieldKey": "deal_AF000000-0000-4000-8000-000000000005",
+      "nome": "Responsável técnico do cliente",
+      "typeId": 1
+    },
+    {
+      "fieldKey": "account_AF000000-0000-4000-8000-0000000000A1",
+      "nome": "Mapeamento as-is (tela)",
+      "typeId": 2
+    }
+  ],
+  "checklists": [
+    {
+      "funil": "Prospecção",
+      "etapa": "Qualificação",
+      "nome": "Obra qualificada",
+      "itens": [
+        {
+          "nome": "Metragem da fachada (m²)",
+          "fieldKey": "deal_AF000000-0000-4000-8000-000000000001",
+          "obrigatorio": true
+        },
+        {
+          "nome": "Data de início da obra",
+          "fieldKey": "deal_AF000000-0000-4000-8000-000000000003",
+          "obrigatorio": false
+        }
+      ]
+    },
+    {
+      "funil": "Vendas — Locação de andaimes",
+      "etapa": "Projeto de montagem",
+      "nome": "Projeto aprovado",
+      "itens": [
+        {
+          "nome": "ART do projeto de montagem",
+          "fieldKey": "deal_AF000000-0000-4000-8000-000000000004",
+          "obrigatorio": true
+        },
+        {
+          "nome": "Responsável técnico do cliente",
+          "fieldKey": "deal_AF000000-0000-4000-8000-000000000005",
+          "obrigatorio": true
+        }
+      ]
+    },
+    {
+      "funil": "Vendas — Locação de andaimes",
+      "etapa": "Proposta enviada",
+      "nome": "Condições da proposta",
+      "itens": [
+        {
+          "nome": "Prazo de locação (meses)",
+          "fieldKey": "deal_AF000000-0000-4000-8000-000000000002",
+          "obrigatorio": true
+        }
+      ]
+    }
+  ],
+  "automacoes": [
+    {
+      "nome": "Visita agendada vira levantamento em Vendas",
+      "gatilho": "ganho",
+      "funil": "Prospecção",
+      "etapa": "Visita técnica agendada",
+      "acoes": [
+        {
+          "tipo": "duplicar",
+          "destino": {
+            "funil": "Vendas — Locação de andaimes",
+            "etapa": "Levantamento da obra"
+          }
+        }
+      ]
+    },
+    {
+      "nome": "Lead recebido: tarefa de primeiro contato em 1 dia",
+      "gatilho": "entrou",
+      "funil": "Prospecção",
+      "etapa": "Lead recebido",
+      "acoes": [
+        {
+          "tipo": "tarefa",
+          "titulo": "Primeiro contato",
+          "dias": 1
+        }
+      ]
+    },
+    {
+      "nome": "Proposta enviada: follow-up em 3 dias",
+      "gatilho": "entrou",
+      "funil": "Vendas — Locação de andaimes",
+      "etapa": "Proposta enviada",
+      "acoes": [
+        {
+          "tipo": "tarefa",
+          "titulo": "Follow-up da proposta",
+          "dias": 3
+        },
+        {
+          "tipo": "email"
+        }
+      ]
+    },
+    {
+      "nome": "Negociação: registra a data da última conversa",
+      "gatilho": "entrou",
+      "funil": "Vendas — Locação de andaimes",
+      "etapa": "Negociação",
+      "acoes": [
+        {
+          "tipo": "editar",
+          "campo": "deal_AF000000-0000-4000-8000-000000000003"
+        }
+      ]
+    },
+    {
+      "nome": "Contrato fechado abre a obra na Implantação",
+      "gatilho": "ganho",
+      "funil": "Vendas — Locação de andaimes",
+      "etapa": "Aprovação do contrato",
+      "acoes": [
+        {
+          "tipo": "duplicar",
+          "destino": {
+            "funil": "Implantação na obra",
+            "etapa": "Kick-off"
+          }
+        },
+        {
+          "tipo": "editar",
+          "modelo": "Contrato de locação"
+        }
+      ]
+    },
+    {
+      "nome": "Perdido em Negociação: registra o motivo no histórico",
+      "gatilho": "perdido",
+      "funil": "Vendas — Locação de andaimes",
+      "etapa": "Negociação",
+      "acoes": [
+        {
+          "tipo": "interacao"
+        }
+      ]
+    },
+    {
+      "nome": "Entrega do material: avisa o cliente pelo WhatsApp",
+      "gatilho": "entrou",
+      "funil": "Implantação na obra",
+      "etapa": "Entrega do material",
+      "comErro": true,
+      "acoes": [
+        {
+          "tipo": "whatsapp"
+        }
+      ]
+    },
+    {
+      "nome": "Montagem concluída passa para locação",
+      "gatilho": "editado-na-etapa",
+      "funil": "Implantação na obra",
+      "etapa": "Montagem",
+      "ativa": false,
+      "acoes": [
+        {
+          "tipo": "alterar-etapa",
+          "destino": {
+            "funil": "Implantação na obra",
+            "etapa": "Obra em locação"
+          }
+        }
+      ]
+    },
+    {
+      "nome": "Tarefa finalizada: registro de interação",
+      "gatilho": "tarefa-finalizada",
+      "entidade": 12,
+      "acoes": [
+        {
+          "tipo": "interacao"
+        }
+      ]
+    }
+  ],
+  "webhooks": [
+    {
+      "entidade": 2,
+      "acao": "Win",
+      "ativo": true,
+      "nativa": false
+    },
+    {
+      "entidade": 4,
+      "acao": "Create",
+      "ativo": true,
+      "nativa": true
+    },
+    {
+      "entidade": 1,
+      "acao": "Update",
+      "ativo": false,
+      "nativa": false
+    }
+  ],
+  "integracoes": [
+    {
+      "nome": "Neppo"
+    },
+    {
+      "nome": "Omie"
+    },
+    {
+      "nome": "Clicksign"
+    },
+    {
+      "nome": "RD Station",
+      "ativa": false
+    }
+  ],
+  "negocios": [
+    {
+      "titulo": "Fachada Ed. Atlântico — 2.400 m²",
+      "funil": "Vendas — Locação de andaimes",
+      "etapa": "Negociação",
+      "cliente": "Construtora Horizonte",
+      "responsavel": "Carla Menezes",
+      "valor": 186000,
+      "diasNaEtapa": 9
+    },
+    {
+      "titulo": "Galpão MRX — torres de acesso",
+      "funil": "Vendas — Locação de andaimes",
+      "etapa": "Proposta enviada",
+      "cliente": "MRX Montagens Industriais",
+      "responsavel": "Rafael Duarte",
+      "valor": 74500,
+      "diasNaEtapa": 4
+    },
+    {
+      "titulo": "Casco do navio P-12",
+      "funil": "Vendas — Locação de andaimes",
+      "etapa": "Projeto de montagem",
+      "cliente": "Porto Seguro Estaleiro",
+      "responsavel": "Carla Menezes",
+      "valor": 312000,
+      "diasNaEtapa": 21
+    },
+    {
+      "titulo": "Residencial Vale Verde — torre B",
+      "funil": "Vendas — Locação de andaimes",
+      "etapa": "Aprovação do contrato",
+      "cliente": "Vale Verde Incorporadora",
+      "responsavel": "Beatriz Lima",
+      "valor": 98000,
+      "diasNaEtapa": 2
+    },
+    {
+      "titulo": "Fachada Engeplan Centro",
+      "funil": "Vendas — Locação de andaimes",
+      "etapa": "Negociação",
+      "cliente": "Engeplan Obras",
+      "responsavel": "Rafael Duarte",
+      "valor": 54000,
+      "status": "perdido",
+      "finalizadoEm": "2026-10-02"
+    },
+    {
+      "titulo": "Reforma Concreta — sede",
+      "funil": "Vendas — Locação de andaimes",
+      "etapa": "Aprovação do contrato",
+      "cliente": "Concreta Engenharia",
+      "responsavel": "Beatriz Lima",
+      "valor": 41000,
+      "status": "ganho",
+      "finalizadoEm": "2026-10-10"
+    },
+    {
+      "titulo": "Obra Concreta — sede",
+      "funil": "Implantação na obra",
+      "etapa": "Entrega do material",
+      "cliente": "Concreta Engenharia",
+      "responsavel": "Otávio Prado",
+      "valor": 41000,
+      "diasNaEtapa": 3
+    },
+    {
+      "titulo": "Obra Horizonte — Ed. Pacífico",
+      "funil": "Implantação na obra",
+      "etapa": "Obra em locação",
+      "cliente": "Construtora Horizonte",
+      "responsavel": "Otávio Prado",
+      "valor": 152000,
+      "diasNaEtapa": 47
+    },
+    {
+      "titulo": "Indicação — Estaleiro Atlântico Sul",
+      "funil": "Prospecção",
+      "etapa": "Qualificação",
+      "cliente": "Porto Seguro Estaleiro",
+      "responsavel": "Rafael Duarte",
+      "diasNaEtapa": 6
+    },
+    {
+      "titulo": "Visita — MRX unidade Betim",
+      "funil": "Prospecção",
+      "etapa": "Visita técnica agendada",
+      "cliente": "MRX Montagens Industriais",
+      "responsavel": "Carla Menezes",
+      "diasNaEtapa": 1
+    },
+    {
+      "titulo": "Lead site — Vale Verde loteamento",
+      "funil": "Prospecção",
+      "etapa": "Qualificação",
+      "cliente": "Vale Verde Incorporadora",
+      "responsavel": "Beatriz Lima",
+      "status": "perdido",
+      "finalizadoEm": "2026-09-28"
+    }
+  ],
+  "gerar": [
+    {
+      "quantidade": 46,
+      "etapas": [
+        "Lead recebido",
+        "Lead recebido",
+        "Qualificação",
+        "Visita técnica agendada"
+      ],
+      "modelo": {
+        "titulo": "Lead",
+        "funil": "Prospecção",
+        "cliente": "Engeplan Obras",
+        "responsavel": "Beatriz Lima"
+      }
+    },
+    {
+      "quantidade": 28,
+      "etapas": [
+        "Levantamento da obra",
+        "Projeto de montagem",
+        "Proposta enviada",
+        "Proposta enviada",
+        "Negociação"
+      ],
+      "modelo": {
+        "titulo": "Locação",
+        "funil": "Vendas — Locação de andaimes",
+        "cliente": "Construtora Horizonte",
+        "responsavel": "Rafael Duarte",
+        "valor": 36000
+      }
+    },
+    {
+      "quantidade": 9,
+      "etapas": [
+        "Kick-off",
+        "Montagem",
+        "Obra em locação"
+      ],
+      "modelo": {
+        "titulo": "Obra",
+        "funil": "Implantação na obra",
+        "cliente": "Engeplan Obras",
+        "responsavel": "Otávio Prado",
+        "valor": 28000
+      }
+    }
+  ]
+}

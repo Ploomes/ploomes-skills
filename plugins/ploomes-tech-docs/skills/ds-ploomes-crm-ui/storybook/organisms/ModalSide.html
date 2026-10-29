@@ -1,0 +1,288 @@
+<!doctype html>
+<!--
+  Ploomes Design System — snapshot estático das stories do Storybook.
+  Componente : Organisms/ModalSide
+  Stories    : 11 (Default, Orientation — right, Width — normal (600px), Width — small (300px), Without footer, With Secondary Button, Footer with text, Brand color action, Scrollable content, With Breadcrumbs, Right + normal (Figma variant))
+  Story      : ModalSide.stories.tsx
+  Tema       : light — use <html class="dark"> para o tema escuro.
+-->
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ModalSide — Ploomes DS</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;600;700&display=swap">
+<link rel="stylesheet" href="../assets/design-system.css">
+<link rel="stylesheet" href="../assets/page.css">
+</head>
+<body class="ds-page">
+  <header class="ds-head">
+    <a class="ds-back" href="../index.html">← inventário</a>
+    <h1 class="ds-title">ModalSide</h1>
+    <p class="ds-meta">organisms · 11 stories · <code>ModalSide.stories.tsx</code></p>
+    <pre class="ds-code ds-import">import { ModalSide } from &#x27;@ploomescrm/ui&#x27;;</pre>
+  </header>
+  <section class="ds-story">
+    <h2 class="ds-story-name">Default</h2>
+    <div class="ds-story-id">organisms-modalside--default · export <b>Default</b></div>
+    <div class="ds-canvas ds-canvas--fullscreen">
+<div class="flex h-screen items-center justify-center bg-neutral-level_1"><button class="rounded-[5px] bg-confirmation px-[15px] py-[8px] text-sm font-semibold text-white" type="button">Abrir painel</button></div>
+    </div>
+    <p class="ds-state">estado aberto — após clique no gatilho</p>
+    <div class="ds-canvas ds-canvas--overlay">
+<div class="flex h-screen items-center justify-center bg-neutral-level_1"><button class="rounded-[5px] bg-confirmation px-[15px] py-[8px] text-sm font-semibold text-white" type="button">Abrir painel</button></div><div class="fixed inset-0 z-50"><div aria-hidden="true" class="absolute inset-0 bg-[rgba(76,85,102,0.8)] transition-opacity duration-200 ease-out opacity-100"></div><div aria-label="Lorem Ipsum" aria-modal="true" class="absolute inset-y-0 flex h-full flex-col overflow-hidden bg-background max-w-[calc(100vw-16px)] left-0 transition-transform duration-200 ease-out translate-x-0 w-[800px] shadow-[0px_24px_38px_0px_rgba(0,0,0,0.14),0px_9px_46px_0px_rgba(0,0,0,0.12),0px_11px_15px_0px_rgba(0,0,0,0.20)]" role="dialog"><div class="flex w-full items-center border-b border-neutral-level_2 bg-background"><div class="flex h-[50px] flex-1 items-center justify-end px-[15px] gap-[10px]"><div class="flex min-w-0 flex-1 items-center"><span class="truncate text-base font-semibold text-font-level_1">Lorem Ipsum</span></div><div class="flex shrink-0 items-center gap-[10px]"><button aria-label="Fechar" class="flex size-[35px] max-md:min-h-[44px] max-md:min-w-[44px] shrink-0 cursor-pointer items-center justify-center rounded-[5px] border border-neutral-level_2 bg-background transition-colors hover:bg-neutral-level_1 active:bg-neutral-level_2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-confirmation focus-visible:ring-offset-1" type="button"><span aria-hidden="true" class="inline-flex shrink-0 items-center justify-center text-font"><svg aria-hidden="true" class="lucide lucide-x" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="15" xmlns="http://www.w3.org/2000/svg"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg></span></button></div></div></div><div class="min-h-0 flex-1 overflow-y-auto p-[15px]" tabindex="0"><div class="flex w-full items-center justify-center rounded-[4px] border border-dashed border-neutral-level_2 text-sm text-font-level_2" style="height: 300px;">Replaceable content</div></div><div class="w-full border-t border-neutral-level_2 bg-background"><div class="flex h-[50px] items-center overflow-hidden px-[10px] justify-end gap-0 max-sm:h-auto max-sm:flex-col-reverse max-sm:items-stretch max-sm:gap-[10px] max-sm:overflow-visible max-sm:py-[10px]"><div aria-hidden="true" class="h-[35px] w-[57px] shrink-0 max-sm:hidden"></div><button class="inline-flex shrink-0 cursor-pointer items-center gap-[5px] rounded-[5px] px-[5px] font-semibold text-basic-light transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-30 bg-confirmation hover:bg-confirmation-level_1 active:bg-confirmation-level_2 focus-visible:ring-confirmation h-[35px] text-sm max-sm:w-full"><span class="overflow-hidden text-ellipsis whitespace-nowrap px-[5px]">Lorem Ipsum</span></button></div></div></div></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const Default: Story = {
+  render: () =&gt; (
+    &lt;ModalSideDemo title=&quot;Lorem Ipsum&quot; actionLabel=&quot;Lorem Ipsum&quot;&gt;
+      &lt;PlaceholderContent /&gt;
+    &lt;/ModalSideDemo&gt;
+  ),
+}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">Orientation — right</h2>
+    <div class="ds-story-id">organisms-modalside--right-orientation · export <b>RightOrientation</b></div>
+    <div class="ds-canvas ds-canvas--fullscreen">
+<div class="flex h-screen items-center justify-center bg-neutral-level_1"><button class="rounded-[5px] bg-confirmation px-[15px] py-[8px] text-sm font-semibold text-white" type="button">Abrir (direita)</button></div>
+    </div>
+    <p class="ds-state">estado aberto — após clique no gatilho</p>
+    <div class="ds-canvas ds-canvas--overlay">
+<div class="flex h-screen items-center justify-center bg-neutral-level_1"><button class="rounded-[5px] bg-confirmation px-[15px] py-[8px] text-sm font-semibold text-white" type="button">Abrir (direita)</button></div><div class="fixed inset-0 z-50"><div aria-hidden="true" class="absolute inset-0 bg-[rgba(76,85,102,0.8)] transition-opacity duration-200 ease-out opacity-100"></div><div aria-label="Lorem Ipsum" aria-modal="true" class="absolute inset-y-0 flex h-full flex-col overflow-hidden bg-background max-w-[calc(100vw-16px)] right-0 transition-transform duration-200 ease-out translate-x-0 w-[800px] shadow-[0px_24px_38px_0px_rgba(0,0,0,0.14),0px_9px_46px_0px_rgba(0,0,0,0.12),0px_11px_15px_0px_rgba(0,0,0,0.20)]" role="dialog"><div class="flex w-full items-center border-b border-neutral-level_2 bg-background"><div class="flex h-[50px] flex-1 items-center justify-end px-[15px] gap-[10px]"><div class="flex min-w-0 flex-1 items-center"><span class="truncate text-base font-semibold text-font-level_1">Lorem Ipsum</span></div><div class="flex shrink-0 items-center gap-[10px]"><button aria-label="Fechar" class="flex size-[35px] max-md:min-h-[44px] max-md:min-w-[44px] shrink-0 cursor-pointer items-center justify-center rounded-[5px] border border-neutral-level_2 bg-background transition-colors hover:bg-neutral-level_1 active:bg-neutral-level_2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-confirmation focus-visible:ring-offset-1" type="button"><span aria-hidden="true" class="inline-flex shrink-0 items-center justify-center text-font"><svg aria-hidden="true" class="lucide lucide-x" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="15" xmlns="http://www.w3.org/2000/svg"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg></span></button></div></div></div><div class="min-h-0 flex-1 overflow-y-auto p-[15px]" tabindex="0"><div class="flex w-full items-center justify-center rounded-[4px] border border-dashed border-neutral-level_2 text-sm text-font-level_2" style="height: 300px;">Replaceable content</div></div><div class="w-full border-t border-neutral-level_2 bg-background"><div class="flex h-[50px] items-center overflow-hidden px-[10px] justify-end gap-0 max-sm:h-auto max-sm:flex-col-reverse max-sm:items-stretch max-sm:gap-[10px] max-sm:overflow-visible max-sm:py-[10px]"><div aria-hidden="true" class="h-[35px] w-[57px] shrink-0 max-sm:hidden"></div><button class="inline-flex shrink-0 cursor-pointer items-center gap-[5px] rounded-[5px] px-[5px] font-semibold text-basic-light transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-30 bg-confirmation hover:bg-confirmation-level_1 active:bg-confirmation-level_2 focus-visible:ring-confirmation h-[35px] text-sm max-sm:w-full"><span class="overflow-hidden text-ellipsis whitespace-nowrap px-[5px]">Lorem Ipsum</span></button></div></div></div></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const RightOrientation: Story = {
+  name: &#x27;Orientation — right&#x27;,
+  render: () =&gt; (
+    &lt;ModalSideDemo
+      orientation=&quot;right&quot;
+      title=&quot;Lorem Ipsum&quot;
+      actionLabel=&quot;Lorem Ipsum&quot;
+      triggerLabel=&quot;Abrir (direita)&quot;
+    &gt;
+      &lt;PlaceholderContent /&gt;
+    &lt;/ModalSideDemo&gt;
+  ),
+}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">Width — normal (600px)</h2>
+    <div class="ds-story-id">organisms-modalside--width-normal · export <b>WidthNormal</b></div>
+    <div class="ds-canvas ds-canvas--fullscreen">
+<div class="flex h-screen items-center justify-center bg-neutral-level_1"><button class="rounded-[5px] bg-confirmation px-[15px] py-[8px] text-sm font-semibold text-white" type="button">Abrir normal</button></div>
+    </div>
+    <p class="ds-state">estado aberto — após clique no gatilho</p>
+    <div class="ds-canvas ds-canvas--overlay">
+<div class="flex h-screen items-center justify-center bg-neutral-level_1"><button class="rounded-[5px] bg-confirmation px-[15px] py-[8px] text-sm font-semibold text-white" type="button">Abrir normal</button></div><div class="fixed inset-0 z-50"><div aria-hidden="true" class="absolute inset-0 bg-[rgba(76,85,102,0.8)] transition-opacity duration-200 ease-out opacity-100"></div><div aria-label="Lorem Ipsum" aria-modal="true" class="absolute inset-y-0 flex h-full flex-col overflow-hidden bg-background max-w-[calc(100vw-16px)] left-0 transition-transform duration-200 ease-out translate-x-0 w-[600px] shadow-[0px_24px_38px_0px_rgba(0,0,0,0.14),0px_9px_46px_0px_rgba(0,0,0,0.12),0px_11px_15px_0px_rgba(0,0,0,0.20)]" role="dialog"><div class="flex w-full items-center border-b border-neutral-level_2 bg-background"><div class="flex h-[50px] flex-1 items-center justify-end px-[15px] gap-[10px]"><div class="flex min-w-0 flex-1 items-center"><span class="truncate text-base font-semibold text-font-level_1">Lorem Ipsum</span></div><div class="flex shrink-0 items-center gap-[10px]"><button aria-label="Fechar" class="flex size-[35px] max-md:min-h-[44px] max-md:min-w-[44px] shrink-0 cursor-pointer items-center justify-center rounded-[5px] border border-neutral-level_2 bg-background transition-colors hover:bg-neutral-level_1 active:bg-neutral-level_2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-confirmation focus-visible:ring-offset-1" type="button"><span aria-hidden="true" class="inline-flex shrink-0 items-center justify-center text-font"><svg aria-hidden="true" class="lucide lucide-x" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="15" xmlns="http://www.w3.org/2000/svg"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg></span></button></div></div></div><div class="min-h-0 flex-1 overflow-y-auto p-[15px]" tabindex="0"><div class="flex w-full items-center justify-center rounded-[4px] border border-dashed border-neutral-level_2 text-sm text-font-level_2" style="height: 300px;">Replaceable content</div></div><div class="w-full border-t border-neutral-level_2 bg-background"><div class="flex h-[50px] items-center overflow-hidden px-[10px] justify-end gap-0 max-sm:h-auto max-sm:flex-col-reverse max-sm:items-stretch max-sm:gap-[10px] max-sm:overflow-visible max-sm:py-[10px]"><div aria-hidden="true" class="h-[35px] w-[57px] shrink-0 max-sm:hidden"></div><button class="inline-flex shrink-0 cursor-pointer items-center gap-[5px] rounded-[5px] px-[5px] font-semibold text-basic-light transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-30 bg-confirmation hover:bg-confirmation-level_1 active:bg-confirmation-level_2 focus-visible:ring-confirmation h-[35px] text-sm max-sm:w-full"><span class="overflow-hidden text-ellipsis whitespace-nowrap px-[5px]">Lorem Ipsum</span></button></div></div></div></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const WidthNormal: Story = {
+  name: &#x27;Width — normal (600px)&#x27;,
+  render: () =&gt; (
+    &lt;ModalSideDemo
+      width=&quot;normal&quot;
+      title=&quot;Lorem Ipsum&quot;
+      actionLabel=&quot;Lorem Ipsum&quot;
+      triggerLabel=&quot;Abrir normal&quot;
+    &gt;
+      &lt;PlaceholderContent /&gt;
+    &lt;/ModalSideDemo&gt;
+  ),
+}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">Width — small (300px)</h2>
+    <div class="ds-story-id">organisms-modalside--width-small · export <b>WidthSmall</b></div>
+    <div class="ds-canvas ds-canvas--fullscreen">
+<div class="flex h-screen items-center justify-center bg-neutral-level_1"><button class="rounded-[5px] bg-confirmation px-[15px] py-[8px] text-sm font-semibold text-white" type="button">Abrir pequeno</button></div>
+    </div>
+    <p class="ds-state">estado aberto — após clique no gatilho</p>
+    <div class="ds-canvas ds-canvas--overlay">
+<div class="flex h-screen items-center justify-center bg-neutral-level_1"><button class="rounded-[5px] bg-confirmation px-[15px] py-[8px] text-sm font-semibold text-white" type="button">Abrir pequeno</button></div><div class="fixed inset-0 z-50"><div aria-hidden="true" class="absolute inset-0 bg-[rgba(76,85,102,0.8)] transition-opacity duration-200 ease-out opacity-100"></div><div aria-label="Lorem Ipsum" aria-modal="true" class="absolute inset-y-0 flex h-full flex-col overflow-hidden bg-background max-w-[calc(100vw-16px)] left-0 transition-transform duration-200 ease-out translate-x-0 w-[300px] shadow-[0px_24px_38px_0px_rgba(0,0,0,0.14),0px_9px_46px_0px_rgba(0,0,0,0.12),0px_11px_15px_0px_rgba(0,0,0,0.20)]" role="dialog"><div class="flex w-full items-center border-b border-neutral-level_2 bg-background"><div class="flex h-[50px] flex-1 items-center justify-end px-[15px] gap-[10px]"><div class="flex min-w-0 flex-1 items-center"><span class="truncate text-base font-semibold text-font-level_1">Lorem Ipsum</span></div><div class="flex shrink-0 items-center gap-[10px]"><button aria-label="Fechar" class="flex size-[35px] max-md:min-h-[44px] max-md:min-w-[44px] shrink-0 cursor-pointer items-center justify-center rounded-[5px] border border-neutral-level_2 bg-background transition-colors hover:bg-neutral-level_1 active:bg-neutral-level_2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-confirmation focus-visible:ring-offset-1" type="button"><span aria-hidden="true" class="inline-flex shrink-0 items-center justify-center text-font"><svg aria-hidden="true" class="lucide lucide-x" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="15" xmlns="http://www.w3.org/2000/svg"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg></span></button></div></div></div><div class="min-h-0 flex-1 overflow-y-auto p-[15px]" tabindex="0"><div class="flex w-full items-center justify-center rounded-[4px] border border-dashed border-neutral-level_2 text-sm text-font-level_2" style="height: 300px;">Replaceable content</div></div><div class="w-full border-t border-neutral-level_2 bg-background"><div class="flex h-[50px] items-center overflow-hidden px-[10px] justify-end gap-0 max-sm:h-auto max-sm:flex-col-reverse max-sm:items-stretch max-sm:gap-[10px] max-sm:overflow-visible max-sm:py-[10px]"><div aria-hidden="true" class="h-[35px] w-[57px] shrink-0 max-sm:hidden"></div><button class="inline-flex shrink-0 cursor-pointer items-center gap-[5px] rounded-[5px] px-[5px] font-semibold text-basic-light transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-30 bg-confirmation hover:bg-confirmation-level_1 active:bg-confirmation-level_2 focus-visible:ring-confirmation h-[35px] text-sm max-sm:w-full"><span class="overflow-hidden text-ellipsis whitespace-nowrap px-[5px]">Lorem Ipsum</span></button></div></div></div></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const WidthSmall: Story = {
+  name: &#x27;Width — small (300px)&#x27;,
+  render: () =&gt; (
+    &lt;ModalSideDemo
+      width=&quot;small&quot;
+      title=&quot;Lorem Ipsum&quot;
+      actionLabel=&quot;Lorem Ipsum&quot;
+      triggerLabel=&quot;Abrir pequeno&quot;
+    &gt;
+      &lt;PlaceholderContent /&gt;
+    &lt;/ModalSideDemo&gt;
+  ),
+}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">Without footer</h2>
+    <div class="ds-story-id">organisms-modalside--no-footer · export <b>NoFooter</b></div>
+    <div class="ds-canvas ds-canvas--fullscreen">
+<div class="flex h-screen items-center justify-center bg-neutral-level_1"><button class="rounded-[5px] bg-confirmation px-[15px] py-[8px] text-sm font-semibold text-white" type="button">Abrir painel</button></div>
+    </div>
+    <p class="ds-state">estado aberto — após clique no gatilho</p>
+    <div class="ds-canvas ds-canvas--overlay">
+<div class="flex h-screen items-center justify-center bg-neutral-level_1"><button class="rounded-[5px] bg-confirmation px-[15px] py-[8px] text-sm font-semibold text-white" type="button">Abrir painel</button></div><div class="fixed inset-0 z-50"><div aria-hidden="true" class="absolute inset-0 bg-[rgba(76,85,102,0.8)] transition-opacity duration-200 ease-out opacity-100"></div><div aria-label="Visualização" aria-modal="true" class="absolute inset-y-0 flex h-full flex-col overflow-hidden bg-background max-w-[calc(100vw-16px)] left-0 transition-transform duration-200 ease-out translate-x-0 w-[800px] shadow-[0px_24px_38px_0px_rgba(0,0,0,0.14),0px_9px_46px_0px_rgba(0,0,0,0.12),0px_11px_15px_0px_rgba(0,0,0,0.20)]" role="dialog"><div class="flex w-full items-center border-b border-neutral-level_2 bg-background"><div class="flex h-[50px] flex-1 items-center justify-end px-[15px] gap-[10px]"><div class="flex min-w-0 flex-1 items-center"><span class="truncate text-base font-semibold text-font-level_1">Visualização</span></div><div class="flex shrink-0 items-center gap-[10px]"><button aria-label="Fechar" class="flex size-[35px] max-md:min-h-[44px] max-md:min-w-[44px] shrink-0 cursor-pointer items-center justify-center rounded-[5px] border border-neutral-level_2 bg-background transition-colors hover:bg-neutral-level_1 active:bg-neutral-level_2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-confirmation focus-visible:ring-offset-1" type="button"><span aria-hidden="true" class="inline-flex shrink-0 items-center justify-center text-font"><svg aria-hidden="true" class="lucide lucide-x" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="15" xmlns="http://www.w3.org/2000/svg"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg></span></button></div></div></div><div class="min-h-0 flex-1 overflow-y-auto p-[15px]" tabindex="0"><div class="flex w-full items-center justify-center rounded-[4px] border border-dashed border-neutral-level_2 text-sm text-font-level_2" style="height: 300px;">Replaceable content</div></div></div></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const NoFooter: Story = {
+  name: &#x27;Without footer&#x27;,
+  render: () =&gt; (
+    &lt;ModalSideDemo title=&quot;Visualização&quot;&gt;
+      &lt;PlaceholderContent /&gt;
+    &lt;/ModalSideDemo&gt;
+  ),
+}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">With Secondary Button</h2>
+    <div class="ds-story-id">organisms-modalside--with-secondary-button · export <b>WithSecondaryButton</b></div>
+    <div class="ds-canvas ds-canvas--fullscreen">
+<div class="flex h-screen items-center justify-center bg-neutral-level_1"><button class="rounded-[5px] bg-confirmation px-[15px] py-[8px] text-sm font-semibold text-white" type="button">Abrir painel</button></div>
+    </div>
+    <p class="ds-state">estado aberto — após clique no gatilho</p>
+    <div class="ds-canvas ds-canvas--overlay">
+<div class="flex h-screen items-center justify-center bg-neutral-level_1"><button class="rounded-[5px] bg-confirmation px-[15px] py-[8px] text-sm font-semibold text-white" type="button">Abrir painel</button></div><div class="fixed inset-0 z-50"><div aria-hidden="true" class="absolute inset-0 bg-[rgba(76,85,102,0.8)] transition-opacity duration-200 ease-out opacity-100"></div><div aria-label="Confirmar ação" aria-modal="true" class="absolute inset-y-0 flex h-full flex-col overflow-hidden bg-background max-w-[calc(100vw-16px)] left-0 transition-transform duration-200 ease-out translate-x-0 w-[800px] shadow-[0px_24px_38px_0px_rgba(0,0,0,0.14),0px_9px_46px_0px_rgba(0,0,0,0.12),0px_11px_15px_0px_rgba(0,0,0,0.20)]" role="dialog"><div class="flex w-full items-center border-b border-neutral-level_2 bg-background"><div class="flex h-[50px] flex-1 items-center justify-end px-[15px] gap-[10px]"><div class="flex min-w-0 flex-1 items-center"><span class="truncate text-base font-semibold text-font-level_1">Confirmar ação</span></div><div class="flex shrink-0 items-center gap-[10px]"><button aria-label="Fechar" class="flex size-[35px] max-md:min-h-[44px] max-md:min-w-[44px] shrink-0 cursor-pointer items-center justify-center rounded-[5px] border border-neutral-level_2 bg-background transition-colors hover:bg-neutral-level_1 active:bg-neutral-level_2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-confirmation focus-visible:ring-offset-1" type="button"><span aria-hidden="true" class="inline-flex shrink-0 items-center justify-center text-font"><svg aria-hidden="true" class="lucide lucide-x" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="15" xmlns="http://www.w3.org/2000/svg"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg></span></button></div></div></div><div class="min-h-0 flex-1 overflow-y-auto p-[15px]" tabindex="0"><div class="flex w-full items-center justify-center rounded-[4px] border border-dashed border-neutral-level_2 text-sm text-font-level_2" style="height: 300px;">Replaceable content</div></div><div class="w-full border-t border-neutral-level_2 bg-background"><div class="flex h-[50px] items-center overflow-hidden px-[10px] justify-between max-sm:h-auto max-sm:flex-col-reverse max-sm:items-stretch max-sm:gap-[10px] max-sm:overflow-visible max-sm:py-[10px]"><button class="relative isolate inline-flex shrink-0 cursor-pointer items-center gap-[5px] rounded-[5px] px-[5px] text-sm text-font transition-colors before:pointer-events-none before:absolute before:inset-0 before:-z-10 before:rounded-[5px] before:bg-transparent before:transition-colors before:content-[''] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-confirmation focus-visible:ring-offset-1 disabled:pointer-events-none disabled:opacity-40 border border-neutral-level_2 bg-background hover:before:bg-neutral-level_1 active:before:bg-neutral-level_2 h-[35px] max-sm:w-full"><span class="overflow-hidden text-ellipsis whitespace-nowrap px-[5px]">Cancelar</span></button><button class="inline-flex shrink-0 cursor-pointer items-center gap-[5px] rounded-[5px] px-[5px] font-semibold text-basic-light transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-30 bg-confirmation hover:bg-confirmation-level_1 active:bg-confirmation-level_2 focus-visible:ring-confirmation h-[35px] text-sm max-sm:w-full"><span class="overflow-hidden text-ellipsis whitespace-nowrap px-[5px]">Confirmar</span></button></div></div></div></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const WithSecondaryButton: Story = {
+  render: () =&gt; (
+    &lt;ModalSideDemo
+      title=&quot;Confirmar ação&quot;
+      secondaryLabel=&quot;Cancelar&quot;
+      actionLabel=&quot;Confirmar&quot;
+      actionColor=&quot;confirmation&quot;
+    &gt;
+      &lt;PlaceholderContent /&gt;
+    &lt;/ModalSideDemo&gt;
+  ),
+}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">Footer with text</h2>
+    <div class="ds-story-id">organisms-modalside--with-footer-text · export <b>WithFooterText</b></div>
+    <div class="ds-canvas ds-canvas--fullscreen">
+<div class="flex h-screen items-center justify-center bg-neutral-level_1"><button class="rounded-[5px] bg-confirmation px-[15px] py-[8px] text-sm font-semibold text-white" type="button">Abrir painel</button></div>
+    </div>
+    <p class="ds-state">estado aberto — após clique no gatilho</p>
+    <div class="ds-canvas ds-canvas--overlay">
+<div class="flex h-screen items-center justify-center bg-neutral-level_1"><button class="rounded-[5px] bg-confirmation px-[15px] py-[8px] text-sm font-semibold text-white" type="button">Abrir painel</button></div><div class="fixed inset-0 z-50"><div aria-hidden="true" class="absolute inset-0 bg-[rgba(76,85,102,0.8)] transition-opacity duration-200 ease-out opacity-100"></div><div aria-label="Informações" aria-modal="true" class="absolute inset-y-0 flex h-full flex-col overflow-hidden bg-background max-w-[calc(100vw-16px)] left-0 transition-transform duration-200 ease-out translate-x-0 w-[800px] shadow-[0px_24px_38px_0px_rgba(0,0,0,0.14),0px_9px_46px_0px_rgba(0,0,0,0.12),0px_11px_15px_0px_rgba(0,0,0,0.20)]" role="dialog"><div class="flex w-full items-center border-b border-neutral-level_2 bg-background"><div class="flex h-[50px] flex-1 items-center justify-end px-[15px] gap-[10px]"><div class="flex min-w-0 flex-1 items-center"><span class="truncate text-base font-semibold text-font-level_1">Informações</span></div><div class="flex shrink-0 items-center gap-[10px]"><button aria-label="Fechar" class="flex size-[35px] max-md:min-h-[44px] max-md:min-w-[44px] shrink-0 cursor-pointer items-center justify-center rounded-[5px] border border-neutral-level_2 bg-background transition-colors hover:bg-neutral-level_1 active:bg-neutral-level_2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-confirmation focus-visible:ring-offset-1" type="button"><span aria-hidden="true" class="inline-flex shrink-0 items-center justify-center text-font"><svg aria-hidden="true" class="lucide lucide-x" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="15" xmlns="http://www.w3.org/2000/svg"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg></span></button></div></div></div><div class="min-h-0 flex-1 overflow-y-auto p-[15px]" tabindex="0"><div class="flex w-full items-center justify-center rounded-[4px] border border-dashed border-neutral-level_2 text-sm text-font-level_2" style="height: 300px;">Replaceable content</div></div><div class="w-full border-t border-neutral-level_2 bg-background"><div class="flex h-[50px] items-center overflow-hidden px-[10px] justify-between max-sm:h-auto max-sm:flex-col-reverse max-sm:items-stretch max-sm:gap-[10px] max-sm:overflow-visible max-sm:py-[10px]"><span class="min-w-0 flex-1 truncate text-base font-semibold text-font-level_1 max-sm:flex-none max-sm:whitespace-normal max-sm:text-center">Última atualização: hoje</span><button class="inline-flex shrink-0 cursor-pointer items-center gap-[5px] rounded-[5px] px-[5px] font-semibold text-basic-light transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-30 bg-confirmation hover:bg-confirmation-level_1 active:bg-confirmation-level_2 focus-visible:ring-confirmation h-[35px] text-sm max-sm:w-full"><span class="overflow-hidden text-ellipsis whitespace-nowrap px-[5px]">Salvar</span></button></div></div></div></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const WithFooterText: Story = {
+  name: &#x27;Footer with text&#x27;,
+  render: () =&gt; (
+    &lt;ModalSideDemo
+      title=&quot;Informações&quot;
+      footerText=&quot;Última atualização: hoje&quot;
+      actionLabel=&quot;Salvar&quot;
+    &gt;
+      &lt;PlaceholderContent /&gt;
+    &lt;/ModalSideDemo&gt;
+  ),
+}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">Brand color action</h2>
+    <div class="ds-story-id">organisms-modalside--brand-action · export <b>BrandAction</b></div>
+    <div class="ds-canvas ds-canvas--fullscreen">
+<div class="flex h-screen items-center justify-center bg-neutral-level_1"><button class="rounded-[5px] bg-confirmation px-[15px] py-[8px] text-sm font-semibold text-white" type="button">Abrir (brand)</button></div>
+    </div>
+    <p class="ds-state">estado aberto — após clique no gatilho</p>
+    <div class="ds-canvas ds-canvas--overlay">
+<div class="flex h-screen items-center justify-center bg-neutral-level_1"><button class="rounded-[5px] bg-confirmation px-[15px] py-[8px] text-sm font-semibold text-white" type="button">Abrir (brand)</button></div><div class="fixed inset-0 z-50"><div aria-hidden="true" class="absolute inset-0 bg-[rgba(76,85,102,0.8)] transition-opacity duration-200 ease-out opacity-100"></div><div aria-label="Novo registro" aria-modal="true" class="absolute inset-y-0 flex h-full flex-col overflow-hidden bg-background max-w-[calc(100vw-16px)] left-0 transition-transform duration-200 ease-out translate-x-0 w-[800px] shadow-[0px_24px_38px_0px_rgba(0,0,0,0.14),0px_9px_46px_0px_rgba(0,0,0,0.12),0px_11px_15px_0px_rgba(0,0,0,0.20)]" role="dialog"><div class="flex w-full items-center border-b border-neutral-level_2 bg-background"><div class="flex h-[50px] flex-1 items-center justify-end px-[15px] gap-[10px]"><div class="flex min-w-0 flex-1 items-center"><span class="truncate text-base font-semibold text-font-level_1">Novo registro</span></div><div class="flex shrink-0 items-center gap-[10px]"><button aria-label="Fechar" class="flex size-[35px] max-md:min-h-[44px] max-md:min-w-[44px] shrink-0 cursor-pointer items-center justify-center rounded-[5px] border border-neutral-level_2 bg-background transition-colors hover:bg-neutral-level_1 active:bg-neutral-level_2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-confirmation focus-visible:ring-offset-1" type="button"><span aria-hidden="true" class="inline-flex shrink-0 items-center justify-center text-font"><svg aria-hidden="true" class="lucide lucide-x" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="15" xmlns="http://www.w3.org/2000/svg"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg></span></button></div></div></div><div class="min-h-0 flex-1 overflow-y-auto p-[15px]" tabindex="0"><div class="flex w-full items-center justify-center rounded-[4px] border border-dashed border-neutral-level_2 text-sm text-font-level_2" style="height: 300px;">Replaceable content</div></div><div class="w-full border-t border-neutral-level_2 bg-background"><div class="flex h-[50px] items-center overflow-hidden px-[10px] justify-between max-sm:h-auto max-sm:flex-col-reverse max-sm:items-stretch max-sm:gap-[10px] max-sm:overflow-visible max-sm:py-[10px]"><button class="relative isolate inline-flex shrink-0 cursor-pointer items-center gap-[5px] rounded-[5px] px-[5px] text-sm text-font transition-colors before:pointer-events-none before:absolute before:inset-0 before:-z-10 before:rounded-[5px] before:bg-transparent before:transition-colors before:content-[''] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-confirmation focus-visible:ring-offset-1 disabled:pointer-events-none disabled:opacity-40 border border-neutral-level_2 bg-background hover:before:bg-neutral-level_1 active:before:bg-neutral-level_2 h-[35px] max-sm:w-full"><span class="overflow-hidden text-ellipsis whitespace-nowrap px-[5px]">Cancelar</span></button><button class="inline-flex shrink-0 cursor-pointer items-center gap-[5px] rounded-[5px] px-[5px] font-semibold text-basic-light transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-30 bg-brand hover:bg-brand-level_1 active:bg-brand-level_2 focus-visible:ring-brand h-[35px] text-sm max-sm:w-full"><span class="overflow-hidden text-ellipsis whitespace-nowrap px-[5px]">Criar</span></button></div></div></div></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const BrandAction: Story = {
+  name: &#x27;Brand color action&#x27;,
+  render: () =&gt; (
+    &lt;ModalSideDemo
+      title=&quot;Novo registro&quot;
+      secondaryLabel=&quot;Cancelar&quot;
+      actionLabel=&quot;Criar&quot;
+      actionColor=&quot;brand&quot;
+      triggerLabel=&quot;Abrir (brand)&quot;
+    &gt;
+      &lt;PlaceholderContent /&gt;
+    &lt;/ModalSideDemo&gt;
+  ),
+}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">Scrollable content</h2>
+    <div class="ds-story-id">organisms-modalside--scrollable-content · export <b>ScrollableContent</b></div>
+    <div class="ds-canvas ds-canvas--fullscreen">
+<div class="flex h-screen items-center justify-center bg-neutral-level_1"><button class="rounded-[5px] bg-confirmation px-[15px] py-[8px] text-sm font-semibold text-white" type="button">Abrir painel</button></div>
+    </div>
+    <p class="ds-state">estado aberto — após clique no gatilho</p>
+    <div class="ds-canvas ds-canvas--overlay">
+<div class="flex h-screen items-center justify-center bg-neutral-level_1"><button class="rounded-[5px] bg-confirmation px-[15px] py-[8px] text-sm font-semibold text-white" type="button">Abrir painel</button></div><div class="fixed inset-0 z-50"><div aria-hidden="true" class="absolute inset-0 bg-[rgba(76,85,102,0.8)] transition-opacity duration-200 ease-out opacity-100"></div><div aria-label="Conteúdo longo" aria-modal="true" class="absolute inset-y-0 flex h-full flex-col overflow-hidden bg-background max-w-[calc(100vw-16px)] left-0 transition-transform duration-200 ease-out translate-x-0 w-[600px] shadow-[0px_24px_38px_0px_rgba(0,0,0,0.14),0px_9px_46px_0px_rgba(0,0,0,0.12),0px_11px_15px_0px_rgba(0,0,0,0.20)]" role="dialog"><div class="flex w-full items-center border-b border-neutral-level_2 bg-background"><div class="flex h-[50px] flex-1 items-center justify-end px-[15px] gap-[10px]"><div class="flex min-w-0 flex-1 items-center"><span class="truncate text-base font-semibold text-font-level_1">Conteúdo longo</span></div><div class="flex shrink-0 items-center gap-[10px]"><button aria-label="Fechar" class="flex size-[35px] max-md:min-h-[44px] max-md:min-w-[44px] shrink-0 cursor-pointer items-center justify-center rounded-[5px] border border-neutral-level_2 bg-background transition-colors hover:bg-neutral-level_1 active:bg-neutral-level_2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-confirmation focus-visible:ring-offset-1" type="button"><span aria-hidden="true" class="inline-flex shrink-0 items-center justify-center text-font"><svg aria-hidden="true" class="lucide lucide-x" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="15" xmlns="http://www.w3.org/2000/svg"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg></span></button></div></div></div><div class="min-h-0 flex-1 overflow-y-auto p-[15px]" tabindex="0"><div class="flex flex-col gap-4"><div class="rounded-[5px] border border-neutral-level_2 p-[15px] text-sm text-font"><p class="font-semibold">Seção 1</p><p class="mt-1 text-font-level_1">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></div><div class="rounded-[5px] border border-neutral-level_2 p-[15px] text-sm text-font"><p class="font-semibold">Seção 2</p><p class="mt-1 text-font-level_1">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></div><div class="rounded-[5px] border border-neutral-level_2 p-[15px] text-sm text-font"><p class="font-semibold">Seção 3</p><p class="mt-1 text-font-level_1">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></div><div class="rounded-[5px] border border-neutral-level_2 p-[15px] text-sm text-font"><p class="font-semibold">Seção 4</p><p class="mt-1 text-font-level_1">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></div><div class="rounded-[5px] border border-neutral-level_2 p-[15px] text-sm text-font"><p class="font-semibold">Seção 5</p><p class="mt-1 text-font-level_1">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></div><div class="rounded-[5px] border border-neutral-level_2 p-[15px] text-sm text-font"><p class="font-semibold">Seção 6</p><p class="mt-1 text-font-level_1">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></div><div class="rounded-[5px] border border-neutral-level_2 p-[15px] text-sm text-font"><p class="font-semibold">Seção 7</p><p class="mt-1 text-font-level_1">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></div><div class="rounded-[5px] border border-neutral-level_2 p-[15px] text-sm text-font"><p class="font-semibold">Seção 8</p><p class="mt-1 text-font-level_1">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></div><div class="rounded-[5px] border border-neutral-level_2 p-[15px] text-sm text-font"><p class="font-semibold">Seção 9</p><p class="mt-1 text-font-level_1">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></div><div class="rounded-[5px] border border-neutral-level_2 p-[15px] text-sm text-font"><p class="font-semibold">Seção 10</p><p class="mt-1 text-font-level_1">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></div><div class="rounded-[5px] border border-neutral-level_2 p-[15px] text-sm text-font"><p class="font-semibold">Seção 11</p><p class="mt-1 text-font-level_1">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></div><div class="rounded-[5px] border border-neutral-level_2 p-[15px] text-sm text-font"><p class="font-semibold">Seção 12</p><p class="mt-1 text-font-level_1">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></div></div></div><div class="w-full border-t border-neutral-level_2 bg-background"><div class="flex h-[50px] items-center overflow-hidden px-[10px] justify-end gap-0 max-sm:h-auto max-sm:flex-col-reverse max-sm:items-stretch max-sm:gap-[10px] max-sm:overflow-visible max-sm:py-[10px]"><div aria-hidden="true" class="h-[35px] w-[57px] shrink-0 max-sm:hidden"></div><button class="inline-flex shrink-0 cursor-pointer items-center gap-[5px] rounded-[5px] px-[5px] font-semibold text-basic-light transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-30 bg-confirmation hover:bg-confirmation-level_1 active:bg-confirmation-level_2 focus-visible:ring-confirmation h-[35px] text-sm max-sm:w-full"><span class="overflow-hidden text-ellipsis whitespace-nowrap px-[5px]">Fechar</span></button></div></div></div></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const ScrollableContent: Story = {
+  name: &#x27;Scrollable content&#x27;,
+  render: () =&gt; (
+    &lt;ModalSideDemo title=&quot;Conteúdo longo&quot; actionLabel=&quot;Fechar&quot; width=&quot;normal&quot;&gt;
+      &lt;div className=&quot;flex flex-col gap-4&quot;&gt;
+        {Array.from({ length: 12 }, (_, i) =&gt; (
+          &lt;div
+            key={i}
+            className=&quot;rounded-[5px] border border-neutral-level_2 p-[15px] text-sm text-font&quot;
+          &gt;
+            &lt;p className=&quot;font-semibold&quot;&gt;Seção {i + 1}&lt;/p&gt;
+            &lt;p className=&quot;mt-1 text-font-level_1&quot;&gt;
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            &lt;/p&gt;
+          &lt;/div&gt;
+        ))}
+      &lt;/div&gt;
+    &lt;/ModalSideDemo&gt;
+  ),
+}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">With Breadcrumbs</h2>
+    <div class="ds-story-id">organisms-modalside--with-breadcrumbs · export <b>WithBreadcrumbs</b></div>
+    <div class="ds-canvas ds-canvas--fullscreen">
+<div class="flex h-screen items-center justify-center bg-neutral-level_1"><button class="rounded-[5px] bg-confirmation px-[15px] py-[8px] text-sm font-semibold text-white" type="button">Abrir painel</button></div>
+    </div>
+    <p class="ds-state">estado aberto — após clique no gatilho</p>
+    <div class="ds-canvas ds-canvas--overlay">
+<div class="flex h-screen items-center justify-center bg-neutral-level_1"><button class="rounded-[5px] bg-confirmation px-[15px] py-[8px] text-sm font-semibold text-white" type="button">Abrir painel</button></div><div class="fixed inset-0 z-50"><div aria-hidden="true" class="absolute inset-0 bg-[rgba(76,85,102,0.8)] transition-opacity duration-200 ease-out opacity-100"></div><div aria-modal="true" class="absolute inset-y-0 flex h-full flex-col overflow-hidden bg-background max-w-[calc(100vw-16px)] left-0 transition-transform duration-200 ease-out translate-x-0 w-[800px] shadow-[0px_24px_38px_0px_rgba(0,0,0,0.14),0px_9px_46px_0px_rgba(0,0,0,0.12),0px_11px_15px_0px_rgba(0,0,0,0.20)]" role="dialog"><div class="flex w-full items-center border-b border-neutral-level_2 bg-background"><div class="flex h-[50px] flex-1 items-center justify-end px-[15px] gap-0"><div class="flex shrink-0 items-center gap-[10px]"><button aria-label="Fechar" class="flex size-[35px] max-md:min-h-[44px] max-md:min-w-[44px] shrink-0 cursor-pointer items-center justify-center rounded-[5px] border border-neutral-level_2 bg-background transition-colors hover:bg-neutral-level_1 active:bg-neutral-level_2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-confirmation focus-visible:ring-offset-1" type="button"><span aria-hidden="true" class="inline-flex shrink-0 items-center justify-center text-font"><svg aria-hidden="true" class="lucide lucide-x" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="15" xmlns="http://www.w3.org/2000/svg"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg></span></button></div></div></div><div class="min-h-0 flex-1 overflow-y-auto p-[15px]" tabindex="0"><div class="flex w-full items-center justify-center rounded-[4px] border border-dashed border-neutral-level_2 text-sm text-font-level_2" style="height: 300px;">Replaceable content</div></div><div class="w-full border-t border-neutral-level_2 bg-background"><div class="flex h-[50px] items-center overflow-hidden px-[10px] justify-end gap-0 max-sm:h-auto max-sm:flex-col-reverse max-sm:items-stretch max-sm:gap-[10px] max-sm:overflow-visible max-sm:py-[10px]"><div aria-hidden="true" class="h-[35px] w-[57px] shrink-0 max-sm:hidden"></div><button class="inline-flex shrink-0 cursor-pointer items-center gap-[5px] rounded-[5px] px-[5px] font-semibold text-basic-light transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-30 bg-confirmation hover:bg-confirmation-level_1 active:bg-confirmation-level_2 focus-visible:ring-confirmation h-[35px] text-sm max-sm:w-full"><span class="overflow-hidden text-ellipsis whitespace-nowrap px-[5px]">Salvar</span></button></div></div></div></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const WithBreadcrumbs: Story = {
+  render: () =&gt; (
+    &lt;ModalSideDemo
+      headerLeft=&quot;breadcrumbs&quot;
+      breadcrumbItems={[
+        { label: &#x27;Início&#x27; },
+        { label: &#x27;Clientes&#x27; },
+        { label: &#x27;Detalhe&#x27; },
+      ]}
+      actionLabel=&quot;Salvar&quot;
+    &gt;
+      &lt;PlaceholderContent /&gt;
+    &lt;/ModalSideDemo&gt;
+  ),
+}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">Right + normal (Figma variant)</h2>
+    <div class="ds-story-id">organisms-modalside--right-normal · export <b>RightNormal</b></div>
+    <div class="ds-canvas ds-canvas--fullscreen">
+<div class="flex h-screen items-center justify-center bg-neutral-level_1"><button class="rounded-[5px] bg-confirmation px-[15px] py-[8px] text-sm font-semibold text-white" type="button">Abrir (direita, normal)</button></div>
+    </div>
+    <p class="ds-state">estado aberto — após clique no gatilho</p>
+    <div class="ds-canvas ds-canvas--overlay">
+<div class="flex h-screen items-center justify-center bg-neutral-level_1"><button class="rounded-[5px] bg-confirmation px-[15px] py-[8px] text-sm font-semibold text-white" type="button">Abrir (direita, normal)</button></div><div class="fixed inset-0 z-50"><div aria-hidden="true" class="absolute inset-0 bg-[rgba(76,85,102,0.8)] transition-opacity duration-200 ease-out opacity-100"></div><div aria-label="Lorem Ipsum" aria-modal="true" class="absolute inset-y-0 flex h-full flex-col overflow-hidden bg-background max-w-[calc(100vw-16px)] right-0 transition-transform duration-200 ease-out translate-x-0 w-[600px] shadow-[0px_24px_38px_0px_rgba(0,0,0,0.14),0px_9px_46px_0px_rgba(0,0,0,0.12),0px_11px_15px_0px_rgba(0,0,0,0.20)]" role="dialog"><div class="flex w-full items-center border-b border-neutral-level_2 bg-background"><div class="flex h-[50px] flex-1 items-center justify-end px-[15px] gap-[10px]"><div class="flex min-w-0 flex-1 items-center"><span class="truncate text-base font-semibold text-font-level_1">Lorem Ipsum</span></div><div class="flex shrink-0 items-center gap-[10px]"><button aria-label="Fechar" class="flex size-[35px] max-md:min-h-[44px] max-md:min-w-[44px] shrink-0 cursor-pointer items-center justify-center rounded-[5px] border border-neutral-level_2 bg-background transition-colors hover:bg-neutral-level_1 active:bg-neutral-level_2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-confirmation focus-visible:ring-offset-1" type="button"><span aria-hidden="true" class="inline-flex shrink-0 items-center justify-center text-font"><svg aria-hidden="true" class="lucide lucide-x" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="15" xmlns="http://www.w3.org/2000/svg"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg></span></button></div></div></div><div class="min-h-0 flex-1 overflow-y-auto p-[15px]" tabindex="0"><div class="flex w-full items-center justify-center rounded-[4px] border border-dashed border-neutral-level_2 text-sm text-font-level_2" style="height: 300px;">Replaceable content</div></div><div class="w-full border-t border-neutral-level_2 bg-background"><div class="flex h-[50px] items-center overflow-hidden px-[10px] justify-end gap-0 max-sm:h-auto max-sm:flex-col-reverse max-sm:items-stretch max-sm:gap-[10px] max-sm:overflow-visible max-sm:py-[10px]"><div aria-hidden="true" class="h-[35px] w-[57px] shrink-0 max-sm:hidden"></div><button class="inline-flex shrink-0 cursor-pointer items-center gap-[5px] rounded-[5px] px-[5px] font-semibold text-basic-light transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-30 bg-confirmation hover:bg-confirmation-level_1 active:bg-confirmation-level_2 focus-visible:ring-confirmation h-[35px] text-sm max-sm:w-full"><span class="overflow-hidden text-ellipsis whitespace-nowrap px-[5px]">Lorem Ipsum</span></button></div></div></div></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const RightNormal: Story = {
+  name: &#x27;Right + normal (Figma variant)&#x27;,
+  render: () =&gt; (
+    &lt;ModalSideDemo
+      orientation=&quot;right&quot;
+      width=&quot;normal&quot;
+      title=&quot;Lorem Ipsum&quot;
+      actionLabel=&quot;Lorem Ipsum&quot;
+      triggerLabel=&quot;Abrir (direita, normal)&quot;
+    &gt;
+      &lt;PlaceholderContent /&gt;
+    &lt;/ModalSideDemo&gt;
+  ),
+}</code></pre></details>
+  </section>
+</body>
+</html>

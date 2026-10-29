@@ -1,0 +1,118 @@
+<!doctype html>
+<!--
+  Ploomes Design System — snapshot estático das stories do Storybook.
+  Componente : Components/Text
+  Stories    : 5 (Playground, Sizes, Weights, Colors, As Headings)
+  Story      : Text.stories.tsx
+  Tema       : light — use <html class="dark"> para o tema escuro.
+-->
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Text — Ploomes DS</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;600;700&display=swap">
+<link rel="stylesheet" href="../assets/design-system.css">
+<link rel="stylesheet" href="../assets/page.css">
+</head>
+<body class="ds-page">
+  <header class="ds-head">
+    <a class="ds-back" href="../index.html">← inventário</a>
+    <h1 class="ds-title">Text</h1>
+    <p class="ds-meta">components · 5 stories · <code>Text.stories.tsx</code></p>
+    <pre class="ds-code ds-import">import { Text } from &#x27;@ploomescrm/ui&#x27;;</pre>
+    <pre class="ds-code">// props padrão de todas as stories (meta.args)
+args: {
+  children: &#x27;The quick brown fox jumps over the lazy dog&#x27;,
+  size: &#x27;normal_14&#x27;,
+  weight: &#x27;regular&#x27;,
+  color: &#x27;default&#x27;,
+}</pre>
+  </header>
+  <section class="ds-story">
+    <h2 class="ds-story-name">Playground</h2>
+    <div class="ds-story-id">components-text--playground · export <b>Playground</b></div>
+    <div class="ds-canvas ds-canvas--padded">
+<p class="font-body text-sm font-normal text-font">The quick brown fox jumps over the lazy dog</p>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const Playground: Story = {}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">Sizes</h2>
+    <div class="ds-story-id">components-text--sizes · export <b>Sizes</b></div>
+    <div class="ds-canvas ds-canvas--padded">
+<div style="display: flex; flex-direction: column; gap: 8px;"><p class="font-body text-[13px] font-normal text-font">small_13 — The quick brown fox</p><p class="font-body text-sm font-normal text-font">normal_14 — The quick brown fox</p><p class="font-body text-base font-normal text-font">big_16 — The quick brown fox</p><p class="font-body text-lg font-normal text-font">bigger_18 — The quick brown fox</p></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const Sizes: Story = {
+  render: () =&gt; (
+    &lt;div style={{ display: &#x27;flex&#x27;, flexDirection: &#x27;column&#x27;, gap: 8 }}&gt;
+      {SIZES.map((size) =&gt; (
+        &lt;Text key={size} size={size}&gt;
+          {size} — The quick brown fox
+        &lt;/Text&gt;
+      ))}
+    &lt;/div&gt;
+  ),
+}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">Weights</h2>
+    <div class="ds-story-id">components-text--weights · export <b>Weights</b></div>
+    <div class="ds-canvas ds-canvas--padded">
+<div style="display: flex; flex-direction: column; gap: 8px;"><p class="font-body text-base font-light text-font">light — The quick brown fox</p><p class="font-body text-base font-normal text-font">regular — The quick brown fox</p><p class="font-body text-base font-semibold text-font">semibold — The quick brown fox</p><p class="font-body text-base font-bold text-font">bold — The quick brown fox</p></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const Weights: Story = {
+  render: () =&gt; (
+    &lt;div style={{ display: &#x27;flex&#x27;, flexDirection: &#x27;column&#x27;, gap: 8 }}&gt;
+      {WEIGHTS.map((weight) =&gt; (
+        &lt;Text key={weight} size=&quot;big_16&quot; weight={weight}&gt;
+          {weight} — The quick brown fox
+        &lt;/Text&gt;
+      ))}
+    &lt;/div&gt;
+  ),
+}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">Colors</h2>
+    <div class="ds-story-id">components-text--colors · export <b>Colors</b></div>
+    <div class="ds-canvas ds-canvas--padded">
+<div style="display: flex; flex-direction: column; gap: 8px;"><p class="font-body text-base font-normal text-font">default — The quick brown fox</p><p class="font-body text-base font-normal text-font-level_1">level_1 — The quick brown fox</p><p class="font-body text-base font-normal text-font-level_2">level_2 — The quick brown fox</p></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const Colors: Story = {
+  render: () =&gt; (
+    &lt;div style={{ display: &#x27;flex&#x27;, flexDirection: &#x27;column&#x27;, gap: 8 }}&gt;
+      {COLORS.map((color) =&gt; (
+        &lt;Text key={color} size=&quot;big_16&quot; color={color}&gt;
+          {color} — The quick brown fox
+        &lt;/Text&gt;
+      ))}
+    &lt;/div&gt;
+  ),
+}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">As Headings</h2>
+    <div class="ds-story-id">components-text--as-headings · export <b>AsHeadings</b></div>
+    <div class="ds-canvas ds-canvas--padded">
+<div style="display: flex; flex-direction: column; gap: 8px;"><h1 class="font-body text-lg font-bold text-font">Heading 1</h1><h2 class="font-body text-base font-semibold text-font">Heading 2</h2><p class="font-body text-sm font-normal text-font">Body paragraph with the default size and weight.</p><span class="font-body text-[13px] font-normal text-font-level_1">Inline caption</span></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const AsHeadings: Story = {
+  render: () =&gt; (
+    &lt;div style={{ display: &#x27;flex&#x27;, flexDirection: &#x27;column&#x27;, gap: 8 }}&gt;
+      &lt;Text as=&quot;h1&quot; size=&quot;bigger_18&quot; weight=&quot;bold&quot;&gt;
+        Heading 1
+      &lt;/Text&gt;
+      &lt;Text as=&quot;h2&quot; size=&quot;big_16&quot; weight=&quot;semibold&quot;&gt;
+        Heading 2
+      &lt;/Text&gt;
+      &lt;Text as=&quot;p&quot;&gt;Body paragraph with the default size and weight.&lt;/Text&gt;
+      &lt;Text as=&quot;span&quot; size=&quot;small_13&quot; color=&quot;level_1&quot;&gt;
+        Inline caption
+      &lt;/Text&gt;
+    &lt;/div&gt;
+  ),
+}</code></pre></details>
+  </section>
+</body>
+</html>

@@ -1,0 +1,7 @@
+N°,Tipo,Descrição,Entidade,Gatilho,Filtro,Ação 1,Detalhamento 1,Ação 2,Detalhamento 2,Ação 3,Detalhamento 3
+"1","Funil","Cria tarefa de contato ao entrar em Qualificação","Negócio","Negócio entrou neste estágio","Vendas Diretas > Qualificação","Criar tarefa","Título: Primeiro contato; prazo 1 dia; responsável: dono do negócio","","","",""
+"2","Funil","Cobra proposta sem retorno","Negócio","Negócio entrou neste estágio","Vendas Diretas > Proposta Enviada","Criar tarefa","","","","",""
+"3","Geral","Notifica time quando cliente é criado","Cliente","Quando o negócio for ganho","","Enviar e-mail","Para: comercial@; assunto: novo cliente","","","",""
+"4","Geral","Move negócio para pós-venda","Cliente","Quando o item for criado","","Alterar estágio do negócio","Etapa: Pós-venda","","","",""
+"5","Funil","Dispara robô de enriquecimento","Negócio","Negócio entrou neste estágio","Vendas Diretas > Enriquecimento","Consultar API externa","Chama bureau","","","",""
+"7","Geral","Avisa no WhatsApp","Negócio","Quando o negócio for ganho","","Enviar mensagem de WhatsApp via Neppo","Template: ganho","","","",""

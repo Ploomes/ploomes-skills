@@ -1,0 +1,231 @@
+<!doctype html>
+<!--
+  Ploomes Design System — snapshot estático das stories do Storybook.
+  Componente : Fields/Field20Color
+  Stories    : 13 (Default, Filled, Button Only, Button Only Filled, Controlled, Danger, Alert, Disabled, View Only, Loading, All Sizes, Button Only Sizes, Cell Statuses)
+  Story      : Field20Color.stories.tsx
+  Tema       : light — use <html class="dark"> para o tema escuro.
+-->
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Field20Color — Ploomes DS</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;600;700&display=swap">
+<link rel="stylesheet" href="../assets/design-system.css">
+<link rel="stylesheet" href="../assets/page.css">
+</head>
+<body class="ds-page">
+  <header class="ds-head">
+    <a class="ds-back" href="../index.html">← inventário</a>
+    <h1 class="ds-title">Field20Color</h1>
+    <p class="ds-meta">fields · 13 stories · <code>Field20Color.stories.tsx</code></p>
+    <pre class="ds-code ds-import">import { Field20Color } from &#x27;@ploomescrm/ui&#x27;;</pre>
+    <pre class="ds-code">// props padrão de todas as stories (meta.args)
+args: {
+  label: &#x27;Cor&#x27;,
+  placeholder: &#x27;Lorem Ipsum&#x27;,
+}</pre>
+  </header>
+  <section class="ds-story">
+    <h2 class="ds-story-name">Default</h2>
+    <div class="ds-story-id">fields-field20color--default · export <b>Default</b></div>
+    <div class="ds-canvas ds-canvas--padded">
+<div style="width: 300px;"><div class="flex w-full flex-col items-start"><div class="flex w-full items-center gap-[5px] pb-[5px]"><label class="shrink-0 text-sm leading-[18px] text-font" for="field-color-_r_0_" id="field-color-_r_0_-label">Cor</label><div class="flex h-4 min-w-0 flex-1 items-center gap-[5px]"></div></div><div class="relative flex w-full bg-background px-[10px] transition-colors rounded-[5px] border border-neutral-level_2 items-center gap-[10px] pr-[5px] h-[30px] hover:border-font-level_2 focus-within:border-confirmation"><input class="min-w-0 flex-1 bg-transparent text-font outline-none placeholder:text-font-level_2 disabled:cursor-not-allowed text-sm" id="field-color-_r_0_" placeholder="Lorem Ipsum" type="text" value=""/><span class="relative shrink-0 cursor-pointer"><span class="flex items-center justify-center rounded-[2.5px] size-[20px]" data-testid="color-swatch"><span class="rounded-full size-[10px] border-[1.5px] border-font-level_2"></span></span><input aria-label="Escolher cor" class="absolute inset-0 cursor-pointer opacity-0" type="color" value="#000000"/></span></div></div></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const Default: Story = {}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">Filled</h2>
+    <div class="ds-story-id">fields-field20color--filled · export <b>Filled</b></div>
+    <div class="ds-canvas ds-canvas--padded">
+<div style="width: 300px;"><div class="flex w-full flex-col items-start"><div class="flex w-full items-center gap-[5px] pb-[5px]"><label class="shrink-0 text-sm leading-[18px] text-font" for="field-color-_r_0_" id="field-color-_r_0_-label">Cor</label><div class="flex h-4 min-w-0 flex-1 items-center gap-[5px]"></div></div><div class="relative flex w-full bg-background px-[10px] transition-colors rounded-[5px] border border-neutral-level_2 items-center gap-[10px] pr-[5px] h-[30px] hover:border-font-level_2 focus-within:border-confirmation"><input class="min-w-0 flex-1 bg-transparent text-font outline-none placeholder:text-font-level_2 disabled:cursor-not-allowed text-sm" id="field-color-_r_0_" placeholder="Lorem Ipsum" type="text" value="#6759C0"/><span class="relative shrink-0 cursor-pointer"><span class="flex items-center justify-center rounded-[2.5px] size-[20px]" data-testid="color-swatch"><span class="rounded-full size-[10px]" style="background-color: rgb(103, 89, 192);"></span></span><input aria-label="Escolher cor" class="absolute inset-0 cursor-pointer opacity-0" type="color" value="#6759C0"/></span></div></div></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const Filled: Story = {
+  args: { defaultValue: &#x27;#6759C0&#x27; },
+}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">Button Only</h2>
+    <div class="ds-story-id">fields-field20color--button-only · export <b>ButtonOnly</b></div>
+    <div class="ds-canvas ds-canvas--padded">
+<div style="width: 300px;"><div class="flex w-full flex-col items-start"><div class="flex w-full items-center gap-[5px] pb-[5px]"><label class="shrink-0 text-sm leading-[18px] text-font" for="field-color-_r_0_" id="field-color-_r_0_-label">Cor</label><div class="flex h-4 min-w-0 flex-1 items-center gap-[5px]"></div></div><div class="relative flex items-center justify-center rounded-[5px] border bg-background transition-colors border-neutral-level_2 focus-within:border-confirmation hover:border-font-level_2 size-[30px]" id="field-color-_r_0_"><span class="flex items-center justify-center rounded-[2.5px]" data-testid="color-swatch"><span class="rounded-full size-[15px] border-[1.5px] border-font-level_2"></span></span><input aria-label="Escolher cor" class="absolute inset-0 cursor-pointer opacity-0" type="color" value="#000000"/></div></div></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const ButtonOnly: Story = {
+  args: { buttonOnly: true },
+}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">Button Only Filled</h2>
+    <div class="ds-story-id">fields-field20color--button-only-filled · export <b>ButtonOnlyFilled</b></div>
+    <div class="ds-canvas ds-canvas--padded">
+<div style="width: 300px;"><div class="flex w-full flex-col items-start"><div class="flex w-full items-center gap-[5px] pb-[5px]"><label class="shrink-0 text-sm leading-[18px] text-font" for="field-color-_r_0_" id="field-color-_r_0_-label">Cor</label><div class="flex h-4 min-w-0 flex-1 items-center gap-[5px]"></div></div><div class="relative flex items-center justify-center rounded-[5px] border bg-background transition-colors border-neutral-level_2 focus-within:border-confirmation hover:border-font-level_2 size-[30px]" id="field-color-_r_0_"><span class="flex items-center justify-center rounded-[2.5px]" data-testid="color-swatch"><span class="rounded-full size-[15px]" style="background-color: rgb(103, 89, 192);"></span></span><input aria-label="Escolher cor" class="absolute inset-0 cursor-pointer opacity-0" type="color" value="#6759C0"/></div></div></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const ButtonOnlyFilled: Story = {
+  args: { buttonOnly: true, defaultValue: &#x27;#6759C0&#x27; },
+}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">Controlled</h2>
+    <div class="ds-story-id">fields-field20color--controlled · export <b>Controlled</b></div>
+    <div class="ds-canvas ds-canvas--padded">
+<div style="width: 300px;"><div style="display: flex; flex-direction: column; gap: 8px;"><div class="flex w-full flex-col items-start"><div class="flex w-full items-center gap-[5px] pb-[5px]"><label class="shrink-0 text-sm leading-[18px] text-font" for="field-color-_r_0_" id="field-color-_r_0_-label">Cor</label><div class="flex h-4 min-w-0 flex-1 items-center gap-[5px]"></div></div><div class="relative flex w-full bg-background px-[10px] transition-colors rounded-[5px] border border-neutral-level_2 items-center gap-[10px] pr-[5px] h-[30px] hover:border-font-level_2 focus-within:border-confirmation"><input class="min-w-0 flex-1 bg-transparent text-font outline-none placeholder:text-font-level_2 disabled:cursor-not-allowed text-sm" id="field-color-_r_0_" placeholder="Lorem Ipsum" type="text" value="#7E33E6"/><span class="relative shrink-0 cursor-pointer"><span class="flex items-center justify-center rounded-[2.5px] size-[20px]" data-testid="color-swatch"><span class="rounded-full size-[10px]" style="background-color: rgb(126, 51, 230);"></span></span><input aria-label="Escolher cor" class="absolute inset-0 cursor-pointer opacity-0" type="color" value="#7E33E6"/></span></div></div><span style="font-size: 13px; color: rgb(139, 133, 149);">Cor: #7E33E6</span></div></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const Controlled: Story = {
+  render: function Render(args) {
+    const [color, setColor] = useState&lt;string | null&gt;(&#x27;#7E33E6&#x27;);
+    return (
+      &lt;div style={{ display: &#x27;flex&#x27;, flexDirection: &#x27;column&#x27;, gap: 8 }}&gt;
+        &lt;Field20Color
+          {...args}
+          value={color ?? &#x27;&#x27;}
+          onValueChange={(_, parsed) =&gt; setColor(parsed)}
+        /&gt;
+        &lt;span style={{ fontSize: 13, color: &#x27;#8b8595&#x27; }}&gt;
+          Cor: {color ?? &#x27;null&#x27;}
+        &lt;/span&gt;
+      &lt;/div&gt;
+    );
+  },
+}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">Danger</h2>
+    <div class="ds-story-id">fields-field20color--danger · export <b>Danger</b></div>
+    <div class="ds-canvas ds-canvas--padded">
+<div style="width: 300px;"><div class="flex w-full flex-col items-start"><div class="flex w-full items-center gap-[5px] pb-[5px]"><label class="shrink-0 text-sm leading-[18px] text-font" for="field-color-_r_0_" id="field-color-_r_0_-label">Cor</label><div class="flex h-4 min-w-0 flex-1 items-center gap-[5px]"></div></div><div class="relative flex w-full bg-background px-[10px] transition-colors rounded-[5px] border border-danger items-center gap-[10px] pr-[5px] h-[30px]"><input aria-describedby="field-color-_r_0_-help" aria-invalid="true" class="min-w-0 flex-1 bg-transparent text-font outline-none placeholder:text-font-level_2 disabled:cursor-not-allowed text-sm" id="field-color-_r_0_" placeholder="Lorem Ipsum" type="text" value=""/><span class="relative shrink-0 cursor-pointer"><span class="flex items-center justify-center rounded-[2.5px] size-[20px]" data-testid="color-swatch"><span class="rounded-full size-[10px] border-[1.5px] border-font-level_2"></span></span><input aria-label="Escolher cor" class="absolute inset-0 cursor-pointer opacity-0" type="color" value="#000000"/></span></div><p class="w-full whitespace-normal px-[10px] pt-[3px] text-[13px] leading-[18px] md:truncate text-danger" id="field-color-_r_0_-help">Texto de ajuda</p></div></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const Danger: Story = {
+  args: { status: &#x27;danger&#x27;, helpText: &#x27;Texto de ajuda&#x27; },
+}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">Alert</h2>
+    <div class="ds-story-id">fields-field20color--alert · export <b>Alert</b></div>
+    <div class="ds-canvas ds-canvas--padded">
+<div style="width: 300px;"><div class="flex w-full flex-col items-start"><div class="flex w-full items-center gap-[5px] pb-[5px]"><label class="shrink-0 text-sm leading-[18px] text-font" for="field-color-_r_0_" id="field-color-_r_0_-label">Cor</label><div class="flex h-4 min-w-0 flex-1 items-center gap-[5px]"></div></div><div class="relative flex w-full bg-background px-[10px] transition-colors rounded-[5px] border border-alert items-center gap-[10px] pr-[5px] h-[30px]"><input aria-describedby="field-color-_r_0_-help" class="min-w-0 flex-1 bg-transparent text-font outline-none placeholder:text-font-level_2 disabled:cursor-not-allowed text-sm" id="field-color-_r_0_" placeholder="Lorem Ipsum" type="text" value=""/><span class="relative shrink-0 cursor-pointer"><span class="flex items-center justify-center rounded-[2.5px] size-[20px]" data-testid="color-swatch"><span class="rounded-full size-[10px] border-[1.5px] border-font-level_2"></span></span><input aria-label="Escolher cor" class="absolute inset-0 cursor-pointer opacity-0" type="color" value="#000000"/></span></div><p class="w-full whitespace-normal px-[10px] pt-[3px] text-[13px] leading-[18px] md:truncate text-font-level_2" id="field-color-_r_0_-help">Texto de ajuda</p></div></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const Alert: Story = {
+  args: { status: &#x27;alert&#x27;, helpText: &#x27;Texto de ajuda&#x27; },
+}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">Disabled</h2>
+    <div class="ds-story-id">fields-field20color--disabled · export <b>Disabled</b></div>
+    <div class="ds-canvas ds-canvas--padded">
+<div style="width: 300px;"><div class="flex w-full flex-col items-start"><div class="flex w-full items-center gap-[5px] pb-[5px]"><label class="shrink-0 text-sm leading-[18px] text-font" for="field-color-_r_0_" id="field-color-_r_0_-label">Cor</label><div class="flex h-4 min-w-0 flex-1 items-center gap-[5px]"></div></div><div class="relative flex w-full px-[10px] transition-colors rounded-[5px] border border-neutral-level_2 items-center gap-[10px] pr-[5px] h-[30px] bg-neutral-level_1"><input class="min-w-0 flex-1 bg-transparent text-font outline-none placeholder:text-font-level_2 disabled:cursor-not-allowed text-sm" disabled="" id="field-color-_r_0_" placeholder="Lorem Ipsum" type="text" value="#6759C0"/><span class="relative shrink-0"><span class="flex items-center justify-center rounded-[2.5px] size-[20px]" data-testid="color-swatch"><span class="rounded-full size-[10px]" style="background-color: rgb(103, 89, 192);"></span></span></span></div></div></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const Disabled: Story = {
+  args: { disabled: true, defaultValue: &#x27;#6759C0&#x27; },
+}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">View Only</h2>
+    <div class="ds-story-id">fields-field20color--view-only · export <b>ViewOnly</b></div>
+    <div class="ds-canvas ds-canvas--padded">
+<div style="width: 300px;"><div class="flex w-full flex-col items-start"><div class="flex w-full items-center gap-[5px] pb-[5px]"><label class="shrink-0 text-sm leading-[18px] text-font" for="field-color-_r_0_" id="field-color-_r_0_-label">Cor</label><div class="flex h-4 min-w-0 flex-1 items-center gap-[5px]"></div></div><div class="relative flex w-full bg-background px-[10px] transition-colors rounded-[5px] border border-neutral-level_2 items-center gap-[10px] pr-[5px] h-[30px]"><input class="min-w-0 flex-1 bg-transparent text-font outline-none placeholder:text-font-level_2 disabled:cursor-not-allowed cursor-default text-sm" id="field-color-_r_0_" placeholder="Lorem Ipsum" readonly="" type="text" value="#6759C0"/><span class="relative shrink-0"><span class="flex items-center justify-center rounded-[2.5px] size-[20px]" data-testid="color-swatch"><span class="rounded-full size-[10px]" style="background-color: rgb(103, 89, 192);"></span></span></span></div></div></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const ViewOnly: Story = {
+  args: { viewOnly: true, defaultValue: &#x27;#6759C0&#x27; },
+}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">Loading</h2>
+    <div class="ds-story-id">fields-field20color--loading · export <b>Loading</b></div>
+    <div class="ds-canvas ds-canvas--padded">
+<div style="width: 300px;"><div class="flex w-full flex-col items-start"><div class="flex w-full items-center gap-[5px] pb-[5px]"><label class="shrink-0 text-sm leading-[18px] text-font" for="field-color-_r_0_" id="field-color-_r_0_-label">Cor</label><div class="flex h-4 min-w-0 flex-1 items-center gap-[5px]"></div></div><div aria-busy="true" class="relative flex w-full bg-background px-[10px] transition-colors rounded-[5px] border border-neutral-level_2 items-center h-[30px]"><span class="my-[5px] h-[calc(100%-10px)] w-full animate-pulse rounded-[2px] bg-neutral-level_2" data-testid="field-skeleton"></span></div></div></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const Loading: Story = {
+  args: { loading: true },
+}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">All Sizes</h2>
+    <div class="ds-story-id">fields-field20color--all-sizes · export <b>AllSizes</b></div>
+    <div class="ds-canvas ds-canvas--padded">
+<div style="width: 300px;"><div style="display: flex; flex-direction: column; gap: 16px;"><div class="flex w-full flex-col items-start"><div class="flex w-full items-center gap-[5px] pb-[5px]"><label class="shrink-0 text-sm leading-[18px] text-font" for="field-color-_r_0_" id="field-color-_r_0_-label">Small (30px)</label><div class="flex h-4 min-w-0 flex-1 items-center gap-[5px]"></div></div><div class="relative flex w-full bg-background px-[10px] transition-colors rounded-[5px] border border-neutral-level_2 items-center gap-[10px] pr-[5px] h-[30px] hover:border-font-level_2 focus-within:border-confirmation"><input class="min-w-0 flex-1 bg-transparent text-font outline-none placeholder:text-font-level_2 disabled:cursor-not-allowed text-sm" id="field-color-_r_0_" placeholder="Lorem Ipsum" type="text" value="#6759C0"/><span class="relative shrink-0 cursor-pointer"><span class="flex items-center justify-center rounded-[2.5px] size-[20px]" data-testid="color-swatch"><span class="rounded-full size-[10px]" style="background-color: rgb(103, 89, 192);"></span></span><input aria-label="Escolher cor" class="absolute inset-0 cursor-pointer opacity-0" type="color" value="#6759C0"/></span></div></div><div class="flex w-full flex-col items-start"><div class="flex w-full items-center gap-[5px] pb-[5px]"><label class="shrink-0 text-sm leading-[18px] text-font" for="field-color-_r_1_" id="field-color-_r_1_-label">Normal (35px)</label><div class="flex h-4 min-w-0 flex-1 items-center gap-[5px]"></div></div><div class="relative flex w-full bg-background px-[10px] transition-colors rounded-[5px] border border-neutral-level_2 items-center gap-[10px] pr-[5px] h-[35px] hover:border-font-level_2 focus-within:border-confirmation"><input class="min-w-0 flex-1 bg-transparent text-font outline-none placeholder:text-font-level_2 disabled:cursor-not-allowed text-sm" id="field-color-_r_1_" placeholder="Lorem Ipsum" type="text" value="#6759C0"/><span class="relative shrink-0 cursor-pointer"><span class="flex items-center justify-center rounded-[2.5px] size-[25px]" data-testid="color-swatch"><span class="rounded-full size-[15px]" style="background-color: rgb(103, 89, 192);"></span></span><input aria-label="Escolher cor" class="absolute inset-0 cursor-pointer opacity-0" type="color" value="#6759C0"/></span></div></div><div class="flex w-full flex-col items-start"><div class="flex w-full items-center gap-[5px] pb-[5px]"><label class="shrink-0 text-sm leading-[18px] text-font" for="field-color-_r_2_" id="field-color-_r_2_-label">Big (40px)</label><div class="flex h-4 min-w-0 flex-1 items-center gap-[5px]"></div></div><div class="relative flex w-full bg-background px-[10px] transition-colors rounded-[5px] border border-neutral-level_2 items-center gap-[10px] pr-[5px] h-[40px] hover:border-font-level_2 focus-within:border-confirmation"><input class="min-w-0 flex-1 bg-transparent text-font outline-none placeholder:text-font-level_2 disabled:cursor-not-allowed text-base" id="field-color-_r_2_" placeholder="Lorem Ipsum" type="text" value="#6759C0"/><span class="relative shrink-0 cursor-pointer"><span class="flex items-center justify-center rounded-[2.5px] size-[25px]" data-testid="color-swatch"><span class="rounded-full size-[15px]" style="background-color: rgb(103, 89, 192);"></span></span><input aria-label="Escolher cor" class="absolute inset-0 cursor-pointer opacity-0" type="color" value="#6759C0"/></span></div></div></div></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const AllSizes: Story = {
+  render: (args) =&gt; (
+    &lt;div style={{ display: &#x27;flex&#x27;, flexDirection: &#x27;column&#x27;, gap: 16 }}&gt;
+      &lt;Field20Color
+        {...args}
+        size=&quot;sm&quot;
+        label=&quot;Small (30px)&quot;
+        defaultValue=&quot;#6759C0&quot;
+      /&gt;
+      &lt;Field20Color
+        {...args}
+        size=&quot;md&quot;
+        label=&quot;Normal (35px)&quot;
+        defaultValue=&quot;#6759C0&quot;
+      /&gt;
+      &lt;Field20Color
+        {...args}
+        size=&quot;lg&quot;
+        label=&quot;Big (40px)&quot;
+        defaultValue=&quot;#6759C0&quot;
+      /&gt;
+    &lt;/div&gt;
+  ),
+}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">Button Only Sizes</h2>
+    <div class="ds-story-id">fields-field20color--button-only-sizes · export <b>ButtonOnlySizes</b></div>
+    <div class="ds-canvas ds-canvas--padded">
+<div style="width: 300px;"><div style="display: flex; align-items: flex-end; gap: 16px;"><div class="flex flex-col items-start w-auto"><div class="flex w-full items-center gap-[5px] pb-[5px]"><label class="shrink-0 text-sm leading-[18px] text-font" for="field-color-_r_0_" id="field-color-_r_0_-label">30px</label><div class="flex h-4 min-w-0 flex-1 items-center gap-[5px]"></div></div><div class="relative flex items-center justify-center rounded-[5px] border bg-background transition-colors border-neutral-level_2 focus-within:border-confirmation hover:border-font-level_2 size-[30px]" id="field-color-_r_0_"><span class="flex items-center justify-center rounded-[2.5px]" data-testid="color-swatch"><span class="rounded-full size-[15px]" style="background-color: rgb(103, 89, 192);"></span></span><input aria-label="Escolher cor" class="absolute inset-0 cursor-pointer opacity-0" type="color" value="#6759C0"/></div></div><div class="flex flex-col items-start w-auto"><div class="flex w-full items-center gap-[5px] pb-[5px]"><label class="shrink-0 text-sm leading-[18px] text-font" for="field-color-_r_1_" id="field-color-_r_1_-label">35px</label><div class="flex h-4 min-w-0 flex-1 items-center gap-[5px]"></div></div><div class="relative flex items-center justify-center rounded-[5px] border bg-background transition-colors border-neutral-level_2 focus-within:border-confirmation hover:border-font-level_2 size-[35px]" id="field-color-_r_1_"><span class="flex items-center justify-center rounded-[2.5px]" data-testid="color-swatch"><span class="rounded-full size-[15px]" style="background-color: rgb(103, 89, 192);"></span></span><input aria-label="Escolher cor" class="absolute inset-0 cursor-pointer opacity-0" type="color" value="#6759C0"/></div></div><div class="flex flex-col items-start w-auto"><div class="flex w-full items-center gap-[5px] pb-[5px]"><label class="shrink-0 text-sm leading-[18px] text-font" for="field-color-_r_2_" id="field-color-_r_2_-label">40px</label><div class="flex h-4 min-w-0 flex-1 items-center gap-[5px]"></div></div><div class="relative flex items-center justify-center rounded-[5px] border bg-background transition-colors border-neutral-level_2 focus-within:border-confirmation hover:border-font-level_2 size-[40px]" id="field-color-_r_2_"><span class="flex items-center justify-center rounded-[2.5px]" data-testid="color-swatch"><span class="rounded-full size-[15px]" style="background-color: rgb(103, 89, 192);"></span></span><input aria-label="Escolher cor" class="absolute inset-0 cursor-pointer opacity-0" type="color" value="#6759C0"/></div></div></div></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const ButtonOnlySizes: Story = {
+  render: (args) =&gt; (
+    &lt;div style={{ display: &#x27;flex&#x27;, alignItems: &#x27;flex-end&#x27;, gap: 16 }}&gt;
+      &lt;Field20Color
+        {...args}
+        buttonOnly
+        size=&quot;sm&quot;
+        label=&quot;30px&quot;
+        defaultValue=&quot;#6759C0&quot;
+        wrapperClassName=&quot;w-auto&quot;
+      /&gt;
+      &lt;Field20Color
+        {...args}
+        buttonOnly
+        size=&quot;md&quot;
+        label=&quot;35px&quot;
+        defaultValue=&quot;#6759C0&quot;
+        wrapperClassName=&quot;w-auto&quot;
+      /&gt;
+      &lt;Field20Color
+        {...args}
+        buttonOnly
+        size=&quot;lg&quot;
+        label=&quot;40px&quot;
+        defaultValue=&quot;#6759C0&quot;
+        wrapperClassName=&quot;w-auto&quot;
+      /&gt;
+    &lt;/div&gt;
+  ),
+}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">Cell Statuses</h2>
+    <div class="ds-story-id">fields-field20color--cell-statuses · export <b>CellStatuses</b></div>
+    <div class="ds-canvas ds-canvas--padded">
+<div style="width: 300px;"><div style="display: flex; flex-direction: column; gap: 16px; width: 200px;"><div class="flex w-full flex-col items-start"><div class="relative flex w-full bg-background px-[10px] transition-colors rounded-none border-[0.5px] border-neutral-level_2 items-center gap-[10px] pr-[5px] h-[40px] hover:border hover:border-font-level_2 focus-within:border focus-within:border-confirmation focus-within:ring-2 focus-within:ring-confirmation-default_30"><input class="min-w-0 flex-1 bg-transparent text-font outline-none placeholder:text-font-level_2 disabled:cursor-not-allowed text-sm" id="field-color-_r_0_" placeholder="Lorem Ipsum" type="text" value=""/><span class="relative shrink-0 cursor-pointer"><span class="flex items-center justify-center rounded-[2.5px] size-[25px]" data-testid="color-swatch"><span class="rounded-full size-[15px] border-[1.5px] border-font-level_2"></span></span><input aria-label="Escolher cor" class="absolute inset-0 cursor-pointer opacity-0" type="color" value="#000000"/></span></div></div><div class="flex w-full flex-col items-start"><div class="relative flex w-full bg-background px-[10px] transition-colors rounded-none border-[0.5px] border-danger items-center gap-[10px] pr-[5px] h-[40px] hover:border focus-within:border focus-within:ring-2 focus-within:ring-danger-default_30"><input aria-invalid="true" class="min-w-0 flex-1 bg-transparent text-font outline-none placeholder:text-font-level_2 disabled:cursor-not-allowed text-sm" id="field-color-_r_1_" placeholder="Lorem Ipsum" type="text" value=""/><span class="relative shrink-0 cursor-pointer"><span class="flex items-center justify-center rounded-[2.5px] size-[25px]" data-testid="color-swatch"><span class="rounded-full size-[15px] border-[1.5px] border-font-level_2"></span></span><input aria-label="Escolher cor" class="absolute inset-0 cursor-pointer opacity-0" type="color" value="#000000"/></span></div></div><div class="flex w-full flex-col items-start"><div class="relative flex w-full bg-background px-[10px] transition-colors rounded-none border-[0.5px] border-alert items-center gap-[10px] pr-[5px] h-[40px] hover:border focus-within:border focus-within:ring-2 focus-within:ring-alert-default_30"><input class="min-w-0 flex-1 bg-transparent text-font outline-none placeholder:text-font-level_2 disabled:cursor-not-allowed text-sm" id="field-color-_r_2_" placeholder="Lorem Ipsum" type="text" value=""/><span class="relative shrink-0 cursor-pointer"><span class="flex items-center justify-center rounded-[2.5px] size-[25px]" data-testid="color-swatch"><span class="rounded-full size-[15px] border-[1.5px] border-font-level_2"></span></span><input aria-label="Escolher cor" class="absolute inset-0 cursor-pointer opacity-0" type="color" value="#000000"/></span></div></div><div class="flex w-full flex-col items-start"><div class="relative flex w-full px-[10px] transition-colors rounded-none border-[0.5px] border-neutral-level_2 items-center gap-[10px] pr-[5px] h-[40px] bg-neutral-level_1"><input class="min-w-0 flex-1 bg-transparent text-font outline-none placeholder:text-font-level_2 disabled:cursor-not-allowed text-sm" disabled="" id="field-color-_r_3_" placeholder="Lorem Ipsum" type="text" value=""/><span class="relative shrink-0"><span class="flex items-center justify-center rounded-[2.5px] size-[25px]" data-testid="color-swatch"><span class="rounded-full size-[15px] border-[1.5px] border-font-level_2"></span></span></span></div></div><div class="flex w-full flex-col items-start"><div class="relative flex w-full bg-background px-[10px] transition-colors rounded-none border-[0.5px] border-neutral-level_2 items-center gap-[10px] pr-[5px] h-[40px]"><input class="min-w-0 flex-1 bg-transparent text-font outline-none placeholder:text-font-level_2 disabled:cursor-not-allowed cursor-default text-sm" id="field-color-_r_4_" placeholder="Lorem Ipsum" readonly="" type="text" value="#6759C0"/><span class="relative shrink-0"><span class="flex items-center justify-center rounded-[2.5px] size-[25px]" data-testid="color-swatch"><span class="rounded-full size-[15px]" style="background-color: rgb(103, 89, 192);"></span></span></span></div></div></div></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const CellStatuses: Story = {
+  render: (args) =&gt; (
+    &lt;div
+      style={{ display: &#x27;flex&#x27;, flexDirection: &#x27;column&#x27;, gap: 16, width: 200 }}
+    &gt;
+      &lt;Field20Color {...args} theme=&quot;cell&quot; /&gt;
+      &lt;Field20Color {...args} theme=&quot;cell&quot; status=&quot;danger&quot; /&gt;
+      &lt;Field20Color {...args} theme=&quot;cell&quot; status=&quot;alert&quot; /&gt;
+      &lt;Field20Color {...args} theme=&quot;cell&quot; disabled /&gt;
+      &lt;Field20Color {...args} theme=&quot;cell&quot; viewOnly defaultValue=&quot;#6759C0&quot; /&gt;
+    &lt;/div&gt;
+  ),
+}</code></pre></details>
+  </section>
+</body>
+</html>

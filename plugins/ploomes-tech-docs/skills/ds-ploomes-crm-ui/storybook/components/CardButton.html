@@ -1,0 +1,161 @@
+<!doctype html>
+<!--
+  Ploomes Design System — snapshot estático das stories do Storybook.
+  Componente : Components/CardButton
+  Stories    : 8 (Default, With Image, With Icon, No Subtitle, No Subtitle With Image, No Left, All Variants, Truncation)
+  Story      : CardButton.stories.tsx
+  Tema       : light — use <html class="dark"> para o tema escuro.
+-->
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CardButton — Ploomes DS</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;600;700&display=swap">
+<link rel="stylesheet" href="../assets/design-system.css">
+<link rel="stylesheet" href="../assets/page.css">
+</head>
+<body class="ds-page">
+  <header class="ds-head">
+    <a class="ds-back" href="../index.html">← inventário</a>
+    <h1 class="ds-title">CardButton</h1>
+    <p class="ds-meta">components · 8 stories · <code>CardButton.stories.tsx</code></p>
+    <pre class="ds-code ds-import">import { CardButton } from &#x27;@ploomescrm/ui&#x27;;</pre>
+    <pre class="ds-code">// props padrão de todas as stories (meta.args)
+args: {
+  label: &#x27;Lorem Ipsum&#x27;,
+  subtitle: &#x27;Cliente: Marcos Aurélio&#x27;,
+}</pre>
+  </header>
+  <section class="ds-story">
+    <h2 class="ds-story-name">Default</h2>
+    <div class="ds-story-id">components-cardbutton--default · export <b>Default</b></div>
+    <div class="ds-canvas ds-canvas--padded">
+<button class="relative flex h-[60px] w-full flex-col items-start justify-center gap-[5px] overflow-hidden md:w-[150px] rounded-[5px] bg-background px-[10px] text-left transition-colors cursor-pointer hover:bg-neutral-level_1 active:bg-neutral-level_2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-confirmation focus-visible:ring-offset-1 disabled:pointer-events-none disabled:opacity-40" type="button"><div class="flex w-full items-center gap-[10px]"><span class="inline-block min-w-0 flex-1 overflow-hidden text-ellipsis whitespace-nowrap text-sm leading-normal text-font">Lorem Ipsum</span></div><span class="inline-block w-full overflow-hidden text-ellipsis whitespace-nowrap text-[13px] leading-normal text-font-level_2">Cliente: Marcos Aurélio</span></button>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const Default: Story = {}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">With Image</h2>
+    <div class="ds-story-id">components-cardbutton--with-image · export <b>WithImage</b></div>
+    <div class="ds-canvas ds-canvas--padded">
+<button class="relative flex h-[60px] w-full flex-col items-start justify-center gap-[5px] overflow-hidden md:w-[150px] rounded-[5px] bg-background px-[10px] text-left transition-colors cursor-pointer hover:bg-neutral-level_1 active:bg-neutral-level_2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-confirmation focus-visible:ring-offset-1 disabled:pointer-events-none disabled:opacity-40" type="button"><div class="flex w-full items-center gap-[10px]"><div class="flex size-[20px] shrink-0 items-center justify-center"><img alt="Marcos Aurélio" class="size-[20px] rounded-full object-cover" src="https://i.pravatar.cc/40?img=3"/></div><span class="inline-block min-w-0 flex-1 overflow-hidden text-ellipsis whitespace-nowrap text-sm leading-normal text-font">Lorem Ipsum</span></div><span class="inline-block w-full overflow-hidden text-ellipsis whitespace-nowrap text-[13px] leading-normal text-font-level_2">Cliente: Marcos Aurélio</span></button>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const WithImage: Story = {
+  args: { leftImage: AVATAR, leftImageAlt: &#x27;Marcos Aurélio&#x27; },
+}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">With Icon</h2>
+    <div class="ds-story-id">components-cardbutton--with-icon · export <b>WithIcon</b></div>
+    <div class="ds-canvas ds-canvas--padded">
+<button class="relative flex h-[60px] w-full flex-col items-start justify-center gap-[5px] overflow-hidden md:w-[150px] rounded-[5px] bg-background px-[10px] text-left transition-colors cursor-pointer hover:bg-neutral-level_1 active:bg-neutral-level_2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-confirmation focus-visible:ring-offset-1 disabled:pointer-events-none disabled:opacity-40" type="button"><div class="flex w-full items-center gap-[10px]"><div class="flex size-[20px] shrink-0 items-center justify-center"><span class="flex size-[15px] items-center justify-center text-font"><svg fill="currentColor" height="100%" viewbox="0 0 24 24" width="100%"><path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"></path></svg></span></div><span class="inline-block min-w-0 flex-1 overflow-hidden text-ellipsis whitespace-nowrap text-sm leading-normal text-font">Lorem Ipsum</span></div><span class="inline-block w-full overflow-hidden text-ellipsis whitespace-nowrap text-[13px] leading-normal text-font-level_2">Cliente: Marcos Aurélio</span></button>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const WithIcon: Story = {
+  args: { leftIcon: &lt;UserIcon /&gt; },
+}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">No Subtitle</h2>
+    <div class="ds-story-id">components-cardbutton--no-subtitle · export <b>NoSubtitle</b></div>
+    <div class="ds-canvas ds-canvas--padded">
+<button class="relative flex h-[60px] w-full flex-col items-start justify-center gap-[5px] overflow-hidden md:w-[150px] rounded-[5px] bg-background px-[10px] text-left transition-colors cursor-pointer hover:bg-neutral-level_1 active:bg-neutral-level_2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-confirmation focus-visible:ring-offset-1 disabled:pointer-events-none disabled:opacity-40" type="button"><div class="flex w-full items-center gap-[10px]"><span class="inline-block min-w-0 flex-1 overflow-hidden text-ellipsis whitespace-nowrap text-sm leading-normal text-font">Lorem Ipsum</span></div></button>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const NoSubtitle: Story = {
+  args: { subtitle: undefined },
+}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">No Subtitle With Image</h2>
+    <div class="ds-story-id">components-cardbutton--no-subtitle-with-image · export <b>NoSubtitleWithImage</b></div>
+    <div class="ds-canvas ds-canvas--padded">
+<button class="relative flex h-[60px] w-full flex-col items-start justify-center gap-[5px] overflow-hidden md:w-[150px] rounded-[5px] bg-background px-[10px] text-left transition-colors cursor-pointer hover:bg-neutral-level_1 active:bg-neutral-level_2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-confirmation focus-visible:ring-offset-1 disabled:pointer-events-none disabled:opacity-40" type="button"><div class="flex w-full items-center gap-[10px]"><div class="flex size-[20px] shrink-0 items-center justify-center"><img alt="" class="size-[20px] rounded-full object-cover" src="https://i.pravatar.cc/40?img=3"/></div><span class="inline-block min-w-0 flex-1 overflow-hidden text-ellipsis whitespace-nowrap text-sm leading-normal text-font">Lorem Ipsum</span></div></button>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const NoSubtitleWithImage: Story = {
+  args: { leftImage: AVATAR, subtitle: undefined },
+}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">No Left</h2>
+    <div class="ds-story-id">components-cardbutton--no-left · export <b>NoLeft</b></div>
+    <div class="ds-canvas ds-canvas--padded">
+<button class="relative flex h-[60px] w-full flex-col items-start justify-center gap-[5px] overflow-hidden md:w-[150px] rounded-[5px] bg-background px-[10px] text-left transition-colors cursor-pointer hover:bg-neutral-level_1 active:bg-neutral-level_2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-confirmation focus-visible:ring-offset-1 disabled:pointer-events-none disabled:opacity-40" type="button"><div class="flex w-full items-center gap-[10px]"><span class="inline-block min-w-0 flex-1 overflow-hidden text-ellipsis whitespace-nowrap text-sm leading-normal text-font">Lorem Ipsum</span></div><span class="inline-block w-full overflow-hidden text-ellipsis whitespace-nowrap text-[13px] leading-normal text-font-level_2">Cliente: Marcos Aurélio</span></button>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const NoLeft: Story = {
+  args: { leftImage: undefined, leftIcon: undefined },
+}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">All Variants</h2>
+    <div class="ds-story-id">components-cardbutton--all-variants · export <b>AllVariants</b></div>
+    <div class="ds-canvas ds-canvas--padded">
+<div style="display: grid; grid-template-columns: repeat(2, max-content); gap: 2px; border: 1px dashed rgb(192, 132, 252); padding: 4px; width: fit-content;"><button class="relative flex h-[60px] w-full flex-col items-start justify-center gap-[5px] overflow-hidden md:w-[150px] rounded-[5px] bg-background px-[10px] text-left transition-colors cursor-pointer hover:bg-neutral-level_1 active:bg-neutral-level_2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-confirmation focus-visible:ring-offset-1 disabled:pointer-events-none disabled:opacity-40" type="button"><div class="flex w-full items-center gap-[10px]"><div class="flex size-[20px] shrink-0 items-center justify-center"><img alt="" class="size-[20px] rounded-full object-cover" src="https://i.pravatar.cc/40?img=3"/></div><span class="inline-block min-w-0 flex-1 overflow-hidden text-ellipsis whitespace-nowrap text-sm leading-normal text-font">Lorem Ipsum</span></div><span class="inline-block w-full overflow-hidden text-ellipsis whitespace-nowrap text-[13px] leading-normal text-font-level_2">Cliente: Marcos Aurélio</span></button><button class="relative flex h-[60px] w-full flex-col items-start justify-center gap-[5px] overflow-hidden md:w-[150px] rounded-[5px] bg-background px-[10px] text-left transition-colors cursor-pointer hover:bg-neutral-level_1 active:bg-neutral-level_2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-confirmation focus-visible:ring-offset-1 disabled:pointer-events-none disabled:opacity-40" type="button"><div class="flex w-full items-center gap-[10px]"><div class="flex size-[20px] shrink-0 items-center justify-center"><span class="flex size-[15px] items-center justify-center text-font"><svg fill="currentColor" height="100%" viewbox="0 0 24 24" width="100%"><path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"></path></svg></span></div><span class="inline-block min-w-0 flex-1 overflow-hidden text-ellipsis whitespace-nowrap text-sm leading-normal text-font">Lorem Ipsum</span></div><span class="inline-block w-full overflow-hidden text-ellipsis whitespace-nowrap text-[13px] leading-normal text-font-level_2">Cliente: Marcos Aurélio</span></button><button class="relative flex h-[60px] w-full flex-col items-start justify-center gap-[5px] overflow-hidden md:w-[150px] rounded-[5px] px-[10px] text-left transition-colors cursor-pointer hover:bg-neutral-level_1 active:bg-neutral-level_2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-confirmation focus-visible:ring-offset-1 disabled:pointer-events-none disabled:opacity-40 bg-neutral-level_1" type="button"><div class="flex w-full items-center gap-[10px]"><div class="flex size-[20px] shrink-0 items-center justify-center"><img alt="" class="size-[20px] rounded-full object-cover" src="https://i.pravatar.cc/40?img=3"/></div><span class="inline-block min-w-0 flex-1 overflow-hidden text-ellipsis whitespace-nowrap text-sm leading-normal text-font">Lorem Ipsum</span></div><span class="inline-block w-full overflow-hidden text-ellipsis whitespace-nowrap text-[13px] leading-normal text-font-level_2">Cliente: Marcos Aurélio</span></button><button class="relative flex h-[60px] w-full flex-col items-start justify-center gap-[5px] overflow-hidden md:w-[150px] rounded-[5px] px-[10px] text-left transition-colors cursor-pointer hover:bg-neutral-level_1 active:bg-neutral-level_2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-confirmation focus-visible:ring-offset-1 disabled:pointer-events-none disabled:opacity-40 bg-neutral-level_1" type="button"><div class="flex w-full items-center gap-[10px]"><div class="flex size-[20px] shrink-0 items-center justify-center"><span class="flex size-[15px] items-center justify-center text-font"><svg fill="currentColor" height="100%" viewbox="0 0 24 24" width="100%"><path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"></path></svg></span></div><span class="inline-block min-w-0 flex-1 overflow-hidden text-ellipsis whitespace-nowrap text-sm leading-normal text-font">Lorem Ipsum</span></div><span class="inline-block w-full overflow-hidden text-ellipsis whitespace-nowrap text-[13px] leading-normal text-font-level_2">Cliente: Marcos Aurélio</span></button><button class="relative flex h-[60px] w-full flex-col items-start justify-center gap-[5px] overflow-hidden md:w-[150px] rounded-[5px] px-[10px] text-left transition-colors cursor-pointer hover:bg-neutral-level_1 active:bg-neutral-level_2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-confirmation focus-visible:ring-offset-1 disabled:pointer-events-none disabled:opacity-40 bg-neutral-level_2" type="button"><div class="flex w-full items-center gap-[10px]"><div class="flex size-[20px] shrink-0 items-center justify-center"><img alt="" class="size-[20px] rounded-full object-cover" src="https://i.pravatar.cc/40?img=3"/></div><span class="inline-block min-w-0 flex-1 overflow-hidden text-ellipsis whitespace-nowrap text-sm leading-normal text-font">Lorem Ipsum</span></div><span class="inline-block w-full overflow-hidden text-ellipsis whitespace-nowrap text-[13px] leading-normal text-font-level_2">Cliente: Marcos Aurélio</span></button><button class="relative flex h-[60px] w-full flex-col items-start justify-center gap-[5px] overflow-hidden md:w-[150px] rounded-[5px] px-[10px] text-left transition-colors cursor-pointer hover:bg-neutral-level_1 active:bg-neutral-level_2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-confirmation focus-visible:ring-offset-1 disabled:pointer-events-none disabled:opacity-40 bg-neutral-level_2" type="button"><div class="flex w-full items-center gap-[10px]"><div class="flex size-[20px] shrink-0 items-center justify-center"><span class="flex size-[15px] items-center justify-center text-font"><svg fill="currentColor" height="100%" viewbox="0 0 24 24" width="100%"><path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"></path></svg></span></div><span class="inline-block min-w-0 flex-1 overflow-hidden text-ellipsis whitespace-nowrap text-sm leading-normal text-font">Lorem Ipsum</span></div><span class="inline-block w-full overflow-hidden text-ellipsis whitespace-nowrap text-[13px] leading-normal text-font-level_2">Cliente: Marcos Aurélio</span></button></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const AllVariants: Story = {
+  render: () =&gt; (
+    &lt;div
+      style={{
+        display: &#x27;grid&#x27;,
+        gridTemplateColumns: &#x27;repeat(2, max-content)&#x27;,
+        gap: 2,
+        border: &#x27;1px dashed #c084fc&#x27;,
+        padding: 4,
+        width: &#x27;fit-content&#x27;,
+      }}
+    &gt;
+      &lt;CardButton
+        label=&quot;Lorem Ipsum&quot;
+        subtitle=&quot;Cliente: Marcos Aurélio&quot;
+        leftImage={AVATAR}
+      /&gt;
+      &lt;CardButton
+        label=&quot;Lorem Ipsum&quot;
+        subtitle=&quot;Cliente: Marcos Aurélio&quot;
+        leftIcon={&lt;UserIcon /&gt;}
+      /&gt;
+
+      &lt;CardButton
+        label=&quot;Lorem Ipsum&quot;
+        subtitle=&quot;Cliente: Marcos Aurélio&quot;
+        leftImage={AVATAR}
+        className=&quot;bg-neutral-level_1&quot;
+      /&gt;
+      &lt;CardButton
+        label=&quot;Lorem Ipsum&quot;
+        subtitle=&quot;Cliente: Marcos Aurélio&quot;
+        leftIcon={&lt;UserIcon /&gt;}
+        className=&quot;bg-neutral-level_1&quot;
+      /&gt;
+
+      &lt;CardButton
+        label=&quot;Lorem Ipsum&quot;
+        subtitle=&quot;Cliente: Marcos Aurélio&quot;
+        leftImage={AVATAR}
+        className=&quot;bg-neutral-level_2&quot;
+      /&gt;
+      &lt;CardButton
+        label=&quot;Lorem Ipsum&quot;
+        subtitle=&quot;Cliente: Marcos Aurélio&quot;
+        leftIcon={&lt;UserIcon /&gt;}
+        className=&quot;bg-neutral-level_2&quot;
+      /&gt;
+    &lt;/div&gt;
+  ),
+}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">Truncation</h2>
+    <div class="ds-story-id">components-cardbutton--truncation · export <b>Truncation</b></div>
+    <div class="ds-canvas ds-canvas--padded">
+<button class="relative flex h-[60px] w-full flex-col items-start justify-center gap-[5px] overflow-hidden md:w-[150px] rounded-[5px] bg-background px-[10px] text-left transition-colors cursor-pointer hover:bg-neutral-level_1 active:bg-neutral-level_2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-confirmation focus-visible:ring-offset-1 disabled:pointer-events-none disabled:opacity-40" type="button"><div class="flex w-full items-center gap-[10px]"><div class="flex size-[20px] shrink-0 items-center justify-center"><img alt="" class="size-[20px] rounded-full object-cover" src="https://i.pravatar.cc/40?img=3"/></div><span class="inline-block min-w-0 flex-1 overflow-hidden text-ellipsis whitespace-nowrap text-sm leading-normal text-font">Texto muito longo que deve ser truncado</span></div><span class="inline-block w-full overflow-hidden text-ellipsis whitespace-nowrap text-[13px] leading-normal text-font-level_2">Subtitle muito longa que também trunca</span></button>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const Truncation: Story = {
+  args: {
+    label: &#x27;Texto muito longo que deve ser truncado&#x27;,
+    subtitle: &#x27;Subtitle muito longa que também trunca&#x27;,
+    leftImage: AVATAR,
+  },
+}</code></pre></details>
+  </section>
+</body>
+</html>

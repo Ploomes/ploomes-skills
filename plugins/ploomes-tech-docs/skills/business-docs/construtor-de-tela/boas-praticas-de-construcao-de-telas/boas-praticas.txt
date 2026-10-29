@@ -1,0 +1,21 @@
+Boas práticas para construção de telas
+
+Como o software a ser construído é apenas frontend, algumas regras de backend e até configurações que o usuário possa fazer direto pela interface nativa do Ploomes mesmo após o software ter sido criado podem causar problemas e confusão ao usuário. Portanto, seu frondend deve já levar em consideração, ainda que não solicitado, todas as possibilidades do Ploomes.
+
+Negócios
+Caso o software trabalhe com a movimentação da entidade "Negócios" entre etapas de um funil, as seguintes diretrizes devem ser seguidas:
+- Você sempre deve verificar se uma etapa possui checklists e exibir os checklists caso existam. Lembrando que o usuário pode configurar um checklist mesmo após o software ter sido criado, ou seja, o software deve sempre estar pronto para trabalhar com checklists, mesmo que não seja necessário agora;
+- Funis possuem regras (exemplo: não pode voltar etapa). Essas regras devem sempre estar previstas no frontend, porque o usuário pode alterá-las a qualquer momento e o software precisa conseguir permanecer dialogando com as alterações corretamente. Você precisa lidar com todas elas direto no frontend;
+- Nenhum negócio pode ter sua etapa alterada caso esteja ganho ou perdido. Também só pode ser reaberto caso esteja perdido ou ganho. E só pode ser ganho ou perdido caso ainda esteja em aberto.
+
+Checklists
+- Checklists são vinculados a campos de clientes, contatos ou negócios. Isso significa que o checklist nada mais é do que um "ponteiro" para um campo. Portanto, quando um checklist for renderizando, ao tentar preenchê-lo, o visual do campo e as suas formas e regras de preenchimento devem respeitar o tipo de campo do checklist;
+- Checklists podem ser exibidos condicionalmente. Você sempre deve verificar se um checklist deve ser exibido ou ocultado quando qualquer um de seus campos forem preenchidos;
+- Ao editar um checklist, você sempre deve garantir que traga o valor atual do campo, caso esteja preenchido.
+- Se o software trabalhar com a ação de "Ganhar" negócios, é importante notar que o botão pra ganhar só pode ser liberado quando os checklists obrigatórios da etapa atual do funil estejam preenchidos.
+
+Tarefas
+- Tarefas que estejam vinculadas a clientes e negócios, quando finalizadas, geram registros de interação. Caso o software contenha telas que exibem tarefas e timeline / registros de interação de um cliente / negócio ao mesmo tempo, é importante que a finalização da tarefa atualize a timeline / lista de registros de interação.
+
+Login
+- A não ser que seja explicitamente declarado que o software não deve ter tela de login e sempre se conectar ao Ploomes a partir de uma API Key, você deve considerar que o usuário deverá fazer login e usar o software a partir de suas credenciais, não de uma API Key fixa.

@@ -1,0 +1,55 @@
+Automações de funil
+Assim como os checklists, podemos configurar múltiplas automações para cada uma das etapas de um funil. Automações são ações disparadas quando determinados gatilhos são “puxados”. Exemplo: quando um lead entra em uma determinada etapa, disparar e-mail alertando a equipe de marketing.
+
+O Ploomes possui dois tipos de automações: as automações de funil e as automações gerais. A principal diferença entre elas está nas entidades envolvidas e nos gatilhos. As automações de funil são baseadas na entidade de negócios, os seus gatilhos são definidos por estágio do funil e são baseados nas ações dentro desses estágios (quando entrou no estágio, quando ganhou no estágio, quando editou campo no estágio, entre outros). No caso de automações gerais, elas são baseadas em diversas entidades do Ploomes, e os gatilhos são mais abrangentes (quando um cliente for criado, quando um negócio for alterado, quando uma tarefa for excluída, etc.).
+
+As automações de funil podem ser disparadas nas seguintes situações:
+
+- Quando um negócio entrar em determinado estágio;
+
+- Quando um negócio for finalizado como ganho em determinado estágio;
+
+- Quando um negócio for finalizado como perdido em determinado estágio;
+
+- Quando um negócio for reaberto em determinado estágio;
+
+- Quando um negócio for editado em determinado estágio (com a possibilidade de restringir à edição a um até quatro campos específicos).
+
+Com relação às ações (executadas após o disparo de um gatilho), temos os seguintes tipos:
+
+- Edição de dados e propriedades do negócio, do cliente, entre outras entidades vinculadas;
+
+- Criação de nova tarefa para um ou mais usuários;
+
+- Adição de registro de interação vinculado ao negócio;
+
+- Criação de um novo negócio filho ou duplicação do negócio origem como filho em qualquer estágio de qualquer funil (durante a duplicação de negócios, apenas os campos preenchidos são copiados para o negócio duplicado);
+
+- Disparo de e-mail;
+
+- Finalizar negócio como ganho ou como perdido;
+
+- Criar produto do cliente vinculado ao negócio;
+
+- Finalizar tarefas vinculadas ao negócio (com ou sem observações).
+
+Uma automação tem um único gatilho, mas pode ter várias ações que rodam de forma síncrona em seguida.
+
+Para as ações de edição de dados, criação de nova tarefa, adição de registro de interação, criação de um novo negócio e criação de produto do cliente, os campos podem ser preenchidos das seguintes forma:
+
+- Valor fixos: posso, por exemplo, dizer que o título de um negócio criado por automação será sempre "Negócio criado por automação";
+
+- Puxar valor de um campo: posso, por exemplo, dizer que o título de um negócio criado por automação deverá puxar o nome do Cliente ao qual aquele negócio está vinculado;
+
+- Fórmula simples: posso, por exemplo, dizer que o título de um negócio criado por automação deverá ser igual a "Marketing Digital", caso o cliente tenha um campo dinâmico chamado "Origem do cliente" preenchido com a opção "Google Ads" ou "Blog", ou "Marketing Físico", caso este mesmo campo esteja preenchido com "Evento" ou "Prospecção ativa". Para isso, o Ploomes permite a configuração de um código em javascript que se utiliza dos campos das entidades envolvidas (utilizando a tecnologia de field-path para buscar dados de entidades vinculadas). Quando a automação é engatilhada, esse código javascript roda e traz o retorno que deverá ser armazenado no campo. Importante notar que o retorno do javascript precisa ser compatível com o campo que está sendo preenchido por ele.
+
+Alguns casos de uso comuns: 
+
+- Conexão entre funis / times;
+
+- Inclusão de pessoas no negócio (com criação de tarefas e inclusão de pessoas nos campos que gerenciam nível de acesso de negócios);
+
+Limitações importantes
+Os códigos sequenciais dos negócios do Ploomes são atribuídos automaticamente pelo sistema com base na ordem cronológica de criação, independentemente do funil ao qual pertencem. Isso significa que o código é gerado com base na data de criação, sem diferenciar os funis.
+
+Todos os negócios do Ploomes possuem um contador de “Dias no estágio”. Esse contador é automático e contabiliza sempre dias corridos, não sendo permitido a sua alteração para dias úteis.

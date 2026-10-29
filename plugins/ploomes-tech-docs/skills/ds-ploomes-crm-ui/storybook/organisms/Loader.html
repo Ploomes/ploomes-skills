@@ -1,0 +1,107 @@
+<!doctype html>
+<!--
+  Ploomes Design System — snapshot estático das stories do Storybook.
+  Componente : Organisms/Loader
+  Stories    : 5 (Default, Title Only, Custom Title, Short Message, All Variants)
+  Story      : Loader.stories.tsx
+  Tema       : light — use <html class="dark"> para o tema escuro.
+-->
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Loader — Ploomes DS</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;600;700&display=swap">
+<link rel="stylesheet" href="../assets/design-system.css">
+<link rel="stylesheet" href="../assets/page.css">
+</head>
+<body class="ds-page">
+  <header class="ds-head">
+    <a class="ds-back" href="../index.html">← inventário</a>
+    <h1 class="ds-title">Loader</h1>
+    <p class="ds-meta">organisms · 5 stories · <code>Loader.stories.tsx</code></p>
+    <pre class="ds-code ds-import">import { Loader } from &#x27;@ploomescrm/ui&#x27;;</pre>
+    <pre class="ds-code">// props padrão de todas as stories (meta.args)
+args: {
+  title: &#x27;Descrição do carregamento&#x27;,
+  description:
+    &#x27;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut varius odio ex, sed euismod justo mattis in.&#x27;,
+}</pre>
+  </header>
+  <section class="ds-story">
+    <h2 class="ds-story-name">Default</h2>
+    <div class="ds-story-id">organisms-loader--default · export <b>Default</b></div>
+    <div class="ds-canvas ds-canvas--centered">
+<div class="flex w-full max-w-[300px] flex-col items-center gap-[20px]"><span aria-hidden="true" aria-label="loading" class="inline-flex shrink-0 items-center justify-center animate-spin text-font-level_2"><svg aria-hidden="true" class="lucide lucide-loader-circle" fill="none" height="90" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="90" xmlns="http://www.w3.org/2000/svg"><path d="M21 12a9 9 0 1 1-6.219-8.56"></path></svg></span><div class="flex w-full flex-col items-center gap-[5px] text-center text-font-level_2"><p class="w-full text-[18px] font-semibold leading-normal">Descrição do carregamento</p><p class="w-full text-[14px] leading-normal">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut varius odio ex, sed euismod justo mattis in.</p></div></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const Default: Story = {}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">Title Only</h2>
+    <div class="ds-story-id">organisms-loader--title-only · export <b>TitleOnly</b></div>
+    <div class="ds-canvas ds-canvas--centered">
+<div class="flex w-full max-w-[300px] flex-col items-center gap-[20px]"><span aria-hidden="true" aria-label="loading" class="inline-flex shrink-0 items-center justify-center animate-spin text-font-level_2"><svg aria-hidden="true" class="lucide lucide-loader-circle" fill="none" height="90" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="90" xmlns="http://www.w3.org/2000/svg"><path d="M21 12a9 9 0 1 1-6.219-8.56"></path></svg></span><div class="flex w-full flex-col items-center gap-[5px] text-center text-font-level_2"><p class="w-full text-[18px] font-semibold leading-normal">Descrição do carregamento</p></div></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const TitleOnly: Story = {
+  args: { description: undefined },
+}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">Custom Title</h2>
+    <div class="ds-story-id">organisms-loader--custom-title · export <b>CustomTitle</b></div>
+    <div class="ds-canvas ds-canvas--centered">
+<div class="flex w-full max-w-[300px] flex-col items-center gap-[20px]"><span aria-hidden="true" aria-label="loading" class="inline-flex shrink-0 items-center justify-center animate-spin text-font-level_2"><svg aria-hidden="true" class="lucide lucide-loader-circle" fill="none" height="90" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="90" xmlns="http://www.w3.org/2000/svg"><path d="M21 12a9 9 0 1 1-6.219-8.56"></path></svg></span><div class="flex w-full flex-col items-center gap-[5px] text-center text-font-level_2"><p class="w-full text-[18px] font-semibold leading-normal">Carregando dados…</p><p class="w-full text-[14px] leading-normal">Por favor, aguarde enquanto buscamos as informações.</p></div></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const CustomTitle: Story = {
+  args: {
+    title: &#x27;Carregando dados…&#x27;,
+    description: &#x27;Por favor, aguarde enquanto buscamos as informações.&#x27;,
+  },
+}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">Short Message</h2>
+    <div class="ds-story-id">organisms-loader--short-message · export <b>ShortMessage</b></div>
+    <div class="ds-canvas ds-canvas--centered">
+<div class="flex w-full max-w-[300px] flex-col items-center gap-[20px]"><span aria-hidden="true" aria-label="loading" class="inline-flex shrink-0 items-center justify-center animate-spin text-font-level_2"><svg aria-hidden="true" class="lucide lucide-loader-circle" fill="none" height="90" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="90" xmlns="http://www.w3.org/2000/svg"><path d="M21 12a9 9 0 1 1-6.219-8.56"></path></svg></span><div class="flex w-full flex-col items-center gap-[5px] text-center text-font-level_2"><p class="w-full text-[18px] font-semibold leading-normal">Aguarde</p></div></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const ShortMessage: Story = {
+  args: {
+    title: &#x27;Aguarde&#x27;,
+    description: undefined,
+  },
+}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">All Variants</h2>
+    <div class="ds-story-id">organisms-loader--all-variants · export <b>AllVariants</b></div>
+    <div class="ds-canvas ds-canvas--centered">
+<div class="flex flex-wrap items-start gap-[60px] p-[40px]"><div class="flex flex-col items-center gap-2"><p class="text-xs text-font-level_2">Com descrição (Figma)</p><div class="flex w-full max-w-[300px] flex-col items-center gap-[20px]"><span aria-hidden="true" aria-label="loading" class="inline-flex shrink-0 items-center justify-center animate-spin text-font-level_2"><svg aria-hidden="true" class="lucide lucide-loader-circle" fill="none" height="90" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="90" xmlns="http://www.w3.org/2000/svg"><path d="M21 12a9 9 0 1 1-6.219-8.56"></path></svg></span><div class="flex w-full flex-col items-center gap-[5px] text-center text-font-level_2"><p class="w-full text-[18px] font-semibold leading-normal">Descrição do carregamento</p><p class="w-full text-[14px] leading-normal">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut varius odio ex, sed euismod justo mattis in.</p></div></div></div><div class="flex flex-col items-center gap-2"><p class="text-xs text-font-level_2">Sem descrição</p><div class="flex w-full max-w-[300px] flex-col items-center gap-[20px]"><span aria-hidden="true" aria-label="loading" class="inline-flex shrink-0 items-center justify-center animate-spin text-font-level_2"><svg aria-hidden="true" class="lucide lucide-loader-circle" fill="none" height="90" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="90" xmlns="http://www.w3.org/2000/svg"><path d="M21 12a9 9 0 1 1-6.219-8.56"></path></svg></span><div class="flex w-full flex-col items-center gap-[5px] text-center text-font-level_2"><p class="w-full text-[18px] font-semibold leading-normal">Carregando…</p></div></div></div><div class="flex flex-col items-center gap-2"><p class="text-xs text-font-level_2">Título personalizado</p><div class="flex w-full max-w-[300px] flex-col items-center gap-[20px]"><span aria-hidden="true" aria-label="loading" class="inline-flex shrink-0 items-center justify-center animate-spin text-font-level_2"><svg aria-hidden="true" class="lucide lucide-loader-circle" fill="none" height="90" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="90" xmlns="http://www.w3.org/2000/svg"><path d="M21 12a9 9 0 1 1-6.219-8.56"></path></svg></span><div class="flex w-full flex-col items-center gap-[5px] text-center text-font-level_2"><p class="w-full text-[18px] font-semibold leading-normal">Salvando alterações</p><p class="w-full text-[14px] leading-normal">Suas mudanças estão sendo salvas. Isso pode levar alguns instantes.</p></div></div></div></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const AllVariants: Story = {
+  render: () =&gt; (
+    &lt;div className=&quot;flex flex-wrap items-start gap-[60px] p-[40px]&quot;&gt;
+      &lt;div className=&quot;flex flex-col items-center gap-2&quot;&gt;
+        &lt;p className=&quot;text-xs text-font-level_2&quot;&gt;Com descrição (Figma)&lt;/p&gt;
+        &lt;Loader
+          title=&quot;Descrição do carregamento&quot;
+          description=&quot;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut varius odio ex, sed euismod justo mattis in.&quot;
+        /&gt;
+      &lt;/div&gt;
+      &lt;div className=&quot;flex flex-col items-center gap-2&quot;&gt;
+        &lt;p className=&quot;text-xs text-font-level_2&quot;&gt;Sem descrição&lt;/p&gt;
+        &lt;Loader title=&quot;Carregando…&quot; /&gt;
+      &lt;/div&gt;
+      &lt;div className=&quot;flex flex-col items-center gap-2&quot;&gt;
+        &lt;p className=&quot;text-xs text-font-level_2&quot;&gt;Título personalizado&lt;/p&gt;
+        &lt;Loader
+          title=&quot;Salvando alterações&quot;
+          description=&quot;Suas mudanças estão sendo salvas. Isso pode levar alguns instantes.&quot;
+        /&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  ),
+}</code></pre></details>
+  </section>
+</body>
+</html>

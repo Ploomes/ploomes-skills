@@ -1,0 +1,75 @@
+<!doctype html>
+<!--
+  Ploomes Design System — snapshot estático das stories do Storybook.
+  Componente : Components/SpeechToTextButton
+  Stories    : 4 (Default, Recording, Unsupported, Disabled)
+  Story      : SpeechToTextButton.stories.tsx
+  Tema       : light — use <html class="dark"> para o tema escuro.
+-->
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SpeechToTextButton — Ploomes DS</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;600;700&display=swap">
+<link rel="stylesheet" href="../assets/design-system.css">
+<link rel="stylesheet" href="../assets/page.css">
+</head>
+<body class="ds-page">
+  <header class="ds-head">
+    <a class="ds-back" href="../index.html">← inventário</a>
+    <h1 class="ds-title">SpeechToTextButton</h1>
+    <p class="ds-meta">components · 4 stories · <code>SpeechToTextButton.stories.tsx</code></p>
+    <pre class="ds-code ds-import">import { SpeechToTextButton } from &#x27;@ploomescrm/ui&#x27;;</pre>
+  </header>
+  <section class="ds-story">
+    <h2 class="ds-story-name">Default</h2>
+    <div class="ds-story-id">components-speechtotextbutton--default · export <b>Default</b></div>
+    <div class="ds-canvas ds-canvas--padded">
+<span class="inline-block"><button aria-label="Clique para gravar" aria-pressed="false" class="flex size-[25px] cursor-pointer items-center justify-center rounded-[5px] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-confirmation disabled:cursor-not-allowed disabled:opacity-40 text-font-level_2 hover:bg-neutral-level_2" type="button"><span aria-hidden="true" class="inline-flex shrink-0 items-center justify-center text-current"><svg aria-hidden="true" class="lucide lucide-mic" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="15" xmlns="http://www.w3.org/2000/svg"><path d="M12 19v3"></path><path d="M19 10v2a7 7 0 0 1-14 0v-2"></path><rect height="13" rx="3" width="6" x="9" y="2"></rect></svg></span></button></span>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const Default: Story = {
+  render: function Render(args) {
+    const [recording, setRecording] = useState(false);
+    return (
+      &lt;SpeechToTextButton
+        {...args}
+        recording={recording}
+        onToggle={setRecording}
+      /&gt;
+    );
+  },
+}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">Recording</h2>
+    <div class="ds-story-id">components-speechtotextbutton--recording · export <b>Recording</b></div>
+    <div class="ds-canvas ds-canvas--padded">
+<span class="inline-block"><button aria-label="Parar gravação" aria-pressed="true" class="flex size-[25px] cursor-pointer items-center justify-center rounded-[5px] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-confirmation disabled:cursor-not-allowed disabled:opacity-40 animate-pulse bg-danger-default_30 text-danger hover:bg-danger-default_30" type="button"><span aria-hidden="true" class="inline-flex shrink-0 items-center justify-center text-current"><svg aria-hidden="true" class="lucide lucide-mic" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="15" xmlns="http://www.w3.org/2000/svg"><path d="M12 19v3"></path><path d="M19 10v2a7 7 0 0 1-14 0v-2"></path><rect height="13" rx="3" width="6" x="9" y="2"></rect></svg></span></button></span>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const Recording: Story = {
+  args: { recording: true },
+}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">Unsupported</h2>
+    <div class="ds-story-id">components-speechtotextbutton--unsupported · export <b>Unsupported</b></div>
+    <div class="ds-canvas ds-canvas--padded">
+<span class="inline-block"><button aria-label="Reconhecimento de voz não suportado" aria-pressed="false" class="flex size-[25px] cursor-pointer items-center justify-center rounded-[5px] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-confirmation disabled:cursor-not-allowed disabled:opacity-40 text-font-level_2 hover:bg-neutral-level_2" disabled="" type="button"><span aria-hidden="true" class="inline-flex shrink-0 items-center justify-center text-current"><svg aria-hidden="true" class="lucide lucide-mic" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="15" xmlns="http://www.w3.org/2000/svg"><path d="M12 19v3"></path><path d="M19 10v2a7 7 0 0 1-14 0v-2"></path><rect height="13" rx="3" width="6" x="9" y="2"></rect></svg></span></button></span>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const Unsupported: Story = {
+  args: { unsupported: true },
+}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">Disabled</h2>
+    <div class="ds-story-id">components-speechtotextbutton--disabled · export <b>Disabled</b></div>
+    <div class="ds-canvas ds-canvas--padded">
+<span class="inline-block"><button aria-label="Clique para gravar" aria-pressed="false" class="flex size-[25px] cursor-pointer items-center justify-center rounded-[5px] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-confirmation disabled:cursor-not-allowed disabled:opacity-40 text-font-level_2 hover:bg-neutral-level_2" disabled="" type="button"><span aria-hidden="true" class="inline-flex shrink-0 items-center justify-center text-current"><svg aria-hidden="true" class="lucide lucide-mic" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="15" xmlns="http://www.w3.org/2000/svg"><path d="M12 19v3"></path><path d="M19 10v2a7 7 0 0 1-14 0v-2"></path><rect height="13" rx="3" width="6" x="9" y="2"></rect></svg></span></button></span>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const Disabled: Story = {
+  args: { disabled: true },
+}</code></pre></details>
+  </section>
+</body>
+</html>

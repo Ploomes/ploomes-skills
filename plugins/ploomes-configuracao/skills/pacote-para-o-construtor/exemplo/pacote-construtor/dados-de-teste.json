@@ -1,0 +1,40 @@
+{
+  "usuarios": [ { "nome": "Ana Ribeiro" }, { "nome": "Bruno Castro" } ],
+  "clientes": [ { "nome": "Cliente Alfa Ltda" }, { "nome": "Cliente Beta Ltda" }, { "nome": "Cliente Gama Ltda" }, { "nome": "Cliente Delta Ltda" } ],
+  "funis": [
+    { "nome": "Embarques",
+      "regras": { "forbiddenStageReturn": true, "winDealOnLastStage": true },
+      "etapas": ["Documentação", "Aguardando carregamento", "Em embarque", "Finalizado"] }
+  ],
+  "modelos": ["Pedido de venda"],
+  "motivosDePerda": ["Cancelado pelo cliente"],
+  "campos": [
+    { "fieldKey": "deal_0A1B2C3D-0000-4000-8000-000000000001", "nome": "Data de embarque", "typeId": 8 },
+    { "fieldKey": "deal_0A1B2C3D-0000-4000-8000-000000000002", "nome": "Nota fiscal", "typeId": 1 },
+    { "fieldKey": "deal_0A1B2C3D-0000-4000-8000-000000000003", "nome": "Toneladas", "typeId": 6 },
+    { "fieldKey": "deal_0A1B2C3D-0000-4000-8000-000000000004", "nome": "Modal", "typeId": 7, "opcoes": ["Rodoviário", "Marítimo", "Ferroviário"] }
+  ],
+  "checklists": [
+    { "funil": "Embarques", "etapa": "Aguardando carregamento", "nome": "Liberação do carregamento",
+      "itens": [
+        { "nome": "Nota fiscal", "fieldKey": "deal_0A1B2C3D-0000-4000-8000-000000000002", "obrigatorio": true },
+        { "nome": "Data de embarque", "fieldKey": "deal_0A1B2C3D-0000-4000-8000-000000000001", "obrigatorio": true }
+      ] },
+    { "funil": "Embarques", "etapa": "Finalizado", "nome": "Encerramento",
+      "itens": [ { "nome": "Toneladas embarcadas", "fieldKey": "deal_0A1B2C3D-0000-4000-8000-000000000003", "obrigatorio": true } ] }
+  ],
+  "negocios": [
+    { "titulo": "PED-2026-001 · Produto A 300 t", "funil": "Embarques", "etapa": "Aguardando carregamento", "cliente": "Cliente Alfa Ltda", "responsavel": "Ana Ribeiro",
+      "campos": { "deal_0A1B2C3D-0000-4000-8000-000000000001": "2026-08-03T00:00:00Z", "deal_0A1B2C3D-0000-4000-8000-000000000004": "Rodoviário", "deal_0A1B2C3D-0000-4000-8000-000000000003": 300 } },
+    { "titulo": "PED-2026-002 · Insumo B 80 t", "funil": "Embarques", "etapa": "Aguardando carregamento", "cliente": "Cliente Beta Ltda", "responsavel": "Ana Ribeiro",
+      "campos": { "deal_0A1B2C3D-0000-4000-8000-000000000004": "Rodoviário" } },
+    { "titulo": "PED-2026-003 · Produto C 60 t", "funil": "Embarques", "etapa": "Em embarque", "cliente": "Cliente Delta Ltda", "responsavel": "Bruno Castro",
+      "campos": { "deal_0A1B2C3D-0000-4000-8000-000000000001": "2026-08-19T00:00:00Z", "deal_0A1B2C3D-0000-4000-8000-000000000002": "NF 004512", "deal_0A1B2C3D-0000-4000-8000-000000000004": "Marítimo" } },
+    { "titulo": "PED-2026-004 · Insumo D 24 t", "funil": "Embarques", "etapa": "Finalizado", "cliente": "Cliente Gama Ltda", "responsavel": "Ana Ribeiro", "status": "ganho",
+      "campos": { "deal_0A1B2C3D-0000-4000-8000-000000000002": "NF 003998", "deal_0A1B2C3D-0000-4000-8000-000000000003": 24 } }
+  ],
+  "gerar": [
+    { "quantidade": 120, "etapas": ["Documentação", "Aguardando carregamento", "Em embarque"],
+      "modelo": { "titulo": "PED-2026-L", "funil": "Embarques", "cliente": "Cliente Alfa Ltda", "responsavel": "Bruno Castro" } }
+  ]
+}

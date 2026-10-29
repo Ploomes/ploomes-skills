@@ -1,0 +1,299 @@
+<!doctype html>
+<!--
+  Ploomes Design System — snapshot estático das stories do Storybook.
+  Componente : Fields/Field01TextSimple
+  Stories    : 15 (Default, Filled, Danger, Alert, Disabled, View Only, Loading, With Help Text, With Character Counter, With Validation Icons, Replaceable Right, All Sizes, Cell Theme, Cell Statuses, Form Status Matrix)
+  Story      : Field01TextSimple.stories.tsx
+  Tema       : light — use <html class="dark"> para o tema escuro.
+-->
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Field01TextSimple — Ploomes DS</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;600;700&display=swap">
+<link rel="stylesheet" href="../assets/design-system.css">
+<link rel="stylesheet" href="../assets/page.css">
+</head>
+<body class="ds-page">
+  <header class="ds-head">
+    <a class="ds-back" href="../index.html">← inventário</a>
+    <h1 class="ds-title">Field01TextSimple</h1>
+    <p class="ds-meta">fields · 15 stories · <code>Field01TextSimple.stories.tsx</code></p>
+    <pre class="ds-code ds-import">import { Field01TextSimple } from &#x27;@ploomescrm/ui&#x27;;</pre>
+    <pre class="ds-code">// props padrão de todas as stories (meta.args)
+args: {
+  theme: &#x27;form&#x27;,
+  label: &#x27;Texto simples&#x27;,
+  placeholder: &#x27;Lorem Ipsum&#x27;,
+}</pre>
+  </header>
+  <section class="ds-story">
+    <h2 class="ds-story-name">Default</h2>
+    <div class="ds-story-id">fields-field01textsimple--default · export <b>Default</b></div>
+    <div class="ds-canvas ds-canvas--padded">
+<div style="width: 300px;"><div class="flex w-full flex-col items-start"><div class="flex w-full items-center gap-[5px] pb-[5px]"><label class="shrink-0 text-sm leading-[18px] text-font" for="field-text-_r_0_" id="field-text-_r_0_-label">Texto simples</label><div class="flex h-4 min-w-0 flex-1 items-center gap-[5px]"></div></div><div class="relative flex w-full bg-background px-[10px] transition-colors rounded-[5px] border border-neutral-level_2 items-center gap-[10px] h-[30px] hover:border-font-level_2 focus-within:border-confirmation"><input class="min-w-0 flex-1 bg-transparent text-font outline-none placeholder:text-font-level_2 disabled:cursor-not-allowed text-sm" id="field-text-_r_0_" placeholder="Lorem Ipsum" value=""/></div></div></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const Default: Story = {}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">Filled</h2>
+    <div class="ds-story-id">fields-field01textsimple--filled · export <b>Filled</b></div>
+    <div class="ds-canvas ds-canvas--padded">
+<div style="width: 300px;"><div class="flex w-full flex-col items-start"><div class="flex w-full items-center gap-[5px] pb-[5px]"><label class="shrink-0 text-sm leading-[18px] text-font" for="field-text-_r_0_" id="field-text-_r_0_-label">Texto simples</label><div class="flex h-4 min-w-0 flex-1 items-center gap-[5px]"></div></div><div class="relative flex w-full bg-background px-[10px] transition-colors rounded-[5px] border border-neutral-level_2 items-center gap-[10px] h-[30px] hover:border-font-level_2 focus-within:border-confirmation"><input class="min-w-0 flex-1 bg-transparent text-font outline-none placeholder:text-font-level_2 disabled:cursor-not-allowed text-sm" id="field-text-_r_0_" placeholder="Lorem Ipsum" value="Lorem Ipsum"/></div></div></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const Filled: Story = {
+  args: { defaultValue: &#x27;Lorem Ipsum&#x27; },
+}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">Danger</h2>
+    <div class="ds-story-id">fields-field01textsimple--danger · export <b>Danger</b></div>
+    <div class="ds-canvas ds-canvas--padded">
+<div style="width: 300px;"><div class="flex w-full flex-col items-start"><div class="flex w-full items-center gap-[5px] pb-[5px]"><label class="shrink-0 text-sm leading-[18px] text-font" for="field-text-_r_0_" id="field-text-_r_0_-label">Texto simples</label><div class="flex h-4 min-w-0 flex-1 items-center gap-[5px]"></div></div><div class="relative flex w-full bg-background px-[10px] transition-colors rounded-[5px] border border-danger items-center gap-[10px] h-[30px]"><input aria-describedby="field-text-_r_0_-help" aria-invalid="true" class="min-w-0 flex-1 bg-transparent text-font outline-none placeholder:text-font-level_2 disabled:cursor-not-allowed text-sm" id="field-text-_r_0_" placeholder="Lorem Ipsum" value=""/></div><p class="w-full whitespace-normal px-[10px] pt-[3px] text-[13px] leading-[18px] md:truncate text-danger" id="field-text-_r_0_-help">Texto de ajuda</p></div></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const Danger: Story = {
+  args: { status: &#x27;danger&#x27;, helpText: &#x27;Texto de ajuda&#x27; },
+}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">Alert</h2>
+    <div class="ds-story-id">fields-field01textsimple--alert · export <b>Alert</b></div>
+    <div class="ds-canvas ds-canvas--padded">
+<div style="width: 300px;"><div class="flex w-full flex-col items-start"><div class="flex w-full items-center gap-[5px] pb-[5px]"><label class="shrink-0 text-sm leading-[18px] text-font" for="field-text-_r_0_" id="field-text-_r_0_-label">Texto simples</label><div class="flex h-4 min-w-0 flex-1 items-center gap-[5px]"></div></div><div class="relative flex w-full bg-background px-[10px] transition-colors rounded-[5px] border border-alert items-center gap-[10px] h-[30px]"><input aria-describedby="field-text-_r_0_-help" class="min-w-0 flex-1 bg-transparent text-font outline-none placeholder:text-font-level_2 disabled:cursor-not-allowed text-sm" id="field-text-_r_0_" placeholder="Lorem Ipsum" value=""/></div><p class="w-full whitespace-normal px-[10px] pt-[3px] text-[13px] leading-[18px] md:truncate text-font-level_2" id="field-text-_r_0_-help">Texto de ajuda</p></div></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const Alert: Story = {
+  args: { status: &#x27;alert&#x27;, helpText: &#x27;Texto de ajuda&#x27; },
+}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">Disabled</h2>
+    <div class="ds-story-id">fields-field01textsimple--disabled · export <b>Disabled</b></div>
+    <div class="ds-canvas ds-canvas--padded">
+<div style="width: 300px;"><div class="flex w-full flex-col items-start"><div class="flex w-full items-center gap-[5px] pb-[5px]"><label class="shrink-0 text-sm leading-[18px] text-font" for="field-text-_r_0_" id="field-text-_r_0_-label">Texto simples</label><div class="flex h-4 min-w-0 flex-1 items-center gap-[5px]"></div></div><div class="relative flex w-full px-[10px] transition-colors rounded-[5px] border border-neutral-level_2 items-center gap-[10px] h-[30px] bg-neutral-level_1"><input class="min-w-0 flex-1 bg-transparent text-font outline-none placeholder:text-font-level_2 disabled:cursor-not-allowed text-sm" disabled="" id="field-text-_r_0_" placeholder="Lorem Ipsum" value="Lorem Ipsum"/></div></div></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const Disabled: Story = {
+  args: { disabled: true, defaultValue: &#x27;Lorem Ipsum&#x27; },
+}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">View Only</h2>
+    <div class="ds-story-id">fields-field01textsimple--view-only · export <b>ViewOnly</b></div>
+    <div class="ds-canvas ds-canvas--padded">
+<div style="width: 300px;"><div class="flex w-full flex-col items-start"><div class="flex w-full items-center gap-[5px] pb-[5px]"><label class="shrink-0 text-sm leading-[18px] text-font" for="field-text-_r_0_" id="field-text-_r_0_-label">Texto simples</label><div class="flex h-4 min-w-0 flex-1 items-center gap-[5px]"></div></div><div class="relative flex w-full bg-background px-[10px] transition-colors rounded-[5px] border border-neutral-level_2 items-center gap-[10px] h-[30px]"><input class="min-w-0 flex-1 bg-transparent text-font outline-none placeholder:text-font-level_2 disabled:cursor-not-allowed cursor-default text-sm" id="field-text-_r_0_" placeholder="Lorem Ipsum" readonly="" value="Lorem Ipsum"/></div></div></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const ViewOnly: Story = {
+  args: { viewOnly: true, defaultValue: &#x27;Lorem Ipsum&#x27; },
+}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">Loading</h2>
+    <div class="ds-story-id">fields-field01textsimple--loading · export <b>Loading</b></div>
+    <div class="ds-canvas ds-canvas--padded">
+<div style="width: 300px;"><div class="flex w-full flex-col items-start"><div class="flex w-full items-center gap-[5px] pb-[5px]"><label class="shrink-0 text-sm leading-[18px] text-font" for="field-text-_r_0_" id="field-text-_r_0_-label">Texto simples</label><div class="flex h-4 min-w-0 flex-1 items-center gap-[5px]"></div></div><div aria-busy="true" class="relative flex w-full bg-background px-[10px] transition-colors rounded-[5px] border border-neutral-level_2 items-center gap-[10px] h-[30px]"><span class="my-[5px] h-[calc(100%-10px)] w-full animate-pulse rounded-[2px] bg-neutral-level_2" data-testid="field-skeleton"></span></div></div></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const Loading: Story = {
+  args: { loading: true },
+}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">With Help Text</h2>
+    <div class="ds-story-id">fields-field01textsimple--with-help-text · export <b>WithHelpText</b></div>
+    <div class="ds-canvas ds-canvas--padded">
+<div style="width: 300px;"><div class="flex w-full flex-col items-start"><div class="flex w-full items-center gap-[5px] pb-[5px]"><label class="shrink-0 text-sm leading-[18px] text-font" for="field-text-_r_0_" id="field-text-_r_0_-label">Texto simples</label><div class="flex h-4 min-w-0 flex-1 items-center gap-[5px]"></div></div><div class="relative flex w-full bg-background px-[10px] transition-colors rounded-[5px] border border-neutral-level_2 items-center gap-[10px] h-[30px] hover:border-font-level_2 focus-within:border-confirmation"><input aria-describedby="field-text-_r_0_-help" class="min-w-0 flex-1 bg-transparent text-font outline-none placeholder:text-font-level_2 disabled:cursor-not-allowed text-sm" id="field-text-_r_0_" placeholder="Lorem Ipsum" value=""/></div><p class="w-full whitespace-normal px-[10px] pt-[3px] text-[13px] leading-[18px] md:truncate text-font-level_2" id="field-text-_r_0_-help">Texto de ajuda</p></div></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const WithHelpText: Story = {
+  args: { helpText: &#x27;Texto de ajuda&#x27; },
+}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">With Character Counter</h2>
+    <div class="ds-story-id">fields-field01textsimple--with-character-counter · export <b>WithCharacterCounter</b></div>
+    <div class="ds-canvas ds-canvas--padded">
+<div style="width: 300px;"><div class="flex w-full flex-col items-start"><div class="flex w-full items-center gap-[5px] pb-[5px]"><label class="shrink-0 text-sm leading-[18px] text-font" for="field-text-_r_0_" id="field-text-_r_0_-label">Texto simples</label><div class="flex h-4 min-w-0 flex-1 items-center gap-[5px]"><span class="min-w-0 flex-1 text-right text-[13px] text-font-level_2">0/200</span></div></div><div class="relative flex w-full bg-background px-[10px] transition-colors rounded-[5px] border border-neutral-level_2 items-center gap-[10px] h-[30px] hover:border-font-level_2 focus-within:border-confirmation"><input class="min-w-0 flex-1 bg-transparent text-font outline-none placeholder:text-font-level_2 disabled:cursor-not-allowed text-sm" id="field-text-_r_0_" maxlength="200" placeholder="Lorem Ipsum" value=""/></div></div></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const WithCharacterCounter: Story = {
+  render: function Render(args) {
+    const [value, setValue] = useState(&#x27;&#x27;);
+    return (
+      &lt;Field01TextSimple
+        {...args}
+        maxLength={200}
+        value={value}
+        onChange={(e) =&gt; setValue(e.target.value)}
+      /&gt;
+    );
+  },
+}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">With Validation Icons</h2>
+    <div class="ds-story-id">fields-field01textsimple--with-validation-icons · export <b>WithValidationIcons</b></div>
+    <div class="ds-canvas ds-canvas--padded">
+<div style="width: 300px;"><div class="flex w-full flex-col items-start"><div class="flex w-full items-center gap-[5px] pb-[5px]"><label class="shrink-0 text-sm leading-[18px] text-font" for="field-text-_r_0_" id="field-text-_r_0_-label">Texto simples</label><div class="flex h-4 min-w-0 flex-1 items-center gap-[5px]"><div class="flex shrink-0 items-center gap-[5px]"><span class="inline-block"><span aria-hidden="true" class="inline-flex shrink-0 items-center justify-center text-font-level_2"><svg aria-hidden="true" class="lucide lucide-circle-alert" fill="none" height="10" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="10" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="10"></circle><line x1="12" x2="12" y1="8" y2="12"></line><line x1="12" x2="12.01" y1="16" y2="16"></line></svg></span></span><span aria-hidden="true" class="inline-flex shrink-0 items-center justify-center text-font-level_2"><svg aria-hidden="true" class="lucide lucide-key-round" fill="none" height="10" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="10" xmlns="http://www.w3.org/2000/svg"><path d="M2.586 17.414A2 2 0 0 0 2 18.828V21a1 1 0 0 0 1 1h3a1 1 0 0 0 1-1v-1a1 1 0 0 1 1-1h1a1 1 0 0 0 1-1v-1a1 1 0 0 1 1-1h.172a2 2 0 0 0 1.414-.586l.814-.814a6.5 6.5 0 1 0-4-4z"></path><circle cx="16.5" cy="7.5" fill="currentColor" r=".5"></circle></svg></span><span aria-hidden="true" class="inline-flex shrink-0 items-center justify-center text-font-level_2"><svg aria-hidden="true" class="lucide lucide-keyboard" fill="none" height="10" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="10" xmlns="http://www.w3.org/2000/svg"><path d="M10 8h.01"></path><path d="M12 12h.01"></path><path d="M14 8h.01"></path><path d="M16 12h.01"></path><path d="M18 8h.01"></path><path d="M6 8h.01"></path><path d="M7 16h10"></path><path d="M8 12h.01"></path><rect height="16" rx="2" width="20" x="2" y="4"></rect></svg></span><span aria-hidden="true" class="inline-flex shrink-0 items-center justify-center text-font-level_2"><svg aria-hidden="true" class="lucide lucide-calculator" fill="none" height="10" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="10" xmlns="http://www.w3.org/2000/svg"><rect height="20" rx="2" width="16" x="4" y="2"></rect><line x1="8" x2="16" y1="6" y2="6"></line><line x1="16" x2="16" y1="14" y2="18"></line><path d="M16 10h.01"></path><path d="M12 10h.01"></path><path d="M8 10h.01"></path><path d="M12 14h.01"></path><path d="M8 14h.01"></path><path d="M12 18h.01"></path><path d="M8 18h.01"></path></svg></span><span aria-hidden="true" class="inline-flex shrink-0 items-center justify-center text-font-level_2"><svg aria-hidden="true" class="lucide lucide-cloud-download" fill="none" height="10" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="10" xmlns="http://www.w3.org/2000/svg"><path d="M12 13v8l-4-4"></path><path d="m12 21 4-4"></path><path d="M4.393 15.269A7 7 0 1 1 15.71 8h1.79a4.5 4.5 0 0 1 2.436 8.284"></path></svg></span><span class="inline-block"><span aria-hidden="true" class="inline-flex shrink-0 items-center justify-center text-font-level_2"><svg aria-hidden="true" class="lucide lucide-info" fill="none" height="10" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="10" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="10"></circle><path d="M12 16v-4"></path><path d="M12 8h.01"></path></svg></span></span><span class="inline-block"><span aria-hidden="true" class="inline-flex shrink-0 items-center justify-center text-font-level_2"><svg aria-hidden="true" class="lucide lucide-triangle-alert" fill="none" height="10" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="10" xmlns="http://www.w3.org/2000/svg"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3"></path><path d="M12 9v4"></path><path d="M12 17h.01"></path></svg></span></span></div><span class="min-w-0 flex-1 text-right text-[13px] text-font-level_2">0/200</span></div></div><div class="relative flex w-full bg-background px-[10px] transition-colors rounded-[5px] border border-neutral-level_2 items-center gap-[10px] h-[30px] hover:border-font-level_2 focus-within:border-confirmation"><input aria-required="true" class="min-w-0 flex-1 bg-transparent text-font outline-none placeholder:text-font-level_2 disabled:cursor-not-allowed text-sm" id="field-text-_r_0_" maxlength="200" placeholder="Lorem Ipsum" value=""/></div></div></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const WithValidationIcons: Story = {
+  args: {
+    required: true,
+    isKey: true,
+    hasMask: true,
+    hasFormula: true,
+    hasExternalFormula: true,
+    infoMessage: &#x27;Informação sobre o campo&#x27;,
+    alertMessage: &#x27;Atenção a este campo&#x27;,
+    maxLength: 200,
+  },
+}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">Replaceable Right</h2>
+    <div class="ds-story-id">fields-field01textsimple--replaceable-right · export <b>ReplaceableRight</b></div>
+    <div class="ds-canvas ds-canvas--padded">
+<div style="width: 300px;"><div class="flex w-full flex-col items-start"><div class="flex w-full items-center gap-[5px] pb-[5px]"><label class="shrink-0 text-sm leading-[18px] text-font" for="field-text-_r_0_" id="field-text-_r_0_-label">Texto simples</label><div class="flex h-4 min-w-0 flex-1 items-center gap-[5px]"></div></div><div class="relative flex w-full bg-background px-[10px] transition-colors rounded-[5px] border border-neutral-level_2 items-center gap-[10px] h-[30px] hover:border-font-level_2 focus-within:border-confirmation"><input class="min-w-0 flex-1 bg-transparent text-font outline-none placeholder:text-font-level_2 disabled:cursor-not-allowed text-sm" id="field-text-_r_0_" placeholder="Lorem Ipsum" value=""/><div class="absolute right-[4px] top-1/2 flex -translate-y-1/2 items-center"><span style="display: flex; align-items: center; justify-content: center; width: 160px; height: 30px; border: 1px dashed rgba(27, 16, 44, 0.1); border-radius: 4px; background: rgb(255, 255, 255); font-size: 14px; color: rgba(27, 16, 44, 0.5);">Replaceable right</span></div></div></div></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const ReplaceableRight: Story = {
+  args: {
+    replaceableRight: (
+      &lt;span
+        style={{
+          display: &#x27;flex&#x27;,
+          alignItems: &#x27;center&#x27;,
+          justifyContent: &#x27;center&#x27;,
+          width: 160,
+          height: 30,
+          border: &#x27;1px dashed rgba(27,16,44,0.1)&#x27;,
+          borderRadius: 4,
+          background: &#x27;#fff&#x27;,
+          fontSize: 14,
+          color: &#x27;rgba(27,16,44,0.5)&#x27;,
+        }}
+      &gt;
+        Replaceable right
+      &lt;/span&gt;
+    ),
+  },
+}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">All Sizes</h2>
+    <div class="ds-story-id">fields-field01textsimple--all-sizes · export <b>AllSizes</b></div>
+    <div class="ds-canvas ds-canvas--padded">
+<div style="width: 300px;"><div style="display: flex; flex-direction: column; gap: 16px;"><div class="flex w-full flex-col items-start"><div class="flex w-full items-center gap-[5px] pb-[5px]"><label class="shrink-0 text-sm leading-[18px] text-font" for="field-text-_r_0_" id="field-text-_r_0_-label">Small (30px)</label><div class="flex h-4 min-w-0 flex-1 items-center gap-[5px]"></div></div><div class="relative flex w-full bg-background px-[10px] transition-colors rounded-[5px] border border-neutral-level_2 items-center gap-[10px] h-[30px] hover:border-font-level_2 focus-within:border-confirmation"><input class="min-w-0 flex-1 bg-transparent text-font outline-none placeholder:text-font-level_2 disabled:cursor-not-allowed text-sm" id="field-text-_r_0_" placeholder="Lorem Ipsum" value=""/></div></div><div class="flex w-full flex-col items-start"><div class="flex w-full items-center gap-[5px] pb-[5px]"><label class="shrink-0 text-sm leading-[18px] text-font" for="field-text-_r_1_" id="field-text-_r_1_-label">Normal (35px)</label><div class="flex h-4 min-w-0 flex-1 items-center gap-[5px]"></div></div><div class="relative flex w-full bg-background px-[10px] transition-colors rounded-[5px] border border-neutral-level_2 items-center gap-[10px] h-[35px] hover:border-font-level_2 focus-within:border-confirmation"><input class="min-w-0 flex-1 bg-transparent text-font outline-none placeholder:text-font-level_2 disabled:cursor-not-allowed text-sm" id="field-text-_r_1_" placeholder="Lorem Ipsum" value=""/></div></div><div class="flex w-full flex-col items-start"><div class="flex w-full items-center gap-[5px] pb-[5px]"><label class="shrink-0 text-sm leading-[18px] text-font" for="field-text-_r_2_" id="field-text-_r_2_-label">Big (40px)</label><div class="flex h-4 min-w-0 flex-1 items-center gap-[5px]"></div></div><div class="relative flex w-full bg-background px-[10px] transition-colors rounded-[5px] border border-neutral-level_2 items-center gap-[10px] h-[40px] hover:border-font-level_2 focus-within:border-confirmation"><input class="min-w-0 flex-1 bg-transparent text-font outline-none placeholder:text-font-level_2 disabled:cursor-not-allowed text-base" id="field-text-_r_2_" placeholder="Lorem Ipsum" value=""/></div></div></div></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const AllSizes: Story = {
+  render: (args) =&gt; (
+    &lt;div style={{ display: &#x27;flex&#x27;, flexDirection: &#x27;column&#x27;, gap: 16 }}&gt;
+      &lt;Field01TextSimple {...args} size=&quot;sm&quot; label=&quot;Small (30px)&quot; /&gt;
+      &lt;Field01TextSimple {...args} size=&quot;md&quot; label=&quot;Normal (35px)&quot; /&gt;
+      &lt;Field01TextSimple {...args} size=&quot;lg&quot; label=&quot;Big (40px)&quot; /&gt;
+    &lt;/div&gt;
+  ),
+}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">Cell Theme</h2>
+    <div class="ds-story-id">fields-field01textsimple--cell-theme · export <b>CellTheme</b></div>
+    <div class="ds-canvas ds-canvas--padded">
+<div style="width: 300px;"><div style="width: 200px;"><div class="flex w-full flex-col items-start"><div class="relative flex w-full bg-background px-[10px] transition-colors rounded-none border-[0.5px] border-neutral-level_2 items-center h-[40px] hover:border hover:border-font-level_2 focus-within:border focus-within:border-confirmation focus-within:ring-2 focus-within:ring-confirmation-default_30"><input class="min-w-0 flex-1 bg-transparent text-font outline-none placeholder:text-font-level_2 disabled:cursor-not-allowed text-sm" id="field-text-_r_0_" placeholder="Lorem Ipsum" value=""/></div></div></div></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const CellTheme: Story = {
+  args: { theme: &#x27;cell&#x27; },
+  decorators: [
+    (Story) =&gt; (
+      &lt;div style={{ width: 200 }}&gt;
+        &lt;Story /&gt;
+      &lt;/div&gt;
+    ),
+  ],
+}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">Cell Statuses</h2>
+    <div class="ds-story-id">fields-field01textsimple--cell-statuses · export <b>CellStatuses</b></div>
+    <div class="ds-canvas ds-canvas--padded">
+<div style="width: 300px;"><div style="display: flex; flex-direction: column; gap: 16px; width: 200px;"><div class="flex w-full flex-col items-start"><div class="relative flex w-full bg-background px-[10px] transition-colors rounded-none border-[0.5px] border-neutral-level_2 items-center h-[40px] hover:border hover:border-font-level_2 focus-within:border focus-within:border-confirmation focus-within:ring-2 focus-within:ring-confirmation-default_30"><input class="min-w-0 flex-1 bg-transparent text-font outline-none placeholder:text-font-level_2 disabled:cursor-not-allowed text-sm" id="field-text-_r_0_" placeholder="Neutral" value=""/></div></div><div class="flex w-full flex-col items-start"><div class="relative flex w-full bg-background px-[10px] transition-colors rounded-none border-[0.5px] border-danger items-center h-[40px] hover:border focus-within:border focus-within:ring-2 focus-within:ring-danger-default_30"><input aria-invalid="true" class="min-w-0 flex-1 bg-transparent text-font outline-none placeholder:text-font-level_2 disabled:cursor-not-allowed text-sm" id="field-text-_r_1_" placeholder="Danger" value=""/></div></div><div class="flex w-full flex-col items-start"><div class="relative flex w-full bg-background px-[10px] transition-colors rounded-none border-[0.5px] border-alert items-center h-[40px] hover:border focus-within:border focus-within:ring-2 focus-within:ring-alert-default_30"><input class="min-w-0 flex-1 bg-transparent text-font outline-none placeholder:text-font-level_2 disabled:cursor-not-allowed text-sm" id="field-text-_r_2_" placeholder="Alert" value=""/></div></div><div class="flex w-full flex-col items-start"><div class="relative flex w-full px-[10px] transition-colors rounded-none border-[0.5px] border-neutral-level_2 items-center h-[40px] bg-neutral-level_1"><input class="min-w-0 flex-1 bg-transparent text-font outline-none placeholder:text-font-level_2 disabled:cursor-not-allowed text-sm" disabled="" id="field-text-_r_3_" placeholder="Disabled" value=""/></div></div><div class="flex w-full flex-col items-start"><div class="relative flex w-full bg-background px-[10px] transition-colors rounded-none border-[0.5px] border-neutral-level_2 items-center h-[40px]"><input class="min-w-0 flex-1 bg-transparent text-font outline-none placeholder:text-font-level_2 disabled:cursor-not-allowed cursor-default text-sm" id="field-text-_r_4_" placeholder="Lorem Ipsum" readonly="" value="View only"/></div></div></div></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const CellStatuses: Story = {
+  render: (args) =&gt; (
+    &lt;div
+      style={{ display: &#x27;flex&#x27;, flexDirection: &#x27;column&#x27;, gap: 16, width: 200 }}
+    &gt;
+      &lt;Field01TextSimple {...args} theme=&quot;cell&quot; placeholder=&quot;Neutral&quot; /&gt;
+      &lt;Field01TextSimple
+        {...args}
+        theme=&quot;cell&quot;
+        status=&quot;danger&quot;
+        placeholder=&quot;Danger&quot;
+      /&gt;
+      &lt;Field01TextSimple
+        {...args}
+        theme=&quot;cell&quot;
+        status=&quot;alert&quot;
+        placeholder=&quot;Alert&quot;
+      /&gt;
+      &lt;Field01TextSimple
+        {...args}
+        theme=&quot;cell&quot;
+        disabled
+        placeholder=&quot;Disabled&quot;
+      /&gt;
+      &lt;Field01TextSimple
+        {...args}
+        theme=&quot;cell&quot;
+        viewOnly
+        defaultValue=&quot;View only&quot;
+      /&gt;
+    &lt;/div&gt;
+  ),
+}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">Form Status Matrix</h2>
+    <div class="ds-story-id">fields-field01textsimple--form-status-matrix · export <b>FormStatusMatrix</b></div>
+    <div class="ds-canvas ds-canvas--padded">
+<div style="width: 300px;"><div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px; width: 640px;"><div class="flex w-full flex-col items-start"><div class="flex w-full items-center gap-[5px] pb-[5px]"><label class="shrink-0 text-sm leading-[18px] text-font" for="field-text-_r_0_" id="field-text-_r_0_-label">Neutral</label><div class="flex h-4 min-w-0 flex-1 items-center gap-[5px]"></div></div><div class="relative flex w-full bg-background px-[10px] transition-colors rounded-[5px] border border-neutral-level_2 items-center gap-[10px] h-[30px] hover:border-font-level_2 focus-within:border-confirmation"><input class="min-w-0 flex-1 bg-transparent text-font outline-none placeholder:text-font-level_2 disabled:cursor-not-allowed text-sm" id="field-text-_r_0_" placeholder="Lorem Ipsum" value=""/></div></div><div class="flex w-full flex-col items-start"><div class="flex w-full items-center gap-[5px] pb-[5px]"><label class="shrink-0 text-sm leading-[18px] text-font" for="field-text-_r_1_" id="field-text-_r_1_-label">Neutral disabled</label><div class="flex h-4 min-w-0 flex-1 items-center gap-[5px]"></div></div><div class="relative flex w-full px-[10px] transition-colors rounded-[5px] border border-neutral-level_2 items-center gap-[10px] h-[30px] bg-neutral-level_1"><input class="min-w-0 flex-1 bg-transparent text-font outline-none placeholder:text-font-level_2 disabled:cursor-not-allowed text-sm" disabled="" id="field-text-_r_1_" placeholder="Lorem Ipsum" value=""/></div></div><div class="flex w-full flex-col items-start"><div class="flex w-full items-center gap-[5px] pb-[5px]"><label class="shrink-0 text-sm leading-[18px] text-font" for="field-text-_r_2_" id="field-text-_r_2_-label">Danger</label><div class="flex h-4 min-w-0 flex-1 items-center gap-[5px]"></div></div><div class="relative flex w-full bg-background px-[10px] transition-colors rounded-[5px] border border-danger items-center gap-[10px] h-[30px]"><input aria-describedby="field-text-_r_2_-help" aria-invalid="true" class="min-w-0 flex-1 bg-transparent text-font outline-none placeholder:text-font-level_2 disabled:cursor-not-allowed text-sm" id="field-text-_r_2_" placeholder="Lorem Ipsum" value=""/></div><p class="w-full whitespace-normal px-[10px] pt-[3px] text-[13px] leading-[18px] md:truncate text-danger" id="field-text-_r_2_-help">Texto de ajuda</p></div><div class="flex w-full flex-col items-start"><div class="flex w-full items-center gap-[5px] pb-[5px]"><label class="shrink-0 text-sm leading-[18px] text-font" for="field-text-_r_3_" id="field-text-_r_3_-label">Danger disabled</label><div class="flex h-4 min-w-0 flex-1 items-center gap-[5px]"></div></div><div class="relative flex w-full px-[10px] transition-colors rounded-[5px] border border-danger items-center gap-[10px] h-[30px] bg-neutral-level_1"><input aria-describedby="field-text-_r_3_-help" aria-invalid="true" class="min-w-0 flex-1 bg-transparent text-font outline-none placeholder:text-font-level_2 disabled:cursor-not-allowed text-sm" disabled="" id="field-text-_r_3_" placeholder="Lorem Ipsum" value=""/></div><p class="w-full whitespace-normal px-[10px] pt-[3px] text-[13px] leading-[18px] md:truncate text-danger" id="field-text-_r_3_-help">Texto de ajuda</p></div><div class="flex w-full flex-col items-start"><div class="flex w-full items-center gap-[5px] pb-[5px]"><label class="shrink-0 text-sm leading-[18px] text-font" for="field-text-_r_4_" id="field-text-_r_4_-label">Alert</label><div class="flex h-4 min-w-0 flex-1 items-center gap-[5px]"></div></div><div class="relative flex w-full bg-background px-[10px] transition-colors rounded-[5px] border border-alert items-center gap-[10px] h-[30px]"><input aria-describedby="field-text-_r_4_-help" class="min-w-0 flex-1 bg-transparent text-font outline-none placeholder:text-font-level_2 disabled:cursor-not-allowed text-sm" id="field-text-_r_4_" placeholder="Lorem Ipsum" value=""/></div><p class="w-full whitespace-normal px-[10px] pt-[3px] text-[13px] leading-[18px] md:truncate text-font-level_2" id="field-text-_r_4_-help">Texto de ajuda</p></div><div class="flex w-full flex-col items-start"><div class="flex w-full items-center gap-[5px] pb-[5px]"><label class="shrink-0 text-sm leading-[18px] text-font" for="field-text-_r_5_" id="field-text-_r_5_-label">Alert disabled</label><div class="flex h-4 min-w-0 flex-1 items-center gap-[5px]"></div></div><div class="relative flex w-full px-[10px] transition-colors rounded-[5px] border border-alert items-center gap-[10px] h-[30px] bg-neutral-level_1"><input aria-describedby="field-text-_r_5_-help" class="min-w-0 flex-1 bg-transparent text-font outline-none placeholder:text-font-level_2 disabled:cursor-not-allowed text-sm" disabled="" id="field-text-_r_5_" placeholder="Lorem Ipsum" value=""/></div><p class="w-full whitespace-normal px-[10px] pt-[3px] text-[13px] leading-[18px] md:truncate text-font-level_2" id="field-text-_r_5_-help">Texto de ajuda</p></div></div></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const FormStatusMatrix: Story = {
+  render: (args) =&gt; (
+    &lt;div
+      style={{
+        display: &#x27;grid&#x27;,
+        gridTemplateColumns: &#x27;1fr 1fr&#x27;,
+        gap: 24,
+        width: 640,
+      }}
+    &gt;
+      &lt;Field01TextSimple {...args} label=&quot;Neutral&quot; /&gt;
+      &lt;Field01TextSimple {...args} label=&quot;Neutral disabled&quot; disabled /&gt;
+      &lt;Field01TextSimple
+        {...args}
+        label=&quot;Danger&quot;
+        status=&quot;danger&quot;
+        helpText=&quot;Texto de ajuda&quot;
+      /&gt;
+      &lt;Field01TextSimple
+        {...args}
+        label=&quot;Danger disabled&quot;
+        status=&quot;danger&quot;
+        disabled
+        helpText=&quot;Texto de ajuda&quot;
+      /&gt;
+      &lt;Field01TextSimple
+        {...args}
+        label=&quot;Alert&quot;
+        status=&quot;alert&quot;
+        helpText=&quot;Texto de ajuda&quot;
+      /&gt;
+      &lt;Field01TextSimple
+        {...args}
+        label=&quot;Alert disabled&quot;
+        status=&quot;alert&quot;
+        disabled
+        helpText=&quot;Texto de ajuda&quot;
+      /&gt;
+    &lt;/div&gt;
+  ),
+}</code></pre></details>
+  </section>
+</body>
+</html>

@@ -1,0 +1,18 @@
+{
+  "description": "Lembrete do onboarding: quando uma tela do construtor de telas muda, o Claude pergunta se atualiza o onboarding dela, ou oferece criar um se a tela ainda não tem.",
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Edit|Write|MultiEdit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "py=python3; \"$py\" -c '' </dev/null >/dev/null 2>&1 || py=python; \"$py\" -I \"${CLAUDE_PLUGIN_ROOT}/hooks/onboarding_lembrete.py\" 2>/dev/null || true",
+            "shell": "bash",
+            "timeout": 10
+          }
+        ]
+      }
+    ]
+  }
+}

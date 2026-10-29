@@ -1,0 +1,94 @@
+Regras para configuração de Abas e tabelas dinâmicas;
+
+Para a criação de um novo fluxo de aprovação, as seguintes propriedades devem ou podem opcionalmente ser enviadas:
+
+Primeiro, é necessário definir se o fluxo é de propostas, vendas ou documentos. Depois, necessário 
+
+1. Nome do fluxo
+
+Nome que identifica o fluxo de aprovação.
+
+Exemplos:
+
+Aprovação de desconto alto
+Aprovação de proposta acima de R$ 100 mil
+Aprovação de condição comercial especial
+Aprovação de contrato fora do padrão
+
+2. Filtros / condições
+
+Define quando o fluxo será ativado.
+
+A IA deve montar as condições que precisam ser satisfeitas para disparar a regra.
+
+Exemplos:
+
+Desconto maior que 20%
+Valor da proposta maior que R$ 100.000
+Prazo de pagamento maior que 60 dias
+Tipo de cliente = Enterprise
+Margem menor que 30%
+
+3. Mensagem de aprovação
+
+Mensagem exibida para os usuários que ativarem o fluxo.
+
+Exemplo:
+
+Esta proposta exige aprovação porque possui desconto acima do limite permitido.
+
+Esse campo aparece como Mensagem de aprovação e é obrigatório.
+
+A mensagem pode usar campos dinâmicos, pois o editor possui um botão Campos. Aqui, pode-se usar o mecanismo de field-paths.
+
+4. Ação da regra
+
+Define o que acontece quando as condições forem satisfeitas.
+
+A IA deve escolher uma das opções:
+
+Fluxo de aprovação
+Bloqueio
+Alerta
+
+5. Níveis de aprovação (somente no caso da opção Fluxo de aprovação ser selecionada)
+
+Se a ação for Fluxo de aprovação, necessário configurar um ou mais níveis.
+
+Para cada nível, é possível definir um ou mais usuários aprovadores.
+
+Exemplo:
+
+1ª aprovação:
+- Gerente comercial
+
+2ª aprovação:
+- Diretor comercial
+
+3ª aprovação:
+- Financeiro
+
+7. Notificação por e-mail (somente no caso da opção Fluxo de aprovação ser selecionada)
+
+Define se os aprovadores serão notificados por e-mail.
+
+Preencher:
+
+Sim
+
+quando os aprovadores devem receber e-mail ao serem acionados.
+
+Ou:
+
+Não
+
+quando a aprovação deve ficar apenas dentro do sistema.
+
+8. Destinatários da notificação
+
+Se a notificação por e-mail estiver ativada, necessário informar para quem.
+
+Opções:
+
+Todos aprovadores
+Um ou mais aprovadores

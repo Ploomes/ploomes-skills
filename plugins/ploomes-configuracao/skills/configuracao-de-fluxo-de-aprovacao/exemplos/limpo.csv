@@ -1,0 +1,4 @@
+Nome do Fluxo,Tipo,Condição,Aviso,Ação,Campo nativo?,Conteúdo do campo
+"Aprovação de desconto acima de 20%","Proposta","""Desconto"" Maior que 20","Esta proposta exige aprovação por desconto acima do limite permitido.","Fluxo de aprovação","Sim",""
+"Bloqueio de proposta sem CNPJ","Proposta","""CNPJ"" Igual a vazio","Preencha o CNPJ do cliente antes de gerar a proposta.","Bloqueio","Sim",""
+"Alerta de prazo acima de 60 dias","Proposta","""Prazo de pagamento"" Maior que 60","Prazo acima do padrão comercial.","Alerta","Não","Prazo de pagamento em dias"

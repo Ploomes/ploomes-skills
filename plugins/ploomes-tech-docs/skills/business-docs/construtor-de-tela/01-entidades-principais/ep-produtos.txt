@@ -1,0 +1,17 @@
+Produtos
+
+Objetivo básico:
+- Esta tabela é responsável pelo cadastro de produtos e serviços. Entretanto, por terem vínculos com diversas entidades, podem ser usados como base de dados para casos de uso diferentes, caso as bases nativas do Ploomes não atentam.
+
+Dados:
+- Os produtos devem ser agrupados pela propriedade "Grupo", isto é, todo produto criado precisa, obrigatoriamente, ter um grupo relacionado a ele.
+- Além disso, os "Grupos" podem ser organizados por meio da propriedade "Família". Nesse contexto, uma "Família" pode conter vários "Grupos", e cada "Grupo" pode ter múltiplos "Produtos". No entanto, um "Produto" pertence a apenas um "Grupo", e cada "Grupo" está associado a uma única "Família".
+- As bases de produtos, grupos e família se utilizam dos mecanismos de formularios_e_campos do Ploomes.
+- Um produto pode ter marcadores vinculados a ele.
+- As bases de produtos, grupos e família se utilizam dos mecanismos de abas_e_tabelas_dinamicas. Ao montar telas, você pode se utilizar disso, ou fazer queries na API direto da forma que preferir. O benefício de se utilizar o sistema de abas é a otimização delas em termos de carregamento e exibição de dados.
+- Grupos de produto possuem níveis de acesso, podendo ter sua visão limitada a determinados usuários, equipes ou liberada para todos da empresa. Caso um usuário não tenha acesso ao grupo de produto, ele não verá nenhum dos produtos dentro do CRM, seja no módulo de produtos, na geração de documentos ou no preenchimento de campos do tipo produto.
+
+Vínculos:
+Vínculos entre Produtos e outras entidades (Clientes via Produtos do cliente, Negócios, Propostas, Vendas, Documentos, etc.) estão definidos no arquivo (RC) Lista_de_field_paths.txt, que é a fonte canônica de todas as relações entre entidades.
+
+Observação: para todas as entidades que possuem campos dinâmicos, sempre é possível criar um campo do tipo número inteiro e armazenar o ID de um produto "virtualmente" vinculado, ou seja, um vínculo sem comportamento no Back-end, mas que o front-end pode se utilizar para aparentar vínculo real ao usuário.

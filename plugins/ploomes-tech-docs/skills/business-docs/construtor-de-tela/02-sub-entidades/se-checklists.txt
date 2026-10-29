@@ -1,0 +1,21 @@
+Checklists
+
+Com essa funcionalidade, podemos definir dentro de cada etapa de um determinado funil uma lista de campos que devem ser preenchidos para que o processo avance de estágio. O objetivo dessa funcionalidade é garantir a qualidade das informações e direcionar melhor a operação dos usuários durante cada fase do processo.
+
+Os checklists, portanto, são um conjunto de campos que devem ser preenchidos dentro de uma determinada etapa de um funil. Uma etapa pode ter mais de um checklist, e eles podem entrar em ação a partir de condições (exemplo: se o cliente for do tipo Empresa, eu posso exibir um checklist condicional que solicita seu CNPJ). Podemos inserir campos de três entidades diferentes em um checklist:
+
+- Clientes: caso o negócio esteja vinculado a um cliente, podemos solicitar o preenchimento de campos deste cliente dentro de um checklist. Exemplo: preenchimento do CNPJ do cliente antes de ganhar o negócio;
+
+- Contatos: Caso o negócio possua um contato vinculado, é possível incluir campos do cadastro deste contato no questionário (como e-mail, telefones etc);
+
+- Negócios: Podemos adicionar campos do próprio negócio nos questionários, fazendo com que as informações sejam solicitadas apenas nos momentos pertinentes. Suponha que você tenha um campo chamado “Previsão de fechamento”, que só deveria ser preenchido pelo usuário na etapa “Apresentação da proposta”. Diante desse cenário, podemos alocar este campo no formulário de criação de cards / negócios como um campo não obrigatório, mas torná-lo mandatório quando o card / negócio chegar na etapa correta. 
+
+Como os checklists são referências ao sistema de formulários e campos do Ploomes, é possível combinar funcionalidades a fim de personalizar e controlar ainda mais processos complexos, como aprovações. 
+
+Imagine que exista uma etapa no seu processo chamada “Análise de crédito” e que, nela, um questionário (checklist) será exibido com um campo chamado “Análise aprovada?”. Agora imagine que este campo tem sua edição permitida apenas para usuários da “Equipe Financeira”. Com essa arquitetura, conseguimos garantir que apenas os usuários corretos preenchem informações específicas, garantindo a qualidade da coleta das informações, bem como a idoneidade dos dados armazenados no sistema.
+
+As condições para avanço no checklist não são apenas baseadas em "campo preenchido ou não?". Eu posso definir uma condição para avanço. Exemplo: só avançar de estágio quando o CNPJ do cliente do negócio estiver preenchido. Outro exemplo: só permitir avanço de estágio quando valor do negócio for maior do que 10 mil.
+
+Eu também posso deixar um item do checklist sem condição de avanço, ou seja, ele aparece apenas para possibilitar o usuário de preencher o campo.
+
+A validação dos checklists (tanto de possibilidade de avanço quanto de exibição condicional de checklists) é feita no backend, mas é importante que o frontend mantenha a mesma lógica. Inclusive, durante o preenchimento do checklist, pode ser que um novo filtro seja satisfeito e um novo checklist apareça condicionalmente. Essa atualização em tempo real na tela do usuário é de extrema importância. Os filtros de checklist são baseados no negócio e se utilizam do mecanismo de Field-path.

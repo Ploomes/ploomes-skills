@@ -1,0 +1,13 @@
+Abas e tabelas dinâmicas
+Para cada cadastro / tabela do Ploomes, os dados podem ser listados e segmentados através do sistema de abas. As abas de todas as entidades são armazenadas em uma lista única, mas com uma coluna que define a qual entidade, a qual funil (se for de negócio), entre outras especificidades ela pertence.
+
+Uma aba carrega consigo um conjunto de filtros (para determinar quais dados a aba deve listar quando requisitada), um conjunto de campos de forma ordenada (para definir quais campos a aba deve retornar para cada objeto listado e em qual ordem, limitado a 30 campos por aba), o número de retornos por página (uma aba pode listar no máximo 50 itens de uma vez por página) e a ordenação (sendo que uma aba só pode ser ordenada de forma crescente ou decrescente a partir de campos nativos da ferramenta, ou seja, campos customizados não permite reordenação.
+
+Relação entre tabelas em abas
+Como existem relações entre as entidades do Ploomes (um negócio, por exemplo, pode estar vinculado a um cliente), a depender da tabela que está sendo acessada pelo usuário, é possível adicionar colunas com informações de outros cadastros na mesma aba, ou realizar filtros na aba a partir de dados de entidades vinculadas. Um exemplo: podemos criar uma aba de negócios e, nela, adicionar colunas com a informação dos clientes vinculados. Para isso, o Ploomes possui uma base de dados chamada de field-path, responsável por direcionar quais caminhos são possíveis de serem navegados (Exemplo: negócios > cliente > responsável pelo cliente > e-mail do responsável pelo cliente).
+
+Importante notar que, neste formato, o nível de acesso do usuário pode impedir que determinadas informações sejam retornadas pela aba quando solicitadas. Exemplo: os dados do negócio chegam (porque ele é responsável pelo negócio) mas os dados do cliente do negócio não.
+
+Apesar do sistema de abas, é possível usar a API do Ploomes para solicitar dados sem isso. O sistema de abas traz consigo otimizações de performance, mas podem oferecer limitações para determinados casos de uso. Além disso, como os Field-paths são pré-definidos, pode faltar algum caminho importante para o caso de uso desejado pelo usuário. Nesses casos, portanto, pode ser mais fácil usar a API para consultar essas informações sem ter que navegar pelas regras do Field-Path.
+
+Por fim, existe um mecanismo de reordenação de abas no Ploomes. Abas de clientes, por exemplo, tem sua ordem de exibição armazenadas no backend do Ploomes. Entretanto, esse armazenamento é salvo para todos usuários de forma unificada, ou seja, não é possível que cada usuário ordene abas do seu jeito.

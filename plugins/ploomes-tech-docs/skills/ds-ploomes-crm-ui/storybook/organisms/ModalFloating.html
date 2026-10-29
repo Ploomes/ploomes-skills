@@ -1,0 +1,240 @@
+<!doctype html>
+<!--
+  Ploomes Design System — snapshot estático das stories do Storybook.
+  Componente : Organisms/ModalFloating
+  Stories    : 8 (Default, With Secondary Button, Without footer, Footer with text, Brand color action, Wide panel (600px), With Breadcrumbs, All variants)
+  Story      : ModalFloating.stories.tsx
+  Tema       : light — use <html class="dark"> para o tema escuro.
+-->
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ModalFloating — Ploomes DS</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;600;700&display=swap">
+<link rel="stylesheet" href="../assets/design-system.css">
+<link rel="stylesheet" href="../assets/page.css">
+</head>
+<body class="ds-page">
+  <header class="ds-head">
+    <a class="ds-back" href="../index.html">← inventário</a>
+    <h1 class="ds-title">ModalFloating</h1>
+    <p class="ds-meta">organisms · 8 stories · <code>ModalFloating.stories.tsx</code></p>
+    <pre class="ds-code ds-import">import { ModalFloating } from &#x27;@ploomescrm/ui&#x27;;</pre>
+  </header>
+  <section class="ds-story">
+    <h2 class="ds-story-name">Default</h2>
+    <div class="ds-story-id">organisms-modalfloating--default · export <b>Default</b></div>
+    <div class="ds-canvas ds-canvas--centered">
+<div class="flex flex-col overflow-hidden rounded-[5px] bg-background max-w-[calc(100vw-32px)] shadow-[0px_8px_10px_0px_rgba(0,0,0,0.14),0px_3px_14px_0px_rgba(0,0,0,0.12),0px_5px_5px_0px_rgba(0,0,0,0.20)]" style="width: 350px; height: 350px;"><div class="flex w-full items-center border-b border-neutral-level_2 bg-background"><div class="flex h-[50px] flex-1 items-center justify-end px-[15px] gap-[10px]"><div class="flex min-w-0 flex-1 items-center"><span class="truncate text-base font-semibold text-font-level_1">Lorem Ipsum</span></div><div class="flex shrink-0 items-center gap-[10px]"><button aria-label="Fechar" class="flex size-[35px] max-md:min-h-[44px] max-md:min-w-[44px] shrink-0 cursor-pointer items-center justify-center rounded-[5px] border border-neutral-level_2 bg-background transition-colors hover:bg-neutral-level_1 active:bg-neutral-level_2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-confirmation focus-visible:ring-offset-1" type="button"><span aria-hidden="true" class="inline-flex shrink-0 items-center justify-center text-font"><svg aria-hidden="true" class="lucide lucide-x" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="15" xmlns="http://www.w3.org/2000/svg"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg></span></button></div></div></div><div class="min-h-0 flex-1 overflow-y-auto p-[15px]" tabindex="0"><div class="flex w-full items-center justify-center rounded-[4px] border border-dashed border-neutral-level_2 text-sm text-font-level_2" style="height: 200px;">Replaceable content</div></div><div class="w-full border-t border-neutral-level_2 bg-background"><div class="flex h-[50px] items-center overflow-hidden px-[10px] justify-end gap-0 max-sm:h-auto max-sm:flex-col-reverse max-sm:items-stretch max-sm:gap-[10px] max-sm:overflow-visible max-sm:py-[10px]"><div aria-hidden="true" class="h-[35px] w-[57px] shrink-0 max-sm:hidden"></div><button class="inline-flex shrink-0 cursor-pointer items-center gap-[5px] rounded-[5px] px-[5px] font-semibold text-basic-light transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-30 bg-confirmation hover:bg-confirmation-level_1 active:bg-confirmation-level_2 focus-visible:ring-confirmation h-[35px] text-sm max-sm:w-full"><span class="overflow-hidden text-ellipsis whitespace-nowrap px-[5px]">Lorem Ipsum</span></button></div></div></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const Default: Story = {
+  render: () =&gt; (
+    &lt;ModalFloating
+      title=&quot;Lorem Ipsum&quot;
+      onClose={() =&gt; {}}
+      actionLabel=&quot;Lorem Ipsum&quot;
+      onActionClick={() =&gt; {}}
+      width={350}
+      height={350}
+    &gt;
+      &lt;PlaceholderContent /&gt;
+    &lt;/ModalFloating&gt;
+  ),
+}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">With Secondary Button</h2>
+    <div class="ds-story-id">organisms-modalfloating--with-secondary-button · export <b>WithSecondaryButton</b></div>
+    <div class="ds-canvas ds-canvas--centered">
+<div class="flex flex-col overflow-hidden rounded-[5px] bg-background max-w-[calc(100vw-32px)] shadow-[0px_8px_10px_0px_rgba(0,0,0,0.14),0px_3px_14px_0px_rgba(0,0,0,0.12),0px_5px_5px_0px_rgba(0,0,0,0.20)]" style="width: 350px; height: 350px;"><div class="flex w-full items-center border-b border-neutral-level_2 bg-background"><div class="flex h-[50px] flex-1 items-center justify-end px-[15px] gap-[10px]"><div class="flex min-w-0 flex-1 items-center"><span class="truncate text-base font-semibold text-font-level_1">Confirmar ação</span></div><div class="flex shrink-0 items-center gap-[10px]"><button aria-label="Fechar" class="flex size-[35px] max-md:min-h-[44px] max-md:min-w-[44px] shrink-0 cursor-pointer items-center justify-center rounded-[5px] border border-neutral-level_2 bg-background transition-colors hover:bg-neutral-level_1 active:bg-neutral-level_2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-confirmation focus-visible:ring-offset-1" type="button"><span aria-hidden="true" class="inline-flex shrink-0 items-center justify-center text-font"><svg aria-hidden="true" class="lucide lucide-x" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="15" xmlns="http://www.w3.org/2000/svg"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg></span></button></div></div></div><div class="min-h-0 flex-1 overflow-y-auto p-[15px]" tabindex="0"><div class="flex w-full items-center justify-center rounded-[4px] border border-dashed border-neutral-level_2 text-sm text-font-level_2" style="height: 200px;">Replaceable content</div></div><div class="w-full border-t border-neutral-level_2 bg-background"><div class="flex h-[50px] items-center overflow-hidden px-[10px] justify-between max-sm:h-auto max-sm:flex-col-reverse max-sm:items-stretch max-sm:gap-[10px] max-sm:overflow-visible max-sm:py-[10px]"><button class="relative isolate inline-flex shrink-0 cursor-pointer items-center gap-[5px] rounded-[5px] px-[5px] text-sm text-font transition-colors before:pointer-events-none before:absolute before:inset-0 before:-z-10 before:rounded-[5px] before:bg-transparent before:transition-colors before:content-[''] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-confirmation focus-visible:ring-offset-1 disabled:pointer-events-none disabled:opacity-40 border border-neutral-level_2 bg-background hover:before:bg-neutral-level_1 active:before:bg-neutral-level_2 h-[35px] max-sm:w-full"><span class="overflow-hidden text-ellipsis whitespace-nowrap px-[5px]">Cancelar</span></button><button class="inline-flex shrink-0 cursor-pointer items-center gap-[5px] rounded-[5px] px-[5px] font-semibold text-basic-light transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-30 bg-confirmation hover:bg-confirmation-level_1 active:bg-confirmation-level_2 focus-visible:ring-confirmation h-[35px] text-sm max-sm:w-full"><span class="overflow-hidden text-ellipsis whitespace-nowrap px-[5px]">Confirmar</span></button></div></div></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const WithSecondaryButton: Story = {
+  render: () =&gt; (
+    &lt;ModalFloating
+      title=&quot;Confirmar ação&quot;
+      onClose={() =&gt; {}}
+      secondaryLabel=&quot;Cancelar&quot;
+      onSecondaryClick={() =&gt; {}}
+      actionLabel=&quot;Confirmar&quot;
+      actionColor=&quot;confirmation&quot;
+      onActionClick={() =&gt; {}}
+      width={350}
+      height={350}
+    &gt;
+      &lt;PlaceholderContent /&gt;
+    &lt;/ModalFloating&gt;
+  ),
+}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">Without footer</h2>
+    <div class="ds-story-id">organisms-modalfloating--no-footer · export <b>NoFooter</b></div>
+    <div class="ds-canvas ds-canvas--centered">
+<div class="flex flex-col overflow-hidden rounded-[5px] bg-background max-w-[calc(100vw-32px)] shadow-[0px_8px_10px_0px_rgba(0,0,0,0.14),0px_3px_14px_0px_rgba(0,0,0,0.12),0px_5px_5px_0px_rgba(0,0,0,0.20)]" style="width: 350px; height: 350px;"><div class="flex w-full items-center border-b border-neutral-level_2 bg-background"><div class="flex h-[50px] flex-1 items-center justify-end px-[15px] gap-[10px]"><div class="flex min-w-0 flex-1 items-center"><span class="truncate text-base font-semibold text-font-level_1">Visualização</span></div><div class="flex shrink-0 items-center gap-[10px]"><button aria-label="Fechar" class="flex size-[35px] max-md:min-h-[44px] max-md:min-w-[44px] shrink-0 cursor-pointer items-center justify-center rounded-[5px] border border-neutral-level_2 bg-background transition-colors hover:bg-neutral-level_1 active:bg-neutral-level_2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-confirmation focus-visible:ring-offset-1" type="button"><span aria-hidden="true" class="inline-flex shrink-0 items-center justify-center text-font"><svg aria-hidden="true" class="lucide lucide-x" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="15" xmlns="http://www.w3.org/2000/svg"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg></span></button></div></div></div><div class="min-h-0 flex-1 overflow-y-auto p-[15px]" tabindex="0"><div class="flex w-full items-center justify-center rounded-[4px] border border-dashed border-neutral-level_2 text-sm text-font-level_2" style="height: 250px;">Replaceable content</div></div></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const NoFooter: Story = {
+  name: &#x27;Without footer&#x27;,
+  render: () =&gt; (
+    &lt;ModalFloating
+      title=&quot;Visualização&quot;
+      onClose={() =&gt; {}}
+      width={350}
+      height={350}
+    &gt;
+      &lt;PlaceholderContent height={250} /&gt;
+    &lt;/ModalFloating&gt;
+  ),
+}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">Footer with text</h2>
+    <div class="ds-story-id">organisms-modalfloating--with-footer-text · export <b>WithFooterText</b></div>
+    <div class="ds-canvas ds-canvas--centered">
+<div class="flex flex-col overflow-hidden rounded-[5px] bg-background max-w-[calc(100vw-32px)] shadow-[0px_8px_10px_0px_rgba(0,0,0,0.14),0px_3px_14px_0px_rgba(0,0,0,0.12),0px_5px_5px_0px_rgba(0,0,0,0.20)]" style="width: 350px; height: 350px;"><div class="flex w-full items-center border-b border-neutral-level_2 bg-background"><div class="flex h-[50px] flex-1 items-center justify-end px-[15px] gap-[10px]"><div class="flex min-w-0 flex-1 items-center"><span class="truncate text-base font-semibold text-font-level_1">Informações</span></div><div class="flex shrink-0 items-center gap-[10px]"><button aria-label="Fechar" class="flex size-[35px] max-md:min-h-[44px] max-md:min-w-[44px] shrink-0 cursor-pointer items-center justify-center rounded-[5px] border border-neutral-level_2 bg-background transition-colors hover:bg-neutral-level_1 active:bg-neutral-level_2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-confirmation focus-visible:ring-offset-1" type="button"><span aria-hidden="true" class="inline-flex shrink-0 items-center justify-center text-font"><svg aria-hidden="true" class="lucide lucide-x" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="15" xmlns="http://www.w3.org/2000/svg"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg></span></button></div></div></div><div class="min-h-0 flex-1 overflow-y-auto p-[15px]" tabindex="0"><div class="flex w-full items-center justify-center rounded-[4px] border border-dashed border-neutral-level_2 text-sm text-font-level_2" style="height: 200px;">Replaceable content</div></div><div class="w-full border-t border-neutral-level_2 bg-background"><div class="flex h-[50px] items-center overflow-hidden px-[10px] justify-between max-sm:h-auto max-sm:flex-col-reverse max-sm:items-stretch max-sm:gap-[10px] max-sm:overflow-visible max-sm:py-[10px]"><span class="min-w-0 flex-1 truncate text-base font-semibold text-font-level_1 max-sm:flex-none max-sm:whitespace-normal max-sm:text-center">Última atualização: hoje</span><button class="inline-flex shrink-0 cursor-pointer items-center gap-[5px] rounded-[5px] px-[5px] font-semibold text-basic-light transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-30 bg-confirmation hover:bg-confirmation-level_1 active:bg-confirmation-level_2 focus-visible:ring-confirmation h-[35px] text-sm max-sm:w-full"><span class="overflow-hidden text-ellipsis whitespace-nowrap px-[5px]">Salvar</span></button></div></div></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const WithFooterText: Story = {
+  name: &#x27;Footer with text&#x27;,
+  render: () =&gt; (
+    &lt;ModalFloating
+      title=&quot;Informações&quot;
+      onClose={() =&gt; {}}
+      footerText=&quot;Última atualização: hoje&quot;
+      actionLabel=&quot;Salvar&quot;
+      onActionClick={() =&gt; {}}
+      width={350}
+      height={350}
+    &gt;
+      &lt;PlaceholderContent /&gt;
+    &lt;/ModalFloating&gt;
+  ),
+}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">Brand color action</h2>
+    <div class="ds-story-id">organisms-modalfloating--brand-action · export <b>BrandAction</b></div>
+    <div class="ds-canvas ds-canvas--centered">
+<div class="flex flex-col overflow-hidden rounded-[5px] bg-background max-w-[calc(100vw-32px)] shadow-[0px_8px_10px_0px_rgba(0,0,0,0.14),0px_3px_14px_0px_rgba(0,0,0,0.12),0px_5px_5px_0px_rgba(0,0,0,0.20)]" style="width: 350px; height: 350px;"><div class="flex w-full items-center border-b border-neutral-level_2 bg-background"><div class="flex h-[50px] flex-1 items-center justify-end px-[15px] gap-[10px]"><div class="flex min-w-0 flex-1 items-center"><span class="truncate text-base font-semibold text-font-level_1">Novo registro</span></div><div class="flex shrink-0 items-center gap-[10px]"><button aria-label="Fechar" class="flex size-[35px] max-md:min-h-[44px] max-md:min-w-[44px] shrink-0 cursor-pointer items-center justify-center rounded-[5px] border border-neutral-level_2 bg-background transition-colors hover:bg-neutral-level_1 active:bg-neutral-level_2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-confirmation focus-visible:ring-offset-1" type="button"><span aria-hidden="true" class="inline-flex shrink-0 items-center justify-center text-font"><svg aria-hidden="true" class="lucide lucide-x" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="15" xmlns="http://www.w3.org/2000/svg"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg></span></button></div></div></div><div class="min-h-0 flex-1 overflow-y-auto p-[15px]" tabindex="0"><div class="flex w-full items-center justify-center rounded-[4px] border border-dashed border-neutral-level_2 text-sm text-font-level_2" style="height: 200px;">Replaceable content</div></div><div class="w-full border-t border-neutral-level_2 bg-background"><div class="flex h-[50px] items-center overflow-hidden px-[10px] justify-between max-sm:h-auto max-sm:flex-col-reverse max-sm:items-stretch max-sm:gap-[10px] max-sm:overflow-visible max-sm:py-[10px]"><button class="relative isolate inline-flex shrink-0 cursor-pointer items-center gap-[5px] rounded-[5px] px-[5px] text-sm text-font transition-colors before:pointer-events-none before:absolute before:inset-0 before:-z-10 before:rounded-[5px] before:bg-transparent before:transition-colors before:content-[''] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-confirmation focus-visible:ring-offset-1 disabled:pointer-events-none disabled:opacity-40 border border-neutral-level_2 bg-background hover:before:bg-neutral-level_1 active:before:bg-neutral-level_2 h-[35px] max-sm:w-full"><span class="overflow-hidden text-ellipsis whitespace-nowrap px-[5px]">Cancelar</span></button><button class="inline-flex shrink-0 cursor-pointer items-center gap-[5px] rounded-[5px] px-[5px] font-semibold text-basic-light transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-30 bg-brand hover:bg-brand-level_1 active:bg-brand-level_2 focus-visible:ring-brand h-[35px] text-sm max-sm:w-full"><span class="overflow-hidden text-ellipsis whitespace-nowrap px-[5px]">Criar</span></button></div></div></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const BrandAction: Story = {
+  name: &#x27;Brand color action&#x27;,
+  render: () =&gt; (
+    &lt;ModalFloating
+      title=&quot;Novo registro&quot;
+      onClose={() =&gt; {}}
+      secondaryLabel=&quot;Cancelar&quot;
+      onSecondaryClick={() =&gt; {}}
+      actionLabel=&quot;Criar&quot;
+      actionColor=&quot;brand&quot;
+      onActionClick={() =&gt; {}}
+      width={350}
+      height={350}
+    &gt;
+      &lt;PlaceholderContent /&gt;
+    &lt;/ModalFloating&gt;
+  ),
+}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">Wide panel (600px)</h2>
+    <div class="ds-story-id">organisms-modalfloating--wide-panel · export <b>WidePanel</b></div>
+    <div class="ds-canvas ds-canvas--centered">
+<div class="flex flex-col overflow-hidden rounded-[5px] bg-background max-w-[calc(100vw-32px)] shadow-[0px_8px_10px_0px_rgba(0,0,0,0.14),0px_3px_14px_0px_rgba(0,0,0,0.12),0px_5px_5px_0px_rgba(0,0,0,0.20)]" style="width: 600px;"><div class="flex w-full items-center border-b border-neutral-level_2 bg-background"><div class="flex h-[50px] flex-1 items-center justify-end px-[15px] gap-[10px]"><div class="flex min-w-0 flex-1 items-center"><span class="truncate text-base font-semibold text-font-level_1">Painel largo</span></div><div class="flex shrink-0 items-center gap-[10px]"><button aria-label="Fechar" class="flex size-[35px] max-md:min-h-[44px] max-md:min-w-[44px] shrink-0 cursor-pointer items-center justify-center rounded-[5px] border border-neutral-level_2 bg-background transition-colors hover:bg-neutral-level_1 active:bg-neutral-level_2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-confirmation focus-visible:ring-offset-1" type="button"><span aria-hidden="true" class="inline-flex shrink-0 items-center justify-center text-font"><svg aria-hidden="true" class="lucide lucide-x" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="15" xmlns="http://www.w3.org/2000/svg"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg></span></button></div></div></div><div class="min-h-0 flex-1 overflow-y-auto p-[15px]" tabindex="0"><div class="flex w-full items-center justify-center rounded-[4px] border border-dashed border-neutral-level_2 text-sm text-font-level_2" style="height: 300px;">Replaceable content</div></div><div class="w-full border-t border-neutral-level_2 bg-background"><div class="flex h-[50px] items-center overflow-hidden px-[10px] justify-end gap-0 max-sm:h-auto max-sm:flex-col-reverse max-sm:items-stretch max-sm:gap-[10px] max-sm:overflow-visible max-sm:py-[10px]"><div aria-hidden="true" class="h-[35px] w-[57px] shrink-0 max-sm:hidden"></div><button class="inline-flex shrink-0 cursor-pointer items-center gap-[5px] rounded-[5px] px-[5px] font-semibold text-basic-light transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-30 bg-confirmation hover:bg-confirmation-level_1 active:bg-confirmation-level_2 focus-visible:ring-confirmation h-[35px] text-sm max-sm:w-full"><span class="overflow-hidden text-ellipsis whitespace-nowrap px-[5px]">Salvar</span></button></div></div></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const WidePanel: Story = {
+  name: &#x27;Wide panel (600px)&#x27;,
+  render: () =&gt; (
+    &lt;ModalFloating
+      title=&quot;Painel largo&quot;
+      onClose={() =&gt; {}}
+      actionLabel=&quot;Salvar&quot;
+      onActionClick={() =&gt; {}}
+      width={600}
+    &gt;
+      &lt;PlaceholderContent height={300} /&gt;
+    &lt;/ModalFloating&gt;
+  ),
+}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">With Breadcrumbs</h2>
+    <div class="ds-story-id">organisms-modalfloating--with-breadcrumbs · export <b>WithBreadcrumbs</b></div>
+    <div class="ds-canvas ds-canvas--centered">
+<div class="flex flex-col overflow-hidden rounded-[5px] bg-background max-w-[calc(100vw-32px)] shadow-[0px_8px_10px_0px_rgba(0,0,0,0.14),0px_3px_14px_0px_rgba(0,0,0,0.12),0px_5px_5px_0px_rgba(0,0,0,0.20)]" style="width: 400px; height: 350px;"><div class="flex w-full items-center border-b border-neutral-level_2 bg-background"><div class="flex h-[50px] flex-1 items-center justify-end px-[15px] gap-0"><div class="flex shrink-0 items-center gap-[10px]"><button aria-label="Fechar" class="flex size-[35px] max-md:min-h-[44px] max-md:min-w-[44px] shrink-0 cursor-pointer items-center justify-center rounded-[5px] border border-neutral-level_2 bg-background transition-colors hover:bg-neutral-level_1 active:bg-neutral-level_2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-confirmation focus-visible:ring-offset-1" type="button"><span aria-hidden="true" class="inline-flex shrink-0 items-center justify-center text-font"><svg aria-hidden="true" class="lucide lucide-x" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="15" xmlns="http://www.w3.org/2000/svg"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg></span></button></div></div></div><div class="min-h-0 flex-1 overflow-y-auto p-[15px]" tabindex="0"><div class="flex w-full items-center justify-center rounded-[4px] border border-dashed border-neutral-level_2 text-sm text-font-level_2" style="height: 200px;">Replaceable content</div></div><div class="w-full border-t border-neutral-level_2 bg-background"><div class="flex h-[50px] items-center overflow-hidden px-[10px] justify-end gap-0 max-sm:h-auto max-sm:flex-col-reverse max-sm:items-stretch max-sm:gap-[10px] max-sm:overflow-visible max-sm:py-[10px]"><div aria-hidden="true" class="h-[35px] w-[57px] shrink-0 max-sm:hidden"></div><button class="inline-flex shrink-0 cursor-pointer items-center gap-[5px] rounded-[5px] px-[5px] font-semibold text-basic-light transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-30 bg-confirmation hover:bg-confirmation-level_1 active:bg-confirmation-level_2 focus-visible:ring-confirmation h-[35px] text-sm max-sm:w-full"><span class="overflow-hidden text-ellipsis whitespace-nowrap px-[5px]">Salvar</span></button></div></div></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const WithBreadcrumbs: Story = {
+  render: () =&gt; (
+    &lt;ModalFloating
+      headerLeft=&quot;breadcrumbs&quot;
+      breadcrumbItems={[
+        { label: &#x27;Início&#x27; },
+        { label: &#x27;Clientes&#x27; },
+        { label: &#x27;Detalhe&#x27; },
+      ]}
+      onClose={() =&gt; {}}
+      actionLabel=&quot;Salvar&quot;
+      onActionClick={() =&gt; {}}
+      width={400}
+      height={350}
+    &gt;
+      &lt;PlaceholderContent /&gt;
+    &lt;/ModalFloating&gt;
+  ),
+}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">All variants</h2>
+    <div class="ds-story-id">organisms-modalfloating--all-variants · export <b>AllVariants</b></div>
+    <div class="ds-canvas ds-canvas--centered">
+<div class="flex flex-wrap items-start gap-[40px] p-[40px]"><div class="flex flex-col gap-1"><p class="text-xs text-font-level_2">Com footer (Figma)</p><div class="flex flex-col overflow-hidden rounded-[5px] bg-background max-w-[calc(100vw-32px)] shadow-[0px_8px_10px_0px_rgba(0,0,0,0.14),0px_3px_14px_0px_rgba(0,0,0,0.12),0px_5px_5px_0px_rgba(0,0,0,0.20)]" style="width: 350px; height: 350px;"><div class="flex w-full items-center border-b border-neutral-level_2 bg-background"><div class="flex h-[50px] flex-1 items-center justify-end px-[15px] gap-[10px]"><div class="flex min-w-0 flex-1 items-center"><span class="truncate text-base font-semibold text-font-level_1">Lorem Ipsum</span></div><div class="flex shrink-0 items-center gap-[10px]"><button aria-label="Fechar" class="flex size-[35px] max-md:min-h-[44px] max-md:min-w-[44px] shrink-0 cursor-pointer items-center justify-center rounded-[5px] border border-neutral-level_2 bg-background transition-colors hover:bg-neutral-level_1 active:bg-neutral-level_2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-confirmation focus-visible:ring-offset-1" type="button"><span aria-hidden="true" class="inline-flex shrink-0 items-center justify-center text-font"><svg aria-hidden="true" class="lucide lucide-x" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="15" xmlns="http://www.w3.org/2000/svg"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg></span></button></div></div></div><div class="min-h-0 flex-1 overflow-y-auto p-[15px]" tabindex="0"><div class="flex w-full items-center justify-center rounded-[4px] border border-dashed border-neutral-level_2 text-sm text-font-level_2" style="height: 200px;">Replaceable content</div></div><div class="w-full border-t border-neutral-level_2 bg-background"><div class="flex h-[50px] items-center overflow-hidden px-[10px] justify-end gap-0 max-sm:h-auto max-sm:flex-col-reverse max-sm:items-stretch max-sm:gap-[10px] max-sm:overflow-visible max-sm:py-[10px]"><div aria-hidden="true" class="h-[35px] w-[57px] shrink-0 max-sm:hidden"></div><button class="inline-flex shrink-0 cursor-pointer items-center gap-[5px] rounded-[5px] px-[5px] font-semibold text-basic-light transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-30 bg-confirmation hover:bg-confirmation-level_1 active:bg-confirmation-level_2 focus-visible:ring-confirmation h-[35px] text-sm max-sm:w-full"><span class="overflow-hidden text-ellipsis whitespace-nowrap px-[5px]">Lorem Ipsum</span></button></div></div></div></div><div class="flex flex-col gap-1"><p class="text-xs text-font-level_2">Sem footer</p><div class="flex flex-col overflow-hidden rounded-[5px] bg-background max-w-[calc(100vw-32px)] shadow-[0px_8px_10px_0px_rgba(0,0,0,0.14),0px_3px_14px_0px_rgba(0,0,0,0.12),0px_5px_5px_0px_rgba(0,0,0,0.20)]" style="width: 350px; height: 350px;"><div class="flex w-full items-center border-b border-neutral-level_2 bg-background"><div class="flex h-[50px] flex-1 items-center justify-end px-[15px] gap-[10px]"><div class="flex min-w-0 flex-1 items-center"><span class="truncate text-base font-semibold text-font-level_1">Visualização</span></div><div class="flex shrink-0 items-center gap-[10px]"><button aria-label="Fechar" class="flex size-[35px] max-md:min-h-[44px] max-md:min-w-[44px] shrink-0 cursor-pointer items-center justify-center rounded-[5px] border border-neutral-level_2 bg-background transition-colors hover:bg-neutral-level_1 active:bg-neutral-level_2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-confirmation focus-visible:ring-offset-1" type="button"><span aria-hidden="true" class="inline-flex shrink-0 items-center justify-center text-font"><svg aria-hidden="true" class="lucide lucide-x" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="15" xmlns="http://www.w3.org/2000/svg"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg></span></button></div></div></div><div class="min-h-0 flex-1 overflow-y-auto p-[15px]" tabindex="0"><div class="flex w-full items-center justify-center rounded-[4px] border border-dashed border-neutral-level_2 text-sm text-font-level_2" style="height: 250px;">Replaceable content</div></div></div></div><div class="flex flex-col gap-1"><p class="text-xs text-font-level_2">Botão secundário</p><div class="flex flex-col overflow-hidden rounded-[5px] bg-background max-w-[calc(100vw-32px)] shadow-[0px_8px_10px_0px_rgba(0,0,0,0.14),0px_3px_14px_0px_rgba(0,0,0,0.12),0px_5px_5px_0px_rgba(0,0,0,0.20)]" style="width: 350px; height: 350px;"><div class="flex w-full items-center border-b border-neutral-level_2 bg-background"><div class="flex h-[50px] flex-1 items-center justify-end px-[15px] gap-[10px]"><div class="flex min-w-0 flex-1 items-center"><span class="truncate text-base font-semibold text-font-level_1">Confirmar</span></div><div class="flex shrink-0 items-center gap-[10px]"><button aria-label="Fechar" class="flex size-[35px] max-md:min-h-[44px] max-md:min-w-[44px] shrink-0 cursor-pointer items-center justify-center rounded-[5px] border border-neutral-level_2 bg-background transition-colors hover:bg-neutral-level_1 active:bg-neutral-level_2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-confirmation focus-visible:ring-offset-1" type="button"><span aria-hidden="true" class="inline-flex shrink-0 items-center justify-center text-font"><svg aria-hidden="true" class="lucide lucide-x" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="15" xmlns="http://www.w3.org/2000/svg"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg></span></button></div></div></div><div class="min-h-0 flex-1 overflow-y-auto p-[15px]" tabindex="0"><div class="flex w-full items-center justify-center rounded-[4px] border border-dashed border-neutral-level_2 text-sm text-font-level_2" style="height: 200px;">Replaceable content</div></div><div class="w-full border-t border-neutral-level_2 bg-background"><div class="flex h-[50px] items-center overflow-hidden px-[10px] justify-between max-sm:h-auto max-sm:flex-col-reverse max-sm:items-stretch max-sm:gap-[10px] max-sm:overflow-visible max-sm:py-[10px]"><button class="relative isolate inline-flex shrink-0 cursor-pointer items-center gap-[5px] rounded-[5px] px-[5px] text-sm text-font transition-colors before:pointer-events-none before:absolute before:inset-0 before:-z-10 before:rounded-[5px] before:bg-transparent before:transition-colors before:content-[''] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-confirmation focus-visible:ring-offset-1 disabled:pointer-events-none disabled:opacity-40 border border-neutral-level_2 bg-background hover:before:bg-neutral-level_1 active:before:bg-neutral-level_2 h-[35px] max-sm:w-full"><span class="overflow-hidden text-ellipsis whitespace-nowrap px-[5px]">Cancelar</span></button><button class="inline-flex shrink-0 cursor-pointer items-center gap-[5px] rounded-[5px] px-[5px] font-semibold text-basic-light transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-30 bg-confirmation hover:bg-confirmation-level_1 active:bg-confirmation-level_2 focus-visible:ring-confirmation h-[35px] text-sm max-sm:w-full"><span class="overflow-hidden text-ellipsis whitespace-nowrap px-[5px]">OK</span></button></div></div></div></div></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const AllVariants: Story = {
+  name: &#x27;All variants&#x27;,
+  render: () =&gt; (
+    &lt;div className=&quot;flex flex-wrap items-start gap-[40px] p-[40px]&quot;&gt;
+      &lt;div className=&quot;flex flex-col gap-1&quot;&gt;
+        &lt;p className=&quot;text-xs text-font-level_2&quot;&gt;Com footer (Figma)&lt;/p&gt;
+        &lt;ModalFloating
+          title=&quot;Lorem Ipsum&quot;
+          onClose={() =&gt; {}}
+          actionLabel=&quot;Lorem Ipsum&quot;
+          onActionClick={() =&gt; {}}
+          width={350}
+          height={350}
+        &gt;
+          &lt;PlaceholderContent /&gt;
+        &lt;/ModalFloating&gt;
+      &lt;/div&gt;
+      &lt;div className=&quot;flex flex-col gap-1&quot;&gt;
+        &lt;p className=&quot;text-xs text-font-level_2&quot;&gt;Sem footer&lt;/p&gt;
+        &lt;ModalFloating
+          title=&quot;Visualização&quot;
+          onClose={() =&gt; {}}
+          width={350}
+          height={350}
+        &gt;
+          &lt;PlaceholderContent height={250} /&gt;
+        &lt;/ModalFloating&gt;
+      &lt;/div&gt;
+      &lt;div className=&quot;flex flex-col gap-1&quot;&gt;
+        &lt;p className=&quot;text-xs text-font-level_2&quot;&gt;Botão secundário&lt;/p&gt;
+        &lt;ModalFloating
+          title=&quot;Confirmar&quot;
+          onClose={() =&gt; {}}
+          secondaryLabel=&quot;Cancelar&quot;
+          onSecondaryClick={() =&gt; {}}
+          actionLabel=&quot;OK&quot;
+          actionColor=&quot;confirmation&quot;
+          onActionClick={() =&gt; {}}
+          width={350}
+          height={350}
+        &gt;
+          &lt;PlaceholderContent /&gt;
+        &lt;/ModalFloating&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  ),
+}</code></pre></details>
+  </section>
+</body>
+</html>

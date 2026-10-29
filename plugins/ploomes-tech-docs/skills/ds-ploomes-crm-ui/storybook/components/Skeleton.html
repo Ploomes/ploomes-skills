@@ -1,0 +1,116 @@
+<!doctype html>
+<!--
+  Ploomes Design System — snapshot estático das stories do Storybook.
+  Componente : Components/Skeleton
+  Stories    : 6 (Default, Text, Circular, No Animation, Card Placeholder, All Variants)
+  Story      : Skeleton.stories.tsx
+  Tema       : light — use <html class="dark"> para o tema escuro.
+-->
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Skeleton — Ploomes DS</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;600;700&display=swap">
+<link rel="stylesheet" href="../assets/design-system.css">
+<link rel="stylesheet" href="../assets/page.css">
+</head>
+<body class="ds-page">
+  <header class="ds-head">
+    <a class="ds-back" href="../index.html">← inventário</a>
+    <h1 class="ds-title">Skeleton</h1>
+    <p class="ds-meta">components · 6 stories · <code>Skeleton.stories.tsx</code></p>
+    <pre class="ds-code ds-import">import { Skeleton } from &#x27;@ploomescrm/ui&#x27;;</pre>
+    <pre class="ds-code">// props padrão de todas as stories (meta.args)
+args: { variant: &#x27;rounded&#x27;, animation: &#x27;pulse&#x27;, width: 200, height: 100 }</pre>
+  </header>
+  <section class="ds-story">
+    <h2 class="ds-story-name">Default</h2>
+    <div class="ds-story-id">components-skeleton--default · export <b>Default</b></div>
+    <div class="ds-canvas ds-canvas--padded">
+<div aria-hidden="true" class="block shrink-0 bg-neutral-level_2 rounded-[5px] animate-pulse" style="width: 200px; height: 100px;"></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const Default: Story = {}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">Text</h2>
+    <div class="ds-story-id">components-skeleton--text · export <b>Text</b></div>
+    <div class="ds-canvas ds-canvas--padded">
+<div style="display: flex; flex-direction: column; gap: 8px; width: 320px;"><div aria-hidden="true" class="block shrink-0 bg-neutral-level_2 h-[1em] w-full rounded-[3px] animate-pulse"></div><div aria-hidden="true" class="block shrink-0 bg-neutral-level_2 h-[1em] w-full rounded-[3px] animate-pulse"></div><div aria-hidden="true" class="block shrink-0 bg-neutral-level_2 h-[1em] w-full rounded-[3px] animate-pulse" style="width: 60%;"></div></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const Text: Story = {
+  args: { variant: &#x27;text&#x27;, width: undefined, height: undefined },
+  render: (args) =&gt; (
+    &lt;div
+      style={{ display: &#x27;flex&#x27;, flexDirection: &#x27;column&#x27;, gap: 8, width: 320 }}
+    &gt;
+      &lt;Skeleton {...args} /&gt;
+      &lt;Skeleton {...args} /&gt;
+      &lt;Skeleton {...args} style={{ width: &#x27;60%&#x27; }} /&gt;
+    &lt;/div&gt;
+  ),
+}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">Circular</h2>
+    <div class="ds-story-id">components-skeleton--circular · export <b>Circular</b></div>
+    <div class="ds-canvas ds-canvas--padded">
+<div aria-hidden="true" class="block shrink-0 bg-neutral-level_2 rounded-full animate-pulse" style="width: 48px; height: 48px;"></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const Circular: Story = {
+  args: { variant: &#x27;circular&#x27;, width: 48, height: 48 },
+}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">No Animation</h2>
+    <div class="ds-story-id">components-skeleton--no-animation · export <b>NoAnimation</b></div>
+    <div class="ds-canvas ds-canvas--padded">
+<div aria-hidden="true" class="block shrink-0 bg-neutral-level_2 rounded-[5px]" style="width: 200px; height: 100px;"></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const NoAnimation: Story = {
+  args: { animation: &#x27;none&#x27; },
+}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">Card Placeholder</h2>
+    <div class="ds-story-id">components-skeleton--card-placeholder · export <b>CardPlaceholder</b></div>
+    <div class="ds-canvas ds-canvas--padded">
+<div style="display: flex; gap: 12px; align-items: center; width: 320px;"><div aria-hidden="true" class="block shrink-0 bg-neutral-level_2 rounded-full animate-pulse" style="width: 48px; height: 48px;"></div><div style="display: flex; flex-direction: column; gap: 8px; flex: 1 1 0%;"><div aria-hidden="true" class="block shrink-0 bg-neutral-level_2 h-[1em] w-full rounded-[3px] animate-pulse" style="height: 16px;"></div><div aria-hidden="true" class="block shrink-0 bg-neutral-level_2 h-[1em] w-full rounded-[3px] animate-pulse" style="width: 70%; height: 16px;"></div></div></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const CardPlaceholder: Story = {
+  render: () =&gt; (
+    &lt;div style={{ display: &#x27;flex&#x27;, gap: 12, alignItems: &#x27;center&#x27;, width: 320 }}&gt;
+      &lt;Skeleton variant=&quot;circular&quot; width={48} height={48} /&gt;
+      &lt;div
+        style={{ display: &#x27;flex&#x27;, flexDirection: &#x27;column&#x27;, gap: 8, flex: 1 }}
+      &gt;
+        &lt;Skeleton variant=&quot;text&quot; height={16} /&gt;
+        &lt;Skeleton variant=&quot;text&quot; height={16} style={{ width: &#x27;70%&#x27; }} /&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  ),
+}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">All Variants</h2>
+    <div class="ds-story-id">components-skeleton--all-variants · export <b>AllVariants</b></div>
+    <div class="ds-canvas ds-canvas--padded">
+<div style="display: flex; gap: 24px; align-items: center;"><div aria-hidden="true" class="block shrink-0 bg-neutral-level_2 rounded-[5px] animate-pulse" style="width: 120px; height: 80px;"></div><div aria-hidden="true" class="block shrink-0 bg-neutral-level_2 rounded-full animate-pulse" style="width: 64px; height: 64px;"></div><div style="display: flex; flex-direction: column; gap: 8px; width: 160px;"><div aria-hidden="true" class="block shrink-0 bg-neutral-level_2 h-[1em] w-full rounded-[3px] animate-pulse" style="height: 14px;"></div><div aria-hidden="true" class="block shrink-0 bg-neutral-level_2 h-[1em] w-full rounded-[3px] animate-pulse" style="width: 80%; height: 14px;"></div></div></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const AllVariants: Story = {
+  render: () =&gt; (
+    &lt;div style={{ display: &#x27;flex&#x27;, gap: 24, alignItems: &#x27;center&#x27; }}&gt;
+      &lt;Skeleton variant=&quot;rounded&quot; width={120} height={80} /&gt;
+      &lt;Skeleton variant=&quot;circular&quot; width={64} height={64} /&gt;
+      &lt;div
+        style={{ display: &#x27;flex&#x27;, flexDirection: &#x27;column&#x27;, gap: 8, width: 160 }}
+      &gt;
+        &lt;Skeleton variant=&quot;text&quot; height={14} /&gt;
+        &lt;Skeleton variant=&quot;text&quot; height={14} style={{ width: &#x27;80%&#x27; }} /&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  ),
+}</code></pre></details>
+  </section>
+</body>
+</html>

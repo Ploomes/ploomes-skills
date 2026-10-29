@@ -1,0 +1,296 @@
+<!doctype html>
+<!--
+  Ploomes Design System — snapshot estático das stories do Storybook.
+  Componente : Organisms/Collapse
+  Stories    : 13 (Default, Default Open, Small, Normal, Big, Bigger, No Outline, With Background, No Outline With Background, No Icon, No Subtitle, Controlled Example, All Sizes)
+  Story      : Collapse.stories.tsx
+  Tema       : light — use <html class="dark"> para o tema escuro.
+-->
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Collapse — Ploomes DS</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;600;700&display=swap">
+<link rel="stylesheet" href="../assets/design-system.css">
+<link rel="stylesheet" href="../assets/page.css">
+</head>
+<body class="ds-page">
+  <header class="ds-head">
+    <a class="ds-back" href="../index.html">← inventário</a>
+    <h1 class="ds-title">Collapse</h1>
+    <p class="ds-meta">organisms · 13 stories · <code>Collapse.stories.tsx</code></p>
+    <pre class="ds-code ds-import">import { Collapse, Badge, ButtonSoft } from &#x27;@ploomescrm/ui&#x27;;</pre>
+    <pre class="ds-code">// props padrão de todas as stories (meta.args)
+args: {
+  size: &#x27;normal&#x27;,
+  outline: true,
+  background: false,
+  title: &#x27;Lorem Ipsum&#x27;,
+  subtitle: &#x27;Subtitle&#x27;,
+}</pre>
+  </header>
+  <section class="ds-story">
+    <h2 class="ds-story-name">Default</h2>
+    <div class="ds-story-id">organisms-collapse--default · export <b>Default</b></div>
+    <div class="ds-canvas ds-canvas--padded">
+<div class="flex w-full max-w-[600px] flex-col overflow-hidden rounded-[5px] bg-background border border-neutral-level_2"><div class="flex w-full shrink-0 cursor-pointer select-none items-center gap-[15px] h-[50px] p-[5px]" role="button" tabindex="0"><div class="flex min-w-0 flex-1 items-center gap-[5px] pl-[10px]"><div class="flex shrink-0 items-center justify-center size-[30px]"><svg aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24" width="20"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" x2="12" y1="22.08" y2="12"></line></svg></div><div class="flex min-w-0 flex-1 flex-row items-center gap-[5px]"><p class="overflow-hidden text-ellipsis whitespace-nowrap text-font text-[14px] font-semibold shrink-0">Lorem Ipsum</p><p class="overflow-hidden text-ellipsis whitespace-nowrap text-font-level_1 text-[13px] min-w-0 flex-1">Subtitle</p></div></div><div class="flex shrink-0 items-center gap-[10px]" role="presentation"><div aria-hidden="true" class="flex shrink-0 items-center justify-center rounded-[5px] border border-neutral-level_2 bg-background transition-colors duration-200 ease-out size-[35px]"><span aria-hidden="true" class="inline-flex shrink-0 items-center justify-center text-font"><svg aria-hidden="true" class="lucide lucide-chevron-down" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="15" xmlns="http://www.w3.org/2000/svg"><path d="m6 9 6 6 6-6"></path></svg></span></div></div></div><div class="grid transition-[grid-template-rows] duration-200 ease-out grid-rows-[0fr]"><div class="overflow-hidden"><div class="flex w-full flex-col gap-[10px] p-[10px]"><div style="padding: 12px 15px; border: 1px dashed rgba(27, 16, 44, 0.15); border-radius: 5px; font-size: 14px; color: rgb(139, 133, 149); line-height: 1.5;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis in venenatis ligula, ut tincidunt urna. Proin sodales ante massa, venenatis hendrerit velit pharetra et.</div></div></div></div></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const Default: Story = {
+  render: (args) =&gt; (
+    &lt;Collapse {...args} icon={&lt;BoxIcon size={20} /&gt;} defaultOpen={false}&gt;
+      &lt;SampleContent /&gt;
+    &lt;/Collapse&gt;
+  ),
+}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">Default Open</h2>
+    <div class="ds-story-id">organisms-collapse--default-open · export <b>DefaultOpen</b></div>
+    <div class="ds-canvas ds-canvas--padded">
+<div class="flex w-full max-w-[600px] flex-col overflow-hidden rounded-[5px] bg-background border border-neutral-level_2"><div class="flex w-full shrink-0 cursor-pointer select-none items-center gap-[15px] h-[50px] p-[5px] border-b border-neutral-level_2 bg-[rgba(27,16,44,0.02)]" role="button" tabindex="0"><div class="flex min-w-0 flex-1 items-center gap-[5px] pl-[10px]"><div class="flex shrink-0 items-center justify-center size-[30px]"><svg aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24" width="20"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" x2="12" y1="22.08" y2="12"></line></svg></div><div class="flex min-w-0 flex-1 flex-row items-center gap-[5px]"><p class="overflow-hidden text-ellipsis whitespace-nowrap text-font text-[14px] font-semibold shrink-0">Lorem Ipsum</p><p class="overflow-hidden text-ellipsis whitespace-nowrap text-font-level_1 text-[13px] min-w-0 flex-1">Subtitle</p></div></div><div class="flex shrink-0 items-center gap-[10px]" role="presentation"><div aria-hidden="true" class="flex shrink-0 items-center justify-center rounded-[5px] border border-neutral-level_2 bg-background transition-colors duration-200 ease-out size-[35px]"><span aria-hidden="true" class="inline-flex shrink-0 items-center justify-center text-font"><svg aria-hidden="true" class="lucide lucide-chevron-up" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="15" xmlns="http://www.w3.org/2000/svg"><path d="m18 15-6-6-6 6"></path></svg></span></div></div></div><div class="grid transition-[grid-template-rows] duration-200 ease-out grid-rows-[1fr]"><div class="overflow-hidden"><div class="flex w-full flex-col gap-[10px] p-[10px]"><div style="padding: 12px 15px; border: 1px dashed rgba(27, 16, 44, 0.15); border-radius: 5px; font-size: 14px; color: rgb(139, 133, 149); line-height: 1.5;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis in venenatis ligula, ut tincidunt urna. Proin sodales ante massa, venenatis hendrerit velit pharetra et.</div></div></div></div></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const DefaultOpen: Story = {
+  render: (args) =&gt; (
+    &lt;Collapse {...args} icon={&lt;BoxIcon size={20} /&gt;} defaultOpen&gt;
+      &lt;SampleContent /&gt;
+    &lt;/Collapse&gt;
+  ),
+}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">Small</h2>
+    <div class="ds-story-id">organisms-collapse--small · export <b>Small</b></div>
+    <div class="ds-canvas ds-canvas--padded">
+<div class="flex w-full max-w-[600px] flex-col overflow-hidden rounded-[5px] bg-background border border-neutral-level_2"><div class="flex w-full shrink-0 cursor-pointer select-none items-center gap-[15px] h-[40px] p-[5px]" role="button" tabindex="0"><div class="flex min-w-0 flex-1 items-center gap-[5px] pl-[10px]"><div class="flex shrink-0 items-center justify-center size-[20px]"><svg aria-hidden="true" fill="none" height="12" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24" width="12"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" x2="12" y1="22.08" y2="12"></line></svg></div><div class="flex min-w-0 flex-1 flex-row items-center gap-[5px]"><p class="overflow-hidden text-ellipsis whitespace-nowrap text-font text-[13px] font-semibold shrink-0">Lorem Ipsum</p><p class="overflow-hidden text-ellipsis whitespace-nowrap text-font-level_1 text-[13px] min-w-0 flex-1">Subtitle</p></div></div><div class="flex shrink-0 items-center gap-[10px]" role="presentation"><div class="flex shrink-0 items-center"><span class="inline-flex shrink-0 items-center justify-center border font-semibold bg-confirmation/10 border-neutral-level_1 text-confirmation h-[30px] gap-[5px] px-[10px] rounded-[5px] text-sm"><span class="whitespace-nowrap">Badge</span></span></div><div aria-hidden="true" class="flex shrink-0 items-center justify-center rounded-[5px] border border-neutral-level_2 bg-background transition-colors duration-200 ease-out size-[30px]"><span aria-hidden="true" class="inline-flex shrink-0 items-center justify-center text-font"><svg aria-hidden="true" class="lucide lucide-chevron-down" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="15" xmlns="http://www.w3.org/2000/svg"><path d="m6 9 6 6 6-6"></path></svg></span></div></div></div><div class="grid transition-[grid-template-rows] duration-200 ease-out grid-rows-[0fr]"><div class="overflow-hidden"><div class="flex w-full flex-col gap-[10px] p-[10px]"><div style="padding: 12px 15px; border: 1px dashed rgba(27, 16, 44, 0.15); border-radius: 5px; font-size: 14px; color: rgb(139, 133, 149); line-height: 1.5;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis in venenatis ligula, ut tincidunt urna. Proin sodales ante massa, venenatis hendrerit velit pharetra et.</div></div></div></div></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const Small: Story = {
+  render: (args) =&gt; (
+    &lt;Collapse
+      {...args}
+      size=&quot;small&quot;
+      icon={&lt;BoxIcon size={12} /&gt;}
+      rightInfo={&lt;Badge color=&quot;confirmation&quot;&gt;Badge&lt;/Badge&gt;}
+    &gt;
+      &lt;SampleContent /&gt;
+    &lt;/Collapse&gt;
+  ),
+}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">Normal</h2>
+    <div class="ds-story-id">organisms-collapse--normal · export <b>Normal</b></div>
+    <div class="ds-canvas ds-canvas--padded">
+<div class="flex w-full max-w-[600px] flex-col overflow-hidden rounded-[5px] bg-background border border-neutral-level_2"><div class="flex w-full shrink-0 cursor-pointer select-none items-center gap-[15px] h-[50px] p-[5px]" role="button" tabindex="0"><div class="flex min-w-0 flex-1 items-center gap-[5px] pl-[10px]"><div class="flex shrink-0 items-center justify-center size-[30px]"><svg aria-hidden="true" fill="none" height="16" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24" width="16"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" x2="12" y1="22.08" y2="12"></line></svg></div><div class="flex min-w-0 flex-1 flex-row items-center gap-[5px]"><p class="overflow-hidden text-ellipsis whitespace-nowrap text-font text-[14px] font-semibold shrink-0">Lorem Ipsum</p><p class="overflow-hidden text-ellipsis whitespace-nowrap text-font-level_1 text-[13px] min-w-0 flex-1">Subtitle</p></div></div><div class="flex shrink-0 items-center gap-[10px]" role="presentation"><div class="flex shrink-0 items-center"><span class="inline-flex shrink-0 items-center justify-center border font-semibold bg-success/10 border-neutral-level_1 text-success h-[30px] gap-[5px] px-[10px] rounded-[5px] text-sm"><span class="whitespace-nowrap">Ativo</span></span></div><div aria-hidden="true" class="flex shrink-0 items-center justify-center rounded-[5px] border border-neutral-level_2 bg-background transition-colors duration-200 ease-out size-[35px]"><span aria-hidden="true" class="inline-flex shrink-0 items-center justify-center text-font"><svg aria-hidden="true" class="lucide lucide-chevron-down" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="15" xmlns="http://www.w3.org/2000/svg"><path d="m6 9 6 6 6-6"></path></svg></span></div></div></div><div class="grid transition-[grid-template-rows] duration-200 ease-out grid-rows-[0fr]"><div class="overflow-hidden"><div class="flex w-full flex-col gap-[10px] p-[10px]"><div style="padding: 12px 15px; border: 1px dashed rgba(27, 16, 44, 0.15); border-radius: 5px; font-size: 14px; color: rgb(139, 133, 149); line-height: 1.5;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis in venenatis ligula, ut tincidunt urna. Proin sodales ante massa, venenatis hendrerit velit pharetra et.</div></div></div></div></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const Normal: Story = {
+  render: (args) =&gt; (
+    &lt;Collapse
+      {...args}
+      size=&quot;normal&quot;
+      icon={&lt;BoxIcon size={16} /&gt;}
+      rightInfo={&lt;Badge color=&quot;success&quot;&gt;Ativo&lt;/Badge&gt;}
+    &gt;
+      &lt;SampleContent /&gt;
+    &lt;/Collapse&gt;
+  ),
+}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">Big</h2>
+    <div class="ds-story-id">organisms-collapse--big · export <b>Big</b></div>
+    <div class="ds-canvas ds-canvas--padded">
+<div class="flex w-full max-w-[600px] flex-col overflow-hidden rounded-[5px] bg-background border border-neutral-level_2"><div class="flex w-full shrink-0 cursor-pointer select-none items-center gap-[15px] h-[70px] p-[20px]" role="button" tabindex="0"><div class="flex min-w-0 flex-1 items-center gap-[10px]"><div class="flex shrink-0 items-center justify-center size-[40px]"><svg aria-hidden="true" fill="none" height="22" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24" width="22"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" x2="12" y1="22.08" y2="12"></line></svg></div><div class="flex min-w-0 flex-1 flex-col items-start gap-[2px]"><p class="overflow-hidden text-ellipsis whitespace-nowrap text-font text-[16px] font-semibold w-full">Lorem Ipsum</p><p class="overflow-hidden text-ellipsis whitespace-nowrap text-font-level_1 text-[13px] w-full">Subtitle</p></div></div><div class="flex shrink-0 items-center gap-[10px]" role="presentation"><div class="flex shrink-0 items-center"><button class="relative isolate inline-flex shrink-0 cursor-pointer items-center gap-[5px] rounded-[5px] px-[5px] text-sm text-font transition-colors before:pointer-events-none before:absolute before:inset-0 before:-z-10 before:rounded-[5px] before:bg-transparent before:transition-colors before:content-[''] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-confirmation focus-visible:ring-offset-1 disabled:pointer-events-none disabled:opacity-40 border border-neutral-level_2 bg-background hover:before:bg-neutral-level_1 active:before:bg-neutral-level_2 h-[30px]"><span class="overflow-hidden text-ellipsis whitespace-nowrap px-[5px]">Ver mais</span></button></div><div aria-hidden="true" class="flex shrink-0 items-center justify-center rounded-[5px] border border-neutral-level_2 bg-background transition-colors duration-200 ease-out size-[35px]"><span aria-hidden="true" class="inline-flex shrink-0 items-center justify-center text-font"><svg aria-hidden="true" class="lucide lucide-chevron-down" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="15" xmlns="http://www.w3.org/2000/svg"><path d="m6 9 6 6 6-6"></path></svg></span></div></div></div><div class="grid transition-[grid-template-rows] duration-200 ease-out grid-rows-[0fr]"><div class="overflow-hidden"><div class="flex w-full flex-col gap-[10px] p-[10px]"><div style="padding: 12px 15px; border: 1px dashed rgba(27, 16, 44, 0.15); border-radius: 5px; font-size: 14px; color: rgb(139, 133, 149); line-height: 1.5;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis in venenatis ligula, ut tincidunt urna. Proin sodales ante massa, venenatis hendrerit velit pharetra et.</div></div></div></div></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const Big: Story = {
+  render: (args) =&gt; (
+    &lt;Collapse
+      {...args}
+      size=&quot;big&quot;
+      icon={&lt;BoxIcon size={22} /&gt;}
+      rightInfo={
+        &lt;ButtonSoft variant=&quot;outline&quot; size=&quot;sm&quot;&gt;
+          Ver mais
+        &lt;/ButtonSoft&gt;
+      }
+    &gt;
+      &lt;SampleContent /&gt;
+    &lt;/Collapse&gt;
+  ),
+}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">Bigger</h2>
+    <div class="ds-story-id">organisms-collapse--bigger · export <b>Bigger</b></div>
+    <div class="ds-canvas ds-canvas--padded">
+<div class="flex w-full max-w-[600px] flex-col overflow-hidden rounded-[5px] bg-background border border-neutral-level_2"><div class="flex w-full shrink-0 cursor-pointer select-none items-center gap-[15px] h-[100px] p-[30px]" role="button" tabindex="0"><div class="flex min-w-0 flex-1 items-center gap-[10px]"><div class="flex shrink-0 items-center justify-center size-[50px]"><svg aria-hidden="true" fill="none" height="28" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24" width="28"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" x2="12" y1="22.08" y2="12"></line></svg></div><div class="flex min-w-0 flex-1 flex-col items-start gap-[5px]"><p class="overflow-hidden text-ellipsis whitespace-nowrap text-font text-[18px] font-semibold w-full">Lorem Ipsum</p><p class="overflow-hidden text-ellipsis whitespace-nowrap text-font-level_1 text-[14px] w-full">Subtitle</p></div></div><div class="flex shrink-0 items-center gap-[10px]" role="presentation"><div class="flex shrink-0 items-center"><button class="relative isolate inline-flex shrink-0 cursor-pointer items-center gap-[5px] rounded-[5px] px-[5px] text-sm text-font transition-colors before:pointer-events-none before:absolute before:inset-0 before:-z-10 before:rounded-[5px] before:bg-transparent before:transition-colors before:content-[''] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-confirmation focus-visible:ring-offset-1 disabled:pointer-events-none disabled:opacity-40 border border-neutral-level_2 bg-background hover:before:bg-neutral-level_1 active:before:bg-neutral-level_2 h-[35px]"><span class="overflow-hidden text-ellipsis whitespace-nowrap px-[5px]">Ver mais</span></button></div><div aria-hidden="true" class="flex shrink-0 items-center justify-center rounded-[5px] border border-neutral-level_2 bg-background transition-colors duration-200 ease-out size-[40px]"><span aria-hidden="true" class="inline-flex shrink-0 items-center justify-center text-font"><svg aria-hidden="true" class="lucide lucide-chevron-down" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="15" xmlns="http://www.w3.org/2000/svg"><path d="m6 9 6 6 6-6"></path></svg></span></div></div></div><div class="grid transition-[grid-template-rows] duration-200 ease-out grid-rows-[0fr]"><div class="overflow-hidden"><div class="flex w-full flex-col gap-[10px] p-[10px]"><div style="padding: 12px 15px; border: 1px dashed rgba(27, 16, 44, 0.15); border-radius: 5px; font-size: 14px; color: rgb(139, 133, 149); line-height: 1.5;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis in venenatis ligula, ut tincidunt urna. Proin sodales ante massa, venenatis hendrerit velit pharetra et.</div></div></div></div></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const Bigger: Story = {
+  render: (args) =&gt; (
+    &lt;Collapse
+      {...args}
+      size=&quot;bigger&quot;
+      icon={&lt;BoxIcon size={28} /&gt;}
+      rightInfo={
+        &lt;ButtonSoft variant=&quot;outline&quot; size=&quot;md&quot;&gt;
+          Ver mais
+        &lt;/ButtonSoft&gt;
+      }
+    &gt;
+      &lt;SampleContent /&gt;
+    &lt;/Collapse&gt;
+  ),
+}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">No Outline</h2>
+    <div class="ds-story-id">organisms-collapse--no-outline · export <b>NoOutline</b></div>
+    <div class="ds-canvas ds-canvas--padded">
+<div class="flex w-full max-w-[600px] flex-col overflow-hidden rounded-[5px] bg-background"><div class="flex w-full shrink-0 cursor-pointer select-none items-center gap-[15px] h-[50px] p-[5px]" role="button" tabindex="0"><div class="flex min-w-0 flex-1 items-center gap-[5px] pl-[10px]"><div class="flex shrink-0 items-center justify-center size-[30px]"><svg aria-hidden="true" fill="none" height="16" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24" width="16"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" x2="12" y1="22.08" y2="12"></line></svg></div><div class="flex min-w-0 flex-1 flex-row items-center gap-[5px]"><p class="overflow-hidden text-ellipsis whitespace-nowrap text-font text-[14px] font-semibold shrink-0">Lorem Ipsum</p><p class="overflow-hidden text-ellipsis whitespace-nowrap text-font-level_1 text-[13px] min-w-0 flex-1">Subtitle</p></div></div><div class="flex shrink-0 items-center gap-[10px]" role="presentation"><div aria-hidden="true" class="flex shrink-0 items-center justify-center rounded-[5px] border border-neutral-level_2 bg-background transition-colors duration-200 ease-out size-[35px]"><span aria-hidden="true" class="inline-flex shrink-0 items-center justify-center text-font"><svg aria-hidden="true" class="lucide lucide-chevron-down" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="15" xmlns="http://www.w3.org/2000/svg"><path d="m6 9 6 6 6-6"></path></svg></span></div></div></div><div class="grid transition-[grid-template-rows] duration-200 ease-out grid-rows-[0fr]"><div class="overflow-hidden"><div class="flex w-full flex-col gap-[10px] p-[10px]"><div style="padding: 12px 15px; border: 1px dashed rgba(27, 16, 44, 0.15); border-radius: 5px; font-size: 14px; color: rgb(139, 133, 149); line-height: 1.5;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis in venenatis ligula, ut tincidunt urna. Proin sodales ante massa, venenatis hendrerit velit pharetra et.</div></div></div></div></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const NoOutline: Story = {
+  render: (args) =&gt; (
+    &lt;Collapse {...args} outline={false} icon={&lt;BoxIcon size={16} /&gt;}&gt;
+      &lt;SampleContent /&gt;
+    &lt;/Collapse&gt;
+  ),
+}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">With Background</h2>
+    <div class="ds-story-id">organisms-collapse--with-background · export <b>WithBackground</b></div>
+    <div class="ds-canvas ds-canvas--padded">
+<div class="flex w-full max-w-[600px] flex-col overflow-hidden rounded-[5px] border border-neutral-level_2 bg-[rgba(27,16,44,0.02)]"><div class="flex w-full shrink-0 cursor-pointer select-none items-center gap-[15px] h-[50px] p-[5px]" role="button" tabindex="0"><div class="flex min-w-0 flex-1 items-center gap-[5px] pl-[10px]"><div class="flex shrink-0 items-center justify-center size-[30px]"><svg aria-hidden="true" fill="none" height="16" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24" width="16"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" x2="12" y1="22.08" y2="12"></line></svg></div><div class="flex min-w-0 flex-1 flex-row items-center gap-[5px]"><p class="overflow-hidden text-ellipsis whitespace-nowrap text-font text-[14px] font-semibold shrink-0">Lorem Ipsum</p><p class="overflow-hidden text-ellipsis whitespace-nowrap text-font-level_1 text-[13px] min-w-0 flex-1">Subtitle</p></div></div><div class="flex shrink-0 items-center gap-[10px]" role="presentation"><div aria-hidden="true" class="flex shrink-0 items-center justify-center rounded-[5px] border border-neutral-level_2 bg-background transition-colors duration-200 ease-out size-[35px]"><span aria-hidden="true" class="inline-flex shrink-0 items-center justify-center text-font"><svg aria-hidden="true" class="lucide lucide-chevron-down" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="15" xmlns="http://www.w3.org/2000/svg"><path d="m6 9 6 6 6-6"></path></svg></span></div></div></div><div class="grid transition-[grid-template-rows] duration-200 ease-out grid-rows-[0fr]"><div class="overflow-hidden"><div class="flex w-full flex-col gap-[10px] p-[10px]"><div style="padding: 12px 15px; border: 1px dashed rgba(27, 16, 44, 0.15); border-radius: 5px; font-size: 14px; color: rgb(139, 133, 149); line-height: 1.5;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis in venenatis ligula, ut tincidunt urna. Proin sodales ante massa, venenatis hendrerit velit pharetra et.</div></div></div></div></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const WithBackground: Story = {
+  render: (args) =&gt; (
+    &lt;Collapse {...args} background icon={&lt;BoxIcon size={16} /&gt;}&gt;
+      &lt;SampleContent /&gt;
+    &lt;/Collapse&gt;
+  ),
+}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">No Outline With Background</h2>
+    <div class="ds-story-id">organisms-collapse--no-outline-with-background · export <b>NoOutlineWithBackground</b></div>
+    <div class="ds-canvas ds-canvas--padded">
+<div class="flex w-full max-w-[600px] flex-col overflow-hidden rounded-[5px] bg-[rgba(27,16,44,0.02)]"><div class="flex w-full shrink-0 cursor-pointer select-none items-center gap-[15px] h-[50px] p-[5px]" role="button" tabindex="0"><div class="flex min-w-0 flex-1 items-center gap-[5px] pl-[10px]"><div class="flex shrink-0 items-center justify-center size-[30px]"><svg aria-hidden="true" fill="none" height="16" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24" width="16"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" x2="12" y1="22.08" y2="12"></line></svg></div><div class="flex min-w-0 flex-1 flex-row items-center gap-[5px]"><p class="overflow-hidden text-ellipsis whitespace-nowrap text-font text-[14px] font-semibold shrink-0">Lorem Ipsum</p><p class="overflow-hidden text-ellipsis whitespace-nowrap text-font-level_1 text-[13px] min-w-0 flex-1">Subtitle</p></div></div><div class="flex shrink-0 items-center gap-[10px]" role="presentation"><div aria-hidden="true" class="flex shrink-0 items-center justify-center rounded-[5px] border border-neutral-level_2 bg-background transition-colors duration-200 ease-out size-[35px]"><span aria-hidden="true" class="inline-flex shrink-0 items-center justify-center text-font"><svg aria-hidden="true" class="lucide lucide-chevron-down" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="15" xmlns="http://www.w3.org/2000/svg"><path d="m6 9 6 6 6-6"></path></svg></span></div></div></div><div class="grid transition-[grid-template-rows] duration-200 ease-out grid-rows-[0fr]"><div class="overflow-hidden"><div class="flex w-full flex-col gap-[10px] p-[10px]"><div style="padding: 12px 15px; border: 1px dashed rgba(27, 16, 44, 0.15); border-radius: 5px; font-size: 14px; color: rgb(139, 133, 149); line-height: 1.5;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis in venenatis ligula, ut tincidunt urna. Proin sodales ante massa, venenatis hendrerit velit pharetra et.</div></div></div></div></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const NoOutlineWithBackground: Story = {
+  render: (args) =&gt; (
+    &lt;Collapse {...args} outline={false} background icon={&lt;BoxIcon size={16} /&gt;}&gt;
+      &lt;SampleContent /&gt;
+    &lt;/Collapse&gt;
+  ),
+}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">No Icon</h2>
+    <div class="ds-story-id">organisms-collapse--no-icon · export <b>NoIcon</b></div>
+    <div class="ds-canvas ds-canvas--padded">
+<div class="flex w-full max-w-[600px] flex-col overflow-hidden rounded-[5px] bg-background border border-neutral-level_2"><div class="flex w-full shrink-0 cursor-pointer select-none items-center gap-[15px] h-[50px] p-[5px]" role="button" tabindex="0"><div class="flex min-w-0 flex-1 items-center gap-[5px] pl-[10px]"><div class="flex min-w-0 flex-1 flex-row items-center gap-[5px]"><p class="overflow-hidden text-ellipsis whitespace-nowrap text-font text-[14px] font-semibold shrink-0">Lorem Ipsum</p><p class="overflow-hidden text-ellipsis whitespace-nowrap text-font-level_1 text-[13px] min-w-0 flex-1">Subtitle</p></div></div><div class="flex shrink-0 items-center gap-[10px]" role="presentation"><div aria-hidden="true" class="flex shrink-0 items-center justify-center rounded-[5px] border border-neutral-level_2 bg-background transition-colors duration-200 ease-out size-[35px]"><span aria-hidden="true" class="inline-flex shrink-0 items-center justify-center text-font"><svg aria-hidden="true" class="lucide lucide-chevron-down" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="15" xmlns="http://www.w3.org/2000/svg"><path d="m6 9 6 6 6-6"></path></svg></span></div></div></div><div class="grid transition-[grid-template-rows] duration-200 ease-out grid-rows-[0fr]"><div class="overflow-hidden"><div class="flex w-full flex-col gap-[10px] p-[10px]"><div style="padding: 12px 15px; border: 1px dashed rgba(27, 16, 44, 0.15); border-radius: 5px; font-size: 14px; color: rgb(139, 133, 149); line-height: 1.5;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis in venenatis ligula, ut tincidunt urna. Proin sodales ante massa, venenatis hendrerit velit pharetra et.</div></div></div></div></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const NoIcon: Story = {
+  render: (args) =&gt; (
+    &lt;Collapse {...args}&gt;
+      &lt;SampleContent /&gt;
+    &lt;/Collapse&gt;
+  ),
+}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">No Subtitle</h2>
+    <div class="ds-story-id">organisms-collapse--no-subtitle · export <b>NoSubtitle</b></div>
+    <div class="ds-canvas ds-canvas--padded">
+<div class="flex w-full max-w-[600px] flex-col overflow-hidden rounded-[5px] bg-background border border-neutral-level_2"><div class="flex w-full shrink-0 cursor-pointer select-none items-center gap-[15px] h-[50px] p-[5px]" role="button" tabindex="0"><div class="flex min-w-0 flex-1 items-center gap-[5px] pl-[10px]"><div class="flex shrink-0 items-center justify-center size-[30px]"><svg aria-hidden="true" fill="none" height="16" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24" width="16"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" x2="12" y1="22.08" y2="12"></line></svg></div><div class="flex min-w-0 flex-1 flex-row items-center gap-[5px]"><p class="overflow-hidden text-ellipsis whitespace-nowrap text-font text-[14px] font-semibold shrink-0">Lorem Ipsum</p></div></div><div class="flex shrink-0 items-center gap-[10px]" role="presentation"><div aria-hidden="true" class="flex shrink-0 items-center justify-center rounded-[5px] border border-neutral-level_2 bg-background transition-colors duration-200 ease-out size-[35px]"><span aria-hidden="true" class="inline-flex shrink-0 items-center justify-center text-font"><svg aria-hidden="true" class="lucide lucide-chevron-down" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="15" xmlns="http://www.w3.org/2000/svg"><path d="m6 9 6 6 6-6"></path></svg></span></div></div></div><div class="grid transition-[grid-template-rows] duration-200 ease-out grid-rows-[0fr]"><div class="overflow-hidden"><div class="flex w-full flex-col gap-[10px] p-[10px]"><div style="padding: 12px 15px; border: 1px dashed rgba(27, 16, 44, 0.15); border-radius: 5px; font-size: 14px; color: rgb(139, 133, 149); line-height: 1.5;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis in venenatis ligula, ut tincidunt urna. Proin sodales ante massa, venenatis hendrerit velit pharetra et.</div></div></div></div></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const NoSubtitle: Story = {
+  render: (args) =&gt; (
+    &lt;Collapse {...args} subtitle={undefined} icon={&lt;BoxIcon size={16} /&gt;}&gt;
+      &lt;SampleContent /&gt;
+    &lt;/Collapse&gt;
+  ),
+}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">Controlled Example</h2>
+    <div class="ds-story-id">organisms-collapse--controlled-example · export <b>ControlledExample</b></div>
+    <div class="ds-canvas ds-canvas--padded">
+<div style="display: flex; flex-direction: column; gap: 16px;"><div style="display: flex; gap: 8px;"><button class="relative isolate inline-flex shrink-0 cursor-pointer items-center gap-[5px] rounded-[5px] px-[5px] text-sm text-font transition-colors before:pointer-events-none before:absolute before:inset-0 before:-z-10 before:rounded-[5px] before:bg-transparent before:transition-colors before:content-[''] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-confirmation focus-visible:ring-offset-1 disabled:pointer-events-none disabled:opacity-40 border border-neutral-level_2 bg-background hover:before:bg-neutral-level_1 active:before:bg-neutral-level_2 h-[30px]"><span class="overflow-hidden text-ellipsis whitespace-nowrap px-[5px]">Abrir</span></button><button class="relative isolate inline-flex shrink-0 cursor-pointer items-center gap-[5px] rounded-[5px] px-[5px] text-sm text-font transition-colors before:pointer-events-none before:absolute before:inset-0 before:-z-10 before:rounded-[5px] before:bg-transparent before:transition-colors before:content-[''] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-confirmation focus-visible:ring-offset-1 disabled:pointer-events-none disabled:opacity-40 border border-neutral-level_2 bg-background hover:before:bg-neutral-level_1 active:before:bg-neutral-level_2 h-[30px]"><span class="overflow-hidden text-ellipsis whitespace-nowrap px-[5px]">Fechar</span></button></div><div class="flex w-full max-w-[600px] flex-col overflow-hidden rounded-[5px] bg-background border border-neutral-level_2"><div class="flex w-full shrink-0 cursor-pointer select-none items-center gap-[15px] h-[50px] p-[5px]" role="button" tabindex="0"><div class="flex min-w-0 flex-1 items-center gap-[5px] pl-[10px]"><div class="flex shrink-0 items-center justify-center size-[30px]"><svg aria-hidden="true" fill="none" height="16" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24" width="16"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" x2="12" y1="22.08" y2="12"></line></svg></div><div class="flex min-w-0 flex-1 flex-row items-center gap-[5px]"><p class="overflow-hidden text-ellipsis whitespace-nowrap text-font text-[14px] font-semibold shrink-0">Collapse controlado</p><p class="overflow-hidden text-ellipsis whitespace-nowrap text-font-level_1 text-[13px] min-w-0 flex-1">Estado gerenciado externamente</p></div></div><div class="flex shrink-0 items-center gap-[10px]" role="presentation"><div aria-hidden="true" class="flex shrink-0 items-center justify-center rounded-[5px] border border-neutral-level_2 bg-background transition-colors duration-200 ease-out size-[35px]"><span aria-hidden="true" class="inline-flex shrink-0 items-center justify-center text-font"><svg aria-hidden="true" class="lucide lucide-chevron-down" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="15" xmlns="http://www.w3.org/2000/svg"><path d="m6 9 6 6 6-6"></path></svg></span></div></div></div><div class="grid transition-[grid-template-rows] duration-200 ease-out grid-rows-[0fr]"><div class="overflow-hidden"><div class="flex w-full flex-col gap-[10px] p-[10px]"><div style="padding: 12px 15px; border: 1px dashed rgba(27, 16, 44, 0.15); border-radius: 5px; font-size: 14px; color: rgb(139, 133, 149); line-height: 1.5;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis in venenatis ligula, ut tincidunt urna. Proin sodales ante massa, venenatis hendrerit velit pharetra et.</div></div></div></div></div></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const ControlledExample: Story = {
+  render: () =&gt; (
+    &lt;Controlled&gt;
+      {(open, setOpen) =&gt; (
+        &lt;div style={{ display: &#x27;flex&#x27;, flexDirection: &#x27;column&#x27;, gap: 16 }}&gt;
+          &lt;div style={{ display: &#x27;flex&#x27;, gap: 8 }}&gt;
+            &lt;ButtonSoft
+              variant=&quot;outline&quot;
+              size=&quot;sm&quot;
+              onClick={() =&gt; setOpen(true)}
+            &gt;
+              Abrir
+            &lt;/ButtonSoft&gt;
+            &lt;ButtonSoft
+              variant=&quot;outline&quot;
+              size=&quot;sm&quot;
+              onClick={() =&gt; setOpen(false)}
+            &gt;
+              Fechar
+            &lt;/ButtonSoft&gt;
+          &lt;/div&gt;
+          &lt;Collapse
+            open={open}
+            onOpenChange={setOpen}
+            title=&quot;Collapse controlado&quot;
+            subtitle=&quot;Estado gerenciado externamente&quot;
+            icon={&lt;BoxIcon size={16} /&gt;}
+          &gt;
+            &lt;SampleContent /&gt;
+          &lt;/Collapse&gt;
+        &lt;/div&gt;
+      )}
+    &lt;/Controlled&gt;
+  ),
+}</code></pre></details>
+  </section>
+  <section class="ds-story">
+    <h2 class="ds-story-name">All Sizes</h2>
+    <div class="ds-story-id">organisms-collapse--all-sizes · export <b>AllSizes</b></div>
+    <div class="ds-canvas ds-canvas--padded">
+<div style="display: flex; flex-direction: column; gap: 16px;"><div class="flex w-full max-w-[600px] flex-col overflow-hidden rounded-[5px] bg-background border border-neutral-level_2"><div class="flex w-full shrink-0 cursor-pointer select-none items-center gap-[15px] h-[40px] p-[5px]" role="button" tabindex="0"><div class="flex min-w-0 flex-1 items-center gap-[5px] pl-[10px]"><div class="flex shrink-0 items-center justify-center size-[20px]"><svg aria-hidden="true" fill="none" height="12" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24" width="12"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" x2="12" y1="22.08" y2="12"></line></svg></div><div class="flex min-w-0 flex-1 flex-row items-center gap-[5px]"><p class="overflow-hidden text-ellipsis whitespace-nowrap text-font text-[13px] font-semibold shrink-0">Lorem Ipsum</p><p class="overflow-hidden text-ellipsis whitespace-nowrap text-font-level_1 text-[13px] min-w-0 flex-1">Subtitle</p></div></div><div class="flex shrink-0 items-center gap-[10px]" role="presentation"><div class="flex shrink-0 items-center"><span class="inline-flex shrink-0 items-center justify-center border font-semibold bg-confirmation/10 border-neutral-level_1 text-confirmation h-[30px] gap-[5px] px-[10px] rounded-[5px] text-sm"><span class="whitespace-nowrap">small</span></span></div><div aria-hidden="true" class="flex shrink-0 items-center justify-center rounded-[5px] border border-neutral-level_2 bg-background transition-colors duration-200 ease-out size-[30px]"><span aria-hidden="true" class="inline-flex shrink-0 items-center justify-center text-font"><svg aria-hidden="true" class="lucide lucide-chevron-down" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="15" xmlns="http://www.w3.org/2000/svg"><path d="m6 9 6 6 6-6"></path></svg></span></div></div></div><div class="grid transition-[grid-template-rows] duration-200 ease-out grid-rows-[0fr]"><div class="overflow-hidden"><div class="flex w-full flex-col gap-[10px] p-[10px]"><div style="padding: 12px 15px; border: 1px dashed rgba(27, 16, 44, 0.15); border-radius: 5px; font-size: 14px; color: rgb(139, 133, 149); line-height: 1.5;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis in venenatis ligula, ut tincidunt urna. Proin sodales ante massa, venenatis hendrerit velit pharetra et.</div></div></div></div></div><div class="flex w-full max-w-[600px] flex-col overflow-hidden rounded-[5px] bg-background border border-neutral-level_2"><div class="flex w-full shrink-0 cursor-pointer select-none items-center gap-[15px] h-[50px] p-[5px]" role="button" tabindex="0"><div class="flex min-w-0 flex-1 items-center gap-[5px] pl-[10px]"><div class="flex shrink-0 items-center justify-center size-[30px]"><svg aria-hidden="true" fill="none" height="16" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24" width="16"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" x2="12" y1="22.08" y2="12"></line></svg></div><div class="flex min-w-0 flex-1 flex-row items-center gap-[5px]"><p class="overflow-hidden text-ellipsis whitespace-nowrap text-font text-[14px] font-semibold shrink-0">Lorem Ipsum</p><p class="overflow-hidden text-ellipsis whitespace-nowrap text-font-level_1 text-[13px] min-w-0 flex-1">Subtitle</p></div></div><div class="flex shrink-0 items-center gap-[10px]" role="presentation"><div class="flex shrink-0 items-center"><span class="inline-flex shrink-0 items-center justify-center border font-semibold bg-confirmation/10 border-neutral-level_1 text-confirmation h-[30px] gap-[5px] px-[10px] rounded-[5px] text-sm"><span class="whitespace-nowrap">normal</span></span></div><div aria-hidden="true" class="flex shrink-0 items-center justify-center rounded-[5px] border border-neutral-level_2 bg-background transition-colors duration-200 ease-out size-[35px]"><span aria-hidden="true" class="inline-flex shrink-0 items-center justify-center text-font"><svg aria-hidden="true" class="lucide lucide-chevron-down" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="15" xmlns="http://www.w3.org/2000/svg"><path d="m6 9 6 6 6-6"></path></svg></span></div></div></div><div class="grid transition-[grid-template-rows] duration-200 ease-out grid-rows-[0fr]"><div class="overflow-hidden"><div class="flex w-full flex-col gap-[10px] p-[10px]"><div style="padding: 12px 15px; border: 1px dashed rgba(27, 16, 44, 0.15); border-radius: 5px; font-size: 14px; color: rgb(139, 133, 149); line-height: 1.5;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis in venenatis ligula, ut tincidunt urna. Proin sodales ante massa, venenatis hendrerit velit pharetra et.</div></div></div></div></div><div class="flex w-full max-w-[600px] flex-col overflow-hidden rounded-[5px] bg-background border border-neutral-level_2"><div class="flex w-full shrink-0 cursor-pointer select-none items-center gap-[15px] h-[70px] p-[20px] border-b border-neutral-level_2 bg-[rgba(27,16,44,0.02)]" role="button" tabindex="0"><div class="flex min-w-0 flex-1 items-center gap-[10px]"><div class="flex shrink-0 items-center justify-center size-[40px]"><svg aria-hidden="true" fill="none" height="22" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24" width="22"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" x2="12" y1="22.08" y2="12"></line></svg></div><div class="flex min-w-0 flex-1 flex-col items-start gap-[2px]"><p class="overflow-hidden text-ellipsis whitespace-nowrap text-font text-[16px] font-semibold w-full">Lorem Ipsum</p><p class="overflow-hidden text-ellipsis whitespace-nowrap text-font-level_1 text-[13px] w-full">Subtitle</p></div></div><div class="flex shrink-0 items-center gap-[10px]" role="presentation"><div class="flex shrink-0 items-center"><span class="inline-flex shrink-0 items-center justify-center border font-semibold bg-confirmation/10 border-neutral-level_1 text-confirmation h-[30px] gap-[5px] px-[10px] rounded-[5px] text-sm"><span class="whitespace-nowrap">big</span></span></div><div aria-hidden="true" class="flex shrink-0 items-center justify-center rounded-[5px] border border-neutral-level_2 bg-background transition-colors duration-200 ease-out size-[35px]"><span aria-hidden="true" class="inline-flex shrink-0 items-center justify-center text-font"><svg aria-hidden="true" class="lucide lucide-chevron-up" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="15" xmlns="http://www.w3.org/2000/svg"><path d="m18 15-6-6-6 6"></path></svg></span></div></div></div><div class="grid transition-[grid-template-rows] duration-200 ease-out grid-rows-[1fr]"><div class="overflow-hidden"><div class="flex w-full flex-col gap-[10px] p-[10px]"><div style="padding: 12px 15px; border: 1px dashed rgba(27, 16, 44, 0.15); border-radius: 5px; font-size: 14px; color: rgb(139, 133, 149); line-height: 1.5;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis in venenatis ligula, ut tincidunt urna. Proin sodales ante massa, venenatis hendrerit velit pharetra et.</div></div></div></div></div><div class="flex w-full max-w-[600px] flex-col overflow-hidden rounded-[5px] bg-background border border-neutral-level_2"><div class="flex w-full shrink-0 cursor-pointer select-none items-center gap-[15px] h-[100px] p-[30px]" role="button" tabindex="0"><div class="flex min-w-0 flex-1 items-center gap-[10px]"><div class="flex shrink-0 items-center justify-center size-[50px]"><svg aria-hidden="true" fill="none" height="28" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24" width="28"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" x2="12" y1="22.08" y2="12"></line></svg></div><div class="flex min-w-0 flex-1 flex-col items-start gap-[5px]"><p class="overflow-hidden text-ellipsis whitespace-nowrap text-font text-[18px] font-semibold w-full">Lorem Ipsum</p><p class="overflow-hidden text-ellipsis whitespace-nowrap text-font-level_1 text-[14px] w-full">Subtitle</p></div></div><div class="flex shrink-0 items-center gap-[10px]" role="presentation"><div class="flex shrink-0 items-center"><span class="inline-flex shrink-0 items-center justify-center border font-semibold bg-confirmation/10 border-neutral-level_1 text-confirmation h-[30px] gap-[5px] px-[10px] rounded-[5px] text-sm"><span class="whitespace-nowrap">bigger</span></span></div><div aria-hidden="true" class="flex shrink-0 items-center justify-center rounded-[5px] border border-neutral-level_2 bg-background transition-colors duration-200 ease-out size-[40px]"><span aria-hidden="true" class="inline-flex shrink-0 items-center justify-center text-font"><svg aria-hidden="true" class="lucide lucide-chevron-down" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="15" xmlns="http://www.w3.org/2000/svg"><path d="m6 9 6 6 6-6"></path></svg></span></div></div></div><div class="grid transition-[grid-template-rows] duration-200 ease-out grid-rows-[0fr]"><div class="overflow-hidden"><div class="flex w-full flex-col gap-[10px] p-[10px]"><div style="padding: 12px 15px; border: 1px dashed rgba(27, 16, 44, 0.15); border-radius: 5px; font-size: 14px; color: rgb(139, 133, 149); line-height: 1.5;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis in venenatis ligula, ut tincidunt urna. Proin sodales ante massa, venenatis hendrerit velit pharetra et.</div></div></div></div></div></div>
+    </div>
+    <details class="ds-src"><summary>código da story</summary><pre class="ds-code"><code>export const AllSizes: Story = {
+  render: () =&gt; (
+    &lt;div style={{ display: &#x27;flex&#x27;, flexDirection: &#x27;column&#x27;, gap: 16 }}&gt;
+      {([&#x27;small&#x27;, &#x27;normal&#x27;, &#x27;big&#x27;, &#x27;bigger&#x27;] as const).map((size) =&gt; (
+        &lt;Collapse
+          key={size}
+          size={size}
+          title=&quot;Lorem Ipsum&quot;
+          subtitle=&quot;Subtitle&quot;
+          icon={
+            &lt;BoxIcon
+              size={
+                size === &#x27;small&#x27;
+                  ? 12
+                  : size === &#x27;normal&#x27;
+                    ? 16
+                    : size === &#x27;big&#x27;
+                      ? 22
+                      : 28
+              }
+            /&gt;
+          }
+          rightInfo={&lt;Badge color=&quot;confirmation&quot;&gt;{size}&lt;/Badge&gt;}
+          defaultOpen={size === &#x27;big&#x27;}
+        &gt;
+          &lt;SampleContent /&gt;
+        &lt;/Collapse&gt;
+      ))}
+    &lt;/div&gt;
+  ),
+}</code></pre></details>
+  </section>
+</body>
+</html>
